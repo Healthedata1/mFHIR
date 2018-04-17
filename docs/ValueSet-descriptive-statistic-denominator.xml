@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="descriptive-statistic-denominator"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>descriptive-statistic-denominator</h2><div><p>The denominator of the descriptive statistic when the measures has an implicit duration. For example in the context of step count, if the descriptive statistic is 'average' and the statistic denominator is 'd' the value describes average daily step count during the period delimited by the effective time frame; in the context of step count, if the descriptive statistic is 'maximum' and the statistic denominator is 'session' the value describes maximum step count per session during the period delimited by the effective time frame</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-descriptive-statistic-denominator.html"><code>http://www.fhir.org/guides/mfhir/CodeSystem/descriptive-statistic-denominator</code></a></li></ul></div>
+  </text>
+  <url value="http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic-denominator"/>
+  <version value="0.0.0"/>
+  <name value="descriptive-statistic-denominator"/>
+  <status value="draft"/>
+  <date value="2018-04-15T18:31:45-07:00"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+    </telecom>
+  </contact>
+  <description value="The denominator of the descriptive statistic when the measures has an implicit duration. For example in the context of step count, if the descriptive statistic is &#39;average&#39; and the statistic denominator is &#39;d&#39; the value describes average daily step count during the period delimited by the effective time frame; in the context of step count, if the descriptive statistic is &#39;maximum&#39; and the statistic denominator is &#39;session&#39; the value describes maximum step count per session during the period delimited by the effective time frame"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <immutable value="true"/>
+  <compose>
+    <include>
+      <system value="http://www.fhir.org/guides/mfhir/CodeSystem/descriptive-statistic-denominator"/>
+    </include>
+  </compose>
+</ValueSet>

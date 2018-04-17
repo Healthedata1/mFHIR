@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "id": "http://hl7.org/fhir/json-schema/3.4",
+  "description": "see http://hl7.org/fhir/json.html#schema for information about the FHIR Json Schemas",
+  "discriminator": {
+    "propertyName": "resourceType",
+    "mapping": {
+      "Account": "#/definitions/Account",
+      "ActivityDefinition": "#/definitions/ActivityDefinition",
+ ...snip... // list of resources
+    }
+  },
+
+  "oneOf": [
+    {
+      "$ref": "#/definitions/Account"
+...snip...  // list of resources
+  ],
+// list of resources
+  "definitions": {
+    "ResourceList": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/Account"
+        },
+...snip...
+      ]
+    },
+ // list of primitive datatypes
+    "base64Binary": {
+      "type": "string",
+      "description": "A stream of bytes"
+...snip...
+    },
+    "Element": {
+      "description": "Base definition for all elements in a resource.",
+      "properties": {
+        "id": {
+          "description": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+          "$ref": "#/definitions/string"
+        },
+        "extension": {
+          "description": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+          "items": {
+            "$ref": "#/definitions/Extension"
+          },
+          "type": "array"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Extension": {
+      "description": "Optional Extension Element - found in all resources.",
+      "properties": {
+        "id": {
+          "description": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+          "$ref": "#/definitions/string"
+        },
+        "extension": {
+          "description": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+          "items": {
+            "$ref": "#/definitions/Extension"
+          },
+          "type": "array"
+        },
+        "url": {
+          "description": "Source of the definition for the extension code - a logical name or a URL.",
+          "$ref": "#/definitions/uri"
+        },
+        "_url": {
+          "description": "Extensions for url",
+          "$ref": "#/definitions/Element"
+        },
+        "valueBase64Binary": {
+          "description": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
+          "pattern": "(\\s*([0-9a-zA-Z\\+/\u003d]){4}\\s*)+",
+          "type": "string"
+        },...snip...
+      "additionalProperties": false
+    },
+    "Narrative": {
+      "description": "A human-readable formatted text, including images.",
+      "properties": {
+        "id": {
+          "description": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+...snip....  list of of Elements (Complex Datatypes. MetaDatatypes, Resources)

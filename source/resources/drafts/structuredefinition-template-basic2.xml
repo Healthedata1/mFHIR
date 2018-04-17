@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="template-basic2"/>
+  <url value="http://www.fhir.org/guides/mfhir/StructureDefinition/template-basic2"/>
+  <version value="0.0.0"/>
+  <name value="Profile template-basic2"/>
+  <status value="draft"/>
+  <date value="2017-02-15"/>
+  <fhirVersion value="3.1.0"/>
+  <mapping>
+    <identity value="rim"/>
+    <uri value="http://hl7.org/v3"/>
+    <name value="RIM Mapping"/>
+  </mapping>
+  <mapping>
+    <identity value="w5"/>
+    <uri value="http://hl7.org/fhir/w5"/>
+    <name value="W5 Mapping"/>
+  </mapping>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Basic"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Basic"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Basic">
+      <path value="Basic"/>
+      <definition value="This is a simple example Template."/>
+      <constraint>
+        <key value="temp-1"/>
+        <severity value="error"/>
+        <human value="Identifier SHALL be greater than 5 characters"/>
+        <expression value="Identifier.value.length()&gt;5"/>
+        <xpath value="f:Identifier/f:value/string-length(@value)&gt;5"/>
+      </constraint>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Basic.extension:simple_extension">
+      <path value="Basic.extension"/>
+      <sliceName value="Simple_Extension"/>
+      <short value="Example extension"/>
+      <definition value="This is a simple extension applied to a Profile."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://www.fhir.org/guides/mfhir/StructureDefinition/template-blah"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Basic.extension:complex_extension">
+      <path value="Basic.extension"/>
+      <sliceName value="Complex_Extension"/>
+      <short value="Example complex extension"/>
+      <definition value="This is a complex extension applied to a Profile."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://www.fhir.org/guides/mfhir/StructureDefinition/template-complex"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Basic.identifier">
+      <path value="Basic.identifier"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Basic.code">
+      <path value="Basic.code"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Basic.code.coding">
+      <path value="Basic.code.coding"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Basic.code.coding.code">
+      <path value="Basic.code.coding.code"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <fixedCode value="diet"/>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Basic.subject">
+      <path value="Basic.subject"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://www.fhir.org/guides/mfhir/StructureDefinition/ifr"/>
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="B1"/>
+	<meta>
+		<profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+	</meta>
+
+	<url value="http://www.fhir.org/guides/mfhir/ValueSet/B1"/>
+	<version value="0.0.0"/>
+	<name value="B1"/>
+	<status value="draft"/>
+	<date value="2018-04-12T23:27:25-07:00"/>
+
+	<description value="Heart rate unit code"/>
+	<jurisdiction>
+		<coding>
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="US"/>
+			<display value="United States of America"/>
+		</coding>
+	</jurisdiction>
+	<compose>
+		<include>
+			<system value="http://unitsofmeasure.org"/>
+			<concept>
+				<code value="beats/min"/>
+			</concept>
+		</include>
+	</compose>
+</ValueSet>

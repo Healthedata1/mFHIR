@@ -1,0 +1,93 @@
+{
+  "resourceType": "Bundle",
+  "id": "aa219a07-2384-4a03-9935-0f06ce392160",
+  "meta": {
+    "lastUpdated": "2018-04-17T13:53:13.605-07:00"
+  },
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic-denominator",
+      "resource": {
+        "resourceType": "ValueSet",
+        "id": "descriptive-statistic-denominator",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 4 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px\">Expansion based on http://www.fhir.org/guides/mfhir/CodeSystem/descriptive-statistic-denominator version 0.0.0</p><p>All codes from system <a href=\"CodeSystem-descriptive-statistic-denominator.html\"><code>http://www.fhir.org/guides/mfhir/CodeSystem/descriptive-statistic-denominator</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---www.fhir.org-guides-mfhir-CodeSystem-descriptive-statistic-denominator-d\"> </a><a href=\"CodeSystem-descriptive-statistic-denominator.html#descriptive-statistic-denominator-d\">d</a></td><td>Delimited period</td><td>The period delimited by the effective time frame</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---www.fhir.org-guides-mfhir-CodeSystem-descriptive-statistic-denominator-episode\"> </a><a href=\"CodeSystem-descriptive-statistic-denominator.html#descriptive-statistic-denominator-episode\">episode</a></td><td>Episode</td><td>Duration of the episode</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---www.fhir.org-guides-mfhir-CodeSystem-descriptive-statistic-denominator-meal\"> </a><a href=\"CodeSystem-descriptive-statistic-denominator.html#descriptive-statistic-denominator-meal\">meal</a></td><td>Meal</td><td>Duration of the meal</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---www.fhir.org-guides-mfhir-CodeSystem-descriptive-statistic-denominator-session\"> </a><a href=\"CodeSystem-descriptive-statistic-denominator.html#descriptive-statistic-denominator-session\">session</a></td><td>Session</td><td>Session during the period delimited by the effective time frame</td></tr></table></div>"
+        },
+        "url": "http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic-denominator",
+        "version": "0.0.0",
+        "name": "descriptive-statistic-denominator",
+        "status": "draft",
+        "date": "2018-04-15T18:31:45-07:00",
+        "contact": [
+          {
+            "telecom": [
+              {
+                "system": "url"
+              },
+              {
+                "system": "email"
+              }
+            ]
+          }
+        ],
+        "description": "The denominator of the descriptive statistic when the measures has an implicit duration. For example in the context of step count, if the descriptive statistic is 'average' and the statistic denominator is 'd' the value describes average daily step count during the period delimited by the effective time frame; in the context of step count, if the descriptive statistic is 'maximum' and the statistic denominator is 'session' the value describes maximum step count per session during the period delimited by the effective time frame",
+        "jurisdiction": [
+          {
+            "coding": [
+              {
+                "system": "urn:iso:std:iso:3166",
+                "code": "US",
+                "display": "United States of America"
+              }
+            ]
+          }
+        ],
+        "immutable": true,
+        "expansion": {
+          "identifier": "urn:uuid:bae5a2e6-6b66-4d32-9677-ce14fcee84c2",
+          "timestamp": "2018-04-15T18:46:47-07:00",
+          "total": 4,
+          "parameter": [
+            {
+              "name": "profile",
+              "valueUri": "http://hl7.org/fhir/ExpansionProfile/dc8fd4bc-091a-424a-8a3b-6198ef146891"
+            },
+            {
+              "name": "version",
+              "valueUri": "http://www.fhir.org/guides/mfhir/CodeSystem/descriptive-statistic-denominator|0.0.0"
+            }
+          ],
+          "contains": [
+            {
+              "system": "http://www.fhir.org/guides/mfhir/CodeSystem/descriptive-statistic-denominator",
+              "code": "d",
+              "display": "Delimited period"
+            },
+            {
+              "system": "http://www.fhir.org/guides/mfhir/CodeSystem/descriptive-statistic-denominator",
+              "code": "episode",
+              "display": "Episode"
+            },
+            {
+              "system": "http://www.fhir.org/guides/mfhir/CodeSystem/descriptive-statistic-denominator",
+              "code": "meal",
+              "display": "Meal"
+            },
+            {
+              "system": "http://www.fhir.org/guides/mfhir/CodeSystem/descriptive-statistic-denominator",
+              "code": "session",
+              "display": "Session"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

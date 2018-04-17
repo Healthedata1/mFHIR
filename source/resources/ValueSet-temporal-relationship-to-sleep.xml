@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="temporal-relationship-to-sleep"/>
+	<meta>
+		<profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+	</meta>
+
+	<url value="http://www.fhir.org/guides/mfhir/ValueSet/temporal-relationship-to-sleep"/>
+	<version value="0.0.0"/>
+	<name value="temporal-relationship-to-sleep"/>
+	<status value="draft"/>
+	<date value="2018-04-12T23:39:19-07:00"/>
+
+	<description value="The temporal relationship of a clinical measure or assessment to sleep"/>
+	<jurisdiction>
+		<coding>
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="US"/>
+			<display value="United States of America"/>
+		</coding>
+	</jurisdiction>
+	<compose>
+		<include>
+			<system value="http://snomed.info/sct"/>
+			<concept>
+				<code value="307155000"/>
+				<display value="before sleeping"/>
+			</concept>
+			<concept>
+				<code value="309610004"/>
+				<display value="during sleep"/>
+			</concept>
+			<concept>
+				<code value="307156004"/>
+				<display value="on waking"/>
+			</concept>
+		</include>
+	</compose>
+</ValueSet>

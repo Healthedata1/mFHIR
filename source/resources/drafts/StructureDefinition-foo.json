@@ -1,0 +1,47 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "foo",
+  "url": "http://www.fhir.org/guides/mfhir/StructureDefinition/foo",
+  "version": "0.0.0",
+  "name": "Profile foo",
+  "status": "active",
+  "date": "2018-01-31T00:00:00-08:00",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "3.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/w5",
+      "name": "W5 Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Basic",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Basic",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Basic",
+        "path": "Basic",
+        "mustSupport": false,
+        "isModifier": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file://Mac/Home/Documents/FHIR/FHIR%20tools/STU3Schema/fhir-all.xsd">
+	<id value="omh-data-point"/>
+	<url value="http://www.fhir.org/guides/mfhir/StructureDefinition/omh-data-point"/>
+	<version value="0.0.0"/>
+	<name value="OMHDataPoint"/>
+	<status value="draft"/>
+	<date value="2018-04-11T00:00:00-07:00"/>
+	<publisher value="Health eData Inc"/>
+	<description value="Open mHealth data point schema represents a data point.  See  [Open mHealth Schemas](http://www.openmhealth.org/documentation/#/schema-docs/schema-library)."/>
+	<jurisdiction>
+		<coding>
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="US"/>
+			<display value="United States of America"/>
+		</coding>
+	</jurisdiction>
+	<fhirVersion value="3.0.1"/>
+	<mapping>
+		<identity value="OmhDataPoint-schema"/>
+		<uri value="www.openmhealth.org/documentation/"/>
+		<name value="Open mHealth Data Point Schema"/>
+	</mapping>
+	<mapping>
+		<identity value="fhir-observation"/>
+		<uri value="http://hl7.org/fhir/STU3/observation.html"/>
+		<name value="FHIR Observation Resource"/>
+	</mapping>
+	<kind value="logical"/>
+	<abstract value="false"/>
+	<type value="OmhDataPoint"/>
+	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+	<derivation value="specialization"/>
+	<differential>
+		<element id="OmhDataPoint">
+			<path value="OmhDataPoint"/>
+			<definition value="The data point schema is a generic schema that is specialized for each type of data point."/>
+			<mustSupport value="false"/>
+			<isModifier value="false"/>
+			<mapping>
+				<identity value="OmhDataPoint-schema"/>
+				<map value="properties"/>
+			</mapping>
+			<mapping>
+				<identity value="fhir-observation"/>
+				<map value="Observation resource"/>
+			</mapping>
+		</element>
+		<element id="OmhDataPoint.header">
+			<path value="OmhDataPoint.header"/>
+			<definition value="The header property contains the metadata about the data point."/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="BackboneElement"/>
+			</type>
+			<mustSupport value="false"/>
+			<isModifier value="false"/>
+			<mapping>
+				<identity value="OmhDataPoint-schema"/>
+				<map value="OmhDataPoint.header"/>
+			</mapping>
+			<mapping>
+				<identity value="fhir-observation"/>
+				<map value="None"/>
+			</mapping>
+		</element>
+		<element id="OmhDataPoint.header.dataPointId">
+			<path value="OmhDataPoint.header.dataPointId"/>
+			<definition value="The identifier of this data point. We strongly recommend this to be a globally unique value."/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="id"/>
+			</type>
+
+			<mustSupport value="false"/>
+			<isModifier value="false"/>
+			<mapping>
+				<identity value="OmhDataPoint-schema"/>
+				<map value="OmhDataPoint.header.id"/>
+			</mapping>
+			<mapping>
+				<identity value="fhir-observation"/>
+				<map value="Observation.identifier"/>
+			</mapping>
+		</element>
+		<element id="OmhDataPoint.header.creationDateTime">
+			<path value="OmhDataPoint.header.creationDateTime"/>
+			<definition value="The date time this data point was created on the system where data is stored."/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="instant"/>
+			</type>
+
+			<mustSupport value="false"/>
+			<isModifier value="false"/>
+			<mapping>
+				<identity value="OmhDataPoint-schema"/>
+				<map value="OmhDataPoint.header.creation_date_time"/>
+			</mapping>
+			<mapping>
+				<identity value="fhir-observation"/>
+				<map value="Observation.issued"/>
+			</mapping>
+		</element>
+		<element id="OmhDataPoint.header.schemaId">
+			<path value="OmhDataPoint.header.schemaId"/>
+			<definition value="The version of the schema, e.g. 1.0."/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="BackboneElement"/>
+			</type>
+			<mustSupport value="false"/>
+			<isModifier value="false"/>
+			<mapping>
+				<identity value="OmhDataPoint-schema"/>
+				<map value="properties.header.schema_id"/>
+			</mapping>
+			<mapping>
+				<identity value="fhir-observation"/>
+				<map value="Observation.meta.profile "/>
+				<comment value="maps to canonical for FHIR profile"/>
+			</mapping>
+		</element>
+		<element id="OmhDataPoint.header.schemaId.namespace">
+			<path value="OmhDataPoint.header.schemaId.namespace"/>
+			<definition value="The namespace of the schema. A namespace serves to disambiguate schemas with conflicting names."/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="uri"/>
+			</type>
+
+			<mustSupport value="false"/>
+			<isModifier value="false"/>
+			<mapping>
+				<identity value="OmhDataPoint-schema"/>
+				<map value="header.schema_id.namespace"/>
+			</mapping>
+			<mapping>
+				<identity value="fhir-observation"/>
+				<map value="None"/>
+			</mapping>
+		</element>
+		<element id="OmhDataPoint.header.schemaId.name">
+			<path value="OmhDataPoint.header.schemaId.name"/>
+			<definition value="The name of the schema."/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+
+			<mustSupport value="false"/>
+			<isModifier value="false"/>
+			<mapping>
+				<identity value="OmhDataPoint-schema"/>
+				<map value="header.schema_id.name"/>
+			</mapping>
+			<mapping>
+				<identity value="fhir-observation"/>
+				<map value="None"/>
+			</mapping>
+		</element>
+		<element id="OmhDataPoint.header.schemaId.version">
+			<path value="OmhDataPoint.header.schemaId.version"/>
+			<definition value="The version of the schema, e.g. 1.0."/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+
+			<mustSupport value="false"/>
+			<isModifier value="false"/>
+			<mapping>
+				<identity value="OmhDataPoint-schema"/>
+				<map value="header.schema_id.version"/>
+			</mapping>
+			<mapping>
+				<identity value="fhir-observation"/>
+				<map value="None"/>
+			</mapping>
+		</element>
+		<element id="OmhDataPoint.header.acquisitionProvenance">
+			<path value="OmhDataPoint.header.acquisitionProvenance"/>
+			<definition value="The data point provenance information."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="BackboneElement"/>
+			</type>
+			<mustSupport value="false"/>
+			<isModifier value="false"/>
+			<mapping>
+				<identity value="OmhDataPoint-schema"/>
+				<map value="header.acquisition_provenance"/>
+			</mapping>
+			<mapping>
+				<identity value="fhir-observation"/>
+				<map value="None"/>
+			</mapping>
+		</element>
+		<element id="OmhDataPoint.header.acquisitionProvenance.sourceName">
+			<path value="OmhDataPoint.header.acquisitionProvenance.sourceName"/>
+			<definition value="The name of the source of the data."/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+
+			<mustSupport value="false"/>
+			<isModifier value="false"/>
+			<mapping>
+				<identity value="OmhDataPoint-schema"/>
+				<map value="header.acquisition_provenance.source_name"/>
+			</mapping>
+			<mapping>
+				<identity value="fhir-observation"/>
+				<map value="Observation.meta.source"/>
+				<comment value="Can also use the Provenance resurce"/>
+			</mapping>
+		</element>
+		<element id="OmhDataPoint.header.acquisitionProvenance.sourceDataPointId">
+			<path value="OmhDataPoint.header.acquisitionProvenance.sourceDataPointId"/>
+			<definition value="The identifier of this data point at the source (immediately preceding step)."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+			<mustSupport value="false"/>
+			<isModifier value="false"/>
+			<mapping>
+				<identity value="OmhDataPoint-schema"/>
+				<map value="header.acquisition_provenance.source_data_point_id"/>
+			</mapping>
+			<mapping>
+				<identity value="fhir-observation"/>
+				<map value="Observation.identifier"/>
+			</mapping>
+		</element>
+		<element id="OmhDataPoint.header.acquisitionProvenance.sourceCreationDateTime">
+			<path value="OmhDataPoint.header.acquisitionProvenance.sourceCreationDateTime"/>
+			<definition value="The date time (timestamp) of data creation at the source."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="instant"/>
+			</type>
+			<mustSupport value="false"/>
+			<isModifier value="false"/>
+			<mapping>
+				<identity value="OmhDataPoint-schema"/>
+				<map value="header.acquisition_provenance.source_creation_date_time"/>
+			</mapping>
+			<mapping>
+				<identity value="fhir-observation"/>
+				<map value="None"/>
+				<comment value="Maps to the Provenance Resource"/>
+			</mapping>
+		</element>
+		<element id="OmhDataPoint.header.acquisitionProvenance.modicationDataTime">
+			<path value="OmhDataPoint.header.acquisitionProvenance.modicationDataTime"/>
+			<definition value="The date time (timestamp) of last data modification at the source."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="instant"/>
+			</type>
+
+			<mustSupport value="false"/>
+			<isModifier value="false"/>
+			<mapping>
+				<identity value="OmhDataPoint-schema"/>
+				<map value="header.acquisition_provenance.modication_data_time"/>
+			</mapping>
+			<mapping>
+				<identity value="fhir-observation"/>
+				<map value="None"/>
+				<comment value="maps to the Provenance resource"/>
+			</mapping>
+		</element>
+		<element id="OmhDataPoint.header.acquisitionProvenance.modality">
+			<path value="OmhDataPoint.header.acquisitionProvenance.modality"/>
+			<definition value="The modality whereby the measure is obtained."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="code"/>
+			</type>
+
+			<mustSupport value="false"/>
+			<isModifier value="false"/>
+			<mapping>
+				<identity value="OmhDataPoint-schema"/>
+				<map value="header.acquisition_provenance.modality"/>
+			</mapping>
+			<mapping>
+				<identity value="fhir-observation"/>
+				<map value="Observation.device"/>
+				<comment value="reference to Device/DeviceMetric resource"/>
+			</mapping>
+		</element>
+		<element id="OmhDataPoint.header.userId">
+			<path value="OmhDataPoint.header.userId"/>
+			<definition value="The user this data point belongs to.  This is an opaque identifier."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+
+			<mustSupport value="false"/>
+			<isModifier value="false"/>
+			<mapping>
+				<identity value="OmhDataPoint-schema"/>
+				<map value="header.user_id"/>
+			</mapping>
+			<mapping>
+				<identity value="fhir-observation"/>
+				<map value="Observation.subject"/>
+				<comment value="references  represented with an identifier (logical reference)"/>
+			</mapping>
+		</element>
+		<element id="OmhDataPoint.body">
+			<path value="OmhDataPoint.body"/>
+			<definition value="The body property contains the actual data.  It contains the logical model for a specific data type. ( e.g., heart rate)."/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="StructureDefinition"/>
+				<profile value="http://www.fhir.org/guides/mfhir/StructureDefinition/omh-step-count"/>
+			</type>
+			
+			<type>
+				<code value="StructureDefinition"/>
+				<profile value="http://www.fhir.org/guides/mfhir/StructureDefinition/omh-heart-rate"/>
+			</type>
+
+			<mustSupport value="false"/>
+			<isModifier value="false"/>
+			<mapping>
+				<identity value="OmhDataPoint-schema"/>
+				<map value="properties.body"/>
+			</mapping>
+			<mapping>
+				<identity value="fhir-observation"/>
+				<map value="various Observation elements"/>
+				<comment value="See the FHIR Logical Model for any OMH data point type (e.g., steps)"/>
+			</mapping>
+		</element>
+	</differential>
+</StructureDefinition>

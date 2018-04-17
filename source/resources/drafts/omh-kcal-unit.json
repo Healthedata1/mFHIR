@@ -1,0 +1,183 @@
+{
+  "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://clinfhir.com/StructureDefinition/userEmail",
+      "valueString": "ehaas@healthedatainc.com"
+    }
+  ],
+  "id": "OMH-Kcal-unit-value",
+  "url": "http://fhirtest.uhn.ca/baseDstu3/StructureDefinition/OMH-Kcal-unit-value",
+  "name": "OMH-Kcal-unit-value",
+  "title": "Open MHealth Kcal unit value Schema",
+  "purpose": "This schema represents an amount (value) of kilocalories (unit of measure).",
+  "publisher": "Health eData Inc",
+  "status": "draft",
+  "date": "2018-02-28T14:13:16-08:00",
+  "identifier": [
+    {
+      "system": "http://clinfhir.com",
+      "value": "author"
+    }
+  ],
+  "keyword": [
+    {
+      "system": "http://fhir.hl7.org.nz/NamingSystem/application",
+      "code": "clinfhir"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "type": "OMH-Kcal-unit-value",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "label": "OMH-Kcal-unit-value",
+        "id": "OMH-Kcal-unit-value",
+        "path": "OMH-Kcal-unit-value",
+        "definition": "No description",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "OMH-Kcal-unit-value",
+          "min": 0,
+          "max": "1"
+        },
+        "extension": []
+      },
+      {
+        "label": "$schema",
+        "id": "OMH-Kcal-unit-value.$schema",
+        "path": "OMH-Kcal-unit-value.$schema",
+        "short": "$schema",
+        "definition": "definition",
+        "min": 0,
+        "max": "1",
+        "mapping": [],
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "base": {
+          "path": "OMH-Kcal-unit-value.$schema",
+          "min": 0,
+          "max": "1"
+        },
+        "fixedString": "http://json-schema.org/draft-04/schema#",
+        "extension": []
+      },
+      {
+        "label": "description",
+        "id": "OMH-Kcal-unit-value.description",
+        "path": "OMH-Kcal-unit-value.description",
+        "short": "description",
+        "definition": "definition",
+        "min": 0,
+        "max": "1",
+        "mapping": [],
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "base": {
+          "path": "OMH-Kcal-unit-value.description",
+          "min": 0,
+          "max": "1"
+        },
+        "fixedString": "This schema represents an amount (value) of kilocalories (unit of measure).",
+        "extension": []
+      },
+      {
+        "label": "type",
+        "id": "OMH-Kcal-unit-value.type",
+        "path": "OMH-Kcal-unit-value.type",
+        "short": "type",
+        "definition": "definition",
+        "min": 0,
+        "max": "1",
+        "mapping": [],
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "base": {
+          "path": "OMH-Kcal-unit-value.type",
+          "min": 0,
+          "max": "1"
+        },
+        "fixedString": "object",
+        "extension": []
+      },
+      {
+        "label": "references",
+        "id": "OMH-Kcal-unit-value.references",
+        "path": "OMH-Kcal-unit-value.references",
+        "short": "references",
+        "definition": "definition",
+        "min": 0,
+        "max": "*",
+        "mapping": [],
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "base": {
+          "path": "OMH-Kcal-unit-value.references",
+          "min": 0,
+          "max": "1"
+        },
+        "extension": []
+      },
+      {
+        "label": "description",
+        "id": "OMH-Kcal-unit-value.references.description",
+        "path": "OMH-Kcal-unit-value.references.description",
+        "short": "description",
+        "definition": "definition",
+        "min": 0,
+        "max": "1",
+        "mapping": [],
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "base": {
+          "path": "OMH-Kcal-unit-value.references.description",
+          "min": 0,
+          "max": "1"
+        },
+        "fixedString": "The SNOMED code represents kilocalorie (kcal)",
+        "extension": []
+      },
+      {
+        "label": "url",
+        "id": "OMH-Kcal-unit-value.references.url",
+        "path": "OMH-Kcal-unit-value.references.url",
+        "short": "url",
+        "definition": "definition",
+        "min": 0,
+        "max": "1",
+        "mapping": [],
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "base": {
+          "path": "OMH-Kcal-unit-value.references.url",
+          "min": 0,
+          "max": "1"
+        },
+        "fixedString": "http://purl.bioontology.org/ontology/SNOMEDCT/258791007",
+        "extension": []
+      }
+    ]
+  }
+}

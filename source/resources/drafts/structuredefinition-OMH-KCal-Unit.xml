@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="omh-kcal-unit" />
+  <meta>
+    <lastUpdated value="2018-02-28T16:42:50.374-08:00" />
+  </meta>
+  <url value="http://www.fhir.org/guides/mfhir/StructureDefinition/omh-kcal-unit" />
+  <version value="0.0.0" />
+  <name value="OMH-KCal-Unit" />
+  <title value="OMH KCal Unit Schema" />
+  <status value="draft" />
+  <date value="2018-02-28T16:04:51.818-08:00" />
+  <publisher value="Health eData Inc" />
+  <contact>
+    <name value="opne mHealth" />
+    <telecom>
+      <system value="url" />
+      <value value="http://www.openmhealth.org/contact-us/" />
+    </telecom>
+  </contact>
+  <description value="Opem mHeallth [OMH-KCal-Unit Schema](http://www.openmhealth.org/documentation/#/schema-docs/schema-library/schemas/omh_kcal-unit-value)" />
+  <purpose value="Create a FHIR logical model as a mapping source." />
+  <copyright value="We believe in the power of community. Code produced by Open mHealth is open-sourced through the Apache 2.0 license; this means that our code base can be adapted and evolved by our community members, and it also gives the people who users our platform the ability to customize it for their specific needs." />
+  <fhirVersion value="3.0.1" />
+  <kind value="logical" />
+  <abstract value="false" />
+  <type value="Model" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="Model">
+      <path value="Model" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Element" />
+      </type>
+    </element>
+    <element id="Model.schema">
+      <path value="Model.schema" />
+      <short value="Name of Open mHealth schema" />
+      <definition value="Name of Open mHealth schema." />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="uri" />
+      </type>
+      <fixedUri value="http://json-schema.org/draft-04/schema#" />
+    </element>
+    <element id="Model.description">
+      <path value="Model.description" />
+      <short value="Description of what this template schema represents" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+      <fixedString value="This template schema represents..." />
+    </element>
+    <element id="Model.type">
+      <path value="Model.type" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+      <fixedString value="object" />
+    </element>
+    <element id="Model.references">
+      <path value="Model.references" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="uri" />
+      </type>
+      <fixedUri value="&lt;link to term in BioPortal&gt;" />
+    </element>
+    <element id="Model.definitions">
+      <path value="Model.definitions" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

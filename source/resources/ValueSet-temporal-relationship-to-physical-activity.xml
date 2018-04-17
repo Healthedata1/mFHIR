@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="temporal-relationship-to-physical-activity"/>
+	<meta>
+		<profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+	</meta>
+
+	<url value="http://www.fhir.org/guides/mfhir/ValueSet/temporal-relationship-to-physical-activity"/>
+	<version value="0.0.0"/>
+	<name value="temporal-relationship-to-physical-activity"/>
+	<status value="draft"/>
+	<date value="2018-04-12T23:39:19-07:00"/>
+
+	<description value="The temporal relationship of a clinical measure or assessment to physical activity"/>
+	<jurisdiction>
+		<coding>
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="US"/>
+			<display value="United States of America"/>
+		</coding>
+	</jurisdiction>
+	<compose>
+		<include>
+			<system value="http://snomed.info/sct"/>
+			<concept>
+				<code value="263678003"/>
+				<display value="at rest"/>
+			</concept>
+			<concept>
+				<code value="55561003"/>
+				<display value="active"/>
+			</concept>
+			<concept>
+				<code value="307166007"/>
+				<display value="before exercise"/>
+			</concept>
+			<concept>
+				<code value="255214003"/>
+				<display value="after exercise"/>
+			</concept>
+			<concept>
+				<code value="309604004"/>
+				<display value="during exercise"/>
+			</concept>
+		</include>
+	</compose>
+</ValueSet>

@@ -1,0 +1,57 @@
+{
+  "resourceType": "Observation",
+	"id": "steps-example", //  this is a server assigned resource id
+  "meta": {
+  "source" : "Jawbone UP API", // map to header.acqusition_provenance.source_name identifies where the resource comes from this could be all we need for provenance - see also device element below...
+  "profile" : ["http://www.fhir.org/guides/mfhir/StructureDefinition/steps"] // Profiles this resource claims to conform to
+}
+  "identifier" : [ // Business Identifier for observation mappped from "header.id"
+  "system" : "https://omh.org/shimmer/ids", // The namespace for the identifier value
+  "value" : "243c773b-8936-407e-9c23-270d0ea49cc4", // The value that is unique
+  }],
+  "status": "unknown",   // this is required in fhir - omh schema don't have status
+	"category": [     // optional category field to indicate is an activity vs say a lab result
+		{
+			"coding": [
+				{
+					"system": "http://hl7.org/fhir/observation-category",
+					"code": "activity",
+					"display": "Activity"
+				}
+			]
+		}
+	],
+	"code": {  // would be mapped from the schema definition for steps
+		"coding": [
+      {
+				"system": "http://loinc.org",
+				"code": "55423-8",
+				"display": "Number of steps in unspecified time Pedometer"
+			}
+		],
+		"text": "Step count"
+	},
+	"subject": {
+		"identifier" : {
+  // from Element: extension
+  "system" : ""https://omh.org/shimmer/patient_ids"", // The namespace for the identifier value
+  "value" : "<Shimmer assigned PID>", // The value that is unique
+}, // mapped from "???"  this is Logical reference, when literal reference is not known
+	},
+	"effectivePeriod": { // mapped from "body.effective_time_frame"
+  "start" : "2015-08-06T05:11:09-07:00",
+  "end" : "2015-08-06T23:00:36-06:00"
+    }
+	"issued": "2018-03-28T01:27:55+00:00", // mapped from "header.creation_date_time"
+	"performer": [  // optionally could indicate that is patient generated but since the device is here I think its not needed
+   <same as subject above >
+	],
+	"valueQuantity": {  // the actual results mapped from body.step_count  - note that I added optional UCUM units
+		"value": 7939,
+		"unit": "steps",
+		"system": "http://unitsofmeasure.org",
+		"code": "{steps}"
+	}
+   "device" :
+   {"display" : "Jawbone UP API, modality =sensed, source_updated_date_time = 2015-09-10T18:43:39Z"} //  mapped from   header.acquisition_provenance.source_name just as text for now but could capture all as Device/Device Metrictype since the type is  Reference(Device|DeviceComponent|DeviceMetric)  see above meta.source element too
+}

@@ -1,0 +1,63 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "descriptive-statistic-denominator",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>descriptive-statistic-denominator</h2><div><p>The denominator of the descriptive statistic when the measures has an implicit duration. For example in the context of step count, if the descriptive statistic is 'average' and the statistic denominator is 'd' the value describes average daily step count during the period delimited by the effective time frame; in the context of step count, if the descriptive statistic is 'maximum' and the statistic denominator is 'session' the value describes maximum step count per session during the period delimited by the effective time frame</p>\n</div><p>This code system http://www.fhir.org/guides/mfhir/CodeSystem/descriptive-statistic-denominator defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">d<a name=\"descriptive-statistic-denominator-d\"> </a></td><td>Delimited period</td><td>The period delimited by the effective time frame</td></tr><tr><td style=\"white-space:nowrap\">episode<a name=\"descriptive-statistic-denominator-episode\"> </a></td><td>Episode</td><td>Duration of the episode</td></tr><tr><td style=\"white-space:nowrap\">meal<a name=\"descriptive-statistic-denominator-meal\"> </a></td><td>Meal</td><td>Duration of the meal</td></tr><tr><td style=\"white-space:nowrap\">session<a name=\"descriptive-statistic-denominator-session\"> </a></td><td>Session</td><td>Session during the period delimited by the effective time frame</td></tr></table></div>"
+  },
+  "url": "http://www.fhir.org/guides/mfhir/CodeSystem/descriptive-statistic-denominator",
+  "version": "0.0.0",
+  "name": "descriptive-statistic-denominator",
+  "status": "draft",
+  "experimental": false,
+  "date": "2018-04-15T18:31:45-07:00",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url"
+        },
+        {
+          "system": "email"
+        }
+      ]
+    }
+  ],
+  "description": "The denominator of the descriptive statistic when the measures has an implicit duration. For example in the context of step count, if the descriptive statistic is 'average' and the statistic denominator is 'd' the value describes average daily step count during the period delimited by the effective time frame; in the context of step count, if the descriptive statistic is 'maximum' and the statistic denominator is 'session' the value describes maximum step count per session during the period delimited by the effective time frame",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US",
+          "display": "United States of America"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "valueSet": "http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic-denominator",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "d",
+      "display": "Delimited period",
+      "definition": "The period delimited by the effective time frame"
+    },
+    {
+      "code": "episode",
+      "display": "Episode",
+      "definition": "Duration of the episode"
+    },
+    {
+      "code": "meal",
+      "display": "Meal",
+      "definition": "Duration of the meal"
+    },
+    {
+      "code": "session",
+      "display": "Session",
+      "definition": "Session during the period delimited by the effective time frame"
+    }
+  ]
+}

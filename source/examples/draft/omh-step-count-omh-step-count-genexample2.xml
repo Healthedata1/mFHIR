@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OmhStepCount id="omh-step-count-genexample2" xmlns="http://hl7.org/fhir">
+<id value="foo"/>
+  <stepCount value="4"/>
+</OmhStepCount>

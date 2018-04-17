@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="omh-data-point"/>
+
+  <url value="http://www.fhir.org/guides/mfhir/StructureDefinition/omh-data-point"/>
+  <version value="0.0.0"/>
+  <name value="OMH_Data_Point"/>
+  <status value="draft"/>
+  <date value="2018-04-11T00:00:00-07:00"/>
+  <publisher value="Health eData Inc"/>
+  <description value="Open mHealth data point schema represents a data point.  See  [Open mHealth Schemas](http://www.openmhealth.org/documentation/#/schema-docs/schema-library)"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="3.0.1"/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="omh-data-point"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <differential>
+    <element id="omh-data-point">
+      <path value="omh-data-point"/>
+      <definition value="The data point schema is a generic schema that is specialized for each type of data point."/>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Element.id">
+      <path value="omh-data-point.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="Element.extension">
+      <path value="omh-data-point.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Additional Content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="omh-data-point.header">
+      <path value="omh-data-point.header"/>
+      <definition value="The header property contains the metadata about the data point."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="omh-data-point.header.id">
+      <path value="omh-data-point.header.id"/>
+      <definition value="The identifier of this data point. We strongly recommend this to be a globally unique value."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="omh-data-point.header.creation_date_time">
+      <path value="omh-data-point.header.creation_date_time"/>
+      <definition value="The date time this data point was created on the system where data is stored."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="instant"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="omh-data-point.header.schema_id">
+      <path value="omh-data-point.header.schema_id"/>
+      <definition value="The version of the schema, e.g. 1.0."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="omh-data-point.header.schema_id.namespace">
+      <path value="omh-data-point.header.schema_id.namespace"/>
+      <definition value="The namespace of the schema. A namespace serves to disambiguate schemas with conflicting names."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="omh-data-point.header.schema_id.name">
+      <path value="omh-data-point.header.schema_id.name"/>
+      <definition value="The name of the schema."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="omh-data-point.header.schema_id.version">
+      <path value="omh-data-point.header.schema_id.version"/>
+      <definition value="The version of the schema, e.g. 1.0."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="omh-data-point.header.acquisition_provenance">
+      <path value="omh-data-point.header.acquisition_provenance"/>
+      <definition value="The data point provenance information."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="omh-data-point.header.acquisition_provenance.source_name">
+      <path value="omh-data-point.header.acquisition_provenance.source_name"/>
+      <definition value="The name of the source of the data."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="omh-data-point.header.acquisition_provenance.source_data_point_id">
+      <path value="omh-data-point.header.acquisition_provenance.source_data_point_id"/>
+      <definition value="The identifier of this data point at the source (immediately preceding step)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="omh-data-point.header.acquisition_provenance.source_creation_date_time">
+      <path value="omh-data-point.header.acquisition_provenance.source_creation_date_time"/>
+      <definition value="The date time (timestamp) of data creation at the source."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="instant"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="omh-data-point.header.acquisition_provenance.modication_data_time">
+      <path value="omh-data-point.header.acquisition_provenance.modication_data_time"/>
+      <definition value="The date time (timestamp) of last data modification at the source."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="instant"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="omh-data-point.header.acquisition_provenance.modality">
+      <path value="omh-data-point.header.acquisition_provenance.modality"/>
+      <definition value="The modality whereby the measure is obtained."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="omh-data-point.header.user_id">
+      <path value="omh-data-point.header.user_id"/>
+      <definition value="The user this data point belongs to.  This is an opaque identifier."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="omh-data-point.body">
+      <path value="omh-data-point.body"/>
+      <definition value="The body property contains the actual data.  It&#x2019;s a reference to the logical model for a specific data type. ( e.g., heart rate)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="StructureDefinition"/>
+        <profile value="http://www.fhir.org/guides/mfhir/StructureDefinition/omh-heart-rate"/>
+      </type>
+      <type>
+        <code value="StructureDefinition"/>
+        <profile value="http://www.fhir.org/guides/mfhir/StructureDefinition/omh-step-count"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+    </element>
+  </differential>
+
+</StructureDefinition>

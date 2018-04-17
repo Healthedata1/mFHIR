@@ -1,0 +1,13 @@
+~~~
+{  
+   "ResourceType":"OmhStepCount",
+   "id":"example-1",
+   "stepCount":7939,
+   "effectiveTimeFrame":{  
+      "start":"2018-04-17",
+      "end":"2018-04-17"
+   },
+   "descriptiveStatistic":"count",
+   "descriptiveStatisticDenominator":"d"
+}
+~~~

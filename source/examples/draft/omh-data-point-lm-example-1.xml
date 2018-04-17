@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmhDataPoint id="omh-data-point-example1" xmlns="http://hl7.org/fhir">
+	<id value="omh-data-point-example1"/>
+	<header>
+		<dataPointId value="243c773b-8936-407e-9c23-270d0ea49cc4"/>
+		<creationDateTime value="2015-09-10T12:43:39.138-06:00"/>
+		<schemaId>
+			<namespace value="omh"/>
+			<name value="step-count"/>
+			<version value="1.0"/>
+		</schemaId>
+		<acquisitionProvenance>
+			<sourceName value="Jawbone UP API"/>
+			<modicationDataTime value="2015-09-10T18:43:39+00:00"/>
+			<modality value="sensed"/>
+		</acquisitionProvenance>
+		<userId value="3da24130-41d8-11e8-842f-0ed5f89f718b"/>
+	</header>
+	<body>
+		<omh-step-count id="omh-step-count-genexample" xmlns="http://hl7.org/fhir">
+			<stepCount value="7939"/>
+			<effectiveTimeFrame>
+				<start value="2018-04-16T00:00:00-07:00"/>
+				<end value="2018-04-17T00:00:00-07:00"/>
+			</effectiveTimeFrame>
+		</omh-step-count>
+	</body>
+</OmhDataPoint>

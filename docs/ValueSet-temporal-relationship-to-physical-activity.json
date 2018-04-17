@@ -1,0 +1,59 @@
+{
+  "resourceType": "ValueSet",
+  "id": "temporal-relationship-to-physical-activity",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>temporal-relationship-to-physical-activity</h2><div><p>The temporal relationship of a clinical measure or assessment to physical activity</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=263678003\">263678003</a></td><td>at rest</td><td/></tr><tr><td><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=55561003\">55561003</a></td><td>active</td><td/></tr><tr><td><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=307166007\">307166007</a></td><td>before exercise</td><td/></tr><tr><td><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=255214003\">255214003</a></td><td>after exercise</td><td/></tr><tr><td><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=309604004\">309604004</a></td><td>during exercise</td><td/></tr></table></li></ul></div>"
+  },
+  "url": "http://www.fhir.org/guides/mfhir/ValueSet/temporal-relationship-to-physical-activity",
+  "version": "0.0.0",
+  "name": "temporal-relationship-to-physical-activity",
+  "status": "draft",
+  "date": "2018-04-12T23:39:19-07:00",
+  "description": "The temporal relationship of a clinical measure or assessment to physical activity",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US",
+          "display": "United States of America"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "263678003",
+            "display": "at rest"
+          },
+          {
+            "code": "55561003",
+            "display": "active"
+          },
+          {
+            "code": "307166007",
+            "display": "before exercise"
+          },
+          {
+            "code": "255214003",
+            "display": "after exercise"
+          },
+          {
+            "code": "309604004",
+            "display": "during exercise"
+          }
+        ]
+      }
+    ]
+  }
+}

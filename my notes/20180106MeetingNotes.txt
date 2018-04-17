@@ -1,0 +1,57 @@
+History:
+
+R24 NIH Grant  Community work is unique
+
+3Yr starting Aug 2017
+
+Build/Community/toling to tip the MHealth Standard in the MarketPlace and Acedemia
+
+three parts:
+
+1.  IEEE work with Continua and 11073 Community :-/
+2.  Outreach to HL7/FHIR in US
+3.  Community work
+     -  active social presence
+     - "stoke"  user community
+
+
+Contributers
+
+Scope
+
+assumptions  ( see figures )
+
+R24 server passthrough  vs datastore + computational
+
+R24 Server side Statistics
+
+Define a Smart on FHIR app.  or have apps
+
+Mfhir app  vs how existing application can access mFHIR datastore
+
+keep the provenance and statistical Functional
+
+Value proposition  - metrics, ignore volume,
+
+
+IG is about SMART on FHIR to R24 interface...
+
+Demo Smart on FHIR app to access the R24 server data
+how to fetch data, statistical
+Smart on FHIR - Authenetication/Context
+
+Using Smart on FHIR Launch sequence.
+
+Mapping
+
+Next Steps:
+
+IG is due in September.
+
+Scoping and
+Contracting.
+
+Mapping Conceptual to start.
+Concept mappings
+Define the workflow and search parameters.
+Foraml CapabilityStatements.

@@ -1,0 +1,72 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://www.fhir.org/guides/mfhir/CodeSystem/descriptive-statistic-denominator> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "descriptive-statistic-denominator"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>descriptive-statistic-denominator</h2><div><p>The denominator of the descriptive statistic when the measures has an implicit duration. For example in the context of step count, if the descriptive statistic is 'average' and the statistic denominator is 'd' the value describes average daily step count during the period delimited by the effective time frame; in the context of step count, if the descriptive statistic is 'maximum' and the statistic denominator is 'session' the value describes maximum step count per session during the period delimited by the effective time frame</p>\n</div><p>This code system http://www.fhir.org/guides/mfhir/CodeSystem/descriptive-statistic-denominator defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">d<a name=\"descriptive-statistic-denominator-d\"> </a></td><td>Delimited period</td><td>The period delimited by the effective time frame</td></tr><tr><td style=\"white-space:nowrap\">episode<a name=\"descriptive-statistic-denominator-episode\"> </a></td><td>Episode</td><td>Duration of the episode</td></tr><tr><td style=\"white-space:nowrap\">meal<a name=\"descriptive-statistic-denominator-meal\"> </a></td><td>Meal</td><td>Duration of the meal</td></tr><tr><td style=\"white-space:nowrap\">session<a name=\"descriptive-statistic-denominator-session\"> </a></td><td>Session</td><td>Session during the period delimited by the effective time frame</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://www.fhir.org/guides/mfhir/CodeSystem/descriptive-statistic-denominator"];
+  fhir:CodeSystem.version [ fhir:value "0.0.0"];
+  fhir:CodeSystem.name [ fhir:value "descriptive-statistic-denominator"];
+  fhir:CodeSystem.status [ fhir:value "draft"];
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:CodeSystem.date [ fhir:value "2018-04-15T18:31:45-07:00"^^xsd:dateTime];
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ]
+     ], [
+       fhir:index 1;
+       fhir:ContactPoint.system [ fhir:value "email" ]
+     ]
+  ];
+  fhir:CodeSystem.description [ fhir:value "The denominator of the descriptive statistic when the measures has an implicit duration. For example in the context of step count, if the descriptive statistic is 'average' and the statistic denominator is 'd' the value describes average daily step count during the period delimited by the effective time frame; in the context of step count, if the descriptive statistic is 'maximum' and the statistic denominator is 'session' the value describes maximum step count per session during the period delimited by the effective time frame"];
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ];
+       fhir:Coding.display [ fhir:value "United States of America" ]
+     ]
+  ];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.valueSet [ fhir:value "http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic-denominator"];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "d" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Delimited period" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "The period delimited by the effective time frame" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "episode" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Episode" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Duration of the episode" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "meal" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Meal" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Duration of the meal" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "session" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Session" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Session during the period delimited by the effective time frame" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://www.fhir.org/guides/mfhir/CodeSystem/descriptive-statistic-denominator.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

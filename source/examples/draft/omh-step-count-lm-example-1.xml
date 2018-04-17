@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<omh-step-count id="omh-step-count-genexample" xmlns="http://hl7.org/fhir">
+	<id value="omh-step-count-lm-example1"/>
+	<stepCount value="7939"/>
+	<effectiveTimeFrame>
+		<start value="2018-04-16T00:00:00-07:00"/>
+		<end value="2018-04-17T00:00:00-07:00"/>
+	</effectiveTimeFrame>
+</omh-step-count>
