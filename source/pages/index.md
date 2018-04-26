@@ -1,7 +1,9 @@
 ---
-title: Test IG HomePage
+title: mFHIR HomePage
 layout: default
 active: home
+topofpage: true
+sectionnumbering: true
 ---
 
 {% include publish-box.html %}
@@ -15,61 +17,244 @@ active: home
 
 <!-- end TOC -->
 
-###  Cat Facts (To Show How the Text Wraps around the Contents Block)
+## mFHIR Overview
 
- The domestic cat[1][5] (Latin: Felis catus) is a small, typically furry, carnivorous mammal. They are often called house cats when kept as indoor pets or simply cats when there is no need to distinguish them from other felids and felines.[6] Cats are often valued by humans for companionship and for their ability to hunt vermin. There are more than 70 cat breeds, though different associations proclaim different numbers according to their standards.
+### R24 Server
 
-Cats are similar in anatomy to the other felids, with a strong flexible body, quick reflexes, sharp retractable claws, and teeth adapted to killing small prey. Cat senses fit a crepuscular and predatory ecological niche. Cats can hear sounds too faint or too high in frequency for human ears, such as those made by mice and other small animals. They can see in near darkness. Like most other mammals, cats have poorer color vision and a better sense of smell than humans. Cats, despite being solitary hunters, are a social species and cat communication includes the use of a variety of vocalizations (mewing, purring, trilling, hissing, growling, and grunting), as well as cat pheromones and types of cat-specific body language.[7]
+{% include img.html img="R24_Overview.png" %}
 
-Cats have a high breeding rate.[8] Under controlled breeding, they can be bred and shown as registered pedigree pets, a hobby known as cat fancy. Failure to control the breeding of pet cats by neutering, as well as the abandonment of former household pets, has resulted in large numbers of feral cats worldwide, requiring population control.[9] In certain areas outside cats' native range, this has contributed, along with habitat destruction and other factors, to the extinction of many bird species. Cats have been known to extirpate a bird species within specific regions and may have contributed to the extinction of isolated island populations.[10] Cats are thought to be primarily responsible for the extinction of 33 species of birds, and the presence of feral and free-ranging cats makes some otherwise suitable locations unsuitable for attempted species reintroduction.[11]
+## Base Use case
 
-Since cats were venerated in ancient Egypt, they were commonly believed to have been domesticated there,[12] but there may have been instances of domestication as early as the Neolithic from around 9,500 years ago (7,500 BC).[13] A genetic study in 2007 concluded that domestic cats are descended from Near Eastern wildcats, having diverged around 8,000 BC in the Middle East.[12][14] A 2016 study found that leopard cats were undergoing domestication independently in China around 5,500 BC, though this line of partially domesticated cats leaves no trace in the domesticated populations of today.[15][16]
-
-As of a 2007 study, cats are the second most popular pet in the US by number of pets owned, behind freshwater fish.[17] In a 2010 study they were ranked the third most popular pet in the UK, after fish and dogs, with around 8 million being owned.[18]
-
-Figure 1 is a picture of a cat to show how to insert an image using markdown.
-
-{% include img.html img="cat.jpg" caption="Figure 1: Meow" %}
-
-### Jekyll Site Variables
-
-These are the site variables defined [here](http://wiki.hl7.org/index.php?title=IG_Publisher_Documentation#Jekyll):
-
-- IG Business version specification (defined in ig.json)- {% raw %}{{site.data.fhir.ig.version}} {% endraw %} = {{site.data.fhir.ig.version}}
-
-- IG status (defined in ig.xml)- {% raw %}{{site.data.fhir.ig.status}} {% endraw %} = {{site.data.fhir.ig.status}}
-
-- Whether is experimental IG (defined in ig.xml) - {% raw %}{{site.data.fhir.ig.experimental}} {% endraw %} = {{site.data.fhir.ig.experimental}}
-
-- IG Publisher name (defined in ig.xml) - {% raw %}{{site.data.fhir.ig.publisher}} {% endraw %} = {{site.data.fhir.ig.publisher}}
-
-- dependency url - e.g. "uscore" : Base url of a dependency implementation Guide (defined in ig.json) -  {% raw %} {{site.data.fhir.uscore}} {% endraw %}= {{site.data.fhir.uscore}}
-
-- igName : Title of the implementation Guide (defined in ig.xml) -  {% raw %} {{site.data.fhir.igName}} {% endraw %}= {{site.data.fhir.igName}}
-
-- path : path to the main FHIR specification (defined in ig.json)-  {% raw %} {{site.data.fhir.path}} {% endraw %}= {{site.data.fhir.path}}
-
-- canonical : canonical path to this specification (defined in ig.json)-  {% raw %} {{site.data.fhir.canonical}} {% endraw %} = {{site.data.fhir.canonical}}
-
-- errorCount : number of errors in the build file (not including HTML validation errors) -  {% raw %} {{site.data.fhir.errorCount}} {% endraw %} = {{site.data.fhir.errorCount}}
-
-- version : version of FHIR -  {% raw %} {{site.data.fhir.version}} {% endraw %} = {{site.data.fhir.version}}
-
-- revision : revision of FHIR -  {% raw %} {{site.data.fhir.revision}} {% endraw %} = {{site.data.fhir.revision}}
-
-- versionFull : version-revision -  {% raw %} {{site.data.fhir.versionFull}} {% endraw %} = {{site.data.fhir.versionFull}}
-
-- totalFiles : total number of files found by the build -  {% raw %} {{site.data.fhir.totalFiles}} {% endraw %} = {{site.data.fhir.totalFiles}}
-
-- processedFiles : number of files genrated by the build -  {% raw %} {{site.data.fhir.processedFiles}} {% endraw %} = {{site.data.fhir.processedFiles}}
-
-- genDate : date of generation (so date stamps in the pages can match those in the conformance resources) -  {% raw %} {{site.data.fhir.genDate}} {% endraw %} = {{site.data.fhir.genDate}}
+<!----- Conversion time: 4.03 seconds.
 
 
-### Introduction
+Using this Markdown file:
 
-blah blah blah
+1. Cut and paste this output into your source file.
+2. See the notes and action items below regarding this conversion run.
+3. Check the rendered output (headings, lists, code blocks, tables) for proper
+   formatting and use a linkchecker before you publish this page.
 
-### More Stuff
+Conversion notes:
 
-#### And More Stuff
+* GD2md-html version 1.0β11
+* Wed Apr 25 2018 15:25:21 GMT-0700 (PDT)
+* Source doc: https://docs.google.com/open?id=1tudkVkvTjxBSUkUrxVjrYGrocbH_Lw_kPQP8jUbOhUQ
+----->
+
+
+### Description
+
+The patient determined by e.g., <http://tools.acc.org/ASCVD-Risk-Estimator-Plus/#!/calculate/estimate/> to be at moderate CV risk based on blood pressure, BMI, diet and exercise, blood glucose. Patient has a primary care physician (PCP). PCP and the patient jointly decide on improving exercise to meet AHA/WHO/CDC guidelines of150 minutes of moderate exercise (3-6 METS) every week, which they have refined into a mutually agreed upon step goal of 4000 steps daily. PCP prescribes the collection of steps using an mHealth device, to track daily steps and average daily and weekly steps. The patient is given an Open mHealth-compliant/supported consumer device (e.g., FitBit, GoogleFit, Misfit) by the clinic, or the patient already has an Open mHealth-compliant/supported device.
+
+
+At the next scheduled visit (e.g., in 90 days), the PCP and patient will jointly review during a clinic visit the daily step count and daily and weekly averages in the past 90 days vs the goal of 4000 daily steps. They will do this using a FHIR app that presents the data graphically within the EHR session.
+
+
+
+### Actors
+
+
+1. Patient
+1. Primary care physician (PCP)
+1. FHIR-enabled**  ** EHR
+1. a mHealth data server (called ** R24 Server**  in this use case) with FHIR server running SMART-on-FHIR protocols for authentication/authorization, etc.
+1. Patient's step counter sensor (called ** StepSensor**  in this use case) -- specific product, may be the patient's phone
+1. Data store for the Step-Counter Device output (e.g., cloud and/or phone (e.g., GoogleFit, HealthKit)) that either offers data directly in Open mHealth format using an Open mHealth endpoint, or is supported by Shimmer
+1. FHIR app (called ** mDATA**  in this use case) -- has roles for PCP, onboarding staff, and patient
+
+
+### Assumptions, Pre-Conditions and Constraints
+
+1. Is one way data flow, PCP initiates the pull of data into the EHR session (i.e., PCP launches FHIR app).
+1. No data is being written to the EHR.
+1. The mDATA FHIR app supports user roles of PCP, onboarding staff, and patient. mDATA has Shimmer in it. mDATA has access to the following EHR data about the patient
+1.  email
+1. cell phone #
+1. patient portal credentials
+1. PCP has authorization to mDATA
+1. Data that is presented in mDATA FHIR app is not persisted in the FHIR app, but could be.
+1. EHR is FHIR-enabled, with security/access provisions in place that allows FHIR apps to
+1. read data from an external data source (e.g., R24 server)
+1. read EHR data into the app to provide clinical context (patient ID/name, weight)
+1. Patient is known to provider and has an EHR record and a unique MRN
+1. EHR may or may not have a patient portal. Patient may or may not already have patient portal credentials.
+1. Patient has a smartphone that can run a web or native FHIR app
+1. R24 has security/access provisions in place
+1. R24 server makes a copy of the data from StepSensor and persists that data in a data store (OMOP in this use case)
+1. This use case describes the collection of only a single data variable (step count) from a single device (StepSensor)
+1. No real-time or threshold or triggered alerts
+
+### Basic Flow
+
+#### Order step count and set up StepSensor
+<table class = "grid">
+  <tr>
+   <th>Step
+   </th>
+   <th>User Action
+   </th>
+   <th>System Response (optional)
+   </th>
+  </tr>
+  <tr>
+   <td>1
+   </td>
+   <td>PCP launches mDATA within patient encounter on the EHR
+   </td>
+   <td>mDATA automatically signs in the PCP and shows the PCP screens, and pulls patient's MRN, cell phone #, and email address from the active EHR encounter session
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>PCP submits an order via mDATA to prescribe "average daily and weekly step count between now and next visit" and is done!
+   </td>
+   <td>mDATA records order for daily step count, average daily steps and average weekly steps for this MRN.
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="2" >2
+   </td>
+   <td>2a. Patient leaves the visit and is directed to the onboarding staff (aka Onboarder). The Onboarder opens an encounter for this patient (who's there in person) in the EHR or any web-enabled device and launches mDATA. The Onboarder reviews the data order, and determines whether the patient already has StepSensor or another acceptable device.
+
+verify phone # and email ---
+   </td>
+   <td>mDATA automatically signs in the Onboarder, pulls in the MRN for this patient from the active encounter session, and shows the Onboarder the active order for step count for this patient, and the acceptable devices for fulfilling this order.  
+   </td>
+  </tr>
+  <tr>
+   <td><em>2.b If patient doesn't already have StepSensor</em>
+
+The Onboarder gives the patient a new StepSensor and helps the patient set up their new StepSensor ID and password
+   </td>
+   <td>StepSensor creates and authenticates patient to their new StepSensor account.
+   </td>
+  </tr>
+  <tr>
+   <td>3
+   </td>
+   <td><strong>Downloading patient's mDATA app</strong>
+
+(Onboarder can assist patient with these tasks)
+
+Patient downloads mDATA app from Play or App store onto their own smartphone
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>4
+   </td>
+   <td><strong>Creating a patient mDATA account</strong>
+
+(Onboarder can assist patient with these tasks)
+
+<span style="text-decoration:underline;">For patients with EHR patient portal credentials</span>
+
+Patient signs into mDATA using their existing patient portal credentials.
+
+<span style="text-decoration:underline;">For patients without EHR patient portal credentials</span>
+
+Patient creates a new account and enters the same email they've given to the EHR. Patient receives an mDATA authentication code at the cell phone number they gave to the EHR. They enter the code and then complete the mDATA account setup by providing a password.
+   </td>
+   <td><span style="text-decoration:underline;">For patients with EHR patient portal credentials</span>
+
+mDATA creates a patient mDATA account for the patient associated with the submitted portal credentials.
+
+<span style="text-decoration:underline;">For patients without EHR patient portal credentials</span>
+
+mDATA knows which MRN is associated with the submitted email. mDATA sends an authentication code to the cell phone associated with that MRN. Once authenticated, mDATA creates a patient mDATA account for this MRN.
+   </td>
+  </tr>
+  <tr>
+   <td>5
+   </td>
+   <td>Patient uses their mDATA app to connect mDATA to StepSensor using mDATA's Shimmer function: 1) mDATA shows icons including StepSensor, 2) patient taps on StepSensor, 3) mDATA brings up StepSensor's authentication screen, 4) patient enters in his/her StepSensor credentials (from Step 3a above).
+   </td>
+   <td>Shimmer negotiates OAuth tokens using patient's credentials for StepSensor, generates unique Shimmer User ID for the patient, and binds that Shimmer User ID to that StepSensor account
+
+Shimmer makes the Shimmer User ID available to mDATA, which now has both the patient's MRN and the patient's Shimmer User ID. mDATA stores this mapping in its own datastore. It does not write anything to the EHR.
+   </td>
+  </tr>
+  <tr>
+   <td>6
+   </td>
+   <td>Patients sees in their mDATA app that they are tracking step count and can review their PCP's order. They can see their daily step counts, and average daily and weekly steps, in between clinic visits.
+   </td>
+   <td>mDATA displays appropriate order and step count data for this patient (see Flow 6b below for how mDATA gets this data).  
+   </td>
+  </tr>
+</table>
+
+#### Flow Identifier:  In-person review of already collected steps data
+<table class = "grid">
+<tr>
+ <th>Step
+ </th>
+ <th>User Action
+ </th>
+ <th>System Response (optional)
+ </th>
+</tr>
+
+  <tr>
+   <td>1
+
+   </td>
+   <td>At next visit, PCP and patient are in a clinic visit. Provider launches mDATA within patient encounter on the EHR
+
+   </td>
+   <td>mDATA automatically signs in the PCP and shows the PCP screens, and pulls patient's MRN from the active EHR encounter session. mDATA accesses mDATA datastore to retrieve the Shimmer ID for this MRN (see Step 5 in flow 6a above).
+
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="4" >2
+
+   </td>
+   <td rowspan="4" >Provider's mDATA app displays mHealth data from active mHealth data order for this patient (daily and average daily and weekly step counts since last visit).
+
+Patient and provider review the data and make clinical decisions.
+
+   </td>
+   <td>mDATA sends the patient's Shimmer User ID to the R24 server. authorization/authentication using SMART-on-FHIR protocols R24 receives Shimmer ID.
+
+   </td>
+  </tr>
+  <tr>
+   <td>mDATA accesses active mHealth data orders for this patient, and sends appropriate GET command to R24 server, e.g.,
+
+GET OBSERVATION (PATIENT X, TIME PERIOD, CODE FOR THE OBSERVATION(S) (DAILY STEPS AND AVERAGE WEEKLY), CATEGORY)
+
+   </td>
+  </tr>
+  <tr>
+   <td>R24 server receives GET and
+
+
+
+1.  finds the patient's data in the OMOP data store
+1.  computes if needs to using the parameters in the GET command
+1.  sends data back HTTP: FHIR BUNDLE that includes FHIR observations with a 200 or sends back an error 401/403
+   </td>
+  </tr>
+  <tr>
+   <td>
+mDATA receives the results of the GET command from the R24 server and displays it to the provider/patient.
+
+   </td>
+  </tr>
+  <tr>
+   <td>6
+
+   </td>
+   <td>Provider closes the mDATA app.
+
+   </td>
+   <td>mDATA may or may not permanently store the retrieved data in the mDATA datastore.  
+
+   </td>
+  </tr>
+</table>
+<br />

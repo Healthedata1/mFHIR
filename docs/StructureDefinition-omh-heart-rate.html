@@ -25,6 +25,7 @@
 
 
 
+
     <!-- Favicons -->
   <link sizes="144x144" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
   <link sizes="114x114" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
@@ -346,7 +347,7 @@ Summary
    </div>
   </div>
 
-  <!-- =======Differential======== -->
+  <!-- =======Differential level 1======== -->
  <div id="all-tbl-diff">
    <p><b>Differential View</b></p>
    <div id="all-tbl-diff-inner">
@@ -358,6 +359,17 @@ Summary
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-omh-heart-rate-definitions.html#OmhHeartRate.temporalRelationshipToSleep" title="The temporal relationship of a clinical measure or assessment to sleep.">temporalRelationshipToSleep</a><a name="OmhHeartRate.temporalRelationshipToSleep"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="font-weight:bold">Binding: </span><a href="ValueSet-temporal-relationship-to-sleep.html">temporal-relationship-to-sleep</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set">required</a>)</td></tr>
 <tr><td colspan="5" class="hierarchy"><br/><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Legend for this format"><img src="http://hl7.org/fhir/STU3/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
    </div>
+     <!-- =======Differential level 2 ( if want to show an intermediate diff if profiling a profile) ========= -->
+      <div id="all-tbl-diff2-inner">
+        
+  <!-- stubbed file need actual file name of diff fragment 
+{% assign id = {{include.id}} %}
+<p><b>Intermediate Differential View ({{include.type}}-{{include.id}} Profile + {{site.data.structuredefinitions.[id].basename}} Profile)</b></p>
+<div id="all-tbl-diff2-inner">
+  {% include {{include.type}}-argo-clinicalnotes-diff.xhtml %}
+</div> -->
+
+      </div>
 </div>
   <!-- =======Snapshot======== -->
 
@@ -372,7 +384,7 @@ Summary
     <div id="all-json">
      <p><b>JSON Template</b></p>
      <div id="all-json-inner">
-        <pre class="spec"><a name="9fb57c99-33bd-4f94-99fe-f3efff330ccf">​</a>
+        <pre class="spec"><a name="a99e1737-d844-4623-b73f-80953e448f1b">​</a>
           // <span style="color: navy; opacity: 0.8"></span>
  {
     "<a href="StructureDefinition-omh-heart-rate.html#OmhHeartRate.id" title="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces" class="dict"><span style="text-decoration: underline">id</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">xml:id (or equivalent in JSON)</span>
@@ -398,7 +410,7 @@ Summary
 <br/>
 
 <a name="downloads"> </a>
-<p><a name="b4d5d4fd-3d2b-4349-987b-3e71f9ad25c4">​</a>Downloads: StructureDefinition: (<a download="null" href="StructureDefinition-omh-heart-rate.xml">XML</a>, <a download="null" href="StructureDefinition-omh-heart-rate.json">JSON</a>), Schema:  <a download="null" href="omh-heart-rate.sch">XML Schematron</a></p>
+<p><a name="2696bb57-3464-4f9b-a585-06e0c4f727e1">​</a>Downloads: StructureDefinition: (<a download="null" href="StructureDefinition-omh-heart-rate.xml">XML</a>, <a download="null" href="StructureDefinition-omh-heart-rate.json">JSON</a>), Schema:  <a download="null" href="omh-heart-rate.sch">XML Schematron</a></p>
 
 <p>&nbsp;</p>
 
@@ -499,7 +511,7 @@ $( '#tabs' ).tabs({
   <div class="container">    <!-- container -->
    <div class="inner-wrapper">
     <p>
-            mFHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Apr 17, 2018 13:53-0700. |
+            mFHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Apr 25, 2018 17:25-0700. |
                <!-- <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a rel="license" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
         
