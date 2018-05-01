@@ -1,0 +1,177 @@
+{
+    "abstract": false,
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.openmhealth.org/"
+                }
+            ]
+        }
+    ],
+    "date": "2018-04-30T23:03:10Z",
+    "derivation": "specialization",
+    "description": "This schema represents a therapeutic agent, single-active ingredient or combination.",
+    "differential": {
+        "element": [
+            {
+                "definition": "This schema represents a therapeutic agent, single-active ingredient or combination.",
+                "id": "OmhMedication",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "OMH Medication"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation resource with Observation.code = "
+                    }
+                ],
+                "mustSupport": false,
+                "path": "OmhMedication"
+            },
+            {
+                "definition": "The header property represents the header of a data transaction",
+                "id": "OmhMedication.omhHeader",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "see OmhHeader Mapping tables"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "see OmhHeader Mapping tables"
+                    }
+                ],
+                "max": "1",
+                "min": 1,
+                "mustSupport": false,
+                "path": "OmhMedication.omhHeader",
+                "type": [
+                    {
+                        "code": "BackboneElement",
+                        "profile": "http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header"
+                    }
+                ]
+            },
+            {
+                "definition": "TODO",
+                "id": "OmhMedication.genericName",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.generic_name"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhMedication.genericName",
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ]
+            },
+            {
+                "definition": "TODO",
+                "id": "OmhMedication.tradeName",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.trade_name"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhMedication.tradeName",
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ]
+            },
+            {
+                "definition": "TODO",
+                "id": "OmhMedication.strength",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.strength"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 1,
+                "mustSupport": false,
+                "path": "OmhMedication.strength"
+            },
+            {
+                "definition": "TODO",
+                "id": "OmhMedication.rxnormCode",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.rxnorm_code"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhMedication.rxnormCode",
+                "type": [
+                    {
+                        "code": "decimal"
+                    }
+                ]
+            }
+        ]
+    },
+    "fhirVersion": "3.0.1",
+    "id": "omh-medication",
+    "kind": "logical",
+    "mapping": [
+        {
+            "identity": "omh-schema",
+            "name": "OMH Heart Rate Schema",
+            "uri": "https://github.com/openmhealth/schemas/blob/master/schema/omh/heart-rate-1.1.json"
+        },
+        {
+            "identity": "fhir-observation",
+            "name": "FHIR Observation Profile",
+            "uri": "http://hl7.org/fhir/STU3/observation.html"
+        }
+    ],
+    "name": "OmhMedication",
+    "publisher": "Open mHealth",
+    "resourceType": "StructureDefinition",
+    "status": "draft",
+    "title": "OMH Medication",
+    "type": "OmhMedication",
+    "url": "http://www.fhir.org/guides/mfhir/StructureDefinition/omh-medication",
+    "version": "0.0.0"
+}

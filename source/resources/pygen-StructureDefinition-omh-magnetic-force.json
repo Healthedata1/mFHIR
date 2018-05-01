@@ -1,0 +1,226 @@
+{
+    "abstract": false,
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.openmhealth.org/"
+                }
+            ]
+        }
+    ],
+    "date": "2018-04-30T23:03:10Z",
+    "derivation": "specialization",
+    "description": "This schema represents magnetometer measurements.",
+    "differential": {
+        "element": [
+            {
+                "definition": "This schema represents magnetometer measurements.",
+                "id": "OmhMagneticForce",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "OMH Magnetic Force"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation resource with Observation.code = todo"
+                    }
+                ],
+                "mustSupport": false,
+                "path": "OmhMagneticForce"
+            },
+            {
+                "definition": "The header property represents the header of a data transaction",
+                "id": "OmhMagneticForce.omhHeader",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "see OmhHeader Mapping tables"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "see OmhHeader Mapping tables"
+                    }
+                ],
+                "max": "1",
+                "min": 1,
+                "mustSupport": false,
+                "path": "OmhMagneticForce.omhHeader",
+                "type": [
+                    {
+                        "code": "BackboneElement",
+                        "profile": "http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header"
+                    }
+                ]
+            },
+            {
+                "binding": {
+                    "strength": "required",
+                    "valueSetUri": "http://www.fhir.org/guides/mfhir/ValueSet/magnetic-flux-density-unit-value"
+                },
+                "definition": "TODO",
+                "id": "OmhMagneticForce.magneticFieldStrengthX",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.magnetic_field_strength_x"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 1,
+                "mustSupport": false,
+                "path": "OmhMagneticForce.magneticFieldStrengthX",
+                "type": [
+                    {
+                        "code": "Quantity"
+                    }
+                ]
+            },
+            {
+                "binding": {
+                    "strength": "required",
+                    "valueSetUri": "http://www.fhir.org/guides/mfhir/ValueSet/magnetic-flux-density-unit-value"
+                },
+                "definition": "TODO",
+                "id": "OmhMagneticForce.magneticFieldStrengthY",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.magnetic_field_strength_y"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 1,
+                "mustSupport": false,
+                "path": "OmhMagneticForce.magneticFieldStrengthY",
+                "type": [
+                    {
+                        "code": "Quantity"
+                    }
+                ]
+            },
+            {
+                "binding": {
+                    "strength": "required",
+                    "valueSetUri": "http://www.fhir.org/guides/mfhir/ValueSet/magnetic-flux-density-unit-value"
+                },
+                "definition": "TODO",
+                "id": "OmhMagneticForce.magneticFieldStrengthZ",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.magnetic_field_strength_z"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhMagneticForce.magneticFieldStrengthZ",
+                "type": [
+                    {
+                        "code": "Quantity"
+                    }
+                ]
+            },
+            {
+                "binding": {
+                    "strength": "required"
+                },
+                "definition": "TODO",
+                "id": "OmhMagneticForce.effectiveTimeFrame",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.effective_time_frame"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 1,
+                "mustSupport": false,
+                "path": "OmhMagneticForce.effectiveTimeFrame",
+                "patternQuantity": {},
+                "type": [
+                    {
+                        "code": "dateTime|Period"
+                    }
+                ]
+            },
+            {
+                "binding": {
+                    "strength": "required",
+                    "valueSetUri": "http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic"
+                },
+                "definition": "TODO",
+                "id": "OmhMagneticForce.descriptiveStatistic",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.descriptive_statistic"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhMagneticForce.descriptiveStatistic",
+                "type": [
+                    {
+                        "code": "code"
+                    }
+                ]
+            }
+        ]
+    },
+    "fhirVersion": "3.0.1",
+    "id": "omh-magnetic-force",
+    "kind": "logical",
+    "mapping": [
+        {
+            "identity": "omh-schema",
+            "name": "OMH Heart Rate Schema",
+            "uri": "https://github.com/openmhealth/schemas/blob/master/schema/omh/heart-rate-1.1.json"
+        },
+        {
+            "identity": "fhir-observation",
+            "name": "FHIR Observation Profile",
+            "uri": "http://hl7.org/fhir/STU3/observation.html"
+        }
+    ],
+    "name": "OmhMagneticForce",
+    "publisher": "Open mHealth",
+    "resourceType": "StructureDefinition",
+    "status": "draft",
+    "title": "OMH Magnetic Force",
+    "type": "OmhMagneticForce",
+    "url": "http://www.fhir.org/guides/mfhir/StructureDefinition/omh-magnetic-force",
+    "version": "0.0.0"
+}

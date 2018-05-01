@@ -1,0 +1,45 @@
+{
+    "compose": {
+        "include": [
+            {
+                "concept": [
+                    {
+                        "code": "33586001",
+                        "display": "sitting"
+                    },
+                    {
+                        "code": "102538003",
+                        "display": "lying down"
+                    },
+                    {
+                        "code": "10904000",
+                        "display": "standing"
+                    }
+                ],
+                "system": "http://snomed.info/sct"
+            }
+        ]
+    },
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.openmhealth.org/"
+                }
+            ]
+        }
+    ],
+    "copyright": "Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved. This value set includes content from SNOMED CT, which is copyright 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.",
+    "date": "2018-04-28T15:55:00.13Z",
+    "description": "The position of the subject during a clinical measurement.",
+    "id": "position-during-measurement",
+    "immutable": false,
+    "name": "position-during-measurement",
+    "publisher": "Open mHealth",
+    "resourceType": "ValueSet",
+    "status": "draft",
+    "title": "Position During Measurement",
+    "url": "http://www.fhir.org/guides/mfhir/ValueSet/position-during-measurement",
+    "version": "0.0.0"
+}

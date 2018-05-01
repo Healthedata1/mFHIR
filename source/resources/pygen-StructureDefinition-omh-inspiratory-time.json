@@ -1,0 +1,189 @@
+{
+    "abstract": false,
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.openmhealth.org/"
+                }
+            ]
+        }
+    ],
+    "date": "2018-04-30T23:03:10Z",
+    "derivation": "specialization",
+    "description": "This schema represents the duration of a person's inspiration (i.e., the time interval between the initiation of inhalation and the point at which no further lung volume expansion occurs), either a single measurement, or the result of aggregating several measurements made over time (see Descriptive statistic schema for a list of aggregate measures)",
+    "differential": {
+        "element": [
+            {
+                "definition": "This schema represents the duration of a person's inspiration (i.e., the time interval between the initiation of inhalation and the point at which no further lung volume expansion occurs), either a single measurement, or the result of aggregating several measurements made over time (see Descriptive statistic schema for a list of aggregate measures)",
+                "id": "OmhInspiratoryTime",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "OMH Inspiratory Time"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation resource with Observation.code = Time"
+                    }
+                ],
+                "mustSupport": false,
+                "path": "OmhInspiratoryTime"
+            },
+            {
+                "definition": "The header property represents the header of a data transaction",
+                "id": "OmhInspiratoryTime.omhHeader",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "see OmhHeader Mapping tables"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "see OmhHeader Mapping tables"
+                    }
+                ],
+                "max": "1",
+                "min": 1,
+                "mustSupport": false,
+                "path": "OmhInspiratoryTime.omhHeader",
+                "type": [
+                    {
+                        "code": "BackboneElement",
+                        "profile": "http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header"
+                    }
+                ]
+            },
+            {
+                "definition": "TODO",
+                "id": "OmhInspiratoryTime.inspiratoryTime",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.inspiratory_time"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 1,
+                "mustSupport": false,
+                "path": "OmhInspiratoryTime.inspiratoryTime"
+            },
+            {
+                "binding": {
+                    "strength": "required"
+                },
+                "definition": "TODO",
+                "id": "OmhInspiratoryTime.effectiveTimeFrame",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.effective_time_frame"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhInspiratoryTime.effectiveTimeFrame",
+                "patternQuantity": {},
+                "type": [
+                    {
+                        "code": "dateTime|Period"
+                    }
+                ]
+            },
+            {
+                "binding": {
+                    "strength": "required",
+                    "valueSetUri": "http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic"
+                },
+                "definition": "TODO",
+                "id": "OmhInspiratoryTime.descriptiveStatistic",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.descriptive_statistic"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhInspiratoryTime.descriptiveStatistic",
+                "type": [
+                    {
+                        "code": "code"
+                    }
+                ]
+            },
+            {
+                "binding": {
+                    "strength": "required",
+                    "valueSetUri": "http://www.fhir.org/guides/mfhir/ValueSet/temporal-relationship-to-physical-activity"
+                },
+                "definition": "TODO",
+                "id": "OmhInspiratoryTime.temporalRelationshipToPhysicalActivity",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.temporal_relationship_to_physical_activity"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhInspiratoryTime.temporalRelationshipToPhysicalActivity",
+                "type": [
+                    {
+                        "code": "code"
+                    }
+                ]
+            }
+        ]
+    },
+    "fhirVersion": "3.0.1",
+    "id": "omh-inspiratory-time",
+    "kind": "logical",
+    "mapping": [
+        {
+            "identity": "omh-schema",
+            "name": "OMH Heart Rate Schema",
+            "uri": "https://github.com/openmhealth/schemas/blob/master/schema/omh/heart-rate-1.1.json"
+        },
+        {
+            "identity": "fhir-observation",
+            "name": "FHIR Observation Profile",
+            "uri": "http://hl7.org/fhir/STU3/observation.html"
+        }
+    ],
+    "name": "OmhInspiratoryTime",
+    "publisher": "Open mHealth",
+    "resourceType": "StructureDefinition",
+    "status": "draft",
+    "title": "OMH Inspiratory Time",
+    "type": "OmhInspiratoryTime",
+    "url": "http://www.fhir.org/guides/mfhir/StructureDefinition/omh-inspiratory-time",
+    "version": "0.0.0"
+}

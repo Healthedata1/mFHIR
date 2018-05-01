@@ -1,0 +1,260 @@
+{
+    "abstract": false,
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.openmhealth.org/"
+                }
+            ]
+        }
+    ],
+    "date": "2018-04-30T23:03:10Z",
+    "derivation": "specialization",
+    "description": "This schema represents a person's blood glucose level.",
+    "differential": {
+        "element": [
+            {
+                "definition": "This schema represents a person's blood glucose level.",
+                "id": "OmhBloodGlucose",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "OMH Blood Glucose"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation resource with Observation.code = Mass/\u200bvolume"
+                    }
+                ],
+                "mustSupport": false,
+                "path": "OmhBloodGlucose"
+            },
+            {
+                "definition": "The header property represents the header of a data transaction",
+                "id": "OmhBloodGlucose.omhHeader",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "see OmhHeader Mapping tables"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "see OmhHeader Mapping tables"
+                    }
+                ],
+                "max": "1",
+                "min": 1,
+                "mustSupport": false,
+                "path": "OmhBloodGlucose.omhHeader",
+                "type": [
+                    {
+                        "code": "BackboneElement",
+                        "profile": "http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header"
+                    }
+                ]
+            },
+            {
+                "definition": "TODO",
+                "id": "OmhBloodGlucose.bloodGlucose",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.blood_glucose"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 1,
+                "mustSupport": false,
+                "path": "OmhBloodGlucose.bloodGlucose"
+            },
+            {
+                "definition": "TODO",
+                "id": "OmhBloodGlucose.specimenSource",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.specimen_source"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhBloodGlucose.specimenSource"
+            },
+            {
+                "binding": {
+                    "strength": "required"
+                },
+                "definition": "TODO",
+                "id": "OmhBloodGlucose.effectiveTimeFrame",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.effective_time_frame"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhBloodGlucose.effectiveTimeFrame",
+                "patternQuantity": {},
+                "type": [
+                    {
+                        "code": "dateTime|Period"
+                    }
+                ]
+            },
+            {
+                "binding": {
+                    "strength": "required",
+                    "valueSetUri": "http://www.fhir.org/guides/mfhir/ValueSet/temporal-relationship-to-meal"
+                },
+                "definition": "TODO",
+                "id": "OmhBloodGlucose.temporalRelationshipToMeal",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.temporal_relationship_to_meal"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhBloodGlucose.temporalRelationshipToMeal",
+                "type": [
+                    {
+                        "code": "code"
+                    }
+                ]
+            },
+            {
+                "binding": {
+                    "strength": "required",
+                    "valueSetUri": "http://www.fhir.org/guides/mfhir/ValueSet/temporal-relationship-to-sleep"
+                },
+                "definition": "TODO",
+                "id": "OmhBloodGlucose.temporalRelationshipToSleep",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.temporal_relationship_to_sleep"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhBloodGlucose.temporalRelationshipToSleep",
+                "type": [
+                    {
+                        "code": "code"
+                    }
+                ]
+            },
+            {
+                "binding": {
+                    "strength": "required",
+                    "valueSetUri": "http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic"
+                },
+                "definition": "TODO",
+                "id": "OmhBloodGlucose.descriptiveStatistic",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.descriptive_statistic"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhBloodGlucose.descriptiveStatistic",
+                "type": [
+                    {
+                        "code": "code"
+                    }
+                ]
+            },
+            {
+                "definition": "TODO",
+                "id": "OmhBloodGlucose.userNotes",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.user_notes"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhBloodGlucose.userNotes",
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ]
+            }
+        ]
+    },
+    "fhirVersion": "3.0.1",
+    "id": "omh-blood-glucose",
+    "kind": "logical",
+    "mapping": [
+        {
+            "identity": "omh-schema",
+            "name": "OMH Heart Rate Schema",
+            "uri": "https://github.com/openmhealth/schemas/blob/master/schema/omh/heart-rate-1.1.json"
+        },
+        {
+            "identity": "fhir-observation",
+            "name": "FHIR Observation Profile",
+            "uri": "http://hl7.org/fhir/STU3/observation.html"
+        }
+    ],
+    "name": "OmhBloodGlucose",
+    "publisher": "Open mHealth",
+    "resourceType": "StructureDefinition",
+    "status": "draft",
+    "title": "OMH Blood Glucose",
+    "type": "OmhBloodGlucose",
+    "url": "http://www.fhir.org/guides/mfhir/StructureDefinition/omh-blood-glucose",
+    "version": "0.0.0"
+}

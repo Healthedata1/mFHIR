@@ -1,0 +1,278 @@
+{
+    "abstract": false,
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.openmhealth.org/"
+                }
+            ]
+        }
+    ],
+    "date": "2018-04-30T23:03:10Z",
+    "derivation": "specialization",
+    "description": "This schema represents a geographic position measurement.",
+    "differential": {
+        "element": [
+            {
+                "definition": "This schema represents a geographic position measurement.",
+                "id": "OmhGeoposition",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "OMH Geoposition"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation resource with Observation.code = "
+                    }
+                ],
+                "mustSupport": false,
+                "path": "OmhGeoposition"
+            },
+            {
+                "definition": "The header property represents the header of a data transaction",
+                "id": "OmhGeoposition.omhHeader",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "see OmhHeader Mapping tables"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "see OmhHeader Mapping tables"
+                    }
+                ],
+                "max": "1",
+                "min": 1,
+                "mustSupport": false,
+                "path": "OmhGeoposition.omhHeader",
+                "type": [
+                    {
+                        "code": "BackboneElement",
+                        "profile": "http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header"
+                    }
+                ]
+            },
+            {
+                "definition": "TODO",
+                "id": "OmhGeoposition.latitude",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.latitude"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 1,
+                "mustSupport": false,
+                "path": "OmhGeoposition.latitude",
+                "patternQuantity": {
+                    "code": "deg",
+                    "system": "http://unitsofmeasure.org",
+                    "unit": "deg"
+                },
+                "type": [
+                    {
+                        "code": "Quantity"
+                    }
+                ]
+            },
+            {
+                "definition": "TODO",
+                "id": "OmhGeoposition.longitude",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.longitude"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 1,
+                "mustSupport": false,
+                "path": "OmhGeoposition.longitude",
+                "patternQuantity": {
+                    "code": "deg",
+                    "system": "http://unitsofmeasure.org",
+                    "unit": "deg"
+                },
+                "type": [
+                    {
+                        "code": "Quantity"
+                    }
+                ]
+            },
+            {
+                "definition": "TODO",
+                "id": "OmhGeoposition.elevation",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.elevation"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhGeoposition.elevation"
+            },
+            {
+                "definition": "TODO",
+                "id": "OmhGeoposition.effectiveTimeFrame",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.effective_time_frame"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 1,
+                "mustSupport": false,
+                "path": "OmhGeoposition.effectiveTimeFrame"
+            },
+            {
+                "definition": "TODO",
+                "id": "OmhGeoposition.numberOfSatellitesInView",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.number_of_satellites_in_view"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhGeoposition.numberOfSatellitesInView",
+                "type": [
+                    {
+                        "code": "TODO"
+                    }
+                ]
+            },
+            {
+                "definition": "TODO",
+                "id": "OmhGeoposition.satelliteSignalStrengths",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.satellite_signal_strengths"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhGeoposition.satelliteSignalStrengths",
+                "type": [
+                    {
+                        "code": "TODO"
+                    }
+                ]
+            },
+            {
+                "definition": "TODO",
+                "id": "OmhGeoposition.numberOfSatellitesInFix",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.number_of_satellites_in_fix"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhGeoposition.numberOfSatellitesInFix",
+                "type": [
+                    {
+                        "code": "TODO"
+                    }
+                ]
+            },
+            {
+                "definition": "TODO",
+                "id": "OmhGeoposition.positioningSystem",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.positioning_system"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhGeoposition.positioningSystem",
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ]
+            }
+        ]
+    },
+    "fhirVersion": "3.0.1",
+    "id": "omh-geoposition",
+    "kind": "logical",
+    "mapping": [
+        {
+            "identity": "omh-schema",
+            "name": "OMH Heart Rate Schema",
+            "uri": "https://github.com/openmhealth/schemas/blob/master/schema/omh/heart-rate-1.1.json"
+        },
+        {
+            "identity": "fhir-observation",
+            "name": "FHIR Observation Profile",
+            "uri": "http://hl7.org/fhir/STU3/observation.html"
+        }
+    ],
+    "name": "OmhGeoposition",
+    "publisher": "Open mHealth",
+    "resourceType": "StructureDefinition",
+    "status": "draft",
+    "title": "OMH Geoposition",
+    "type": "OmhGeoposition",
+    "url": "http://www.fhir.org/guides/mfhir/StructureDefinition/omh-geoposition",
+    "version": "0.0.0"
+}

@@ -1,0 +1,189 @@
+{
+    "abstract": false,
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.openmhealth.org/"
+                }
+            ]
+        }
+    ],
+    "date": "2018-04-30T23:03:10Z",
+    "derivation": "specialization",
+    "description": "This schema represents the duration of a person's complete respiration.",
+    "differential": {
+        "element": [
+            {
+                "definition": "This schema represents the duration of a person's complete respiration.",
+                "id": "OmhVentilationCycleTime",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "OMH Ventilation Cycle Time"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation resource with Observation.code = 250818005 Ventilation cycle time (observable entity)"
+                    }
+                ],
+                "mustSupport": false,
+                "path": "OmhVentilationCycleTime"
+            },
+            {
+                "definition": "The header property represents the header of a data transaction",
+                "id": "OmhVentilationCycleTime.omhHeader",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "see OmhHeader Mapping tables"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "see OmhHeader Mapping tables"
+                    }
+                ],
+                "max": "1",
+                "min": 1,
+                "mustSupport": false,
+                "path": "OmhVentilationCycleTime.omhHeader",
+                "type": [
+                    {
+                        "code": "BackboneElement",
+                        "profile": "http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header"
+                    }
+                ]
+            },
+            {
+                "definition": "TODO",
+                "id": "OmhVentilationCycleTime.ventilationCycleTime",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.ventilation_cycle_time"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 1,
+                "mustSupport": false,
+                "path": "OmhVentilationCycleTime.ventilationCycleTime"
+            },
+            {
+                "binding": {
+                    "strength": "required"
+                },
+                "definition": "TODO",
+                "id": "OmhVentilationCycleTime.effectiveTimeFrame",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.effective_time_frame"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 1,
+                "mustSupport": false,
+                "path": "OmhVentilationCycleTime.effectiveTimeFrame",
+                "patternQuantity": {},
+                "type": [
+                    {
+                        "code": "dateTime|Period"
+                    }
+                ]
+            },
+            {
+                "binding": {
+                    "strength": "required",
+                    "valueSetUri": "http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic"
+                },
+                "definition": "TODO",
+                "id": "OmhVentilationCycleTime.descriptiveStatistic",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.descriptive_statistic"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhVentilationCycleTime.descriptiveStatistic",
+                "type": [
+                    {
+                        "code": "code"
+                    }
+                ]
+            },
+            {
+                "binding": {
+                    "strength": "required",
+                    "valueSetUri": "http://www.fhir.org/guides/mfhir/ValueSet/temporal-relationship-to-physical-activity"
+                },
+                "definition": "TODO",
+                "id": "OmhVentilationCycleTime.temporalRelationshipToPhysicalActivity",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.temporal_relationship_to_physical_activity"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhVentilationCycleTime.temporalRelationshipToPhysicalActivity",
+                "type": [
+                    {
+                        "code": "code"
+                    }
+                ]
+            }
+        ]
+    },
+    "fhirVersion": "3.0.1",
+    "id": "omh-ventilation-cycle-time",
+    "kind": "logical",
+    "mapping": [
+        {
+            "identity": "omh-schema",
+            "name": "OMH Heart Rate Schema",
+            "uri": "https://github.com/openmhealth/schemas/blob/master/schema/omh/heart-rate-1.1.json"
+        },
+        {
+            "identity": "fhir-observation",
+            "name": "FHIR Observation Profile",
+            "uri": "http://hl7.org/fhir/STU3/observation.html"
+        }
+    ],
+    "name": "OmhVentilationCycleTime",
+    "publisher": "Open mHealth",
+    "resourceType": "StructureDefinition",
+    "status": "draft",
+    "title": "OMH Ventilation Cycle Time",
+    "type": "OmhVentilationCycleTime",
+    "url": "http://www.fhir.org/guides/mfhir/StructureDefinition/omh-ventilation-cycle-time",
+    "version": "0.0.0"
+}

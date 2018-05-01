@@ -1,0 +1,161 @@
+{
+    "abstract": false,
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.openmhealth.org/"
+                }
+            ]
+        }
+    ],
+    "date": "2018-04-30T23:03:10Z",
+    "derivation": "specialization",
+    "description": "This schema represents a person's body fat percentage.",
+    "differential": {
+        "element": [
+            {
+                "definition": "This schema represents a person's body fat percentage.",
+                "id": "OmhBodyFatPercentage",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "OMH Body Fat Percentage"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation resource with Observation.code = 41982-0  Percentage of body fat Measured "
+                    }
+                ],
+                "mustSupport": false,
+                "path": "OmhBodyFatPercentage"
+            },
+            {
+                "definition": "The header property represents the header of a data transaction",
+                "id": "OmhBodyFatPercentage.omhHeader",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "see OmhHeader Mapping tables"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "see OmhHeader Mapping tables"
+                    }
+                ],
+                "max": "1",
+                "min": 1,
+                "mustSupport": false,
+                "path": "OmhBodyFatPercentage.omhHeader",
+                "type": [
+                    {
+                        "code": "BackboneElement",
+                        "profile": "http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header"
+                    }
+                ]
+            },
+            {
+                "definition": "TODO",
+                "id": "OmhBodyFatPercentage.bodyFatPercentage",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.body_fat_percentage"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 1,
+                "mustSupport": false,
+                "path": "OmhBodyFatPercentage.bodyFatPercentage"
+            },
+            {
+                "binding": {
+                    "strength": "required"
+                },
+                "definition": "TODO",
+                "id": "OmhBodyFatPercentage.effectiveTimeFrame",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.effective_time_frame"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhBodyFatPercentage.effectiveTimeFrame",
+                "patternQuantity": {},
+                "type": [
+                    {
+                        "code": "dateTime|Period"
+                    }
+                ]
+            },
+            {
+                "binding": {
+                    "strength": "required",
+                    "valueSetUri": "http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic"
+                },
+                "definition": "TODO",
+                "id": "OmhBodyFatPercentage.descriptiveStatistic",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.descriptive_statistic"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhBodyFatPercentage.descriptiveStatistic",
+                "type": [
+                    {
+                        "code": "code"
+                    }
+                ]
+            }
+        ]
+    },
+    "fhirVersion": "3.0.1",
+    "id": "omh-body-fat-percentage",
+    "kind": "logical",
+    "mapping": [
+        {
+            "identity": "omh-schema",
+            "name": "OMH Heart Rate Schema",
+            "uri": "https://github.com/openmhealth/schemas/blob/master/schema/omh/heart-rate-1.1.json"
+        },
+        {
+            "identity": "fhir-observation",
+            "name": "FHIR Observation Profile",
+            "uri": "http://hl7.org/fhir/STU3/observation.html"
+        }
+    ],
+    "name": "OmhBodyFatPercentage",
+    "publisher": "Open mHealth",
+    "resourceType": "StructureDefinition",
+    "status": "draft",
+    "title": "OMH Body Fat Percentage",
+    "type": "OmhBodyFatPercentage",
+    "url": "http://www.fhir.org/guides/mfhir/StructureDefinition/omh-body-fat-percentage",
+    "version": "0.0.0"
+}

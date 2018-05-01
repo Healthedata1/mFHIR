@@ -1,0 +1,57 @@
+{
+    "compose": {
+        "include": [
+            {
+                "concept": [
+                    {
+                        "code": "interstitial fluid",
+                        "display": "interstitial fluid"
+                    },
+                    {
+                        "code": "capillary blood",
+                        "display": "capillary blood"
+                    },
+                    {
+                        "code": "plasma",
+                        "display": "plasma"
+                    },
+                    {
+                        "code": "serum",
+                        "display": "serum"
+                    },
+                    {
+                        "code": "tears",
+                        "display": "tears"
+                    },
+                    {
+                        "code": "whole blood",
+                        "display": "whole blood"
+                    }
+                ],
+                "system": "http://www.fhir.org/guides/mfhir/CodeSystem/specimen-source"
+            }
+        ]
+    },
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.openmhealth.org/"
+                }
+            ]
+        }
+    ],
+    "copyright": "Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved.",
+    "date": "2018-04-28T15:55:00.13Z",
+    "description": "The specimen analyzed. The current value set is taken from the SNOMED CT Body substance sample (specimen) hierarchy without the word 'specimen'. More values will be added as needed.",
+    "id": "specimen-source",
+    "immutable": false,
+    "name": "specimen-source",
+    "publisher": "Open mHealth",
+    "resourceType": "ValueSet",
+    "status": "draft",
+    "title": "Specimen Source",
+    "url": "http://www.fhir.org/guides/mfhir/ValueSet/specimen-source",
+    "version": "0.0.0"
+}

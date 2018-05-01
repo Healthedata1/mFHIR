@@ -23,8 +23,8 @@
    "id":"example-1",
    "stepCount":7939,
    "effectiveTimeFrame":{  
-      "start":"2018-04-17",
-      "end":"2018-04-17"
+      "start":"2018-04-17T00:00:00Z",
+      "end":"2018-04-17T00:00:00Z"
    }
 }}
 ~~~

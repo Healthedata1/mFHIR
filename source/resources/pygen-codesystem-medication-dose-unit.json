@@ -1,0 +1,361 @@
+{
+    "caseSensitive": true,
+    "concept": [
+        {
+            "code": "%",
+            "display": "%"
+        },
+        {
+            "code": "AU",
+            "display": "AU"
+        },
+        {
+            "code": "AU/mL",
+            "display": "AU/mL"
+        },
+        {
+            "code": "bar",
+            "display": "bar"
+        },
+        {
+            "code": "BAU",
+            "display": "BAU"
+        },
+        {
+            "code": "BAU/mL",
+            "display": "BAU/mL"
+        },
+        {
+            "code": "bead",
+            "display": "bead"
+        },
+        {
+            "code": "BU",
+            "display": "BU"
+        },
+        {
+            "code": "capsule",
+            "display": "capsule"
+        },
+        {
+            "code": "CCID_50",
+            "display": "CCID_50"
+        },
+        {
+            "code": "cellular sheet",
+            "display": "cellular sheet"
+        },
+        {
+            "code": "Ci",
+            "display": "Ci"
+        },
+        {
+            "code": "cloth",
+            "display": "cloth"
+        },
+        {
+            "code": "cm^2",
+            "display": "cm^2"
+        },
+        {
+            "code": "D'ag'U",
+            "display": "D'ag'U"
+        },
+        {
+            "code": "disc",
+            "display": "disc"
+        },
+        {
+            "code": "dL",
+            "display": "dL"
+        },
+        {
+            "code": "douche",
+            "display": "douche"
+        },
+        {
+            "code": "drop",
+            "display": "drop"
+        },
+        {
+            "code": "FFU",
+            "display": "FFU"
+        },
+        {
+            "code": "g",
+            "display": "g"
+        },
+        {
+            "code": "globule",
+            "display": "globule"
+        },
+        {
+            "code": "granule",
+            "display": "granule"
+        },
+        {
+            "code": "gum",
+            "display": "gum"
+        },
+        {
+            "code": "hp_C",
+            "display": "hp_C"
+        },
+        {
+            "code": "hp_M",
+            "display": "hp_M"
+        },
+        {
+            "code": "hp_Q",
+            "display": "hp_Q"
+        },
+        {
+            "code": "hp_X",
+            "display": "hp_X"
+        },
+        {
+            "code": "IU",
+            "display": "IU"
+        },
+        {
+            "code": "IU/L",
+            "display": "IU/L"
+        },
+        {
+            "code": "IU/mL",
+            "display": "IU/mL"
+        },
+        {
+            "code": "kp_C",
+            "display": "kp_C"
+        },
+        {
+            "code": "L",
+            "display": "L"
+        },
+        {
+            "code": "Lf",
+            "display": "Lf"
+        },
+        {
+            "code": "LfU/mL",
+            "display": "LfU/mL"
+        },
+        {
+            "code": "lozenge",
+            "display": "lozenge"
+        },
+        {
+            "code": "mCi",
+            "display": "mCi"
+        },
+        {
+            "code": "mCi/mL",
+            "display": "mCi/mL"
+        },
+        {
+            "code": "mEq",
+            "display": "mEq"
+        },
+        {
+            "code": "mg",
+            "display": "mg"
+        },
+        {
+            "code": "mg/actuat",
+            "display": "mg/actuat"
+        },
+        {
+            "code": "mg/hr",
+            "display": "mg/hr"
+        },
+        {
+            "code": "mg/mg",
+            "display": "mg/mg"
+        },
+        {
+            "code": "mg/mL",
+            "display": "mg/mL"
+        },
+        {
+            "code": "mL",
+            "display": "mL"
+        },
+        {
+            "code": "mmol",
+            "display": "mmol"
+        },
+        {
+            "code": "mol",
+            "display": "mol"
+        },
+        {
+            "code": "mU",
+            "display": "mU"
+        },
+        {
+            "code": "ng",
+            "display": "ng"
+        },
+        {
+            "code": "nmol",
+            "display": "nmol"
+        },
+        {
+            "code": "organisms",
+            "display": "organisms"
+        },
+        {
+            "code": "pastille",
+            "display": "pastille"
+        },
+        {
+            "code": "patch",
+            "display": "patch"
+        },
+        {
+            "code": "pellet",
+            "display": "pellet"
+        },
+        {
+            "code": "PFU",
+            "display": "PFU"
+        },
+        {
+            "code": "pill",
+            "display": "pill"
+        },
+        {
+            "code": "PNU",
+            "display": "PNU"
+        },
+        {
+            "code": "PNU/mL",
+            "display": "PNU/mL"
+        },
+        {
+            "code": "pouch",
+            "display": "pouch"
+        },
+        {
+            "code": "puff",
+            "display": "puff"
+        },
+        {
+            "code": "ring",
+            "display": "ring"
+        },
+        {
+            "code": "salve",
+            "display": "salve"
+        },
+        {
+            "code": "stick",
+            "display": "stick"
+        },
+        {
+            "code": "strip",
+            "display": "strip"
+        },
+        {
+            "code": "suppository",
+            "display": "suppository"
+        },
+        {
+            "code": "swab",
+            "display": "swab"
+        },
+        {
+            "code": "tablet",
+            "display": "tablet"
+        },
+        {
+            "code": "tampon",
+            "display": "tampon"
+        },
+        {
+            "code": "tape",
+            "display": "tape"
+        },
+        {
+            "code": "tbsp",
+            "display": "tbsp"
+        },
+        {
+            "code": "TCID_50",
+            "display": "TCID_50"
+        },
+        {
+            "code": "tsp",
+            "display": "tsp"
+        },
+        {
+            "code": "U",
+            "display": "U"
+        },
+        {
+            "code": "uCi",
+            "display": "uCi"
+        },
+        {
+            "code": "ug",
+            "display": "ug"
+        },
+        {
+            "code": "ug/mL",
+            "display": "ug/mL"
+        },
+        {
+            "code": "uL",
+            "display": "uL"
+        },
+        {
+            "code": "umol",
+            "display": "umol"
+        },
+        {
+            "code": "unt",
+            "display": "unt"
+        },
+        {
+            "code": "unt/mL",
+            "display": "unt/mL"
+        },
+        {
+            "code": "USP'U",
+            "display": "USP'U"
+        },
+        {
+            "code": "vial",
+            "display": "vial"
+        },
+        {
+            "code": "wafer",
+            "display": "wafer"
+        },
+        {
+            "code": "X",
+            "display": "X"
+        }
+    ],
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.openmhealth.org/"
+                }
+            ]
+        }
+    ],
+    "content": "complete",
+    "date": "2018-04-28T15:55:00.13Z",
+    "description": "The list of most commonly used units of measure for a medication dose. Suggestions for additions are accepted.",
+    "id": "medication-dose-unit",
+    "name": "medication-dose-unit",
+    "resourceType": "CodeSystem",
+    "status": "draft",
+    "url": "http://www.fhir.org/guides/mfhir/CodeSystem/medication-dose-unit",
+    "valueSet": "http://www.fhir.org/guides/mfhir/ValueSet/medication-dose-unit",
+    "version": "0.0.0"
+}

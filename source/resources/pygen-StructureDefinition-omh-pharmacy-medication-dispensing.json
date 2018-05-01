@@ -1,0 +1,200 @@
+{
+    "abstract": false,
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.openmhealth.org/"
+                }
+            ]
+        }
+    ],
+    "date": "2018-04-30T23:03:10Z",
+    "derivation": "specialization",
+    "description": "This schema represents the dispensing by a pharmacy of medication based on a prescription e.g., atenolol 50 mg, 20 tab.",
+    "differential": {
+        "element": [
+            {
+                "definition": "This schema represents the dispensing by a pharmacy of medication based on a prescription e.g., atenolol 50 mg, 20 tab.",
+                "id": "OmhPharmacyMedicationDispensing",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "OMH Pharmacy Medication Dispensing"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation resource with Observation.code = "
+                    }
+                ],
+                "mustSupport": false,
+                "path": "OmhPharmacyMedicationDispensing"
+            },
+            {
+                "definition": "The header property represents the header of a data transaction",
+                "id": "OmhPharmacyMedicationDispensing.omhHeader",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "see OmhHeader Mapping tables"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "see OmhHeader Mapping tables"
+                    }
+                ],
+                "max": "1",
+                "min": 1,
+                "mustSupport": false,
+                "path": "OmhPharmacyMedicationDispensing.omhHeader",
+                "type": [
+                    {
+                        "code": "BackboneElement",
+                        "profile": "http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header"
+                    }
+                ]
+            },
+            {
+                "definition": "TODO",
+                "id": "OmhPharmacyMedicationDispensing.medicationPrescription",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.medication_prescription"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 1,
+                "mustSupport": false,
+                "path": "OmhPharmacyMedicationDispensing.medicationPrescription"
+            },
+            {
+                "definition": "TODO",
+                "id": "OmhPharmacyMedicationDispensing.medicationDispensed",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.medication_dispensed"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 1,
+                "mustSupport": false,
+                "path": "OmhPharmacyMedicationDispensing.medicationDispensed",
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ]
+            },
+            {
+                "definition": "TODO",
+                "id": "OmhPharmacyMedicationDispensing.amountDispensed",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.amount_dispensed"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 1,
+                "mustSupport": false,
+                "path": "OmhPharmacyMedicationDispensing.amountDispensed"
+            },
+            {
+                "binding": {
+                    "strength": "required"
+                },
+                "definition": "TODO",
+                "id": "OmhPharmacyMedicationDispensing.timeFrameMedicationDispensed",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.time_frame_medication_dispensed"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 1,
+                "mustSupport": false,
+                "path": "OmhPharmacyMedicationDispensing.timeFrameMedicationDispensed",
+                "patternQuantity": {},
+                "type": [
+                    {
+                        "code": "dateTime|Period"
+                    }
+                ]
+            },
+            {
+                "definition": "TODO",
+                "id": "OmhPharmacyMedicationDispensing.remainingRefills",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.remaining_refills"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhPharmacyMedicationDispensing.remainingRefills",
+                "type": [
+                    {
+                        "code": "decimal"
+                    }
+                ]
+            }
+        ]
+    },
+    "fhirVersion": "3.0.1",
+    "id": "omh-pharmacy-medication-dispensing",
+    "kind": "logical",
+    "mapping": [
+        {
+            "identity": "omh-schema",
+            "name": "OMH Heart Rate Schema",
+            "uri": "https://github.com/openmhealth/schemas/blob/master/schema/omh/heart-rate-1.1.json"
+        },
+        {
+            "identity": "fhir-observation",
+            "name": "FHIR Observation Profile",
+            "uri": "http://hl7.org/fhir/STU3/observation.html"
+        }
+    ],
+    "name": "OmhPharmacyMedicationDispensing",
+    "publisher": "Open mHealth",
+    "resourceType": "StructureDefinition",
+    "status": "draft",
+    "title": "OMH Pharmacy Medication Dispensing",
+    "type": "OmhPharmacyMedicationDispensing",
+    "url": "http://www.fhir.org/guides/mfhir/StructureDefinition/omh-pharmacy-medication-dispensing",
+    "version": "0.0.0"
+}

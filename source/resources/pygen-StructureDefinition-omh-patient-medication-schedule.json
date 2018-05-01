@@ -1,0 +1,86 @@
+{
+    "abstract": false,
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.openmhealth.org/"
+                }
+            ]
+        }
+    ],
+    "date": "2018-04-30T23:03:10Z",
+    "derivation": "specialization",
+    "description": "This schema represents a medication schedule, based on the prescription e.g., atenolol 50 mg, 1 tablet at 8:00 and and 0.5 tablet at 8 pm for 30 days, with a window of +/- 1 hour.",
+    "differential": {
+        "element": [
+            {
+                "definition": "This schema represents a medication schedule, based on the prescription e.g., atenolol 50 mg, 1 tablet at 8:00 and and 0.5 tablet at 8 pm for 30 days, with a window of +/- 1 hour.",
+                "id": "OmhPatientMedicationSchedule",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "OMH Patient Medication Schedule"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation resource with Observation.code = ???"
+                    }
+                ],
+                "mustSupport": false,
+                "path": "OmhPatientMedicationSchedule"
+            },
+            {
+                "definition": "The header property represents the header of a data transaction",
+                "id": "OmhPatientMedicationSchedule.omhHeader",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "see OmhHeader Mapping tables"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "see OmhHeader Mapping tables"
+                    }
+                ],
+                "max": "1",
+                "min": 1,
+                "mustSupport": false,
+                "path": "OmhPatientMedicationSchedule.omhHeader",
+                "type": [
+                    {
+                        "code": "BackboneElement",
+                        "profile": "http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header"
+                    }
+                ]
+            }
+        ]
+    },
+    "fhirVersion": "3.0.1",
+    "id": "omh-patient-medication-schedule",
+    "kind": "logical",
+    "mapping": [
+        {
+            "identity": "omh-schema",
+            "name": "OMH Heart Rate Schema",
+            "uri": "https://github.com/openmhealth/schemas/blob/master/schema/omh/heart-rate-1.1.json"
+        },
+        {
+            "identity": "fhir-observation",
+            "name": "FHIR Observation Profile",
+            "uri": "http://hl7.org/fhir/STU3/observation.html"
+        }
+    ],
+    "name": "OmhPatientMedicationSchedule",
+    "publisher": "Open mHealth",
+    "resourceType": "StructureDefinition",
+    "status": "draft",
+    "title": "OMH Patient Medication Schedule",
+    "type": "OmhPatientMedicationSchedule",
+    "url": "http://www.fhir.org/guides/mfhir/StructureDefinition/omh-patient-medication-schedule",
+    "version": "0.0.0"
+}

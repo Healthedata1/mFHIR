@@ -1,141 +1,155 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd%20-STU3/account.xsd">
-	<id value="omh-step-count"/>
-	<url value="http://www.fhir.org/guides/mfhir/StructureDefinition/omh-step-count"/>
-	<version value="0.0.0"/>
-	<name value="OMHStepCount"/>
-	<status value="draft"/>
-	<date value="2018-04-11T00:00:00-07:00"/>
-	<publisher value="Health eData Inc"/>
-	<description value="Open mHeallth Step Count Schema represents represents number of steps.  See  [Open mHealth Schemas](http://www.openmhealth.org/documentation/#/schema-docs/schema-library).   The LOINC code refers to Number of steps in unspecified time Pedometer, &quot;url&quot;: &quot;http://purl.bioontology.org/ontology/LNC/55423-8&quot;"/>
-	<jurisdiction>
-		<coding>
-			<system value="urn:iso:std:iso:3166"/>
-			<code value="US"/>
-			<display value="United States of America"/>
-		</coding>
-	</jurisdiction>
-	<fhirVersion value="3.0.1"/>
-	<mapping>
-		<identity value="omh-schema"/>
-		<uri value="https://github.com/openmhealth/schemas/blob/master/schema/omh/atep-count-1.0.json"/>
-		<name value="OMH Step Count Schema"/>
-	</mapping>
-	<mapping>
-		<identity value="fhir-observation"/>
-		<uri value="http://hl7.org/fhir/STU3/observation.html"/>
-		<name value="FHIR Observation Profile"/>
-	</mapping>
-	<kind value="logical"/>
-	<abstract value="false"/>
-	<type value="OmhStepCount"/>
-	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
-	<derivation value="specialization"/>
-	<differential>
-		<element id="OmhStepCount">
-			<path value="OmhStepCount"/>
-			<definition value="The LOINC code refers to Number of steps in unspecified time Pedometer&quot;, &quot;url&quot;: &quot;http://purl.bioontology.org/ontology/LNC/55423-8&quot;."/>
-			<mustSupport value="false"/>
-			<isModifier value="false"/>
-			<mapping>
-				<identity value="omh-schema"/>
-				<map value="properties"/>
-			</mapping>
-			<mapping>
-				<identity value="fhir-observation"/>
-				<map value="Observation.code (LOINC code '55423-8' = 'Number of steps in unspecified time Pedometer')"/>
-			</mapping>
-		</element>
-		<element id="OmhStepCount.stepCount">
-			<path value="OmhStepCount.stepCount"/>
-			<definition value="A numerical value representing the number of steps."/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="decimal"/>
-			</type>
+  <id value="omh-step-count"/>
+  <url value="http://www.fhir.org/guides/mfhir/StructureDefinition/omh-step-count"/>
+  <version value="0.0.0"/>
+  <name value="OMHStepCount"/>
+  <status value="draft"/>
+  <date value="2018-04-11T00:00:00-07:00"/>
+  <publisher value="Health eData Inc"/>
+  <description value="Open mHeallth Step Count Schema represents represents number of steps.  See  [Open mHealth Schemas](http://www.openmhealth.org/documentation/#/schema-docs/schema-library).   The LOINC code refers to Number of steps in unspecified time Pedometer, &quot;url&quot;: &quot;http://purl.bioontology.org/ontology/LNC/55423-8&quot;"/>
 
-			<mustSupport value="false"/>
-			<isModifier value="false"/>
-			<mapping>
-				<identity value="omh-schema"/>
-				<map value="properties.step_count"/>
-			</mapping>
-			<mapping>
-				<identity value="fhir-observation"/>
-				<map value="Observation.valueQuantity"/>
-			</mapping>
-		</element>
-		<element id="OmhStepCount.effectiveTimeFrame">
-			<path value="OmhStepCount.effectiveTimeFrame"/>
-			<definition value="Associated time interval for the step count."/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="Period"/>
-			</type>
-			<mustSupport value="false"/>
-			<isModifier value="false"/>
-			<mapping>
-				<identity value="omh-schema"/>
-				<map value="properties.effective_time_frame"/>
-			</mapping>
-			<mapping>
-				<identity value="fhir-observation"/>
-				<map value="Observation.effectivePeriod"/>
-			</mapping>
-		</element>
-		<element id="OmhStepCount.descriptiveStatistic">
-			<path value="OmhStepCount.descriptiveStatistic"/>
-			<definition value="The descriptive statistic of a set of measurements.  E.g., average,count, etc."/>
-			<min value="0"/>
-			<max value="1"/>
-			<type>
-				<code value="code"/>
-			</type>
-			<mustSupport value="false"/>
-			<isModifier value="false"/>
-			<binding>
-				<strength value="required"/>
-				<description value="Descriptive statistic"/>
-				<valueSetReference>
-					<reference value="http://hl7.org/fhir/ValueSet/observation-statistics"/>
-				</valueSetReference>
-			</binding>
-			<mapping>
-				<identity value="omh-schema"/>
-				<map value="properties.descriptive_statistic"/>
-			</mapping>
-			<mapping>
-				<identity value="fhir-observation"/>
-				<map value="Observation.code.coding (translation to more specific code) or Observation.component (component observation code value pair)"/>
-			</mapping>
-		</element>
-		<element id="OmhStepCount.descriptiveStatisticDenominator">
-			<path value="OmhStepCount.descriptiveStatisticDenominator"/>
-			<definition value="The denominator of the descriptive statistic when the measures has an implicit duration. For example in the context of step count, if the descriptive statistic is 'average' and the statistic denominator is 'd' the value describes average daily step count during the period delimited by the effective time frame; in the context of step count, if the descriptive statistic is 'maximum' and the statistic denominator is 'session' the value describes maximum step count per session during the period delimited by the effective time frame."/>
-			<min value="0"/>
-			<max value="1"/>
-			<type>
-				<code value="code"/>
-			</type>
-			<mustSupport value="false"/>
-			<isModifier value="false"/>
-			<binding>
-				<strength value="required"/>
-				<description value="The denominator of the descriptive statistic when the measures has an implicit duration. For example in the context of step count, if the descriptive statistic is 'average' and the statistic denominator is 'd' the value describes average daily step count during the period delimited by the effective time frame; in the context of step count, if the descriptive statistic is 'maximum' and the statistic denominator is 'session' the value describes maximum step count per session during the period delimited by the effective time frame"/>
-				<valueSetReference>
-					<reference value="http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic-denominator"/>
-				</valueSetReference>
-			</binding>
-			<mapping>
-				<identity value="omh-schema"/>
-				<map value="properties.descriptive_statistic_denominator"/>
-			</mapping>
-			<mapping>
-				<identity value="fhir-observation"/>
-				<map value="Observation.code.coding (translation to more specific code) or Observation.component (component observation code value pair)"/>
-			</mapping>
-		</element>
-	</differential>
+  <fhirVersion value="3.0.1"/>
+  <mapping>
+    <identity value="omh-schema"/>
+    <uri value="https://github.com/openmhealth/schemas/blob/master/schema/omh/atep-count-1.0.json"/>
+    <name value="OMH Step Count Schema"/>
+  </mapping>
+  <mapping>
+    <identity value="fhir-observation"/>
+    <uri value="http://hl7.org/fhir/STU3/observation.html"/>
+    <name value="FHIR Observation Profile"/>
+  </mapping>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="OmhStepCount"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <differential>
+    <element id="OmhStepCount">
+      <path value="OmhStepCount"/>
+      <definition value="The LOINC code refers to Number of steps in unspecified time Pedometer&quot;, &quot;url&quot;: &quot;http://purl.bioontology.org/ontology/LNC/55423-8&quot;."/>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="omh-schema"/>
+        <map value="OMH Step Count Schema"/>
+      </mapping>
+      <mapping>
+        <identity value="fhir-observation"/>
+        <map value="Observation resource with Observation.code  = LOINC 55423-8 (Number of steps in unspecified time Pedometer)"/>
+      </mapping>
+    </element>
+    <element id="OmhStepCount.omhHeader">
+      <path value="OmhStepCount.omhHeader"/>
+      <definition                   value="The header property represents the header of a data transaction"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="BackboneElement"/>
+        <profile                  value="http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="omh-schema"/>
+        <map value="see OmhHeader Mapping tables"/>
+      </mapping>
+      <mapping>
+        <identity value="fhir-observation"/>
+        <map value="see OmhHeader Mapping tables"/>
+      </mapping>
+    </element>
+
+    <element id="OmhStepCount.stepCount">
+      <path value="OmhStepCount.stepCount"/>
+      <definition value="A numerical value representing the number of steps."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="decimal"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="omh-schema"/>
+        <map value="properties.step_count"/>
+      </mapping>
+      <mapping>
+        <identity value="fhir-observation"/>
+        <map value="Rule1: IF no descriptiveStatistic (descriptiveStatistic.empty()) Observation.valueQuantity.value ELSE Observation.component.valueQuantity.value"/>
+      </mapping>
+    </element>
+    <element id="OmhStepCount.effectiveTimeFrame">
+      <path value="OmhStepCount.effectiveTimeFrame"/>
+      <definition value="Associated time interval for the step count."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Period"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="omh-schema"/>
+        <map value="properties.effective_time_frame"/>
+      </mapping>
+      <mapping>
+        <identity value="fhir-observation"/>
+        <map value="Observation.effectivePeriod"/>
+      </mapping>
+    </element>
+    <element id="OmhStepCount.descriptiveStatistic">
+      <path value="OmhStepCount.descriptiveStatistic"/>
+      <definition value="The descriptive statistic of a set of measurements.  E.g., average,count, etc."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <binding>
+        <strength value="required"/>
+        <description value="Descriptive statistic"/>
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/observation-statistics"/>
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="omh-schema"/>
+        <map value="properties.descriptive_statistic"/>
+      </mapping>
+      <mapping>
+        <identity value="fhir-observation"/>
+        <map value="Observation.component.code"/>
+      </mapping>
+    </element>
+    <element id="OmhStepCount.descriptiveStatisticDenominator">
+      <path value="OmhStepCount.descriptiveStatisticDenominator"/>
+      <definition value="The denominator of the descriptive statistic when the measures has an implicit duration. For example in the context of step count, if the descriptive statistic is 'average' and the statistic denominator is 'd' the value describes average daily step count during the period delimited by the effective time frame; in the context of step count, if the descriptive statistic is 'maximum' and the statistic denominator is 'session' the value describes maximum step count per session during the period delimited by the effective time frame."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <binding>
+        <strength value="required"/>
+        <description value="The denominator of the descriptive statistic when the measures has an implicit duration. For example in the context of step count, if the descriptive statistic is 'average' and the statistic denominator is 'd' the value describes average daily step count during the period delimited by the effective time frame; in the context of step count, if the descriptive statistic is 'maximum' and the statistic denominator is 'session' the value describes maximum step count per session during the period delimited by the effective time frame"/>
+        <valueSetReference>
+          <reference value="http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic-denominator"/>
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="omh-schema"/>
+        <map value="properties.descriptive_statistic_denominator"/>
+      </mapping>
+      <mapping>
+        <identity value="fhir-observation"/>
+        <map value="Observation.component.valueQuantity.unit|code (ConceptMap based on code and descriptiveStatisticDenominator)"/>
+      </mapping>
+    </element>
+  </differential>
 </StructureDefinition>

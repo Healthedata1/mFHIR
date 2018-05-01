@@ -1,0 +1,101 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "omh-datapoint-template",
+  "url": "http://www.fhir.org/guides/mfhir/StructureDefinition/omh-datapoint-template",
+  "version": "0.0.0",
+  "name": "OmhDatapointTemplate",
+  "status": "draft",
+  "date": "2018-04-11T00:00:00-07:00",
+  "publisher": "Health eData Inc",
+  "description": "OmhDatapointTemplate is for creating datapoint schemas",
+  "fhirVersion": "3.0.1",
+  "mapping": [
+    {
+      "identity": "omh-schema",
+      "uri": "https://github.com/openmhealth/schemas/blob/master/schema/omh/atep-count-1.0.json",
+      "name": "Omh Datapoint Template"
+    },
+    {
+      "identity": "fhir-observation",
+      "uri": "http://hl7.org/fhir/STU3/observation.html",
+      "name": "FHIR Observation Profile"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "OmhDatapointTemplate",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "OmhDataPoint",
+        "path": "OmhDataPoint",
+        "definition": "The data point schema is a generic schema that is specialized for each type of data point.",
+        "mustSupport": false,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "omh-schema",
+            "map": "OMH DataPoint Schema"
+          },
+          {
+            "identity": "fhir-observation",
+            "map": "FHIR resource"
+          }
+        ]
+      },
+      {
+        "id": "OmhDataPoint.omhHeader",
+        "path": "OmhDataPoint.omhHeader",
+        "definition": "The header property represents the header of a data transaction",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement",
+            "profile": "http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "omh-schema",
+            "map": "properties.header"
+          },
+          {
+            "identity": "fhir-observation",
+            "map": "see OmhHeader Mapping tables"
+          }
+        ]
+      },
+      {
+        "id": "OmhDataPoint.body",
+        "path": "OmhDataPoint.body",
+        "definition": "The body property contains the actual data.  It contains the logical model for a specific data type. ( e.g., heart rate).",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "omh-schema",
+            "map": "properties.body"
+          },
+          {
+            "identity": "fhir-observation",
+            "map": "various FHIR resource elements",
+            "comment": "See the FHIR Logical Model for any OMH data point type (e.g., steps)"
+          }
+        ]
+      }
+
+    ]
+  }
+}

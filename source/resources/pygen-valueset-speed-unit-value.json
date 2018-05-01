@@ -1,0 +1,41 @@
+{
+    "compose": {
+        "include": [
+            {
+                "concept": [
+                    {
+                        "code": "m/s",
+                        "display": "m/s"
+                    },
+                    {
+                        "code": "km/h",
+                        "display": "km/h"
+                    }
+                ],
+                "system": "http://unitsofmeasure.org"
+            }
+        ]
+    },
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.openmhealth.org/"
+                }
+            ]
+        }
+    ],
+    "copyright": "Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved. UCUM is copyright 1999-2013 Regenstrief Institute, Inc. and The UCUM Organization, Indianapolis, IN. All rights reserved. See http://unitsofmeasure.org/trac//wiki/TermsOfUse for details.",
+    "date": "2018-04-28T19:14:28Z",
+    "description": "This schema represents a speed (distance over time).",
+    "id": "speed-unit-value",
+    "immutable": false,
+    "name": "speed-unit-value",
+    "publisher": "Open mHealth",
+    "resourceType": "ValueSet",
+    "status": "draft",
+    "title": "Speed Unit Value",
+    "url": "http://www.fhir.org/guides/mfhir/ValueSet/speed-unit-value",
+    "version": "0.0.0"
+}

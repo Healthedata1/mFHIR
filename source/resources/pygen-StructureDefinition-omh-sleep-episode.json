@@ -1,0 +1,256 @@
+{
+    "abstract": false,
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.openmhealth.org/"
+                }
+            ]
+        }
+    ],
+    "date": "2018-04-30T23:03:10Z",
+    "derivation": "specialization",
+    "description": "This schema represents one sleep episode, which can be the main sleep event (i.e., a night sleep for most people) or a nap.",
+    "differential": {
+        "element": [
+            {
+                "definition": "This schema represents one sleep episode, which can be the main sleep event (i.e., a night sleep for most people) or a nap.",
+                "id": "OmhSleepEpisode",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "OMH Sleep Episode"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation resource with Observation.code = 258158006 Sleep, function (observable entity)"
+                    }
+                ],
+                "mustSupport": false,
+                "path": "OmhSleepEpisode"
+            },
+            {
+                "definition": "The header property represents the header of a data transaction",
+                "id": "OmhSleepEpisode.omhHeader",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "see OmhHeader Mapping tables"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "see OmhHeader Mapping tables"
+                    }
+                ],
+                "max": "1",
+                "min": 1,
+                "mustSupport": false,
+                "path": "OmhSleepEpisode.omhHeader",
+                "type": [
+                    {
+                        "code": "BackboneElement",
+                        "profile": "http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header"
+                    }
+                ]
+            },
+            {
+                "binding": {
+                    "strength": "required",
+                    "valueSetUri": "http://www.fhir.org/guides/mfhir/ValueSet/duration-unit-value"
+                },
+                "definition": "TODO",
+                "id": "OmhSleepEpisode.latencyToSleepOnset",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.latency_to_sleep_onset"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhSleepEpisode.latencyToSleepOnset",
+                "type": [
+                    {
+                        "code": "Quantity"
+                    }
+                ]
+            },
+            {
+                "binding": {
+                    "strength": "required",
+                    "valueSetUri": "http://www.fhir.org/guides/mfhir/ValueSet/duration-unit-value"
+                },
+                "definition": "TODO",
+                "id": "OmhSleepEpisode.latencyToArising",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.latency_to_arising"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhSleepEpisode.latencyToArising",
+                "type": [
+                    {
+                        "code": "Quantity"
+                    }
+                ]
+            },
+            {
+                "binding": {
+                    "strength": "required",
+                    "valueSetUri": "http://www.fhir.org/guides/mfhir/ValueSet/duration-unit-value"
+                },
+                "definition": "TODO",
+                "id": "OmhSleepEpisode.totalSleepTime",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.total_sleep_time"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhSleepEpisode.totalSleepTime",
+                "type": [
+                    {
+                        "code": "Quantity"
+                    }
+                ]
+            },
+            {
+                "definition": "TODO",
+                "id": "OmhSleepEpisode.numberOfAwakenings",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.number_of_awakenings"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhSleepEpisode.numberOfAwakenings",
+                "type": [
+                    {
+                        "code": "TODO"
+                    }
+                ]
+            },
+            {
+                "definition": "TODO",
+                "id": "OmhSleepEpisode.isMainSleep",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.is_main_sleep"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhSleepEpisode.isMainSleep",
+                "type": [
+                    {
+                        "code": "TODO"
+                    }
+                ]
+            },
+            {
+                "definition": "TODO",
+                "id": "OmhSleepEpisode.effectiveTimeFrame",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.effective_time_frame"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 1,
+                "mustSupport": false,
+                "path": "OmhSleepEpisode.effectiveTimeFrame"
+            },
+            {
+                "definition": "TODO",
+                "id": "OmhSleepEpisode.sleepMaintenanceEfficiencyPercentage",
+                "isModifier": false,
+                "mapping": [
+                    {
+                        "identity": "omh-schema",
+                        "map": "properties.sleep_maintenance_efficiency_percentage"
+                    },
+                    {
+                        "identity": "fhir-observation",
+                        "map": "Observation.todo"
+                    }
+                ],
+                "max": "1",
+                "min": 0,
+                "mustSupport": false,
+                "path": "OmhSleepEpisode.sleepMaintenanceEfficiencyPercentage"
+            }
+        ]
+    },
+    "fhirVersion": "3.0.1",
+    "id": "omh-sleep-episode",
+    "kind": "logical",
+    "mapping": [
+        {
+            "identity": "omh-schema",
+            "name": "OMH Heart Rate Schema",
+            "uri": "https://github.com/openmhealth/schemas/blob/master/schema/omh/heart-rate-1.1.json"
+        },
+        {
+            "identity": "fhir-observation",
+            "name": "FHIR Observation Profile",
+            "uri": "http://hl7.org/fhir/STU3/observation.html"
+        }
+    ],
+    "name": "OmhSleepEpisode",
+    "publisher": "Open mHealth",
+    "resourceType": "StructureDefinition",
+    "status": "draft",
+    "title": "OMH Sleep Episode",
+    "type": "OmhSleepEpisode",
+    "url": "http://www.fhir.org/guides/mfhir/StructureDefinition/omh-sleep-episode",
+    "version": "0.0.0"
+}

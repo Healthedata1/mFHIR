@@ -1,0 +1,101 @@
+{
+    "compose": {
+        "include": [
+            {
+                "concept": [
+                    {
+                        "code": "ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C1510992",
+                        "display": "average"
+                    },
+                    {
+                        "code": "ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C0750480",
+                        "display": "count"
+                    },
+                    {
+                        "code": "ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C0806909",
+                        "display": "maximum"
+                    },
+                    {
+                        "code": "ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C0876920",
+                        "display": "median"
+                    },
+                    {
+                        "code": "ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C1524031",
+                        "display": "minimum"
+                    },
+                    {
+                        "code": "ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C0871420",
+                        "display": "standard deviation"
+                    },
+                    {
+                        "code": "ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C1515051",
+                        "display": "sum"
+                    },
+                    {
+                        "code": "ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C1711260",
+                        "display": "variance"
+                    },
+                    {
+                        "code": "ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C1264641",
+                        "display": "20th percentile"
+                    },
+                    {
+                        "code": "ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C1264641",
+                        "display": "80th percentile"
+                    },
+                    {
+                        "code": "ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C2828255",
+                        "display": "lower quartile"
+                    },
+                    {
+                        "code": "ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C2828255",
+                        "display": "upper quartile"
+                    },
+                    {
+                        "code": "quartile deviation",
+                        "display": "quartile deviation"
+                    },
+                    {
+                        "code": "1st quintile",
+                        "display": "1st quintile"
+                    },
+                    {
+                        "code": "2nd quintile",
+                        "display": "2nd quintile"
+                    },
+                    {
+                        "code": "3rd quintile",
+                        "display": "3rd quintile"
+                    },
+                    {
+                        "code": "4th quintile",
+                        "display": "4th quintile"
+                    }
+                ],
+                "system": "http://snomed.info/sct"
+            }
+        ]
+    },
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.openmhealth.org/"
+                }
+            ]
+        }
+    ],
+    "copyright": "Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved. This value set includes content from SNOMED CT, which is copyright 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.",
+    "date": "2018-04-28T15:55:00.13Z",
+    "description": "The descriptive statistic of a set of measurements. A measurement value can be the result of combining various measurements and calculating descriptive statistics like average, maximum, minimum, etc. Additional descriptive statistics will be added as the need arises. A measurement value without a descriptive statistic is interpreted as being the result of an individual measurement.",
+    "id": "descriptive-statistic",
+    "immutable": false,
+    "name": "descriptive-statistic",
+    "publisher": "Open mHealth",
+    "resourceType": "ValueSet",
+    "status": "draft",
+    "title": "Descriptive Statistic",
+    "url": "http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic",
+    "version": "0.0.0"
+}

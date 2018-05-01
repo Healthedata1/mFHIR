@@ -1,17 +1,17 @@
 ~~~
 {
   "resourceType": "Observation",
-	"id": "steps-example", //  this is a server assigned resource id
+	"id": "steps-example //  this is a server assigned resource id",
   "meta": {
-  "source" : "Jawbone UP API", // mappped from OmhDataPoint.header.acqusitionProvenance.sourceName
-  "profile" : ["http://www.fhir.org/guides/mfhir/StructureDefinition/steps"] // Profiles this resource claims to conform to
+  "source" : "Jawbone UP API // mappped from OmhDataPoint.header.acqusitionProvenance.sourceName",
+  "profile // Profiles this resource claims to conform to" : ["http://www.fhir.org/guides/mfhir/StructureDefinition/steps"]
 }
-  "identifier" : [ // mappped from OmhDataPoint.header.dataPointId
-  "system" : "https://omh.org/shimmer/ids", // The namespace for the identifier value
-  "value" : "12341567", // The value that is unique
+  "identifier // mappped from OmhDataPoint.header.dataPointId" : [
+  "system" : "https://omh.org/shimmer/ids // The namespace for the identifier value",
+  "value" : "12341567 // The value that is unique",
   }],
-  "status": "unknown",   // this is required in fhir - omh schema don't have status
-	"category": [     // optional category field to indicate is an activity vs say a lab result
+  "status": "unknown // this is required in fhir - omh schema don't have status",
+	"category // optional category field to indicate is an activity vs say a lab result": [  
 		{
 			"coding": [
 				{
@@ -22,7 +22,7 @@
 			]
 		}
 	],
-	"code": {  // mapped from OmhDataPoint.body
+	"code // mapped from OmhDataPoint.body": {
 		"coding": [
       {
 				"system": "http://loinc.org",
@@ -34,23 +34,23 @@
 	},
 	"subject": {
 		"identifier" : {
-  "system" : "https://omh.org/shimmer/patient_ids", // The namespace for the identifier value
-  "value" : "some-user", //mapped from OmhDataPoint.header.userId
+  "system" : "https://omh.org/shimmer/patient_ids // The namespace for the identifier value",
+  "value" : "some-user //mapped from OmhDataPoint.header.userId",
 },
 	},
-	"effectivePeriod": { // mapped from OmhDataPoint.body.effectiveTimeFrame
-  "start" : "2018-04-17",
-  "end" : "2018-04-17"
+	"effectivePeriod // mapped from OmhDataPoint.body.effectiveTimeFrame":
+  "start" : "2018-04-17T00:00:00Z",
+  "end" : "2018-04-17T00:00:00Z"
     }
-	"issued": "2018-04-17T17:13:50Z", // mapped from OmhDataPoint.header.creationDateTime
+	"issued": "2018-04-17T17:13:50Z // mapped from OmhDataPoint.header.creationDateTime",
 
-	"valueQuantity": {  // the actual results mapped from body.step_count  - note that I added optional UCUM units
-		"value": 7939, mapped from OmhDataPoint.body.stepCount
+	"valueQuantity  // the actual results mapped from body.step_count  - note that I added optional UCUM units": {
+		"value //mapped from OmhDataPoint.body.stepCount": 7939,
 		"unit": "steps",
 		"system": "http://unitsofmeasure.org",
 		"code": "{steps}"
 	}
-   "device" :
-   {"display" : "Jawbone UP API, modality =sensed, sourceCreationDateTime = 2018-04-17T17:13:50Z"} //  could be mapped from OmhDataPoint.header.acqusitionProvenance elements represented as for this example but could capture all as Device/DeviceMetric since the type is  Reference(Device|DeviceComponent|DeviceMetric)
+   "device //  could be mapped from OmhDataPoint.header.acqusitionProvenance elements represented as for this example but could capture all as Device/DeviceMetric since the type is  Reference(Device|DeviceComponent|DeviceMetric)" :
+   {"display" : "Jawbone UP API, modality =sensed, sourceCreationDateTime = 2018-04-17T17:13:50Z"}
 }
 ~~~

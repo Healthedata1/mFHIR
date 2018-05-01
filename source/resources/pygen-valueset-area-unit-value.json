@@ -1,0 +1,65 @@
+{
+    "compose": {
+        "include": [
+            {
+                "concept": [
+                    {
+                        "code": "mm^2",
+                        "display": "mm^2"
+                    },
+                    {
+                        "code": "cm^2",
+                        "display": "cm^2"
+                    },
+                    {
+                        "code": "m^2",
+                        "display": "m^2"
+                    },
+                    {
+                        "code": "km^2",
+                        "display": "km^2"
+                    },
+                    {
+                        "code": "in^2",
+                        "display": "in^2"
+                    },
+                    {
+                        "code": "ft^2",
+                        "display": "ft^2"
+                    },
+                    {
+                        "code": "yd^2",
+                        "display": "yd^2"
+                    },
+                    {
+                        "code": "mi^2",
+                        "display": "mi^2"
+                    }
+                ],
+                "system": "http://unitsofmeasure.org"
+            }
+        ]
+    },
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.openmhealth.org/"
+                }
+            ]
+        }
+    ],
+    "copyright": "Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved. UCUM is copyright 1999-2013 Regenstrief Institute, Inc. and The UCUM Organization, Indianapolis, IN. All rights reserved. See http://unitsofmeasure.org/trac//wiki/TermsOfUse for details.",
+    "date": "2018-04-28T19:14:28Z",
+    "description": "This schema represents an area (measure of a surface)",
+    "id": "area-unit-value",
+    "immutable": false,
+    "name": "area-unit-value",
+    "publisher": "Open mHealth",
+    "resourceType": "ValueSet",
+    "status": "draft",
+    "title": "Area Unit Value",
+    "url": "http://www.fhir.org/guides/mfhir/ValueSet/area-unit-value",
+    "version": "0.0.0"
+}

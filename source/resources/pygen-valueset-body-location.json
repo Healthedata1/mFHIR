@@ -1,0 +1,81 @@
+{
+    "compose": {
+        "include": [
+            {
+                "concept": [
+                    {
+                        "code": "left ankle",
+                        "display": "left ankle"
+                    },
+                    {
+                        "code": "right ankle",
+                        "display": "right ankle"
+                    },
+                    {
+                        "code": "left hip",
+                        "display": "left hip"
+                    },
+                    {
+                        "code": "right hip",
+                        "display": "right hip"
+                    },
+                    {
+                        "code": "left thigh",
+                        "display": "left thigh"
+                    },
+                    {
+                        "code": "right thigh",
+                        "display": "right thigh"
+                    },
+                    {
+                        "code": "left thorax",
+                        "display": "left thorax"
+                    },
+                    {
+                        "code": "middle left thorax",
+                        "display": "middle left thorax"
+                    },
+                    {
+                        "code": "left upper arm",
+                        "display": "left upper arm"
+                    },
+                    {
+                        "code": "right upper arm",
+                        "display": "right upper arm"
+                    },
+                    {
+                        "code": "left wrist",
+                        "display": "left wrist"
+                    },
+                    {
+                        "code": "right wrist",
+                        "display": "right wrist"
+                    }
+                ],
+                "system": "http://www.fhir.org/guides/mfhir/CodeSystem/body-location"
+            }
+        ]
+    },
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.openmhealth.org/"
+                }
+            ]
+        }
+    ],
+    "copyright": "Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved.",
+    "date": "2018-04-28T15:55:00.13Z",
+    "description": "A location on the body. This is an incomplete value set. Values from the Anatomical or acquired body structure hierarchy of SNOMED can be added as needed.",
+    "id": "body-location",
+    "immutable": false,
+    "name": "body-location",
+    "publisher": "Open mHealth",
+    "resourceType": "ValueSet",
+    "status": "draft",
+    "title": "Body Location",
+    "url": "http://www.fhir.org/guides/mfhir/ValueSet/body-location",
+    "version": "0.0.0"
+}

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd%20-STU3/account.xsd">
+  <id value="omh-datapoint-template"/>
+  <url value="http://www.fhir.org/guides/mfhir/StructureDefinition/omh-datapoint-template"/>
+  <version value="0.0.0"/>
+  <name value="OmhDatapointTemplate"/>
+  <status value="draft"/>
+  <date value="2018-04-11T00:00:00-07:00"/>
+  <publisher value="Health eData Inc"/>
+  <description value="OmhDatapointTemplate is for creating datapoint schemas"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="3.0.1"/>
+  <mapping>
+    <identity value="omh-schema"/>
+    <uri value="https://github.com/openmhealth/schemas/blob/master/schema/omh/atep-count-1.0.json"/>
+    <name value="Omh Datapoint Template"/>
+  </mapping>
+  <mapping>
+    <identity value="fhir-observation"/>
+    <uri value="http://hl7.org/fhir/STU3/observation.html"/>
+    <name value="FHIR Observation Profile"/>
+  </mapping>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="OmhDatapointTemplate"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <differential>
+    <element id="OmhDataPoint">
+      <path value="OmhDataPoint"/>
+      <definition               value="The data point schema is a generic schema that is specialized for each type of data point."/>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="omh-schema"/>
+        <map value="properties"/>
+      </mapping>
+      <mapping>
+        <identity value="fhir-observation"/>
+        <map value="Observation resource"/>
+      </mapping>
+    </element>
+    <element id="OmhDataPoint.omhHeader">
+      <path value="OmhDataPoint.omhHeader"/>
+      <definition                   value="The header property represents the header of a data transaction"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="StructureDefinition"/>
+        <profile                  value="http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="omh-schema"/>
+        <map value="see OmhHeader Mapping tables"/>
+      </mapping>
+      <mapping>
+        <identity value="fhir-observation"/>
+        <map value="see OmhHeader Mapping tables"/>
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
