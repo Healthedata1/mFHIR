@@ -1,32 +1,30 @@
 {
   "resourceType": "ValueSet",
   "id": "temporal-relationship-to-sleep",
-  "meta": {
-    "profile": [
-      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
-    ]
-  },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>temporal-relationship-to-sleep</h2><div><p>The temporal relationship of a clinical measure or assessment to sleep</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=307155000\">307155000</a></td><td>before sleeping</td><td/></tr><tr><td><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=309610004\">309610004</a></td><td>during sleep</td><td/></tr><tr><td><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=307156004\">307156004</a></td><td>on waking</td><td/></tr></table></li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>temporal-relationship-to-sleep</h2><div><p>The temporal relationship of a clinical measure or assessment to sleep. (Will add phases of sleep later, depending on use case.)</p>\n</div><p><b>Copyright Statement:</b> Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved. This value set includes content from SNOMED CT, which is copyright 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.</p><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=307155000\">307155000</a></td><td>before sleeping</td><td/></tr><tr><td><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=309610004\">309610004</a></td><td>during sleep</td><td/></tr><tr><td><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=307156004\">307156004</a></td><td>on waking</td><td/></tr></table></li></ul></div>"
   },
   "url": "http://www.fhir.org/guides/mfhir/ValueSet/temporal-relationship-to-sleep",
   "version": "0.0.0",
   "name": "temporal-relationship-to-sleep",
+  "title": "Temporal Relationship To Sleep",
   "status": "draft",
-  "date": "2018-04-12T23:39:19-07:00",
-  "description": "The temporal relationship of a clinical measure or assessment to sleep",
-  "jurisdiction": [
+  "date": "2018-04-28T08:55:00-07:00",
+  "publisher": "Open mHealth",
+  "contact": [
     {
-      "coding": [
+      "telecom": [
         {
-          "system": "urn:iso:std:iso:3166",
-          "code": "US",
-          "display": "United States of America"
+          "system": "url",
+          "value": "http://www.openmhealth.org/"
         }
       ]
     }
   ],
+  "description": "The temporal relationship of a clinical measure or assessment to sleep. (Will add phases of sleep later, depending on use case.)",
+  "immutable": false,
+  "copyright": "Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved. This value set includes content from SNOMED CT, which is copyright 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.",
   "compose": {
     "include": [
       {

@@ -274,14 +274,33 @@ Formats: <a href="StructureDefinition-omh-step-count.html">Narrative</a>, <a hre
 <h4 id="example">Example</h4>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">  
-   </span><span class="nt">"ResourceType"</span><span class="p">:</span><span class="s2">"OmhStepCount"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"ResourceType"</span><span class="p">:</span><span class="s2">"OMHStepCount"</span><span class="p">,</span><span class="w">
    </span><span class="nt">"id"</span><span class="p">:</span><span class="s2">"example-1"</span><span class="p">,</span><span class="w">
+   </span><span class="nt">"omhHeader"</span><span class="p">:{</span><span class="w">  
+      </span><span class="nt">"ResourceType"</span><span class="p">:</span><span class="s2">"OmhHeader"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"id"</span><span class="p">:</span><span class="s2">"example-1"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"dataPointId"</span><span class="p">:</span><span class="s2">"12341567"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"creationDateTime"</span><span class="p">:</span><span class="s2">"2018-04-T24:13:51Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"schemaId"</span><span class="p">:{</span><span class="w">  
+         </span><span class="nt">"namespace"</span><span class="p">:</span><span class="s2">"omh"</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"name"</span><span class="p">:</span><span class="s2">"step-count"</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"version"</span><span class="p">:</span><span class="s2">"1.0"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"acquisitionProvenance"</span><span class="p">:{</span><span class="w">  
+         </span><span class="nt">"sourceName"</span><span class="p">:</span><span class="s2">"Jawbone UP API&gt;"</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"sourceDataPointId"</span><span class="p">:</span><span class="s2">"123456"</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"sourceCreationDateTime"</span><span class="p">:</span><span class="s2">"2018-04-24T17:13:50Z"</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"modificationDateTime"</span><span class="p">:</span><span class="s2">"2018-04-24T17:13:51Z"</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"modality"</span><span class="p">:</span><span class="s2">"sensed"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"userId"</span><span class="p">:</span><span class="s2">"user123456"</span><span class="w">
+   </span><span class="p">},</span><span class="w">
    </span><span class="nt">"stepCount"</span><span class="p">:</span><span class="mi">7939</span><span class="p">,</span><span class="w">
    </span><span class="nt">"effectiveTimeFrame"</span><span class="p">:{</span><span class="w">  
-      </span><span class="nt">"start"</span><span class="p">:</span><span class="s2">"2018-04-17"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"end"</span><span class="p">:</span><span class="s2">"2018-04-17"</span><span class="w">
-   </span><span class="p">},</span><span class="w">
-   </span><span class="nt">"descriptiveStatistic"</span><span class="p">:</span><span class="s2">"count"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"start"</span><span class="p">:</span><span class="s2">"2018-04-17T00:00:00Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"end"</span><span class="p">:</span><span class="s2">"2018-04-24T00:00:00Z"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+   </span><span class="nt">"descriptiveStatistic"</span><span class="p">:</span><span class="s2">"maximum"</span><span class="p">,</span><span class="w">
    </span><span class="nt">"descriptiveStatisticDenominator"</span><span class="p">:</span><span class="s2">"d"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -339,7 +358,14 @@ This profile builds on <a href="http://hl7.org/fhir/STU3/datatypes.html#Element"
 <p><b>
 Summary
 </b></p>
-<p>Mandatory: 0 element (2 nested mandatory elements)</p>
+<p>Mandatory: 0 element (3 nested mandatory elements)</p><p><b>Structures</b></p>
+<p>This structure refers to these other structures:</p>
+<ul>
+<li><a href="StructureDefinition-omh-header.html">http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header</a></li>
+
+</ul>
+
+
   <!-- {% include omh-step-count-summary.md id="omh-step-count" %} -->
    </div>
   </div>
@@ -349,6 +375,7 @@ Summary
    <p><b>Differential View</b></p>
    <div id="all-tbl-diff-inner">
      <table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Legend for this format"><img src="http://hl7.org/fhir/STU3/help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-omh-step-count-definitions.html#OmhStepCount" title="The LOINC code refers to Number of steps in unspecified time Pedometer&quot;, &quot;url&quot;: &quot;http://purl.bioontology.org/ontology/LNC/55423-8&quot;.">OmhStepCount</a><a name="OmhStepCount"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-omh-step-count-definitions.html#OmhStepCount.omhHeader" title="The header property represents the header of a data transaction">omhHeader</a><a name="OmhStepCount.omhHeader"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-omh-header.html" title="BackboneElement">OMHHeader</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-omh-step-count-definitions.html#OmhStepCount.stepCount" title="A numerical value representing the number of steps.">stepCount</a><a name="OmhStepCount.stepCount"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">decimal</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-omh-step-count-definitions.html#OmhStepCount.effectiveTimeFrame" title="Associated time interval for the step count.">effectiveTimeFrame</a><a name="OmhStepCount.effectiveTimeFrame"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#Period">Period</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-omh-step-count-definitions.html#OmhStepCount.descriptiveStatistic" title="The descriptive statistic of a set of measurements.  E.g., average,count, etc.">descriptiveStatistic</a><a name="OmhStepCount.descriptiveStatistic"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="font-weight:bold">Binding: </span><a href="http://hl7.org/fhir/STU3/valueset-observation-statistics.html">StatisticsCode</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set">required</a>)</td></tr>
@@ -380,12 +407,13 @@ Summary
     <div id="all-json">
      <p><b>JSON Template</b></p>
      <div id="all-json-inner">
-        <pre class="spec"><a name="cf63d7f1-4126-47d5-8af4-369dc1f7bc1d">​</a>
+        <pre class="spec"><a name="02d5b9ea-4848-4fc6-88a6-5fbb57c6edf1">​</a>
           // <span style="color: navy; opacity: 0.8"></span>
  {
     "<a href="StructureDefinition-omh-step-count.html#OmhStepCount.id" title="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces" class="dict"><span style="text-decoration: underline">id</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">xml:id (or equivalent in JSON)</span>
     "extension": [
     ],
+    "<a href="StructureDefinition-omh-step-count.html#OmhStepCount.omhHeader" title="The header property represents the header of a data transaction" class="dict"><span style="text-decoration: underline">omhHeader</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#BackboneElement">BackboneElement</a></span> (as <span style="color: darkgreen"><a href="StructureDefinition-omh-header.html#OmhHeader">OMHHeader</a></span>)}, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8"></span>
     "<a href="StructureDefinition-omh-step-count.html#OmhStepCount.stepCount" title="A numerical value representing the number of steps" class="dict"><span style="text-decoration: underline">stepCount</span></a>" : &lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">decimal</a></span>&gt;, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8"></span>
     "<a href="StructureDefinition-omh-step-count.html#OmhStepCount.effectiveTimeFrame" title="Associated time interval for the step count" class="dict"><span style="text-decoration: underline">effectiveTimeFrame</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#Period">Period</a></span>}, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8"></span>
     "<a href="StructureDefinition-omh-step-count.html#OmhStepCount.descriptiveStatistic" title="The descriptive statistic of a set of measurements.  E.g., average,count, etc" class="dict"><span style="text-decoration: underline">descriptiveStatistic</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy" href="http://hl7.org/fhir/ValueSet/observation-statistics.html"></a></span>
@@ -403,7 +431,7 @@ Summary
 <br/>
 
 <a name="downloads"> </a>
-<p><a name="cd5d82f5-b224-4424-b02c-29729a0dfb76">​</a>Downloads: StructureDefinition: (<a download="null" href="StructureDefinition-omh-step-count.xml">XML</a>, <a download="null" href="StructureDefinition-omh-step-count.json">JSON</a>), Schema:  <a download="null" href="omh-step-count.sch">XML Schematron</a></p>
+<p><a name="8e540764-1b8d-4d83-a01a-b56e369ba757">​</a>Downloads: StructureDefinition: (<a download="null" href="StructureDefinition-omh-step-count.xml">XML</a>, <a download="null" href="StructureDefinition-omh-step-count.json">JSON</a>), Schema:  <a download="null" href="omh-step-count.sch">XML Schematron</a></p>
 
 <p>&nbsp;</p>
 
@@ -419,7 +447,8 @@ Summary
   
   <a name="omh-schema"> </a><b>Mappings for OMH Step Count Schema (https://github.com/openmhealth/schemas/blob/master/schema/omh/atep-count-1.0.json)</b><table class="grid">
  <tr><td colspan="3"><b>OMHStepCount</b></td></tr>
- <tr><td>OmhStepCount</td><td>properties</td> </tr>
+ <tr><td>OmhStepCount</td><td>OMH Step Count Schema</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;omhHeader</td><td>see OmhHeader Mapping tables</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;stepCount</td><td>properties.step_count</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;effectiveTimeFrame</td><td>properties.effective_time_frame</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;descriptiveStatistic</td><td>properties.descriptive_statistic</td> </tr>
@@ -427,11 +456,12 @@ Summary
 </table>
 <a name="fhir-observation"> </a><b>Mappings for FHIR Observation Profile (http://hl7.org/fhir/STU3/observation.html)</b><table class="grid">
  <tr><td colspan="3"><b>OMHStepCount</b></td></tr>
- <tr><td>OmhStepCount</td><td>Observation.code (LOINC code '55423-8' = 'Number of steps in unspecified time Pedometer')</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;stepCount</td><td>Observation.valueQuantity</td> </tr>
+ <tr><td>OmhStepCount</td><td>Observation resource with Observation.code  = LOINC 55423-8 (Number of steps in unspecified time Pedometer)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;omhHeader</td><td>see OmhHeader Mapping tables</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;stepCount</td><td>Rule1: IF no descriptiveStatistic (descriptiveStatistic.empty()) Observation.valueQuantity.value ELSE Observation.component.valueQuantity.value</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;effectiveTimeFrame</td><td>Observation.effectivePeriod</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;descriptiveStatistic</td><td>Observation.code.coding (translation to more specific code) or Observation.component (component observation code value pair)</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;descriptiveStatisticDenominator</td><td>Observation.code.coding (translation to more specific code) or Observation.component (component observation code value pair)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;descriptiveStatistic</td><td>Observation.component.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;descriptiveStatisticDenominator</td><td>Observation.component.valueQuantity.unit|code (ConceptMap based on code and descriptiveStatisticDenominator)</td> </tr>
 </table>
 
   </div>
@@ -502,7 +532,7 @@ $( '#tabs' ).tabs({
   <div class="container">    <!-- container -->
    <div class="inner-wrapper">
     <p>
-            mFHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Apr 25, 2018 17:25-0700. |
+            mFHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, Apr 30, 2018 23:05-0700. |
                <!-- <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a rel="license" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
         

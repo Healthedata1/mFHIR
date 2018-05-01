@@ -1,0 +1,22 @@
+"Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: OMH Heart Rate Schema","Mapping: FHIR Observation Profile"
+"OmhBloodGlucose","","","",0,null,"","","","","","This schema represents a person's blood glucose level.","","","","","","","","","",,,,,"",,,,"",0,null,"","","OMH Blood Glucose","Observation resource with Observation.code = Mass/​volume"
+"OmhBloodGlucose.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"",0,null,"",""
+"OmhBloodGlucose.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","",0,null,"",""
+"OmhBloodGlucose.omhHeader","","","",1,1,"","","","BackboneElement {[CanonicalType[http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header]]} {[]}
+","","The header property represents the header of a data transaction","","","","","","","","","",,,,,"",,,,"",0,null,"","","see OmhHeader Mapping tables","see OmhHeader Mapping tables"
+"OmhBloodGlucose.bloodGlucose","","","",1,1,"","","","","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.blood_glucose","Observation.todo"
+"OmhBloodGlucose.specimenSource","","","",0,1,"","","","","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.specimen_source","Observation.todo"
+"OmhBloodGlucose.effectiveTimeFrame","","","",0,1,"","","","dateTime|Period {[]} {[]}
+","","TODO","","","","","","","","","",,"required","","","",,,,"",0,null,"","","properties.effective_time_frame","Observation.todo"
+"OmhBloodGlucose.temporalRelationshipToMeal","","","",0,1,"","","","code {[]} {[]}
+","","TODO","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/temporal-relationship-to-meal","",,,,"",0,null,"","","properties.temporal_relationship_to_meal","Observation.todo"
+"OmhBloodGlucose.temporalRelationshipToSleep","","","",0,1,"","","","code {[]} {[]}
+","","TODO","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/temporal-relationship-to-sleep","",,,,"",0,null,"","","properties.temporal_relationship_to_sleep","Observation.todo"
+"OmhBloodGlucose.descriptiveStatistic","","","",0,1,"","","","code {[]} {[]}
+","","TODO","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic","",,,,"",0,null,"","","properties.descriptive_statistic","Observation.todo"
+"OmhBloodGlucose.userNotes","","","",0,1,"","","","string {[]} {[]}
+","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.user_notes","Observation.todo"

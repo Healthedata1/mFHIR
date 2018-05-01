@@ -3,52 +3,38 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="descriptive-statistic-denominator"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>descriptive-statistic-denominator</h2><div><p>The denominator of the descriptive statistic when the measures has an implicit duration. For example in the context of step count, if the descriptive statistic is 'average' and the statistic denominator is 'd' the value describes average daily step count during the period delimited by the effective time frame; in the context of step count, if the descriptive statistic is 'maximum' and the statistic denominator is 'session' the value describes maximum step count per session during the period delimited by the effective time frame</p>
-</div><p>This code system http://www.fhir.org/guides/mfhir/CodeSystem/descriptive-statistic-denominator defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">d<a name="descriptive-statistic-denominator-d"> </a></td><td>Delimited period</td><td>The period delimited by the effective time frame</td></tr><tr><td style="white-space:nowrap">episode<a name="descriptive-statistic-denominator-episode"> </a></td><td>Episode</td><td>Duration of the episode</td></tr><tr><td style="white-space:nowrap">meal<a name="descriptive-statistic-denominator-meal"> </a></td><td>Meal</td><td>Duration of the meal</td></tr><tr><td style="white-space:nowrap">session<a name="descriptive-statistic-denominator-session"> </a></td><td>Session</td><td>Session during the period delimited by the effective time frame</td></tr></table></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>descriptive-statistic-denominator</h2><div><p>The denominator of the descriptive statistic when the measures has an implicit duration. For example in the context of step count, if the descriptive statistic is 'average' and the statistic denominator is 'd' the value describes average daily step count during the period delimited by the effective time frame; in the context of step count, if the descriptive statistic is 'maximum' and the statistic denominator is 'session' the value describes maximum step count per session during the period delimited by the effective time frame.</p>
+</div><p>This code system http://www.fhir.org/guides/mfhir/CodeSystem/descriptive-statistic-denominator defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">d<a name="descriptive-statistic-denominator-d"> </a></td><td>d</td><td/></tr><tr><td style="white-space:nowrap">episode<a name="descriptive-statistic-denominator-episode"> </a></td><td>episode</td><td/></tr><tr><td style="white-space:nowrap">meal<a name="descriptive-statistic-denominator-meal"> </a></td><td>meal</td><td/></tr><tr><td style="white-space:nowrap">session<a name="descriptive-statistic-denominator-session"> </a></td><td>session</td><td/></tr></table></div>
   </text>
   <url value="http://www.fhir.org/guides/mfhir/CodeSystem/descriptive-statistic-denominator"/>
   <version value="0.0.0"/>
   <name value="descriptive-statistic-denominator"/>
   <status value="draft"/>
-  <experimental value="false"/>
-  <date value="2018-04-15T18:31:45-07:00"/>
+  <date value="2018-04-28T08:55:00-07:00"/>
   <contact>
     <telecom>
       <system value="url"/>
-    </telecom>
-    <telecom>
-      <system value="email"/>
+      <value value="http://www.openmhealth.org/"/>
     </telecom>
   </contact>
-  <description value="The denominator of the descriptive statistic when the measures has an implicit duration. For example in the context of step count, if the descriptive statistic is &#39;average&#39; and the statistic denominator is &#39;d&#39; the value describes average daily step count during the period delimited by the effective time frame; in the context of step count, if the descriptive statistic is &#39;maximum&#39; and the statistic denominator is &#39;session&#39; the value describes maximum step count per session during the period delimited by the effective time frame"/>
-  <jurisdiction>
-    <coding>
-      <system value="urn:iso:std:iso:3166"/>
-      <code value="US"/>
-      <display value="United States of America"/>
-    </coding>
-  </jurisdiction>
+  <description value="The denominator of the descriptive statistic when the measures has an implicit duration. For example in the context of step count, if the descriptive statistic is &#39;average&#39; and the statistic denominator is &#39;d&#39; the value describes average daily step count during the period delimited by the effective time frame; in the context of step count, if the descriptive statistic is &#39;maximum&#39; and the statistic denominator is &#39;session&#39; the value describes maximum step count per session during the period delimited by the effective time frame."/>
   <caseSensitive value="true"/>
   <valueSet value="http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic-denominator"/>
   <content value="complete"/>
   <concept>
     <code value="d"/>
-    <display value="Delimited period"/>
-    <definition value="The period delimited by the effective time frame"/>
+    <display value="d"/>
   </concept>
   <concept>
     <code value="episode"/>
-    <display value="Episode"/>
-    <definition value="Duration of the episode"/>
+    <display value="episode"/>
   </concept>
   <concept>
     <code value="meal"/>
-    <display value="Meal"/>
-    <definition value="Duration of the meal"/>
+    <display value="meal"/>
   </concept>
   <concept>
     <code value="session"/>
-    <display value="Session"/>
-    <definition value="Session during the period delimited by the effective time frame"/>
+    <display value="session"/>
   </concept>
 </CodeSystem>

@@ -8,46 +8,49 @@
 <http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic-denominator> a fhir:ValueSet;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "descriptive-statistic-denominator"];
-  fhir:Resource.meta [
-     fhir:Meta.profile [
-       fhir:value "http://hl7.org/fhir/StructureDefinition/shareablevalueset";
-       fhir:index 0
-     ]
-  ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>descriptive-statistic-denominator</h2><div><p>The denominator of the descriptive statistic when the measures has an implicit duration. For example in the context of step count, if the descriptive statistic is 'average' and the statistic denominator is 'd' the value describes average daily step count during the period delimited by the effective time frame; in the context of step count, if the descriptive statistic is 'maximum' and the statistic denominator is 'session' the value describes maximum step count per session during the period delimited by the effective time frame</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem-descriptive-statistic-denominator.html\"><code>http://www.fhir.org/guides/mfhir/CodeSystem/descriptive-statistic-denominator</code></a></li></ul></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>descriptive-statistic-denominator</h2><div><p>The denominator of the descriptive statistic when the measures has an implicit duration. For example in the context of step count, if the descriptive statistic is 'average' and the statistic denominator is 'd' the value describes average daily step count during the period delimited by the effective time frame; in the context of step count, if the descriptive statistic is 'maximum' and the statistic denominator is 'session' the value describes maximum step count per session during the period delimited by the effective time frame.</p>\n</div><p><b>Copyright Statement:</b> Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved.</p><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href=\"CodeSystem-descriptive-statistic-denominator.html\"><code>http://www.fhir.org/guides/mfhir/CodeSystem/descriptive-statistic-denominator</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-descriptive-statistic-denominator.html#descriptive-statistic-denominator-d\">d</a></td><td>d</td><td/></tr><tr><td><a href=\"CodeSystem-descriptive-statistic-denominator.html#descriptive-statistic-denominator-episode\">episode</a></td><td>episode</td><td/></tr><tr><td><a href=\"CodeSystem-descriptive-statistic-denominator.html#descriptive-statistic-denominator-meal\">meal</a></td><td>meal</td><td/></tr><tr><td><a href=\"CodeSystem-descriptive-statistic-denominator.html#descriptive-statistic-denominator-session\">session</a></td><td>session</td><td/></tr></table></li></ul></div>"
   ];
   fhir:ValueSet.url [ fhir:value "http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic-denominator"];
   fhir:ValueSet.version [ fhir:value "0.0.0"];
   fhir:ValueSet.name [ fhir:value "descriptive-statistic-denominator"];
+  fhir:ValueSet.title [ fhir:value "Descriptive Statistic Denominator"];
   fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.date [ fhir:value "2018-04-15T18:31:45-07:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2018-04-28T08:55:00-07:00"^^xsd:dateTime];
+  fhir:ValueSet.publisher [ fhir:value "Open mHealth"];
   fhir:ValueSet.contact [
      fhir:index 0;
      fhir:ContactDetail.telecom [
        fhir:index 0;
-       fhir:ContactPoint.system [ fhir:value "url" ]
-     ], [
-       fhir:index 1;
-       fhir:ContactPoint.system [ fhir:value "email" ]
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://www.openmhealth.org/" ]
      ]
   ];
-  fhir:ValueSet.description [ fhir:value "The denominator of the descriptive statistic when the measures has an implicit duration. For example in the context of step count, if the descriptive statistic is 'average' and the statistic denominator is 'd' the value describes average daily step count during the period delimited by the effective time frame; in the context of step count, if the descriptive statistic is 'maximum' and the statistic denominator is 'session' the value describes maximum step count per session during the period delimited by the effective time frame"];
-  fhir:ValueSet.jurisdiction [
-     fhir:index 0;
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
-       fhir:Coding.code [ fhir:value "US" ];
-       fhir:Coding.display [ fhir:value "United States of America" ]
-     ]
-  ];
-  fhir:ValueSet.immutable [ fhir:value "true"^^xsd:boolean];
+  fhir:ValueSet.description [ fhir:value "The denominator of the descriptive statistic when the measures has an implicit duration. For example in the context of step count, if the descriptive statistic is 'average' and the statistic denominator is 'd' the value describes average daily step count during the period delimited by the effective time frame; in the context of step count, if the descriptive statistic is 'maximum' and the statistic denominator is 'session' the value describes maximum step count per session during the period delimited by the effective time frame."];
+  fhir:ValueSet.immutable [ fhir:value "false"^^xsd:boolean];
+  fhir:ValueSet.copyright [ fhir:value "Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved."];
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [
        fhir:index 0;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://www.fhir.org/guides/mfhir/CodeSystem/descriptive-statistic-denominator" ]
+       fhir:ValueSet.compose.include.system [ fhir:value "http://www.fhir.org/guides/mfhir/CodeSystem/descriptive-statistic-denominator" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "d" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "d" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "episode" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "episode" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "meal" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "meal" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "session" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "session" ]
+       ]
      ]
   ] .
 

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="part-of-day"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>part-of-day</h2><div><p>The period of time in which a day is commonly divided.</p>
+</div><p><b>Copyright Statement:</b> Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved. This value set includes content from SNOMED CT, which is copyright 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.</p><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=73775008">73775008</a></td><td>morning</td><td/></tr><tr><td><a href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=422133006">422133006</a></td><td>afternoon</td><td/></tr><tr><td><a href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=3157002">3157002</a></td><td>evening</td><td/></tr><tr><td><a href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=2546009">2546009</a></td><td>night</td><td/></tr></table></li></ul></div>
+  </text>
+  <url value="http://www.fhir.org/guides/mfhir/ValueSet/part-of-day"/>
+  <version value="0.0.0"/>
+  <name value="part-of-day"/>
+  <title value="Part Of Day"/>
+  <status value="draft"/>
+  <date value="2018-04-28T08:55:00-07:00"/>
+  <publisher value="Open mHealth"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.openmhealth.org/"/>
+    </telecom>
+  </contact>
+  <description value="The period of time in which a day is commonly divided."/>
+  <immutable value="false"/>
+  <copyright value="Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved. This value set includes content from SNOMED CT, which is copyright 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="73775008"/>
+        <display value="morning"/>
+      </concept>
+      <concept>
+        <code value="422133006"/>
+        <display value="afternoon"/>
+      </concept>
+      <concept>
+        <code value="3157002"/>
+        <display value="evening"/>
+      </concept>
+      <concept>
+        <code value="2546009"/>
+        <display value="night"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

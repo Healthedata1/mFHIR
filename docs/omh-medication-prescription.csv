@@ -1,0 +1,17 @@
+"Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: OMH Heart Rate Schema","Mapping: FHIR Observation Profile"
+"OmhMedicationPrescription","","","",0,null,"","","","","","This schema represents a medication prescription e.g., atenolol 50 mg, 1 tablet in the morning and 0.5 tablet in the evening for 30 days.","","","","","","","","","",,,,,"",,,,"",0,null,"","","OMH Medication Prescription","Observation resource with Observation.code = "
+"OmhMedicationPrescription.id","","","",0,1,"","","","string {[]} {[]}
+","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"",0,null,"",""
+"OmhMedicationPrescription.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","",0,null,"",""
+"OmhMedicationPrescription.omhHeader","","","",1,1,"","","","BackboneElement {[CanonicalType[http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header]]} {[]}
+","","The header property represents the header of a data transaction","","","","","","","","","",,,,,"",,,,"",0,null,"","","see OmhHeader Mapping tables","see OmhHeader Mapping tables"
+"OmhMedicationPrescription.medication","","","",1,1,"","","","","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.medication","Observation.todo"
+"OmhMedicationPrescription.route","","","",0,1,"","","","code {[]} {[]}
+","","TODO","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/intervention-administration-route","",,,,"",0,null,"","","properties.route","Observation.todo"
+"OmhMedicationPrescription.prescriptionTrigger","","","",0,1,"","","","string {[]} {[]}
+","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.prescription_trigger","Observation.todo"
+"OmhMedicationPrescription.schedule","","","",1,1,"","","","TODO {[]} {[]}
+","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.schedule","Observation.todo"

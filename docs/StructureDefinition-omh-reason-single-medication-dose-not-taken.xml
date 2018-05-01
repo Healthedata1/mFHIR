@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="omh-reason-single-medication-dose-not-taken"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Legend for this format"><img src="http://hl7.org/fhir/STU3/help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-omh-reason-single-medication-dose-not-taken-definitions.html#OmhReasonSingleMedicationDoseNotTaken" title="This schema represents the given reason for missing a single prescribed dose of a medication.">OmhReasonSingleMedicationDoseNotTaken</a><a name="OmhReasonSingleMedicationDoseNotTaken"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-omh-reason-single-medication-dose-not-taken-definitions.html#OmhReasonSingleMedicationDoseNotTaken.omhHeader" title="The header property represents the header of a data transaction">omhHeader</a><a name="OmhReasonSingleMedicationDoseNotTaken.omhHeader"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-omh-header.html" title="BackboneElement">OMHHeader</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-omh-reason-single-medication-dose-not-taken-definitions.html#OmhReasonSingleMedicationDoseNotTaken.medication" title="TODO">medication</a><a name="OmhReasonSingleMedicationDoseNotTaken.medication"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-omh-reason-single-medication-dose-not-taken-definitions.html#OmhReasonSingleMedicationDoseNotTaken.effectiveTimeFrame" title="TODO">effectiveTimeFrame</a><a name="OmhReasonSingleMedicationDoseNotTaken.effectiveTimeFrame"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">dateTime|Period</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="font-weight:bold">Binding: </span><a href="http://hl7.org/fhir/STU3/terminologies.html#unbound">(unbound)</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set">required</a>)</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-omh-reason-single-medication-dose-not-taken-definitions.html#OmhReasonSingleMedicationDoseNotTaken.reasonForMissingDose" title="TODO">reasonForMissingDose</a><a name="OmhReasonSingleMedicationDoseNotTaken.reasonForMissingDose"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Legend for this format"><img src="http://hl7.org/fhir/STU3/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
+  </text>
+  <url value="http://www.fhir.org/guides/mfhir/StructureDefinition/omh-reason-single-medication-dose-not-taken"/>
+  <version value="0.0.0"/>
+  <name value="OmhReasonSingleMedicationDoseNotTaken"/>
+  <title value="OMH Reason Single Medication Dose Not Taken"/>
+  <status value="draft"/>
+  <date value="2018-04-30T16:03:10-07:00"/>
+  <publisher value="Open mHealth"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.openmhealth.org/"/>
+    </telecom>
+  </contact>
+  <description value="This schema represents the given reason for missing a single prescribed dose of a medication."/>
+  <fhirVersion value="3.0.1"/>
+  <mapping>
+    <identity value="omh-schema"/>
+    <uri value="https://github.com/openmhealth/schemas/blob/master/schema/omh/heart-rate-1.1.json"/>
+    <name value="OMH Heart Rate Schema"/>
+  </mapping>
+  <mapping>
+    <identity value="fhir-observation"/>
+    <uri value="http://hl7.org/fhir/STU3/observation.html"/>
+    <name value="FHIR Observation Profile"/>
+  </mapping>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="OmhReasonSingleMedicationDoseNotTaken"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="OmhReasonSingleMedicationDoseNotTaken">
+      <path value="OmhReasonSingleMedicationDoseNotTaken"/>
+      <definition value="This schema represents the given reason for missing a single prescribed dose of a medication."/>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="omh-schema"/>
+        <map value="OMH Reason Single Medication Dose Not Taken"/>
+      </mapping>
+      <mapping>
+        <identity value="fhir-observation"/>
+        <map value="Observation resource with Observation.code = "/>
+      </mapping>
+    </element>
+    <element id="Element.id">
+      <path value="OmhReasonSingleMedicationDoseNotTaken.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="Element.extension">
+      <path value="OmhReasonSingleMedicationDoseNotTaken.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Additional Content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="OmhReasonSingleMedicationDoseNotTaken.omhHeader">
+      <path value="OmhReasonSingleMedicationDoseNotTaken.omhHeader"/>
+      <definition value="The header property represents the header of a data transaction"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="BackboneElement"/>
+        <profile value="http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="omh-schema"/>
+        <map value="see OmhHeader Mapping tables"/>
+      </mapping>
+      <mapping>
+        <identity value="fhir-observation"/>
+        <map value="see OmhHeader Mapping tables"/>
+      </mapping>
+    </element>
+    <element id="OmhReasonSingleMedicationDoseNotTaken.medication">
+      <path value="OmhReasonSingleMedicationDoseNotTaken.medication"/>
+      <definition value="TODO"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="omh-schema"/>
+        <map value="properties.medication"/>
+      </mapping>
+      <mapping>
+        <identity value="fhir-observation"/>
+        <map value="Observation.todo"/>
+      </mapping>
+    </element>
+    <element id="OmhReasonSingleMedicationDoseNotTaken.effectiveTimeFrame">
+      <path value="OmhReasonSingleMedicationDoseNotTaken.effectiveTimeFrame"/>
+      <definition value="TODO"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime|Period"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <binding>
+        <strength value="required"/>
+      </binding>
+      <mapping>
+        <identity value="omh-schema"/>
+        <map value="properties.effective_time_frame"/>
+      </mapping>
+      <mapping>
+        <identity value="fhir-observation"/>
+        <map value="Observation.todo"/>
+      </mapping>
+    </element>
+    <element id="OmhReasonSingleMedicationDoseNotTaken.reasonForMissingDose">
+      <path value="OmhReasonSingleMedicationDoseNotTaken.reasonForMissingDose"/>
+      <definition value="TODO"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="omh-schema"/>
+        <map value="properties.reason_for_missing_dose"/>
+      </mapping>
+      <mapping>
+        <identity value="fhir-observation"/>
+        <map value="Observation.todo"/>
+      </mapping>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="OmhReasonSingleMedicationDoseNotTaken">
+      <path value="OmhReasonSingleMedicationDoseNotTaken"/>
+      <definition value="This schema represents the given reason for missing a single prescribed dose of a medication."/>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="omh-schema"/>
+        <map value="OMH Reason Single Medication Dose Not Taken"/>
+      </mapping>
+      <mapping>
+        <identity value="fhir-observation"/>
+        <map value="Observation resource with Observation.code = "/>
+      </mapping>
+    </element>
+    <element id="OmhReasonSingleMedicationDoseNotTaken.omhHeader">
+      <path value="OmhReasonSingleMedicationDoseNotTaken.omhHeader"/>
+      <definition value="The header property represents the header of a data transaction"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="BackboneElement"/>
+        <profile value="http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="omh-schema"/>
+        <map value="see OmhHeader Mapping tables"/>
+      </mapping>
+      <mapping>
+        <identity value="fhir-observation"/>
+        <map value="see OmhHeader Mapping tables"/>
+      </mapping>
+    </element>
+    <element id="OmhReasonSingleMedicationDoseNotTaken.medication">
+      <path value="OmhReasonSingleMedicationDoseNotTaken.medication"/>
+      <definition value="TODO"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="omh-schema"/>
+        <map value="properties.medication"/>
+      </mapping>
+      <mapping>
+        <identity value="fhir-observation"/>
+        <map value="Observation.todo"/>
+      </mapping>
+    </element>
+    <element id="OmhReasonSingleMedicationDoseNotTaken.effectiveTimeFrame">
+      <path value="OmhReasonSingleMedicationDoseNotTaken.effectiveTimeFrame"/>
+      <definition value="TODO"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime|Period"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <binding>
+        <strength value="required"/>
+      </binding>
+      <mapping>
+        <identity value="omh-schema"/>
+        <map value="properties.effective_time_frame"/>
+      </mapping>
+      <mapping>
+        <identity value="fhir-observation"/>
+        <map value="Observation.todo"/>
+      </mapping>
+    </element>
+    <element id="OmhReasonSingleMedicationDoseNotTaken.reasonForMissingDose">
+      <path value="OmhReasonSingleMedicationDoseNotTaken.reasonForMissingDose"/>
+      <definition value="TODO"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="omh-schema"/>
+        <map value="properties.reason_for_missing_dose"/>
+      </mapping>
+      <mapping>
+        <identity value="fhir-observation"/>
+        <map value="Observation.todo"/>
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

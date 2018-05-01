@@ -27,15 +27,6 @@
      ]
   ];
   fhir:CapabilityStatement.description [ fhir:value "This resource defines the expected capabilities "];
-  fhir:CapabilityStatement.jurisdiction [
-     fhir:index 0;
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
-       fhir:Coding.code [ fhir:value "US" ];
-       fhir:Coding.display [ fhir:value "United States of America" ]
-     ]
-  ];
   fhir:CapabilityStatement.kind [ fhir:value "requirements"];
   fhir:CapabilityStatement.fhirVersion [ fhir:value "3.0.0"];
   fhir:CapabilityStatement.format [
