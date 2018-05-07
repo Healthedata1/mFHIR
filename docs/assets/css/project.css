@@ -455,3 +455,12 @@ pre.spec {
   background: rgba(255, 255, 255, 0.15);
   padding: 5px;
 }
+
+/* this part adds an icon after external links, using external.png file */
+
+a[href^="http://"]:not([no-external^="true"]):after, a[href^="https://"]:not([no-external^="true"]):after {
+    content: url(external.png);
+    display: inline-block;
+    text-decoration: none;
+    padding-left: 3px;
+}

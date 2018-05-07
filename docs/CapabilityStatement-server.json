@@ -5,7 +5,7 @@
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<ul><li>FHIR Version: 3.0.0</li><li>Supported formats: xml, json</li><li>Published: 2017-03-08</li><li>Published by: Health eData Inc</li></ul><p>The Section describes the expected capabilities etc....</p></div>"
   },
-  "url": "http://www.fhir.org/guides/test3/CapabilityStatement/server",
+  "url": "http://www.fhir.org/guides/mfhir/CapabilityStatement/server",
   "version": "0.0.0",
   "name": "Server",
   "status": "draft",

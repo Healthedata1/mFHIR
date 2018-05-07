@@ -5,11 +5,11 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
    <meta charset="UTF-8"/>
-  <title>IG-Test3</title>
+  <title>mFHIR</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="IG-Test3 Implemenation Guide" />
-<meta name="author" content="Health eData Inc"/>
+<meta name="description" content="mFHIR Implemenation Guide" />
+<meta name="author" content="Open mHealth"/>
   <link href="fhir.css" rel="stylesheet"/>
 
 
@@ -19,7 +19,7 @@
 
   <link href="assets/css/bootstrap.css" rel="stylesheet"/>
   <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
-  <link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet">
+  <link href="assets/css/bootstrap-glyphicons.css" rel="stylesheet"/>
 
   <!-- Project extras -->
   <link href="assets/css/project.css" rel="stylesheet"/>
@@ -67,7 +67,7 @@ can only resize using html  or css ;-(
 
 
 <a no-external="true" href="http://www.openmhealth.org/">
-<img alt="visit our website" class="img-responsive project-logo" src="assets/images/org_logo.jpg"/>
+<img alt="visit our website" class="img-responsive project-logo" src="assets/images/org_logo.png"/>
 </a>
 
   <!-- end org logo -->
@@ -76,7 +76,7 @@ can only resize using html  or css ;-(
       <div id="project-status" class="project-status"> <!-- ig title text -->
 
       
-      <strong>IG-Test3 Implementation Guide CI Build</strong>
+      <strong>mFHIR Implementation Guide CI Build</strong>
       
 
     </div><!-- end ig title text -->
@@ -209,13 +209,36 @@ can only resize using html  or css ;-(
 <h4 id="value-sets">Value Sets</h4>
 
 <p>These value sets have been defined for this implementation guide:</p>
-<li><a href="ValueSet-minvs.html">BlahCodes</a></li>
-<li><a href="ValueSet-blah-codes.html">BlahCodes</a></li>
+<li><a href="ValueSet-volume-unit-value.html">volume-unit-value</a></li>
+<li><a href="ValueSet-temporal-relationship-to-sleep.html">temporal-relationship-to-sleep</a></li>
+<li><a href="ValueSet-temporal-relationship-to-physical-activity.html">temporal-relationship-to-physical-activity</a></li>
+<li><a href="ValueSet-temporal-relationship-to-meal.html">temporal-relationship-to-meal</a></li>
+<li><a href="ValueSet-temperature-unit-value.html">temperature-unit-value</a></li>
+<li><a href="ValueSet-speed-unit-value.html">speed-unit-value</a></li>
+<li><a href="ValueSet-specimen-source.html">specimen-source</a></li>
+<li><a href="ValueSet-position-during-measurement.html">position-during-measurement</a></li>
+<li><a href="ValueSet-part-of-day.html">part-of-day</a></li>
+<li><a href="ValueSet-pace-unit-value.html">pace-unit-value</a></li>
+<li><a href="ValueSet-medication-dose-unit.html">medication-dose-unit</a></li>
+<li><a href="ValueSet-mass-unit-value.html">mass-unit-value</a></li>
+<li><a href="ValueSet-magnetic-flux-density-unit-value.html">magnetic-flux-density-unit-value</a></li>
+<li><a href="ValueSet-length-unit-value.html">length-unit-value</a></li>
+<li><a href="ValueSet-intervention-administration-route.html">intervention-administration-route</a></li>
+<li><a href="ValueSet-duration-unit-value.html">duration-unit-value</a></li>
+<li><a href="ValueSet-descriptive-statistic-denominator.html">descriptive-statistic-denominator</a></li>
+<li><a href="ValueSet-day-of-week.html">day-of-week</a></li>
+<li><a href="ValueSet-body-posture.html">body-posture</a></li>
+<li><a href="ValueSet-body-location.html">body-location</a></li>
+<li><a href="ValueSet-area-unit-value.html">area-unit-value</a></li>
 
 <h4 id="code-systems">Code Systems</h4>
 
 <p><strong>Code systems published in this IG</strong> - Includes US Core defined code systems and externally defined code systems</p>
-<li><a href="CodeSystem-blah-codes.html">BlahCodes</a></li>
+<li><a href="CodeSystem-specimen-source.html">specimen-source</a></li>
+<li><a href="CodeSystem-medication-dose-unit.html">medication-dose-unit</a></li>
+<li><a href="CodeSystem-intervention-administration-route.html">intervention-administration-route</a></li>
+<li><a href="CodeSystem-descriptive-statistic-denominator.html">descriptive-statistic-denominator</a></li>
+<li><a href="CodeSystem-body-location.html">body-location</a></li>
 
 
 
@@ -249,7 +272,7 @@ can only resize using html  or css ;-(
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            IG-Test3 Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, May 3, 2018 16:50-0700. |
+            mFHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, May 7, 2018 10:11-0700. |
              <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>
@@ -284,7 +307,7 @@ can only resize using html  or css ;-(
 <!-- Analytics Below
 ================================================== -->
 
-<!-- add acnhors before the closing body tag. -->
+<!-- add anchors before the closing body tag. -->
 <script> anchors.add()</script>
 
 
