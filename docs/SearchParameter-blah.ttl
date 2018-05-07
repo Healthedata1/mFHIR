@@ -1,0 +1,37 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://www.fhir.org/guides/test3/SearchParameter/blah> a fhir:SearchParameter;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "blah"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: blah</p><p><b>url</b>: <a href=\"http://www.fhir.org/guides/test3/SearchParameter/blah\">http://www.fhir.org/guides/test3/SearchParameter/blah</a></p><p><b>name</b>: Blah</p><p><b>status</b>: draft</p><p><b>date</b>: Dec 22, 2016</p><p><b>publisher</b>: Eric Haas</p><p><b>code</b>: blah</p><p><b>base</b>: Basic</p><p><b>type</b>: token</p><p><b>description</b>: Example of custom search parameter.</p><p><b>expression</b>: Basic.extension.where(url = 'http://www.fhir.org/guides/test3/StuctureDefinition/template-blah').value</p><p><b>xpath</b>: f:Basic/f:extension[@url='http://www.fhir.org/guides/test3/StuctureDefinition/template-blah']/f:valueCode/@value</p><p><b>xpathUsage</b>: normal</p></div>"
+  ];
+  fhir:SearchParameter.url [ fhir:value "http://www.fhir.org/guides/test3/SearchParameter/blah"];
+  fhir:SearchParameter.name [ fhir:value "Blah"];
+  fhir:SearchParameter.status [ fhir:value "draft"];
+  fhir:SearchParameter.date [ fhir:value "2016-12-22"^^xsd:date];
+  fhir:SearchParameter.publisher [ fhir:value "Eric Haas"];
+  fhir:SearchParameter.code [ fhir:value "blah"];
+  fhir:SearchParameter.base [
+     fhir:value "Basic";
+     fhir:index 0
+  ];
+  fhir:SearchParameter.type [ fhir:value "token"];
+  fhir:SearchParameter.description [ fhir:value "Example of custom search parameter."];
+  fhir:SearchParameter.expression [ fhir:value "Basic.extension.where(url = 'http://www.fhir.org/guides/test3/StuctureDefinition/template-blah').value"];
+  fhir:SearchParameter.xpath [ fhir:value "f:Basic/f:extension[@url='http://www.fhir.org/guides/test3/StuctureDefinition/template-blah']/f:valueCode/@value"];
+  fhir:SearchParameter.xpathUsage [ fhir:value "normal"] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://www.fhir.org/guides/test3/SearchParameter/blah.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

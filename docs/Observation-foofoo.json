@@ -1,0 +1,45 @@
+{
+  "resourceType": "Observation",
+  "id": "foofoo",
+  "meta": {
+    "profile": [
+      "http://www.fhir.org/guides/test3/StructureDefinition/obs"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: foofoo</p><p><b>meta</b>: </p><p><b>status</b>: final</p><p><b>category</b>: Foo <span style=\"background: LightGoldenRodYellow\">(Details : {http://acme.com code 'foo' = 'foo', given as 'Foo'})</span></p><p><b>code</b>: Oxygen saturation in Arterial blood by Pulse oximetry <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '81260-2' = 'Complex genetic variant [ID]', given as 'Oxygen saturation in Arterial blood by Pulse oximetry'})</span></p><p><b>subject</b>: <a href=\"Patient/example\">Patient/example</a></p><p><b>effective</b>: Dec 5, 2014 9:30:10 AM</p><p><b>value</b>: 95 %<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code % = '%')</span></p></div>"
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://acme.com",
+          "code": "foo",
+          "display": "Foo"
+        }
+      ],
+      "text": "Foo"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "81260-2",
+        "display": "Oxygen saturation in Arterial blood by Pulse oximetry"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2014-12-05T09:30:10+01:00",
+  "valueQuantity": {
+    "value": 95,
+    "unit": "%",
+    "system": "http://unitsofmeasure.org",
+    "code": "%"
+  }
+}

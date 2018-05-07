@@ -5,14 +5,14 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://www.fhir.org/guides/mfhir/CapabilityStatement/client> a fhir:CapabilityStatement;
+<http://www.fhir.org/guides/test3/CapabilityStatement/client> a fhir:CapabilityStatement;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "client"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<ul><li>FHIR Version: 3.0.0</li><li>Supported formats: xml, json</li><li>Published: 2017-03-08</li><li>Published by: Health eData Inc</li></ul><p>The Section describes the expected capabilities etc....</p></div>"
   ];
-  fhir:CapabilityStatement.url [ fhir:value "http://www.fhir.org/guides/mfhir/CapabilityStatement/client"];
+  fhir:CapabilityStatement.url [ fhir:value "http://www.fhir.org/guides/test3/CapabilityStatement/client"];
   fhir:CapabilityStatement.version [ fhir:value "0.0.0"];
   fhir:CapabilityStatement.name [ fhir:value "Client"];
   fhir:CapabilityStatement.status [ fhir:value "draft"];
@@ -80,7 +80,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://www.fhir.org/guides/mfhir/CapabilityStatement/client.ttl> a owl:Ontology;
+<http://www.fhir.org/guides/test3/CapabilityStatement/client.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

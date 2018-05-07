@@ -1,0 +1,53 @@
+{
+  "resourceType": "ValueSet",
+  "id": "minvs",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>BlahCodes</h2><div><p>A example VS for Extension: minValueSet</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href=\"http://hl7.org/fhir/STU3/codesystem-basic-resource-type.html\"><code>http://hl7.org/fhir/basic-resource-type</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://hl7.org/fhir/STU3/codesystem-basic-resource-type.html#basic-resource-type-diet\">diet</a></td><td>Diet</td><td>The specification of a set of food and/or other nutritional material to be delivered to a patient.</td></tr><tr><td><a href=\"http://hl7.org/fhir/STU3/codesystem-basic-resource-type.html#basic-resource-type-study\">study</a></td><td>Study</td><td>An investigation to determine information about a particular therapy or product</td></tr></table></li></ul></div>"
+  },
+  "url": "http://www.fhir.org/guides/test3/ValueSet/minvs",
+  "version": "0.0.0",
+  "name": "BlahCodes",
+  "status": "draft",
+  "date": "2018-05-02T08:16:34-07:00",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url"
+        },
+        {
+          "system": "email"
+        }
+      ]
+    }
+  ],
+  "description": "A example VS for Extension: minValueSet",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US",
+          "display": "United States of America"
+        }
+      ]
+    }
+  ],
+  "immutable": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/basic-resource-type",
+        "concept": [
+          {
+            "code": "diet"
+          },
+          {
+            "code": "study"
+          }
+        ]
+      }
+    ]
+  }
+}
