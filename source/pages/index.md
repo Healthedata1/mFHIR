@@ -258,3 +258,40 @@ mDATA receives the results of the GET command from the R24 server and displays i
   </tr>
 </table>
 <br />
+
+---
+
+### Smart app Worklfow
+
+#### Retrieving OMH data in native OMH Schema format
+
+{% include img.html img="smartapp-binary.png" %}
+
+|Step| Description|
+|---|---|
+|1.|Smart app Launch from Provider EHR|
+|2.|R24 server authenticates and authorizes app to get OMH data|
+|3.|Following successful launch, the Smart app request OMH step count data for patient Z as a standard FHIR search API on *DocumentReference*. It provides an opaque identifier as a search parameter that identifies patient Z and optionally a time range of interest.|
+|4.|The R24 server receives the request and either maps the opaque id to its user id list and creates the DocumentReference resource on the fly from a native format or searches its FHIR based datastore for DocumentReference matches.  Note that the DocumentReference is a 'wrapper' and contains context and a link to a Binary file that represents the actual OMH Step Count data.|
+|5.|R24 server returns DocumentReference resources that match the search criteria|
+|6.|The smart app receives the DocumentReference resource(s) and processes them one by one extracting the Binary endpoint data. then makes a second search request for the Binary resources using the standard FHIR API.|
+|7.|For successful matches, the R24 Server Return the native OMH JSON file|
+|8. (not shown)| The Smart app can process/display the OMH data to the end user|
+{:.grid}
+
+---
+
+#### Retrieving OMH data as FHIR Observations
+
+{% include img.html img="smartapp-observation.png" %}
+
+|Step| Description|
+|---|---|
+|1.|Smart app Launch from Provider EHR|
+|2.|R24 server authenticates and authorizes app to get OMH data|
+|<mark>3.</mark>|<mark>Following successful launch, the Smart app request OMH step count data for patient Z as a standard FHIR search API on *Observation*.  It provides an opaque identifier as a search parameter that identifies patient Z and optionally a time range of interest.</mark>|
+|<mark>4.</mark>|<mark>The R24 server receives the request and either maps the opaque id to its user id list and maps the OMH step count schemas to Observation on the fly from a native format or searches its FHIR based datastore for matches.</mark>|
+|<mark>5.</mark>|<mark>R24 server returns Observation resources that match the search criteria</mark>|
+|<mark>6.</mark>|<mark>The smart app receives the Observation resource(s) and</mark>|
+|<mark>7.</mark>|<mark>processes/displays the OMH data to the end user</mark>|
+{:.grid}
