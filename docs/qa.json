@@ -1,7 +1,7 @@
 ﻿{
   "url" : "http://www.fhir.org/guides/mfhir/ImplementationGuide/ig",
   "name" : "mFHIR",
-  "date" : "Mon, 07 May, 2018 10:11:30 -0700",
+  "date" : "Wed, 16 May, 2018 18:48:59 -0700",
   "errs" : "282",
   "warnings" : "16",
   "hints" : "0",

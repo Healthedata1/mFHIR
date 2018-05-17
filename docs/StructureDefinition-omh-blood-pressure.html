@@ -332,7 +332,7 @@ This profile builds on <a href="http://hl7.org/fhir/STU3/datatypes.html#Element"
 
 
 
- <div id="tabs-all">
+ <div id="tabs-all" class="no-external">
   <!-- =======Summary======== -->
 
   <div id="all-tbl-summ">
@@ -393,7 +393,7 @@ Summary
     <div id="all-json">
      <p><b>JSON Template</b></p>
      <div id="all-json-inner">
-        <pre class="spec"><a name="1894ee89-716d-4598-aa71-eb4bff064654">​</a>
+        <pre class="spec"><a name="568a419f-ab62-4083-9fdc-4c10ce3c3922">​</a>
           // <span style="color: navy; opacity: 0.8">OMH Blood Pressure</span>
  {
     "<a href="StructureDefinition-omh-blood-pressure.html#OmhBloodPressure.id" title="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces" class="dict"><span style="text-decoration: underline">id</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">xml:id (or equivalent in JSON)</span>
@@ -402,7 +402,7 @@ Summary
     "<a href="StructureDefinition-omh-blood-pressure.html#OmhBloodPressure.omhHeader" title="The header property represents the header of a data transaction" class="dict"><span style="text-decoration: underline">omhHeader</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#BackboneElement">BackboneElement</a></span> (as <span style="color: darkgreen"><a href="StructureDefinition-omh-header.html#OmhHeader">OMHHeader</a></span>)}, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8"></span>
 <span style="color: Gray">// systolicBloodPressure: <span style="color: navy; opacity: 0.8"></span>. One of these 0:</span>
 <span style="color: Gray">// diastolicBloodPressure: <span style="color: navy; opacity: 0.8"></span>. One of these 0:</span>
-    "<a href="StructureDefinition-omh-blood-pressure.html#OmhBloodPressure.effectiveTimeFrame" title="TODO" class="dict"><span style="text-decoration: underline">effectiveTimeFrame</span></a>" : {<span style="color: darkgreen"><a name="55b556a7-6f8e-4250-a55a-2e78735de8c0">​</a><a href="??#dateTime|Period">dateTime|Period</a></span>}, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"></span>
+    "<a href="StructureDefinition-omh-blood-pressure.html#OmhBloodPressure.effectiveTimeFrame" title="TODO" class="dict"><span style="text-decoration: underline">effectiveTimeFrame</span></a>" : {<span style="color: darkgreen"><a name="0d785143-6c92-44cb-b657-2fdaf38fc5bf">​</a><a href="??#dateTime|Period">dateTime|Period</a></span>}, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"></span>
     "<a href="StructureDefinition-omh-blood-pressure.html#OmhBloodPressure.bodyPosture" title="TODO" class="dict"><span style="text-decoration: underline">bodyPosture</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy" href="http://www.fhir.org/guides/mfhir/ValueSet/body-posture.html"></a></span>
     "<a href="StructureDefinition-omh-blood-pressure.html#OmhBloodPressure.descriptiveStatistic" title="TODO" class="dict"><span style="text-decoration: underline">descriptiveStatistic</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy" href="http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic.html"></a></span>
     "<a href="StructureDefinition-omh-blood-pressure.html#OmhBloodPressure.userNotes" title="TODO" class="dict"><span style="text-decoration: underline">userNotes</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"></span>
@@ -419,7 +419,7 @@ Summary
 <br/>
 
 <a name="downloads"> </a>
-<p><a name="7238c4bb-f8af-47c0-9439-a0dc1d46604b">​</a>Downloads: StructureDefinition: (<a download="null" href="StructureDefinition-omh-blood-pressure.xml">XML</a>, <a download="null" href="StructureDefinition-omh-blood-pressure.json">JSON</a>), Schema:  <a download="null" href="omh-blood-pressure.sch">XML Schematron</a></p>
+<p><a name="e39393d2-f1e4-429b-831a-662469f0cef1">​</a>Downloads: StructureDefinition: (<a download="null" href="StructureDefinition-omh-blood-pressure.xml">XML</a>, <a download="null" href="StructureDefinition-omh-blood-pressure.json">JSON</a>), Schema:  <a download="null" href="omh-blood-pressure.sch">XML Schematron</a></p>
 
 <p>&nbsp;</p>
 
@@ -524,9 +524,7 @@ $( '#tabs' ).tabs({
   <div class="container">    <!-- container -->
    <div class="inner-wrapper">
     <p>
-            mFHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, May 7, 2018 10:11-0700. |
-               <!-- <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
-                <a rel="license" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
+            mFHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, May 16, 2018 18:48-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
         
         </p>
    </div>    <!-- /inner-wrapper -->

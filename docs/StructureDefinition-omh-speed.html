@@ -332,7 +332,7 @@ This profile builds on <a href="http://hl7.org/fhir/STU3/datatypes.html#Element"
 
 
 
- <div id="tabs-all">
+ <div id="tabs-all" class="no-external">
   <!-- =======Summary======== -->
 
   <div id="all-tbl-summ">
@@ -390,7 +390,7 @@ Summary
     <div id="all-json">
      <p><b>JSON Template</b></p>
      <div id="all-json-inner">
-        <pre class="spec"><a name="b8ef86c0-f63d-4c91-b68f-6403ba6bd038">​</a>
+        <pre class="spec"><a name="03ac347b-6f93-4e1e-a501-78bf1533225b">​</a>
           // <span style="color: navy; opacity: 0.8">OMH Speed</span>
  {
     "<a href="StructureDefinition-omh-speed.html#OmhSpeed.id" title="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces" class="dict"><span style="text-decoration: underline">id</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">xml:id (or equivalent in JSON)</span>
@@ -398,7 +398,7 @@ Summary
     ],
     "<a href="StructureDefinition-omh-speed.html#OmhSpeed.omhHeader" title="The header property represents the header of a data transaction" class="dict"><span style="text-decoration: underline">omhHeader</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#BackboneElement">BackboneElement</a></span> (as <span style="color: darkgreen"><a href="StructureDefinition-omh-header.html#OmhHeader">OMHHeader</a></span>)}, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8"></span>
     "<a href="StructureDefinition-omh-speed.html#OmhSpeed.speed" title="TODO" class="dict"><span style="text-decoration: underline">speed</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#Quantity">Quantity</a></span>}, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8"><a style="color: navy" href="http://www.fhir.org/guides/mfhir/ValueSet/speed-unit-value.html"></a></span>
-    "<a href="StructureDefinition-omh-speed.html#OmhSpeed.effectiveTimeFrame" title="TODO" class="dict"><span style="text-decoration: underline">effectiveTimeFrame</span></a>" : {<span style="color: darkgreen"><a name="accc42af-b65b-44e4-97a4-315d727e1739">​</a><a href="??#dateTime|Period">dateTime|Period</a></span>}, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8"></span>
+    "<a href="StructureDefinition-omh-speed.html#OmhSpeed.effectiveTimeFrame" title="TODO" class="dict"><span style="text-decoration: underline">effectiveTimeFrame</span></a>" : {<span style="color: darkgreen"><a name="e8894104-0d82-471c-80e5-e1396286b26a">​</a><a href="??#dateTime|Period">dateTime|Period</a></span>}, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8"></span>
     "<a href="StructureDefinition-omh-speed.html#OmhSpeed.descriptiveStatistic" title="TODO" class="dict"><span style="text-decoration: underline">descriptiveStatistic</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a></span>&gt;" <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy" href="http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic.html"></a></span>
   }
 
@@ -413,7 +413,7 @@ Summary
 <br/>
 
 <a name="downloads"> </a>
-<p><a name="6e1bc1b5-5f7a-4cd0-9671-710cdb6734a0">​</a>Downloads: StructureDefinition: (<a download="null" href="StructureDefinition-omh-speed.xml">XML</a>, <a download="null" href="StructureDefinition-omh-speed.json">JSON</a>), Schema:  <a download="null" href="omh-speed.sch">XML Schematron</a></p>
+<p><a name="9d1eebff-732c-4154-bbfe-488d85c33332">​</a>Downloads: StructureDefinition: (<a download="null" href="StructureDefinition-omh-speed.xml">XML</a>, <a download="null" href="StructureDefinition-omh-speed.json">JSON</a>), Schema:  <a download="null" href="omh-speed.sch">XML Schematron</a></p>
 
 <p>&nbsp;</p>
 
@@ -512,9 +512,7 @@ $( '#tabs' ).tabs({
   <div class="container">    <!-- container -->
    <div class="inner-wrapper">
     <p>
-            mFHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, May 7, 2018 10:11-0700. |
-               <!-- <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
-                <a rel="license" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
+            mFHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, May 16, 2018 18:48-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
         
         </p>
    </div>    <!-- /inner-wrapper -->
