@@ -296,7 +296,7 @@ can only resize using html  or css ;-( -->
 <p>The OMH header schema represent data MedicationDispense and the properties in the header schema map to more than a single FHIR element.  In addition, depending on the depth and level of detail required, there are multiple options to representing MedicationDispense including:</p>
 
 <ul>
-  <li><a name="7cd8f0c5-533e-416c-b79b-13fcb42b6275">​</a><a href="http://hl7.org/fhir/STU3/MedicationDispense.html">MedicationDispense</a>resource</li>
+  <li><a name="89cbec12-edda-4368-9dd1-b463e5871006">​</a><a href="http://hl7.org/fhir/STU3/MedicationDispense.html">MedicationDispense</a>resource</li>
   <li><a href="http://hl7.org/fhir/STU3/resource.html#Meta">meta.source</a> element</li>
   <li>inline Resource elements</li>
 </ul>
@@ -314,20 +314,20 @@ can only resize using html  or css ;-( -->
   <tbody>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/header-1.2.json">header-1.2.json</a></td>
-      <td><a name="f9acf8f1-b103-499e-8710-78242b0df5b5">​</a><a href="http://hl7.org/fhir/STU3/observation.html" title="FHIR Observation definition">Observation</a>|<a href="http://hl7.org/fhir/STU3/MedicationDispense.html" title="FHIR MedicationDispense definition">MedicationDispense</a>  Profile</td>
+      <td><a name="61192d3e-bc19-4387-95fa-8a18ac1cce5b">​</a><a href="http://hl7.org/fhir/STU3/observation.html" title="FHIR Observation definition">Observation</a>|<a href="http://hl7.org/fhir/STU3/MedicationDispense.html" title="FHIR MedicationDispense definition">MedicationDispense</a>  Profile</td>
       <td>&nbsp;</td>
     </tr>
   </tbody>
 </table>
 
-<p><a name="43a72568-0ef3-4a61-a7b7-b46666e48dd5">​</a>The rest of the omh schemas represent either data points or more granular reusable elements or concepts that can be referenced within the data-point schemas. Each reusable omh schema are mapped primitive and complex datatypes as shown below. In addition some of these schemas enumerate values which are <a href="http://hl7.org/fhir/STU3//terminologies.html">bound</a>) to FHIR ValueSets.  The reusable schemas are mapped directly to fhir artifacts as described below and these mapping replace the omh schema references when transforming an OMH data point schema into a FHIR Logical Model.</p>
+<p><a name="f00aa562-aae6-4b88-b3f5-8a151575fdb7">​</a>The rest of the omh schemas represent either data points or more granular reusable elements or concepts that can be referenced within the data-point schemas. Each reusable omh schema are mapped primitive and complex datatypes as shown below. In addition some of these schemas enumerate values which are <a href="http://hl7.org/fhir/STU3//terminologies.html">bound</a>) to FHIR ValueSets.  The reusable schemas are mapped directly to fhir artifacts as described below and these mapping replace the omh schema references when transforming an OMH data point schema into a FHIR Logical Model.</p>
 
 <h4 id="omh-schema-mappings-to-fhir-datatypes">OMH Schema Mappings to FHIR Datatypes</h4>
 
 <p>In this table, the schemas representing primitive and complex data-types are mapped directly to the corresponding FHIR datatype.  Listed in the <em>FHIR ValueSet</em> column the corresponding FHIR ValueSets and <a href="http://hl7.org/fhir/STU3/datatypes.html#code">binding strength</a> for the schemas that map to the FHIR <code class="highlighter-rouge">code</code>, an units values for the <code class="highlighter-rouge">Quantity</code>, and <code class="highlighter-rouge">Range</code> dataypes.</p>
 
 <ul>
-  <li><a name="ff8a4327-8528-4e8a-b3dc-0c8b4264c088">​</a>Where a value is fixed such as for <em>acceleration-unit-value-1.0.json</em>, a fixed <a href="http://hl7.org/fhir/STU3/#ElementDefinition.pattern_x_" title="FHIR pattern definition">Pattern</a> is associated with the schema which directly applied to the FHIR logical models when the schema is referenced.</li>
+  <li><a name="206e388f-29a2-4ba9-8265-7a823411e116">​</a>Where a value is fixed such as for <em>acceleration-unit-value-1.0.json</em>, a fixed <a href="http://hl7.org/fhir/STU3/#ElementDefinition.pattern_x_" title="FHIR pattern definition">Pattern</a> is associated with the schema which directly applied to the FHIR logical models when the schema is referenced.</li>
   <li>Where the unit value is an enumeration of units a FHIR <em>ValueSet</em> is associated with the schema.</li>
   <li>Both the patterns and ValueSets contain <strong>UCUM</strong> based units.</li>
   <li>For data point schemas that reference schemas associated with ValueSets (such as <em>unit-value-1.0.json</em>), the actual units and hence the patterns applied to the FHIR logical models van be further constrained by the data point schema themselves.</li>
@@ -370,19 +370,19 @@ can only resize using html  or css ;-( -->
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/body-location-1.0.json">body-location</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#code" title="FHIR code definition">code</a></td>
-      <td><a name="f4970166-147b-4154-a227-6ff93c9de251">​</a><a href="valueset-body-location.html">body-location</a></td>
+      <td><a name="3bd5d0fd-f4b4-49d2-b1fa-5f3f110b9bc5">​</a><a href="valueset-body-location.html">body-location</a></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/body-posture-1.0.json">body-posture</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#code" title="FHIR code definition">code</a></td>
-      <td><a name="5f1683c4-252a-490c-9f9d-11492eb8497e">​</a><a href="valueset-body-posture.html">body-posture</a></td>
+      <td><a name="a3819cef-0665-4850-8daa-d5c3d3f9ceb5">​</a><a href="valueset-body-posture.html">body-posture</a></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/day-of-week-1.0.json">day-of-week</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#code" title="FHIR code definition">code</a></td>
-      <td><a name="15c1d071-61a6-49ae-9c46-9957321a7aa0">​</a><a href="valueset-day-of-week.html">day-of-week</a></td>
+      <td><a name="9c59f3dc-41ed-4c2d-b163-386c5cc13d0a">​</a><a href="valueset-day-of-week.html">day-of-week</a></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
@@ -394,55 +394,55 @@ can only resize using html  or css ;-( -->
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/descriptive-statistic-denominator-1.0.json">descriptive-statistic-denominator</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#code" title="FHIR code definition">code</a></td>
-      <td><a name="e61aa9b6-bf62-43b6-9a73-f65689822122">​</a><a href="valueset-descriptive-statistic-denominator.html">descriptive-statistic-denominator</a></td>
+      <td><a name="e8850ae9-5482-46e7-a40b-9efcd976e165">​</a><a href="valueset-descriptive-statistic-denominator.html">descriptive-statistic-denominator</a></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/intervention-administration-route-1.0.json">intervention-administration-route</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#code" title="FHIR code definition">code</a></td>
-      <td><a name="d5ba92b2-abae-44aa-8507-f0dd25879e34">​</a><a href="valueset-intervention-administration-route.html">intervention-administration-route</a></td>
+      <td><a name="23863caa-08e7-407a-8d60-df3b50627a3e">​</a><a href="valueset-intervention-administration-route.html">intervention-administration-route</a></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/medication-dose-unit-1.0.json">medication-dose-unit</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#code" title="FHIR code definition">code</a></td>
-      <td><a name="7bae817e-6f59-4a59-9ecf-481589709611">​</a><a href="valueset-medication-dose-unit.html">medication-dose-unit</a></td>
+      <td><a name="1fb74151-dfa3-43ec-a087-2a78d8a58988">​</a><a href="valueset-medication-dose-unit.html">medication-dose-unit</a></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/part-of-day-1.0.json">part-of-day</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#code" title="FHIR code definition">code</a></td>
-      <td><a name="93db062e-f811-490f-8c5e-79484878010c">​</a><a href="valueset-part-of-day.html">part-of-day</a></td>
+      <td><a name="b9376cdc-49aa-4c51-9276-c60d1b03c50a">​</a><a href="valueset-part-of-day.html">part-of-day</a></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/position-during-measurement-1.0.json">position-during-measurement</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#code" title="FHIR code definition">code</a></td>
-      <td><a name="d290ece4-1c53-4b8c-9edd-a1e8e09c906f">​</a><a href="valueset-position-during-measurement.html">position-during-measurement</a></td>
+      <td><a name="2b510d15-42aa-47c9-b9bb-4a070d6abd5e">​</a><a href="valueset-position-during-measurement.html">position-during-measurement</a></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/specimen-source-1.0.json">specimen-source</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#code" title="FHIR code definition">code</a></td>
-      <td><a name="9579db4c-6305-40db-a761-a4bdb88ae3df">​</a><a href="valueset-specimen-source.html">specimen-source</a></td>
+      <td><a name="693dd9b8-543b-488c-ba32-fb0f96c151a3">​</a><a href="valueset-specimen-source.html">specimen-source</a></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/temporal-relationship-to-meal-1.0.json">temporal-relationship-to-meal</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#code" title="FHIR code definition">code</a></td>
-      <td><a name="f376247d-a0fd-4d91-ac22-674de0491e39">​</a><a href="valueset-temporal-relationship-to-meal.html">temporal-relationship-to-meal</a></td>
+      <td><a name="f5543f97-c35f-4f5a-8b16-2269aaf2d03c">​</a><a href="valueset-temporal-relationship-to-meal.html">temporal-relationship-to-meal</a></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/temporal-relationship-to-physical-activity-1.0.json">temporal-relationship-to-physical-activity</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#code" title="FHIR code definition">code</a></td>
-      <td><a name="1f50f27f-be34-4eed-b869-daf62d44883f">​</a><a href="valueset-temporal-relationship-to-physical-activity.html">temporal-relationship-to-physical-activity</a></td>
+      <td><a name="1870324c-5bcb-4fb4-b7f4-3757c92373dd">​</a><a href="valueset-temporal-relationship-to-physical-activity.html">temporal-relationship-to-physical-activity</a></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/temporal-relationship-to-sleep-1.0.json">temporal-relationship-to-sleep</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#code" title="FHIR code definition">code</a></td>
-      <td><a name="73928c99-0d11-45f8-8456-cdfce9db57e7">​</a><a href="valueset-temporal-relationship-to-sleep.html">temporal-relationship-to-sleep</a></td>
+      <td><a name="17c9bc61-eaab-4122-8c0a-fedc0b6fe673">​</a><a href="valueset-temporal-relationship-to-sleep.html">temporal-relationship-to-sleep</a></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
@@ -460,25 +460,25 @@ can only resize using html  or css ;-( -->
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/area-unit-value-1.0.json">area-unit-value-1.0.json</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
-      <td><a name="c418a39a-b9b8-4171-9aa6-426268f14231">​</a><a href="valueset-area-unit-value.html">area-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
+      <td><a name="fdc1f20e-ebcf-4beb-905b-e2c58c5683d7">​</a><a href="valueset-area-unit-value.html">area-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/duration-unit-value-1.0.json">duration-unit-value-1.0.json</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
-      <td><a name="89b83ce1-626a-4fd6-83dc-61690750e4f2">​</a><a href="valueset-duration-unit-value.html">duration-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
+      <td><a name="1a7d0606-69bd-4858-9eed-b4928f265b46">​</a><a href="valueset-duration-unit-value.html">duration-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/duration-unit-value-range-1.0.json">duration-unit-value-range-1.0.json</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#range" title="FHIR Range definition">Range</a></td>
-      <td><a name="1e0c2d9f-92f7-4c9f-8c86-80933253a51c">​</a><a href="valueset-duration-unit-value.html">duration-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
+      <td><a name="6cff752c-9560-44d6-97ff-eef8f1a37899">​</a><a href="valueset-duration-unit-value.html">duration-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/frequency-unit-value-1.0.json">frequency-unit-value-1.0.json</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#ratio" title="FHIR Ratio definition">Ratio</a></td>
-      <td><a name="1beccd3f-2380-4ec6-9e35-900f1ef7ef19">​</a><a href="valueset-duration-unit-value.html">duration-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
+      <td><a name="c93cdb15-e737-41ce-9115-1ed110aa81d9">​</a><a href="valueset-duration-unit-value.html">duration-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
@@ -490,37 +490,37 @@ can only resize using html  or css ;-( -->
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/length-unit-value-1.0.json">length-unit-value-1.0.json</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
-      <td><a name="5cb6025d-26ff-44db-bd6a-ac9107acb086">​</a><a href="valueset-length-unit-value.html">length-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
+      <td><a name="9e897e21-05f0-4dff-b3be-43ded6de50e7">​</a><a href="valueset-length-unit-value.html">length-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/magnetic-flux-density-unit-value-1.0.json">magnetic-flux-density-unit-value-1.0.json</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
-      <td><a name="ee3ebb18-1d2f-450f-bc0e-d77f947161a0">​</a><a href="valueset-magnetic-flux-density-unit-value.html">magnetic-flux-density-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
+      <td><a name="8a26e23a-3321-43eb-994e-80af6bd8b20a">​</a><a href="valueset-magnetic-flux-density-unit-value.html">magnetic-flux-density-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/mass-unit-value-1.0.json">mass-unit-value-1.0.json</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
-      <td><a name="7682da01-0b07-4041-bab7-7ba67c2a000a">​</a><a href="valueset-mass-unit-value.html">mass-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
+      <td><a name="aae99481-850d-422d-bead-855faea9c614">​</a><a href="valueset-mass-unit-value.html">mass-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/medication-dose-unit-value-1.0.json">medication-dose-unit-value-1.0.json</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
-      <td><a name="03a2cd5d-b5b2-491d-98d2-0c912e1c5c68">​</a><a href="valueset-medication-dose-unit.html">medication-dose-unit</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a>)</td>
+      <td><a name="9fc345e4-b66a-41c1-9f99-affec1579329">​</a><a href="valueset-medication-dose-unit.html">medication-dose-unit</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a>)</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/medication-dose-unit-value-range-1.0.json">medication-dose-unit-value-range-1.0.json</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#range" title="FHIR Range definition">Range</a></td>
-      <td><a name="b23de8d0-e8a5-4fde-b6ef-43228157fbeb">​</a><a href="valueset-medication-dose-unit.html">medication-dose-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a>)</td>
+      <td><a name="b4cfc5ec-e1be-4cc4-a4ab-85f0c6bc07b2">​</a><a href="valueset-medication-dose-unit.html">medication-dose-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a>)</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/pace-unit-value-1.0.json">pace-unit-value-1.0.json</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
-      <td><a name="1e20e1f6-e701-444e-a439-ff87a3952f8a">​</a><a href="valueset-pace-unit-value.html">pace-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
+      <td><a name="3e8fb559-e63f-453f-b44d-8a62d5bb3a31">​</a><a href="valueset-pace-unit-value.html">pace-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
@@ -532,13 +532,13 @@ can only resize using html  or css ;-( -->
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/speed-unit-value-1.0.json">speed-unit-value-1.0.json</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
-      <td><a name="21e157d9-54ba-4717-81d9-473ef1cb24f2">​</a><a href="valueset-speed-unit-value.html">speed-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
+      <td><a name="911bc06d-e7d2-4446-a80d-971439d6b21c">​</a><a href="valueset-speed-unit-value.html">speed-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/temperature-unit-value-1.0.json">temperature-unit-value-1.0.json</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
-      <td><a name="4ff60501-7b28-4865-8f46-3fdb603a46fd">​</a><a href="valueset-temperature-unit-value.html">temperature-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
+      <td><a name="894f9dfe-096f-4cbb-9c85-0f79679b0ae1">​</a><a href="valueset-temperature-unit-value.html">temperature-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
@@ -556,7 +556,7 @@ can only resize using html  or css ;-( -->
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/volume-unit-value-1.0.json">volume-unit-value-1.0.json</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
-      <td><a name="1fd8b60d-2c4a-42ca-8a01-af35a5011346">​</a><a href="valueset-volume-unit-value.html">volume-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
+      <td><a name="a717b095-77d3-4370-97b4-681113b36b63">​</a><a href="valueset-volume-unit-value.html">volume-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
@@ -747,7 +747,7 @@ can only resize using html  or css ;-( -->
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/pharmacy-medication-dispensing-2.0.json">pharmacy-medication-dispensing-2.0.json</a></td>
       <td><a href="StructureDefinition-omh-pharmacy-medication-dispensing.html">OmhPharmacyMedicationDispensing</a></td>
-      <td><a name="e188940a-1837-4ba0-a514-31bb287edee8">​</a><a href="http://hl7.org/fhir/STU3/MedicationDispense.html" title="FHIR MedicationDispense definition">MedicationDispense</a> Profile</td>
+      <td><a name="2ec3f6c6-3ae9-4368-930c-dad6b9e4bb7e">​</a><a href="http://hl7.org/fhir/STU3/MedicationDispense.html" title="FHIR MedicationDispense definition">MedicationDispense</a> Profile</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
@@ -856,9 +856,9 @@ can only resize using html  or css ;-( -->
 </span></code></pre>
 </div>
 
-<p><a name="fd99c1ec-a8f3-4150-b37d-07bf582619bf">​</a>The first step is to map from the Open MHealth data-point schema to the OmhDataPoint Logical Model.  The source JSON data is transformed following the <em>first</em> <a href="StructureDefinition-omh-data-point.html#sd-3-2-mappings">mapping table</a> provided in the OmhDataPoint Logical Model and referencing the formal <a href="StructureDefinition-omh-data-point.html#sd-3-1formal-views-of-profile-content">StructureDefinition</a> for the structural details.  So for example from the example source file below, based on the mapping table <code class="highlighter-rouge">OmhDataPoint.header.id</code> is translated to <code class="highlighter-rouge">OmhDataPoint.header.dataPointId</code> which a primitive <code class="highlighter-rouge">id</code> datatype.</p>
+<p><a name="5d9b710c-3ae8-452b-8260-09281e8cffcb">​</a>The first step is to map from the Open MHealth data-point schema to the OmhDataPoint Logical Model.  The source JSON data is transformed following the <em>first</em> <a href="StructureDefinition-omh-data-point.html#sd-3-2-mappings">mapping table</a> provided in the OmhDataPoint Logical Model and referencing the formal <a href="StructureDefinition-omh-data-point.html#sd-3-1formal-views-of-profile-content">StructureDefinition</a> for the structural details.  So for example from the example source file below, based on the mapping table <code class="highlighter-rouge">OmhDataPoint.header.id</code> is translated to <code class="highlighter-rouge">OmhDataPoint.header.dataPointId</code> which a primitive <code class="highlighter-rouge">id</code> datatype.</p>
 
-<p><a name="8fea7924-3644-45a0-9164-8a5c4ea6091a">​</a>The OmhDataPoint <code class="highlighter-rouge">body</code> element is a choice of other logical models based on the datapoint schema listed above. These models are their mappings are referenced to complete the mapping. For example, <code class="highlighter-rouge">properties.body.effective_time_frame</code> is mapped to the OMHStepCount Logical Model and data transformed based on its <a href="StructureDefinition-omh-step-count.html#sd-1-2-mappings">mapping table</a>
+<p><a name="35b13fbd-b319-48ea-9518-b7efceff22d2">​</a>The OmhDataPoint <code class="highlighter-rouge">body</code> element is a choice of other logical models based on the datapoint schema listed above. These models are their mappings are referenced to complete the mapping. For example, <code class="highlighter-rouge">properties.body.effective_time_frame</code> is mapped to the OMHStepCount Logical Model and data transformed based on its <a href="StructureDefinition-omh-step-count.html#sd-1-2-mappings">mapping table</a>
 A complex data element  such as <code class="highlighter-rouge">effective_time_frame</code> is mapped to the <code class="highlighter-rouge">OMHStepCount.effectiveTimeFrame</code> element which is a FHIR <a href="http://hl7.org/fhir/STU3/datatypes.html#Period">Period</a> whose detailed structure is available in the FHIR specification and can accessed by following the links in the logical model.  Here is how the Period datatype maps to the effective_time_frame</p>
 
 <table class="grid">
@@ -910,7 +910,7 @@ A complex data element  such as <code class="highlighter-rouge">effective_time_f
 </span></code></pre>
 </div>
 
-<p><a name="eba7f500-2117-4988-8926-acf360f59d86">​</a>The next step is to map from the OmhDataPoint Logical Model to the appropriate FHIR resource, which in this case is <a href="http://hl7.org/fhir/STU3/observation.html" title="FHIR Observation definition">Observation</a>).  Similar to the first step, The OMH logica model JSON data is transformed to the FHIR Resource following the <em>second</em> <a href="StructureDefinition-omh-data-point.html#sd-3-2-mappings">mapping table</a> provided in the OmhDataPoint Logical Model and referencing the formal definitions of the FHIR resource the structural details.  Since the OMH Logical Model and the FHIR Resource share the same datatypes the process is relatively straight.  In some cases there are no mappings because the element are infrasture related only to the OMH schemas.  In other cases there are choices on how to transform the data and the use case and best practices should determine the outcome.</p>
+<p><a name="9ec65790-4b09-4cda-b253-475819313a2a">​</a>The next step is to map from the OmhDataPoint Logical Model to the appropriate FHIR resource, which in this case is <a href="http://hl7.org/fhir/STU3/observation.html" title="FHIR Observation definition">Observation</a>).  Similar to the first step, The OMH logica model JSON data is transformed to the FHIR Resource following the <em>second</em> <a href="StructureDefinition-omh-data-point.html#sd-3-2-mappings">mapping table</a> provided in the OmhDataPoint Logical Model and referencing the formal definitions of the FHIR resource the structural details.  Since the OMH Logical Model and the FHIR Resource share the same datatypes the process is relatively straight.  In some cases there are no mappings because the element are infrasture related only to the OMH schemas.  In other cases there are choices on how to transform the data and the use case and best practices should determine the outcome.</p>
 
 <p>For example, the OmhDataPoint.dataPointId is mapped to Observation.identifier, OmhDataPoint.header.namespace is unmapped.  Again, the OmhDataPoint <code class="highlighter-rouge">body</code> element is a choice of other logical models based on the datapoint schema listed above. Note that in many cases the Logical Model maps to the FHIR element <code class="highlighter-rouge">Observation.code</code> with a fixed value for code and code system. In this example the OmhStepCount Logical Model maps to Observation.code with LOINC =55423-8. The other element are mapped as above - for example, OmhDataPoint.body.stepCount is mapped to Observation.valueQuantity.  As a result of the mapping the following Observation resource is derived:</p>
 
@@ -1090,7 +1090,7 @@ A complex data element  such as <code class="highlighter-rouge">effective_time_f
   <div class="container">    <!-- container -->
    <div class="inner-wrapper">
     <p>
-            mFHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, May 16, 2018 18:48-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
+            mFHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, May 22, 2018 01:43-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
         
         </p>
    </div>    <!-- /inner-wrapper -->

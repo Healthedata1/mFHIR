@@ -14,6 +14,24 @@
     <name value="base"/>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="DocumentReference-omh-stepcount-example.html"/>
+      </extension>
+      <example value="true"/>
+      <sourceReference>
+        <reference value="DocumentReference/omh-stepcount-example"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Binary-omh-stepcount-example.html"/>
+      </extension>
+      <example value="true"/>
+      <sourceReference>
+        <reference value="Binary/omh-stepcount-example"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-omh-step-count.html"/>
       </extension>
       <example value="false"/>

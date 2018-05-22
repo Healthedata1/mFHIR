@@ -19,6 +19,30 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "DocumentReference-omh-stepcount-example.html"
+            }
+          ],
+          "example": true,
+          "sourceReference": {
+            "reference": "DocumentReference/omh-stepcount-example"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Binary-omh-stepcount-example.html"
+            }
+          ],
+          "example": true,
+          "sourceReference": {
+            "reference": "Binary/omh-stepcount-example"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "StructureDefinition-omh-step-count.html"
             }
           ],

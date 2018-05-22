@@ -18,3 +18,8 @@
 [Pattern]: {{site.data.fhir.path}}/#ElementDefinition.pattern_x_ "FHIR pattern definition"
 [required]: {{site.data.fhir.path}}/terminologies.html#required
 [extensible]: {{site.data.fhir.path}}/terminologies.html#extensible
+[Smart on FHIR Launch]: (http://docs.smarthealthit.org/authorization/) "SMART App Authorization Guide"
+ [FHIR search API]: ({{site.data.fhir.path}}/search.html) "FHIR search API documentation"
+ [DocumentReference]: ({{site.data.fhir.path}}/documentreference.html) "FHIR DocumentReference Resource documentation"
+ [Binary]: ({{site.data.fhir.path}}/binary.html) "FHIR Binary Resource documentation"
+[FHIR API for Binary data]: ({{site.data.fhir.path}}/binary.html#rest) "FServing Binary Resources using the RESTful API"

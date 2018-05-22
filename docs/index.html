@@ -212,19 +212,11 @@ This is the   Continuous Integration Build  of the mFHIR Implementation Guide,  
     </ul>
   </li>
   <li><a href="#base-use-case" id="markdown-toc-base-use-case">Base Use case</a>    <ul>
-      <li><a name="87c4c79c-eda4-41e0-9fa1-6b2c52b8f6f7">​</a><a href="#description" id="markdown-toc-description">Description</a></li>
-      <li><a name="40641872-e492-4914-b6ea-6e126305518f">​</a><a href="#actors" id="markdown-toc-actors">Actors</a></li>
-      <li><a name="52a8e44f-238b-423e-acd6-2e14491eb3c5">​</a><a href="#assumptions-pre-conditions-and-constraints" id="markdown-toc-assumptions-pre-conditions-and-constraints">Assumptions, Pre-Conditions and Constraints</a></li>
-      <li><a name="da2cca85-330f-411b-b708-1a29182f194c">​</a><a href="#basic-flow" id="markdown-toc-basic-flow">Basic Flow</a>        <ul>
-          <li><a name="8adb3414-2ce3-49bc-92bb-c5866f20be4c">​</a><a href="#order-step-count-and-set-up-stepsensor" id="markdown-toc-order-step-count-and-set-up-stepsensor">Order step count and set up StepSensor</a></li>
-          <li><a name="22fd4448-b4e9-43a1-9e95-bf99388e89d3">​</a><a href="#flow-identifier--in-person-review-of-already-collected-steps-data" id="markdown-toc-flow-identifier--in-person-review-of-already-collected-steps-data">Flow Identifier:  In-person review of already collected steps data</a></li>
-        </ul>
-      </li>
-      <li><a name="2a7d4e2b-c785-4c69-930d-dcb14ba19ee1">​</a><a href="#smart-app-worklfow" id="markdown-toc-smart-app-worklfow">Smart app Worklfow</a>        <ul>
-          <li><a name="a1d8796a-3b59-41f6-9448-673831b87b3c">​</a><a href="#retrieving-omh-data-in-native-omh-schema-format" id="markdown-toc-retrieving-omh-data-in-native-omh-schema-format">Retrieving OMH data in native OMH Schema format</a></li>
-          <li><a href="#retrieving-omh-data-as-fhir-observations" id="markdown-toc-retrieving-omh-data-as-fhir-observations">Retrieving OMH data as FHIR Observations</a></li>
-        </ul>
-      </li>
+      <li><a name="d64a1448-6fab-431f-8dd8-30cc7ad2a1d7">​</a><a href="#description" id="markdown-toc-description">Description</a></li>
+      <li><a name="76ef810b-c296-4e7d-8300-0700f72b6649">​</a><a href="#actors" id="markdown-toc-actors">Actors</a></li>
+      <li><a name="bbc22acb-c561-412d-809d-64c23358d0b5">​</a><a href="#assumptions-pre-conditions-and-constraints" id="markdown-toc-assumptions-pre-conditions-and-constraints">Assumptions, Pre-Conditions and Constraints</a></li>
+      <li><a name="073d37e2-6d0b-4a7e-83dc-94f07b234615">​</a><a href="#basic-flow" id="markdown-toc-basic-flow">Basic Flow</a></li>
+      <li><a name="4bfd9403-8b2e-4ae5-95ef-1b48bb9ccebd">​</a><a href="#smart-app-workflow" id="markdown-toc-smart-app-workflow">Smart app Workflow</a></li>
     </ul>
   </li>
 </ul>
@@ -310,7 +302,8 @@ Conversion notes:
 
 <h3 id="basic-flow">Basic Flow</h3>
 
-<h4 id="order-step-count-and-set-up-stepsensor">Order step count and set up StepSensor</h4>
+<h4 class="no_toc" id="order-step-count-and-set-up-stepsensor">Order step count and set up StepSensor</h4>
+
 <table class="grid">
   <tr>
    <th>Step
@@ -410,7 +403,8 @@ Shimmer makes the Shimmer User ID available to mDATA, which now has both the pat
   </tr>
 </table>
 
-<h4 id="flow-identifier--in-person-review-of-already-collected-steps-data">Flow Identifier:  In-person review of already collected steps data</h4>
+<h4 class="no_toc" id="flow-identifier--in-person-review-of-already-collected-steps-data">Flow Identifier:  In-person review of already collected steps data</h4>
+
 <table class="grid">
 <tr>
  <th>Step
@@ -484,9 +478,9 @@ mDATA receives the results of the GET command from the R24 server and displays i
 
 <hr />
 
-<h3 id="smart-app-worklfow">Smart app Worklfow</h3>
+<h3 id="smart-app-workflow">Smart app Workflow</h3>
 
-<h4 id="retrieving-omh-data-in-native-omh-schema-format">Retrieving OMH data in native OMH Schema format</h4>
+<h4 class="no_toc" id="retrieving-omh-data-in-native-omh-schema-format">Retrieving OMH data in native OMH Schema format</h4>
 
 <!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
 
@@ -511,7 +505,7 @@ mDATA receives the results of the GET command from the R24 server and displays i
   <tbody>
     <tr>
       <td>1.</td>
-      <td>Smart app Launch from Provider EHR</td>
+      <td><a name="3b3a8eb7-9c3e-4bc6-8c9e-5ac1a0523664">​</a>Smart app Launch from Provider EHR. See the <a href="(http://docs.smarthealthit.org/authorization/)" title="SMART App Authorization Guide">Smart on FHIR Launch</a> Specification</td>
     </tr>
     <tr>
       <td>2.</td>
@@ -519,34 +513,242 @@ mDATA receives the results of the GET command from the R24 server and displays i
     </tr>
     <tr>
       <td>3.</td>
-      <td>Following successful launch, the Smart app request OMH step count data for patient Z as a standard FHIR search API on <em>DocumentReference</em>. It provides an opaque identifier as a search parameter that identifies patient Z and optionally a time range of interest.</td>
+      <td><a name="3610497a-c789-45fa-a3f6-def3337a27d4">​</a>Following successful launch, the Smart app request OMH step count data for patient Z as a standard <a href="(http://hl7.org/fhir/STU3/search.html)" title="FHIR search API documentation">FHIR search API</a> on <em><a name="b0e179db-f813-4ec3-b7e3-b136f0db1fdf">​</a><a href="(http://hl7.org/fhir/STU3/documentreference.html)" title="FHIR DocumentReference Resource documentation">DocumentReference</a></em>. It provides an opaque identifier as a search parameter that identifies patient Z and optionally a time range of interest.</td>
     </tr>
     <tr>
       <td>4.</td>
-      <td>The R24 server receives the request and either maps the opaque id to its user id list and creates the DocumentReference resource on the fly from a native format or searches its FHIR based datastore for DocumentReference matches.  Note that the DocumentReference is a ‘wrapper’ and contains context and a link to a Binary file that represents the actual OMH Step Count data.</td>
+      <td><a name="08a87336-bc42-48ca-a14e-a5cfdd8e19a9">​</a>The R24 server receives the request and either maps the opaque id to its user id list and creates the DocumentReference resource on the fly from a native format or searches its FHIR based datastore for DocumentReference matches.  Note that the DocumentReference is a ‘wrapper’ and contains context and a link to a <a href="(http://hl7.org/fhir/STU3/binary.html)" title="FHIR Binary Resource documentation">Binary</a> resource that represents the actual OMH Step Count data.</td>
     </tr>
     <tr>
       <td>5.</td>
-      <td>R24 server returns DocumentReference resources that match the search criteria</td>
+      <td>The R24 server returns DocumentReference resources that match the search criteria</td>
     </tr>
     <tr>
       <td>6.</td>
-      <td>The smart app receives the DocumentReference resource(s) and processes them one by one extracting the Binary endpoint data. then makes a second search request for the Binary resources using the standard FHIR API.</td>
+      <td><a name="6d8c33de-38ea-4183-b2b0-929f78e5dc39">​</a>The smart app receives the DocumentReference resource(s) and processes them one by one extracting the Binary endpoint data. then makes a second request to fetch the Binary resources in the native OMH (json) format using the standard <a href="(http://hl7.org/fhir/STU3/binary.html#rest)" title="FServing Binary Resources using the RESTful API">FHIR API for Binary data</a> (Note that the data may also be requested as a base64 encoded string as well).</td>
     </tr>
     <tr>
-      <td>7.</td>
+      <td>8.</td>
+      <td>The R24 server receives the request for the OMH data in the native JSON format.</td>
+    </tr>
+    <tr>
+      <td>9.</td>
       <td>For successful matches, the R24 Server Return the native OMH JSON file</td>
     </tr>
     <tr>
-      <td>8. (not shown)</td>
-      <td>The Smart app can process/display the OMH data to the end user</td>
+      <td>10.</td>
+      <td>processes/displays the OMH data to the end user</td>
     </tr>
   </tbody>
 </table>
 
+<h5 id="example" class="no_toc">Example</h5>
+
+<h6 id="launch-smart-on-fhir-app-steps-1-and-2" class="no_toc">Launch Smart on FHIR App (Steps 1 and 2).</h6>
+
+<table>
+  <tbody>
+    <tr>
+      <td><a name="e5a70430-a164-4c9f-9713-f5cf527479a3">​</a>See the <a href="(http://docs.smarthealthit.org/authorization/)" title="SMART App Authorization Guide">Smart on FHIR Launch</a> Specification</td>
+      <td>for examples</td>
+    </tr>
+  </tbody>
+</table>
+
+<h6 id="fetch-fhir-documentreference-resources-containing-omh-step-count-data--steps-3-6" class="no_toc">Fetch FHIR DocumentReference resources containing OMH step count data.  (Steps 3-6)</h6>
+
+<p>Includes: Opaque patient identifer, date Range, OMH data type</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>Details</th>
+      <th>URL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>OMH Specification</td>
+      <td><a href="http://www.openmhealth.org/schemas/omh_step-count">http://www.openmhealth.org/schemas/omh_step-count</a></td>
+    </tr>
+    <tr>
+      <td>FHIR STU3 DocumentReference Resource</td>
+      <td><a href="http://hl7.org/fhir/STU3/documentreference.html">http://hl7.org/fhir/STU3/documentreference.html</a></td>
+    </tr>
+    <tr>
+      <td>FHIR STU3 Search API</td>
+      <td><a href="http://hl7.org/fhir/STU3/search.html">http://hl7.org/fhir/STU3/search.html</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Request</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>GET /DocumentReference/?patient={identifier}
+
+Content-type: application/json+fhir
+Accept: application/json+fhir
+...other headers...
+</code></pre>
+</div>
+
+<p><em>Issues</em>
+1.  Assumed identifiers as ‘logical’ (opaque Identifiers) and not ‘literal’ reference to Patient resource (see http://hl7.org/fhir/STU3/references.html.
+    1. need to assign system  ( e.g UUID )</p>
+
+  <!-- https://vonk.furore.com/DocumentReference?patient=1.3.6.1.4.1.21367.2005.3.7.1234 -->
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>HTTP/1.1 200 OK
+Date: Tue, 22 May 2018 03:40:05 GMT
+Content-Type: application/fhir+json; charset=utf-8
+...other headers...
+
+{
+  "resourceType": "DocumentReference",
+  "id": "omh-stepcount-example",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234"
+    }
+  ],
+  "status": "current",
+  "type": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "55423-8",
+        "display": "Step Count"
+      }
+    ]
+  },
+  "class": {
+
+        "text": "OMH schema data"
+
+  },
+  "subject": {
+    "identifier":
+      {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234"
+      }
+
+  },
+  "created": "2018-05-22T09:35:00+11:00",
+  "indexed": "2018-05-22T09:35:00+11:00",
+  "content": [
+    {
+      "attachment": {
+        "contentType": "application/json",
+        "url": "https://R24Server/Binary/omh-stepcount-example"
+      }
+    }
+  ],
+  "context": {
+    "period": {
+      "start": "2018-15-23T08:00:00+11:00",
+      "end": "2018-21-23T08:01:00+11:00"
+    }
+  }
+}
+</code></pre>
+</div>
+
+<p><strong>Issues</strong>
+1. Need to assign classes and types codes to identify.
+    1. need to assign system  ( e.g OMH )
+1. Need to decide how much context to repeat here vs in OMH Schema data
+    1. min date range and type of datatpoint</p>
+
+<h6 id="fetch-native-omh-step-count-data--steps-7-10" class="no_toc">Fetch native OMH step count data.  (Steps 7-10)</h6>
+
+<p>Includes: Binary id(s)</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>Details</th>
+      <th>URL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>OMH Specification</td>
+      <td><a href="http://www.openmhealth.org/schemas/omh_step-count">http://www.openmhealth.org/schemas/omh_step-count</a></td>
+    </tr>
+    <tr>
+      <td>FHIR STU3 Binary Resource</td>
+      <td><a href="http://hl7.org/fhir/STU3/binary.html">http://hl7.org/fhir/STU3/binary.html</a></td>
+    </tr>
+    <tr>
+      <td>FHIR STU3 REST API</td>
+      <td><a name="064c62a9-9e80-4c9f-b988-5c03c86bce42">​</a><a href="http://hl7.org/fhir/STU3/html.html">http://hl7.org/fhir/STU3/html.html</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Request</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>GET /Binary/{id} or GET /Binary?_id={id}
+
+Accept and Application-type headers absent!
+...Other headers...
+</code></pre>
+</div>
+
+<p><em>Response</em></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>HTTP/1.1 200 OK
+Connection: close
+Content-Type: application/json
+...Other Headers...
+
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_MedicationDispense": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "step-count",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+    "effective_time_frame": {
+      "time_interval": {
+        "start_date_time": "2015-08-06T05:11:09-07:00",
+        "end_date_time": "2015-08-06T23:00:36-06:00"
+      }
+    },
+    "step_count": 7939
+  }
+}
+</code></pre>
+</div>
+
+<p>Issues:</p>
+
+<ol>
+  <li>Fetching multiple files
+    <ol>
+      <li>not specified  - may want an operation to zip into folder?</li>
+    </ol>
+  </li>
+  <li>…</li>
+</ol>
+
 <hr/>
 
-<h4 id="retrieving-omh-data-as-fhir-observations">Retrieving OMH data as FHIR Observations</h4>
+<h4 id="retrieving-omh-data-as-fhir-observations" class="no_toc">Retrieving OMH data as FHIR Observations</h4>
 
   <!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
 
@@ -594,11 +796,177 @@ mDATA receives the results of the GET command from the R24 server and displays i
       <td><mark>The smart app receives the Observation resource(s) and</mark></td>
     </tr>
     <tr>
-      <td><mark>7.</mark></td>
-      <td><mark>processes/displays the OMH data to the end user</mark></td>
+      <td>7.</td>
+      <td>processes/displays the OMH data to the end user</td>
     </tr>
   </tbody>
 </table>
+
+<h5 id="example-1" class="no_toc">Example</h5>
+
+<h6 id="launch-smart-on-fhir-app-steps-1-and-2-1" class="no_toc">Launch Smart on FHIR App (Steps 1 and 2)</h6>
+
+<table>
+  <tbody>
+    <tr>
+      <td><a name="838df5b1-2480-4726-837c-b653161bd6a2">​</a>See the <a href="(http://docs.smarthealthit.org/authorization/)" title="SMART App Authorization Guide">Smart on FHIR Launch</a> Specification</td>
+      <td>for examples</td>
+    </tr>
+  </tbody>
+</table>
+
+<h6 id="fetch-fhir-observation-representing-the-omh-step-count-data--steps-3-6" class="no_toc">Fetch FHIR Observation representing the OMH step count data.  (Steps 3-6)</h6>
+
+<p>Includes: Opaque patient identifer, date range, OMH data type as code</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>Details</th>
+      <th>URL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>OMH Specification</td>
+      <td><a href="http://www.openmhealth.org/schemas/omh_step-count">http://www.openmhealth.org/schemas/omh_step-count</a></td>
+    </tr>
+    <tr>
+      <td>FHIR STU3 Observation Resource</td>
+      <td><a href="http://hl7.org/fhir/STU3/documentreference.html">http://hl7.org/fhir/STU3/documentreference.html</a></td>
+    </tr>
+    <tr>
+      <td>FHIR STU3 Search API</td>
+      <td><a href="http://hl7.org/fhir/STU3/search.html">http://hl7.org/fhir/STU3/search.html</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Request</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>GET /Observation/?patient={identifier}&amp;code=55423-8
+
+Content-type: application/json+fhir
+Accept: application/json+fhir
+...other headers...
+</code></pre>
+</div>
+
+<p><em>Issues</em>
+1.  Assumed identifiers as ‘logical’ (opaque Identifiers) and not ‘literal’ reference to Patient resource (see http://hl7.org/fhir/STU3/references.html.
+    1. need to assign system  ( e.g UUID )
+1. Using code to identify datapoint schema
+1. search by max and min and other parameters
+1. provenance?</p>
+
+<p><em>Response</em></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>HTTP/1.1 200 OK
+Connection: close
+Content-Type: application/json
+...Other Headers...
+
+{
+"resourceType": "Bundle",
+"id": "7c189ab0-8eeb-43a6-801e-6072bc17ba02",
+"meta": {
+    "versionId": "761a5faa-a7ae-4f31-9b8f-f3ffcfadfadd",
+    "lastUpdated": "2018-05-22T08:32:19.16+00:00"
+},
+"type": "searchset",
+"total": 1,
+"link": [
+    {
+        "relation": "self",
+        "url": "https://vonk.furore.com/Observation?code=55423-8"
+    }
+],
+"entry": [
+    {
+        "fullUrl": "https://vonk.furore.com/Observation/ae885da2-9544-43c0-a7c0-30de72c7e78c",
+        "resource": {
+            "resourceType": "Observation",
+            "id": "ae885da2-9544-43c0-a7c0-30de72c7e78c",
+            "meta": {
+                "versionId": "5b577c8a-1c48-4795-a3b0-9f25bbd089f7",
+                "lastUpdated": "2018-05-22T08:22:12.511+00:00"
+            },
+            "identifier": [
+                {
+                    "system": "https://omh.org/shimmer/ids",
+                    "value": "12341567"
+                }
+            ],
+            "status": "unknown",
+            "category": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/observation-category",
+                            "code": "activity",
+                            "display": "Activity"
+                        }
+                    ]
+                }
+            ],
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://loinc.org",
+                        "code": "55423-8",
+                        "display": "Number of steps in unspecified time Pedometer"
+                    }
+                ],
+                "text": "Step count"
+            },
+            "subject": {
+                "identifier": {
+                    "system": "https://omh.org/shimmer/patient_ids",
+                    "value": "some-user"
+                }
+            },
+            "effectivePeriod": {
+                "start": "2018-04-17T00:00:00Z",
+                "end": "2018-04-24T00:00:00Z"
+            },
+            "issued": "2018-04-24T17:13:50+00:00",
+            "device": {
+                "display": "Jawbone UP API, modality =sensed, sourceCreationDateTime = 2018-04-17T17:13:50Z"
+            },
+            "component": [
+                {
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/observation-statistics",
+                                "code": "maximum",
+                                "display": "Maximum"
+                            }
+                        ],
+                        "text": "Maximum"
+                    },
+                    "valueQuantity": {
+                        "value": 7939,
+                        "unit": "steps/day",
+                        "system": "http://unitsofmeasure.org",
+                        "code": "{steps}/d"
+                    }
+                }
+            ]
+        },
+        "search": {
+            "mode": "match"
+        }
+    }
+]
+}
+</code></pre>
+</div>
+
+<p><br/></p>
+
+<hr/>
+
 
 
 
@@ -633,7 +1001,7 @@ mDATA receives the results of the GET command from the R24 server and displays i
   <div class="container">    <!-- container -->
    <div class="inner-wrapper">
     <p>
-            mFHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, May 16, 2018 18:48-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
+            mFHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, May 22, 2018 01:43-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
         
         </p>
    </div>    <!-- /inner-wrapper -->
