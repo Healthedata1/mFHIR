@@ -19,6 +19,18 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Observation-stepcount-example.html"
+            }
+          ],
+          "example": true,
+          "sourceReference": {
+            "reference": "Observation/stepcount-example"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "DocumentReference-omh-stepcount-example.html"
             }
           ],

@@ -1,6 +1,15 @@
 {
   "resourceType": "Observation",
 	"id": "stepcount-example",
+  "contained": [
+  {"resourceType" : "Patient",
+  "id":"p",
+  "identifier" : [{
+  "system" : "https://omh.org/shimmer/patient_ids",
+  "value" : "some-user"
+     }]
+  }
+  ],
   "identifier":[{
   "system" : "https://omh.org/shimmer/ids",
   "value" : "12341567"
@@ -28,10 +37,7 @@
 		"text": "Step count"
 	},
 	"subject": {
-		"identifier" : {
-  "system" : "https://omh.org/shimmer/patient_ids",
-  "value" : "some-user"
-}
+  "reference": "#p"
 	},
 	"effectivePeriod":{
   "start" : "2018-04-17T00:00:00Z",

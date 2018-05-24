@@ -1,6 +1,16 @@
 {
   "resourceType": "DocumentReference",
   "id": "omh-stepcount-example",
+  "contained": [
+  {"resourceType" : "Patient",
+  "id":"p",
+  "identifier" : [{
+  "system" : "https://omh.org/shimmer/patient_ids",
+  "value" : "some-user"
+     }]
+  }
+  ],
+
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986",
@@ -23,13 +33,8 @@
 
   },
   "subject": {
-    "identifier":
-      {
-        "system": "urn:ietf:rfc:3986",
-        "value": "urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234"
-      }
-
-  },
+  "reference": "#p"
+	},
   "created": "2018-05-22T09:35:00+11:00",
   "indexed": "2018-05-22T09:35:00+11:00",
   "content": [
@@ -42,8 +47,8 @@
   ],
   "context": {
     "period": {
-      "start": "2018-15-23T08:00:00+11:00",
-      "end": "2018-21-23T08:01:00+11:00"
+      "start": "2018-05-23T08:00:00+11:00",
+      "end": "2018-05-23T08:01:00+11:00"
     }
   }
 }

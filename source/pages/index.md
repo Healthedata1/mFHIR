@@ -316,16 +316,17 @@ Includes: Opaque patient identifer, date Range, OMH data type
 **Request**
 
 ~~~
-GET /DocumentReference/?patient={identifier}
+GET /DocumentReference/?patient.identifier={identifier}
 
 Content-type: application/json+fhir
 Accept: application/json+fhir
 ...other headers...
 ~~~
 
-*Issues*
+**Issues**
 1.  Assumed identifiers as 'logical' (opaque Identifiers) and not 'literal' reference to Patient resource (see {{page.F}}references.html.
-    1. need to assign system  ( e.g UUID )
+    1. using a [contained] patient resource to hold the identifier to allow for searching by the identifier as 'chained' search.
+    1. need to assign system  ( e.g UUID, or https://omh.r24server/ids )
 
 <!--
 https://vonk.furore.com/DocumentReference?patient=1.3.6.1.4.1.21367.2005.3.7.1234
@@ -340,57 +341,90 @@ Content-Type: application/fhir+json; charset=utf-8
 ...other headers...
 
 {
-  "resourceType": "DocumentReference",
-  "id": "omh-stepcount-example",
-  "identifier": [
-    {
-      "system": "urn:ietf:rfc:3986",
-      "value": "urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234"
-    }
-  ],
-  "status": "current",
-  "type": {
-    "coding": [
-      {
-        "system": "http://loinc.org",
-        "code": "55423-8",
-        "display": "Step Count"
-      }
+    "resourceType": "Bundle",
+    "id": "d3334394-5e24-49d4-b8a2-d0fc004a69",
+    "meta": {
+        "lastUpdated": "2018-05-24T00:18:35Z"
+    },
+    "type": "searchset",
+    "total": 1,
+    "link": [
+        {
+            "relation": "self",
+            "url": "http://test.fhir.org/r3/DocumentReference?_format=application/fhir+json&search-id=901a685f-a483-4e92-8a6e-fb3e14cbfc&&patient.identifier=some%2Duser&_sort=_id"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "http://test.fhir.org/r3/DocumentReference/omh-stepcount-example",
+            "resource": {
+                "resourceType": "DocumentReference",
+                "id": "omh-stepcount-example",
+                "meta": {
+                    "versionId": "4",
+                    "lastUpdated": "2018-05-23T23:14:29Z"
+                },
+                "contained": [
+                    {
+                        "resourceType": "Patient",
+                        "id": "p",
+                        "identifier": [
+                            {
+                                "system": "https://omh.org/shimmer/patient_ids",
+                                "value": "some-user"
+                            }
+                        ]
+                    }
+                ],
+                "identifier": [
+                    {
+                        "system": "urn:ietf:rfc:3986",
+                        "value": "urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234"
+                    }
+                ],
+                "status": "current",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "55423-8",
+                            "display": "Step Count"
+                        }
+                    ]
+                },
+                "class": {
+                    "text": "OMH schema data"
+                },
+                "subject": {
+                    "reference": "#p"
+                },
+                "created": "2018-05-22T09:35:00+11:00",
+                "indexed": "2018-05-22T09:35:00+11:00",
+                "content": [
+                    {
+                        "attachment": {
+                            "contentType": "application/json",
+                            "url": "http://test.fhir.org/r3/Binary/omh-stepcount-example"
+                        }
+                    }
+                ],
+                "context": {
+                    "period": {
+                        "start": "2018-05-23T08:00:00+11:00",
+                        "end": "2018-05-23T08:01:00+11:00"
+                    }
+                }
+            },
+            "search": {
+                "mode": "match"
+            }
+        }
     ]
-  },
-  "class": {
-
-        "text": "OMH schema data"
-
-  },
-  "subject": {
-    "identifier":
-      {
-        "system": "urn:ietf:rfc:3986",
-        "value": "urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234"
-      }
-
-  },
-  "created": "2018-05-22T09:35:00+11:00",
-  "indexed": "2018-05-22T09:35:00+11:00",
-  "content": [
-    {
-      "attachment": {
-        "contentType": "application/json",
-        "url": "https://R24Server/Binary/omh-stepcount-example"
-      }
-    }
-  ],
-  "context": {
-    "period": {
-      "start": "2018-15-23T08:00:00+11:00",
-      "end": "2018-21-23T08:01:00+11:00"
-    }
-  }
 }
 ~~~
 
 **Issues**
+
 1. Need to assign classes and types codes to identify.
     1. need to assign system  ( e.g OMH )
 1. Need to decide how much context to repeat here vs in OMH Schema data
@@ -419,7 +453,7 @@ Accept and Application-type headers absent!
 ...Other headers...
 ~~~
 
-*Response*
+**Response**
 
 ~~~
 HTTP/1.1 200 OK
@@ -455,10 +489,10 @@ Content-Type: application/json
 }
 ~~~
 
-Issues:
+**Issues:**
 
 1. Fetching multiple files
-   1. not specified  - may want an operation to zip into folder?
+   1. not specified  - may want an operation to zip into folder see this [Zulip Chat](https://chat.fhir.org/#narrow/stream/4-implementers/topic/Requesting.20multiple.20Binary.20Resources)?
 2. ...
 
 ---
@@ -509,21 +543,23 @@ Includes: Opaque patient identifer, date range, OMH data type as code
 **Request**
 
 ~~~
-GET /Observation/?patient={identifier}&code=55423-8
+GET Observation?patient.identifier={identifier}&code=55423-8
 
 Content-type: application/json+fhir
 Accept: application/json+fhir
 ...other headers...
 ~~~
 
-*Issues*
+**Issues**
+
 1.  Assumed identifiers as 'logical' (opaque Identifiers) and not 'literal' reference to Patient resource (see {{page.F}}references.html.
-    1. need to assign system  ( e.g UUID )
+    1. using a [contained] patient resource to hold the identifier to allow for searching by the identifier as 'chained' search.
+    1. need to assign system  ( e.g UUID, or https://omh.r24server/ids )
 1. Using code to identify datapoint schema
 1. search by max and min and other parameters
 1. provenance?
 
-*Response*
+**Response**
 
 ~~~
 HTTP/1.1 200 OK
@@ -532,101 +568,111 @@ Content-Type: application/json
 ...Other Headers...
 
 {
-"resourceType": "Bundle",
-"id": "7c189ab0-8eeb-43a6-801e-6072bc17ba02",
-"meta": {
-    "versionId": "761a5faa-a7ae-4f31-9b8f-f3ffcfadfadd",
-    "lastUpdated": "2018-05-22T08:32:19.16+00:00"
-},
-"type": "searchset",
-"total": 1,
-"link": [
-    {
-        "relation": "self",
-        "url": "https://vonk.furore.com/Observation?code=55423-8"
-    }
-],
-"entry": [
-    {
-        "fullUrl": "https://vonk.furore.com/Observation/ae885da2-9544-43c0-a7c0-30de72c7e78c",
-        "resource": {
-            "resourceType": "Observation",
-            "id": "ae885da2-9544-43c0-a7c0-30de72c7e78c",
-            "meta": {
-                "versionId": "5b577c8a-1c48-4795-a3b0-9f25bbd089f7",
-                "lastUpdated": "2018-05-22T08:22:12.511+00:00"
-            },
-            "identifier": [
-                {
-                    "system": "https://omh.org/shimmer/ids",
-                    "value": "12341567"
-                }
-            ],
-            "status": "unknown",
-            "category": [
-                {
-                    "coding": [
-                        {
-                            "system": "http://hl7.org/fhir/observation-category",
-                            "code": "activity",
-                            "display": "Activity"
-                        }
-                    ]
-                }
-            ],
-            "code": {
-                "coding": [
+    "resourceType": "Bundle",
+    "id": "55f690f4-d5e5-4f26-8fa2-026be61019",
+    "meta": {
+        "lastUpdated": "2018-05-23T23:48:12Z"
+    },
+    "type": "searchset",
+    "total": 1,
+    "link": [
+        {
+            "relation": "self",
+            "url": "http://test.fhir.org/r3/Observation?_format=application/fhir+json&search-id=7db95351-c995-4cbc-b990-1760a91987&&patient.identifier=some%2Duser&_sort=_id"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "http://test.fhir.org/r3/Observation/stepcount-example",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "stepcount-example",
+                "meta": {
+                    "versionId": "5",
+                    "lastUpdated": "2018-05-23T21:56:09Z"
+                },
+                "contained": [
                     {
-                        "system": "http://loinc.org",
-                        "code": "55423-8",
-                        "display": "Number of steps in unspecified time Pedometer"
+                        "resourceType": "Patient",
+                        "id": "p",
+                        "identifier": [
+                            {
+                                "system": "https://omh.org/shimmer/patient_ids",
+                                "value": "some-user"
+                            }
+                        ]
                     }
                 ],
-                "text": "Step count"
-            },
-            "subject": {
-                "identifier": {
-                    "system": "https://omh.org/shimmer/patient_ids",
-                    "value": "some-user"
-                }
-            },
-            "effectivePeriod": {
-                "start": "2018-04-17T00:00:00Z",
-                "end": "2018-04-24T00:00:00Z"
-            },
-            "issued": "2018-04-24T17:13:50+00:00",
-            "device": {
-                "display": "Jawbone UP API, modality =sensed, sourceCreationDateTime = 2018-04-17T17:13:50Z"
-            },
-            "component": [
-                {
-                    "code": {
+                "identifier": [
+                    {
+                        "system": "https://omh.org/shimmer/ids",
+                        "value": "12341567"
+                    }
+                ],
+                "status": "unknown",
+                "category": [
+                    {
                         "coding": [
                             {
-                                "system": "http://hl7.org/fhir/observation-statistics",
-                                "code": "maximum",
-                                "display": "Maximum"
+                                "system": "http://snomed.info/sct",
+                                "code": "68130003",
+                                "display": "Physical activity (observable entity)"
                             }
-                        ],
-                        "text": "Maximum"
-                    },
-                    "valueQuantity": {
-                        "value": 7939,
-                        "unit": "steps/day",
-                        "system": "http://unitsofmeasure.org",
-                        "code": "{steps}/d"
+                        ]
                     }
-                }
-            ]
-        },
-        "search": {
-            "mode": "match"
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "55423-8",
+                            "display": "Number of steps in unspecified time Pedometer"
+                        }
+                    ],
+                    "text": "Step count"
+                },
+                "subject": {
+                    "reference": "#p"
+                },
+                "effectivePeriod": {
+                    "start": "2018-04-17T00:00:00Z",
+                    "end": "2018-04-24T00:00:00Z"
+                },
+                "issued": "2018-04-24T17:13:50Z",
+                "device": {
+                    "display": "Jawbone UP API, modality =sensed, sourceCreationDateTime = 2018-04-17T17:13:50Z"
+                },
+                "component": [
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://hl7.org/fhir/observation-statistics",
+                                    "code": "maximum",
+                                    "display": "Maximum"
+                                }
+                            ],
+                            "text": "Maximum"
+                        },
+                        "valueQuantity": {
+                            "value": 7939,
+                            "unit": "steps/day",
+                            "system": "http://unitsofmeasure.org",
+                            "code": "{steps}/d"
+                        }
+                    }
+                ]
+            },
+            "search": {
+                "mode": "match"
+            }
         }
-    }
-]
+    ]
 }
 ~~~
 
+
+To view this API in action using the Postman Collection Runner import this [Postman Collection].
 
 <br />
 

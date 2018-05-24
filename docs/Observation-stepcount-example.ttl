@@ -1,0 +1,89 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://www.fhir.org/guides/mfhir/Observation/stepcount-example> a fhir:Observation;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "stepcount-example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: stepcount-example</p><p><b>contained</b>: </p><p><b>identifier</b>: 12341567</p><p><b>status</b>: unknown</p><p><b>category</b>: Physical activity (observable entity) <span style=\"background: LightGoldenRodYellow\">(Details : {SNOMED CT code '68130003' = '68130003', given as 'Physical activity (observable entity)'})</span></p><p><b>code</b>: Step count <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '55423-8' = '55423-8', given as 'Number of steps in unspecified time Pedometer'})</span></p><p><b>subject</b>: unknown resource contained</p><p><b>effective</b>: Apr 16, 2018 5:00:00 PM --&gt; Apr 23, 2018 5:00:00 PM</p><p><b>issued</b>: Apr 24, 2018 5:13:50 PM</p><p><b>device</b>: Jawbone UP API, modality =sensed, sourceCreationDateTime = 2018-04-17T17:13:50Z</p><h3>Components</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Maximum <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/observation-statistics code 'maximum' = 'Maximum', given as 'Maximum'})</span></td><td>7939 steps/day<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code {steps}/d = '{steps}/d')</span></td></tr></table></div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:Patient;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "p" ];
+     fhir:Patient.identifier [
+       fhir:index 0;
+       fhir:Identifier.system [ fhir:value "https://omh.org/shimmer/patient_ids" ];
+       fhir:Identifier.value [ fhir:value "some-user" ]
+     ]
+  ];
+  fhir:Observation.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "https://omh.org/shimmer/ids" ];
+     fhir:Identifier.value [ fhir:value "12341567" ]
+  ];
+  fhir:Observation.status [ fhir:value "unknown"];
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:68130003;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "68130003" ];
+       fhir:Coding.display [ fhir:value "Physical activity (observable entity)" ]
+     ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:55423-8;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "55423-8" ];
+       fhir:Coding.display [ fhir:value "Number of steps in unspecified time Pedometer" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Step count" ]
+  ];
+  fhir:Observation.subject [
+     fhir:Reference.reference [ fhir:value "#p" ]
+  ];
+  fhir:Observation.effectivePeriod [
+     fhir:Period.start [ fhir:value "2018-04-17T00:00:00Z"^^xsd:dateTime ];
+     fhir:Period.end [ fhir:value "2018-04-24T00:00:00Z"^^xsd:dateTime ]
+  ];
+  fhir:Observation.issued [ fhir:value "2018-04-24T17:13:50Z"^^xsd:dateTime];
+  fhir:Observation.device [
+     fhir:Reference.display [ fhir:value "Jawbone UP API, modality =sensed, sourceCreationDateTime = 2018-04-17T17:13:50Z" ]
+  ];
+  fhir:Observation.component [
+     fhir:index 0;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/observation-statistics" ];
+         fhir:Coding.code [ fhir:value "maximum" ];
+         fhir:Coding.display [ fhir:value "Maximum" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Maximum" ]
+     ];
+     fhir:Observation.component.valueQuantity [
+       fhir:Quantity.value [ fhir:value "7939"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "steps/day" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "{steps}/d" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://www.fhir.org/guides/mfhir/Observation/stepcount-example.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

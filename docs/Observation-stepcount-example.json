@@ -1,0 +1,79 @@
+{
+  "resourceType": "Observation",
+  "id": "stepcount-example",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: stepcount-example</p><p><b>contained</b>: </p><p><b>identifier</b>: 12341567</p><p><b>status</b>: unknown</p><p><b>category</b>: Physical activity (observable entity) <span style=\"background: LightGoldenRodYellow\">(Details : {SNOMED CT code '68130003' = '68130003', given as 'Physical activity (observable entity)'})</span></p><p><b>code</b>: Step count <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '55423-8' = '55423-8', given as 'Number of steps in unspecified time Pedometer'})</span></p><p><b>subject</b>: unknown resource contained</p><p><b>effective</b>: Apr 16, 2018 5:00:00 PM --&gt; Apr 23, 2018 5:00:00 PM</p><p><b>issued</b>: Apr 24, 2018 5:13:50 PM</p><p><b>device</b>: Jawbone UP API, modality =sensed, sourceCreationDateTime = 2018-04-17T17:13:50Z</p><h3>Components</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Maximum <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/observation-statistics code 'maximum' = 'Maximum', given as 'Maximum'})</span></td><td>7939 steps/day<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code {steps}/d = '{steps}/d')</span></td></tr></table></div>"
+  },
+  "contained": [
+    {
+      "resourceType": "Patient",
+      "id": "p",
+      "identifier": [
+        {
+          "system": "https://omh.org/shimmer/patient_ids",
+          "value": "some-user"
+        }
+      ]
+    }
+  ],
+  "identifier": [
+    {
+      "system": "https://omh.org/shimmer/ids",
+      "value": "12341567"
+    }
+  ],
+  "status": "unknown",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "68130003",
+          "display": "Physical activity (observable entity)"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "55423-8",
+        "display": "Number of steps in unspecified time Pedometer"
+      }
+    ],
+    "text": "Step count"
+  },
+  "subject": {
+    "reference": "#p"
+  },
+  "effectivePeriod": {
+    "start": "2018-04-17T00:00:00Z",
+    "end": "2018-04-24T00:00:00Z"
+  },
+  "issued": "2018-04-24T17:13:50Z",
+  "device": {
+    "display": "Jawbone UP API, modality =sensed, sourceCreationDateTime = 2018-04-17T17:13:50Z"
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/observation-statistics",
+            "code": "maximum",
+            "display": "Maximum"
+          }
+        ],
+        "text": "Maximum"
+      },
+      "valueQuantity": {
+        "value": 7939,
+        "unit": "steps/day",
+        "system": "http://unitsofmeasure.org",
+        "code": "{steps}/d"
+      }
+    }
+  ]
+}

@@ -270,8 +270,20 @@ can only resize using html  or css ;-(
   "<a href="http://hl7.org/fhir/STU3/documentreference.html#DocumentReference.id">id</a>" : "omh-stepcount-example",
   "<a href="http://hl7.org/fhir/STU3/documentreference.html#DocumentReference.text">text</a>" : {
     "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: omh-stepcount-example&lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: current&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: Step Count &lt;span style=&quot;background: LightGoldenRodYellow&quot;&gt;(Details : {LOINC code '55423-8' = '55423-8', given as 'Step Count'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;class&lt;/b&gt;: OMH schema data &lt;span style=&quot;background: LightGoldenRodYellow&quot;&gt;(Details )&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;created&lt;/b&gt;: May 22, 2018 9:35:00 AM&lt;/p&gt;&lt;p&gt;&lt;b&gt;indexed&lt;/b&gt;: May 22, 2018 9:35:00 AM&lt;/p&gt;&lt;h3&gt;Contents&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Attachment&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h3&gt;Contexts&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Period&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b style=&quot;color: maroon&quot;&gt;Exception generating Narrative: Invalid date/time format: &amp;quot;2018-15-23T08:00:00+11:00&amp;quot;&lt;/b&gt;&lt;/p&gt;&lt;/div&gt;"
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: omh-stepcount-example&lt;/p&gt;&lt;p&gt;&lt;b&gt;contained&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: current&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: Step Count &lt;span style=&quot;background: LightGoldenRodYellow&quot;&gt;(Details : {LOINC code '55423-8' = '55423-8', given as 'Step Count'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;class&lt;/b&gt;: OMH schema data &lt;span style=&quot;background: LightGoldenRodYellow&quot;&gt;(Details )&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: unknown resource contained&lt;/p&gt;&lt;p&gt;&lt;b&gt;created&lt;/b&gt;: May 22, 2018 9:35:00 AM&lt;/p&gt;&lt;p&gt;&lt;b&gt;indexed&lt;/b&gt;: May 22, 2018 9:35:00 AM&lt;/p&gt;&lt;h3&gt;Contents&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Attachment&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h3&gt;Contexts&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Period&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;May 22, 2018 2:00:00 PM --&amp;gt; May 22, 2018 2:01:00 PM&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
   },
+  "<a href="http://hl7.org/fhir/STU3/patient.html#Patient">contained</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/STU3/patient.html">resourceType</a>" : "Patient",
+      "<a href="http://hl7.org/fhir/STU3/patient.html#Patient.id">id</a>" : "p",
+      "<a href="http://hl7.org/fhir/STU3/patient.html#Patient.identifier">identifier</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a>" : "https://omh.org/shimmer/patient_ids",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "some-user"
+        }
+      ]
+    }
+  ],
   "<a href="http://hl7.org/fhir/STU3/documentreference.html#DocumentReference.identifier">identifier</a>" : [
     {
       "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:ietf:rfc:3986",
@@ -292,10 +304,7 @@ can only resize using html  or css ;-(
     "<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "OMH schema data"
   },
   "<a href="http://hl7.org/fhir/STU3/documentreference.html#DocumentReference.subject">subject</a>" : {
-    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.identifier">identifier</a>" : {
-      "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:ietf:rfc:3986",
-      "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234"
-    }
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "#p"
   },
   "<a href="http://hl7.org/fhir/STU3/documentreference.html#DocumentReference.created">created</a>" : "2018-05-22T09:35:00+11:00",
   "<a href="http://hl7.org/fhir/STU3/documentreference.html#DocumentReference.indexed">indexed</a>" : "2018-05-22T09:35:00+11:00",
@@ -309,8 +318,8 @@ can only resize using html  or css ;-(
   ],
   "<a href="http://hl7.org/fhir/STU3/documentreference.html#DocumentReference.context">context</a>" : {
     "<a href="http://hl7.org/fhir/STU3/documentreference.html#DocumentReference.context.period">period</a>" : {
-      "<a href="http://hl7.org/fhir/STU3/datatypes.html#Period#Period.start">start</a>" : "2018-15-23T08:00:00+11:00",
-      "<a href="http://hl7.org/fhir/STU3/datatypes.html#Period#Period.end">end</a>" : "2018-21-23T08:01:00+11:00"
+      "<a href="http://hl7.org/fhir/STU3/datatypes.html#Period#Period.start">start</a>" : "2018-05-23T08:00:00+11:00",
+      "<a href="http://hl7.org/fhir/STU3/datatypes.html#Period#Period.end">end</a>" : "2018-05-23T08:01:00+11:00"
     }
   }
 }</pre>
@@ -363,7 +372,7 @@ Formats: <a href="DocumentReference-omh-stepcount-example.html">Narrative</a>, <
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            mFHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, May 22, 2018 01:43-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+            mFHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, May 23, 2018 17:21-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>
         </p>
    </div>  <!-- /inner-wrapper -->

@@ -14,6 +14,15 @@
     <name value="base"/>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Observation-stepcount-example.html"/>
+      </extension>
+      <example value="true"/>
+      <sourceReference>
+        <reference value="Observation/stepcount-example"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="DocumentReference-omh-stepcount-example.html"/>
       </extension>
       <example value="true"/>

@@ -23,3 +23,5 @@
  [DocumentReference]: ({{site.data.fhir.path}}/documentreference.html) "FHIR DocumentReference Resource documentation"
  [Binary]: ({{site.data.fhir.path}}/binary.html) "FHIR Binary Resource documentation"
 [FHIR API for Binary data]: ({{site.data.fhir.path}}/binary.html#rest) "FServing Binary Resources using the RESTful API"
+[Postman Collection]: :https://www.getpostman.com/collections/0a54cd0197a5f2fc98d4
+[contained]: ({{site.data.fhir.path}}/references#contained.html) "FHIR contained resource documentation"
