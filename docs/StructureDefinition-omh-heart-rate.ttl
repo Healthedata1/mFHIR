@@ -60,7 +60,7 @@
        ], [
          fhir:index 1;
          fhir:ElementDefinition.mapping.identity [ fhir:value "fhir-observation" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Observation resource with Observation.code  = LOINC 55423-8 (Heart rate)" ]
+         fhir:ElementDefinition.mapping.map [ fhir:value "Observation resource with Observation.code  = LOINC 8867-4 (Heart rate)" ]
        ]
      ], [
        fhir:index 1;
@@ -299,7 +299,7 @@
        ], [
          fhir:index 1;
          fhir:ElementDefinition.mapping.identity [ fhir:value "fhir-observation" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "Observation resource with Observation.code  = LOINC 55423-8 (Heart rate)" ]
+         fhir:ElementDefinition.mapping.map [ fhir:value "Observation resource with Observation.code  = LOINC 8867-4 (Heart rate)" ]
        ]
      ], [
        fhir:index 1;

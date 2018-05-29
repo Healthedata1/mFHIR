@@ -212,11 +212,11 @@ This is the   Continuous Integration Build  of the mFHIR Implementation Guide,  
     </ul>
   </li>
   <li><a href="#base-use-case" id="markdown-toc-base-use-case">Base Use case</a>    <ul>
-      <li><a name="0b18f5bf-d091-4006-9564-d189d2f476b6">​</a><a href="#description" id="markdown-toc-description">Description</a></li>
-      <li><a name="fa640fad-7e13-4075-9123-dd268ec4135b">​</a><a href="#actors" id="markdown-toc-actors">Actors</a></li>
-      <li><a name="e4143d2b-aa89-4e60-bafb-b1d1d8a1abab">​</a><a href="#assumptions-pre-conditions-and-constraints" id="markdown-toc-assumptions-pre-conditions-and-constraints">Assumptions, Pre-Conditions and Constraints</a></li>
-      <li><a name="62b10e08-c02a-49ea-b0b8-05653b97a5dd">​</a><a href="#basic-flow" id="markdown-toc-basic-flow">Basic Flow</a></li>
-      <li><a name="d2b6b5df-2e2e-4a42-861a-5b294a51af4f">​</a><a href="#smart-app-workflow" id="markdown-toc-smart-app-workflow">Smart app Workflow</a></li>
+      <li><a name="a21a12cf-89b6-4105-aa75-7c09f593bc2e">​</a><a href="#description" id="markdown-toc-description">Description</a></li>
+      <li><a name="a7b2ffc9-3ddf-4615-b4d6-f622ae458cde">​</a><a href="#actors" id="markdown-toc-actors">Actors</a></li>
+      <li><a name="e4a691e5-688d-4a7e-bf16-bb93ea52a585">​</a><a href="#assumptions-pre-conditions-and-constraints" id="markdown-toc-assumptions-pre-conditions-and-constraints">Assumptions, Pre-Conditions and Constraints</a></li>
+      <li><a name="93495f77-dd80-4921-b9fe-3de9f08d5fa8">​</a><a href="#basic-flow" id="markdown-toc-basic-flow">Basic Flow</a></li>
+      <li><a name="6f8f764d-7cef-4357-bdc6-1e14b9e45c97">​</a><a href="#smart-app-workflow" id="markdown-toc-smart-app-workflow">Smart app Workflow</a></li>
     </ul>
   </li>
 </ul>
@@ -505,7 +505,7 @@ mDATA receives the results of the GET command from the R24 server and displays i
   <tbody>
     <tr>
       <td>1.</td>
-      <td><a name="6481ea93-48e2-404d-b502-b460c69d1023">​</a>Smart app Launch from Provider EHR. See the <a href="(http://docs.smarthealthit.org/authorization/)" title="SMART App Authorization Guide">Smart on FHIR Launch</a> Specification</td>
+      <td><a name="1298fb19-efc7-4a7e-9afb-2a31c0255852">​</a>Smart app Launch from Provider EHR. See the <a href="(http://docs.smarthealthit.org/authorization/)" title="SMART App Authorization Guide">Smart on FHIR Launch</a> Specification</td>
     </tr>
     <tr>
       <td>2.</td>
@@ -513,11 +513,11 @@ mDATA receives the results of the GET command from the R24 server and displays i
     </tr>
     <tr>
       <td>3.</td>
-      <td><a name="f7ae3132-80d6-431b-8687-92262063e59a">​</a>Following successful launch, the Smart app request OMH step count data for patient Z as a standard <a href="(http://hl7.org/fhir/STU3/search.html)" title="FHIR search API documentation">FHIR search API</a> on <em><a name="4655842e-2102-4cd1-94b5-136249bc32e1">​</a><a href="(http://hl7.org/fhir/STU3/documentreference.html)" title="FHIR DocumentReference Resource documentation">DocumentReference</a></em>. It provides an opaque identifier as a search parameter that identifies patient Z and optionally a time range of interest.</td>
+      <td><a name="9554f996-e62a-49b5-a85e-8cf8ae5a4d49">​</a>Following successful launch, the Smart app request OMH step count data for patient Z as a standard <a href="(http://hl7.org/fhir/STU3/search.html)" title="FHIR search API documentation">FHIR search API</a> on <em><a name="38fd727a-9e89-4dbd-951c-6e773604aaee">​</a><a href="(http://hl7.org/fhir/STU3/documentreference.html)" title="FHIR DocumentReference Resource documentation">DocumentReference</a></em>. It provides an opaque identifier as a search parameter that identifies patient Z and optionally a time range of interest.</td>
     </tr>
     <tr>
       <td>4.</td>
-      <td><a name="932ca538-fd3f-4aee-ad57-4de7d520bbe0">​</a>The R24 server receives the request and either maps the opaque id to its user id list and creates the DocumentReference resource on the fly from a native format or searches its FHIR based datastore for DocumentReference matches.  Note that the DocumentReference is a ‘wrapper’ and contains context and a link to a <a href="(http://hl7.org/fhir/STU3/binary.html)" title="FHIR Binary Resource documentation">Binary</a> resource that represents the actual OMH Step Count data.</td>
+      <td><a name="c88ff886-3a39-47be-b876-3ba277b02886">​</a>The R24 server receives the request and either maps the opaque id to its user id list and creates the DocumentReference resource on the fly from a native format or searches its FHIR based datastore for DocumentReference matches.  Note that the DocumentReference is a ‘wrapper’ and contains context and a link to a <a href="(http://hl7.org/fhir/STU3/binary.html)" title="FHIR Binary Resource documentation">Binary</a> resource that represents the actual OMH Step Count data.</td>
     </tr>
     <tr>
       <td>5.</td>
@@ -525,7 +525,7 @@ mDATA receives the results of the GET command from the R24 server and displays i
     </tr>
     <tr>
       <td>6.</td>
-      <td><a name="07cf66b6-db65-4338-a46c-65dbdb2d8bca">​</a>The smart app receives the DocumentReference resource(s) and processes them one by one extracting the Binary endpoint data. then makes a second request to fetch the Binary resources in the native OMH (json) format using the standard <a href="(http://hl7.org/fhir/STU3/binary.html#rest)" title="FServing Binary Resources using the RESTful API">FHIR API for Binary data</a> (Note that the data may also be requested as a base64 encoded string as well).</td>
+      <td><a name="e5d02055-7669-4281-8f2b-4f4a0b5a0095">​</a>The smart app receives the DocumentReference resource(s) and processes them one by one extracting the Binary endpoint data. then makes a second request to fetch the Binary resources in the native OMH (json) format using the standard <a href="(http://hl7.org/fhir/STU3/binary.html#rest)" title="FServing Binary Resources using the RESTful API">FHIR API for Binary data</a> (Note that the data may also be requested as a base64 encoded string as well).</td>
     </tr>
     <tr>
       <td>8.</td>
@@ -549,7 +549,7 @@ mDATA receives the results of the GET command from the R24 server and displays i
 <table>
   <tbody>
     <tr>
-      <td><a name="c3fc6180-9acf-4fc8-b3f4-4cf697ec6fbe">​</a>See the <a href="(http://docs.smarthealthit.org/authorization/)" title="SMART App Authorization Guide">Smart on FHIR Launch</a> Specification</td>
+      <td><a name="79f12656-e070-427d-9b69-78c5ca3725db">​</a>See the <a href="(http://docs.smarthealthit.org/authorization/)" title="SMART App Authorization Guide">Smart on FHIR Launch</a> Specification</td>
       <td>for examples</td>
     </tr>
   </tbody>
@@ -557,7 +557,7 @@ mDATA receives the results of the GET command from the R24 server and displays i
 
 <h6 id="fetch-fhir-documentreference-resources-containing-omh-step-count-data--steps-3-6" class="no_toc">Fetch FHIR DocumentReference resources containing OMH step count data.  (Steps 3-6)</h6>
 
-<p>Includes: Opaque patient identifer, date Range, OMH data type</p>
+<p>Includes: Opaque patient identifier, date Range, OMH datapoint common name,  OMH datapoint schema standard codes</p>
 
 <table class="grid">
   <thead>
@@ -592,7 +592,7 @@ Accept: application/json+fhir
 </code></pre>
 </div>
 
-<p><a name="7f6fbb2e-6f4d-4cd2-820a-31c240c01ccd">​</a><strong>Issues</strong>
+<p><a name="b06a9fd8-0200-4f88-8261-66e5ab50c278">​</a><strong>Issues</strong>
 1.  Assumed identifiers as ‘logical’ (opaque Identifiers) and not ‘literal’ reference to Patient resource (see http://hl7.org/fhir/STU3/references.html.
     1. using a <a href="(http://hl7.org/fhir/STU3/references#contained.html)" title="FHIR contained resource documentation">contained</a> patient resource to hold the identifier to allow for searching by the identifier as ‘chained’ search.
     1. need to assign system  ( e.g UUID, or https://omh.r24server/ids )</p>
@@ -727,7 +727,7 @@ Content-Type: application/fhir+json; charset=utf-8
     </tr>
     <tr>
       <td>FHIR STU3 REST API</td>
-      <td><a name="fa28d810-d975-4268-b5e5-0366d1424f31">​</a><a href="http://hl7.org/fhir/STU3/html.html">http://hl7.org/fhir/STU3/html.html</a></td>
+      <td><a name="487d2131-3a51-4b86-a0a3-86623c4df0f0">​</a><a href="http://hl7.org/fhir/STU3/html.html">http://hl7.org/fhir/STU3/html.html</a></td>
     </tr>
   </tbody>
 </table>
@@ -851,7 +851,7 @@ Content-Type: application/json
 <table>
   <tbody>
     <tr>
-      <td><a name="23d00b4d-ba05-45ec-a01c-9b02f17c6a37">​</a>See the <a href="(http://docs.smarthealthit.org/authorization/)" title="SMART App Authorization Guide">Smart on FHIR Launch</a> Specification</td>
+      <td><a name="f763b3d9-11e0-4a8f-8b8d-49f16ad7d7b8">​</a>See the <a href="(http://docs.smarthealthit.org/authorization/)" title="SMART App Authorization Guide">Smart on FHIR Launch</a> Specification</td>
       <td>for examples</td>
     </tr>
   </tbody>
@@ -899,7 +899,7 @@ Accept: application/json+fhir
 <ol>
   <li>Assumed identifiers as ‘logical’ (opaque Identifiers) and not ‘literal’ reference to Patient resource (see http://hl7.org/fhir/STU3/references.html.
     <ol>
-      <li><a name="1d4925bb-ce1b-4b64-accb-f81100f4d522">​</a>using a <a href="(http://hl7.org/fhir/STU3/references#contained.html)" title="FHIR contained resource documentation">contained</a> patient resource to hold the identifier to allow for searching by the identifier as ‘chained’ search.</li>
+      <li><a name="da4b3341-5bf7-4dc4-a607-e635058e0564">​</a>using a <a href="(http://hl7.org/fhir/STU3/references#contained.html)" title="FHIR contained resource documentation">contained</a> patient resource to hold the identifier to allow for searching by the identifier as ‘chained’ search.</li>
       <li>need to assign system  ( e.g UUID, or https://omh.r24server/ids )</li>
     </ol>
   </li>
@@ -1020,7 +1020,7 @@ Content-Type: application/json
 </code></pre>
 </div>
 
-<p><a name="4e592614-564c-4df3-9390-f4b489dfbc7c">​</a>To view this API in action using the Postman Collection Runner import this <a href=":https://www.getpostman.com/collections/0a54cd0197a5f2fc98d4">Postman Collection</a>.</p>
+<p><a name="b5a6bf94-c4f6-4435-8fa3-510ca349bd70">​</a>To view this API in action using the Postman Collection Runner import this <a href=":https://www.getpostman.com/collections/0a54cd0197a5f2fc98d4">Postman Collection</a>.</p>
 
 <p><br/></p>
 
@@ -1060,7 +1060,7 @@ Content-Type: application/json
   <div class="container">    <!-- container -->
    <div class="inner-wrapper">
     <p>
-            mFHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, May 23, 2018 17:21-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
+            mFHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, May 28, 2018 17:43-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
         
         </p>
    </div>    <!-- /inner-wrapper -->

@@ -8,7 +8,7 @@ active: profiles
 
 The following Profiles have been defined for this implementation guide.
 
-{ % include list-simple-profiles.xhtml % }
+{% include list-simple-profiles.xhtml %}
 
 #### Logical Models
 

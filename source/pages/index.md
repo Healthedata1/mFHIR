@@ -304,7 +304,7 @@ See the [Smart on FHIR Launch] Specification| for examples
 {:.no_toc}
 
 
-Includes: Opaque patient identifer, date Range, OMH data type
+Includes: Opaque patient identifier, date Range, OMH datapoint common name,  OMH datapoint schema standard codes
 
 |Details|URL|
 |---|---|

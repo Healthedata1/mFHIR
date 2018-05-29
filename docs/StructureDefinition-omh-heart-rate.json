@@ -56,7 +56,7 @@
           },
           {
             "identity": "fhir-observation",
-            "map": "Observation resource with Observation.code  = LOINC 55423-8 (Heart rate)"
+            "map": "Observation resource with Observation.code  = LOINC 8867-4 (Heart rate)"
           }
         ]
       },
@@ -307,7 +307,7 @@
           },
           {
             "identity": "fhir-observation",
-            "map": "Observation resource with Observation.code  = LOINC 55423-8 (Heart rate)"
+            "map": "Observation resource with Observation.code  = LOINC 8867-4 (Heart rate)"
           }
         ]
       },

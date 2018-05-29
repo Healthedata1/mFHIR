@@ -55,6 +55,18 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "ValueSet-dp-type.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "ValueSet/dp-type"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "StructureDefinition-omh-step-count.html"
             }
           ],
@@ -847,6 +859,30 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-omh-dr.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/omh-dr"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-contained-p.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/contained-p"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "CapabilityStatement-server.html"
             }
           ],
@@ -865,6 +901,42 @@
           "example": false,
           "sourceReference": {
             "reference": "CapabilityStatement/client"
+          }
+        }
+      ]
+    },
+    {
+      "id": "contained-p-spreadsheet.xml",
+      "name": "contained-p",
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-contained-p.html"
+            }
+          ],
+          "name": "OMH Contained Patient Profile",
+          "sourceReference": {
+            "reference": "StructureDefinition/contained-p"
+          }
+        }
+      ]
+    },
+    {
+      "id": "dr-profile-spreadsheet.xml",
+      "name": "omh-dr",
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-omh-dr.html"
+            }
+          ],
+          "name": "OMH DocumentReference Profile",
+          "sourceReference": {
+            "reference": "StructureDefinition/omh-dr"
           }
         }
       ]

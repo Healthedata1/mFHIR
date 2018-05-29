@@ -23,7 +23,7 @@ jurisdiction,
 sct-edition,
 no-inactive-codes,FALSE
 broken-links,warning
-gen-examples,TRUE
+gen-examples,FALSE
 do-transforms,FALSE
 canonicalBase,http://www.fhir.org/guides/mfhir
 dependencyList.name,

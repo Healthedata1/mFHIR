@@ -41,6 +41,15 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-dp-type.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/dp-type"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-omh-step-count.html"/>
       </extension>
       <example value="false"/>
@@ -635,6 +644,24 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-omh-dr.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/omh-dr"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-contained-p.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/contained-p"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="CapabilityStatement-server.html"/>
       </extension>
       <example value="false"/>
@@ -649,6 +676,30 @@
       <example value="false"/>
       <sourceReference>
         <reference value="CapabilityStatement/client"/>
+      </sourceReference>
+    </resource>
+  </package>
+  <package id="contained-p-spreadsheet.xml">
+    <name value="contained-p"/>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-contained-p.html"/>
+      </extension>
+      <name value="OMH Contained Patient Profile"/>
+      <sourceReference>
+        <reference value="StructureDefinition/contained-p"/>
+      </sourceReference>
+    </resource>
+  </package>
+  <package id="dr-profile-spreadsheet.xml">
+    <name value="omh-dr"/>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-omh-dr.html"/>
+      </extension>
+      <name value="OMH DocumentReference Profile"/>
+      <sourceReference>
+        <reference value="StructureDefinition/omh-dr"/>
       </sourceReference>
     </resource>
   </package>

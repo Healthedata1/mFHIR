@@ -43,7 +43,7 @@
       </mapping>
       <mapping>
         <identity value="fhir-observation"/>
-        <map value="Observation resource with Observation.code  = LOINC 55423-8 (Heart rate)"/>
+        <map value="Observation resource with Observation.code  = LOINC 8867-4 (Heart rate)"/>
       </mapping>
     </element>
     <element id="OmhHeartRate.omhHeader">

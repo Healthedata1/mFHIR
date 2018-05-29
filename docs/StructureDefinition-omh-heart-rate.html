@@ -255,7 +255,7 @@ can only resize using html  or css ;-( -->
 Formats: <a href="StructureDefinition-omh-heart-rate.html">Narrative</a>, <a href="StructureDefinition-omh-heart-rate.xml.html">XML</a>, <a href="StructureDefinition-omh-heart-rate.json.html">JSON</a>, <a href="StructureDefinition-omh-heart-rate.ttl.html">Turtle</a>
 </p> -->
 
-<h2><span class="sectioncount">SD.2</span> StructureDefinition-omh-heart-rate</h2>
+<h2><span class="sectioncount">SD.4</span> StructureDefinition-omh-heart-rate</h2>
 
 
   <!-- introductiontext here -->
@@ -320,7 +320,7 @@ Formats: <a href="StructureDefinition-omh-heart-rate.html">Narrative</a>, <a hre
 
 
 <a name="profile"> </a>
-<h3><span class="sectioncount">SD.2.1 </span>
+<h3><span class="sectioncount">SD.4.1 </span>
 Formal Views of Profile Content</h3>
 
 <p>
@@ -411,7 +411,7 @@ Summary
     <div id="all-json">
      <p><b>JSON Template</b></p>
      <div id="all-json-inner">
-        <pre class="spec"><a name="fccf53d9-a39d-41eb-9b0a-43f1d65abcac">​</a>
+        <pre class="spec"><a name="be6e4b7a-8b21-43f6-a2a0-f8d504d24e23">​</a>
           // <span style="color: navy; opacity: 0.8"></span>
  {
     "<a href="StructureDefinition-omh-heart-rate.html#OmhHeartRate.id" title="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces" class="dict"><span style="text-decoration: underline">id</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">xml:id (or equivalent in JSON)</span>
@@ -438,15 +438,16 @@ Summary
 <br/>
 
 <a name="downloads"> </a>
-<p><a name="6a6eaa0c-373a-49c8-b8ca-b8b082e3da40">​</a>Downloads: StructureDefinition: (<a download="null" href="StructureDefinition-omh-heart-rate.xml">XML</a>, <a download="null" href="StructureDefinition-omh-heart-rate.json">JSON</a>), Schema:  <a download="null" href="omh-heart-rate.sch">XML Schematron</a></p>
+<p><a name="f1b7a7bf-92ac-45a2-b7d6-3da7e3b53341">​</a>Downloads: StructureDefinition: (<a download="null" href="StructureDefinition-omh-heart-rate.xml">XML</a>, <a download="null" href="StructureDefinition-omh-heart-rate.json">JSON</a>), Schema:  <a download="null" href="omh-heart-rate.sch">XML Schematron</a></p>
 
 <p>&nbsp;</p>
 
 
 
 
+
   <a name="mapping-tables"> </a>
-  <h3><span class="sectioncount">SD.2.2  </span>Mappings</h3>
+  <h3><span class="sectioncount">SD.4.2  </span>Mappings</h3>
   <p>Below are mappings for this model. These mappings are informative and are provided to help implementers of this specification understand the content and use it correctly.</p>
 
   <div markdown="0">
@@ -464,7 +465,7 @@ Summary
 </table>
 <a name="fhir-observation"> </a><b>Mappings for FHIR Observation Profile (http://hl7.org/fhir/STU3/observation.html)</b><table class="grid">
  <tr><td colspan="3"><b>OMHHeartRate</b></td></tr>
- <tr><td>OmhHeartRate</td><td>Observation resource with Observation.code  = LOINC 55423-8 (Heart rate)</td> </tr>
+ <tr><td>OmhHeartRate</td><td>Observation resource with Observation.code  = LOINC 8867-4 (Heart rate)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;omhHeader</td><td>see OmhHeader Mapping tables</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;valueUnit</td><td>Rule1: IF no descriptiveStatistic (descriptiveStatistic.empty()) Observation.valueQuantity.value ELSE Observation.component.valueQuantity.value</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;effectiveTimeFrame</td><td>Observation.effective</td> </tr>
@@ -541,7 +542,7 @@ $( '#tabs' ).tabs({
   <div class="container">    <!-- container -->
    <div class="inner-wrapper">
     <p>
-            mFHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, May 23, 2018 17:21-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
+            mFHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, May 28, 2018 17:43-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
         
         </p>
    </div>    <!-- /inner-wrapper -->
