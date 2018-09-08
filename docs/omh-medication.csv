@@ -9,9 +9,9 @@ user content","",0,*,"","","","Extension {[]} {[]}
 "OmhMedication.omhHeader","","","",1,1,"","","","BackboneElement {[CanonicalType[http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header]]} {[]}
 ","","The header property represents the header of a data transaction","","","","","","","","","",,,,,"",,,,"",0,null,"","","see OmhHeader Mapping tables","see OmhHeader Mapping tables"
 "OmhMedication.genericName","","","",0,1,"","","","string {[]} {[]}
-","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.generic_name","Observation.todo"
+","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.generic_name","Observation.todo"
 "OmhMedication.tradeName","","","",0,1,"","","","string {[]} {[]}
-","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.trade_name","Observation.todo"
-"OmhMedication.strength","","","",1,1,"","","","","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.strength","Observation.todo"
+","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.trade_name","Observation.todo"
+"OmhMedication.strength","","","",1,1,"","","","","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.strength","Observation.todo"
 "OmhMedication.rxnormCode","","","",0,1,"","","","decimal {[]} {[]}
-","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.rxnorm_code","Observation.todo"
+","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.rxnorm_code","Observation.todo"

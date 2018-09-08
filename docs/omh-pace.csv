@@ -9,8 +9,8 @@ user content","",0,*,"","","","Extension {[]} {[]}
 "OmhPace.omhHeader","","","",1,1,"","","","BackboneElement {[CanonicalType[http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header]]} {[]}
 ","","The header property represents the header of a data transaction","","","","","","","","","",,,,,"",,,,"",0,null,"","","see OmhHeader Mapping tables","see OmhHeader Mapping tables"
 "OmhPace.pace","","","",1,1,"","","","Quantity {[]} {[]}
-","","TODO","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/pace-unit-value","",,,,"",0,null,"","","properties.pace","Observation.todo"
-"OmhPace.effectiveTimeFrame","","","",1,1,"","","","dateTime|Period {[]} {[]}
-","","TODO","","","","","","","","","",,"required","","","",,,,"",0,null,"","","properties.effective_time_frame","Observation.todo"
+","","todo","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/pace-unit-value","",,,,"",0,null,"","","properties.pace","Observation.todo"
+"OmhPace.effectiveTimeFrame","","","",1,1,"","","","dateTime {[]} {[]}
+Period {[]} {[]}","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.effective_time_frame","Observation.todo"
 "OmhPace.descriptiveStatistic","","","",0,1,"","","","code {[]} {[]}
-","","TODO","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic","",,,,"",0,null,"","","properties.descriptive_statistic","Observation.todo"
+","","todo","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic","",,,,"",0,null,"","","properties.descriptive_statistic","Observation.todo"

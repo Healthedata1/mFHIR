@@ -26,8 +26,8 @@ user content","",0,*,"","","","Extension {[]} {[]}
   <system value=""http://unitsofmeasure.org""/>
   <code value=""m/s2""/>
 </valueQuantity>","","","",,,,,"",,,,"",0,null,"","","properties.acceleration_z","Observation.todo"
-"OmhAcceleration.effectiveTimeFrame","","","",1,1,"","","","dateTime|Period {[]} {[]}
-","","TODO","","","","","","","","","",,"required","","","",,,,"",0,null,"","","properties.effective_time_frame","Observation.todo"
+"OmhAcceleration.effectiveTimeFrame","","","",1,1,"","","","dateTime {[]} {[]}
+Period {[]} {[]}","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.effective_time_frame","Observation.todo"
 "OmhAcceleration.sensorBodyLocation","","","",0,1,"","","","code {[]} {[]}
 ","","TODO","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/body-location","",,,,"",0,null,"","","properties.sensor_body_location","Observation.todo"
 "OmhAcceleration.descriptiveStatistic","","","",0,1,"","","","code {[]} {[]}

@@ -9,24 +9,24 @@ user content","",0,*,"","","","Extension {[]} {[]}
 "OmhGeoposition.omhHeader","","","",1,1,"","","","BackboneElement {[CanonicalType[http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header]]} {[]}
 ","","The header property represents the header of a data transaction","","","","","","","","","",,,,,"",,,,"",0,null,"","","see OmhHeader Mapping tables","see OmhHeader Mapping tables"
 "OmhGeoposition.latitude","","","",1,1,"","","","Quantity {[]} {[]}
-","","TODO","","","","","","<valueQuantity xmlns=""http://hl7.org/fhir"">
+","","todo","","","","","","<valueQuantity xmlns=""http://hl7.org/fhir"">
   <unit value=""deg""/>
   <system value=""http://unitsofmeasure.org""/>
   <code value=""deg""/>
 </valueQuantity>","","","",,,,,"",,,,"",0,null,"","","properties.latitude","Observation.todo"
 "OmhGeoposition.longitude","","","",1,1,"","","","Quantity {[]} {[]}
-","","TODO","","","","","","<valueQuantity xmlns=""http://hl7.org/fhir"">
+","","todo","","","","","","<valueQuantity xmlns=""http://hl7.org/fhir"">
   <unit value=""deg""/>
   <system value=""http://unitsofmeasure.org""/>
   <code value=""deg""/>
 </valueQuantity>","","","",,,,,"",,,,"",0,null,"","","properties.longitude","Observation.todo"
-"OmhGeoposition.elevation","","","",0,1,"","","","","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.elevation","Observation.todo"
-"OmhGeoposition.effectiveTimeFrame","","","",1,1,"","","","","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.effective_time_frame","Observation.todo"
-"OmhGeoposition.numberOfSatellitesInView","","","",0,1,"","","","TODO {[]} {[]}
-","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.number_of_satellites_in_view","Observation.todo"
-"OmhGeoposition.satelliteSignalStrengths","","","",0,1,"","","","TODO {[]} {[]}
-","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.satellite_signal_strengths","Observation.todo"
-"OmhGeoposition.numberOfSatellitesInFix","","","",0,1,"","","","TODO {[]} {[]}
-","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.number_of_satellites_in_fix","Observation.todo"
+"OmhGeoposition.elevation","","","",0,1,"","","","","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.elevation","Observation.todo"
+"OmhGeoposition.effectiveTimeFrame","","","",1,1,"","","","","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.effective_time_frame","Observation.todo"
+"OmhGeoposition.numberOfSatellitesInView","","","",0,1,"","","","todo {[]} {[]}
+","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.number_of_satellites_in_view","Observation.todo"
+"OmhGeoposition.satelliteSignalStrengths","","","",0,1,"","","","todo {[]} {[]}
+","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.satellite_signal_strengths","Observation.todo"
+"OmhGeoposition.numberOfSatellitesInFix","","","",0,1,"","","","todo {[]} {[]}
+","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.number_of_satellites_in_fix","Observation.todo"
 "OmhGeoposition.positioningSystem","","","",0,1,"","","","string {[]} {[]}
-","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.positioning_system","Observation.todo"
+","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.positioning_system","Observation.todo"

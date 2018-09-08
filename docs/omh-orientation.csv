@@ -9,26 +9,26 @@ user content","",0,*,"","","","Extension {[]} {[]}
 "OmhOrientation.omhHeader","","","",1,1,"","","","BackboneElement {[CanonicalType[http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header]]} {[]}
 ","","The header property represents the header of a data transaction","","","","","","","","","",,,,,"",,,,"",0,null,"","","see OmhHeader Mapping tables","see OmhHeader Mapping tables"
 "OmhOrientation.angularVelocityX","","","",1,1,"","","","Quantity {[]} {[]}
-","","TODO","","","","","","<valueQuantity xmlns=""http://hl7.org/fhir"">
+","","todo","","","","","","<valueQuantity xmlns=""http://hl7.org/fhir"">
   <unit value=""ad/s""/>
   <system value=""http://unitsofmeasure.org""/>
   <code value=""ad/s""/>
 </valueQuantity>","","","",,,,,"",,,,"",0,null,"","","properties.angular_velocity_x","Observation.todo"
 "OmhOrientation.angularVelocityY","","","",1,1,"","","","Quantity {[]} {[]}
-","","TODO","","","","","","<valueQuantity xmlns=""http://hl7.org/fhir"">
+","","todo","","","","","","<valueQuantity xmlns=""http://hl7.org/fhir"">
   <unit value=""ad/s""/>
   <system value=""http://unitsofmeasure.org""/>
   <code value=""ad/s""/>
 </valueQuantity>","","","",,,,,"",,,,"",0,null,"","","properties.angular_velocity_y","Observation.todo"
 "OmhOrientation.angularVelocityZ","","","",0,1,"","","","Quantity {[]} {[]}
-","","TODO","","","","","","<valueQuantity xmlns=""http://hl7.org/fhir"">
+","","todo","","","","","","<valueQuantity xmlns=""http://hl7.org/fhir"">
   <unit value=""ad/s""/>
   <system value=""http://unitsofmeasure.org""/>
   <code value=""ad/s""/>
 </valueQuantity>","","","",,,,,"",,,,"",0,null,"","","properties.angular_velocity_z","Observation.todo"
-"OmhOrientation.effectiveTimeFrame","","","",1,1,"","","","dateTime|Period {[]} {[]}
-","","TODO","","","","","","","","","",,"required","","","",,,,"",0,null,"","","properties.effective_time_frame","Observation.todo"
+"OmhOrientation.effectiveTimeFrame","","","",1,1,"","","","dateTime {[]} {[]}
+Period {[]} {[]}","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.effective_time_frame","Observation.todo"
 "OmhOrientation.sensorBodyLocation","","","",0,1,"","","","code {[]} {[]}
-","","TODO","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/body-location","",,,,"",0,null,"","","properties.sensor_body_location","Observation.todo"
+","","todo","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/body-location","",,,,"",0,null,"","","properties.sensor_body_location","Observation.todo"
 "OmhOrientation.descriptiveStatistic","","","",0,1,"","","","code {[]} {[]}
-","","TODO","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic","",,,,"",0,null,"","","properties.descriptive_statistic","Observation.todo"
+","","todo","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic","",,,,"",0,null,"","","properties.descriptive_statistic","Observation.todo"

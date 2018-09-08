@@ -1,5 +1,5 @@
 ---
-title: mFHIR HomePage
+title: Open mHealth to FHIR HomePage
 layout: default
 active: home
 topofpage: true
@@ -11,9 +11,6 @@ loinc_url: https://loinc.org/
 sct_url: http://browser.ihtsdotools.org/?perspective=full&conceptId1=
 ---
 
-{% include publish-box.html %}
-
-
 <!-- TOC  the css styling for this is \pages\assets\css\project.css under 'markdown-toc'-->
 
 * Do not remove this line (it will not be displayed)
@@ -22,7 +19,7 @@ sct_url: http://browser.ihtsdotools.org/?perspective=full&conceptId1=
 
 <!-- end TOC -->
 
-## mFHIR Overview
+## Open mHealth to FHIR Overview
 
 ### R24 Server
 
@@ -299,7 +296,6 @@ mDATA receives the results of the GET command from the R24 server and displays i
 
 See the [Smart on FHIR Launch] Specification| for examples
 
-
 ######  Fetch FHIR DocumentReference resources containing OMH step count data.  (Steps 3-6)
 {:.no_toc}
 
@@ -334,94 +330,8 @@ https://vonk.furore.com/DocumentReference?patient=1.3.6.1.4.1.21367.2005.3.7.123
 
 **Response**
 
-~~~
-HTTP/1.1 200 OK
-Date: Tue, 22 May 2018 03:40:05 GMT
-Content-Type: application/fhir+json; charset=utf-8
-...other headers...
+{% include examplebutton.html example="get_omh_schema_dr_response_example" b_title = "Response to `GET /DocumentReference/?...`" %}
 
-{
-    "resourceType": "Bundle",
-    "id": "d3334394-5e24-49d4-b8a2-d0fc004a69",
-    "meta": {
-        "lastUpdated": "2018-05-24T00:18:35Z"
-    },
-    "type": "searchset",
-    "total": 1,
-    "link": [
-        {
-            "relation": "self",
-            "url": "http://test.fhir.org/r3/DocumentReference?_format=application/fhir+json&search-id=901a685f-a483-4e92-8a6e-fb3e14cbfc&&patient.identifier=some%2Duser&_sort=_id"
-        }
-    ],
-    "entry": [
-        {
-            "fullUrl": "http://test.fhir.org/r3/DocumentReference/omh-stepcount-example",
-            "resource": {
-                "resourceType": "DocumentReference",
-                "id": "omh-stepcount-example",
-                "meta": {
-                    "versionId": "4",
-                    "lastUpdated": "2018-05-23T23:14:29Z"
-                },
-                "contained": [
-                    {
-                        "resourceType": "Patient",
-                        "id": "p",
-                        "identifier": [
-                            {
-                                "system": "https://omh.org/shimmer/patient_ids",
-                                "value": "some-user"
-                            }
-                        ]
-                    }
-                ],
-                "identifier": [
-                    {
-                        "system": "urn:ietf:rfc:3986",
-                        "value": "urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234"
-                    }
-                ],
-                "status": "current",
-                "type": {
-                    "coding": [
-                        {
-                            "system": "http://loinc.org",
-                            "code": "55423-8",
-                            "display": "Step Count"
-                        }
-                    ]
-                },
-                "class": {
-                    "text": "OMH schema data"
-                },
-                "subject": {
-                    "reference": "#p"
-                },
-                "created": "2018-05-22T09:35:00+11:00",
-                "indexed": "2018-05-22T09:35:00+11:00",
-                "content": [
-                    {
-                        "attachment": {
-                            "contentType": "application/json",
-                            "url": "http://test.fhir.org/r3/Binary/omh-stepcount-example"
-                        }
-                    }
-                ],
-                "context": {
-                    "period": {
-                        "start": "2018-05-23T08:00:00+11:00",
-                        "end": "2018-05-23T08:01:00+11:00"
-                    }
-                }
-            },
-            "search": {
-                "mode": "match"
-            }
-        }
-    ]
-}
-~~~
 
 **Issues**
 
@@ -455,39 +365,8 @@ Accept and Application-type headers absent!
 
 **Response**
 
-~~~
-HTTP/1.1 200 OK
-Connection: close
-Content-Type: application/json
-...Other Headers...
+{% include examplebutton.html example="get_omh_schema_binary_response_example" b_title = "Response to `GET /Binary/{id}`" %}
 
-{
-  "header": {
-    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
-    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
-    "acquisition_MedicationDispense": {
-      "source_name": "Jawbone UP API",
-      "modality": "sensed",
-      "source_updated_date_time": "2015-09-10T18:43:39Z"
-    },
-    "schema_id": {
-      "namespace": "omh",
-      "name": "step-count",
-      "version": "1.0"
-    },
-    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
-  },
-  "body": {
-    "effective_time_frame": {
-      "time_interval": {
-        "start_date_time": "2015-08-06T05:11:09-07:00",
-        "end_date_time": "2015-08-06T23:00:36-06:00"
-      }
-    },
-    "step_count": 7939
-  }
-}
-~~~
 
 **Issues:**
 
@@ -561,115 +440,8 @@ Accept: application/json+fhir
 
 **Response**
 
-~~~
-HTTP/1.1 200 OK
-Connection: close
-Content-Type: application/json
-...Other Headers...
 
-{
-    "resourceType": "Bundle",
-    "id": "55f690f4-d5e5-4f26-8fa2-026be61019",
-    "meta": {
-        "lastUpdated": "2018-05-23T23:48:12Z"
-    },
-    "type": "searchset",
-    "total": 1,
-    "link": [
-        {
-            "relation": "self",
-            "url": "http://test.fhir.org/r3/Observation?_format=application/fhir+json&search-id=7db95351-c995-4cbc-b990-1760a91987&&patient.identifier=some%2Duser&_sort=_id"
-        }
-    ],
-    "entry": [
-        {
-            "fullUrl": "http://test.fhir.org/r3/Observation/stepcount-example",
-            "resource": {
-                "resourceType": "Observation",
-                "id": "stepcount-example",
-                "meta": {
-                    "versionId": "5",
-                    "lastUpdated": "2018-05-23T21:56:09Z"
-                },
-                "contained": [
-                    {
-                        "resourceType": "Patient",
-                        "id": "p",
-                        "identifier": [
-                            {
-                                "system": "https://omh.org/shimmer/patient_ids",
-                                "value": "some-user"
-                            }
-                        ]
-                    }
-                ],
-                "identifier": [
-                    {
-                        "system": "https://omh.org/shimmer/ids",
-                        "value": "12341567"
-                    }
-                ],
-                "status": "unknown",
-                "category": [
-                    {
-                        "coding": [
-                            {
-                                "system": "http://snomed.info/sct",
-                                "code": "68130003",
-                                "display": "Physical activity (observable entity)"
-                            }
-                        ]
-                    }
-                ],
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://loinc.org",
-                            "code": "55423-8",
-                            "display": "Number of steps in unspecified time Pedometer"
-                        }
-                    ],
-                    "text": "Step count"
-                },
-                "subject": {
-                    "reference": "#p"
-                },
-                "effectivePeriod": {
-                    "start": "2018-04-17T00:00:00Z",
-                    "end": "2018-04-24T00:00:00Z"
-                },
-                "issued": "2018-04-24T17:13:50Z",
-                "device": {
-                    "display": "Jawbone UP API, modality =sensed, sourceCreationDateTime = 2018-04-17T17:13:50Z"
-                },
-                "component": [
-                    {
-                        "code": {
-                            "coding": [
-                                {
-                                    "system": "http://hl7.org/fhir/observation-statistics",
-                                    "code": "maximum",
-                                    "display": "Maximum"
-                                }
-                            ],
-                            "text": "Maximum"
-                        },
-                        "valueQuantity": {
-                            "value": 7939,
-                            "unit": "steps/day",
-                            "system": "http://unitsofmeasure.org",
-                            "code": "{steps}/d"
-                        }
-                    }
-                ]
-            },
-            "search": {
-                "mode": "match"
-            }
-        }
-    ]
-}
-~~~
+{% include examplebutton.html example="get_fhir_resource_response_example" b_title = "Response to `GET Observation?...`" %}
 
 
 To view this API in action using the Postman Collection Runner import this [Postman Collection].

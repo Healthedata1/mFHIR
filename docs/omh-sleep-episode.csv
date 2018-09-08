@@ -9,14 +9,14 @@ user content","",0,*,"","","","Extension {[]} {[]}
 "OmhSleepEpisode.omhHeader","","","",1,1,"","","","BackboneElement {[CanonicalType[http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header]]} {[]}
 ","","The header property represents the header of a data transaction","","","","","","","","","",,,,,"",,,,"",0,null,"","","see OmhHeader Mapping tables","see OmhHeader Mapping tables"
 "OmhSleepEpisode.latencyToSleepOnset","","","",0,1,"","","","Quantity {[]} {[]}
-","","TODO","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/duration-unit-value","",,,,"",0,null,"","","properties.latency_to_sleep_onset","Observation.todo"
+","","todo","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/duration-unit-value","",,,,"",0,null,"","","properties.latency_to_sleep_onset","Observation.todo"
 "OmhSleepEpisode.latencyToArising","","","",0,1,"","","","Quantity {[]} {[]}
-","","TODO","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/duration-unit-value","",,,,"",0,null,"","","properties.latency_to_arising","Observation.todo"
+","","todo","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/duration-unit-value","",,,,"",0,null,"","","properties.latency_to_arising","Observation.todo"
 "OmhSleepEpisode.totalSleepTime","","","",0,1,"","","","Quantity {[]} {[]}
-","","TODO","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/duration-unit-value","",,,,"",0,null,"","","properties.total_sleep_time","Observation.todo"
-"OmhSleepEpisode.numberOfAwakenings","","","",0,1,"","","","TODO {[]} {[]}
-","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.number_of_awakenings","Observation.todo"
-"OmhSleepEpisode.isMainSleep","","","",0,1,"","","","TODO {[]} {[]}
-","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.is_main_sleep","Observation.todo"
-"OmhSleepEpisode.effectiveTimeFrame","","","",1,1,"","","","","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.effective_time_frame","Observation.todo"
-"OmhSleepEpisode.sleepMaintenanceEfficiencyPercentage","","","",0,1,"","","","","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.sleep_maintenance_efficiency_percentage","Observation.todo"
+","","todo","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/duration-unit-value","",,,,"",0,null,"","","properties.total_sleep_time","Observation.todo"
+"OmhSleepEpisode.numberOfAwakenings","","","",0,1,"","","","todo {[]} {[]}
+","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.number_of_awakenings","Observation.todo"
+"OmhSleepEpisode.isMainSleep","","","",0,1,"","","","todo {[]} {[]}
+","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.is_main_sleep","Observation.todo"
+"OmhSleepEpisode.effectiveTimeFrame","","","",1,1,"","","","","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.effective_time_frame","Observation.todo"
+"OmhSleepEpisode.sleepMaintenanceEfficiencyPercentage","","","",0,1,"","","","","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.sleep_maintenance_efficiency_percentage","Observation.todo"

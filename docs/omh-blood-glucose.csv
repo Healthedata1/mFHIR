@@ -8,15 +8,15 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","Extensions are always sliced by (at least) url",,"open","",0,null,"",""
 "OmhBloodGlucose.omhHeader","","","",1,1,"","","","BackboneElement {[CanonicalType[http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header]]} {[]}
 ","","The header property represents the header of a data transaction","","","","","","","","","",,,,,"",,,,"",0,null,"","","see OmhHeader Mapping tables","see OmhHeader Mapping tables"
-"OmhBloodGlucose.bloodGlucose","","","",1,1,"","","","","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.blood_glucose","Observation.todo"
-"OmhBloodGlucose.specimenSource","","","",0,1,"","","","","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.specimen_source","Observation.todo"
-"OmhBloodGlucose.effectiveTimeFrame","","","",0,1,"","","","dateTime|Period {[]} {[]}
-","","TODO","","","","","","","","","",,"required","","","",,,,"",0,null,"","","properties.effective_time_frame","Observation.todo"
+"OmhBloodGlucose.bloodGlucose","","","",1,1,"","","","","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.blood_glucose","Observation.todo"
+"OmhBloodGlucose.specimenSource","","","",0,1,"","","","","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.specimen_source","Observation.todo"
+"OmhBloodGlucose.effectiveTimeFrame","","","",0,1,"","","","dateTime {[]} {[]}
+Period {[]} {[]}","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.effective_time_frame","Observation.todo"
 "OmhBloodGlucose.temporalRelationshipToMeal","","","",0,1,"","","","code {[]} {[]}
-","","TODO","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/temporal-relationship-to-meal","",,,,"",0,null,"","","properties.temporal_relationship_to_meal","Observation.todo"
+","","todo","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/temporal-relationship-to-meal","",,,,"",0,null,"","","properties.temporal_relationship_to_meal","Observation.todo"
 "OmhBloodGlucose.temporalRelationshipToSleep","","","",0,1,"","","","code {[]} {[]}
-","","TODO","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/temporal-relationship-to-sleep","",,,,"",0,null,"","","properties.temporal_relationship_to_sleep","Observation.todo"
+","","todo","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/temporal-relationship-to-sleep","",,,,"",0,null,"","","properties.temporal_relationship_to_sleep","Observation.todo"
 "OmhBloodGlucose.descriptiveStatistic","","","",0,1,"","","","code {[]} {[]}
-","","TODO","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic","",,,,"",0,null,"","","properties.descriptive_statistic","Observation.todo"
+","","todo","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic","",,,,"",0,null,"","","properties.descriptive_statistic","Observation.todo"
 "OmhBloodGlucose.userNotes","","","",0,1,"","","","string {[]} {[]}
-","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.user_notes","Observation.todo"
+","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.user_notes","Observation.todo"

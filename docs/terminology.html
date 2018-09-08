@@ -5,10 +5,10 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
    <meta charset="UTF-8"/>
-  <title>mFHIR</title>
+  <title>Open mHealth to FHIR</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="mFHIR Implemenation Guide" />
+<meta name="description" content="Open mHealth to FHIR Implemenation Guide" />
 <meta name="author" content="Open mHealth"/>
   <link href="fhir.css" rel="stylesheet"/>
 
@@ -76,7 +76,7 @@ can only resize using html  or css ;-(
       <div id="project-status" class="project-status"> <!-- ig title text -->
 
       
-      <strong>mFHIR Implementation Guide CI Build</strong>
+      <strong>Open mHealth to FHIR Implementation Guide CI Build</strong>
       
 
     </div><!-- end ig title text -->
@@ -204,33 +204,39 @@ can only resize using html  or css ;-(
 
 <h1>ValueSets and CodeSystems defined as part of this Implementation Guide</h1>
 
+<!--status-bar-->
+<p id="publish-box">
+This is the   Continuous Integration Build  of the Open mHealth to FHIR Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="http://www.fhir.org/guides//history.html">Directory of published versions</a>
+</p>
+
+
 <!-- page source: terminology.md  -->
 
 <h4 id="value-sets">Value Sets</h4>
 
 <p>These value sets have been defined for this implementation guide:</p>
-<li><a href="ValueSet-dp-type.html">omh-datapoint-type</a></li>
-<li><a href="ValueSet-volume-unit-value.html">volume-unit-value</a></li>
-<li><a href="ValueSet-temporal-relationship-to-sleep.html">temporal-relationship-to-sleep</a></li>
-<li><a href="ValueSet-temporal-relationship-to-physical-activity.html">temporal-relationship-to-physical-activity</a></li>
-<li><a href="ValueSet-temporal-relationship-to-meal.html">temporal-relationship-to-meal</a></li>
-<li><a href="ValueSet-temperature-unit-value.html">temperature-unit-value</a></li>
-<li><a href="ValueSet-speed-unit-value.html">speed-unit-value</a></li>
-<li><a href="ValueSet-specimen-source.html">specimen-source</a></li>
-<li><a href="ValueSet-position-during-measurement.html">position-during-measurement</a></li>
-<li><a href="ValueSet-part-of-day.html">part-of-day</a></li>
-<li><a href="ValueSet-pace-unit-value.html">pace-unit-value</a></li>
-<li><a href="ValueSet-medication-dose-unit.html">medication-dose-unit</a></li>
-<li><a href="ValueSet-mass-unit-value.html">mass-unit-value</a></li>
-<li><a href="ValueSet-magnetic-flux-density-unit-value.html">magnetic-flux-density-unit-value</a></li>
-<li><a href="ValueSet-length-unit-value.html">length-unit-value</a></li>
-<li><a href="ValueSet-intervention-administration-route.html">intervention-administration-route</a></li>
-<li><a href="ValueSet-duration-unit-value.html">duration-unit-value</a></li>
-<li><a href="ValueSet-descriptive-statistic-denominator.html">descriptive-statistic-denominator</a></li>
-<li><a href="ValueSet-day-of-week.html">day-of-week</a></li>
-<li><a href="ValueSet-body-posture.html">body-posture</a></li>
-<li><a href="ValueSet-body-location.html">body-location</a></li>
-<li><a href="ValueSet-area-unit-value.html">area-unit-value</a></li>
+<li><a href="ValueSet-dp-type.html">Open mHealth Datapoint Types</a></li>
+<li><a href="ValueSet-volume-unit-value.html">Volume Unit Value</a></li>
+<li><a href="ValueSet-temporal-relationship-to-sleep.html">Temporal Relationship To Sleep</a></li>
+<li><a href="ValueSet-temporal-relationship-to-physical-activity.html">Temporal Relationship To Physical Activity</a></li>
+<li><a href="ValueSet-temporal-relationship-to-meal.html">Temporal Relationship To Meal</a></li>
+<li><a href="ValueSet-temperature-unit-value.html">Temperature Unit Value</a></li>
+<li><a href="ValueSet-speed-unit-value.html">Speed Unit Value</a></li>
+<li><a href="ValueSet-specimen-source.html">Specimen Source</a></li>
+<li><a href="ValueSet-position-during-measurement.html">Position During Measurement</a></li>
+<li><a href="ValueSet-part-of-day.html">Part Of Day</a></li>
+<li><a href="ValueSet-pace-unit-value.html">Pace Unit Value</a></li>
+<li><a href="ValueSet-medication-dose-unit.html">Medication Dose Unit</a></li>
+<li><a href="ValueSet-mass-unit-value.html">Mass Unit Value</a></li>
+<li><a href="ValueSet-magnetic-flux-density-unit-value.html">Magnetic Flux Density Unit Value</a></li>
+<li><a href="ValueSet-length-unit-value.html">Length Unit Value</a></li>
+<li><a href="ValueSet-intervention-administration-route.html">Intervention Administration Route</a></li>
+<li><a href="ValueSet-duration-unit-value.html">Duration Unit Value</a></li>
+<li><a href="ValueSet-descriptive-statistic-denominator.html">Descriptive Statistic Denominator</a></li>
+<li><a href="ValueSet-day-of-week.html">Day Of Week</a></li>
+<li><a href="ValueSet-body-posture.html">Body Posture</a></li>
+<li><a href="ValueSet-body-location.html">Body Location</a></li>
+<li><a href="ValueSet-area-unit-value.html">Area Unit Value</a></li>
 
 <h4 id="code-systems">Code Systems</h4>
 
@@ -243,7 +249,6 @@ can only resize using html  or css ;-(
 
 
 
-
   <!-- ==============END CONTENT END CONTENT=================== -->
 
 </div>  <!-- col -->
@@ -252,7 +257,6 @@ can only resize using html  or css ;-(
 </div>  <!-- /container -->
 </div>  <!-- /page content -->
 </div>  <!-- /page content wrapper -->
-
 
 
 
@@ -273,7 +277,7 @@ can only resize using html  or css ;-(
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            mFHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, May 28, 2018 17:43-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+            Open mHealth to FHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Sep 7, 2018 20:05-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>
         </p>
    </div>  <!-- /inner-wrapper -->

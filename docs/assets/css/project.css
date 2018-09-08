@@ -498,3 +498,68 @@ li a[href^="http://"]:not([no-external^="true"]):after, a[href^="https://"]:not(
     text-decoration: none;
     padding-left: 3px;
 }
+
+
+/*--------- make all figures the same siz------e*/
+.figure-img{
+  height: 415px;
+  width: 740px;
+}
+
+.figure-img-narrow{
+  height: 181px;
+  width: 740px;
+}
+
+.figure-img-portrait{
+  width: 100%%;
+}
+
+
+/*--------- change example button color------*/
+
+.btn-example {
+  color: #000000;
+  background-color: #EFF3F6;
+  border-color: #8C88A3;
+}
+
+.btn-example:hover,
+.btn-example:focus,
+.btn-example:active,
+.btn-example.active,
+.open .dropdown-toggle.btn-example {
+  color: #000000;
+  background-color: #E3E6E8;
+  border-color: #8C88A3;
+}
+
+.btn-example:active,
+.btn-example.active,
+.open .dropdown-toggle.btn-example {
+  background-image: none;
+}
+
+.btn-example.disabled,
+.btn-example[disabled],
+fieldset[disabled] .btn-example,
+.btn-example.disabled:hover,
+.btn-example[disabled]:hover,
+fieldset[disabled] .btn-example:hover,
+.btn-example.disabled:focus,
+.btn-example[disabled]:focus,
+fieldset[disabled] .btn-example:focus,
+.btn-example.disabled:active,
+.btn-example[disabled]:active,
+fieldset[disabled] .btn-example:active,
+.btn-example.disabled.active,
+.btn-example[disabled].active,
+fieldset[disabled] .btn-example.active {
+  background-color: #EFF3F6;
+  border-color: #8C88A3;
+}
+
+.btn-example .badge {
+  color: #EFF3F6;
+  background-color: #000000;
+}

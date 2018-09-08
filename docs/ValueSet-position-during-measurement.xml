@@ -3,7 +3,7 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="position-during-measurement"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>position-during-measurement</h2><div><p>The position of the subject during a clinical measurement.</p>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Position During Measurement</h2><div><p>The position of the subject during a clinical measurement.</p>
 </div><p><b>Copyright Statement:</b> Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved. This value set includes content from SNOMED CT, which is copyright 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.</p><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=33586001">33586001</a></td><td>sitting</td><td/></tr><tr><td><a href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=102538003">102538003</a></td><td>lying down</td><td/></tr><tr><td><a href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=10904000">10904000</a></td><td>standing</td><td/></tr></table></li></ul></div>
   </text>
   <url value="http://www.fhir.org/guides/mfhir/ValueSet/position-during-measurement"/>

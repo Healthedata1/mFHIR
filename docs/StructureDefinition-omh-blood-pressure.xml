@@ -5,12 +5,12 @@
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Legend for this format"><img src="http://hl7.org/fhir/STU3/help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-omh-blood-pressure-definitions.html#OmhBloodPressure" title="This schema represents a person's blood pressure as a combination of systolic and diastolic blood pressure.">OmhBloodPressure</a><a name="OmhBloodPressure"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-omh-blood-pressure-definitions.html#OmhBloodPressure.omhHeader" title="The header property represents the header of a data transaction">omhHeader</a><a name="OmhBloodPressure.omhHeader"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-omh-header.html" title="BackboneElement">OMHHeader</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-omh-blood-pressure-definitions.html#OmhBloodPressure.systolicBloodPressure" title="TODO">systolicBloodPressure</a><a name="OmhBloodPressure.systolicBloodPressure"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-omh-blood-pressure-definitions.html#OmhBloodPressure.diastolicBloodPressure" title="TODO">diastolicBloodPressure</a><a name="OmhBloodPressure.diastolicBloodPressure"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-omh-blood-pressure-definitions.html#OmhBloodPressure.effectiveTimeFrame" title="TODO">effectiveTimeFrame</a><a name="OmhBloodPressure.effectiveTimeFrame"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">dateTime|Period</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="font-weight:bold">Binding: </span><a href="http://hl7.org/fhir/STU3/terminologies.html#unbound">(unbound)</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set">required</a>)</td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-omh-blood-pressure-definitions.html#OmhBloodPressure.bodyPosture" title="TODO">bodyPosture</a><a name="OmhBloodPressure.bodyPosture"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="font-weight:bold">Binding: </span><a href="ValueSet-body-posture.html">body-posture</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set">required</a>)</td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-omh-blood-pressure-definitions.html#OmhBloodPressure.descriptiveStatistic" title="TODO">descriptiveStatistic</a><a name="OmhBloodPressure.descriptiveStatistic"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="font-weight:bold">Binding: </span><a href="http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic">http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set">required</a>)</td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-omh-blood-pressure-definitions.html#OmhBloodPressure.userNotes" title="TODO">userNotes</a><a name="OmhBloodPressure.userNotes"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-omh-blood-pressure-definitions.html#OmhBloodPressure.systolicBloodPressure" title="todo">systolicBloodPressure</a><a name="OmhBloodPressure.systolicBloodPressure"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-omh-blood-pressure-definitions.html#OmhBloodPressure.diastolicBloodPressure" title="todo">diastolicBloodPressure</a><a name="OmhBloodPressure.diastolicBloodPressure"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_choice.gif" alt="." style="background-color: white; background-color: inherit" title="Choice of Types" class="hierarchy"/> <a href="StructureDefinition-omh-blood-pressure-definitions.html#OmhBloodPressure.effectiveTimeFrame" title="todo">effectiveTimeFrame</a><a name="OmhBloodPressure.effectiveTimeFrame"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">dateTime</a>, <a href="http://hl7.org/fhir/STU3/datatypes.html#Period">Period</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-omh-blood-pressure-definitions.html#OmhBloodPressure.bodyPosture" title="todo">bodyPosture</a><a name="OmhBloodPressure.bodyPosture"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="font-weight:bold">Binding: </span><a href="ValueSet-body-posture.html">Body Posture</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set.">required</a>)</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-omh-blood-pressure-definitions.html#OmhBloodPressure.descriptiveStatistic" title="todo">descriptiveStatistic</a><a name="OmhBloodPressure.descriptiveStatistic"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="font-weight:bold">Binding: </span><a href="http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic">http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set.">required</a>)</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-omh-blood-pressure-definitions.html#OmhBloodPressure.userNotes" title="todo">userNotes</a><a name="OmhBloodPressure.userNotes"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
 <tr><td colspan="5" class="hierarchy"><br/><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Legend for this format"><img src="http://hl7.org/fhir/STU3/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
   </text>
   <url value="http://www.fhir.org/guides/mfhir/StructureDefinition/omh-blood-pressure"/>
@@ -120,7 +120,7 @@
     </element>
     <element id="OmhBloodPressure.systolicBloodPressure">
       <path value="OmhBloodPressure.systolicBloodPressure"/>
-      <definition value="TODO"/>
+      <definition value="todo"/>
       <min value="1"/>
       <max value="1"/>
       <mustSupport value="false"/>
@@ -136,7 +136,7 @@
     </element>
     <element id="OmhBloodPressure.diastolicBloodPressure">
       <path value="OmhBloodPressure.diastolicBloodPressure"/>
-      <definition value="TODO"/>
+      <definition value="todo"/>
       <min value="1"/>
       <max value="1"/>
       <mustSupport value="false"/>
@@ -152,17 +152,17 @@
     </element>
     <element id="OmhBloodPressure.effectiveTimeFrame">
       <path value="OmhBloodPressure.effectiveTimeFrame"/>
-      <definition value="TODO"/>
+      <definition value="todo"/>
       <min value="0"/>
       <max value="1"/>
       <type>
-        <code value="dateTime|Period"/>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="Period"/>
       </type>
       <mustSupport value="false"/>
       <isModifier value="false"/>
-      <binding>
-        <strength value="required"/>
-      </binding>
       <mapping>
         <identity value="omh-schema"/>
         <map value="properties.effective_time_frame"/>
@@ -174,7 +174,7 @@
     </element>
     <element id="OmhBloodPressure.bodyPosture">
       <path value="OmhBloodPressure.bodyPosture"/>
-      <definition value="TODO"/>
+      <definition value="todo"/>
       <min value="0"/>
       <max value="1"/>
       <type>
@@ -184,7 +184,9 @@
       <isModifier value="false"/>
       <binding>
         <strength value="required"/>
-        <valueSetUri value="http://www.fhir.org/guides/mfhir/ValueSet/body-posture"/>
+        <valueSetReference>
+          <reference value="http://www.fhir.org/guides/mfhir/ValueSet/body-posture"/>
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="omh-schema"/>
@@ -197,7 +199,7 @@
     </element>
     <element id="OmhBloodPressure.descriptiveStatistic">
       <path value="OmhBloodPressure.descriptiveStatistic"/>
-      <definition value="TODO"/>
+      <definition value="todo"/>
       <min value="0"/>
       <max value="1"/>
       <type>
@@ -207,7 +209,9 @@
       <isModifier value="false"/>
       <binding>
         <strength value="required"/>
-        <valueSetUri value="http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic"/>
+        <valueSetReference>
+          <reference value="http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic"/>
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="omh-schema"/>
@@ -220,7 +224,7 @@
     </element>
     <element id="OmhBloodPressure.userNotes">
       <path value="OmhBloodPressure.userNotes"/>
-      <definition value="TODO"/>
+      <definition value="todo"/>
       <min value="0"/>
       <max value="1"/>
       <type>
@@ -275,7 +279,7 @@
     </element>
     <element id="OmhBloodPressure.systolicBloodPressure">
       <path value="OmhBloodPressure.systolicBloodPressure"/>
-      <definition value="TODO"/>
+      <definition value="todo"/>
       <min value="1"/>
       <max value="1"/>
       <mustSupport value="false"/>
@@ -291,7 +295,7 @@
     </element>
     <element id="OmhBloodPressure.diastolicBloodPressure">
       <path value="OmhBloodPressure.diastolicBloodPressure"/>
-      <definition value="TODO"/>
+      <definition value="todo"/>
       <min value="1"/>
       <max value="1"/>
       <mustSupport value="false"/>
@@ -307,17 +311,17 @@
     </element>
     <element id="OmhBloodPressure.effectiveTimeFrame">
       <path value="OmhBloodPressure.effectiveTimeFrame"/>
-      <definition value="TODO"/>
+      <definition value="todo"/>
       <min value="0"/>
       <max value="1"/>
       <type>
-        <code value="dateTime|Period"/>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="Period"/>
       </type>
       <mustSupport value="false"/>
       <isModifier value="false"/>
-      <binding>
-        <strength value="required"/>
-      </binding>
       <mapping>
         <identity value="omh-schema"/>
         <map value="properties.effective_time_frame"/>
@@ -329,7 +333,7 @@
     </element>
     <element id="OmhBloodPressure.bodyPosture">
       <path value="OmhBloodPressure.bodyPosture"/>
-      <definition value="TODO"/>
+      <definition value="todo"/>
       <min value="0"/>
       <max value="1"/>
       <type>
@@ -339,7 +343,9 @@
       <isModifier value="false"/>
       <binding>
         <strength value="required"/>
-        <valueSetUri value="http://www.fhir.org/guides/mfhir/ValueSet/body-posture"/>
+        <valueSetReference>
+          <reference value="http://www.fhir.org/guides/mfhir/ValueSet/body-posture"/>
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="omh-schema"/>
@@ -352,7 +358,7 @@
     </element>
     <element id="OmhBloodPressure.descriptiveStatistic">
       <path value="OmhBloodPressure.descriptiveStatistic"/>
-      <definition value="TODO"/>
+      <definition value="todo"/>
       <min value="0"/>
       <max value="1"/>
       <type>
@@ -362,7 +368,9 @@
       <isModifier value="false"/>
       <binding>
         <strength value="required"/>
-        <valueSetUri value="http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic"/>
+        <valueSetReference>
+          <reference value="http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic"/>
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="omh-schema"/>
@@ -375,7 +383,7 @@
     </element>
     <element id="OmhBloodPressure.userNotes">
       <path value="OmhBloodPressure.userNotes"/>
-      <definition value="TODO"/>
+      <definition value="todo"/>
       <min value="0"/>
       <max value="1"/>
       <type>

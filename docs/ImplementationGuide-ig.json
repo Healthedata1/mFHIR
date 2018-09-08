@@ -3,13 +3,15 @@
   "id": "ig",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>mFHIR</h2><p>The official URL for this implementation guide is: </p><pre>http://www.fhir.org/guides/mfhir/ImplementationGuide/ig</pre></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Open mHealth to FHIR</h2><p>The official URL for this implementation guide is: </p><pre>http://www.fhir.org/guides/mfhir/ImplementationGuide/ig</pre></div>"
   },
   "url": "http://www.fhir.org/guides/mfhir/ImplementationGuide/ig",
-  "name": "mFHIR",
+  "version": "0.0.0",
+  "name": "Open mHealth to FHIR",
   "status": "draft",
   "experimental": true,
   "publisher": "Open mHealth",
+  "fhirVersion": "3.0.1",
   "package": [
     {
       "id": "p1",
@@ -916,6 +918,7 @@
               "valueUri": "StructureDefinition-contained-p.html"
             }
           ],
+          "example": false,
           "name": "OMH Contained Patient Profile",
           "sourceReference": {
             "reference": "StructureDefinition/contained-p"
@@ -934,6 +937,7 @@
               "valueUri": "StructureDefinition-omh-dr.html"
             }
           ],
+          "example": false,
           "name": "OMH DocumentReference Profile",
           "sourceReference": {
             "reference": "StructureDefinition/omh-dr"
@@ -944,14 +948,7 @@
   ],
   "page": {
     "source": "index.md",
-    "title": "mFHIR Homepage",
-    "kind": "page",
-    "page": [
-      {
-        "source": "_includes/toc.md",
-        "title": "mFHIR Table of Contents",
-        "kind": "page"
-      }
-    ]
+    "title": "Open mHealth to FHIR Homepage",
+    "kind": "page"
   }
 }

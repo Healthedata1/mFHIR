@@ -1,5 +1,5 @@
 ---
-title: CapabilityStatements defined for this Guide
+title: CapabilityStatements defined for this Implementation Guide
 layout: default
 active: capstatements
 ---
@@ -10,34 +10,9 @@ active: capstatements
 
 <!-- end TOC -->
 
-This section outlines conformance requirements
+{% include list-simple-capabilitystatements.xhtml %}
 
-
-### Conformance requirements for Server
-
-[Source Resource](CapabilityStatement-server.html)
-
-
-
-- FHIR Version: 1.9.0
-- Supported formats: xml, json
-- Published: 2017-03-08s
-- Published by: Health eData include
-
-etc
-
-### Conformance requirements for Client
-
-[Source Resource](CapabilityStatement-client.html)
-
-- FHIR Version: 1.9.0
-- Supported formats: xml, json
-- Published: 2017-03-08
-- Published by: Health eData include
-
-etc
-
-
+<!--
 ```
 Steps for adding this narrative to CapStatements  - if you don't want to generate it
 
@@ -66,4 +41,5 @@ e.g.
    </div>
 
 save CapabilityStatement file
-```
+
+-->

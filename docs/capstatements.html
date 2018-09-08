@@ -5,10 +5,10 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
    <meta charset="UTF-8"/>
-  <title>mFHIR</title>
+  <title>Open mHealth to FHIR</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="mFHIR Implemenation Guide" />
+<meta name="description" content="Open mHealth to FHIR Implemenation Guide" />
 <meta name="author" content="Open mHealth"/>
   <link href="fhir.css" rel="stylesheet"/>
 
@@ -76,7 +76,7 @@ can only resize using html  or css ;-(
       <div id="project-status" class="project-status"> <!-- ig title text -->
 
       
-      <strong>mFHIR Implementation Guide CI Build</strong>
+      <strong>Open mHealth to FHIR Implementation Guide CI Build</strong>
       
 
     </div><!-- end ig title text -->
@@ -193,7 +193,7 @@ can only resize using html  or css ;-(
     
       <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a><a class="breadcrumb-item" href="index.html">Home</a>
       /
-      <span class="breadcrumb-item active">CapabilityStatements defined for this Guide</span>
+      <span class="breadcrumb-item active">CapabilityStatements defined for this Implementation Guide</span>
     
     
 
@@ -202,48 +202,27 @@ can only resize using html  or css ;-(
 
   <!-- ============CONTENT CONTENT=============== -->
 
-<h1>CapabilityStatements defined for this Guide</h1>
+<h1>CapabilityStatements defined for this Implementation Guide</h1>
+
+<!--status-bar-->
+<p id="publish-box">
+This is the   Continuous Integration Build  of the Open mHealth to FHIR Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="http://www.fhir.org/guides//history.html">Directory of published versions</a>
+</p>
+
 
 <!-- page source: capstatements.md  -->
 
 <!-- TOC  the css styling for this is \pages\assets\css\project.css under 'markdown-toc'-->
 
-<ul id="markdown-toc">
-  <li><a href="#conformance-requirements-for-server" id="markdown-toc-conformance-requirements-for-server">Conformance requirements for Server</a></li>
-  <li><a href="#conformance-requirements-for-client" id="markdown-toc-conformance-requirements-for-client">Conformance requirements for Client</a></li>
-</ul>
 
 <!-- end TOC -->
 
-<p>This section outlines conformance requirements</p>
+<li><a href="CapabilityStatement-server.html">Server</a></li>
+<li><a href="CapabilityStatement-client.html">Client</a></li>
 
-<h3 id="conformance-requirements-for-server">Conformance requirements for Server</h3>
-
-<p><a href="CapabilityStatement-server.html">Source Resource</a></p>
-
-<ul>
-  <li>FHIR Version: 1.9.0</li>
-  <li>Supported formats: xml, json</li>
-  <li>Published: 2017-03-08s</li>
-  <li>Published by: Health eData include</li>
-</ul>
-
-<p>etc</p>
-
-<h3 id="conformance-requirements-for-client">Conformance requirements for Client</h3>
-
-<p><a href="CapabilityStatement-client.html">Source Resource</a></p>
-
-<ul>
-  <li>FHIR Version: 1.9.0</li>
-  <li>Supported formats: xml, json</li>
-  <li>Published: 2017-03-08</li>
-  <li>Published by: Health eData include</li>
-</ul>
-
-<p>etc</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>Steps for adding this narrative to CapStatements  - if you don't want to generate it
+<!--
+```
+Steps for adding this narrative to CapStatements  - if you don't want to generate it
 
 1) Create narrative in markdown
 2) View Page source in Browser and copy the html content and save as .xhtml file
@@ -257,22 +236,21 @@ can only resize using html  or css ;-(
 3) Remove any relative links to build (e.g., xml / json views)  since these will break if not viewed inside of IG
 
 4) Remove or replace any unsupported xhtml characters:  You can catch these using the w3 validator or by trying to view in browser
-   e.g., replace ";&amp;nbsp" with "&amp;#160;"
+   e.g., replace ";&nbsp" with "&#160;"
 
 4) Insert in CapabilityStatement.text.div as xhtml
     Make CapabilityStatement.text.status = "additional"
 
 e.g.
- &lt;text&gt;
-    &lt;status value="additional"/&gt;
-    &lt;div xmlns="http://www.w3.org/1999/xhtml"&gt;
+ <text>
+    <status value="additional"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
 ...(inserted xhtml here)...
-   &lt;/div&gt;
+   </div>
 
 save CapabilityStatement file
-</code></pre>
-</div>
 
+-->
 
 
   <!-- ==============END CONTENT END CONTENT=================== -->
@@ -283,7 +261,6 @@ save CapabilityStatement file
 </div>  <!-- /container -->
 </div>  <!-- /page content -->
 </div>  <!-- /page content wrapper -->
-
 
 
 
@@ -304,7 +281,7 @@ save CapabilityStatement file
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            mFHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, May 28, 2018 17:43-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+            Open mHealth to FHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Sep 7, 2018 20:05-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>
         </p>
    </div>  <!-- /inner-wrapper -->

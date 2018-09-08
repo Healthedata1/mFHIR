@@ -2,10 +2,10 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
    <meta charset="UTF-8"/>
-  <title>mFHIR</title>
+  <title>Open mHealth to FHIR</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="description" content="mFHIR Implemenation Guide"/>
+<meta name="description" content="Open mHealth to FHIR Implemenation Guide"/>
 <meta name="author" content="Open mHealth"/>
   <link rel="stylesheet" href="fhir.css"/>
 
@@ -72,7 +72,7 @@ can only resize using html  or css ;-( -->
       <div id="project-status" class="project-status">   <!-- ig title text -->
 
       
-      <strong>mFHIR Implementation Guide CI Build</strong>
+      <strong>Open mHealth to FHIR Implementation Guide CI Build</strong>
       
 
     </div>  <!-- end ig title text -->
@@ -196,38 +196,40 @@ can only resize using html  or css ;-( -->
 
     <!-- ============CONTENT CONTENT=============== -->
 
-<h1>mFHIR HomePage</h1>
+<h1>Open mHealth to FHIR HomePage</h1>
+
+  <!-- status-bar -->
+<p id="publish-box">
+This is the   Continuous Integration Build  of the Open mHealth to FHIR Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="http://www.fhir.org/guides//history.html">Directory of published versions</a>
+</p>
+
 
   <!-- page source: index.md -->
-
-<p id="publish-box">
-This is the   Continuous Integration Build  of the mFHIR Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3">FHIR Version 3.0.1</a>.  See the <a href="http://www.fhir.org/guides//history.html">Directory of published versions</a>
-</p>
 
   <!-- TOC  the css styling for this is \pages\assets\css\project.css under 'markdown-toc' -->
 
 <ul id="markdown-toc">
-  <li><a href="#mfhir-overview" id="markdown-toc-mfhir-overview">mFHIR Overview</a>    <ul>
+  <li><a href="#open-mhealth-to-fhir-overview" id="markdown-toc-open-mhealth-to-fhir-overview">Open mHealth to FHIR Overview</a>    <ul>
       <li><a href="#r24-server" id="markdown-toc-r24-server">R24 Server</a></li>
     </ul>
   </li>
   <li><a href="#base-use-case" id="markdown-toc-base-use-case">Base Use case</a>    <ul>
-      <li><a name="a21a12cf-89b6-4105-aa75-7c09f593bc2e">​</a><a href="#description" id="markdown-toc-description">Description</a></li>
-      <li><a name="a7b2ffc9-3ddf-4615-b4d6-f622ae458cde">​</a><a href="#actors" id="markdown-toc-actors">Actors</a></li>
-      <li><a name="e4a691e5-688d-4a7e-bf16-bb93ea52a585">​</a><a href="#assumptions-pre-conditions-and-constraints" id="markdown-toc-assumptions-pre-conditions-and-constraints">Assumptions, Pre-Conditions and Constraints</a></li>
-      <li><a name="93495f77-dd80-4921-b9fe-3de9f08d5fa8">​</a><a href="#basic-flow" id="markdown-toc-basic-flow">Basic Flow</a></li>
-      <li><a name="6f8f764d-7cef-4357-bdc6-1e14b9e45c97">​</a><a href="#smart-app-workflow" id="markdown-toc-smart-app-workflow">Smart app Workflow</a></li>
+      <li><a name="1e861eaf-f7f5-43da-80ec-86e5fe3c447a">​</a><a href="#description" id="markdown-toc-description">Description</a></li>
+      <li><a name="41f6d246-9a65-4aae-8ccd-b03bb5d9bcbd">​</a><a href="#actors" id="markdown-toc-actors">Actors</a></li>
+      <li><a name="3c90d9cb-8b19-4794-a188-d513cde8302a">​</a><a href="#assumptions-pre-conditions-and-constraints" id="markdown-toc-assumptions-pre-conditions-and-constraints">Assumptions, Pre-Conditions and Constraints</a></li>
+      <li><a name="b0ebc1c0-4b6e-4389-a02e-706f0b1997ab">​</a><a href="#basic-flow" id="markdown-toc-basic-flow">Basic Flow</a></li>
+      <li><a name="bcfc4a7e-f714-4c23-bdc2-8543751a5990">​</a><a href="#smart-app-workflow" id="markdown-toc-smart-app-workflow">Smart app Workflow</a></li>
     </ul>
   </li>
 </ul>
 
   <!-- end TOC -->
 
-<h2 id="mfhir-overview">mFHIR Overview</h2>
+<h2 id="open-mhealth-to-fhir-overview">Open mHealth to FHIR Overview</h2>
 
 <h3 id="r24-server">R24 Server</h3>
 
-  <!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
+  <!-- all this Bootstrap html for getting an narrow image to fit nicely in text - 640 pix wide -->
 
   <!-- file:///assets/images/R24_Overview.png -->
 
@@ -482,7 +484,7 @@ mDATA receives the results of the GET command from the R24 server and displays i
 
 <h4 class="no_toc" id="retrieving-omh-data-in-native-omh-schema-format">Retrieving OMH data in native OMH Schema format</h4>
 
-<!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
+<!-- all this Bootstrap html for getting an narrow image to fit nicely in text - 640 pix wide -->
 
   <!-- file:///assets/images/smartapp-binary.png -->
 
@@ -505,7 +507,7 @@ mDATA receives the results of the GET command from the R24 server and displays i
   <tbody>
     <tr>
       <td>1.</td>
-      <td><a name="1298fb19-efc7-4a7e-9afb-2a31c0255852">​</a>Smart app Launch from Provider EHR. See the <a href="(http://docs.smarthealthit.org/authorization/)" title="SMART App Authorization Guide">Smart on FHIR Launch</a> Specification</td>
+      <td><a name="7bd213b8-a98f-42c5-aee1-597e0d01a59d">​</a>Smart app Launch from Provider EHR. See the <a href="(http://docs.smarthealthit.org/authorization/)" title="SMART App Authorization Guide">Smart on FHIR Launch</a> Specification</td>
     </tr>
     <tr>
       <td>2.</td>
@@ -513,11 +515,11 @@ mDATA receives the results of the GET command from the R24 server and displays i
     </tr>
     <tr>
       <td>3.</td>
-      <td><a name="9554f996-e62a-49b5-a85e-8cf8ae5a4d49">​</a>Following successful launch, the Smart app request OMH step count data for patient Z as a standard <a href="(http://hl7.org/fhir/STU3/search.html)" title="FHIR search API documentation">FHIR search API</a> on <em><a name="38fd727a-9e89-4dbd-951c-6e773604aaee">​</a><a href="(http://hl7.org/fhir/STU3/documentreference.html)" title="FHIR DocumentReference Resource documentation">DocumentReference</a></em>. It provides an opaque identifier as a search parameter that identifies patient Z and optionally a time range of interest.</td>
+      <td><a name="0748e3f5-d086-4706-b305-810cc2b8578a">​</a>Following successful launch, the Smart app request OMH step count data for patient Z as a standard <a href="(http://hl7.org/fhir/STU3/search.html)" title="FHIR search API documentation">FHIR search API</a> on <em><a name="253456c5-5f70-420c-845e-e00c15273dcb">​</a><a href="(http://hl7.org/fhir/STU3/documentreference.html)" title="FHIR DocumentReference Resource documentation">DocumentReference</a></em>. It provides an opaque identifier as a search parameter that identifies patient Z and optionally a time range of interest.</td>
     </tr>
     <tr>
       <td>4.</td>
-      <td><a name="c88ff886-3a39-47be-b876-3ba277b02886">​</a>The R24 server receives the request and either maps the opaque id to its user id list and creates the DocumentReference resource on the fly from a native format or searches its FHIR based datastore for DocumentReference matches.  Note that the DocumentReference is a ‘wrapper’ and contains context and a link to a <a href="(http://hl7.org/fhir/STU3/binary.html)" title="FHIR Binary Resource documentation">Binary</a> resource that represents the actual OMH Step Count data.</td>
+      <td><a name="6bf97344-c8e4-4770-814e-2ae46ff8729a">​</a>The R24 server receives the request and either maps the opaque id to its user id list and creates the DocumentReference resource on the fly from a native format or searches its FHIR based datastore for DocumentReference matches.  Note that the DocumentReference is a ‘wrapper’ and contains context and a link to a <a href="(http://hl7.org/fhir/STU3/binary.html)" title="FHIR Binary Resource documentation">Binary</a> resource that represents the actual OMH Step Count data.</td>
     </tr>
     <tr>
       <td>5.</td>
@@ -525,7 +527,7 @@ mDATA receives the results of the GET command from the R24 server and displays i
     </tr>
     <tr>
       <td>6.</td>
-      <td><a name="e5d02055-7669-4281-8f2b-4f4a0b5a0095">​</a>The smart app receives the DocumentReference resource(s) and processes them one by one extracting the Binary endpoint data. then makes a second request to fetch the Binary resources in the native OMH (json) format using the standard <a href="(http://hl7.org/fhir/STU3/binary.html#rest)" title="FServing Binary Resources using the RESTful API">FHIR API for Binary data</a> (Note that the data may also be requested as a base64 encoded string as well).</td>
+      <td><a name="cafb867e-85a8-456d-994c-b7f32ded7dd6">​</a>The smart app receives the DocumentReference resource(s) and processes them one by one extracting the Binary endpoint data. then makes a second request to fetch the Binary resources in the native OMH (json) format using the standard <a href="(http://hl7.org/fhir/STU3/binary.html#rest)" title="FServing Binary Resources using the RESTful API">FHIR API for Binary data</a> (Note that the data may also be requested as a base64 encoded string as well).</td>
     </tr>
     <tr>
       <td>8.</td>
@@ -549,7 +551,7 @@ mDATA receives the results of the GET command from the R24 server and displays i
 <table>
   <tbody>
     <tr>
-      <td><a name="79f12656-e070-427d-9b69-78c5ca3725db">​</a>See the <a href="(http://docs.smarthealthit.org/authorization/)" title="SMART App Authorization Guide">Smart on FHIR Launch</a> Specification</td>
+      <td><a name="3e123f26-7f2f-4155-a049-25bf467c4dac">​</a>See the <a href="(http://docs.smarthealthit.org/authorization/)" title="SMART App Authorization Guide">Smart on FHIR Launch</a> Specification</td>
       <td>for examples</td>
     </tr>
   </tbody>
@@ -592,7 +594,7 @@ Accept: application/json+fhir
 </code></pre>
 </div>
 
-<p><a name="b06a9fd8-0200-4f88-8261-66e5ab50c278">​</a><strong>Issues</strong>
+<p><a name="a2ddb257-8d96-49ac-8902-8ff975a0d09b">​</a><strong>Issues</strong>
 1.  Assumed identifiers as ‘logical’ (opaque Identifiers) and not ‘literal’ reference to Patient resource (see http://hl7.org/fhir/STU3/references.html.
     1. using a <a href="(http://hl7.org/fhir/STU3/references#contained.html)" title="FHIR contained resource documentation">contained</a> patient resource to hold the identifier to allow for searching by the identifier as ‘chained’ search.
     1. need to assign system  ( e.g UUID, or https://omh.r24server/ids )</p>
@@ -601,6 +603,15 @@ Accept: application/json+fhir
 
 <p><strong>Response</strong></p>
 
+<p>
+  <button data-target="#get_omh_schema_dr_response_example" data-toggle="collapse" aria-controls="collapseExample" aria-expanded="false" type="button" title="Click to Open or Close Example" class="btn btn-info btn-lg btn-block">
+    Response to `GET /DocumentReference/?...`
+  </button>
+</p>
+
+<div id="get_omh_schema_dr_response_example" class="collapse">
+  <div class="card card-body">
+      
 <div class="highlighter-rouge"><pre class="highlight"><code>HTTP/1.1 200 OK
 Date: Tue, 22 May 2018 03:40:05 GMT
 Content-Type: application/fhir+json; charset=utf-8
@@ -690,6 +701,10 @@ Content-Type: application/fhir+json; charset=utf-8
 </code></pre>
 </div>
 
+  </div>
+</div>
+<p><br/></p>
+
 <p><strong>Issues</strong></p>
 
 <ol>
@@ -727,7 +742,7 @@ Content-Type: application/fhir+json; charset=utf-8
     </tr>
     <tr>
       <td>FHIR STU3 REST API</td>
-      <td><a name="487d2131-3a51-4b86-a0a3-86623c4df0f0">​</a><a href="http://hl7.org/fhir/STU3/html.html">http://hl7.org/fhir/STU3/html.html</a></td>
+      <td><a name="e03a9097-d32f-4606-a550-d86ff42f7164">​</a><a href="http://hl7.org/fhir/STU3/html.html">http://hl7.org/fhir/STU3/html.html</a></td>
     </tr>
   </tbody>
 </table>
@@ -743,6 +758,15 @@ Accept and Application-type headers absent!
 
 <p><strong>Response</strong></p>
 
+<p>
+  <button data-target="#get_omh_schema_binary_response_example" data-toggle="collapse" aria-controls="collapseExample" aria-expanded="false" type="button" title="Click to Open or Close Example" class="btn btn-info btn-lg btn-block">
+    Response to `GET /Binary/{id}`
+  </button>
+</p>
+
+<div id="get_omh_schema_binary_response_example" class="collapse">
+  <div class="card card-body">
+      
 <div class="highlighter-rouge"><pre class="highlight"><code>HTTP/1.1 200 OK
 Connection: close
 Content-Type: application/json
@@ -777,6 +801,10 @@ Content-Type: application/json
 </code></pre>
 </div>
 
+  </div>
+</div>
+<p><br/></p>
+
 <p><strong>Issues:</strong></p>
 
 <ol>
@@ -792,7 +820,7 @@ Content-Type: application/json
 
 <h4 id="retrieving-omh-data-as-fhir-observations" class="no_toc">Retrieving OMH data as FHIR Observations</h4>
 
-  <!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
+  <!-- all this Bootstrap html for getting an narrow image to fit nicely in text - 640 pix wide -->
 
   <!-- file:///assets/images/smartapp-observation.png -->
 
@@ -851,7 +879,7 @@ Content-Type: application/json
 <table>
   <tbody>
     <tr>
-      <td><a name="f763b3d9-11e0-4a8f-8b8d-49f16ad7d7b8">​</a>See the <a href="(http://docs.smarthealthit.org/authorization/)" title="SMART App Authorization Guide">Smart on FHIR Launch</a> Specification</td>
+      <td><a name="f787d9ae-051d-4f08-a32e-e67d12c49d81">​</a>See the <a href="(http://docs.smarthealthit.org/authorization/)" title="SMART App Authorization Guide">Smart on FHIR Launch</a> Specification</td>
       <td>for examples</td>
     </tr>
   </tbody>
@@ -899,7 +927,7 @@ Accept: application/json+fhir
 <ol>
   <li>Assumed identifiers as ‘logical’ (opaque Identifiers) and not ‘literal’ reference to Patient resource (see http://hl7.org/fhir/STU3/references.html.
     <ol>
-      <li><a name="da4b3341-5bf7-4dc4-a607-e635058e0564">​</a>using a <a href="(http://hl7.org/fhir/STU3/references#contained.html)" title="FHIR contained resource documentation">contained</a> patient resource to hold the identifier to allow for searching by the identifier as ‘chained’ search.</li>
+      <li><a name="40d39853-c99c-421d-a87b-846fc1cd9884">​</a>using a <a href="(http://hl7.org/fhir/STU3/references#contained.html)" title="FHIR contained resource documentation">contained</a> patient resource to hold the identifier to allow for searching by the identifier as ‘chained’ search.</li>
       <li>need to assign system  ( e.g UUID, or https://omh.r24server/ids )</li>
     </ol>
   </li>
@@ -910,7 +938,15 @@ Accept: application/json+fhir
 
 <p><strong>Response</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>HTTP/1.1 200 OK
+<p>
+  <button data-target="#get_fhir_resource_response_example" data-toggle="collapse" aria-controls="collapseExample" aria-expanded="false" type="button" title="Click to Open or Close Example" class="btn btn-info btn-lg btn-block">
+    Response to `GET Observation?...`
+  </button>
+</p>
+
+<div id="get_fhir_resource_response_example" class="collapse">
+  <div class="card card-body">
+      <div class="highlighter-rouge"><pre class="highlight"><code>HTTP/1.1 200 OK
 Connection: close
 Content-Type: application/json
 ...Other Headers...
@@ -1020,12 +1056,15 @@ Content-Type: application/json
 </code></pre>
 </div>
 
-<p><a name="b5a6bf94-c4f6-4435-8fa3-510ca349bd70">​</a>To view this API in action using the Postman Collection Runner import this <a href=":https://www.getpostman.com/collections/0a54cd0197a5f2fc98d4">Postman Collection</a>.</p>
+  </div>
+</div>
+<p><br/></p>
+
+<p><a name="676dde07-a700-43e1-adc4-d20d58f9a361">​</a>To view this API in action using the Postman Collection Runner import this <a href=":https://www.getpostman.com/collections/0a54cd0197a5f2fc98d4">Postman Collection</a>.</p>
 
 <p><br/></p>
 
 <hr/>
-
 
 
 
@@ -1037,7 +1076,6 @@ Content-Type: application/json
 </div>    <!-- /container -->
 </div>    <!-- /page content -->
 </div>    <!-- /page content wrapper -->
-
 
 
 
@@ -1060,7 +1098,7 @@ Content-Type: application/json
   <div class="container">    <!-- container -->
    <div class="inner-wrapper">
     <p>
-            mFHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, May 28, 2018 17:43-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
+            Open mHealth to FHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Sep 7, 2018 20:05-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3/license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
         
         </p>
    </div>    <!-- /inner-wrapper -->

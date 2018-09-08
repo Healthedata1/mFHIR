@@ -8,15 +8,15 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","Extensions are always sliced by (at least) url",,"open","",0,null,"",""
 "OmhOxygenSaturation.omhHeader","","","",1,1,"","","","BackboneElement {[CanonicalType[http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header]]} {[]}
 ","","The header property represents the header of a data transaction","","","","","","","","","",,,,,"",,,,"",0,null,"","","see OmhHeader Mapping tables","see OmhHeader Mapping tables"
-"OmhOxygenSaturation.oxygenSaturation","","","",1,1,"","","","","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.oxygen_saturation","Observation.todo"
+"OmhOxygenSaturation.oxygenSaturation","","","",1,1,"","","","","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.oxygen_saturation","Observation.todo"
 "OmhOxygenSaturation.system","","","",0,1,"","","","string {[]} {[]}
-","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.system","Observation.todo"
-"OmhOxygenSaturation.supplementalOxygenFlowRate","","","",0,1,"","","","","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.supplemental_oxygen_flow_rate","Observation.todo"
+","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.system","Observation.todo"
+"OmhOxygenSaturation.supplementalOxygenFlowRate","","","",0,1,"","","","","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.supplemental_oxygen_flow_rate","Observation.todo"
 "OmhOxygenSaturation.oxygenTherapyModeOfAdministration","","","",0,1,"","","","string {[]} {[]}
-","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.oxygen_therapy_mode_of_administration","Observation.todo"
+","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.oxygen_therapy_mode_of_administration","Observation.todo"
 "OmhOxygenSaturation.measurementMethod","","","",0,1,"","","","string {[]} {[]}
-","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.measurement_method","Observation.todo"
-"OmhOxygenSaturation.effectiveTimeFrame","","","",0,1,"","","","dateTime|Period {[]} {[]}
-","","TODO","","","","","","","","","",,"required","","","",,,,"",0,null,"","","properties.effective_time_frame","Observation.todo"
+","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.measurement_method","Observation.todo"
+"OmhOxygenSaturation.effectiveTimeFrame","","","",0,1,"","","","dateTime {[]} {[]}
+Period {[]} {[]}","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.effective_time_frame","Observation.todo"
 "OmhOxygenSaturation.descriptiveStatistic","","","",0,1,"","","","code {[]} {[]}
-","","TODO","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic","",,,,"",0,null,"","","properties.descriptive_statistic","Observation.todo"
+","","todo","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic","",,,,"",0,null,"","","properties.descriptive_statistic","Observation.todo"

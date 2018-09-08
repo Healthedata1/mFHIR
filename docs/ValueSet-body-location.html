@@ -5,10 +5,10 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
    <meta charset="UTF-8"/>
-  <title>mFHIR</title>
+  <title>Open mHealth to FHIR</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="mFHIR Implemenation Guide" />
+<meta name="description" content="Open mHealth to FHIR Implemenation Guide" />
 <meta name="author" content="Open mHealth"/>
   <link href="fhir.css" rel="stylesheet"/>
 
@@ -76,7 +76,7 @@ can only resize using html  or css ;-(
       <div id="project-status" class="project-status"> <!-- ig title text -->
 
       
-      <strong>mFHIR Implementation Guide CI Build</strong>
+      <strong>Open mHealth to FHIR Implementation Guide CI Build</strong>
       
 
     </div><!-- end ig title text -->
@@ -186,6 +186,15 @@ can only resize using html  or css ;-(
             <!-- content of page -->
 
 
+<!-- ============Publish box=============== -->
+
+<!--status-bar-->
+<p id="publish-box">
+This is the   Continuous Integration Build  of the Open mHealth to FHIR Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="http://www.fhir.org/guides//history.html">Directory of published versions</a>
+</p>
+
+
+
 <!-- ============BreadCrumb=============== -->
 
 <nav class="breadcrumb">
@@ -203,7 +212,6 @@ can only resize using html  or css ;-(
   
 
 </nav>
-
 
 
 <!-- ============nav-tabs=============== -->
@@ -257,21 +265,22 @@ can only resize using html  or css ;-(
 
   <table class="grid">
  <tbody><tr><td>Defining URL:</td><td>http://www.fhir.org/guides/mfhir/ValueSet/body-location</td></tr>
+ <tr><td>Version:</td><td>0.0.0</td></tr>
  <tr><td>Name:</td><td>body-location</td></tr>
  <tr><td>Definition:</td><td><p>A location on the body. This is an incomplete value set. Values from the Anatomical or acquired body structure hierarchy of SNOMED can be added as needed.</p>
 </td></tr>
  <tr><td>Publisher:</td><td>Open mHealth</td></tr>
  <tr><td>Copyright:</td><td>Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved.</td></tr>
- <tr><td>Source Resource</td><td><a href="ValueSet-body-location.xml.html">XML</a> / <a href="ValueSet-body-location.json.html">JSON</a> / <a href="ValueSet-body-location.ttl.html">Turtle</a></td></tr>
+ <tr><td>Source Resource:</td><td><a href="ValueSet-body-location.xml.html">XML</a> / <a href="ValueSet-body-location.json.html">JSON</a> / <a href="ValueSet-body-location.ttl.html">Turtle</a></td></tr>
 </tbody></table>
 
   
 <ul>
- <li><a href="StructureDefinition-omh-acceleration.html">OmhAcceleration</a></li>
- <li><a href="StructureDefinition-omh-orientation.html">OmhOrientation</a></li>
+ <li><a href="StructureDefinition-omh-acceleration.html">OMH Acceleration</a></li>
+ <li><a href="StructureDefinition-omh-orientation.html">OMH Orientation</a></li>
 </ul>
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><h2>body-location</h2><div><p>A location on the body. This is an incomplete value set. Values from the Anatomical or acquired body structure hierarchy of SNOMED can be added as needed.</p>
+  <div xmlns="http://www.w3.org/1999/xhtml"><h2>Body Location</h2><div><p>A location on the body. This is an incomplete value set. Values from the Anatomical or acquired body structure hierarchy of SNOMED can be added as needed.</p>
 </div><p><b>Copyright Statement:</b> Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved.</p><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href="CodeSystem-body-location.html"><code>http://www.fhir.org/guides/mfhir/CodeSystem/body-location</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="CodeSystem-body-location.html#body-location-leftankle">left ankle</a></td><td>left ankle</td><td></td></tr><tr><td><a href="CodeSystem-body-location.html#body-location-rightankle">right ankle</a></td><td>right ankle</td><td></td></tr><tr><td><a href="CodeSystem-body-location.html#body-location-lefthip">left hip</a></td><td>left hip</td><td></td></tr><tr><td><a href="CodeSystem-body-location.html#body-location-righthip">right hip</a></td><td>right hip</td><td></td></tr><tr><td><a href="CodeSystem-body-location.html#body-location-leftthigh">left thigh</a></td><td>left thigh</td><td></td></tr><tr><td><a href="CodeSystem-body-location.html#body-location-rightthigh">right thigh</a></td><td>right thigh</td><td></td></tr><tr><td><a href="CodeSystem-body-location.html#body-location-leftthorax">left thorax</a></td><td>left thorax</td><td></td></tr><tr><td><a href="CodeSystem-body-location.html#body-location-middleleftthorax">middle left thorax</a></td><td>middle left thorax</td><td></td></tr><tr><td><a href="CodeSystem-body-location.html#body-location-leftupperarm">left upper arm</a></td><td>left upper arm</td><td></td></tr><tr><td><a href="CodeSystem-body-location.html#body-location-rightupperarm">right upper arm</a></td><td>right upper arm</td><td></td></tr><tr><td><a href="CodeSystem-body-location.html#body-location-leftwrist">left wrist</a></td><td>left wrist</td><td></td></tr><tr><td><a href="CodeSystem-body-location.html#body-location-rightwrist">right wrist</a></td><td>right wrist</td><td></td></tr></table></li></ul></div>
 
   <h3>Expansion</h3>
@@ -350,7 +359,7 @@ Formats: <a href="ValueSet-body-location.html">Narrative</a>, <a href="ValueSet-
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            mFHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, May 28, 2018 17:43-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+            Open mHealth to FHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Sep 7, 2018 20:05-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>
         </p>
    </div>  <!-- /inner-wrapper -->

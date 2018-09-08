@@ -9,18 +9,18 @@ user content","",0,*,"","","","Extension {[]} {[]}
 "OmhPhysicalActivity.omhHeader","","","",1,1,"","","","BackboneElement {[CanonicalType[http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header]]} {[]}
 ","","The header property represents the header of a data transaction","","","","","","","","","",,,,,"",,,,"",0,null,"","","see OmhHeader Mapping tables","see OmhHeader Mapping tables"
 "OmhPhysicalActivity.activityName","","","",1,1,"","","","string {[]} {[]}
-","","TODO","","","","","","","","","",,"required","","","",,,,"",0,null,"","","properties.activity_name","Observation.todo"
-"OmhPhysicalActivity.effectiveTimeFrame","","","",0,1,"","","","dateTime|Period {[]} {[]}
-","","TODO","","","","","","","","","",,"required","","","",,,,"",0,null,"","","properties.effective_time_frame","Observation.todo"
+","","todo","","","","","","","","","",,"required","","","",,,,"",0,null,"","","properties.activity_name","Observation.todo"
+"OmhPhysicalActivity.effectiveTimeFrame","","","",0,1,"","","","dateTime {[]} {[]}
+Period {[]} {[]}","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.effective_time_frame","Observation.todo"
 "OmhPhysicalActivity.distance","","","",0,1,"","","","Quantity {[]} {[]}
-","","TODO","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/length-unit-value","",,,,"",0,null,"","","properties.distance","Observation.todo"
+","","todo","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/length-unit-value","",,,,"",0,null,"","","properties.distance","Observation.todo"
 "OmhPhysicalActivity.kcalBurned","","","",0,1,"","","","Quantity {[]} {[]}
-","","TODO","","","","","","<valueQuantity xmlns=""http://hl7.org/fhir"">
+","","todo","","","","","","<valueQuantity xmlns=""http://hl7.org/fhir"">
   <unit value=""kcal""/>
   <system value=""http://unitsofmeasure.org""/>
   <code value=""kcal""/>
 </valueQuantity>","","","",,,,,"",,,,"",0,null,"","","properties.kcal_burned","Observation.todo"
 "OmhPhysicalActivity.reportedActivityIntensity","","","",0,1,"","","","string {[]} {[]}
-","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.reported_activity_intensity","Observation.todo"
+","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.reported_activity_intensity","Observation.todo"
 "OmhPhysicalActivity.metValue","","","",0,1,"","","","decimal {[]} {[]}
-","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.met_value","Observation.todo"
+","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.met_value","Observation.todo"

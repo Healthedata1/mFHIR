@@ -7,7 +7,7 @@
 	<title value="Open mHealth Datapoint Types"/>
 	<status value="active"/>
 	<date value="2018-05-28"/>
-	<description value="Omh Datapoint standard codes whch are defined in the schema definitions and used when mapping and searching FHIR resources. ***TODO*** complete for all datapoints"/>
+	<description value="Omh Datapoint standard codes whch are defined in the schema definitions and used when mapping and searching FHIR resources. ***todo*** complete for all datapoints"/>
 	<copyright value="1) The  LOINC® content is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use.  2) This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
 	<compose>
 		<include>

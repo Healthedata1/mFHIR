@@ -8,10 +8,10 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","Extensions are always sliced by (at least) url",,"open","",0,null,"",""
 "OmhInspiratoryTime.omhHeader","","","",1,1,"","","","BackboneElement {[CanonicalType[http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header]]} {[]}
 ","","The header property represents the header of a data transaction","","","","","","","","","",,,,,"",,,,"",0,null,"","","see OmhHeader Mapping tables","see OmhHeader Mapping tables"
-"OmhInspiratoryTime.inspiratoryTime","","","",1,1,"","","","","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.inspiratory_time","Observation.todo"
-"OmhInspiratoryTime.effectiveTimeFrame","","","",0,1,"","","","dateTime|Period {[]} {[]}
-","","TODO","","","","","","","","","",,"required","","","",,,,"",0,null,"","","properties.effective_time_frame","Observation.todo"
+"OmhInspiratoryTime.inspiratoryTime","","","",1,1,"","","","","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.inspiratory_time","Observation.todo"
+"OmhInspiratoryTime.effectiveTimeFrame","","","",0,1,"","","","dateTime {[]} {[]}
+Period {[]} {[]}","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.effective_time_frame","Observation.todo"
 "OmhInspiratoryTime.descriptiveStatistic","","","",0,1,"","","","code {[]} {[]}
-","","TODO","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic","",,,,"",0,null,"","","properties.descriptive_statistic","Observation.todo"
+","","todo","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic","",,,,"",0,null,"","","properties.descriptive_statistic","Observation.todo"
 "OmhInspiratoryTime.temporalRelationshipToPhysicalActivity","","","",0,1,"","","","code {[]} {[]}
-","","TODO","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/temporal-relationship-to-physical-activity","",,,,"",0,null,"","","properties.temporal_relationship_to_physical_activity","Observation.todo"
+","","todo","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/temporal-relationship-to-physical-activity","",,,,"",0,null,"","","properties.temporal_relationship_to_physical_activity","Observation.todo"

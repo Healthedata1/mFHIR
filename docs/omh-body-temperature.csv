@@ -9,12 +9,12 @@ user content","",0,*,"","","","Extension {[]} {[]}
 "OmhBodyTemperature.omhHeader","","","",1,1,"","","","BackboneElement {[CanonicalType[http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header]]} {[]}
 ","","The header property represents the header of a data transaction","","","","","","","","","",,,,,"",,,,"",0,null,"","","see OmhHeader Mapping tables","see OmhHeader Mapping tables"
 "OmhBodyTemperature.bodyTemperature","","","",1,1,"","","","Quantity {[]} {[]}
-","","TODO","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/temperature-unit-value","",,,,"",0,null,"","","properties.body_temperature","Observation.todo"
-"OmhBodyTemperature.effectiveTimeFrame","","","",0,1,"","","","dateTime|Period {[]} {[]}
-","","TODO","","","","","","","","","",,"required","","","",,,,"",0,null,"","","properties.effective_time_frame","Observation.todo"
+","","todo","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/temperature-unit-value","",,,,"",0,null,"","","properties.body_temperature","Observation.todo"
+"OmhBodyTemperature.effectiveTimeFrame","","","",0,1,"","","","dateTime {[]} {[]}
+Period {[]} {[]}","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.effective_time_frame","Observation.todo"
 "OmhBodyTemperature.descriptiveStatistic","","","",0,1,"","","","code {[]} {[]}
-","","TODO","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic","",,,,"",0,null,"","","properties.descriptive_statistic","Observation.todo"
+","","todo","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic","",,,,"",0,null,"","","properties.descriptive_statistic","Observation.todo"
 "OmhBodyTemperature.measurementLocation","","","",0,1,"","","","string {[]} {[]}
-","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.measurement_location","Observation.todo"
+","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.measurement_location","Observation.todo"
 "OmhBodyTemperature.temporalRelationshipToSleep","","","",0,1,"","","","code {[]} {[]}
-","","TODO","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/temporal-relationship-to-sleep","",,,,"",0,null,"","","properties.temporal_relationship_to_sleep","Observation.todo"
+","","todo","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/temporal-relationship-to-sleep","",,,,"",0,null,"","","properties.temporal_relationship_to_sleep","Observation.todo"

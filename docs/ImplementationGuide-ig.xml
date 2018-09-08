@@ -3,13 +3,15 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="ig"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>mFHIR</h2><p>The official URL for this implementation guide is: </p><pre>http://www.fhir.org/guides/mfhir/ImplementationGuide/ig</pre></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Open mHealth to FHIR</h2><p>The official URL for this implementation guide is: </p><pre>http://www.fhir.org/guides/mfhir/ImplementationGuide/ig</pre></div>
   </text>
   <url value="http://www.fhir.org/guides/mfhir/ImplementationGuide/ig"/>
-  <name value="mFHIR"/>
+  <version value="0.0.0"/>
+  <name value="Open mHealth to FHIR"/>
   <status value="draft"/>
   <experimental value="true"/>
   <publisher value="Open mHealth"/>
+  <fhirVersion value="3.0.1"/>
   <package id="p1">
     <name value="base"/>
     <resource>
@@ -685,6 +687,7 @@
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-contained-p.html"/>
       </extension>
+      <example value="false"/>
       <name value="OMH Contained Patient Profile"/>
       <sourceReference>
         <reference value="StructureDefinition/contained-p"/>
@@ -697,6 +700,7 @@
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-omh-dr.html"/>
       </extension>
+      <example value="false"/>
       <name value="OMH DocumentReference Profile"/>
       <sourceReference>
         <reference value="StructureDefinition/omh-dr"/>
@@ -705,12 +709,7 @@
   </package>
   <page>
     <source value="index.md"/>
-    <title value="mFHIR Homepage"/>
+    <title value="Open mHealth to FHIR Homepage"/>
     <kind value="page"/>
-    <page>
-      <source value="_includes/toc.md"/>
-      <title value="mFHIR Table of Contents"/>
-      <kind value="page"/>
-    </page>
   </page>
 </ImplementationGuide>

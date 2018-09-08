@@ -8,10 +8,10 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","Extensions are always sliced by (at least) url",,"open","",0,null,"",""
 "OmhMedicationPrescription.omhHeader","","","",1,1,"","","","BackboneElement {[CanonicalType[http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header]]} {[]}
 ","","The header property represents the header of a data transaction","","","","","","","","","",,,,,"",,,,"",0,null,"","","see OmhHeader Mapping tables","see OmhHeader Mapping tables"
-"OmhMedicationPrescription.medication","","","",1,1,"","","","","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.medication","Observation.todo"
+"OmhMedicationPrescription.medication","","","",1,1,"","","","","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.medication","Observation.todo"
 "OmhMedicationPrescription.route","","","",0,1,"","","","code {[]} {[]}
-","","TODO","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/intervention-administration-route","",,,,"",0,null,"","","properties.route","Observation.todo"
+","","todo","","","","","","","","","",,"required","","http://www.fhir.org/guides/mfhir/ValueSet/intervention-administration-route","",,,,"",0,null,"","","properties.route","Observation.todo"
 "OmhMedicationPrescription.prescriptionTrigger","","","",0,1,"","","","string {[]} {[]}
-","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.prescription_trigger","Observation.todo"
-"OmhMedicationPrescription.schedule","","","",1,1,"","","","TODO {[]} {[]}
-","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.schedule","Observation.todo"
+","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.prescription_trigger","Observation.todo"
+"OmhMedicationPrescription.schedule","","","",1,1,"","","","todo {[]} {[]}
+","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.schedule","Observation.todo"

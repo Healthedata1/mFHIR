@@ -8,11 +8,11 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","Extensions are always sliced by (at least) url",,"open","",0,null,"",""
 "OmhPharmacyMedicationDispensing.omhHeader","","","",1,1,"","","","BackboneElement {[CanonicalType[http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header]]} {[]}
 ","","The header property represents the header of a data transaction","","","","","","","","","",,,,,"",,,,"",0,null,"","","see OmhHeader Mapping tables","see OmhHeader Mapping tables"
-"OmhPharmacyMedicationDispensing.medicationPrescription","","","",1,1,"","","","","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.medication_prescription","Observation.todo"
+"OmhPharmacyMedicationDispensing.medicationPrescription","","","",1,1,"","","","","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.medication_prescription","Observation.todo"
 "OmhPharmacyMedicationDispensing.medicationDispensed","","","",1,1,"","","","string {[]} {[]}
-","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.medication_dispensed","Observation.todo"
-"OmhPharmacyMedicationDispensing.amountDispensed","","","",1,1,"","","","","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.amount_dispensed","Observation.todo"
-"OmhPharmacyMedicationDispensing.timeFrameMedicationDispensed","","","",1,1,"","","","dateTime|Period {[]} {[]}
-","","TODO","","","","","","","","","",,"required","","","",,,,"",0,null,"","","properties.time_frame_medication_dispensed","Observation.todo"
+","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.medication_dispensed","Observation.todo"
+"OmhPharmacyMedicationDispensing.amountDispensed","","","",1,1,"","","","","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.amount_dispensed","Observation.todo"
+"OmhPharmacyMedicationDispensing.timeFrameMedicationDispensed","","","",1,1,"","","","dateTime {[]} {[]}
+Period {[]} {[]}","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.time_frame_medication_dispensed","Observation.todo"
 "OmhPharmacyMedicationDispensing.remainingRefills","","","",0,1,"","","","decimal {[]} {[]}
-","","TODO","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.remaining_refills","Observation.todo"
+","","todo","","","","","","","","","",,,,,"",,,,"",0,null,"","","properties.remaining_refills","Observation.todo"

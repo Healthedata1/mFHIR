@@ -70,8 +70,8 @@ In order to map the OMH schema to FHIR, the OMH Schemas are divided conceptually
 
 The OMH header schema represent data MedicationDispense and the properties in the header schema map to more than a single FHIR element.  In addition, depending on the depth and level of detail required, there are multiple options to representing MedicationDispense including:
 
-- [MedicationDispense]({{site.data.fhir.path}}/MedicationDispense.html)resource
-- [meta.source]({{site.data.fhir.path}}/resource.html#Meta) element
+- [MedicationDispense]({{site.data.fhir.path}}MedicationDispense.html)resource
+- [meta.source]({{site.data.fhir.path}}resource.html#Meta) element
 - inline Resource elements
 
 These options are summarized in the table below and described in detail in the data point logical model mappings.
@@ -81,11 +81,11 @@ These options are summarized in the table below and described in detail in the d
 |[header-1.2.json]({{page.omlschema_url}}header-1.2.json)|[Observation][Observation]\|[MedicationDispense][MedicationDispense]  Profile||
 {:.grid}
 
-The rest of the omh schemas represent either data points or more granular reusable elements or concepts that can be referenced within the data-point schemas. Each reusable omh schema are mapped primitive and complex datatypes as shown below. In addition some of these schemas enumerate values which are [bound]({{site.data.fhir.path}}//terminologies.html)) to FHIR ValueSets.  The reusable schemas are mapped directly to fhir artifacts as described below and these mapping replace the omh schema references when transforming an OMH data point schema into a FHIR Logical Model.
+The rest of the omh schemas represent either data points or more granular reusable elements or concepts that can be referenced within the data-point schemas. Each reusable omh schema are mapped primitive and complex datatypes as shown below. In addition some of these schemas enumerate values which are [bound]({{site.data.fhir.path}}terminologies.html)) to FHIR ValueSets.  The reusable schemas are mapped directly to fhir artifacts as described below and these mapping replace the omh schema references when transforming an OMH data point schema into a FHIR Logical Model.
 
 ####  OMH Schema Mappings to FHIR Datatypes
 
-In this table, the schemas representing primitive and complex data-types are mapped directly to the corresponding FHIR datatype.  Listed in the *FHIR ValueSet* column the corresponding FHIR ValueSets and [binding strength]({{site.data.fhir.path}}/datatypes.html#code) for the schemas that map to the FHIR `code`, an units values for the `Quantity`, and `Range` dataypes.
+In this table, the schemas representing primitive and complex data-types are mapped directly to the corresponding FHIR datatype.  Listed in the *FHIR ValueSet* column the corresponding FHIR ValueSets and [binding strength]({{site.data.fhir.path}}datatypes.html#code) for the schemas that map to the FHIR `code`, an units values for the `Quantity`, and `Range` dataypes.
 
 -  Where a value is fixed such as for *acceleration-unit-value-1.0.json*, a fixed [Pattern] is associated with the schema which directly applied to the FHIR logical models when the schema is referenced.
 -  Where the unit value is an enumeration of units a FHIR *ValueSet* is associated with the schema.
@@ -115,7 +115,7 @@ In this section the following Open MHealth data-point instance  will be transfor
 The first step is to map from the Open MHealth data-point schema to the OmhDataPoint Logical Model.  The source JSON data is transformed following the *first* [mapping table](StructureDefinition-omh-data-point.html#sd-3-2-mappings) provided in the OmhDataPoint Logical Model and referencing the formal [StructureDefinition](StructureDefinition-omh-data-point.html#sd-3-1formal-views-of-profile-content) for the structural details.  So for example from the example source file below, based on the mapping table `OmhDataPoint.header.id` is translated to `OmhDataPoint.header.dataPointId` which a primitive `id` datatype.
 
  The OmhDataPoint `body` element is a choice of other logical models based on the datapoint schema listed above. These models are their mappings are referenced to complete the mapping. For example, `properties.body.effective_time_frame` is mapped to the OMHStepCount Logical Model and data transformed based on its [mapping table](StructureDefinition-omh-step-count.html#sd-1-2-mappings)
-A complex data element  such as `effective_time_frame` is mapped to the `OMHStepCount.effectiveTimeFrame` element which is a FHIR [Period]({{site.data.fhir.path}}/datatypes.html#Period) whose detailed structure is available in the FHIR specification and can accessed by following the links in the logical model.  Here is how the Period datatype maps to the effective_time_frame
+A complex data element  such as `effective_time_frame` is mapped to the `OMHStepCount.effectiveTimeFrame` element which is a FHIR [Period]({{site.data.fhir.path}}datatypes.html#Period) whose detailed structure is available in the FHIR specification and can accessed by following the links in the logical model.  Here is how the Period datatype maps to the effective_time_frame
 
 |FHIR Period data type|
 |---|
