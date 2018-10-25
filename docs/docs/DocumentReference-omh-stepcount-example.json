@@ -1,0 +1,58 @@
+{
+  "resourceType": "DocumentReference",
+  "id": "omh-stepcount-example",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: omh-stepcount-example</p><p><b>contained</b>: </p><p><b>identifier</b>: urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234</p><p><b>status</b>: current</p><p><b>type</b>: Step Count <span style=\"background: LightGoldenRodYellow\">(Details : {LOINC code '55423-8' = 'Number of steps in unspecified time Pedometer', given as 'Step Count'})</span></p><p><b>class</b>: OMH schema data <span style=\"background: LightGoldenRodYellow\">(Details )</span></p><p><b>subject</b>: unknown resource contained</p><p><b>created</b>: May 22, 2018, 9:35:00 AM</p><p><b>indexed</b>: May 22, 2018, 9:35:00 AM</p><h3>Contents</h3><table class=\"grid\"><tr><td>-</td><td><b>Attachment</b></td></tr><tr><td>*</td><td/></tr></table><h3>Contexts</h3><table class=\"grid\"><tr><td>-</td><td><b>Period</b></td></tr><tr><td>*</td><td>May 22, 2018, 2:00:00 PM --&gt; May 22, 2018, 2:01:00 PM</td></tr></table></div>"
+  },
+  "contained": [
+    {
+      "resourceType": "Patient",
+      "id": "p",
+      "identifier": [
+        {
+          "system": "https://omh.org/shimmer/patient_ids",
+          "value": "some-user"
+        }
+      ]
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234"
+    }
+  ],
+  "status": "current",
+  "type": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "55423-8",
+        "display": "Step Count"
+      }
+    ]
+  },
+  "class": {
+    "text": "OMH schema data"
+  },
+  "subject": {
+    "reference": "#p"
+  },
+  "created": "2018-05-22T09:35:00+11:00",
+  "indexed": "2018-05-22T09:35:00+11:00",
+  "content": [
+    {
+      "attachment": {
+        "contentType": "application/json",
+        "url": "https://R24Server/Binary/omh-stepcount-example"
+      }
+    }
+  ],
+  "context": {
+    "period": {
+      "start": "2018-05-23T08:00:00+11:00",
+      "end": "2018-05-23T08:01:00+11:00"
+    }
+  }
+}

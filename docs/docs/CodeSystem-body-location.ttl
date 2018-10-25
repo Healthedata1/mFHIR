@@ -1,0 +1,88 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://www.fhir.org/guides/mfhir/CodeSystem/body-location> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "body-location"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>body-location</h2><div><p>A location on the body. This is an incomplete value set. Values from the Anatomical or acquired body structure hierarchy of SNOMED can be added as needed.</p>\n</div><p>This code system http://www.fhir.org/guides/mfhir/CodeSystem/body-location defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">left ankle<a name=\"body-location-leftankle\"> </a></td><td>left ankle</td><td/></tr><tr><td style=\"white-space:nowrap\">right ankle<a name=\"body-location-rightankle\"> </a></td><td>right ankle</td><td/></tr><tr><td style=\"white-space:nowrap\">left hip<a name=\"body-location-lefthip\"> </a></td><td>left hip</td><td/></tr><tr><td style=\"white-space:nowrap\">right hip<a name=\"body-location-righthip\"> </a></td><td>right hip</td><td/></tr><tr><td style=\"white-space:nowrap\">left thigh<a name=\"body-location-leftthigh\"> </a></td><td>left thigh</td><td/></tr><tr><td style=\"white-space:nowrap\">right thigh<a name=\"body-location-rightthigh\"> </a></td><td>right thigh</td><td/></tr><tr><td style=\"white-space:nowrap\">left thorax<a name=\"body-location-leftthorax\"> </a></td><td>left thorax</td><td/></tr><tr><td style=\"white-space:nowrap\">middle left thorax<a name=\"body-location-middleleftthorax\"> </a></td><td>middle left thorax</td><td/></tr><tr><td style=\"white-space:nowrap\">left upper arm<a name=\"body-location-leftupperarm\"> </a></td><td>left upper arm</td><td/></tr><tr><td style=\"white-space:nowrap\">right upper arm<a name=\"body-location-rightupperarm\"> </a></td><td>right upper arm</td><td/></tr><tr><td style=\"white-space:nowrap\">left wrist<a name=\"body-location-leftwrist\"> </a></td><td>left wrist</td><td/></tr><tr><td style=\"white-space:nowrap\">right wrist<a name=\"body-location-rightwrist\"> </a></td><td>right wrist</td><td/></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://www.fhir.org/guides/mfhir/CodeSystem/body-location"];
+  fhir:CodeSystem.version [ fhir:value "0.0.0"];
+  fhir:CodeSystem.name [ fhir:value "body-location"];
+  fhir:CodeSystem.status [ fhir:value "draft"];
+  fhir:CodeSystem.date [ fhir:value "2018-04-28T08:55:00-07:00"^^xsd:dateTime];
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://www.openmhealth.org/" ]
+     ]
+  ];
+  fhir:CodeSystem.description [ fhir:value "A location on the body. This is an incomplete value set. Values from the Anatomical or acquired body structure hierarchy of SNOMED can be added as needed."];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.valueSet [ fhir:value "http://www.fhir.org/guides/mfhir/ValueSet/body-location"];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "left ankle" ];
+     fhir:CodeSystem.concept.display [ fhir:value "left ankle" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "right ankle" ];
+     fhir:CodeSystem.concept.display [ fhir:value "right ankle" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "left hip" ];
+     fhir:CodeSystem.concept.display [ fhir:value "left hip" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "right hip" ];
+     fhir:CodeSystem.concept.display [ fhir:value "right hip" ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "left thigh" ];
+     fhir:CodeSystem.concept.display [ fhir:value "left thigh" ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value "right thigh" ];
+     fhir:CodeSystem.concept.display [ fhir:value "right thigh" ]
+  ], [
+     fhir:index 6;
+     fhir:CodeSystem.concept.code [ fhir:value "left thorax" ];
+     fhir:CodeSystem.concept.display [ fhir:value "left thorax" ]
+  ], [
+     fhir:index 7;
+     fhir:CodeSystem.concept.code [ fhir:value "middle left thorax" ];
+     fhir:CodeSystem.concept.display [ fhir:value "middle left thorax" ]
+  ], [
+     fhir:index 8;
+     fhir:CodeSystem.concept.code [ fhir:value "left upper arm" ];
+     fhir:CodeSystem.concept.display [ fhir:value "left upper arm" ]
+  ], [
+     fhir:index 9;
+     fhir:CodeSystem.concept.code [ fhir:value "right upper arm" ];
+     fhir:CodeSystem.concept.display [ fhir:value "right upper arm" ]
+  ], [
+     fhir:index 10;
+     fhir:CodeSystem.concept.code [ fhir:value "left wrist" ];
+     fhir:CodeSystem.concept.display [ fhir:value "left wrist" ]
+  ], [
+     fhir:index 11;
+     fhir:CodeSystem.concept.code [ fhir:value "right wrist" ];
+     fhir:CodeSystem.concept.display [ fhir:value "right wrist" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://www.fhir.org/guides/mfhir/CodeSystem/body-location.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

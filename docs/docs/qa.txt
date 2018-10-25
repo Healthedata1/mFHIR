@@ -1,0 +1,448 @@
+﻿Open mHealth to FHIR : Validation Results
+=========================================
+
+err = 262, warn = 32, info = 4
+Generated Thu Oct 25 10:03:19 PDT 2018. FHIR version 3.6.0 for 3.0.1
+
+ Build Errors : 140 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/examples/binary-omh-stepcount-example : 0 / 1
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/examples/docref-omh-stepcount-example : 0 / 3
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/examples/observation-omh-stepcount-example : 0 / 1
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/StructureDefinition-omh-datapoint-template : 3 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/StructureDefinition-omh-header-logical-model : 3 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/StructureDefinition-omh-heart-rate-logical-model : 2 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/StructureDefinition-omh-step-count-logical-model : 2 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/ValueSet-datapoint-type : 1 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/capabilitystatement-client : 1 / 2
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/capabilitystatement-server : 1 / 2
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/ig : 0 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-acceleration : 3 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-ambient-temperature : 3 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-blood-glucose : 3 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-blood-pressure : 3 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-body-fat-percentage : 3 / 1
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-body-height : 3 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-body-mass-index : 3 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-body-temperature : 3 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-body-weight : 3 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-breath-carbon-monoxide : 3 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-calories-burned : 4 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-diastolic-blood-pressure : 2 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-expiratory-time : 3 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-geoposition : 2 / 1
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-inspiratory-time : 3 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-magnetic-force : 3 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-medication : 2 / 1
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-medication-adherence-percent : 3 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-medication-prescription : 2 / 1
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-minute-volume : 3 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-minutes-moderate-activity : 3 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-orientation : 3 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-oxygen-saturation : 3 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-pace : 3 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-patient-medication-schedule : 2 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-pharmacy-medication-dispensing : 3 / 1
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-physical-activity : 4 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-reason-single-medication-dose-not-taken : 3 / 1
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-respiratory-rate : 3 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-rr-interval : 3 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-single-medication-dose-taken : 3 / 1
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-sleep-duration : 2 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-sleep-episode : 2 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-speed : 3 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-systolic-blood-pressure : 2 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-ventilation-cycle-time : 3 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-codesystem-body-location : 0 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-codesystem-descriptive-statistic-denominator : 0 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-codesystem-intervention-administration-route : 0 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-codesystem-medication-dose-unit : 0 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-codesystem-specimen-source : 0 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-area-unit-value : 1 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-body-location : 0 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-body-posture : 1 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-day-of-week : 1 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-descriptive-statistic-denominator : 0 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-duration-unit-value : 1 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-intervention-administration-route : 0 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-length-unit-value : 1 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-magnetic-flux-density-unit-value : 1 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-mass-unit-value : 1 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-medication-dose-unit : 0 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-pace-unit-value : 1 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-part-of-day : 1 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-position-during-measurement : 1 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-specimen-source : 0 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-speed-unit-value : 1 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-temperature-unit-value : 1 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-temporal-relationship-to-meal : 1 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-temporal-relationship-to-physical-activity : 1 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-temporal-relationship-to-sleep : 1 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-volume-unit-value : 1 / 0
+ contained-p : 0 / 1
+ omh-dr : 0 / 1
+</table>
+== n/a ==
+ERROR: todo: The reference todo could not be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/toc.html#/html/head/body/div/div/div/div/div/div/p/a at Line 319, column 11: The link 'operations.html' for "Operations" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/toc.html#/html/head/body/div/div/div/div/div/div/p/a at Line 377, column 11: The link 'searchparameters.html' for "Search Parameters" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/toc.html#/html/head/body/div/div/div/div/div/div/p/a at Line 385, column 11: The link 'security.html' for "Security" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/ul/li/a at Line 321, column 8: The link 'http://hl7.org/fhir/STU3/MedicationDispense.html' for "MedicationDispense" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/ul/li/a at Line 352, column 94: The link 'http://hl7.org/fhir/STU3/https://www.hl7.org/fhir/structuredefinition.html#logical' for "Pattern" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 395, column 12: The link 'valueset-body-location.html' for "body-location" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 401, column 12: The link 'valueset-body-posture.html' for "body-posture" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 407, column 12: The link 'valueset-day-of-week.html' for "day-of-week" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 419, column 12: The link 'valueset-descriptive-statistic-denominator.html' for "descriptive-statistic-denominator" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 425, column 12: The link 'valueset-intervention-administration-route.html' for "intervention-administration-route" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 431, column 12: The link 'valueset-medication-dose-unit.html' for "medication-dose-unit" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 437, column 12: The link 'valueset-part-of-day.html' for "part-of-day" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 443, column 12: The link 'valueset-position-during-measurement.html' for "position-during-measurement" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 449, column 12: The link 'valueset-specimen-source.html' for "specimen-source" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 455, column 12: The link 'valueset-temporal-relationship-to-meal.html' for "temporal-relationship-to-meal" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 461, column 12: The link 'valueset-temporal-relationship-to-physical-activity.html' for "temporal-relationship-to-physical-activity" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 467, column 12: The link 'valueset-temporal-relationship-to-sleep.html' for "temporal-relationship-to-sleep" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 485, column 12: The link 'valueset-area-unit-value.html' for "area-unit-value" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 491, column 12: The link 'valueset-duration-unit-value.html' for "duration-unit-value" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 497, column 12: The link 'valueset-duration-unit-value.html' for "duration-unit-value" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 503, column 12: The link 'valueset-duration-unit-value.html' for "duration-unit-value" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 515, column 12: The link 'valueset-length-unit-value.html' for "length-unit-value" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 521, column 12: The link 'valueset-magnetic-flux-density-unit-value.html' for "magnetic-flux-density-unit-value" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 527, column 12: The link 'valueset-mass-unit-value.html' for "mass-unit-value" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 533, column 12: The link 'valueset-medication-dose-unit.html' for "medication-dose-unit" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 539, column 12: The link 'valueset-medication-dose-unit.html' for "medication-dose-unit-value" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 545, column 12: The link 'valueset-pace-unit-value.html' for "pace-unit-value" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 557, column 12: The link 'valueset-speed-unit-value.html' for "speed-unit-value" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 563, column 12: The link 'valueset-temperature-unit-value.html' for "temperature-unit-value" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 581, column 12: The link 'valueset-volume-unit-value.html' for "volume-unit-value" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/p/a at Line 880, column 171: The link 'StructureDefinition-omh-data-point.html#sd-3-2-mappings' for "mapping table" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/p/a at Line 880, column 325: The link 'StructureDefinition-omh-data-point.html#sd-3-1formal-views-of-profile-content' for "StructureDefinition" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/p/a at Line 882, column 393: The link 'StructureDefinition-omh-step-count.html#sd-1-2-mappings' for "mapping table" cannot be resolved (valid targets: [page-content-wrapper, OmhStepCount, OmhStepCount.descriptiveStatisticDenominator, OmhStepCount.omhHeader, publish-box, segment-post-footer, omh-schema, all-tbl-diff, example, stripe, segment-footer, OmhStepCount.effectiveTimeFrame, OmhStepCount.stepCount, fhir-observation, introduction, summary, scope-and-usage, segment-header, profile, all-tbl-summ, mapping-tables, all-tbl-summ-inner, tabs-all, back-to-top, all-tbl-diff-inner, segment-navbar, OmhStepCount.descriptiveStatistic, project-status])
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/guidance.html#/html/head/body/div/div/div/div/div/div/p/a at Line 933, column 352: The link 'StructureDefinition-omh-data-point.html#sd-3-2-mappings' for "mapping table" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 5897, column 18: The link '' for "Binary Omh Stepcount Example " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 5927, column 18: The link '' for "Capabilitystatement Client " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 5957, column 18: The link '' for "Capabilitystatement Server " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 5987, column 18: The link '' for "Codesystem Body Location " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 6017, column 18: The link '' for "Codesystem Descriptive Statistic Denominator " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 6047, column 18: The link '' for "Codesystem Intervention Administration Route " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 6077, column 18: The link '' for "Codesystem Medication Dose Unit " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 6107, column 18: The link '' for "Codesystem Specimen Source " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 6137, column 18: The link '' for "Documentreference Omh Stepcount Example " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 6167, column 18: The link '' for "Implementationguide Ig " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 6197, column 18: The link '' for "Observation Stepcount Example " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 6235, column 18: The link '' for "Structuredefinition Contained P " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 6273, column 18: The link '' for "Structuredefinition Omh Acceleration " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 6311, column 18: The link '' for "Structuredefinition Omh Ambient Temperature " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 6349, column 18: The link '' for "Structuredefinition Omh Blood Glucose " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 6387, column 18: The link '' for "Structuredefinition Omh Blood Pressure " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 6425, column 18: The link '' for "Structuredefinition Omh Body Fat Percentage " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 6463, column 18: The link '' for "Structuredefinition Omh Body Height " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 6501, column 18: The link '' for "Structuredefinition Omh Body Mass Index " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 6539, column 18: The link '' for "Structuredefinition Omh Body Temperature " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 6577, column 18: The link '' for "Structuredefinition Omh Body Weight " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 6615, column 18: The link '' for "Structuredefinition Omh Breath Carbon Monoxide " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 6653, column 18: The link '' for "Structuredefinition Omh Calories Burned " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 6691, column 18: The link '' for "Structuredefinition Omh Datapoint Template " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 6729, column 18: The link '' for "Structuredefinition Omh Diastolic Blood Pressure " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 6767, column 18: The link '' for "Structuredefinition Omh Dr " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 6805, column 18: The link '' for "Structuredefinition Omh Expiratory Time " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 6843, column 18: The link '' for "Structuredefinition Omh Geoposition " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 6881, column 18: The link '' for "Structuredefinition Omh Header " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 6919, column 18: The link '' for "Structuredefinition Omh Heart Rate " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 6957, column 18: The link '' for "Structuredefinition Omh Inspiratory Time " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 6995, column 18: The link '' for "Structuredefinition Omh Magnetic Force " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 7033, column 18: The link '' for "Structuredefinition Omh Medication Adherence Percent " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 7079, column 18: The link '' for "Structuredefinition Omh Medication Prescription " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 7109, column 18: The link '' for "Structuredefinition Omh Medication " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 7147, column 18: The link '' for "Structuredefinition Omh Minute Volume " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 7185, column 18: The link '' for "Structuredefinition Omh Minutes Moderate Activity " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 7223, column 18: The link '' for "Structuredefinition Omh Orientation " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 7261, column 18: The link '' for "Structuredefinition Omh Oxygen Saturation " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 7299, column 18: The link '' for "Structuredefinition Omh Pace " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 7337, column 18: The link '' for "Structuredefinition Omh Patient Medication Schedule " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 7375, column 18: The link '' for "Structuredefinition Omh Pharmacy Medication Dispensing " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 7413, column 18: The link '' for "Structuredefinition Omh Physical Activity " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 7451, column 18: The link '' for "Structuredefinition Omh Reason Single Medication Dose Not Taken " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 7489, column 18: The link '' for "Structuredefinition Omh Respiratory Rate " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 7527, column 18: The link '' for "Structuredefinition Omh Rr Interval " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 7565, column 18: The link '' for "Structuredefinition Omh Single Medication Dose Taken " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 7603, column 18: The link '' for "Structuredefinition Omh Sleep Duration " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 7641, column 18: The link '' for "Structuredefinition Omh Sleep Episode " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 7679, column 18: The link '' for "Structuredefinition Omh Speed " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 7717, column 18: The link '' for "Structuredefinition Omh Step Count " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 7755, column 18: The link '' for "Structuredefinition Omh Systolic Blood Pressure " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 7793, column 18: The link '' for "Structuredefinition Omh Ventilation Cycle Time " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 7823, column 18: The link '' for "Valueset Area Unit Value " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 7853, column 18: The link '' for "Valueset Body Location " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 7883, column 18: The link '' for "Valueset Body Posture " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 7913, column 18: The link '' for "Valueset Day Of Week " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 7943, column 18: The link '' for "Valueset Descriptive Statistic Denominator " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 7973, column 18: The link '' for "Valueset Dp Type " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 8003, column 18: The link '' for "Valueset Duration Unit Value " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 8033, column 18: The link '' for "Valueset Intervention Administration Route " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 8063, column 18: The link '' for "Valueset Length Unit Value " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 8093, column 18: The link '' for "Valueset Magnetic Flux Density Unit Value " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 8123, column 18: The link '' for "Valueset Mass Unit Value " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 8153, column 18: The link '' for "Valueset Medication Dose Unit " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 8183, column 18: The link '' for "Valueset Pace Unit Value " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 8213, column 18: The link '' for "Valueset Part Of Day " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 8243, column 18: The link '' for "Valueset Position During Measurement " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 8273, column 18: The link '' for "Valueset Specimen Source " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 8303, column 18: The link '' for "Valueset Speed Unit Value " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 8333, column 18: The link '' for "Valueset Temperature Unit Value " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 8363, column 18: The link '' for "Valueset Temporal Relationship To Meal " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 8393, column 18: The link '' for "Valueset Temporal Relationship To Physical Activity " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 8423, column 18: The link '' for "Valueset Temporal Relationship To Sleep " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 8453, column 18: The link '' for "Valueset Volume Unit Value " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 8483, column 18: The link '' for "All Examples " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 8501, column 18: The link '' for "Capstatements " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 8519, column 18: The link '' for "Downloads " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 8537, column 18: The link '' for "Guidance " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 8555, column 18: The link '' for "Heartrate Example " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 8573, column 18: The link '' for "History " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 8591, column 18: The link '' for "Html_pages " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 8609, column 18: The link '' for "Index " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 8627, column 18: The link '' for "Profiles " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 8645, column 18: The link '' for "Structuremaps " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 8663, column 18: The link '' for "Terminology " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 8681, column 18: The link '' for "Toc " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 8699, column 18: The link '' for "Todo " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/downloads.html#/html/head/body/div/div/div/div/div/div/p/a at Line 241, column 349: The link 'http://hl7.org/fhir/STU3//validation.html' for "validating FHIR profiles and resources" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/index.html#/html/head/body/div/div/div/div/div/div/ul/li/ul/li/a at Line 236, column 12: The link '#description' for "Description" cannot be resolved (valid targets: [page-content-wrapper, get_fhir_resource_response_example, publish-box, get_omh_schema_binary_response_example, segment-post-footer, markdown-toc-open-mhealth-to-fhir-overview, markdown-toc-base-use-case, markdown-toc-actors, example, fetch-fhir-observation-representing-the-omh-step-count-data--steps-3-6, stripe, segment-footer, markdown-toc-smart-app-workflow, segment-header, markdown-toc-assumptions-pre-conditions-and-constraints, example-1, markdown-toc-r24-server, markdown-toc-basic-flow, markdown-toc, markdown-toc-description, launch-smart-on-fhir-app-steps-1-and-2-1, r24-server, fetch-fhir-documentreference-resources-containing-omh-step-count-data--steps-3-6, retrieving-omh-data-as-fhir-observations, back-to-top, segment-navbar, launch-smart-on-fhir-app-steps-1-and-2, fetch-native-omh-step-count-data--steps-7-10, project-status, open-mhealth-to-fhir-overview, get_omh_schema_dr_response_example, base-use-case])
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/index.html#/html/head/body/div/div/div/div/div/div/ul/li/ul/li/a at Line 237, column 12: The link '#actors' for "Actors" cannot be resolved (valid targets: [page-content-wrapper, get_fhir_resource_response_example, publish-box, get_omh_schema_binary_response_example, segment-post-footer, markdown-toc-open-mhealth-to-fhir-overview, markdown-toc-base-use-case, markdown-toc-actors, example, fetch-fhir-observation-representing-the-omh-step-count-data--steps-3-6, stripe, segment-footer, markdown-toc-smart-app-workflow, segment-header, markdown-toc-assumptions-pre-conditions-and-constraints, example-1, markdown-toc-r24-server, markdown-toc-basic-flow, markdown-toc, markdown-toc-description, launch-smart-on-fhir-app-steps-1-and-2-1, r24-server, fetch-fhir-documentreference-resources-containing-omh-step-count-data--steps-3-6, retrieving-omh-data-as-fhir-observations, back-to-top, segment-navbar, launch-smart-on-fhir-app-steps-1-and-2, fetch-native-omh-step-count-data--steps-7-10, project-status, open-mhealth-to-fhir-overview, get_omh_schema_dr_response_example, base-use-case])
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/index.html#/html/head/body/div/div/div/div/div/div/ul/li/ul/li/a at Line 238, column 12: The link '#assumptions-pre-conditions-and-constraints' for "Assumptions, Pre-Conditions and Constraints" cannot be resolved (valid targets: [page-content-wrapper, get_fhir_resource_response_example, publish-box, get_omh_schema_binary_response_example, segment-post-footer, markdown-toc-open-mhealth-to-fhir-overview, markdown-toc-base-use-case, markdown-toc-actors, example, fetch-fhir-observation-representing-the-omh-step-count-data--steps-3-6, stripe, segment-footer, markdown-toc-smart-app-workflow, segment-header, markdown-toc-assumptions-pre-conditions-and-constraints, example-1, markdown-toc-r24-server, markdown-toc-basic-flow, markdown-toc, markdown-toc-description, launch-smart-on-fhir-app-steps-1-and-2-1, r24-server, fetch-fhir-documentreference-resources-containing-omh-step-count-data--steps-3-6, retrieving-omh-data-as-fhir-observations, back-to-top, segment-navbar, launch-smart-on-fhir-app-steps-1-and-2, fetch-native-omh-step-count-data--steps-7-10, project-status, open-mhealth-to-fhir-overview, get_omh_schema_dr_response_example, base-use-case])
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/index.html#/html/head/body/div/div/div/div/div/div/ul/li/ul/li/a at Line 239, column 12: The link '#basic-flow' for "Basic Flow" cannot be resolved (valid targets: [page-content-wrapper, get_fhir_resource_response_example, publish-box, get_omh_schema_binary_response_example, segment-post-footer, markdown-toc-open-mhealth-to-fhir-overview, markdown-toc-base-use-case, markdown-toc-actors, example, fetch-fhir-observation-representing-the-omh-step-count-data--steps-3-6, stripe, segment-footer, markdown-toc-smart-app-workflow, segment-header, markdown-toc-assumptions-pre-conditions-and-constraints, example-1, markdown-toc-r24-server, markdown-toc-basic-flow, markdown-toc, markdown-toc-description, launch-smart-on-fhir-app-steps-1-and-2-1, r24-server, fetch-fhir-documentreference-resources-containing-omh-step-count-data--steps-3-6, retrieving-omh-data-as-fhir-observations, back-to-top, segment-navbar, launch-smart-on-fhir-app-steps-1-and-2, fetch-native-omh-step-count-data--steps-7-10, project-status, open-mhealth-to-fhir-overview, get_omh_schema_dr_response_example, base-use-case])
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/index.html#/html/head/body/div/div/div/div/div/div/ul/li/ul/li/a at Line 240, column 12: The link '#smart-app-workflow' for "Smart app Workflow" cannot be resolved (valid targets: [page-content-wrapper, get_fhir_resource_response_example, publish-box, get_omh_schema_binary_response_example, segment-post-footer, markdown-toc-open-mhealth-to-fhir-overview, markdown-toc-base-use-case, markdown-toc-actors, example, fetch-fhir-observation-representing-the-omh-step-count-data--steps-3-6, stripe, segment-footer, markdown-toc-smart-app-workflow, segment-header, markdown-toc-assumptions-pre-conditions-and-constraints, example-1, markdown-toc-r24-server, markdown-toc-basic-flow, markdown-toc, markdown-toc-description, launch-smart-on-fhir-app-steps-1-and-2-1, r24-server, fetch-fhir-documentreference-resources-containing-omh-step-count-data--steps-3-6, retrieving-omh-data-as-fhir-observations, back-to-top, segment-navbar, launch-smart-on-fhir-app-steps-1-and-2, fetch-native-omh-step-count-data--steps-7-10, project-status, open-mhealth-to-fhir-overview, get_omh_schema_dr_response_example, base-use-case])
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/index.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 529, column 56: The link '(http://docs.smarthealthit.org/authorization/)' for "Smart on FHIR Launch" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/index.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 537, column 111: The link '(http://hl7.org/fhir/STU3/search.html)' for "FHIR search API" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/index.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/em/a at Line 537, column 225: The link '(http://hl7.org/fhir/STU3/documentreference.html)' for "DocumentReference" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/index.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 541, column 326: The link '(http://hl7.org/fhir/STU3/binary.html)' for "Binary" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/index.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 549, column 245: The link '(http://hl7.org/fhir/STU3/binary.html#rest)' for "FHIR API for Binary data" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/index.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 573, column 20: The link '(http://docs.smarthealthit.org/authorization/)' for "Smart on FHIR Launch" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/index.html#/html/head/body/div/div/div/div/div/div/ol/li/ol/li/a at Line 619, column 20: The link '(http://hl7.org/fhir/STU3/references#contained.html)' for "contained" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/index.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 769, column 12: The link 'http://hl7.org/fhir/STU3/html.html' for "http://hl7.org/fhir/STU3/html.html" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/index.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 904, column 20: The link '(http://docs.smarthealthit.org/authorization/)' for "Smart on FHIR Launch" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/index.html#/html/head/body/div/div/div/div/div/div/ol/li/ol/li/a at Line 951, column 20: The link '(http://hl7.org/fhir/STU3/references#contained.html)' for "contained" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/index.html#/html/head/body/div/div/div/div/div/div/p/a at Line 1083, column 80: The link ':https://www.getpostman.com/collections/0a54cd0197a5f2fc98d4' for "Postman Collection" cannot be resolved
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/examples/binary-omh-stepcount-example.xml ==
+WARNING: Binary/omh-stepcount-example: Binary.contentType: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/examples/docref-omh-stepcount-example.json ==
+INFORMATION: DocumentReference/omh-stepcount-example: DocumentReference.type: None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/c80-doc-typecodes (http://hl7.org/fhir/ValueSet/c80-doc-typecodes, and a code is recommended to come from this value set) (codes = http://loinc.org#55423-8)
+WARNING: DocumentReference/omh-stepcount-example: DocumentReference.type.coding: The display "Step Count" is not a valid display for the code {http://loinc.org}55423-8 - should be one of ["Number of steps in unspecified time Pedometer","# steps ?Tm nRate Pedometer"]
+WARNING: DocumentReference/omh-stepcount-example: DocumentReference.content.attachment.contentType: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/examples/observation-omh-stepcount-example.json ==
+INFORMATION: Observation/stepcount-example: Observation.category: None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/observation-category (http://hl7.org/fhir/ValueSet/observation-category, and a code is recommended to come from this value set) (codes = http://snomed.info/sct#68130003)
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/StructureDefinition-omh-datapoint-template.json ==
+ERROR: StructureDefinition/omh-datapoint-template: StructureDefinition.differential: In any differential, all the elements must be in the specified type [element.first().path.startsWith(%resource.type) and element.tail().all(path.startsWith(%resource.type&'.'))]
+ERROR: omh-datapoint-template: missing Snapshot at OmhDatapointTemplate.OmhDatapointTemplate
+ERROR: omh-datapoint-template: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/StructureDefinition-omh-header-logical-model.xml ==
+ERROR: StructureDefinition/omh-header: StructureDefinition.differential: If the first element in a differential has no "." in the path, it has no type [element.first().path.contains('.').not() implies element.first().type.empty()]
+ERROR: omh-header: missing Snapshot at OMHHeader.OMHHeader
+ERROR: omh-header: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/StructureDefinition-omh-heart-rate-logical-model.xml ==
+ERROR: omh-heart-rate: missing Snapshot at OMHHeartRate.OMHHeartRate
+ERROR: omh-heart-rate: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/StructureDefinition-omh-step-count-logical-model.xml ==
+ERROR: omh-step-count: missing Snapshot at OMHStepCount.OMHStepCount
+ERROR: omh-step-count: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/ValueSet-datapoint-type.xml ==
+ERROR: dp-type: org.hl7.fhir.dstu3.model.ExpansionProfile cannot be cast to org.hl7.fhir.dstu3.model.Parameters
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/capabilitystatement-client.xml ==
+WARNING: CapabilityStatement/client: CapabilityStatement.format[1]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+WARNING: CapabilityStatement/client: CapabilityStatement.format[2]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+ERROR: CapabilityStatement/client: CapabilityStatement.profile: Unable to resolve resource 'http://www.fhir.org/guides/mfhir/StructureDefinition/template-basic'
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/capabilitystatement-server.xml ==
+WARNING: CapabilityStatement/server: CapabilityStatement.format[1]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+WARNING: CapabilityStatement/server: CapabilityStatement.format[2]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+ERROR: CapabilityStatement/server: CapabilityStatement.profile: Unable to resolve resource 'http://www.fhir.org/guides/mfhir/StructureDefinition/template-basic'
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/ig.xml ==
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-acceleration.json ==
+ERROR: /StructureDefinition/differential/element/pattern[x]: Object must have some content
+ERROR: omh-acceleration: missing Snapshot at OmhAcceleration.OmhAcceleration
+ERROR: omh-acceleration: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-ambient-temperature.json ==
+ERROR: /StructureDefinition/differential/element/pattern[x]: Object must have some content
+ERROR: omh-ambient-temperature: missing Snapshot at OmhAmbientTemperature.OmhAmbientTemperature
+ERROR: omh-ambient-temperature: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-blood-glucose.json ==
+ERROR: /StructureDefinition/differential/element/pattern[x]: Object must have some content
+ERROR: omh-blood-glucose: missing Snapshot at OmhBloodGlucose.OmhBloodGlucose
+ERROR: omh-blood-glucose: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-blood-pressure.json ==
+ERROR: /StructureDefinition/differential/element/pattern[x]: Object must have some content
+ERROR: omh-blood-pressure: missing Snapshot at OmhBloodPressure.OmhBloodPressure
+ERROR: omh-blood-pressure: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-body-fat-percentage.json ==
+ERROR: /StructureDefinition/differential/element/pattern[x]: Object must have some content
+WARNING: StructureDefinition/omh-body-fat-percentage: StructureDefinition.differential.element[1].mapping[2].map: value should not start or finish with whitespace
+ERROR: omh-body-fat-percentage: missing Snapshot at OmhBodyFatPercentage.OmhBodyFatPercentage
+ERROR: omh-body-fat-percentage: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-body-height.json ==
+ERROR: /StructureDefinition/differential/element/pattern[x]: Object must have some content
+ERROR: omh-body-height: missing Snapshot at OmhBodyHeight.OmhBodyHeight
+ERROR: omh-body-height: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-body-mass-index.json ==
+ERROR: /StructureDefinition/differential/element/pattern[x]: Object must have some content
+ERROR: omh-body-mass-index: missing Snapshot at OmhBodyMassIndex.OmhBodyMassIndex
+ERROR: omh-body-mass-index: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-body-temperature.json ==
+ERROR: /StructureDefinition/differential/element/pattern[x]: Object must have some content
+ERROR: omh-body-temperature: missing Snapshot at OmhBodyTemperature.OmhBodyTemperature
+ERROR: omh-body-temperature: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-body-weight.json ==
+ERROR: /StructureDefinition/differential/element/pattern[x]: Object must have some content
+ERROR: omh-body-weight: missing Snapshot at OmhBodyWeight.OmhBodyWeight
+ERROR: omh-body-weight: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-breath-carbon-monoxide.json ==
+ERROR: /StructureDefinition/differential/element/pattern[x]: Object must have some content
+ERROR: omh-breath-carbon-monoxide: missing Snapshot at OmhBreathCarbonMonoxide.OmhBreathCarbonMonoxide
+ERROR: omh-breath-carbon-monoxide: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-calories-burned.json ==
+ERROR: /StructureDefinition/differential/element/pattern[x]: Object must have some content
+ERROR: StructureDefinition/omh-calories-burned: StructureDefinition.differential.element[4].binding: provide either a reference or a description (or both) [valueSet.exists() or description.exists()]
+ERROR: omh-calories-burned: missing Snapshot at OmhCaloriesBurned.OmhCaloriesBurned
+ERROR: omh-calories-burned: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-diastolic-blood-pressure.json ==
+ERROR: omh-diastolic-blood-pressure: missing Snapshot at OmhDiastolicBloodPressure.OmhDiastolicBloodPressure
+ERROR: omh-diastolic-blood-pressure: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-expiratory-time.json ==
+ERROR: /StructureDefinition/differential/element/pattern[x]: Object must have some content
+ERROR: omh-expiratory-time: missing Snapshot at OmhExpiratoryTime.OmhExpiratoryTime
+ERROR: omh-expiratory-time: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-geoposition.json ==
+WARNING: StructureDefinition/omh-geoposition: StructureDefinition.differential.element[1].mapping[2].map: value should not start or finish with whitespace
+ERROR: omh-geoposition: missing Snapshot at OmhGeoposition.OmhGeoposition
+ERROR: omh-geoposition: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-inspiratory-time.json ==
+ERROR: /StructureDefinition/differential/element/pattern[x]: Object must have some content
+ERROR: omh-inspiratory-time: missing Snapshot at OmhInspiratoryTime.OmhInspiratoryTime
+ERROR: omh-inspiratory-time: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-magnetic-force.json ==
+ERROR: /StructureDefinition/differential/element/pattern[x]: Object must have some content
+ERROR: omh-magnetic-force: missing Snapshot at OmhMagneticForce.OmhMagneticForce
+ERROR: omh-magnetic-force: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-medication.json ==
+WARNING: StructureDefinition/omh-medication: StructureDefinition.differential.element[1].mapping[2].map: value should not start or finish with whitespace
+ERROR: omh-medication: missing Snapshot at OmhMedication.OmhMedication
+ERROR: omh-medication: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-medication-adherence-percent.json ==
+ERROR: /StructureDefinition/differential/element/pattern[x]: Object must have some content
+ERROR: omh-medication-adherence-percent: missing Snapshot at OmhMedicationAdherencePercent.OmhMedicationAdherencePercent
+ERROR: omh-medication-adherence-percent: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-medication-prescription.json ==
+WARNING: StructureDefinition/omh-medication-prescription: StructureDefinition.differential.element[1].mapping[2].map: value should not start or finish with whitespace
+ERROR: omh-medication-prescription: missing Snapshot at OmhMedicationPrescription.OmhMedicationPrescription
+ERROR: omh-medication-prescription: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-minute-volume.json ==
+ERROR: /StructureDefinition/differential/element/pattern[x]: Object must have some content
+ERROR: omh-minute-volume: missing Snapshot at OmhMinuteVolume.OmhMinuteVolume
+ERROR: omh-minute-volume: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-minutes-moderate-activity.json ==
+ERROR: /StructureDefinition/differential/element/pattern[x]: Object must have some content
+ERROR: omh-minutes-moderate-activity: missing Snapshot at OmhMinutesModerateActivity.OmhMinutesModerateActivity
+ERROR: omh-minutes-moderate-activity: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-orientation.json ==
+ERROR: /StructureDefinition/differential/element/pattern[x]: Object must have some content
+ERROR: omh-orientation: missing Snapshot at OmhOrientation.OmhOrientation
+ERROR: omh-orientation: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-oxygen-saturation.json ==
+ERROR: /StructureDefinition/differential/element/pattern[x]: Object must have some content
+ERROR: omh-oxygen-saturation: missing Snapshot at OmhOxygenSaturation.OmhOxygenSaturation
+ERROR: omh-oxygen-saturation: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-pace.json ==
+ERROR: /StructureDefinition/differential/element/pattern[x]: Object must have some content
+ERROR: omh-pace: missing Snapshot at OmhPace.OmhPace
+ERROR: omh-pace: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-patient-medication-schedule.json ==
+ERROR: omh-patient-medication-schedule: missing Snapshot at OmhPatientMedicationSchedule.OmhPatientMedicationSchedule
+ERROR: omh-patient-medication-schedule: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-pharmacy-medication-dispensing.json ==
+ERROR: /StructureDefinition/differential/element/pattern[x]: Object must have some content
+WARNING: StructureDefinition/omh-pharmacy-medication-dispensing: StructureDefinition.differential.element[1].mapping[2].map: value should not start or finish with whitespace
+ERROR: omh-pharmacy-medication-dispensing: missing Snapshot at OmhPharmacyMedicationDispensing.OmhPharmacyMedicationDispensing
+ERROR: omh-pharmacy-medication-dispensing: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-physical-activity.json ==
+ERROR: /StructureDefinition/differential/element/pattern[x]: Object must have some content
+ERROR: StructureDefinition/omh-physical-activity: StructureDefinition.differential.element[3].binding: provide either a reference or a description (or both) [valueSet.exists() or description.exists()]
+ERROR: omh-physical-activity: missing Snapshot at OmhPhysicalActivity.OmhPhysicalActivity
+ERROR: omh-physical-activity: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-reason-single-medication-dose-not-taken.json ==
+ERROR: /StructureDefinition/differential/element/pattern[x]: Object must have some content
+WARNING: StructureDefinition/omh-reason-single-medication-dose-not-taken: StructureDefinition.differential.element[1].mapping[2].map: value should not start or finish with whitespace
+ERROR: omh-reason-single-medication-dose-not-taken: missing Snapshot at OmhReasonSingleMedicationDoseNotTaken.OmhReasonSingleMedicationDoseNotTaken
+ERROR: omh-reason-single-medication-dose-not-taken: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-respiratory-rate.json ==
+ERROR: /StructureDefinition/differential/element/pattern[x]: Object must have some content
+ERROR: omh-respiratory-rate: missing Snapshot at OmhRespiratoryRate.OmhRespiratoryRate
+ERROR: omh-respiratory-rate: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-rr-interval.json ==
+ERROR: /StructureDefinition/differential/element/pattern[x]: Object must have some content
+ERROR: omh-rr-interval: missing Snapshot at OmhRrInterval.OmhRrInterval
+ERROR: omh-rr-interval: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-single-medication-dose-taken.json ==
+ERROR: /StructureDefinition/differential/element/pattern[x]: Object must have some content
+WARNING: StructureDefinition/omh-single-medication-dose-taken: StructureDefinition.differential.element[1].mapping[2].map: value should not start or finish with whitespace
+ERROR: omh-single-medication-dose-taken: missing Snapshot at OmhSingleMedicationDoseTaken.OmhSingleMedicationDoseTaken
+ERROR: omh-single-medication-dose-taken: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-sleep-duration.json ==
+ERROR: omh-sleep-duration: missing Snapshot at OmhSleepDuration.OmhSleepDuration
+ERROR: omh-sleep-duration: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-sleep-episode.json ==
+ERROR: omh-sleep-episode: missing Snapshot at OmhSleepEpisode.OmhSleepEpisode
+ERROR: omh-sleep-episode: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-speed.json ==
+ERROR: /StructureDefinition/differential/element/pattern[x]: Object must have some content
+ERROR: omh-speed: missing Snapshot at OmhSpeed.OmhSpeed
+ERROR: omh-speed: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-systolic-blood-pressure.json ==
+ERROR: omh-systolic-blood-pressure: missing Snapshot at OmhSystolicBloodPressure.OmhSystolicBloodPressure
+ERROR: omh-systolic-blood-pressure: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-StructureDefinition-omh-ventilation-cycle-time.json ==
+ERROR: /StructureDefinition/differential/element/pattern[x]: Object must have some content
+ERROR: omh-ventilation-cycle-time: missing Snapshot at OmhVentilationCycleTime.OmhVentilationCycleTime
+ERROR: omh-ventilation-cycle-time: A snapshot is required
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-codesystem-body-location.json ==
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-codesystem-descriptive-statistic-denominator.json ==
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-codesystem-intervention-administration-route.json ==
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-codesystem-medication-dose-unit.json ==
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-codesystem-specimen-source.json ==
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-area-unit-value.json ==
+ERROR: area-unit-value: org.hl7.fhir.dstu3.model.ExpansionProfile cannot be cast to org.hl7.fhir.dstu3.model.Parameters
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-body-location.json ==
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-body-posture.json ==
+ERROR: body-posture: org.hl7.fhir.dstu3.model.ExpansionProfile cannot be cast to org.hl7.fhir.dstu3.model.Parameters
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-day-of-week.json ==
+ERROR: day-of-week: org.hl7.fhir.dstu3.model.ExpansionProfile cannot be cast to org.hl7.fhir.dstu3.model.Parameters
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-descriptive-statistic-denominator.json ==
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-duration-unit-value.json ==
+ERROR: duration-unit-value: org.hl7.fhir.dstu3.model.ExpansionProfile cannot be cast to org.hl7.fhir.dstu3.model.Parameters
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-intervention-administration-route.json ==
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-length-unit-value.json ==
+ERROR: length-unit-value: org.hl7.fhir.dstu3.model.ExpansionProfile cannot be cast to org.hl7.fhir.dstu3.model.Parameters
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-magnetic-flux-density-unit-value.json ==
+ERROR: magnetic-flux-density-unit-value: org.hl7.fhir.dstu3.model.ExpansionProfile cannot be cast to org.hl7.fhir.dstu3.model.Parameters
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-mass-unit-value.json ==
+ERROR: mass-unit-value: org.hl7.fhir.dstu3.model.ExpansionProfile cannot be cast to org.hl7.fhir.dstu3.model.Parameters
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-medication-dose-unit.json ==
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-pace-unit-value.json ==
+ERROR: pace-unit-value: org.hl7.fhir.dstu3.model.ExpansionProfile cannot be cast to org.hl7.fhir.dstu3.model.Parameters
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-part-of-day.json ==
+ERROR: part-of-day: org.hl7.fhir.dstu3.model.ExpansionProfile cannot be cast to org.hl7.fhir.dstu3.model.Parameters
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-position-during-measurement.json ==
+ERROR: position-during-measurement: org.hl7.fhir.dstu3.model.ExpansionProfile cannot be cast to org.hl7.fhir.dstu3.model.Parameters
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-specimen-source.json ==
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-speed-unit-value.json ==
+ERROR: speed-unit-value: org.hl7.fhir.dstu3.model.ExpansionProfile cannot be cast to org.hl7.fhir.dstu3.model.Parameters
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-temperature-unit-value.json ==
+ERROR: temperature-unit-value: org.hl7.fhir.dstu3.model.ExpansionProfile cannot be cast to org.hl7.fhir.dstu3.model.Parameters
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-temporal-relationship-to-meal.json ==
+ERROR: temporal-relationship-to-meal: org.hl7.fhir.dstu3.model.ExpansionProfile cannot be cast to org.hl7.fhir.dstu3.model.Parameters
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-temporal-relationship-to-physical-activity.json ==
+ERROR: temporal-relationship-to-physical-activity: org.hl7.fhir.dstu3.model.ExpansionProfile cannot be cast to org.hl7.fhir.dstu3.model.Parameters
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-temporal-relationship-to-sleep.json ==
+ERROR: temporal-relationship-to-sleep: org.hl7.fhir.dstu3.model.ExpansionProfile cannot be cast to org.hl7.fhir.dstu3.model.Parameters
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/pygen-valueset-volume-unit-value.json ==
+ERROR: volume-unit-value: org.hl7.fhir.dstu3.model.ExpansionProfile cannot be cast to org.hl7.fhir.dstu3.model.Parameters
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/contained-p-spreadsheet.xml ==
+WARNING: http://www.fhir.org/guides/mfhir/StructureDefinition/contained-p: Profiles SHOULD state the FHIR Version on which they are based
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/dr-profile-spreadsheet.xml ==
+WARNING: http://www.fhir.org/guides/mfhir/StructureDefinition/omh-dr: Profiles SHOULD state the FHIR Version on which they are based

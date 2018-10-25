@@ -1,0 +1,64 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://www.fhir.org/guides/mfhir/CodeSystem/specimen-source> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "specimen-source"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>specimen-source</h2><div><p>The specimen analyzed. The current value set is taken from the SNOMED CT Body substance sample (specimen) hierarchy without the word 'specimen'. More values will be added as needed.</p>\n</div><p>This code system http://www.fhir.org/guides/mfhir/CodeSystem/specimen-source defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">interstitial fluid<a name=\"specimen-source-interstitialfluid\"> </a></td><td>interstitial fluid</td><td/></tr><tr><td style=\"white-space:nowrap\">capillary blood<a name=\"specimen-source-capillaryblood\"> </a></td><td>capillary blood</td><td/></tr><tr><td style=\"white-space:nowrap\">plasma<a name=\"specimen-source-plasma\"> </a></td><td>plasma</td><td/></tr><tr><td style=\"white-space:nowrap\">serum<a name=\"specimen-source-serum\"> </a></td><td>serum</td><td/></tr><tr><td style=\"white-space:nowrap\">tears<a name=\"specimen-source-tears\"> </a></td><td>tears</td><td/></tr><tr><td style=\"white-space:nowrap\">whole blood<a name=\"specimen-source-wholeblood\"> </a></td><td>whole blood</td><td/></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://www.fhir.org/guides/mfhir/CodeSystem/specimen-source"];
+  fhir:CodeSystem.version [ fhir:value "0.0.0"];
+  fhir:CodeSystem.name [ fhir:value "specimen-source"];
+  fhir:CodeSystem.status [ fhir:value "draft"];
+  fhir:CodeSystem.date [ fhir:value "2018-04-28T08:55:00-07:00"^^xsd:dateTime];
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://www.openmhealth.org/" ]
+     ]
+  ];
+  fhir:CodeSystem.description [ fhir:value "The specimen analyzed. The current value set is taken from the SNOMED CT Body substance sample (specimen) hierarchy without the word 'specimen'. More values will be added as needed."];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.valueSet [ fhir:value "http://www.fhir.org/guides/mfhir/ValueSet/specimen-source"];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "interstitial fluid" ];
+     fhir:CodeSystem.concept.display [ fhir:value "interstitial fluid" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "capillary blood" ];
+     fhir:CodeSystem.concept.display [ fhir:value "capillary blood" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "plasma" ];
+     fhir:CodeSystem.concept.display [ fhir:value "plasma" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "serum" ];
+     fhir:CodeSystem.concept.display [ fhir:value "serum" ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "tears" ];
+     fhir:CodeSystem.concept.display [ fhir:value "tears" ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value "whole blood" ];
+     fhir:CodeSystem.concept.display [ fhir:value "whole blood" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://www.fhir.org/guides/mfhir/CodeSystem/specimen-source.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

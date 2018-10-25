@@ -1,0 +1,514 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "omh-physical-activity",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Minimum and Maximum # of times the the element can appear in the instance\">Card.</a></th><th style=\"width: 100px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Legend for this format\"><img src=\"http://hl7.org/fhir/STU3/help16.png\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-omh-physical-activity-definitions.html#OmhPhysicalActivity\" title=\"This schema represents a single episode of physical activity.\">OmhPhysicalActivity</a><a name=\"OmhPhysicalActivity\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_datatype.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-omh-physical-activity-definitions.html#OmhPhysicalActivity.omhHeader\" title=\"The header property represents the header of a data transaction\">omhHeader</a><a name=\"OmhPhysicalActivity.omhHeader\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-omh-header.html\" title=\"BackboneElement\">OMHHeader</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-omh-physical-activity-definitions.html#OmhPhysicalActivity.activityName\" title=\"todo\">activityName</a><a name=\"OmhPhysicalActivity.activityName\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"font-weight:bold\">Binding: </span><a href=\"http://hl7.org/fhir/STU3/terminologies.html#unbound\">(unbound)</a> (<a href=\"http://hl7.org/fhir/STU3/terminologies.html#required\" title=\"To be conformant, the concept in this element SHALL be from the specified value set.\">required</a>)</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_choice.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Choice of Types\" class=\"hierarchy\"/> <a href=\"StructureDefinition-omh-physical-activity-definitions.html#OmhPhysicalActivity.effectiveTimeFrame\" title=\"todo\">effectiveTimeFrame</a><a name=\"OmhPhysicalActivity.effectiveTimeFrame\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/datatypes.html#dateTime\">dateTime</a>, <a href=\"http://hl7.org/fhir/STU3/datatypes.html#Period\">Period</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_datatype.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-omh-physical-activity-definitions.html#OmhPhysicalActivity.distance\" title=\"todo\">distance</a><a name=\"OmhPhysicalActivity.distance\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/datatypes.html#Quantity\">Quantity</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"font-weight:bold\">Binding: </span><a href=\"ValueSet-length-unit-value.html\">Length Unit Value</a> (<a href=\"http://hl7.org/fhir/STU3/terminologies.html#required\" title=\"To be conformant, the concept in this element SHALL be from the specified value set.\">required</a>)</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_datatype.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-omh-physical-activity-definitions.html#OmhPhysicalActivity.kcalBurned\" title=\"todo\">kcalBurned</a><a name=\"OmhPhysicalActivity.kcalBurned\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/datatypes.html#Quantity\">Quantity</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"font-weight:bold\">Required Pattern: </span><span style=\"color: darkgreen\">{&quot;unit&quot;:&quot;kcal&quot;,&quot;system&quot;:&quot;http://unitsofmeasure.org&quot;,&quot;code&quot;:&quot;kcal&quot;}</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-omh-physical-activity-definitions.html#OmhPhysicalActivity.reportedActivityIntensity\" title=\"todo\">reportedActivityIntensity</a><a name=\"OmhPhysicalActivity.reportedActivityIntensity\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-omh-physical-activity-definitions.html#OmhPhysicalActivity.metValue\" title=\"todo\">metValue</a><a name=\"OmhPhysicalActivity.metValue\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/STU3/datatypes.html#decimal\">decimal</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"http://hl7.org/fhir/STU3/formats.html#table\" title=\"Legend for this format\"><img src=\"http://hl7.org/fhir/STU3/help16.png\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"
+  },
+  "url": "http://www.fhir.org/guides/mfhir/StructureDefinition/omh-physical-activity",
+  "version": "0.0.0",
+  "name": "OmhPhysicalActivity",
+  "title": "OMH Physical Activity",
+  "status": "draft",
+  "date": "2018-04-30T16:03:10-07:00",
+  "publisher": "Open mHealth",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.openmhealth.org/"
+        }
+      ]
+    }
+  ],
+  "description": "This schema represents a single episode of physical activity.",
+  "fhirVersion": "3.0.1",
+  "mapping": [
+    {
+      "identity": "omh-schema",
+      "uri": "https://github.com/openmhealth/schemas/blob/master/schema/omh/heart-rate-1.1.json",
+      "name": "OMH Heart Rate Schema"
+    },
+    {
+      "identity": "fhir-observation",
+      "uri": "http://hl7.org/fhir/STU3/observation.html",
+      "name": "FHIR Observation Profile"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "OmhPhysicalActivity",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "OmhPhysicalActivity",
+        "path": "OmhPhysicalActivity",
+        "definition": "This schema represents a single episode of physical activity.",
+        "mustSupport": false,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "omh-schema",
+            "map": "OMH Physical Activity"
+          },
+          {
+            "identity": "fhir-observation",
+            "map": "Observation resource with Observation.code = 68130003 Physical activity (observable entity)"
+          }
+        ]
+      },
+      {
+        "id": "Element.id",
+        "path": "OmhPhysicalActivity.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Element.extension",
+        "path": "OmhPhysicalActivity.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "OmhPhysicalActivity.omhHeader",
+        "path": "OmhPhysicalActivity.omhHeader",
+        "definition": "The header property represents the header of a data transaction",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement",
+            "profile": "http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "omh-schema",
+            "map": "see OmhHeader Mapping tables"
+          },
+          {
+            "identity": "fhir-observation",
+            "map": "see OmhHeader Mapping tables"
+          }
+        ]
+      },
+      {
+        "id": "OmhPhysicalActivity.activityName",
+        "path": "OmhPhysicalActivity.activityName",
+        "definition": "todo",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "binding": {
+          "strength": "required"
+        },
+        "mapping": [
+          {
+            "identity": "omh-schema",
+            "map": "properties.activity_name"
+          },
+          {
+            "identity": "fhir-observation",
+            "map": "Observation.todo"
+          }
+        ]
+      },
+      {
+        "id": "OmhPhysicalActivity.effectiveTimeFrame",
+        "path": "OmhPhysicalActivity.effectiveTimeFrame",
+        "definition": "todo",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "omh-schema",
+            "map": "properties.effective_time_frame"
+          },
+          {
+            "identity": "fhir-observation",
+            "map": "Observation.todo"
+          }
+        ]
+      },
+      {
+        "id": "OmhPhysicalActivity.distance",
+        "path": "OmhPhysicalActivity.distance",
+        "definition": "todo",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://www.fhir.org/guides/mfhir/ValueSet/length-unit-value"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "omh-schema",
+            "map": "properties.distance"
+          },
+          {
+            "identity": "fhir-observation",
+            "map": "Observation.todo"
+          }
+        ]
+      },
+      {
+        "id": "OmhPhysicalActivity.kcalBurned",
+        "path": "OmhPhysicalActivity.kcalBurned",
+        "definition": "todo",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "patternQuantity": {
+          "unit": "kcal",
+          "system": "http://unitsofmeasure.org",
+          "code": "kcal"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "omh-schema",
+            "map": "properties.kcal_burned"
+          },
+          {
+            "identity": "fhir-observation",
+            "map": "Observation.todo"
+          }
+        ]
+      },
+      {
+        "id": "OmhPhysicalActivity.reportedActivityIntensity",
+        "path": "OmhPhysicalActivity.reportedActivityIntensity",
+        "definition": "todo",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "omh-schema",
+            "map": "properties.reported_activity_intensity"
+          },
+          {
+            "identity": "fhir-observation",
+            "map": "Observation.todo"
+          }
+        ]
+      },
+      {
+        "id": "OmhPhysicalActivity.metValue",
+        "path": "OmhPhysicalActivity.metValue",
+        "definition": "todo",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "omh-schema",
+            "map": "properties.met_value"
+          },
+          {
+            "identity": "fhir-observation",
+            "map": "Observation.todo"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "OmhPhysicalActivity",
+        "path": "OmhPhysicalActivity",
+        "definition": "This schema represents a single episode of physical activity.",
+        "mustSupport": false,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "omh-schema",
+            "map": "OMH Physical Activity"
+          },
+          {
+            "identity": "fhir-observation",
+            "map": "Observation resource with Observation.code = 68130003 Physical activity (observable entity)"
+          }
+        ]
+      },
+      {
+        "id": "OmhPhysicalActivity.omhHeader",
+        "path": "OmhPhysicalActivity.omhHeader",
+        "definition": "The header property represents the header of a data transaction",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement",
+            "profile": "http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "omh-schema",
+            "map": "see OmhHeader Mapping tables"
+          },
+          {
+            "identity": "fhir-observation",
+            "map": "see OmhHeader Mapping tables"
+          }
+        ]
+      },
+      {
+        "id": "OmhPhysicalActivity.activityName",
+        "path": "OmhPhysicalActivity.activityName",
+        "definition": "todo",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "binding": {
+          "strength": "required"
+        },
+        "mapping": [
+          {
+            "identity": "omh-schema",
+            "map": "properties.activity_name"
+          },
+          {
+            "identity": "fhir-observation",
+            "map": "Observation.todo"
+          }
+        ]
+      },
+      {
+        "id": "OmhPhysicalActivity.effectiveTimeFrame",
+        "path": "OmhPhysicalActivity.effectiveTimeFrame",
+        "definition": "todo",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "omh-schema",
+            "map": "properties.effective_time_frame"
+          },
+          {
+            "identity": "fhir-observation",
+            "map": "Observation.todo"
+          }
+        ]
+      },
+      {
+        "id": "OmhPhysicalActivity.distance",
+        "path": "OmhPhysicalActivity.distance",
+        "definition": "todo",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://www.fhir.org/guides/mfhir/ValueSet/length-unit-value"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "omh-schema",
+            "map": "properties.distance"
+          },
+          {
+            "identity": "fhir-observation",
+            "map": "Observation.todo"
+          }
+        ]
+      },
+      {
+        "id": "OmhPhysicalActivity.kcalBurned",
+        "path": "OmhPhysicalActivity.kcalBurned",
+        "definition": "todo",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "patternQuantity": {
+          "unit": "kcal",
+          "system": "http://unitsofmeasure.org",
+          "code": "kcal"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "omh-schema",
+            "map": "properties.kcal_burned"
+          },
+          {
+            "identity": "fhir-observation",
+            "map": "Observation.todo"
+          }
+        ]
+      },
+      {
+        "id": "OmhPhysicalActivity.reportedActivityIntensity",
+        "path": "OmhPhysicalActivity.reportedActivityIntensity",
+        "definition": "todo",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "omh-schema",
+            "map": "properties.reported_activity_intensity"
+          },
+          {
+            "identity": "fhir-observation",
+            "map": "Observation.todo"
+          }
+        ]
+      },
+      {
+        "id": "OmhPhysicalActivity.metValue",
+        "path": "OmhPhysicalActivity.metValue",
+        "definition": "todo",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "omh-schema",
+            "map": "properties.met_value"
+          },
+          {
+            "identity": "fhir-observation",
+            "map": "Observation.todo"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="body-location"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Body Location</h2><div><p>A location on the body. This is an incomplete value set. Values from the Anatomical or acquired body structure hierarchy of SNOMED can be added as needed.</p>
+</div><p><b>Copyright Statement:</b> Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved.</p><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href="CodeSystem-body-location.html"><code>http://www.fhir.org/guides/mfhir/CodeSystem/body-location</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="CodeSystem-body-location.html#body-location-leftankle">left ankle</a></td><td>left ankle</td><td/></tr><tr><td><a href="CodeSystem-body-location.html#body-location-rightankle">right ankle</a></td><td>right ankle</td><td/></tr><tr><td><a href="CodeSystem-body-location.html#body-location-lefthip">left hip</a></td><td>left hip</td><td/></tr><tr><td><a href="CodeSystem-body-location.html#body-location-righthip">right hip</a></td><td>right hip</td><td/></tr><tr><td><a href="CodeSystem-body-location.html#body-location-leftthigh">left thigh</a></td><td>left thigh</td><td/></tr><tr><td><a href="CodeSystem-body-location.html#body-location-rightthigh">right thigh</a></td><td>right thigh</td><td/></tr><tr><td><a href="CodeSystem-body-location.html#body-location-leftthorax">left thorax</a></td><td>left thorax</td><td/></tr><tr><td><a href="CodeSystem-body-location.html#body-location-middleleftthorax">middle left thorax</a></td><td>middle left thorax</td><td/></tr><tr><td><a href="CodeSystem-body-location.html#body-location-leftupperarm">left upper arm</a></td><td>left upper arm</td><td/></tr><tr><td><a href="CodeSystem-body-location.html#body-location-rightupperarm">right upper arm</a></td><td>right upper arm</td><td/></tr><tr><td><a href="CodeSystem-body-location.html#body-location-leftwrist">left wrist</a></td><td>left wrist</td><td/></tr><tr><td><a href="CodeSystem-body-location.html#body-location-rightwrist">right wrist</a></td><td>right wrist</td><td/></tr></table></li></ul></div>
+  </text>
+  <url value="http://www.fhir.org/guides/mfhir/ValueSet/body-location"/>
+  <version value="0.0.0"/>
+  <name value="body-location"/>
+  <title value="Body Location"/>
+  <status value="draft"/>
+  <date value="2018-04-28T08:55:00-07:00"/>
+  <publisher value="Open mHealth"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.openmhealth.org/"/>
+    </telecom>
+  </contact>
+  <description value="A location on the body. This is an incomplete value set. Values from the Anatomical or acquired body structure hierarchy of SNOMED can be added as needed."/>
+  <immutable value="false"/>
+  <copyright value="Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved."/>
+  <compose>
+    <include>
+      <system value="http://www.fhir.org/guides/mfhir/CodeSystem/body-location"/>
+      <concept>
+        <code value="left ankle"/>
+        <display value="left ankle"/>
+      </concept>
+      <concept>
+        <code value="right ankle"/>
+        <display value="right ankle"/>
+      </concept>
+      <concept>
+        <code value="left hip"/>
+        <display value="left hip"/>
+      </concept>
+      <concept>
+        <code value="right hip"/>
+        <display value="right hip"/>
+      </concept>
+      <concept>
+        <code value="left thigh"/>
+        <display value="left thigh"/>
+      </concept>
+      <concept>
+        <code value="right thigh"/>
+        <display value="right thigh"/>
+      </concept>
+      <concept>
+        <code value="left thorax"/>
+        <display value="left thorax"/>
+      </concept>
+      <concept>
+        <code value="middle left thorax"/>
+        <display value="middle left thorax"/>
+      </concept>
+      <concept>
+        <code value="left upper arm"/>
+        <display value="left upper arm"/>
+      </concept>
+      <concept>
+        <code value="right upper arm"/>
+        <display value="right upper arm"/>
+      </concept>
+      <concept>
+        <code value="left wrist"/>
+        <display value="left wrist"/>
+      </concept>
+      <concept>
+        <code value="right wrist"/>
+        <display value="right wrist"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

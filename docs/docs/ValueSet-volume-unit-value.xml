@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="volume-unit-value"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Volume Unit Value</h2><div><p>This schema represents a volume.</p>
+</div><p><b>Copyright Statement:</b> Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved. UCUM is copyright 1999-2013 Regenstrief Institute, Inc. and The UCUM Organization, Indianapolis, IN. All rights reserved. See http://unitsofmeasure.org/trac//wiki/TermsOfUse for details.</p><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href="http://unitsofmeasure.org"><code>http://unitsofmeasure.org</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>fL</td><td>fL</td><td/></tr><tr><td>pL</td><td>pL</td><td/></tr><tr><td>nL</td><td>nL</td><td/></tr><tr><td>uL</td><td>uL</td><td/></tr><tr><td>mL</td><td>mL</td><td/></tr><tr><td>cL</td><td>cL</td><td/></tr><tr><td>dL</td><td>dL</td><td/></tr><tr><td>L</td><td>L</td><td/></tr><tr><td>kL</td><td>kL</td><td/></tr><tr><td>fl oz</td><td>fl oz</td><td/></tr><tr><td>Cup</td><td>Cup</td><td/></tr><tr><td>in^3</td><td>in^3</td><td/></tr><tr><td>pt</td><td>pt</td><td/></tr><tr><td>qt</td><td>qt</td><td/></tr><tr><td>gal</td><td>gal</td><td/></tr><tr><td>tsp</td><td>tsp</td><td/></tr><tr><td>tbsp</td><td>tbsp</td><td/></tr></table></li></ul></div>
+  </text>
+  <url value="http://www.fhir.org/guides/mfhir/ValueSet/volume-unit-value"/>
+  <version value="0.0.0"/>
+  <name value="volume-unit-value"/>
+  <title value="Volume Unit Value"/>
+  <status value="draft"/>
+  <date value="2018-04-28T12:14:28-07:00"/>
+  <publisher value="Open mHealth"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.openmhealth.org/"/>
+    </telecom>
+  </contact>
+  <description value="This schema represents a volume."/>
+  <immutable value="false"/>
+  <copyright value="Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved. UCUM is copyright 1999-2013 Regenstrief Institute, Inc. and The UCUM Organization, Indianapolis, IN. All rights reserved. See http://unitsofmeasure.org/trac//wiki/TermsOfUse for details."/>
+  <compose>
+    <include>
+      <system value="http://unitsofmeasure.org"/>
+      <concept>
+        <code value="fL"/>
+        <display value="fL"/>
+      </concept>
+      <concept>
+        <code value="pL"/>
+        <display value="pL"/>
+      </concept>
+      <concept>
+        <code value="nL"/>
+        <display value="nL"/>
+      </concept>
+      <concept>
+        <code value="uL"/>
+        <display value="uL"/>
+      </concept>
+      <concept>
+        <code value="mL"/>
+        <display value="mL"/>
+      </concept>
+      <concept>
+        <code value="cL"/>
+        <display value="cL"/>
+      </concept>
+      <concept>
+        <code value="dL"/>
+        <display value="dL"/>
+      </concept>
+      <concept>
+        <code value="L"/>
+        <display value="L"/>
+      </concept>
+      <concept>
+        <code value="kL"/>
+        <display value="kL"/>
+      </concept>
+      <concept>
+        <code value="fl oz"/>
+        <display value="fl oz"/>
+      </concept>
+      <concept>
+        <code value="Cup"/>
+        <display value="Cup"/>
+      </concept>
+      <concept>
+        <code value="in^3"/>
+        <display value="in^3"/>
+      </concept>
+      <concept>
+        <code value="pt"/>
+        <display value="pt"/>
+      </concept>
+      <concept>
+        <code value="qt"/>
+        <display value="qt"/>
+      </concept>
+      <concept>
+        <code value="gal"/>
+        <display value="gal"/>
+      </concept>
+      <concept>
+        <code value="tsp"/>
+        <display value="tsp"/>
+      </concept>
+      <concept>
+        <code value="tbsp"/>
+        <display value="tbsp"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

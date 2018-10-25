@@ -1,0 +1,12 @@
+﻿{
+  "url": "http://www.fhir.org/guides/mfhir/ImplementationGuide/ig",
+  "name": "Open mHealth to FHIR",
+  "package-id": "openmhealth.mfhir",
+  "ig-ver": "0.0.0",
+  "date": "Thu, 25 Oct, 2018 10:01:58 -0700",
+  "errs": 262,
+  "warnings": 32,
+  "hints": 4,
+  "version": "3.0.1",
+  "tool": "3.6.0 (3)"
+}
