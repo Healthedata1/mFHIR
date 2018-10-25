@@ -1,6 +1,6 @@
 Configuration Parameter,Configuration Value ( use '|' for lists)
 igtemplate-dir,/Users/ehaas/Documents/FHIR/IG-Template2/
-working-dir,/Users/ehaas/Documents/FHIR/mFHIR/
+working-dir,/Users/ehaas/Documents/FHIR/OMHtoFHIR/
 title,Open mHealth to FHIR
 status,draft
 publisher,Open mHealth
