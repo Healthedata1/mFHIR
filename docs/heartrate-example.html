@@ -112,9 +112,11 @@ can only resize using html  or css ;-(
        <!-- don't remove the line above - to add or remove a menu item commeent in or out -->
 <ul class="nav navbar-nav">
   <li><a href="index.html">Home</a></li>
-  <li><a href="guidance.html">General Guidance</a></li>
-  <li><a href="profiles.html">Profiles and Logical Models</a></li>
-  <li><a href="structuremaps.html">Mappings</a>
+  <li><a href="use_case.html">Use Case</a></li>
+  <li><a href="sa_workflow.html">Smart App Workflow</a></li>
+  <li><a href="mapping.html">OMH to FHIR Mapping</a></li>
+  <li><a href="profiles.html">Profiles and Logical Models</a>
+<!-- [Mappings](structuremaps.html)-->
 <!-- - [Extensions](extensions.html) --></li>
   <li><a href="terminology.html">Terminology</a>
 <!-- - [Search Parameters](searchparams.html) --></li>
@@ -186,160 +188,159 @@ can only resize using html  or css ;-(
             <!-- content of page -->
 
 
+
+
+
+
+
+
+
+
 <!-- ============BreadCrumb=============== -->
 
 <nav class="breadcrumb">
   
-    
-    
-        <!--  is structuredefinition or profile example -->
-        <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a><a class="breadcrumb-item" href="index.html">Home</a>
-        /
-        <a class="breadcrumb-item" href="profiles.html">Profiles</a>
-        /
-        <span class="breadcrumb-item active">heartrate-example.md</span>
-
-    
-  
-
+    <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a> 
 </nav>
 
 
-  <!-- ============CONTENT CONTENT=============== -->
-
-<h1>Example Mapping of OMH Heart Rate Schema</h1>
+<!-- ============StatusBox=============== -->
 
 <!--status-bar-->
 <p id="publish-box">
-This is the   Continuous Integration Build  of the Open mHealth to FHIR Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="http://www.fhir.org/guides//history.html">Directory of published versions</a>
+This is the   Continuous Integration Build  of the Open mHealth to FHIR Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="history.html">Directory of published versions</a>
 </p>
 
 
+<!-- ============CONTENT CONTENT=============== -->
+
+
+<h2>Example Mapping of OMH Heart Rate Schema</h2>
+
 <!-- page source: heartrate-example.md  -->
+
+
 
 <p><em>Open mHealth schema representing heart rate:</em></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"header"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"87ca4312-fbe3-4b24-bab4-17d47ba54e2a"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"creation_date_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-01-03T09:14:41Z"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"acquisition_provenance"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"source_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"generator"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"source_creation_date_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-01-03T09:13:41Z"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"modality"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sensed"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nt">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"some-user"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"schema_id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"omh"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"heart-rate"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"body"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"effective_time_frame"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"date_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-01-03T09:13:41Z"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nt">"heart_rate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"beats/min"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="mf">79.88711511574905</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"87ca4312-fbe3-4b24-bab4-17d47ba54e2a"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "header": {
+    "id": "87ca4312-fbe3-4b24-bab4-17d47ba54e2a",
+    "creation_date_time": "2014-01-03T09:14:41Z",
+    "acquisition_provenance": {
+      "source_name": "generator",
+      "source_creation_date_time": "2014-01-03T09:13:41Z",
+      "modality": "sensed"
+    },
+    "user_id": "some-user",
+    "schema_id": {
+      "namespace": "omh",
+      "name": "heart-rate",
+      "version": "1.0"
+    }
+  },
+  "body": {
+    "effective_time_frame": {
+      "date_time": "2014-01-03T09:13:41Z"
+    },
+    "heart_rate": {
+      "unit": "beats/min",
+      "value": 79.88711511574905
+    }
+  },
+  "id": "87ca4312-fbe3-4b24-bab4-17d47ba54e2a"
+}
+</code></pre></div></div>
 
 <p><em>Transform to OmhDataPoint Logical Model:</em></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
-   </span><span class="nt">"ResourceType"</span><span class="p">:</span><span class="s2">"OmhDataPoint"</span><span class="p">,</span><span class="w">
-   </span><span class="nt">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"omh-heart-rate-example"</span><span class="p">,</span><span class="w">
-   </span><span class="nt">"header"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-     </span><span class="nt">"dataPointId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"87ca4312-fbe3-4b24-bab4-17d47ba54e2a"</span><span class="p">,</span><span class="w">
-     </span><span class="nt">"creationDateTime"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-01-03T09:14:41Z"</span><span class="p">,</span><span class="w">
-     </span><span class="nt">"schemaId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-       </span><span class="nt">"namespace"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"omh"</span><span class="p">,</span><span class="w">
-       </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"heart-rate"</span><span class="p">,</span><span class="w">
-       </span><span class="nt">"version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0"</span><span class="w">
-     </span><span class="p">},</span><span class="w">
-     </span><span class="nt">"acquisitionProvenance"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-       </span><span class="nt">"sourceName"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"generator"</span><span class="p">,</span><span class="w">
-       </span><span class="nt">"sourceCreationDateTime"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-01-03T09:13:41Z"</span><span class="p">,</span><span class="w">
-       </span><span class="nt">"modality"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"sensed"</span><span class="w">
-     </span><span class="p">},</span><span class="w">
-     </span><span class="nt">"userId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"some-user"</span><span class="w">
-   </span><span class="p">},</span><span class="w">
-   </span><span class="nt">"body"</span><span class="w"> </span><span class="p">:</span><span class="w">
-   </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"ResourceType"</span><span class="p">:</span><span class="s2">"OmhHeartRate"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"id"</span><span class="p">:</span><span class="s2">"omh-heart-rate-example"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"valueUnit"</span><span class="p">:{</span><span class="w">
-         </span><span class="nt">"value"</span><span class="p">:</span><span class="mf">79.88711511574905</span><span class="p">,</span><span class="w">
-         </span><span class="nt">"unit"</span><span class="p">:</span><span class="s2">"beats/min"</span><span class="p">,</span><span class="w">
-         </span><span class="nt">"system"</span><span class="p">:</span><span class="s2">"http://unitsofmeasure.org"</span><span class="p">,</span><span class="w">
-         </span><span class="nt">"code"</span><span class="p">:</span><span class="s2">"/min"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="nt">"effectiveTimeFrame"</span><span class="p">:</span><span class="s2">"2014-01-03T09:13:41Z"</span><span class="p">,</span><span class="w">
-   </span><span class="err">}</span><span class="p">}</span><span class="w">
-</span></code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+   "ResourceType":"OmhDataPoint",
+   "id" : "omh-heart-rate-example",
+   "header" : {
+     "dataPointId" : "87ca4312-fbe3-4b24-bab4-17d47ba54e2a",
+     "creationDateTime" : "2014-01-03T09:14:41Z",
+     "schemaId" : {
+       "namespace" : "omh",
+       "name" : "heart-rate",
+       "version" : "1.0"
+     },
+     "acquisitionProvenance" : {
+       "sourceName" : "generator",
+       "sourceCreationDateTime" : "2014-01-03T09:13:41Z",
+       "modality" : "sensed"
+     },
+     "userId" : "some-user"
+   },
+   "body" :
+   {
+      "ResourceType":"OmhHeartRate",
+      "id":"omh-heart-rate-example",
+      "valueUnit":{
+         "value":79.88711511574905,
+         "unit":"beats/min",
+         "system":"http://unitsofmeasure.org",
+         "code":"/min"
+      },
+      "effectiveTimeFrame":"2014-01-03T09:13:41Z",
+   }}
+</code></pre></div></div>
 
 <p><em>Transform to FHIR Observation:</em></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
-   </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="s2">"Observation"</span><span class="p">,</span><span class="w">
-   </span><span class="nt">"id"</span><span class="p">:</span><span class="s2">"omh-heart-rate-example"</span><span class="p">,</span><span class="w">
-   </span><span class="nt">"meta"</span><span class="p">:{</span><span class="w">
-      </span><span class="nt">"source"</span><span class="p">:</span><span class="s2">"generator"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"profile"</span><span class="p">:[</span><span class="w">
-         </span><span class="s2">"http://www.fhir.org/guides/mfhir/StructureDefinition/heart-rate"</span><span class="w">
-      </span><span class="p">]</span><span class="w">
-   </span><span class="p">},</span><span class="w">
-   </span><span class="nt">"identifier"</span><span class="p">:[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-         </span><span class="nt">"system"</span><span class="p">:</span><span class="s2">"https://omh.org/shimmer/ids"</span><span class="p">,</span><span class="w">
-         </span><span class="nt">"value"</span><span class="p">:</span><span class="s2">"87ca4312-fbe3-4b24-bab4-17d47ba54e2a"</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-   </span><span class="p">],</span><span class="w">
-   </span><span class="nt">"status"</span><span class="p">:</span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-   </span><span class="nt">"category"</span><span class="p">:[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-         </span><span class="nt">"coding"</span><span class="p">:[</span><span class="w">
-            </span><span class="p">{</span><span class="w">
-               </span><span class="nt">"system"</span><span class="p">:</span><span class="s2">"http://hl7.org/fhir/observation-category"</span><span class="p">,</span><span class="w">
-               </span><span class="nt">"code"</span><span class="p">:</span><span class="s2">"vital-signs"</span><span class="p">,</span><span class="w">
-               </span><span class="nt">"display"</span><span class="p">:</span><span class="s2">"Vital Signs"</span><span class="w">
-            </span><span class="p">}</span><span class="w">
-         </span><span class="p">]</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-   </span><span class="p">],</span><span class="w">
-   </span><span class="nt">"code"</span><span class="p">:{</span><span class="w">
-      </span><span class="nt">"coding"</span><span class="p">:[</span><span class="w">
-         </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"system"</span><span class="p">:</span><span class="s2">"http://loinc.org"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"code"</span><span class="p">:</span><span class="s2">"8867-4"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"display"</span><span class="p">:</span><span class="s2">"Heart rate"</span><span class="w">
-         </span><span class="p">}</span><span class="w">
-      </span><span class="p">],</span><span class="w">
-      </span><span class="nt">"text"</span><span class="p">:</span><span class="s2">"Heart Rate"</span><span class="w">
-   </span><span class="p">},</span><span class="w">
-   </span><span class="nt">"subject"</span><span class="p">:{</span><span class="w">
-      </span><span class="nt">"identifier"</span><span class="p">:{</span><span class="w">
-         </span><span class="nt">"system"</span><span class="p">:</span><span class="s2">"https://omh.org/shimmer/patient_ids"</span><span class="p">,</span><span class="w">
-         </span><span class="nt">"value"</span><span class="p">:</span><span class="s2">"some-user"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="nt">"effectiveDateTime"</span><span class="p">:</span><span class="s2">"2014-01-03T09:13:41Z"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"issued"</span><span class="p">:</span><span class="s2">"2014-01-03T09:14:41Z"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"valueQuantity"</span><span class="p">:{</span><span class="w">
-         </span><span class="nt">"value"</span><span class="p">:</span><span class="mf">79.88711511574905</span><span class="p">,</span><span class="w">
-         </span><span class="nt">"unit"</span><span class="p">:</span><span class="s2">"beats/min"</span><span class="p">,</span><span class="w">
-         </span><span class="nt">"system"</span><span class="p">:</span><span class="s2">"http://unitsofmeasure.org"</span><span class="p">,</span><span class="w">
-         </span><span class="nt">"code"</span><span class="p">:</span><span class="s2">"/min"</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-   </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+   "resourceType":"Observation",
+   "id":"omh-heart-rate-example",
+   "meta":{
+      "source":"generator",
+      "profile":[
+         "http://www.fhir.org/guides/mfhir/StructureDefinition/heart-rate"
+      ]
+   },
+   "identifier":[
+      {
+         "system":"https://omh.org/shimmer/ids",
+         "value":"87ca4312-fbe3-4b24-bab4-17d47ba54e2a"
+      }
+   ],
+   "status":"unknown",
+   "category":[
+      {
+         "coding":[
+            {
+               "system":"http://hl7.org/fhir/observation-category",
+               "code":"vital-signs",
+               "display":"Vital Signs"
+            }
+         ]
+      }
+   ],
+   "code":{
+      "coding":[
+         {
+            "system":"http://loinc.org",
+            "code":"8867-4",
+            "display":"Heart rate"
+         }
+      ],
+      "text":"Heart Rate"
+   },
+   "subject":{
+      "identifier":{
+         "system":"https://omh.org/shimmer/patient_ids",
+         "value":"some-user"
+      },
+      "effectiveDateTime":"2014-01-03T09:13:41Z",
+      "issued":"2014-01-03T09:14:41Z",
+      "valueQuantity":{
+         "value":79.88711511574905,
+         "unit":"beats/min",
+         "system":"http://unitsofmeasure.org",
+         "code":"/min"
+      }
+   }
+}
+</code></pre></div></div>
 
 
 
@@ -367,11 +368,14 @@ This is the   Continuous Integration Build  of the Open mHealth to FHIR Implemen
 
 <!-- end back to top arrow -->
 
-<div id="segment-footer" class="segment">  <!-- segment-footer -->
+<div id="segment-footer" class="segment"  igtool="footer">  <!-- segment-footer -->
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Open mHealth to FHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Sep 7, 2018 20:05-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+      Open mHealth to FHIR Version: 0.0.0 &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Mon, Nov 5, 2018 15:00-0800.
+      | <a style="color: #81BEF7" href="history.html">History</a>
+      | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
+        <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>
         </p>
    </div>  <!-- /inner-wrapper -->

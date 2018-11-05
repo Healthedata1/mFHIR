@@ -1,5 +1,5 @@
 ---
-title: General Guidance and Definitions
+title: OMH to FHIR Mapping
 layout: default
 active: guidance
 topofpage: true
@@ -102,7 +102,130 @@ Logical Models for each datapoint schema are mapped to a FHIR Logical Model befo
 {% include omh-datapoint-table.md %}
 
 
+
 ### Mapping Example
+
+The transformation from the OMH data-point schema to the FHIR Logical models and from the FHIR Logical model to the FHIR resource is straightforward and demonstrated below.
+
+Note:
+- elements with a value of Null are **not**  transmitted in FHIR 
+- some elements require a mapping to a codes using the translation tables in this Guide.
+
+**OMH Stepcount Datapoint instance**
+
+~~~
+    {
+      "header": {
+        "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+        "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+        "acquisition_MedicationDispense": {
+          "source_name": "Jawbone UP API",
+          "modality": "sensed",
+          "source_updated_date_time": "2015-09-10T18:43:39Z"
+        },
+        "schema_id": {
+          "namespace": "omh",
+          "name": "step-count",
+          "version": "1.0"
+        },
+        "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+      },
+      "body": {
+        "effective_time_frame": {
+          "time_interval": {
+            "start_date_time": "2015-08-06T05:11:09-07:00",
+            "end_date_time": "2015-08-06T23:00:36-06:00"
+          }
+        },
+        "step_count": 7939
+      }
+    }
+~~~
+
+Converting this datapoint instance to *dot notation* representation here to show more clearly the mapping to the FHIR Observation Resource data elements
+
+~~~
+    O.header
+        O.header.id = "243c773b-8936-407e-9c23-270d0ea49cc4"
+        O.header.creation_date_time = "2015-09-10T12:43:39.138-06:00"
+        O.header.acquisition_MedicationDispense"
+          O.header.acquisition_MedicationDispense.source_name = "Jawbone UP API"
+          O.header.acquisition_MedicationDispense.modality = "sensed"
+          O.header.acquisition_MedicationDispense.source_updated_date_time = "2015-09-10T18:43:39Z"
+        O.header.schema_id 
+          O.header.schema_id.namespace  = "omh"
+          O.header.schema_id.name =  "step-count"
+          O.header.schema_id.version = "1.0"
+        O.header.user_id = 306a1202-410d-11e8-842f-0ed5f89f718b"
+      O.body 
+        O.body.effective_time_frame 
+          O.body.effective_time_frame.time_interval 
+            O.body.effective_time_frame.time_interval.start_date_time = "2015-08-06T05:11:09-07:00"
+            O.body.effective_time_frame.time_interval.end_date_time ="2015-08-06T23:00:36-06:00"
+        O.body.step_count = 7939
+~~~
+
+**This OMH Schema instance maps to the FHIR Observation Resource directly as follows: ** (using the syntax  %(foo) to represent the replacement variables in the resource)
+''
+~~~
+        
+        {
+          "resourceType": "Observation",
+        	"id": "steps-example //  this is a server assigned resource id",
+          "meta": {
+          "source" : "%(OmhDataPoint.header.acqusitionProvenance.sourceName)",
+          "profile // Profiles this resource claims to conform to" : ["http://www.fhir.org/guides/mfhir/StructureDefinition/steps"]
+        }
+          "identifier  : [
+          "system" : "https://omh.org/shimmer/ids // The namespace for the identifier value",
+          "value" : "%(OmhDataPoint.header.Id)",
+          }],
+          "status": "unknown // this is required in fhir - omh schema don't have status",
+        	"category // optional category field to indicate is an activity vs say a lab result": [  
+        		{
+        			"coding": [
+        				{
+        					"system": "http://hl7.org/fhir/observation-category",
+        					"code": "activity",
+        					"display": "Activity"
+        				}
+        			]
+        		}
+        	],
+        	"code // code mapping from OmhDataPoint.header.schema_id.name see mapping table in IG": {
+        		"coding": [
+              {
+        				"system": "http://loinc.org",
+        				"code": "55423-8",
+        				"display": "Number of steps in unspecified time Pedometer"
+        			}
+        		],
+        		"text": "Step count"
+        	},
+        	"subject": {
+        		"identifier" : {
+          "system" : "https://omh.org/shimmer/patient_ids // The namespace for the identifier value",
+          "value" : "%(OmhDataPoint.header.user_id)",
+        },
+        	},
+        	"effectivePeriod // mapped from OmhDataPoint.body.effectiveTimeFrame":
+          "start" : "%(OmhDataPoint.body.effective_time_frame.time_interval.start_date_time)",
+          "end" : "%(OmhDataPoint.body.effective_time_frame.time_interval.end_date_time)"
+            }
+        	"issued": "%(OmhDataPoint.header.creation_date_time)",
+
+        	"valueQuantity  // the actual results mapped from body.step_count  - note that I added optional UCUM units from the lookup tables": {
+        		"value": %(OmhDataPoint.body.stepCount),
+        		"unit": "steps",
+        		"system": "http://unitsofmeasure.org",
+        		"code": "{steps}"
+        	}
+           "device //  could be mapped from OmhDataPoint.header.acqusitionProvenance elements as well" :
+           {"display" : "%(OmhDataPoint.header.acqusitionProvenance.sourceName)"}
+        }
+~~~
+
+<!--
 
 The transformation from the OMH data-point schema to the FHIR Logical models and from the FHIR Logical model to the FHIR resource is straightforward and conceptual mappings are provided for each.  The following example illustrates transforming from the step-count omh schema to a FHIR observation.  The process can be automated using omh schemas and one of several FHIR libraries that are available.
 
@@ -145,7 +268,7 @@ If there is a descriptiveStatistic element the step count value is mapped to the
 1.  descriptiveStatisticDenominator is mapped to the denominator in `Observation.component.valueQuantity.unit` and `Observation.component.valueQuantity.code`
 
 {% include observation-step-count-max.md %}
-
+-->
 <br />
 
 {% include link-list.md %}

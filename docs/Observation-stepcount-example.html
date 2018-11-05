@@ -112,9 +112,11 @@ can only resize using html  or css ;-(
        <!-- don't remove the line above - to add or remove a menu item commeent in or out -->
 <ul class="nav navbar-nav">
   <li><a href="index.html">Home</a></li>
-  <li><a href="guidance.html">General Guidance</a></li>
-  <li><a href="profiles.html">Profiles and Logical Models</a></li>
-  <li><a href="structuremaps.html">Mappings</a>
+  <li><a href="use_case.html">Use Case</a></li>
+  <li><a href="sa_workflow.html">Smart App Workflow</a></li>
+  <li><a href="mapping.html">OMH to FHIR Mapping</a></li>
+  <li><a href="profiles.html">Profiles and Logical Models</a>
+<!-- [Mappings](structuremaps.html)-->
 <!-- - [Extensions](extensions.html) --></li>
   <li><a href="terminology.html">Terminology</a>
 <!-- - [Search Parameters](searchparams.html) --></li>
@@ -186,32 +188,27 @@ can only resize using html  or css ;-(
             <!-- content of page -->
 
 
-<!-- ============Publish box=============== -->
-
-<!--status-bar-->
-<p id="publish-box">
-This is the   Continuous Integration Build  of the Open mHealth to FHIR Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="http://www.fhir.org/guides//history.html">Directory of published versions</a>
-</p>
-
-
-
 <!-- ============BreadCrumb=============== -->
 
 <nav class="breadcrumb">
   
-    
-    
-        <!--  is structuredefinition or profile example -->
-        <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a><a class="breadcrumb-item" href="index.html">Home</a>
-        /
-        <a class="breadcrumb-item" href="profiles.html">Profiles</a>
-        /
-        <span class="breadcrumb-item active">Observation-stepcount-example</span>
-
-    
-  
-
+    <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a> 
 </nav>
+
+
+<!-- ============Publish box=============== -->
+
+<!--status-bar-->
+<p id="publish-box">
+This is the   Continuous Integration Build  of the Open mHealth to FHIR Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="history.html">Directory of published versions</a>
+</p>
+
+
+
+
+
+
+
 
 
 <!-- ============nav-tabs=============== -->
@@ -256,6 +253,7 @@ This is the   Continuous Integration Build  of the Open mHealth to FHIR Implemen
   <!-- ============CONTENT CONTENT=============== -->
 
 
+
   <!--  template typically for examples -->
 <!-- ============CONTENT CONTENT=============== -->
 
@@ -265,7 +263,7 @@ This is the   Continuous Integration Build  of the Open mHealth to FHIR Implemen
 Formats: <a href="Observation-stepcount-example.xml.html">XML</a>, <a href="Observation-stepcount-example.json.html">JSON</a>, <a href="Observation-stepcount-example.ttl.html">Turtle</a>
 </p>
 -->
-<div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: stepcount-example</p><p><b>contained</b>: </p><p><b>identifier</b>: 12341567</p><p><b>status</b>: unknown</p><p><b>category</b>: Physical activity (observable entity) <span style="background: LightGoldenRodYellow">(Details : {SNOMED CT code '68130003' = 'Physical activity', given as 'Physical activity (observable entity)'})</span></p><p><b>code</b>: Step count <span style="background: LightGoldenRodYellow">(Details : {LOINC code '55423-8' = 'Number of steps in unspecified time Pedometer', given as 'Number of steps in unspecified time Pedometer'})</span></p><p><b>subject</b>: unknown resource contained</p><p><b>effective</b>: Apr 16, 2018 5:00:00 PM --&gt; Apr 23, 2018 5:00:00 PM</p><p><b>issued</b>: Apr 24, 2018 5:13:50 PM</p><p><b>device</b>: Jawbone UP API, modality =sensed, sourceCreationDateTime = 2018-04-17T17:13:50Z</p><h3>Components</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Maximum <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/observation-statistics code 'maximum' = 'Maximum', given as 'Maximum'})</span></td><td>7939 steps/day<span style="background: LightGoldenRodYellow"> (Details: UCUM code {steps}/d = '{steps}/d')</span></td></tr></table></div>
+<div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: stepcount-example</p><p><b>contained</b>: </p><p><b>identifier</b>: 12341567</p><p><b>status</b>: unknown</p><p><b>category</b>: Physical activity (observable entity) <span style="background: LightGoldenRodYellow">(Details : {SNOMED CT code '68130003' = 'Physical activity', given as 'Physical activity (observable entity)'})</span></p><p><b>code</b>: Step count <span style="background: LightGoldenRodYellow">(Details : {LOINC code '55423-8' = 'Number of steps in unspecified time Pedometer', given as 'Number of steps in unspecified time Pedometer'})</span></p><p><b>subject</b>: unknown resource contained</p><p><b>effective</b>: Apr 16, 2018, 5:00:00 PM --&gt; Apr 23, 2018, 5:00:00 PM</p><p><b>issued</b>: Apr 24, 2018, 5:13:50 PM</p><p><b>device</b>: Jawbone UP API, modality =sensed, sourceCreationDateTime = 2018-04-17T17:13:50Z</p><h3>Components</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Maximum <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/observation-statistics code 'maximum' = 'Maximum', given as 'Maximum'})</span></td><td>7939 steps/day<span style="background: LightGoldenRodYellow"> (Details: UCUM code {steps}/d = '{steps}/d')</span></td></tr></table></div>
 
   <!-- ==============END CONTENT END CONTENT=================== -->
 
@@ -298,11 +296,14 @@ Formats: <a href="Observation-stepcount-example.xml.html">XML</a>, <a href="Obse
 
 <!-- end back to top arrow -->
 
-<div id="segment-footer" class="segment">  <!-- segment-footer -->
+<div id="segment-footer" class="segment"  igtool="footer">  <!-- segment-footer -->
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Open mHealth to FHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Sep 7, 2018 20:05-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+      Open mHealth to FHIR Version: 0.0.0 &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Mon, Nov 5, 2018 15:00-0800.
+      | <a style="color: #81BEF7" href="history.html">History</a>
+      | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
+        <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>
         </p>
    </div>  <!-- /inner-wrapper -->

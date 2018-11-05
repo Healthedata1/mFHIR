@@ -1,9 +1,11 @@
 {:.nav .navbar-nav}
 <!-- don't remove the line above - to add or remove a menu item commeent in or out -->
 - [Home](index.html)
-- [General Guidance](guidance.html)
+- [Use Case](use_case.html)
+- [Smart App Workflow](sa_workflow.html)
+- [OMH to FHIR Mapping](mapping.html)
 - [Profiles and Logical Models](profiles.html)
-- [Mappings](structuremaps.html)
+<!-- [Mappings](structuremaps.html)-->
 <!-- - [Extensions](extensions.html) -->
 - [Terminology](terminology.html)
 <!-- - [Search Parameters](searchparams.html) -->

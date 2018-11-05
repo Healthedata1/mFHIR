@@ -112,9 +112,11 @@ can only resize using html  or css ;-(
        <!-- don't remove the line above - to add or remove a menu item commeent in or out -->
 <ul class="nav navbar-nav">
   <li><a href="index.html">Home</a></li>
-  <li><a href="guidance.html">General Guidance</a></li>
-  <li><a href="profiles.html">Profiles and Logical Models</a></li>
-  <li><a href="structuremaps.html">Mappings</a>
+  <li><a href="use_case.html">Use Case</a></li>
+  <li><a href="sa_workflow.html">Smart App Workflow</a></li>
+  <li><a href="mapping.html">OMH to FHIR Mapping</a></li>
+  <li><a href="profiles.html">Profiles and Logical Models</a>
+<!-- [Mappings](structuremaps.html)-->
 <!-- - [Extensions](extensions.html) --></li>
   <li><a href="terminology.html">Terminology</a>
 <!-- - [Search Parameters](searchparams.html) --></li>
@@ -186,32 +188,31 @@ can only resize using html  or css ;-(
             <!-- content of page -->
 
 
-<!-- ============Publish box=============== -->
-
-<!--status-bar-->
-<p id="publish-box">
-This is the   Continuous Integration Build  of the Open mHealth to FHIR Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="http://www.fhir.org/guides//history.html">Directory of published versions</a>
-</p>
-
-
-
 <!-- ============BreadCrumb=============== -->
 
 <nav class="breadcrumb">
   
-    
-    
-      
-        <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a><a class="breadcrumb-item" href="index.html">Home</a>
-        /
-        <a class="breadcrumb-item" href="terminology.html">Terminology</a>
-        /
-        <span class="breadcrumb-item active">ValueSet-temporal-relationship-to-sleep</span>
-
-      
-  
-
+    <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a> <li><a href='index.html'><b>Home</b></a></li><li><a href='terminology.html'><b>Terminology</b></a></li><li><b>ValueSetTemporal Relationship To Sleep</b></li>
 </nav>
+
+
+<!-- ============Publish box=============== -->
+
+<!--status-bar-->
+<p id="publish-box">
+This is the   Continuous Integration Build  of the Open mHealth to FHIR Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="history.html">Directory of published versions</a>
+</p>
+
+
+
+
+
+
+
+  <style type="text/css">
+  h2,h3,h4,h5,h6{--pagenumber: "5.3"}
+  </style>
+
 
 
 <!-- ============nav-tabs=============== -->
@@ -256,6 +257,7 @@ This is the   Continuous Integration Build  of the Open mHealth to FHIR Implemen
   <!-- ============CONTENT CONTENT=============== -->
 
 
+
 <!-- ig template for many conformance resource html pages  ('base' in definitions file)  can not be used for conformance resources that have more that a single base template. e.g.,  sd since there are mapping and definitions templates for it as well  they need to be split out into 3 separate templates -->
 
 <!-- ============ CONTENT CONTENT=============== -->
@@ -286,7 +288,8 @@ This is the   Continuous Integration Build  of the Open mHealth to FHIR Implemen
 
   <h3>Expansion</h3>
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><p>This value set contains 3 concepts</p><p>All codes from system <a href="http://hl7.org/fhir/STU3/codesystem-snomedct.html"><code>http://snomed.info/sct</code></a></p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-307155000"> </a><a href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=307155000">307155000</a></td><td>before sleeping</td><td/></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-309610004"> </a><a href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=309610004">309610004</a></td><td>during sleep</td><td/></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-307156004"> </a><a href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=307156004">307156004</a></td><td>on waking</td><td/></tr></table></div>
+  <p><span style="color: maroon; font-weight: bold" title="Publication Tooling Error: org.hl7.fhir.dstu3.model.ExpansionProfile cannot be cast to org.hl7.fhir.dstu3.model.Parameters">No Expansion for this valueset (not supported by Publication Tooling)</span></p>
+
 <!-- ============VAlUESET CONTENT CONTENT=============== -->
 
 <!-- ( % when 'StructureMap' % }
@@ -356,11 +359,14 @@ Formats: <a href="ValueSet-temporal-relationship-to-sleep.html">Narrative</a>, <
 
 <!-- end back to top arrow -->
 
-<div id="segment-footer" class="segment">  <!-- segment-footer -->
+<div id="segment-footer" class="segment"  igtool="footer">  <!-- segment-footer -->
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Open mHealth to FHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Sep 7, 2018 20:05-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+      Open mHealth to FHIR Version: 0.0.0 &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Mon, Nov 5, 2018 15:00-0800.
+      | <a style="color: #81BEF7" href="history.html">History</a>
+      | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
+        <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>
         </p>
    </div>  <!-- /inner-wrapper -->

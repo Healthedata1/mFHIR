@@ -112,9 +112,11 @@ can only resize using html  or css ;-(
        <!-- don't remove the line above - to add or remove a menu item commeent in or out -->
 <ul class="nav navbar-nav">
   <li><a href="index.html">Home</a></li>
-  <li><a href="guidance.html">General Guidance</a></li>
-  <li><a href="profiles.html">Profiles and Logical Models</a></li>
-  <li><a href="structuremaps.html">Mappings</a>
+  <li><a href="use_case.html">Use Case</a></li>
+  <li><a href="sa_workflow.html">Smart App Workflow</a></li>
+  <li><a href="mapping.html">OMH to FHIR Mapping</a></li>
+  <li><a href="profiles.html">Profiles and Logical Models</a>
+<!-- [Mappings](structuremaps.html)-->
 <!-- - [Extensions](extensions.html) --></li>
   <li><a href="terminology.html">Terminology</a>
 <!-- - [Search Parameters](searchparams.html) --></li>
@@ -186,32 +188,31 @@ can only resize using html  or css ;-(
             <!-- content of page -->
 
 
-<!-- ============Publish box=============== -->
-
-<!--status-bar-->
-<p id="publish-box">
-This is the   Continuous Integration Build  of the Open mHealth to FHIR Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="http://www.fhir.org/guides//history.html">Directory of published versions</a>
-</p>
-
-
-
 <!-- ============BreadCrumb=============== -->
 
 <nav class="breadcrumb">
   
-    
-    
-        <!--  is structuredefinition or profile example -->
-        <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a><a class="breadcrumb-item" href="index.html">Home</a>
-        /
-        <a class="breadcrumb-item" href="profiles.html">Profiles</a>
-        /
-        <span class="breadcrumb-item active">StructureDefinition-contained-p-mappings</span>
-
-    
-  
-
+    <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a> <li><a href='index.html'><b>Home</b></a></li><li><a href='profiles.html'><b>Profiles and Extensions</b></a></li><li><b>StructureDefinitionContained P</b></li>
 </nav>
+
+
+<!-- ============Publish box=============== -->
+
+<!--status-bar-->
+<p id="publish-box">
+This is the   Continuous Integration Build  of the Open mHealth to FHIR Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="history.html">Directory of published versions</a>
+</p>
+
+
+
+
+
+
+
+  <style type="text/css">
+  h2,h3,h4,h5,h6{--pagenumber: "3.42"}
+  </style>
+
 
 
 <!-- ============nav-tabs=============== -->
@@ -256,11 +257,12 @@ This is the   Continuous Integration Build  of the Open mHealth to FHIR Implemen
   <!-- ============CONTENT CONTENT=============== -->
 
 
+
 <!-- ============CONTENT CONTENT=============== -->
 
 <h3>Mappings for the StructureDefinition-contained-p Profile.</h3>
 
-<a name="rim"> </a><h3>Mappings for RIM Mapping (http://hl7.org/v3)</h3><table class="grid">
+<a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
  <tr><td colspan="3"><b>OMH Contained Patient Profile</b></td></tr>
  <tr><td>Patient</td><td>Entity. Role, or Act</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;text</td><td>Act.text?</td> </tr>
@@ -319,7 +321,7 @@ This is the   Continuous Integration Build  of the Open mHealth to FHIR Implemen
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;other</td><td>id</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>typeCode</td> </tr>
 </table>
-<a name="cda"> </a><h3>Mappings for CDA (R2) (http://hl7.org/v3/cda)</h3><table class="grid">
+<a name="cda"> </a><h3>Mappings for CDA (R2) (<a href="http://hl7.org/comparison-cda.html">http://hl7.org/v3/cda</a>)</h3><table class="grid">
  <tr><td colspan="3"><b>OMH Contained Patient Profile</b></td></tr>
  <tr><td>Patient</td><td>ClinicalDocument.recordTarget.patientRole</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>.id</td> </tr>
@@ -354,13 +356,13 @@ This is the   Continuous Integration Build  of the Open mHealth to FHIR Implemen
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;other</td><td>n/a</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>n/a</td> </tr>
 </table>
-<a name="w5"> </a><h3>Mappings for W5 Mapping (http://hl7.org/fhir/w5)</h3><table class="grid">
+<a name="w5"> </a><h3>Mappings for W5 Mapping (<a href="http://hl7.org/fhir/w5.html">http://hl7.org/fhir/w5</a>)</h3><table class="grid">
  <tr><td colspan="3"><b>OMH Contained Patient Profile</b></td></tr>
  <tr><td>Patient</td><td>administrative.individual</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>id</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;active</td><td>status</td> </tr>
 </table>
-<a name="v2"> </a><h3>Mappings for HL7 v2 Mapping (http://hl7.org/v2)</h3><table class="grid">
+<a name="v2"> </a><h3>Mappings for HL7 v2 Mapping (<a href="http://hl7.org/comparison-v2.html">http://hl7.org/v2</a>)</h3><table class="grid">
  <tr><td colspan="3"><b>OMH Contained Patient Profile</b></td></tr>
  <tr><td>Patient</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>PID-3</td> </tr>
@@ -397,7 +399,7 @@ This is the   Continuous Integration Build  of the Open mHealth to FHIR Implemen
  <tr><td>&nbsp;&nbsp;&nbsp;link</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;other</td><td>PID-3, MRG-1</td> </tr>
 </table>
-<a name="loinc"> </a><h3>Mappings for LOINC code for the element (http://loinc.org)</h3><table class="grid">
+<a name="loinc"> </a><h3>Mappings for LOINC code for the element (<a href="http://loinc.org">http://loinc.org</a>)</h3><table class="grid">
  <tr><td colspan="3"><b>OMH Contained Patient Profile</b></td></tr>
  <tr><td>Patient</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;birthDate</td><td>21112-8</td> </tr>
@@ -435,11 +437,14 @@ This is the   Continuous Integration Build  of the Open mHealth to FHIR Implemen
 
 <!-- end back to top arrow -->
 
-<div id="segment-footer" class="segment">  <!-- segment-footer -->
+<div id="segment-footer" class="segment"  igtool="footer">  <!-- segment-footer -->
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Open mHealth to FHIR Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Sep 7, 2018 20:05-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+      Open mHealth to FHIR Version: 0.0.0 &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Mon, Nov 5, 2018 15:00-0800.
+      | <a style="color: #81BEF7" href="history.html">History</a>
+      | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
+        <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>
         </p>
    </div>  <!-- /inner-wrapper -->

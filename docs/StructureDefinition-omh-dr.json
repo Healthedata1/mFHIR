@@ -248,10 +248,7 @@
         "comment": "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.",
         "requirements": "The opaque patient identifier is needed for searching omh schemas by patient.",
         "alias": [
-          "SubjectOfCare Client Resident",
-          "inline resources",
-          "anonymous resources",
-          "contained resources"
+          "SubjectOfCare Client Resident"
         ],
         "min": 1,
         "max": "*",

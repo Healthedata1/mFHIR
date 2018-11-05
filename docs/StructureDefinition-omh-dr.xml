@@ -230,9 +230,6 @@
       <comment value="This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."/>
       <requirements value="The opaque patient identifier is needed for searching omh schemas by patient."/>
       <alias value="SubjectOfCare Client Resident"/>
-      <alias value="inline resources"/>
-      <alias value="anonymous resources"/>
-      <alias value="contained resources"/>
       <min value="1"/>
       <max value="*"/>
       <base>
