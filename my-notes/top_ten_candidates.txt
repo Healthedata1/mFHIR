@@ -1,0 +1,38 @@
+Source = OMH Schema	OMH FHIR Logical Model	Target = FHIR Element	Observation.code
+
+laboratory:
+blood-glucose-2.0.json	OmhBloodGlucose	Observation Profile	2339-0 Glucose [Mass/​volume] in Blood
+
+physical activity:
+step-count-2.0.json	OmhStepCount	Observation Profile	55423-8 Number of steps in unspecified time Pedometer
+calories-burned-2.0.json	OmhCaloriesBurned	Observation Profile	41981-2 Calories burned
+geoposition-1.0.json	OmhGeoposition	Location Profile	 
+minutes-moderate-activity-1.0.json	OmhMinutesModerateActivity	Observation Profile	408581006 Physical activity target moderate exercise (finding)
+pace-1.0.json	OmhPace	Observation Profile	Open mHealth to FHIR code (Pace)
+speed-1.0.json	OmhSpeed	Observation Profile	C0678536 NCIT code
+orientation-1.0.json	OmhOrientation	Observation Profile	Open mHealth to FHIR code (Gyroscope measurement Panel)
+
+
+vitals:
+body-fat-percentage-1.0.json	OmhBodyFatPercentage	Observation Profile	41982-0 Percentage of body fat Measured 
+body-height-1.0.json	OmhBodyHeight	Observation Profile	8302-2 Body height
+body-mass-index-2.0.json	OmhBodyMassIndex	Observation Profile	39156-5 Body mass index (BMI) [Ratio]
+body-temperature-2.0.json	OmhBodyTemperature	Observation Profile	8310-5 Body temperature
+body-weight-1.0.json	OmhBodyWeight	Observation Profile	29463-7 Body weight
+heart-rate-1.1.json	OmhHeartRate	Observation Profile	8867-4 Heart rate
+respiratory-rate-1.0.json	OmhRespiratoryRate	Observation Profile	9279-1 Respiratory Rate
+blood-pressure-2.0.json	OmhBloodPressure	Observation Profile	85354-9 Blood pressure panel with all children optional
+diastolic-blood-pressure-1.0.json	OmhDiastolicBloodPressure	Observation Profile	8462-4 Diastolic blood pressure
+systolic-blood-pressure-1.0.json	OmhSystolicBloodPressure	Observation Profile	8480-6 Systolic blood pressure
+oxygen-saturation-1.0.json	OmhOxygenSaturation	Observation Profile	59408-5 Oxygen saturation in Arterial blood by Pulse oximetry
+
+
+sleep:
+sleep-duration-2.0.json	OmhSleepDuration	Observation Profile	248263006 Duration of sleep (observable entity)
+
+
+rr-interval-1.0.json	OmhRrInterval	Observation Profile	8637-1 R-R interval by EKG
+expiratory-time-1.0.json	OmhExpiratoryTime	Observation Profile	60739-0 Expiration [Time] Respiratory system
+inspiratory-time-1.0.json	OmhInspiratoryTime	Observation Profile	60740-8 Inspiration [Time] Respiratory system
+minute-volume-1.0.json	OmhMinuteVolume	Observation Profile	20139-2 Volume expired 1 minute
+ventilation-cycle-time-1.0.json	OmhVentilationCycleTime	Observation Profile	250818005 Ventilation cycle time (observable entity)

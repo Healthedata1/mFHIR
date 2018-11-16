@@ -7,7 +7,7 @@
 *.o
 *.so
 *.sh
-*.py
+#*.py
 
 # Packages #
 ############
@@ -50,7 +50,7 @@ output
 archived
 validation
 validateme
-my-notes
+#my-notes
 omh-schemas
 py.mFHIR
 # Altova files #
