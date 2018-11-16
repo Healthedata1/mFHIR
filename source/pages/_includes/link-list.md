@@ -1,6 +1,6 @@
- [Binary]: ({{site.data.fhir.path}}binary.html) "FHIR Binary Resource documentation"
- [DocumentReference]: ({{site.data.fhir.path}}documentreference.html) "FHIR DocumentReference Resource documentation"
- [FHIR search API]: ({{site.data.fhir.path}}search.html) "FHIR search API documentation"
+[Binary]: ({{site.data.fhir.path}}binary.html) "FHIR Binary Resource documentation"
+[DocumentReference]: ({{site.data.fhir.path}}documentreference.html) "FHIR DocumentReference Resource documentation"
+[FHIR search API]: ({{site.data.fhir.path}}search.html) "FHIR search API documentation"
 [code]: {{site.data.fhir.path}}datatypes.html#code "FHIR code definition"
 [contained]: ({{site.data.fhir.path}}references#contained.html) "FHIR contained resource documentation"
 [date]: {{site.data.fhir.path}}datatypes.html#date "FHIR date definition"
@@ -24,3 +24,5 @@
 [string]: {{site.data.fhir.path}}datatypes.html#string "FHIR string definition"
 [Timing]: {{site.data.fhir.path}}datatypes.html#timing "FHIR Timing definition"
 [todo]: todo.html "still under construction"
+[OMH]: (http://www.openmhealth.org/)
+[Open mHealth]: (http://www.openmhealth.org/)

@@ -22,7 +22,7 @@ sct_url: http://browser.ihtsdotools.org/?perspective=full&conceptId1=
 ### R24 Server Architecture
 
 
-{% include img.html img="R24_Overview.png" %}
+{% include img-portrait.html img="R24_Overview2.jpg" %}
 
 **FHIR-enabled EHR system**
 
@@ -213,7 +213,6 @@ Accept: application/json+fhir
 To view this API in action using the Postman Collection Runner import this [Postman Collection].
 
 <br />
-
 
 ---
 

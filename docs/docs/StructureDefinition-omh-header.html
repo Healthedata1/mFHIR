@@ -74,11 +74,10 @@ can only resize using html  or css ;-(
 
 
       <div id="project-status" class="project-status"> <!-- ig title text -->
-
-      
-      <strong>Open mHealth to FHIR Implementation Guide CI Build</strong>
-      
-
+        <b>Open mHealth to FHIR Implementation Guide</b>
+        
+        CI Build
+        
     </div><!-- end ig title text -->
 
   </div><!-- end container -->
@@ -112,9 +111,11 @@ can only resize using html  or css ;-(
        <!-- don't remove the line above - to add or remove a menu item commeent in or out -->
 <ul class="nav navbar-nav">
   <li><a href="index.html">Home</a></li>
-  <li><a href="guidance.html">General Guidance</a></li>
-  <li><a href="profiles.html">Profiles and Logical Models</a></li>
-  <li><a href="structuremaps.html">Mappings</a>
+  <li><a href="use_case.html">Use Case</a></li>
+  <li><a href="sa_workflow.html">Smart App Workflow</a></li>
+  <li><a href="mapping.html">OMH to FHIR Mapping</a></li>
+  <li><a href="profiles.html">Profiles and Logical Models</a>
+<!-- [Mappings](structuremaps.html)-->
 <!-- - [Extensions](extensions.html) --></li>
   <li><a href="terminology.html">Terminology</a>
 <!-- - [Search Parameters](searchparams.html) --></li>
@@ -198,7 +199,9 @@ can only resize using html  or css ;-(
 
 <!--status-bar-->
 <p id="publish-box">
-This is the   Continuous Integration Build  of the Open mHealth to FHIR Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="history.html">Directory of published versions</a>
+This is the 
+    Continuous Integration Build
+    of the Open mHealth to FHIR Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="history.html">Directory of published versions</a>
 </p>
 
 
@@ -289,33 +292,148 @@ Formats: <a href="StructureDefinition-omh-header.html">Narrative</a>, <a href="S
 
 <p>Open mHealth header schema This schema represents the header of a data transaction.  See  <a href="http://www.openmhealth.org/documentation/#/schema-docs/schema-library">Open mHealth Schemas</a>.</p>
 
-<h4 id="scope-and-usage">Scope and Usage</h4>
+<p>The OMH header schema is represented as a formal FHIR Logical Model in the section below in order to facilitate model to model mappings.  However, the following table and resource template are provided for mapping an OMH schema instance to a FHIR resource instance.</p>
 
-<p>scope and usage text here….</p>
+<h4 id="omh-element-to-fhir-element-mapping-table">OMH Element to FHIR Element Mapping Table</h4>
+
+<p>This table maps the OMH element to the corresponding FHIR Observation element.</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>OMH element</th>
+      <th>FHIR element</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>template profile</td>
+      <td>Observation</td>
+    </tr>
+    <tr>
+      <td>header.id</td>
+      <td>Observation.identifier</td>
+    </tr>
+    <tr>
+      <td>header.creation_date_time</td>
+      <td>Observation.issued</td>
+    </tr>
+    <tr>
+      <td>header.schema_id</td>
+      <td>Observation.meta.profile</td>
+    </tr>
+    <tr>
+      <td>header.schema_id.namespace</td>
+      <td>Observation.meta.profile</td>
+    </tr>
+    <tr>
+      <td>header.schema_id.name</td>
+      <td>Observation.meta.profile</td>
+    </tr>
+    <tr>
+      <td>header.schema_id.version</td>
+      <td>Observation.meta.profile</td>
+    </tr>
+    <tr>
+      <td>header.acquisition_provenance</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>header.acquisition_provenance.source_name</td>
+      <td>Observation.device</td>
+    </tr>
+    <tr>
+      <td>header.acquisition_provenance.source_data_point_id</td>
+      <td>Observation.identifier</td>
+    </tr>
+    <tr>
+      <td>header.acquisition_provenance.source_creation_date_time</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>header.acquisition_provenance.modication_data_time</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>header.acquisition_provenance.modality</td>
+      <td>Observation.device.extension</td>
+    </tr>
+    <tr>
+      <td>header.user_id</td>
+      <td>Observation.subject</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="observation-template">Observation Template</h4>
+
+<p>This FHIR Observation template is an instance view of the above mappings and can be populated with data from an OMH schema to create a FHIR Observation instance.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+       "resourceType": "Observation",
+       "id": "%(server_assigned_resource_id)",
+       "meta": {
+       "profile" : ["http://www.fhir.org/mfhir/StructureDefinition/%(header.schema_id.namespace)-%(header.schema_id.name)-%(header.schema_id.version)"]
+     }
+       "identifier  : [
+       "system" : "https://omh.org/shimmer/ids",
+       "value" : "%(header.id)",
+       }],
+       "status": "unknown",
+       "category": [  
+         {
+           "coding": [
+             {
+               "system": "http://hl7.org/fhir/observation-category",
+               "code": "%(observation_category_code)",
+               "display": "%(observation_category_display)"
+             }
+           ]
+         }
+       ],
+       "code: {
+         "coding": [
+           {
+             "system": "http://loinc.org",
+             "code": "%(code_from_datapoint_mapping)",
+             "display": "%(display_from_datapoint_mapping)"
+           }
+         ]
+       },
+       "subject": {
+         "identifier" : {
+       "system" : "https://omh.org/shimmer/patient_ids",
+       "value" : "%(header.user_id)",
+     },
+       },
+       %(observation-effectivex)
+       "issued": "%(header.creation_date_time)",
+       %(observation-valuex)
+        "device" :
+        "extension" : [{
+          "url" : "http://www.fhir.org/mfhir/StructureDefinition/observationDeviceModality",
+          "valueCode" : "%(header.acquisition_provenance.modality)"
+        }],
+        {"display" : "%(header.acqusitionProvenance.sourceName)"}
+     }
+</code></pre></div></div>
+
+<p>Notes on template usage:</p>
+
+<ol>
+  <li>Template variables are represented using the <code class="highlighter-rouge">%()</code> syntax</li>
+  <li>Variable such as <code class="highlighter-rouge">%(header.acquisition_provenance.modality)</code> represent OMH data elements or mappings from OMH data elements</li>
+  <li>the variables %(observation-valuex) (the actual result values) and %(observation-effectivex) (the actual times the measurements occurred ) are subtemplates since elements that have a choice of data types.  They are mapped to the datapoint body elements</li>
+  <li>%(server_assigned_resource_id) is a assigned by the server when the resource is created and is typically not mapped from the OMH schema instance.</li>
+  <li>The profile element is the FHIR profiles this resource claims will conform to when fully populated.</li>
+  <li>The namespaces, “https://omh.org/shimmer/ids”  and “https://omh.org/shimmer/patient_ids” are use to assign a system to shimmer generated ids.</li>
+  <li>The <code class="highlighter-rouge">status</code> element is required in FHIR Observation and since omh schema don’t have status its values is hardcoded to ‘unknonwn’</li>
+  <li>The <code class="highlighter-rouge">category</code> and ‘code’ code and display is determined from a translation table that is mapped to the OmhDataPoint.header.schema_id.name.  See  this mapping table.</li>
+</ol>
 
 <h4 id="example">Example</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{  
-   "ResourceType":"OmhHeader",
-   "id":"example-1",
-   "dataPointId":"12341567",
-   "creationDateTime":"2018-04-T24:13:51Z",
-   "schemaId":{  
-      "namespace":"omh",
-      "name":"step-count",
-      "version":"1.0"
-   },
-   "acquisitionProvenance":{  
-      "sourceName":"Jawbone UP API&gt;",
-      "sourceDataPointId":"123456",
-      "sourceCreationDateTime":"2018-04-24T17:13:50Z",
-      "modificationDateTime":"2018-04-24T17:13:51Z",
-      "modality":"sensed"
-   },
-   "userId":"user123456"
-}
-</code></pre></div></div>
-
+<p>For example see the datapoint Profiles</p>
 
 
 
@@ -546,7 +664,7 @@ $( '#tabs' ).tabs({
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      Open mHealth to FHIR Version: 0.0.0 &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Thu, Oct 25, 2018 10:01-0700.
+      Open mHealth to FHIR Version: 0.0.0 &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Thu, Nov 15, 2018 19:25-0800.
       | <a style="color: #81BEF7" href="history.html">History</a>
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>

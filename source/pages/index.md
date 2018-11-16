@@ -19,7 +19,7 @@ sct_url: http://browser.ihtsdotools.org/?perspective=full&conceptId1=
 
 ### Introduction
 
-This Implementation Guide describes how to use [Open mHealth](http://www.openmhealth.org/) combined with FHIR to pull health data from popular third-party APIs like Google Fit and FitBit and Apple iHealth.  This data is made accessible to a FHIR SMART client either in the native OmH schema format or as FHIR resources (typically FHIR Observations) using the OmH Shimmer application and "Open mHealth to FHIR" server.
+This Implementation Guide describes how to use [Open mHealth] combined with FHIR to pull health data from popular third-party APIs like Google Fit and FitBit and Apple iHealth.  This data is made accessible to a FHIR SMART client either in the native OmH schema format or as FHIR resources (typically FHIR Observations) using the OmH Shimmer application and "Open mHealth to FHIR" server.
 
 Use Cases include:
 

@@ -44,7 +44,7 @@ The patient determined by e.g., <http://tools.acc.org/ASCVD-Risk-Estimator-Plus/
 
 At the next scheduled visit (e.g., in 90 days), the PCP and patient will jointly review during a clinic visit the daily step count and daily and weekly averages in the past 90 days vs the goal of 4000 daily steps. They will do this using a FHIR app that presents the data graphically within the EHR session.
 
-
+{% include img.html img="use-case.jpg" caption="Figure 1: Simple Use Case" %}
 
 #### Actors
 
