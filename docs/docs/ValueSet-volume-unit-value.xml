@@ -4,7 +4,7 @@
   <id value="volume-unit-value"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Volume Unit Value</h2><div><p>This schema represents a volume.</p>
-</div><p><b>Copyright Statement:</b> Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved. UCUM is copyright 1999-2013 Regenstrief Institute, Inc. and The UCUM Organization, Indianapolis, IN. All rights reserved. See http://unitsofmeasure.org/trac//wiki/TermsOfUse for details.</p><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href="http://unitsofmeasure.org"><code>http://unitsofmeasure.org</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>fL</td><td>fL</td><td/></tr><tr><td>pL</td><td>pL</td><td/></tr><tr><td>nL</td><td>nL</td><td/></tr><tr><td>uL</td><td>uL</td><td/></tr><tr><td>mL</td><td>mL</td><td/></tr><tr><td>cL</td><td>cL</td><td/></tr><tr><td>dL</td><td>dL</td><td/></tr><tr><td>L</td><td>L</td><td/></tr><tr><td>kL</td><td>kL</td><td/></tr><tr><td>fl oz</td><td>fl oz</td><td/></tr><tr><td>Cup</td><td>Cup</td><td/></tr><tr><td>in^3</td><td>in^3</td><td/></tr><tr><td>pt</td><td>pt</td><td/></tr><tr><td>qt</td><td>qt</td><td/></tr><tr><td>gal</td><td>gal</td><td/></tr><tr><td>tsp</td><td>tsp</td><td/></tr><tr><td>tbsp</td><td>tbsp</td><td/></tr></table></li></ul></div>
+</div><p><b>Copyright Statement:</b> Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved. UCUM is copyright 1999-2013 Regenstrief Institute, Inc. and The UCUM Organization, Indianapolis, IN. All rights reserved. See http://unitsofmeasure.org/trac//wiki/TermsOfUse for details.</p><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href="http://unitsofmeasure.org"><code>http://unitsofmeasure.org</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>fL</td><td>fL</td><td/></tr><tr><td>pL</td><td>pL</td><td/></tr><tr><td>nL</td><td>nL</td><td/></tr><tr><td>uL</td><td>uL</td><td/></tr><tr><td>mL</td><td>mL</td><td/></tr><tr><td>cL</td><td>cL</td><td/></tr><tr><td>dL</td><td>dL</td><td/></tr><tr><td>L</td><td>L</td><td/></tr><tr><td>kL</td><td>kL</td><td/></tr><tr><td>[foz_us]</td><td>fl oz</td><td/></tr><tr><td>[cup_us]</td><td>Cup</td><td/></tr><tr><td>[cin_i]</td><td>in^3</td><td/></tr><tr><td>[pt_us]</td><td>pt</td><td/></tr><tr><td>[qt_us]</td><td>qt</td><td/></tr><tr><td>[gal_us]</td><td>gal</td><td/></tr><tr><td>[tsp_us]</td><td>tsp</td><td/></tr><tr><td>[tbs_us]</td><td>tbsp</td><td/></tr></table></li></ul></div>
   </text>
   <url value="http://www.fhir.org/guides/mfhir/ValueSet/volume-unit-value"/>
   <version value="0.0.0"/>
@@ -62,35 +62,35 @@
         <display value="kL"/>
       </concept>
       <concept>
-        <code value="fl oz"/>
+        <code value="[foz_us]"/>
         <display value="fl oz"/>
       </concept>
       <concept>
-        <code value="Cup"/>
+        <code value="[cup_us]"/>
         <display value="Cup"/>
       </concept>
       <concept>
-        <code value="in^3"/>
+        <code value="[cin_i]"/>
         <display value="in^3"/>
       </concept>
       <concept>
-        <code value="pt"/>
+        <code value="[pt_us]"/>
         <display value="pt"/>
       </concept>
       <concept>
-        <code value="qt"/>
+        <code value="[qt_us]"/>
         <display value="qt"/>
       </concept>
       <concept>
-        <code value="gal"/>
+        <code value="[gal_us]"/>
         <display value="gal"/>
       </concept>
       <concept>
-        <code value="tsp"/>
+        <code value="[tsp_us]"/>
         <display value="tsp"/>
       </concept>
       <concept>
-        <code value="tbsp"/>
+        <code value="[tbs_us]"/>
         <display value="tbsp"/>
       </concept>
     </include>

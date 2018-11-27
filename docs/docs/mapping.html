@@ -393,9 +393,7 @@ This is the
       <th>Observation.code.system</th>
       <th>Observation.code.code</th>
       <th>Observation.code.display</th>
-      <th>observation_value_quantity_value_path</th>
-      <th>observation_value_quantity_unit (default)</th>
-      <th>observation_value_quantity_code (default UCUM)</th>
+      <th>observation_value_quantity_unit(s) (list)</th>
       <th>descriptive_statistic</th>
       <th>descriptive_statistic_denominator</th>
       <th>components</th>
@@ -408,8 +406,6 @@ This is the
       <td>http://loinc.org</td>
       <td>80493-0</td>
       <td>Activity level [Acceleration]</td>
-      <td>body.acceleration</td>
-      <td>None</td>
       <td>None</td>
       <td>False</td>
       <td>False</td>
@@ -419,10 +415,8 @@ This is the
       <td>ambient_temperature</td>
       <td>None</td>
       <td>http://loinc.org</td>
-      <td>60832_3</td>
+      <td>60832-3</td>
       <td>Room temperature</td>
-      <td>body.ambient_temperature</td>
-      <td>None</td>
       <td>None</td>
       <td>False</td>
       <td>False</td>
@@ -430,40 +424,34 @@ This is the
     </tr>
     <tr>
       <td>blood_glucose</td>
-      <td>vital-signs</td>
+      <td>laboratory</td>
       <td>http://loinc.org</td>
-      <td>2339_0</td>
+      <td>2339-0</td>
       <td>Glucose Mass/volume in Blood</td>
-      <td>body.blood_glucose</td>
-      <td>None</td>
-      <td>None</td>
+      <td>[‘mg/dL’, ‘mmol/L’]</td>
+      <td>True</td>
       <td>False</td>
-      <td>False</td>
-      <td>[]</td>
+      <td>[‘temporal_relationship_to_sleep’, ‘temporal_relationship_to_meal’]</td>
     </tr>
     <tr>
       <td>blood_pressure</td>
       <td>vital-signs</td>
       <td>http://loinc.org</td>
-      <td>85354_9</td>
+      <td>85354-9</td>
       <td>Blood pressure panel with all children optional</td>
-      <td>body.blood_pressure</td>
       <td>None</td>
-      <td>None</td>
+      <td>True</td>
       <td>False</td>
-      <td>False</td>
-      <td>[]</td>
+      <td>[‘diastolic_blood_pressure’, ‘systolic_blood_pressure’]</td>
     </tr>
     <tr>
       <td>body_fat_percentage</td>
       <td>exam</td>
       <td>http://loinc.org</td>
-      <td>41982_0</td>
+      <td>41982-0</td>
       <td>Percentage of body fat Measured</td>
-      <td>body.body_fat_percentage</td>
-      <td>None</td>
-      <td>None</td>
-      <td>False</td>
+      <td>[’%’]</td>
+      <td>True</td>
       <td>False</td>
       <td>[]</td>
     </tr>
@@ -471,11 +459,9 @@ This is the
       <td>body_height</td>
       <td>vital-signs</td>
       <td>http://loinc.org</td>
-      <td>8302_2</td>
+      <td>8302-2</td>
       <td>Body height</td>
-      <td>body.body_height</td>
-      <td>None</td>
-      <td>None</td>
+      <td>[‘cm’, ‘in’]</td>
       <td>False</td>
       <td>False</td>
       <td>[]</td>
@@ -484,12 +470,10 @@ This is the
       <td>body_mass_index</td>
       <td>vital-signs</td>
       <td>http://loinc.org</td>
-      <td>39156_5</td>
+      <td>39156-5</td>
       <td>Body mass index (BMI) Ratio</td>
-      <td>body.body_mass_index</td>
-      <td>None</td>
-      <td>None</td>
-      <td>False</td>
+      <td>[‘kg/m^2’]</td>
+      <td>True</td>
       <td>False</td>
       <td>[]</td>
     </tr>
@@ -497,25 +481,21 @@ This is the
       <td>body_temperature</td>
       <td>vital-signs</td>
       <td>http://loinc.org</td>
-      <td>8310_5</td>
+      <td>8310-5</td>
       <td>Body temperature</td>
-      <td>body.body_temperature</td>
-      <td>None</td>
-      <td>None</td>
+      <td>[‘K’,’F’,’C’]</td>
+      <td>True</td>
       <td>False</td>
-      <td>False</td>
-      <td>[]</td>
+      <td>[‘temporal_relationship_to_sleep’]</td>
     </tr>
     <tr>
       <td>body_weight</td>
       <td>vital-signs</td>
       <td>http://loinc.org</td>
-      <td>29463_7</td>
+      <td>29463-7</td>
       <td>Body weight</td>
-      <td>body.body_weight</td>
-      <td>None</td>
-      <td>None</td>
-      <td>False</td>
+      <td>[‘kg’, ‘g’, ‘lb’]</td>
+      <td>True</td>
       <td>False</td>
       <td>[]</td>
     </tr>
@@ -525,8 +505,6 @@ This is the
       <td>http://snomed.info/id</td>
       <td>251900003</td>
       <td>Expired carbon monoxide concentration (observable entity)</td>
-      <td>body.breath_carbon_monoxide</td>
-      <td>None</td>
       <td>None</td>
       <td>False</td>
       <td>False</td>
@@ -536,24 +514,20 @@ This is the
       <td>calories_burned</td>
       <td>physical-activity</td>
       <td>http://loinc.org</td>
-      <td>41981_2</td>
+      <td>41981-2</td>
       <td>Calories burned</td>
-      <td>body.calories_burned</td>
-      <td>None</td>
-      <td>None</td>
-      <td>False</td>
-      <td>False</td>
+      <td>[‘kcal’]</td>
+      <td>True</td>
+      <td>True</td>
       <td>[]</td>
     </tr>
     <tr>
       <td>diastolic_blood_pressure</td>
       <td>vital-signs</td>
       <td>http://loinc.org</td>
-      <td>8462_4</td>
+      <td>8462-4</td>
       <td>Diastolic blood pressure</td>
-      <td>body.diastolic_blood_pressure</td>
-      <td>None</td>
-      <td>None</td>
+      <td>[‘mmHg’]</td>
       <td>False</td>
       <td>False</td>
       <td>[]</td>
@@ -562,10 +536,8 @@ This is the
       <td>expiratory_time</td>
       <td>exam</td>
       <td>http://loinc.org</td>
-      <td>60739_0</td>
+      <td>60739-0</td>
       <td>Expiration Time Respiratory system</td>
-      <td>body.expiratory_time</td>
-      <td>None</td>
       <td>None</td>
       <td>False</td>
       <td>False</td>
@@ -577,8 +549,6 @@ This is the
       <td>http://www.fhir.org/guides/mfhir/datapoint-type</td>
       <td>geoposition</td>
       <td>Geoposition</td>
-      <td>body.geoposition</td>
-      <td>None</td>
       <td>None</td>
       <td>False</td>
       <td>False</td>
@@ -588,23 +558,19 @@ This is the
       <td>heart_rate</td>
       <td>vital-signs</td>
       <td>http://loinc.org</td>
-      <td>8867_4</td>
+      <td>8867-4</td>
       <td>Heart rate</td>
-      <td>body.heart_rate.value</td>
-      <td>beats/min</td>
-      <td>/min</td>
+      <td>[‘beats/min’]</td>
       <td>True</td>
       <td>False</td>
-      <td>[‘body.temporal_relationship_to_physical_activity’, ‘body.temporal_relationship_to_sleep’]</td>
+      <td>[‘temporal_relationship_to_physical_activity’, ‘temporal_relationship_to_sleep’]</td>
     </tr>
     <tr>
       <td>inspiratory_time</td>
       <td>exam</td>
       <td>http://loinc.org</td>
-      <td>60740_8</td>
+      <td>60740-8</td>
       <td>Inspiration Time Respiratory system</td>
-      <td>body.inspiratory_time</td>
-      <td>None</td>
       <td>None</td>
       <td>False</td>
       <td>False</td>
@@ -616,8 +582,6 @@ This is the
       <td>http://www.fhir.org/guides/mfhir/datapoint-type</td>
       <td>magnetic_force</td>
       <td>Magnetic Force Panel</td>
-      <td>body.magnetic_force</td>
-      <td>None</td>
       <td>None</td>
       <td>False</td>
       <td>False</td>
@@ -629,8 +593,6 @@ This is the
       <td>http://snomed.info/id</td>
       <td>418633004</td>
       <td>Medication compliance (observable entity)</td>
-      <td>body.medication_adherence_percent</td>
-      <td>None</td>
       <td>None</td>
       <td>False</td>
       <td>False</td>
@@ -640,10 +602,8 @@ This is the
       <td>minute_volume</td>
       <td>exam</td>
       <td>http://loinc.org</td>
-      <td>20139_2</td>
+      <td>20139-2</td>
       <td>Volume expired 1 minute</td>
-      <td>body.minute_volume</td>
-      <td>None</td>
       <td>None</td>
       <td>False</td>
       <td>False</td>
@@ -655,9 +615,7 @@ This is the
       <td>http://snomed.info/id</td>
       <td>408581006</td>
       <td>Physical activity target moderate exercise (finding)</td>
-      <td>body.minutes_moderate_activity</td>
-      <td>None</td>
-      <td>None</td>
+      <td>[‘min’]</td>
       <td>False</td>
       <td>False</td>
       <td>[]</td>
@@ -668,8 +626,6 @@ This is the
       <td>http://www.fhir.org/guides/mfhir/datapoint-type</td>
       <td>orientation</td>
       <td>Gyroscope measurement Panel</td>
-      <td>body.orientation</td>
-      <td>None</td>
       <td>None</td>
       <td>False</td>
       <td>False</td>
@@ -679,14 +635,12 @@ This is the
       <td>oxygen_saturation</td>
       <td>vital-signs</td>
       <td>http://loinc.org</td>
-      <td>59408_5</td>
+      <td>59408-5</td>
       <td>Oxygen saturation in Arterial blood by Pulse oximetry</td>
-      <td>body.oxygen_saturation</td>
-      <td>None</td>
-      <td>None</td>
+      <td>[’%’]</td>
+      <td>True</td>
       <td>False</td>
-      <td>False</td>
-      <td>[]</td>
+      <td>[‘supplemental_oxygen_flow_rate’, ‘oxygen_therapy_mode_of_administration’]</td>
     </tr>
     <tr>
       <td>pace</td>
@@ -694,8 +648,6 @@ This is the
       <td>http://www.fhir.org/guides/mfhir/datapoint-type</td>
       <td>pace</td>
       <td>Pace</td>
-      <td>body.pace</td>
-      <td>None</td>
       <td>None</td>
       <td>False</td>
       <td>False</td>
@@ -707,8 +659,6 @@ This is the
       <td>http://snomed.info/id</td>
       <td>68130003</td>
       <td>Physical activity (observable entity)</td>
-      <td>body.physical_activity</td>
-      <td>None</td>
       <td>None</td>
       <td>False</td>
       <td>False</td>
@@ -718,23 +668,19 @@ This is the
       <td>respiratory_rate</td>
       <td>vital-signs</td>
       <td>http://loinc.org</td>
-      <td>9279_1</td>
+      <td>9279-1</td>
       <td>Respiratory Rate</td>
-      <td>body.respiratory_rate</td>
-      <td>None</td>
-      <td>None</td>
+      <td>[‘breaths/min’]</td>
+      <td>True</td>
       <td>False</td>
-      <td>False</td>
-      <td>[]</td>
+      <td>[‘temporal_relationship_to_physical_activity’]</td>
     </tr>
     <tr>
       <td>rr_interval</td>
       <td>exam</td>
       <td>http://loinc.org</td>
-      <td>8637_1</td>
+      <td>8637-1</td>
       <td>R_R interval by EKG</td>
-      <td>body.rr_interval</td>
-      <td>None</td>
       <td>None</td>
       <td>False</td>
       <td>False</td>
@@ -746,11 +692,9 @@ This is the
       <td>http://snomed.info/id</td>
       <td>248263006</td>
       <td>Duration of sleep (observable entity)</td>
-      <td>body.sleep_duration</td>
-      <td>None</td>
-      <td>None</td>
-      <td>False</td>
-      <td>False</td>
+      <td>[‘sec’, ‘min’, ‘h’]</td>
+      <td>True</td>
+      <td>True</td>
       <td>[]</td>
     </tr>
     <tr>
@@ -759,8 +703,6 @@ This is the
       <td>http://snomed.info/id</td>
       <td>258158006</td>
       <td>Sleep, function (observable entity)</td>
-      <td>body.sleep_episode</td>
-      <td>None</td>
       <td>None</td>
       <td>False</td>
       <td>False</td>
@@ -772,8 +714,6 @@ This is the
       <td>http://ncimeta.nci.nih.gov</td>
       <td>C0678536</td>
       <td>Speed</td>
-      <td>body.speed</td>
-      <td>None</td>
       <td>None</td>
       <td>False</td>
       <td>False</td>
@@ -783,24 +723,20 @@ This is the
       <td>step_count</td>
       <td>physical-activity</td>
       <td>http://loinc.org</td>
-      <td>55423_8</td>
+      <td>55423-8</td>
       <td>Number of steps in unspecified time Pedometer</td>
-      <td>body.step_count</td>
-      <td>steps</td>
-      <td>{steps}</td>
-      <td>False</td>
-      <td>False</td>
+      <td>[‘steps’]</td>
+      <td>True</td>
+      <td>True</td>
       <td>[]</td>
     </tr>
     <tr>
       <td>systolic_blood_pressure</td>
       <td>vital-signs</td>
       <td>http://loinc.org</td>
-      <td>8480_6</td>
+      <td>8480-6</td>
       <td>Systolic blood pressure</td>
-      <td>body.systolic_blood_pressure</td>
-      <td>None</td>
-      <td>None</td>
+      <td>[‘mmHg’]</td>
       <td>False</td>
       <td>False</td>
       <td>[]</td>
@@ -811,12 +747,70 @@ This is the
       <td>http://snomed.info/id</td>
       <td>250818005</td>
       <td>Ventilation cycle time (observable entity)</td>
-      <td>body.ventilation_cycle_time</td>
-      <td>None</td>
       <td>None</td>
       <td>False</td>
       <td>False</td>
       <td>[]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Data Point Component Mapping Table</strong></p>
+
+<p>Some Datapoints properties are represented by the FHIR <code class="highlighter-rouge">Observation.component</code> element in FHIR.  This table summarizes these OMH datapoint schema properties and list the corresponding OMH propertied name in the  <code class="highlighter-rouge">Component Name</code> column and its corresponding FHIR Observation component code and valuetype attributes.  This table is used along with the OMH to FHIR concept mapping table to to populate the the Observation template below.</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>Component Name</th>
+      <th>Component Code System</th>
+      <th>Component Code Code</th>
+      <th>Component Code Display</th>
+      <th>Component Value Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>body_posture</td>
+      <td>http://snomed.info/sct</td>
+      <td>271605009</td>
+      <td>Position of body and posture (observable entity)</td>
+      <td>valueCodeableConcept</td>
+    </tr>
+    <tr>
+      <td>diastolic_blood_pressure</td>
+      <td>http://loinc.org</td>
+      <td>8462-4</td>
+      <td>Diastolic blood pressure</td>
+      <td>valueQuantity</td>
+    </tr>
+    <tr>
+      <td>systolic_blood_pressure</td>
+      <td>http://loinc.org</td>
+      <td>8480-6</td>
+      <td>Systolic blood pressure</td>
+      <td>valueQuantity</td>
+    </tr>
+    <tr>
+      <td>temporal_relationship_to_meal</td>
+      <td>http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes</td>
+      <td>relative-to-meal</td>
+      <td>OMH to FHIR Temporal Relationship To Meal</td>
+      <td>valueCodeableConcept</td>
+    </tr>
+    <tr>
+      <td>temporal_relationship_to_physical_activity</td>
+      <td>http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes</td>
+      <td>relative-to-activity</td>
+      <td>OMH to FHIR Temporal Relationship To Physical Activity</td>
+      <td>valueCodeableConcept</td>
+    </tr>
+    <tr>
+      <td>temporal_relationship_to_sleep</td>
+      <td>http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes</td>
+      <td>relative-to-sleep</td>
+      <td>OMH to FHIR Temporal Relationship To Sleep</td>
+      <td>valueCodeableConcept</td>
     </tr>
   </tbody>
 </table>
@@ -827,67 +821,81 @@ This is the
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
        "resourceType": "Observation",
-       "id": "{{server_assigned_resource_id}}",   //note 1,2,5
+       "id": {{server_assigned_resource_id}},  //note 1,2,6
        "meta": {
-       "profile" : ["http://www.fhir.org/mfhir/StructureDefinition/omh-to-fhir-observation"]  // note 6
+       "profile" : ["http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"]  // note 7
      },
+     "extension" : [{
+         "url" : {{observation_specimen_code_extension_url}},
+         "valueCodeableConcept": {
+         "coding": [
+           {
+             "system": {{observation_specimen_code_system}},
+             "code": {{observation_specimen_code_code}},
+             "display": {{observation_specimen_code_display}}
+           }
+         ],
+         "text": {{observation_specimen_code_text}}
+       }
+    }],
        "identifier"  : [{
-       "system" : "https://omh.org/shimmer/ids",  //note 7
-       "value" : "{{header.id}}"  //note 3
+       "system" : "https://omh.org/shimmer/ids", //note 7
+       "value" : {{header.id}} //note 3
        }],
-       "status": "unknown",  //note 8
-       "category": [  //note 9
+       "status": "unknown",  //note 9
+       "category": [  //note 4
          {
            "coding": [
              {
                "system": "http://hl7.org/fhir/observation-category",
-               "code": "{{observation_category_code}}",
-               "display": "{{observation_category_display}}"
+               "code": {{observation_category_code}},
+               "display": {{observation_category_display}}
              }
            ]
          }
        ],
-       "code": {  //note 9
+       "code": {   //note 4
          "coding": [
            {
-             "system": "{{observation_code_system}}",
-             "code": "{{observation_code_code}}",
-             "display": "{{observation_code_display}}"
+             "system": {{observation_code_system}},
+             "code": {{observation_code_code}},
+             "display": {{observation_code_display}}
            }
         ,{
-          "system" : "{{addl_observation_code_system}}",
-          "code" : "{{addl_observation_coding_code}}",
-          "display" : "{{addl_observation_coding_display}}"
+          "system" : {{addl_observation_coding_system}}, //note 12
+          "code" : {{addl_observation_coding_code}},
+          "display" : {{addl_observation_coding_display}}
         }
          ]
        },
-       "subject": { //note 7
+       "subject": {  //note 8
          "identifier" : {
        "system" : "https://omh.org/shimmer/patient_ids",
-       "value" : "{{header.user_id}}"
+       "value" : {{header.user_id}}
      }
        },
-       "effectiveDateTime" : "{{body.effective_time_frame.date_time}}", //note 4
-       "effectivePeriod" : {  //note 4
-          "start" : "{{body.effective_time_frame.time_interval.start_date_time}}", 
-          "end" : "{{body.effective_time_frame.time_interval.end_date_time}}"
+       "effectiveDateTime" : {{body.effective_time_frame.date_time}},  //note 11
+       "effectivePeriod" : {  //note 11
+          "start" : {{body.effective_time_frame.time_interval.start_date_time}}, 
+          "end" : {{body.effective_time_frame.time_interval.end_date_time}}
           }, 
-       "issued": "{{header.creation_date_time}}",
-       "valueQuantity" : {  //note 4
+       "issued": {{header.creation_date_time}},
+       "valueQuantity" : {  //note 10
          "value" : {observation_value_quantity_value},
-         "unit" : "{{observation_value_quantity_unit}}",
-         "system" : "http://unitsofmeasure.org", 
-         "code" : "{{observation_value_quantity_code}}"
+         "unit" : {{observation_value_quantity_unit}},
+         "system" : {{observation_value_quantity_system}}, 
+         "code" : {{observation_value_quantity_code}}
         },
-        "comment" : "{{body.user_notes}}",
+        "comment" : {{body.user_notes}},
         "device" : {
         "extension" : [{
-          "url" : "http://www.fhir.org/mfhir/StructureDefinition/observationDeviceModality",
-          "valueCode" : "{{header.acquisition_provenance.modality}}"
+          "url" : "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality",
+          "valueCode" : {{header.acquisition_provenance.modality}}
         }],
-        "display" : "{{header.acquisition_provenance.source_name}}"}
-        {observation_componentx}  //note 4
-    }
+        "display" : {{header.acquisition_provenance.source_name}}
+        },
+        "component": [{observation_componentx}]  //note 5
+      }
 </code></pre></div></div>
 
 <h4 id="observation_componentx-subtemplates">observation_componentx Subtemplates</h4>
@@ -906,10 +914,17 @@ This is the
       "coding" : [{ 
         "system" : "{{observation_component_value_codeableconcept_system}}", 
         "code" : "{{observation_component_value_codeableconcept_code}}", 
-        "display" : "{{observation_component_value_codeableconcept_display}}"}
-     }]
-   }
- }]
+        "display" : "{{observation_component_value_codeableconcept_display}}"
+        }],
+        "text" : "{{observation_component_value_codeableconcept_text}}"
+        },
+       "valueQuantity" : {
+         "value" : {{observation_component_value_quantity_value}},
+         "unit" : "{{observation_component_value_quantity_unit}}",
+         "system" : "{{observation_component_value_quantity_system}}", 
+         "code" : "{{observation_component_value_quantity_code}}"
+        }
+     }
 </code></pre></div></div>
 
 <p>Notes on template usage:</p>
@@ -938,7 +953,7 @@ This is the
 <p>The OMH header schema represent data MedicationDispense and the properties in the header schema map to more than a single FHIR element.  In addition, depending on the depth and level of detail required, there are multiple options to representing MedicationDispense including:</p>
 
 <ul>
-  <li><a name="f3b72344-f623-45e4-be8c-99efbdcf9007">​</a><a href="http://hl7.org/fhir/STU3/MedicationDispense.html">MedicationDispense</a>resource</li>
+  <li><a name="3f03d22d-dd77-4aed-88a3-4edff885a066">​</a><a href="http://hl7.org/fhir/STU3/MedicationDispense.html">MedicationDispense</a>resource</li>
   <li><a href="http://hl7.org/fhir/STU3/resource.html#Meta">meta.source</a> element</li>
   <li>inline Resource elements</li>
 </ul>
@@ -969,7 +984,7 @@ This is the
 <p>In this table, the schemas representing primitive and complex data-types are mapped directly to the corresponding FHIR datatype.  Listed in the <em>FHIR ValueSet</em> column the corresponding FHIR ValueSets and <a href="http://hl7.org/fhir/STU3/datatypes.html#code">binding strength</a> for the schemas that map to the FHIR <code class="highlighter-rouge">code</code>, an units values for the <code class="highlighter-rouge">Quantity</code>, and <code class="highlighter-rouge">Range</code> dataypes.</p>
 
 <ul>
-  <li><a name="2c444c87-95f3-4773-a881-4d8da8bdea1f">​</a>Where a value is fixed such as for <em>acceleration-unit-value-1.0.json</em>, a fixed <a href="http://hl7.org/fhir/STU3/https://www.hl7.org/fhir/structuredefinition.html#logical" title="FHIR logical model">Pattern</a> is associated with the schema which directly applied to the FHIR logical models when the schema is referenced.</li>
+  <li><a name="5ec3038b-1bd8-4bbe-a713-f1e1d33a1ed6">​</a>Where a value is fixed such as for <em>acceleration-unit-value-1.0.json</em>, a fixed <a href="http://hl7.org/fhir/STU3/https://www.hl7.org/fhir/structuredefinition.html#logical" title="FHIR logical model">Pattern</a> is associated with the schema which directly applied to the FHIR logical models when the schema is referenced.</li>
   <li>Where the unit value is an enumeration of units a FHIR <em>ValueSet</em> is associated with the schema.</li>
   <li>Both the patterns and ValueSets contain <strong>UCUM</strong> based units.</li>
   <li>For data point schemas that reference schemas associated with ValueSets (such as <em>unit-value-1.0.json</em>), the actual units and hence the patterns applied to the FHIR logical models van be further constrained by the data point schema themselves.</li>
@@ -1012,19 +1027,19 @@ This is the
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/body-location-1.0.json">body-location</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#code" title="FHIR code definition">code</a></td>
-      <td><a name="2823f48e-5e6f-4f18-9569-337410dadf12">​</a><a href="valueset-body-location.html">body-location</a></td>
+      <td><a name="0cd1042d-05f5-4beb-868b-b5246e3e758b">​</a><a href="valueset-body-location.html">body-location</a></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/body-posture-1.0.json">body-posture</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#code" title="FHIR code definition">code</a></td>
-      <td><a name="4cae9391-0865-47e7-ad76-5ec64744eb99">​</a><a href="valueset-body-posture.html">body-posture</a></td>
+      <td><a name="e9da1f5d-7a08-4477-871a-0e0e3e25b93e">​</a><a href="valueset-body-posture.html">body-posture</a></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/day-of-week-1.0.json">day-of-week</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#code" title="FHIR code definition">code</a></td>
-      <td><a name="46b54244-c4ad-4b7a-b514-e6bcd8c81bea">​</a><a href="valueset-day-of-week.html">day-of-week</a></td>
+      <td><a name="a0f224c5-d24b-4ff9-9f10-178624178b12">​</a><a href="valueset-day-of-week.html">day-of-week</a></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
@@ -1036,55 +1051,55 @@ This is the
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/descriptive-statistic-denominator-1.0.json">descriptive-statistic-denominator</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#code" title="FHIR code definition">code</a></td>
-      <td><a name="71dc0229-15f9-4227-9dbd-ade28a280ac5">​</a><a href="valueset-descriptive-statistic-denominator.html">descriptive-statistic-denominator</a></td>
+      <td><a name="83de4d73-9cc3-4aea-ac81-0720e51f48c9">​</a><a href="valueset-descriptive-statistic-denominator.html">descriptive-statistic-denominator</a></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/intervention-administration-route-1.0.json">intervention-administration-route</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#code" title="FHIR code definition">code</a></td>
-      <td><a name="9cd6f429-7994-4748-be28-e4b90834703f">​</a><a href="valueset-intervention-administration-route.html">intervention-administration-route</a></td>
+      <td><a name="5e75179c-e57b-43a1-ab33-7e59a7454b31">​</a><a href="valueset-intervention-administration-route.html">intervention-administration-route</a></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/medication-dose-unit-1.0.json">medication-dose-unit</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#code" title="FHIR code definition">code</a></td>
-      <td><a name="bd724d1c-eaec-4d4b-8120-f8f6bc8a0a81">​</a><a href="valueset-medication-dose-unit.html">medication-dose-unit</a></td>
+      <td><a name="e0b1fb03-9865-4ce4-9dad-afc45f878f3b">​</a><a href="valueset-medication-dose-unit.html">medication-dose-unit</a></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/part-of-day-1.0.json">part-of-day</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#code" title="FHIR code definition">code</a></td>
-      <td><a name="1d66c63d-c235-4bc9-ade0-2914f9468f2e">​</a><a href="valueset-part-of-day.html">part-of-day</a></td>
+      <td><a name="54744850-692f-42dc-8d75-1239ec487aaf">​</a><a href="valueset-part-of-day.html">part-of-day</a></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/position-during-measurement-1.0.json">position-during-measurement</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#code" title="FHIR code definition">code</a></td>
-      <td><a name="3f7139f9-7af9-428c-9120-c7968136d470">​</a><a href="valueset-position-during-measurement.html">position-during-measurement</a></td>
+      <td><a name="29399bcb-8701-4a95-b987-9d8eefea2475">​</a><a href="valueset-position-during-measurement.html">position-during-measurement</a></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/specimen-source-1.0.json">specimen-source</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#code" title="FHIR code definition">code</a></td>
-      <td><a name="73fd35c0-6a75-4bb4-a6ad-47b4e39c5ba2">​</a><a href="valueset-specimen-source.html">specimen-source</a></td>
+      <td><a name="9d4e0279-b3ee-439b-a0bc-fd886dfeb1dc">​</a><a href="valueset-specimen-source.html">specimen-source</a></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/temporal-relationship-to-meal-1.0.json">temporal-relationship-to-meal</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#code" title="FHIR code definition">code</a></td>
-      <td><a name="a48fb889-ee97-4b3d-8a1a-8dfa8b070664">​</a><a href="valueset-temporal-relationship-to-meal.html">temporal-relationship-to-meal</a></td>
+      <td><a name="be0aee3f-14c1-4d19-8e1b-1b1364861ec3">​</a><a href="valueset-temporal-relationship-to-meal.html">temporal-relationship-to-meal</a></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/temporal-relationship-to-physical-activity-1.0.json">temporal-relationship-to-physical-activity</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#code" title="FHIR code definition">code</a></td>
-      <td><a name="fc17c6cc-2f6d-49c5-ae20-f84e4887070e">​</a><a href="valueset-temporal-relationship-to-physical-activity.html">temporal-relationship-to-physical-activity</a></td>
+      <td><a name="3bc94fef-c156-4a37-bced-ad7fda0be771">​</a><a href="valueset-temporal-relationship-to-physical-activity.html">temporal-relationship-to-physical-activity</a></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/temporal-relationship-to-sleep-1.0.json">temporal-relationship-to-sleep</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#code" title="FHIR code definition">code</a></td>
-      <td><a name="bcde10ed-1cc9-472e-8cd3-e2f4470fe8c6">​</a><a href="valueset-temporal-relationship-to-sleep.html">temporal-relationship-to-sleep</a></td>
+      <td><a name="d2a06a5e-2cc1-466d-917d-54509d7e3c4a">​</a><a href="valueset-temporal-relationship-to-sleep.html">temporal-relationship-to-sleep</a></td>
       <td>&nbsp;</td>
     </tr>
     <tr>
@@ -1102,25 +1117,25 @@ This is the
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/area-unit-value-1.0.json">area-unit-value-1.0.json</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
-      <td><a name="3230b96b-fbb4-4205-bb9c-d51dad3b0faf">​</a><a href="valueset-area-unit-value.html">area-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
+      <td><a name="42e46aa6-2cae-4026-b21a-682698306d83">​</a><a href="valueset-area-unit-value.html">area-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/duration-unit-value-1.0.json">duration-unit-value-1.0.json</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
-      <td><a name="26e40670-2477-495a-8bfb-0979dac4636e">​</a><a href="valueset-duration-unit-value.html">duration-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
+      <td><a name="adf68bf1-e115-4a7a-8447-0bd5227bbcf0">​</a><a href="valueset-duration-unit-value.html">duration-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/duration-unit-value-range-1.0.json">duration-unit-value-range-1.0.json</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#range" title="FHIR Range definition">Range</a></td>
-      <td><a name="8ca47c77-5d07-4494-8b7b-466e9a2a0652">​</a><a href="valueset-duration-unit-value.html">duration-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
+      <td><a name="938d4fe7-d862-40de-a781-076f6102295e">​</a><a href="valueset-duration-unit-value.html">duration-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/frequency-unit-value-1.0.json">frequency-unit-value-1.0.json</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#ratio" title="FHIR Ratio definition">Ratio</a></td>
-      <td><a name="cbdc015d-194b-4673-9958-18dbd0197848">​</a><a href="valueset-duration-unit-value.html">duration-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
+      <td><a name="0e3bbc2f-4ee9-421d-b784-5b0499c12606">​</a><a href="valueset-duration-unit-value.html">duration-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
@@ -1132,37 +1147,37 @@ This is the
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/length-unit-value-1.0.json">length-unit-value-1.0.json</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
-      <td><a name="cc339440-ccab-4a22-b5c9-342dbbcf6405">​</a><a href="valueset-length-unit-value.html">length-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
+      <td><a name="1964c56a-9c25-4876-b261-812084ddc604">​</a><a href="valueset-length-unit-value.html">length-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/magnetic-flux-density-unit-value-1.0.json">magnetic-flux-density-unit-value-1.0.json</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
-      <td><a name="8894644f-466a-4047-b186-783b13031eb8">​</a><a href="valueset-magnetic-flux-density-unit-value.html">magnetic-flux-density-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
+      <td><a name="911697a2-82c7-433a-ac55-8c8519af3257">​</a><a href="valueset-magnetic-flux-density-unit-value.html">magnetic-flux-density-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/mass-unit-value-1.0.json">mass-unit-value-1.0.json</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
-      <td><a name="53818305-83c8-4207-8b18-35380f3819ff">​</a><a href="valueset-mass-unit-value.html">mass-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
+      <td><a name="9b739719-7d03-428d-8651-efbbcd4be2ea">​</a><a href="valueset-mass-unit-value.html">mass-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/medication-dose-unit-value-1.0.json">medication-dose-unit-value-1.0.json</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
-      <td><a name="963cb5f7-241f-44d5-aa62-041ca6fb9587">​</a><a href="valueset-medication-dose-unit.html">medication-dose-unit</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a>)</td>
+      <td><a name="5451f622-c3ca-4af5-a873-e971df1ae7d8">​</a><a href="valueset-medication-dose-unit.html">medication-dose-unit</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a>)</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/medication-dose-unit-value-range-1.0.json">medication-dose-unit-value-range-1.0.json</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#range" title="FHIR Range definition">Range</a></td>
-      <td><a name="d0a68f7f-7796-4aed-80d7-e24b4d76b835">​</a><a href="valueset-medication-dose-unit.html">medication-dose-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a>)</td>
+      <td><a name="55597191-fd28-4cfe-ba4c-359d9041083a">​</a><a href="valueset-medication-dose-unit.html">medication-dose-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#extensible">extensible</a>)</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/pace-unit-value-1.0.json">pace-unit-value-1.0.json</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
-      <td><a name="5e7a1820-d9b2-43b7-8502-f2d5b901cef0">​</a><a href="valueset-pace-unit-value.html">pace-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
+      <td><a name="659d5c58-8704-4a5f-861a-357a2c66a971">​</a><a href="valueset-pace-unit-value.html">pace-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
@@ -1174,13 +1189,13 @@ This is the
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/speed-unit-value-1.0.json">speed-unit-value-1.0.json</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
-      <td><a name="876dca47-72f6-44db-842e-e6e9b58173f4">​</a><a href="valueset-speed-unit-value.html">speed-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
+      <td><a name="ad8112bb-10bb-4127-b5fb-8236a2d347c2">​</a><a href="valueset-speed-unit-value.html">speed-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/temperature-unit-value-1.0.json">temperature-unit-value-1.0.json</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
-      <td><a name="b720b078-9160-4e84-88ac-1d43b4a2817d">​</a><a href="valueset-temperature-unit-value.html">temperature-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
+      <td><a name="159b86a8-3f62-4c76-b0f6-3053ce6ddc56">​</a><a href="valueset-temperature-unit-value.html">temperature-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
@@ -1198,7 +1213,7 @@ This is the
     <tr>
       <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/volume-unit-value-1.0.json">volume-unit-value-1.0.json</a></td>
       <td><a href="http://hl7.org/fhir/STU3/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
-      <td><a name="d7740402-cd74-4d7f-b3e9-8f86036bf7b7">​</a><a href="valueset-volume-unit-value.html">volume-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
+      <td><a name="77add004-9843-4261-819a-856ed6691378">​</a><a href="valueset-volume-unit-value.html">volume-unit-value</a> (<a href="http://hl7.org/fhir/STU3/terminologies.html#required">required</a>)</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
@@ -1839,7 +1854,7 @@ If there is a descriptiveStatistic element the step count value is mapped to the
   <div class="container">    <!-- container -->
    <div class="inner-wrapper">
     <p>
-      Open mHealth to FHIR Version: 0.0.0 &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Fri, Nov 23, 2018 04:16-0800.
+      Open mHealth to FHIR Version: 0.0.0 &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Tue, Nov 27, 2018 12:54-0800.
       | <a style="color: #81BEF7" href="history.html">History</a>
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a rel="license" style="color: #81BEF7" href="http://hl7.org/fhir/STU3/license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>

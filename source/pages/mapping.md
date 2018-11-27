@@ -94,41 +94,55 @@ Each OMH schema for a datapoint is composed of the 'header' and 'body,  This tab
 
 Each Datapoint is represented by the body properties and this table is a summarey of the OMH datapoint schema type as represented by the `header.schema_id.name` element to the corresponding FHIR Observation `category` and 'code' elements and default units for quantitative measures.
 
-|header.schema_id.name|Observation.category.code|Observation.code.system|Observation.code.code|Observation.code.display|observation_value_quantity_value_path|observation_value_quantity_unit (default)|observation_value_quantity_code (default UCUM)|descriptive_statistic|descriptive_statistic_denominator|components|
-|--|--|--|--|--|--|--|--|--|--|--|
-|acceleration|physical-activity|http://loinc.org|80493-0|Activity level [Acceleration]|body.acceleration|None|None|False|False|[]|
-|ambient_temperature|None|http://loinc.org|60832_3|Room temperature|body.ambient_temperature|None|None|False|False|[]|
-|blood_glucose|vital-signs|http://loinc.org|2339_0|Glucose Mass/volume in Blood|body.blood_glucose|None|None|False|False|[]|
-|blood_pressure|vital-signs|http://loinc.org|85354_9|Blood pressure panel with all children optional|body.blood_pressure|None|None|False|False|[]|
-|body_fat_percentage|exam|http://loinc.org|41982_0|Percentage of body fat Measured|body.body_fat_percentage|None|None|False|False|[]|
-|body_height|vital-signs|http://loinc.org|8302_2|Body height|body.body_height|None|None|False|False|[]|
-|body_mass_index|vital-signs|http://loinc.org|39156_5|Body mass index (BMI) Ratio|body.body_mass_index|None|None|False|False|[]|
-|body_temperature|vital-signs|http://loinc.org|8310_5|Body temperature|body.body_temperature|None|None|False|False|[]|
-|body_weight|vital-signs|http://loinc.org|29463_7|Body weight|body.body_weight|None|None|False|False|[]|
-|breath_carbon_monoxide|laboratory|http://snomed.info/id|251900003|Expired carbon monoxide concentration (observable entity)|body.breath_carbon_monoxide|None|None|False|False|[]|
-|calories_burned|physical-activity|http://loinc.org|41981_2|Calories burned|body.calories_burned|None|None|False|False|[]|
-|diastolic_blood_pressure|vital-signs|http://loinc.org|8462_4|Diastolic blood pressure|body.diastolic_blood_pressure|None|None|False|False|[]|
-|expiratory_time|exam|http://loinc.org|60739_0|Expiration Time Respiratory system|body.expiratory_time|None|None|False|False|[]|
-|geoposition|physical-activity|http://www.fhir.org/guides/mfhir/datapoint-type|geoposition|Geoposition|body.geoposition|None|None|False|False|[]|
-|heart_rate|vital-signs|http://loinc.org|8867_4|Heart rate|body.heart_rate.value|beats/min|/min|True|False|['body.temporal_relationship_to_physical_activity', 'body.temporal_relationship_to_sleep']|
-|inspiratory_time|exam|http://loinc.org|60740_8|Inspiration Time Respiratory system|body.inspiratory_time|None|None|False|False|[]|
-|magnetic_force|physical-activity|http://www.fhir.org/guides/mfhir/datapoint-type|magnetic_force|Magnetic Force Panel|body.magnetic_force|None|None|False|False|[]|
-|medication_adherence_percent|Survey|http://snomed.info/id|418633004|Medication compliance (observable entity)|body.medication_adherence_percent|None|None|False|False|[]|
-|minute_volume|exam|http://loinc.org|20139_2|Volume expired 1 minute|body.minute_volume|None|None|False|False|[]|
-|minutes_moderate_activity|physical-activity|http://snomed.info/id|408581006|Physical activity target moderate exercise (finding)|body.minutes_moderate_activity|None|None|False|False|[]|
-|orientation|vital-signs|http://www.fhir.org/guides/mfhir/datapoint-type|orientation|Gyroscope measurement Panel|body.orientation|None|None|False|False|[]|
-|oxygen_saturation|vital-signs|http://loinc.org|59408_5|Oxygen saturation in Arterial blood by Pulse oximetry|body.oxygen_saturation|None|None|False|False|[]|
-|pace|physical-activity|http://www.fhir.org/guides/mfhir/datapoint-type|pace|Pace|body.pace|None|None|False|False|[]|
-|physical_activity|physical-activity|http://snomed.info/id|68130003|Physical activity (observable entity)|body.physical_activity|None|None|False|False|[]|
-|respiratory_rate|vital-signs|http://loinc.org|9279_1|Respiratory Rate|body.respiratory_rate|None|None|False|False|[]|
-|rr_interval|exam|http://loinc.org|8637_1|R_R interval by EKG|body.rr_interval|None|None|False|False|[]|
-|sleep_duration|physical-activity|http://snomed.info/id|248263006|Duration of sleep (observable entity)|body.sleep_duration|None|None|False|False|[]|
-|sleep_episode|physical-activity|http://snomed.info/id|258158006|Sleep, function (observable entity)|body.sleep_episode|None|None|False|False|[]|
-|speed|physical-activity|http://ncimeta.nci.nih.gov|C0678536|Speed|body.speed|None|None|False|False|[]|
-|step_count|physical-activity|http://loinc.org|55423_8|Number of steps in unspecified time Pedometer|body.step_count|steps|{steps}|False|False|[]|
-|systolic_blood_pressure|vital-signs|http://loinc.org|8480_6|Systolic blood pressure|body.systolic_blood_pressure|None|None|False|False|[]|
-|ventilation_cycle_time|exam|http://snomed.info/id|250818005|Ventilation cycle time (observable entity)|body.ventilation_cycle_time|None|None|False|False|[]|
+|header.schema_id.name|Observation.category.code|Observation.code.system|Observation.code.code|Observation.code.display|observation_value_quantity_unit(s) (list)|descriptive_statistic|descriptive_statistic_denominator|components|
+|--|--|--|--|--|--|--|--|--|
+|acceleration|physical-activity|http://loinc.org|80493-0|Activity level [Acceleration]|None|False|False|[]|
+|ambient_temperature|None|http://loinc.org|60832-3|Room temperature|None|False|False|[]|
+|blood_glucose|laboratory|http://loinc.org|2339-0|Glucose Mass/volume in Blood|['mg/dL', 'mmol/L']|True|False|['temporal_relationship_to_sleep', 'temporal_relationship_to_meal']|
+|blood_pressure|vital-signs|http://loinc.org|85354-9|Blood pressure panel with all children optional|None|True|False|['diastolic_blood_pressure', 'systolic_blood_pressure']|
+|body_fat_percentage|exam|http://loinc.org|41982-0|Percentage of body fat Measured|['%']|True|False|[]|
+|body_height|vital-signs|http://loinc.org|8302-2|Body height|['cm', 'in']|False|False|[]|
+|body_mass_index|vital-signs|http://loinc.org|39156-5|Body mass index (BMI) Ratio|['kg/m^2']|True|False|[]|
+|body_temperature|vital-signs|http://loinc.org|8310-5|Body temperature|['K','F','C']|True|False|['temporal_relationship_to_sleep']|
+|body_weight|vital-signs|http://loinc.org|29463-7|Body weight|['kg', 'g', 'lb']|True|False|[]|
+|breath_carbon_monoxide|laboratory|http://snomed.info/id|251900003|Expired carbon monoxide concentration (observable entity)|None|False|False|[]|
+|calories_burned|physical-activity|http://loinc.org|41981-2|Calories burned|['kcal']|True|True|[]|
+|diastolic_blood_pressure|vital-signs|http://loinc.org|8462-4|Diastolic blood pressure|['mmHg']|False|False|[]|
+|expiratory_time|exam|http://loinc.org|60739-0|Expiration Time Respiratory system|None|False|False|[]|
+|geoposition|physical-activity|http://www.fhir.org/guides/mfhir/datapoint-type|geoposition|Geoposition|None|False|False|[]|
+|heart_rate|vital-signs|http://loinc.org|8867-4|Heart rate|['beats/min']|True|False|['temporal_relationship_to_physical_activity', 'temporal_relationship_to_sleep']|
+|inspiratory_time|exam|http://loinc.org|60740-8|Inspiration Time Respiratory system|None|False|False|[]|
+|magnetic_force|physical-activity|http://www.fhir.org/guides/mfhir/datapoint-type|magnetic_force|Magnetic Force Panel|None|False|False|[]|
+|medication_adherence_percent|Survey|http://snomed.info/id|418633004|Medication compliance (observable entity)|None|False|False|[]|
+|minute_volume|exam|http://loinc.org|20139-2|Volume expired 1 minute|None|False|False|[]|
+|minutes_moderate_activity|physical-activity|http://snomed.info/id|408581006|Physical activity target moderate exercise (finding)|['min']|False|False|[]|
+|orientation|vital-signs|http://www.fhir.org/guides/mfhir/datapoint-type|orientation|Gyroscope measurement Panel|None|False|False|[]|
+|oxygen_saturation|vital-signs|http://loinc.org|59408-5|Oxygen saturation in Arterial blood by Pulse oximetry|['%']|True|False|['supplemental_oxygen_flow_rate', 'oxygen_therapy_mode_of_administration']|
+|pace|physical-activity|http://www.fhir.org/guides/mfhir/datapoint-type|pace|Pace|None|False|False|[]|
+|physical_activity|physical-activity|http://snomed.info/id|68130003|Physical activity (observable entity)|None|False|False|[]|
+|respiratory_rate|vital-signs|http://loinc.org|9279-1|Respiratory Rate|['breaths/min']|True|False|['temporal_relationship_to_physical_activity']|
+|rr_interval|exam|http://loinc.org|8637-1|R_R interval by EKG|None|False|False|[]|
+|sleep_duration|physical-activity|http://snomed.info/id|248263006|Duration of sleep (observable entity)|['sec', 'min', 'h']|True|True|[]|
+|sleep_episode|physical-activity|http://snomed.info/id|258158006|Sleep, function (observable entity)|None|False|False|[]|
+|speed|physical-activity|http://ncimeta.nci.nih.gov|C0678536|Speed|None|False|False|[]|
+|step_count|physical-activity|http://loinc.org|55423-8|Number of steps in unspecified time Pedometer|['steps']|True|True|[]|
+|systolic_blood_pressure|vital-signs|http://loinc.org|8480-6|Systolic blood pressure|['mmHg']|False|False|[]|
+|ventilation_cycle_time|exam|http://snomed.info/id|250818005|Ventilation cycle time (observable entity)|None|False|False|[]|
 {:.grid}
+
+**Data Point Component Mapping Table**
+
+Some Datapoints properties are represented by the FHIR `Observation.component` element in FHIR.  This table summarizes these OMH datapoint schema properties and list the corresponding OMH propertied name in the  `Component Name` column and its corresponding FHIR Observation component code and valuetype attributes.  This table is used along with the OMH to FHIR concept mapping table to to populate the the Observation template below.
+
+|Component Name|Component Code System|Component Code Code|Component Code Display|Component Value Type|
+|--|--|--|--|--|
+|body_posture|http://snomed.info/sct|271605009|Position of body and posture (observable entity)|valueCodeableConcept|
+|diastolic_blood_pressure|http://loinc.org|8462-4|Diastolic blood pressure|valueQuantity|
+|systolic_blood_pressure|http://loinc.org|8480-6|Systolic blood pressure|valueQuantity|
+|temporal_relationship_to_meal|http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes|relative-to-meal|OMH to FHIR Temporal Relationship To Meal|valueCodeableConcept|
+|temporal_relationship_to_physical_activity|http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes|relative-to-activity|OMH to FHIR Temporal Relationship To Physical Activity|valueCodeableConcept|
+|temporal_relationship_to_sleep|http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes|relative-to-sleep|OMH to FHIR Temporal Relationship To Sleep|valueCodeableConcept|
+{: .grid}
 
 #### Observation Template
 
@@ -138,67 +152,81 @@ This FHIR Observation template is an instance view of the above mappings and can
 ~~~
 {
        "resourceType": "Observation",
-       "id": "{{server_assigned_resource_id}}",   //note 1,2,5
+       "id": {{server_assigned_resource_id}},  //note 1,2,6
        "meta": {
-       "profile" : ["http://www.fhir.org/mfhir/StructureDefinition/omh-to-fhir-observation"]  // note 6
+       "profile" : ["http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"]  // note 7
      },
+     "extension" : [{
+         "url" : {{observation_specimen_code_extension_url}},
+         "valueCodeableConcept": {
+         "coding": [
+           {
+             "system": {{observation_specimen_code_system}},
+             "code": {{observation_specimen_code_code}},
+             "display": {{observation_specimen_code_display}}
+           }
+         ],
+         "text": {{observation_specimen_code_text}}
+       }
+    }],
        "identifier"  : [{
-       "system" : "https://omh.org/shimmer/ids",  //note 7
-       "value" : "{{header.id}}"  //note 3
+       "system" : "https://omh.org/shimmer/ids", //note 7
+       "value" : {{header.id}} //note 3
        }],
-       "status": "unknown",  //note 8
-       "category": [  //note 9
+       "status": "unknown",  //note 9
+       "category": [  //note 4
          {
            "coding": [
              {
                "system": "http://hl7.org/fhir/observation-category",
-               "code": "{{observation_category_code}}",
-               "display": "{{observation_category_display}}"
+               "code": {{observation_category_code}},
+               "display": {{observation_category_display}}
              }
            ]
          }
        ],
-       "code": {  //note 9
+       "code": {   //note 4
          "coding": [
            {
-             "system": "{{observation_code_system}}",
-             "code": "{{observation_code_code}}",
-             "display": "{{observation_code_display}}"
+             "system": {{observation_code_system}},
+             "code": {{observation_code_code}},
+             "display": {{observation_code_display}}
            }
         ,{
-          "system" : "{{addl_observation_code_system}}",
-          "code" : "{{addl_observation_coding_code}}",
-          "display" : "{{addl_observation_coding_display}}"
+          "system" : {{addl_observation_coding_system}}, //note 12
+          "code" : {{addl_observation_coding_code}},
+          "display" : {{addl_observation_coding_display}}
         }
          ]
        },
-       "subject": { //note 7
+       "subject": {  //note 8
          "identifier" : {
        "system" : "https://omh.org/shimmer/patient_ids",
-       "value" : "{{header.user_id}}"
+       "value" : {{header.user_id}}
      }
        },
-       "effectiveDateTime" : "{{body.effective_time_frame.date_time}}", //note 4
-       "effectivePeriod" : {  //note 4
-          "start" : "{{body.effective_time_frame.time_interval.start_date_time}}", 
-          "end" : "{{body.effective_time_frame.time_interval.end_date_time}}"
+       "effectiveDateTime" : {{body.effective_time_frame.date_time}},  //note 11
+       "effectivePeriod" : {  //note 11
+          "start" : {{body.effective_time_frame.time_interval.start_date_time}}, 
+          "end" : {{body.effective_time_frame.time_interval.end_date_time}}
           }, 
-       "issued": "{{header.creation_date_time}}",
-       "valueQuantity" : {  //note 4
+       "issued": {{header.creation_date_time}},
+       "valueQuantity" : {  //note 10
          "value" : {observation_value_quantity_value},
-         "unit" : "{{observation_value_quantity_unit}}",
-         "system" : "http://unitsofmeasure.org", 
-         "code" : "{{observation_value_quantity_code}}"
+         "unit" : {{observation_value_quantity_unit}},
+         "system" : {{observation_value_quantity_system}}, 
+         "code" : {{observation_value_quantity_code}}
         },
-        "comment" : "{{body.user_notes}}",
+        "comment" : {{body.user_notes}},
         "device" : {
         "extension" : [{
-          "url" : "http://www.fhir.org/mfhir/StructureDefinition/observationDeviceModality",
-          "valueCode" : "{{header.acquisition_provenance.modality}}"
+          "url" : "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality",
+          "valueCode" : {{header.acquisition_provenance.modality}}
         }],
-        "display" : "{{header.acquisition_provenance.source_name}}"}
-        {observation_componentx}  //note 4
-    }
+        "display" : {{header.acquisition_provenance.source_name}}
+        },
+        "component": [{observation_componentx}]  //note 5
+      }
 ~~~
 {% endraw %}
 
@@ -220,10 +248,17 @@ This FHIR Observation sub template is an instance view of the Observation compon
       "coding" : [{ 
         "system" : "{{observation_component_value_codeableconcept_system}}", 
         "code" : "{{observation_component_value_codeableconcept_code}}", 
-        "display" : "{{observation_component_value_codeableconcept_display}}"}
-     }]
-   }
- }]
+        "display" : "{{observation_component_value_codeableconcept_display}}"
+        }],
+        "text" : "{{observation_component_value_codeableconcept_text}}"
+        },
+       "valueQuantity" : {
+         "value" : {{observation_component_value_quantity_value}},
+         "unit" : "{{observation_component_value_quantity_unit}}",
+         "system" : "{{observation_component_value_quantity_system}}", 
+         "code" : "{{observation_component_value_quantity_code}}"
+        }
+     }
 ~~~
 {% endraw %}
 

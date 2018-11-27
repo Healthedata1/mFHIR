@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 
-import json
+import sys, os, json
 import fhir_templates as f
 import omh_fhir_concept_mapping_table as maps
 import test_omh_fhir_mapping as unit_tests
 from partial_formatter import PartialFormatter
 from pdb import set_trace as bp
-from stringcase import spinalcase, titlecase
+from stringcase import spinalcase, titlecase, snakecase
 from pprint import pprint
 
 fmt= PartialFormatter()
@@ -40,30 +40,39 @@ def omh_to_fhir(data):
     # get schema name  ( e.g. 'step_count')
     schema_id = x.header.schema_id.name
 
-    pprint('header.id ={header_id}\n schema_id = {schema_id}\n omh_datatype_mapping[{schema_id}] ={datatype_mapping}\n'.format(header_id=x.header.id,schema_id= schema_id,datatype_mapping=f.omh_datatype_mapping[schema_id]))
 
-    # map code and category from schema_id.name
+
+    # map code and category from schema_id.name and set some default values
     observation_category_code = f.omh_datatype_mapping[schema_id][0]
     observation_category_display = f.omh_datatype_mapping[schema_id][1]
     observation_code_system = f.omh_datatype_mapping[schema_id][2]
     observation_code_code = f.omh_datatype_mapping[schema_id][3]
     observation_code_display = f.omh_datatype_mapping[schema_id][4]
-    observation_value_quantity_unit = f.omh_datatype_mapping[schema_id][5]
-    observation_value_quantity_system = 'http://unitsofmeasure.org'
-    observation_value_quantity_code = f.omh_datatype_mapping[schema_id][6]
-    descriptive_statistic = f.omh_datatype_mapping[schema_id][7]
-    descriptive_statistic_denominator = f.omh_datatype_mapping[schema_id][8]
+    descriptive_statistic = f.omh_datatype_mapping[schema_id][6]
+    descriptive_statistic_denominator = f.omh_datatype_mapping[schema_id][7]
+    
+    print('Observation.category =  {category}'.format(category=observation_category_code))
+    print('Observation.code = {code} ({display})'.format(code=observation_code_code, display=observation_code_display))
 
     # get actual numeric value - may need to inspect schema path to find it.
     try:
         observation_value_quantity_value = getattr(x.body,schema_id)
+        try:
+            observation_value_quantity_value = getattr(observation_value_quantity_value,'value')
+            observation_value_quantity_unit = getattr(observation_value_quantity_value,'unit')
+            observation_value_quantity_system = 'http://unitsofmeasure.org'
+            observation_value_quantity_code = maps.concept_maps[observation_value_quantity_unit][1]
+        except AttributeError:  # no value and unit element like in step step_count
+            observation_value_quantity_unit = f.omh_datatype_mapping[schema_id][5][0]  # use default
+            observation_value_quantity_system = 'http://unitsofmeasure.org'
+            observation_value_quantity_code = maps.concept_maps[observation_value_quantity_unit][1]
     except AttributeError:  # no value element like in blood_pressure panel
         observation_value_quantity_value = -1  # assign as a null value for now
         observation_value_quantity_system = 'None'
-    try:
-        observation_value_quantity_value = getattr(observation_value_quantity_value,'value')
-    except AttributeError:  # no value element like in step step_count
-        pass
+        observation_value_quantity_unit = 'None' 
+        observation_value_quantity_code = 'None'
+
+
 
     # print(observation_value_quantity_value)
 
@@ -95,7 +104,7 @@ def omh_to_fhir(data):
     try:
         observation_specimen_code_extension_url = 'http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_extension_observation_specimen_code'
         observation_specimen_code_system = maps.concept_maps[x.body.specimen_source][0]
-        observation_specimen_code_system = maps.concept_maps[x.body.specimen_source][1]
+        observation_specimen_code_code = maps.concept_maps[x.body.specimen_source][1]
         observation_specimen_code_display = maps.concept_maps[x.body.specimen_source][2]
         observation_specimen_code_text = x.body.specimen_source
     except AttributeError: #no specimen_source
@@ -126,9 +135,9 @@ def omh_to_fhir(data):
             else: # enter values directly ( e.g. blood pressure )
                 observation_component_value_quantity_value = getattr(component_name,'value')
                 # print(component, observation_component_value_quantity_value)
-                observation_component_value_quantity_unit =  f.omh_datatype_mapping[component][5]
+                observation_component_value_quantity_unit =  getattr(component_name,'unit')
                 observation_component_value_quantity_system = 'http://unitsofmeasure.org'
-                observation_component_value_quantity_code = f.omh_datatype_mapping[component][6]
+                observation_component_value_quantity_code = maps.concept_maps[observation_component_value_quantity_unit][1]
                 observation_component_value_codeableconcept_system = 'None'
                 observation_component_value_codeableconcept_code = 'None'
                 observation_component_value_codeableconcept_display = 'None'
@@ -203,10 +212,43 @@ data = '{"body":{"systolic_blood_pressure":{"value":160,"unit":"mmHg"},"diastoli
 
 if __name__ == "__main__":
     # execute only if run as a script
-    for test_schema in unit_tests.test_schemas:
-        json_string = unit_tests.omh_schema_template.format(**test_schema)
-        json_data = json.loads(json_string) # create a dict
-        data = json.dumps(json_data, separators=(',', ":")) #minify as json string
-        omh_to_fhir(data)
+    test_schemas  = [
+    'blood_glucose',
+    'blood_pressure',
+    'body_fat_percentage',
+    'body_height',
+    'body_mass_index',
+    'body_temperature',
+    'body_weight',
+    'calories_burned',
+    'diastolic_blood_pressure',
+    'heart_rate',
+    'minutes_moderate_activity',
+    'oxygen_saturation',
+    'respiratory_rate',
+    'sleep_duration',
+    'step_count',
+    'systolic_blood_pressure'
+    ]
 
+    print('Current directory ={}'.format(os.getcwd()))
+
+    base_path = 'my-notes/python-mapping-example/test-data/omh'
+
+    for schema_name in test_schemas: # get test files
+        schema_path = '{base_path}/{schema_name}/2.0/ShouldPass'.format(base_path=base_path, schema_name=spinalcase(schema_name))
+        if os.path.isdir(schema_path):
+            pass
+        else:
+            schema_path = '{base_path}/{schema_name}/1.0/ShouldPass'.format(base_path=base_path, schema_name=spinalcase(schema_name))
+        for schema in os.listdir(schema_path):
+            print('Test Schema = {schema}'.format(schema=snakecase(os.path.splitext(schema)[0])))
+            with open('{schema_path}/{schema}'.format(schema_path=schema_path, schema=schema)) as schema_file:
+                schema_dict = json.load(schema_file)
+                schema_json = json.dumps(schema_dict,indent=3)
+                json_string = unit_tests.omh_schema_template.format(name=schema_name,body=schema_json)
+                json_data = json.loads(json_string) # create a dict
+                data = json.dumps(json_data, separators=(',', ":")) #minify as json string
+                omh_to_fhir(data)
+            
 print('end')

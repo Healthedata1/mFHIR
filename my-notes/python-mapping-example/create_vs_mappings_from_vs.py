@@ -23,7 +23,7 @@ in_files=[
 'pygen-valueset-length-unit-value',
 'pygen-valueset-magnetic-flux-density-unit-value',
 'pygen-valueset-mass-unit-value',
-'pygen-valueset-medication-dose-unit',
+#'pygen-valueset-medication-dose-unit',
 'pygen-valueset-pace-unit-value',
 'pygen-valueset-part-of-day',
 'pygen-valueset-position-during-measurement',
@@ -33,7 +33,8 @@ in_files=[
 'pygen-valueset-temporal-relationship-to-meal',
 'pygen-valueset-temporal-relationship-to-physical-activity',
 'pygen-valueset-temporal-relationship-to-sleep',
-'pygen-valueset-volume-unit-value'
+'pygen-valueset-volume-unit-value',
+'valueset-omh-unit-value'
 ]
 
 # create mapping table from vs
@@ -78,5 +79,5 @@ for k,v in my_dict.items():  # lookup code displays
 
 # my_dict = {k: tuple(v) for (k,v) in my_dict.items()}
 
-pprint({k: tuple(v) for (k,v) in my_dict.items()})
+pprint({k: tuple(v) for (k,v) in my_dict.items()}, width = 200) 
 

@@ -1,0 +1,69 @@
+{
+  "compose": {
+    "include": [
+      {
+        "concept": [
+          {
+            "code": "{steps}",
+            "display": "steps"
+          },
+          {
+            "code": "mm[Hg]",
+            "display": "mmHg"
+          },
+          {
+            "code": "mg/dL",
+            "display": "mg/dL"
+          },
+          {
+            "code": "mmol/L",
+            "display": "mmol/L"
+          },
+          {
+            "code": "kg/m2",
+            "display": "kg/m^2"
+          },
+          {
+            "code": "kCal",
+            "display": "kcal"
+          },
+          {
+            "code": "/min",
+            "display": "beats/min"
+          },
+          {
+            "code": "/min",
+            "display": "breaths/min"
+          },
+          {
+            "code": "%",
+            "display": "%"
+          }
+        ],
+        "system": "http://unitsofmeasure.org"
+      }
+    ]
+  },
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.openmhealth.org/"
+        }
+      ]
+    }
+  ],
+  "copyright": "Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved.",
+  "date": "2018-11-28T15:55:00.13Z",
+  "description": "Implicit OMH units (not explicitly enumerated in the schemas) needed for OMH to FHIR mapping",
+  "id": "omh-unit-value",
+  "immutable": false,
+  "name": "omh-unit-value",
+  "title": "OMH to FHIR Unit Value Value Set",
+  "publisher": "Open mHealth",
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "url": "http://www.fhir.org/guides/mfhir/ValueSet/omh-unit-value",
+  "version": "0.0.0"
+}

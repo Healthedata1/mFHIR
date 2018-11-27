@@ -10,7 +10,7 @@
   "name": "omh-extension-observation-device-modality",
   "title": "OMH to FHIR Observation Extension Device Modality",
   "status": "draft",
-  "date": "2018-11-23T04:16:08-08:00",
+  "date": "2018-11-27T12:50:17-08:00",
   "fhirVersion": "3.0.1",
   "mapping": [
     {

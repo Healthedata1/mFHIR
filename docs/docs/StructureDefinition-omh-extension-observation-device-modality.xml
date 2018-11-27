@@ -14,7 +14,7 @@
   <name value="omh-extension-observation-device-modality"/>
   <title value="OMH to FHIR Observation Extension Device Modality"/>
   <status value="draft"/>
-  <date value="2018-11-23T04:16:08-08:00"/>
+  <date value="2018-11-27T12:50:17-08:00"/>
   <fhirVersion value="3.0.1"/>
   <mapping>
     <identity value="rim"/>

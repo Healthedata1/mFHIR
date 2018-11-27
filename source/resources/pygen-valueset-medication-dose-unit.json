@@ -340,7 +340,7 @@
                         "display": "X"
                     }
                 ],
-                "system": "http://www.fhir.org/guides/mfhir/CodeSystem/medication-dose-unit"
+                "system": "http://unitsofmeasure.org"
             }
         ]
     },

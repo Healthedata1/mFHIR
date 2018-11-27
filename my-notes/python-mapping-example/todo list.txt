@@ -1,12 +1,25 @@
 mfhir mappings todo:
 
-unit mappings  ( body temp)
+convert all template values to observation_...
+unit mappings  ( body temp) -done
 method mappings (os sat)
-bodysite mappings (o2 sat)
+bodysite mappings (o2 sat, body temp)
 
 generate mapping and code tables for ig
+  mapping page
+  profile pages - completed descriptive_statistic mappings
+add mapping table to terminology
 
 update quick start description
 
 enumerate the python code.
-create unit tests
+create unit tests - completed
+
+complete fhir artifacts.
+  profiles
+  concept maps  (generated table for IG.)
+  save tempalte in python and liquid formats as bindaries
+  create a Gist or python notebook file.
+  
+  
+  
