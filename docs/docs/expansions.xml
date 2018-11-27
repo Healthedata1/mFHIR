@@ -1,151 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="12e096a3-4fe0-41e3-812b-80e008562698"/>
+  <id value="3a335540-ab8f-4a67-81ab-0d0d15ccaf83"/>
   <meta>
-    <lastUpdated value="2018-11-15T19:25:58.731-08:00"/>
+    <lastUpdated value="2018-11-23T04:16:08.490-08:00"/>
   </meta>
   <type value="collection"/>
-  <entry>
-    <fullUrl value="http://www.fhir.org/guides/mfhir/ValueSet/specimen-source"/>
-    <resource>
-      <ValueSet>
-        <id value="specimen-source"/>
-        <text>
-          <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>This value set contains 6 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://www.fhir.org/guides/mfhir/CodeSystem/specimen-source version 0.0.0</p>
-            <p>All codes from system 
-              <a href="CodeSystem-specimen-source.html">
-                <code>http://www.fhir.org/guides/mfhir/CodeSystem/specimen-source</code>
-              </a>
-            </p>
-            <table class="codes">
-              <tr>
-                <td style="white-space:nowrap">
-                  <b>Code</b>
-                </td>
-                <td>
-                  <b>Display</b>
-                </td>
-                <td>
-                  <b>Definition</b>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---www.fhir.org-guides-mfhir-CodeSystem-specimen-source-interstitial-fluid"> </a>
-                  <a href="CodeSystem-specimen-source.html#specimen-source-interstitialfluid">interstitial fluid</a>
-                </td>
-                <td>interstitial fluid</td>
-                <td/>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---www.fhir.org-guides-mfhir-CodeSystem-specimen-source-capillary-blood"> </a>
-                  <a href="CodeSystem-specimen-source.html#specimen-source-capillaryblood">capillary blood</a>
-                </td>
-                <td>capillary blood</td>
-                <td/>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---www.fhir.org-guides-mfhir-CodeSystem-specimen-source-plasma"> </a>
-                  <a href="CodeSystem-specimen-source.html#specimen-source-plasma">plasma</a>
-                </td>
-                <td>plasma</td>
-                <td/>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---www.fhir.org-guides-mfhir-CodeSystem-specimen-source-serum"> </a>
-                  <a href="CodeSystem-specimen-source.html#specimen-source-serum">serum</a>
-                </td>
-                <td>serum</td>
-                <td/>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---www.fhir.org-guides-mfhir-CodeSystem-specimen-source-tears"> </a>
-                  <a href="CodeSystem-specimen-source.html#specimen-source-tears">tears</a>
-                </td>
-                <td>tears</td>
-                <td/>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---www.fhir.org-guides-mfhir-CodeSystem-specimen-source-whole-blood"> </a>
-                  <a href="CodeSystem-specimen-source.html#specimen-source-wholeblood">whole blood</a>
-                </td>
-                <td>whole blood</td>
-                <td/>
-              </tr>
-            </table>
-          </div>
-        </text>
-        <url value="http://www.fhir.org/guides/mfhir/ValueSet/specimen-source"/>
-        <version value="0.0.0"/>
-        <name value="specimen-source"/>
-        <title value="Specimen Source"/>
-        <status value="draft"/>
-        <date value="2018-04-28T08:55:00-07:00"/>
-        <publisher value="Open mHealth"/>
-        <contact>
-          <telecom>
-            <system value="url"/>
-            <value value="http://www.openmhealth.org/"/>
-          </telecom>
-        </contact>
-        <description value="The specimen analyzed. The current value set is taken from the SNOMED CT Body substance sample (specimen) hierarchy without the word &#39;specimen&#39;. More values will be added as needed."/>
-        <immutable value="false"/>
-        <copyright value="Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved."/>
-        <expansion>
-          <identifier value="urn:uuid:40b0ca82-206b-4d83-a13b-409b7133bc33"/>
-          <timestamp value="2018-11-15T15:31:16-08:00"/>
-          <total value="6"/>
-          <parameter>
-            <name value="excludeNested"/>
-            <valueBoolean value="false"/>
-          </parameter>
-          <parameter>
-            <name value="version"/>
-            <valueUri value="http://www.fhir.org/guides/mfhir/CodeSystem/specimen-source|0.0.0"/>
-          </parameter>
-          <contains>
-            <system value="http://www.fhir.org/guides/mfhir/CodeSystem/specimen-source"/>
-            <code value="interstitial fluid"/>
-            <display value="interstitial fluid"/>
-          </contains>
-          <contains>
-            <system value="http://www.fhir.org/guides/mfhir/CodeSystem/specimen-source"/>
-            <code value="capillary blood"/>
-            <display value="capillary blood"/>
-          </contains>
-          <contains>
-            <system value="http://www.fhir.org/guides/mfhir/CodeSystem/specimen-source"/>
-            <code value="plasma"/>
-            <display value="plasma"/>
-          </contains>
-          <contains>
-            <system value="http://www.fhir.org/guides/mfhir/CodeSystem/specimen-source"/>
-            <code value="serum"/>
-            <display value="serum"/>
-          </contains>
-          <contains>
-            <system value="http://www.fhir.org/guides/mfhir/CodeSystem/specimen-source"/>
-            <code value="tears"/>
-            <display value="tears"/>
-          </contains>
-          <contains>
-            <system value="http://www.fhir.org/guides/mfhir/CodeSystem/specimen-source"/>
-            <code value="whole blood"/>
-            <display value="whole blood"/>
-          </contains>
-        </expansion>
-      </ValueSet>
-    </resource>
-  </entry>
   <entry>
     <fullUrl value="http://www.fhir.org/guides/mfhir/ValueSet/medication-dose-unit"/>
     <resource>
@@ -865,8 +725,8 @@
         <immutable value="false"/>
         <copyright value="Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved."/>
         <expansion>
-          <identifier value="urn:uuid:874f345c-fcc3-4880-9680-2441587883c4"/>
-          <timestamp value="2018-11-15T15:31:17-08:00"/>
+          <identifier value="urn:uuid:d6978ad8-57e9-444a-939a-9244b9cdf59c"/>
+          <timestamp value="2018-11-23T04:16:33-08:00"/>
           <total value="84"/>
           <parameter>
             <name value="excludeNested"/>
@@ -2667,8 +2527,8 @@
         <immutable value="false"/>
         <copyright value="Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved."/>
         <expansion>
-          <identifier value="urn:uuid:2720dba5-571c-48ba-8b56-5136f5c1ab7d"/>
-          <timestamp value="2018-11-15T15:31:17-08:00"/>
+          <identifier value="urn:uuid:90673390-a450-4bca-8a8e-cc290d01a21f"/>
+          <timestamp value="2018-11-23T04:16:34-08:00"/>
           <total value="165"/>
           <parameter>
             <name value="excludeNested"/>
@@ -3586,8 +3446,8 @@
         <immutable value="false"/>
         <copyright value="Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved."/>
         <expansion>
-          <identifier value="urn:uuid:a98a1257-cd2c-4f20-81ae-133c4c3a1fdc"/>
-          <timestamp value="2018-11-15T15:31:17-08:00"/>
+          <identifier value="urn:uuid:46569929-7a02-42cb-8c97-1b9c26ab41ea"/>
+          <timestamp value="2018-11-23T04:16:34-08:00"/>
           <total value="4"/>
           <parameter>
             <name value="excludeNested"/>
@@ -3764,8 +3624,8 @@
         <immutable value="false"/>
         <copyright value="Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved."/>
         <expansion>
-          <identifier value="urn:uuid:719ba3ea-6e1e-4e10-b287-3e5b20148e26"/>
-          <timestamp value="2018-11-15T15:31:17-08:00"/>
+          <identifier value="urn:uuid:e6b84618-bb0c-46a8-90c1-500a757be487"/>
+          <timestamp value="2018-11-23T04:16:34-08:00"/>
           <total value="12"/>
           <parameter>
             <name value="excludeNested"/>

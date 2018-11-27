@@ -40,11 +40,11 @@
                         "display": "wk"
                     },
                     {
-                        "code": "Mo",
+                        "code": "mo",
                         "display": "Mo"
                     },
                     {
-                        "code": "yr",
+                        "code": "a",
                         "display": "yr"
                     }
                 ],

@@ -292,47 +292,341 @@ Formats: <a href="StructureDefinition-omh-heart-rate.html">Narrative</a>, <a hre
 
 <p>Open mHealth header represents a person’s heart rate data point body element.  See <a href="http://www.openmhealth.org/documentation/#/schema-docs/schema-library">Open mHealth Schemas</a>.  The SNOMED code represents Pulse rate (observable entity) “url”: “http://purl.bioontology.org/ontology/SNOMEDCT/78564009”</p>
 
-<h4 id="scope-and-usage">Scope and Usage</h4>
+<h3 id="scope-and-usage">Scope and Usage</h3>
 
-<p>scope and usage text here….</p>
+<p>The OMH Heart Rate Quick Start mapping tables and formal FHIR Logical Models are presented in the section below.</p>
 
-<h4 id="example">Example</h4>
+<h3 id="quick-start-mapping-guide">Quick Start Mapping Guide</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{  
-  "ResourceType":"OmhHeartRate",
-   "id":"example-1",
-   "omhHeader":{  
-      "ResourceType":"OmhHeader",
-      "id":"example-1",
-      "dataPointId":"12341567",
-      "creationDateTime":"2018-04-T24:13:51Z",
-      "schemaId":{  
-         "namespace":"omh",
-         "name":"heart-rate",
-         "version":"1.0"
-      },
-      "acquisitionProvenance":{  
-         "sourceName":"Jawbone UP API&gt;",
-         "sourceDataPointId":"123456",
-         "sourceCreationDateTime":"2018-04-24T17:13:50Z",
-         "modificationDateTime":"2018-04-24T17:13:51Z",
-         "modality":"sensed"
-      },
-      "userId":"user123456"
+<p>The following mapping tables and resource subtemplates are provided for mapping an OMH schema instance to a FHIR resource instance as described in the Quick Start mapping section.</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>OMH element</th>
+      <th>FHIR element</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>OMH Heart Rate Schema</td>
+      <td>OMH to FHIR Observation Profile with Observation.code = LOINC 8867-4 (Heart rate)</td>
+    </tr>
+    <tr>
+      <td>body.effective_time_frame</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>body.effective_time_frame.time_interval</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>body.effective_time_frame.date_time</td>
+      <td>Observation.effectiveDateTime</td>
+    </tr>
+    <tr>
+      <td>body.effective_time_frame.time_interval.start_date_time</td>
+      <td>Observation.effectivePeriod.start</td>
+    </tr>
+    <tr>
+      <td>body.effective_time_frame.time_interval.end_date_time</td>
+      <td>Observation.effectivePeriod.end</td>
+    </tr>
+    <tr>
+      <td>body.heart_rate</td>
+      <td>Observation.valueQuantity.value (see the mapping tables below)</td>
+    </tr>
+    <tr>
+      <td>body.user_notes</td>
+      <td>Observation.comment</td>
+    </tr>
+    <tr>
+      <td>body.descriptive_statistic</td>
+      <td>Observation.component.code (see the mapping tables below)</td>
+    </tr>
+    <tr>
+      <td>body.temporal_relationship_to_physical_activity</td>
+      <td>Observation.component.valueCodeableConcept.code (see the mapping tables below)</td>
+    </tr>
+    <tr>
+      <td>body.temporal_relationship_to_sleep</td>
+      <td>Observation.component.valueCodeableConcept.code (see the mapping tables below)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Heart Rate Descriptive Statistic Mapping Tables</strong></p>
+
+<p>This table maps the heart rate descriptive statistic to the OMH to FHIR additional Observation codings ( code system <code class="highlighter-rouge">http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes</code>). If the schema element is absent, the default measure is count and there is no additional coding.</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>body.descriptive_statistic</th>
+      <th>Observation.coding.code</th>
+      <th>Observation.coding.display</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Null</td>
+      <td>Null</td>
+      <td>Null</td>
+    </tr>
+    <tr>
+      <td>average</td>
+      <td>average-heart-rate</td>
+      <td>Average Heart Rate</td>
+    </tr>
+    <tr>
+      <td>maximum</td>
+      <td>maximum-heart-rate</td>
+      <td>Maximum Heart Rate</td>
+    </tr>
+    <tr>
+      <td>minimum</td>
+      <td>minimum-heart-rate</td>
+      <td>Minimum Heart Rate</td>
+    </tr>
+    <tr>
+      <td>count</td>
+      <td>count-heart-rate</td>
+      <td>Count Heart Rate</td>
+    </tr>
+    <tr>
+      <td>totalcount</td>
+      <td>totalcount-heart-rate</td>
+      <td>Totalcount Heart Rate</td>
+    </tr>
+    <tr>
+      <td>median</td>
+      <td>median-heart-rate</td>
+      <td>Median Heart Rate</td>
+    </tr>
+    <tr>
+      <td>std-dev</td>
+      <td>std-dev-heart-rate</td>
+      <td>Std Dev Heart Rate</td>
+    </tr>
+    <tr>
+      <td>sum</td>
+      <td>sum-heart-rate</td>
+      <td>Sum Heart Rate</td>
+    </tr>
+    <tr>
+      <td>variance</td>
+      <td>variance-heart-rate</td>
+      <td>Variance Heart Rate</td>
+    </tr>
+    <tr>
+      <td>20-percent</td>
+      <td>20-percent-heart-rate</td>
+      <td>20 Percent Heart Rate</td>
+    </tr>
+    <tr>
+      <td>80-percent</td>
+      <td>80-percent-heart-rate</td>
+      <td>80 Percent Heart Rate</td>
+    </tr>
+    <tr>
+      <td>4-lower</td>
+      <td>4-lower-heart-rate</td>
+      <td>4 Lower Heart Rate</td>
+    </tr>
+    <tr>
+      <td>4-upper</td>
+      <td>4-upper-heart-rate</td>
+      <td>4 Upper Heart Rate</td>
+    </tr>
+    <tr>
+      <td>4-dev</td>
+      <td>4-dev-heart-rate</td>
+      <td>4 Dev Heart Rate</td>
+    </tr>
+    <tr>
+      <td>5-1</td>
+      <td>5-1-heart-rate</td>
+      <td>5 1 Heart Rate</td>
+    </tr>
+    <tr>
+      <td>5-2</td>
+      <td>5-2-heart-rate</td>
+      <td>5 2 Heart Rate</td>
+    </tr>
+    <tr>
+      <td>5-3</td>
+      <td>5-3-heart-rate</td>
+      <td>5 3 Heart Rate</td>
+    </tr>
+    <tr>
+      <td>5-4</td>
+      <td>5-4-heart-rate</td>
+      <td>5 4 Heart Rate</td>
+    </tr>
+    <tr>
+      <td>skew</td>
+      <td>skew-heart-rate</td>
+      <td>Skew Heart Rate</td>
+    </tr>
+    <tr>
+      <td>kurtosis</td>
+      <td>kurtosis-heart-rate</td>
+      <td>Kurtosis Heart Rate</td>
+    </tr>
+    <tr>
+      <td>regression</td>
+      <td>regression-heart-rate</td>
+      <td>Regression Heart Rate</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Unit Mapping</strong></p>
+
+<p>This table maps the heart rate to the OMH to FHIR Observation valueQuantity unit and UCUM code.</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>Observation.valueQuantity.value</th>
+      <th>Observation.valueQuantity.unit</th>
+      <th>Observation.valueQuantity.code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>body.heart_rate</td>
+      <td>beats/min</td>
+      <td>/min</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Temporal Relationship Mapping</strong></p>
+
+<p>This table maps the heart rate Temporal Relationship To Physical Activity and Sleep to the OMH to FHIR Observation.component elements. If the schema element is absent, there is no Observation.component element.</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>Observation.component element</th>
+      <th>Temporal Relationship To Physical Activity</th>
+      <th>Temporal Relationship To Sleep</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Observation.component.code.system</td>
+      <td>http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes</td>
+      <td>http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes</td>
+    </tr>
+    <tr>
+      <td>Observation.component.code.code</td>
+      <td>relative-to-activity</td>
+      <td>relative-to-sleep</td>
+    </tr>
+    <tr>
+      <td>Observation.component.code.display</td>
+      <td>OMH to FHIR Temporal Relationship To Physical Activity</td>
+      <td>OMH to FHIR Temporal Relationship To Sleep</td>
+    </tr>
+    <tr>
+      <td>Observation.component.valueCodeableConcept.system</td>
+      <td>http://snomed.info/sct</td>
+      <td>http://snomed.info/sct</td>
+    </tr>
+    <tr>
+      <td>Observation.component.valueCodeableConcept.code</td>
+      <td><code class="highlighter-rouge">body.temporal_relationship_to_physical_activity</code></td>
+      <td><code class="highlighter-rouge">body.temporal_relationship_to_sleep</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+<h4 id="example-omh-to-fhir-heart_rate-datapoint-observation">Example OMH to FHIR heart_rate datapoint Observation</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+   "code": {
+      "coding": [
+         {
+            "code": "8867_4",
+            "display": "Heart rate",
+            "system": "http://loinc.org"
+         }
+      ]
    },
-   "valueUnit":{  
-      "value":78.08,
-      "unit":"beats/min",
-      "system":"http://unitsofmeasure.org",
-      "code":"/min"
+   "identifier": [
+      {
+         "value": "87ca4312-fbe3-4b24-bab4-17d47ba54e2a",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh-to-fhir-observation"
+      ]
    },
-   "effectiveTimeFrame":"2018-04-17T17:13:51Z",
-   "descriptiveStatistic":"count",
-   "temporalRelationshipToPhysicalActivity":"263678003",
-   "temporalRelationshipToSleep":"307155000"
+   "comment": "I felt quite dizzy",
+   "subject": {
+      "identifier": {
+         "value": "some-user",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   },
+   "resourceType": "Observation",
+   "effectiveDateTime": "2013-02-05T07:25:00Z",
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "vital-signs",
+               "display": "Vital Signs",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "device": {
+      "extension": [
+         {
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/observationDeviceModality",
+            "valueCode": "sensed"
+         }
+      ],
+      "display": "generator"
+   },
+   "component": [
+      {
+         "code": {
+            "coding": [
+               {
+                  "code": "relative-to-activity",
+                  "display": "OMH to FHIR Temporal Relationship To Physical Activity",
+                  "system": "http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes"
+               }
+            ]
+         },
+         "valueCodeableConcept": {
+            "coding": [
+               {
+                  "code": "at rest",
+                  "system": "http://snomed.info/sct"
+               }
+            ]
+         }
+      }
+   ],
+   "issued": "2014-01-03T09:14:41Z",
+   "status": "unknown",
+   "valueQuantity": {
+      "code": "/min",
+      "value": 50,
+      "unit": "beats/min",
+      "system": "http://unitsofmeasure.org"
+   }
 }
 </code></pre></div></div>
-
 
 
 
@@ -549,7 +843,7 @@ $( '#tabs' ).tabs({
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      Open mHealth to FHIR Version: 0.0.0 &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Thu, Nov 15, 2018 19:25-0800.
+      Open mHealth to FHIR Version: 0.0.0 &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Fri, Nov 23, 2018 04:16-0800.
       | <a style="color: #81BEF7" href="history.html">History</a>
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>

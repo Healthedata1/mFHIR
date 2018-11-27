@@ -36,19 +36,19 @@
                         "display": "km"
                     },
                     {
-                        "code": "in",
+                        "code": "[in_i]",
                         "display": "in"
                     },
                     {
-                        "code": "ft",
+                        "code": "[ft_i]",
                         "display": "ft"
                     },
                     {
-                        "code": "yd",
+                        "code": "[yd_i]",
                         "display": "yd"
                     },
                     {
-                        "code": "mi",
+                        "code": "[mi_i]",
                         "display": "mi"
                     }
                 ],

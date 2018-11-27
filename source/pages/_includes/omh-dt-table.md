@@ -7,7 +7,7 @@
 |[body-location]({{page.omlschema_url}}body-location-1.0.json)|[code][code]|[body-location](valueset-body-location.html)||
 |[body-posture]({{page.omlschema_url}}body-posture-1.0.json)|[code][code]|[body-posture](valueset-body-posture.html)||
 |[day-of-week]({{page.omlschema_url}}day-of-week-1.0.json)|[code][code]|[day-of-week](valueset-day-of-week.html)||
-|[descriptive-statistic]({{page.omlschema_url}}descriptive-statistic-1.0.json)|[code][code]|[descriptive-statistic]{{site.data.fhir.path}}valueset-observation-statistics.html)||
+|[descriptive-statistic]({{page.omlschema_url}}descriptive-statistic-1.0.json)|[code][code]|[descriptive-statistic](http://hl7.org/fhir/STU3/valueset-observation-statistics.html)||
 |[descriptive-statistic-denominator]({{page.omlschema_url}}descriptive-statistic-denominator-1.0.json)|[code][code]|[descriptive-statistic-denominator](valueset-descriptive-statistic-denominator.html)||
 |[intervention-administration-route]({{page.omlschema_url}}intervention-administration-route-1.0.json)|[code][code]|[intervention-administration-route](valueset-intervention-administration-route.html)||
 |[medication-dose-unit]({{page.omlschema_url}}medication-dose-unit-1.0.json)|[code][code]|[medication-dose-unit](valueset-medication-dose-unit.html)||

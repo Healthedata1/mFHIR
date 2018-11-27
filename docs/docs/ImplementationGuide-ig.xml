@@ -88,6 +88,15 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-omh-extension-observation-device-modality.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/omh-extension-observation-device-modality"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="ValueSet-volume-unit-value.html"/>
       </extension>
       <example value="false"/>
@@ -601,15 +610,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="CodeSystem-specimen-source.html"/>
-      </extension>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="CodeSystem/specimen-source"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="CodeSystem-medication-dose-unit.html"/>
       </extension>
       <example value="false"/>
@@ -660,6 +660,24 @@
       <example value="false"/>
       <sourceReference>
         <reference value="StructureDefinition/contained-p"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="CodeSystem-omh-device-modality.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CodeSystem/omh-device-modality"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="CodeSystem-omh-datapoint-type.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CodeSystem/omh-datapoint-type"/>
       </sourceReference>
     </resource>
     <resource>
@@ -930,6 +948,11 @@
         <title value="StructureDefinition Contained P"/>
         <kind value="resource"/>
       </page>
+      <page>
+        <source value="StructureDefinition-omh-extension-observation-device-modality.html"/>
+        <title value="StructureDefinition Omh Extension Observation Device Modality"/>
+        <kind value="resource"/>
+      </page>
     </page>
     <page>
       <source value="operations.html"/>
@@ -1051,11 +1074,6 @@
         <kind value="resource"/>
       </page>
       <page>
-        <source value="CodeSystem-specimen-source.html"/>
-        <title value="CodeSystem Specimen Source"/>
-        <kind value="resource"/>
-      </page>
-      <page>
         <source value="CodeSystem-medication-dose-unit.html"/>
         <title value="CodeSystem Medication Dose Unit"/>
         <kind value="resource"/>
@@ -1073,6 +1091,16 @@
       <page>
         <source value="CodeSystem-body-location.html"/>
         <title value="CodeSystem Body Location"/>
+        <kind value="resource"/>
+      </page>
+      <page>
+        <source value="CodeSystem-omh-device-modality.html"/>
+        <title value="CodeSystem Omh Device Modality"/>
+        <kind value="resource"/>
+      </page>
+      <page>
+        <source value="CodeSystem-omh-datapoint-type.html"/>
+        <title value="CodeSystem Omh Datapoint Type"/>
         <kind value="resource"/>
       </page>
     </page>

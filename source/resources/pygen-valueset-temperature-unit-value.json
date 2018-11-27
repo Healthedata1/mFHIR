@@ -8,11 +8,11 @@
                         "display": "K"
                     },
                     {
-                        "code": "F",
+                        "code": "[degF]",
                         "display": "F"
                     },
                     {
-                        "code": "C",
+                        "code": "Cel",
                         "display": "C"
                     }
                 ],

@@ -1,0 +1,46 @@
+{
+  "caseSensitive": true,
+  "concept": [
+    {
+      "code": "geoposition",
+      "display": "Geoposition",
+      "definition": "The latitude and longitude coordinates of a particular location.  (source: https://en.wiktionary.org/wiki/geolocation#English)"
+    },
+    {
+      "code": "orientation",
+      "display": "Gyroscope measurement Panel",
+      "definition": "The latitude and longitude coordinates of a particular location.  (source: https://en.wiktionary.org/wiki/geolocation#English)"
+    },
+    {
+      "code": "magnetic_force",
+      "display": "Magnetic Force Panel",
+      "definition": "2 or 3 axis gyroscopic measurements representing the angular velocity in these axis."
+    },
+    {
+      "code": "pace",
+      "display": "Pace",
+      "definition": "The time it takes to cover a certain distance (km or mile) by some physical activity like walking, running, biking, etc.  This is NOT the traditional unit of length of the same name."
+    }
+  ],
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.openmhealth.org/"
+        }
+      ]
+    }
+  ],
+  "content": "complete",
+  "date": "2018-11-17",
+  "description": "OMH datapoint schema type the measure an Open mHealth data schema is representing.   These concepts are used were suitable LOINC or SNOMED-CT concepts are not available.",
+  "id": "omh-datapoint-type",
+  "name": "omh-datapoint-type",
+  "title": "Open mHealth to FHIR Datapoint Type",
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "url": "http://www.fhir.org/guides/mfhir/CodeSystem/omh-datapoint-type",
+  "valueSet": "http://www.fhir.org/guides/mfhir/ValueSet/omh-datapoint-type",
+  "version": "0.0.0"
+}

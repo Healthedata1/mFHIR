@@ -1,34 +1,19 @@
 from pprint import pprint
 
-D1 = {'OmhHeader': 'OmhHeader',
-'dataPointId': 'OmhHeader.id',
-'creationDateTime': 'OmhHeader.creation_date_time',
-'schemaId': 'properties.header.schema_id',
-'namespace': 'header.schema_id.namespace',
-'name': 'header.schema_id.name',
-'version': 'header.schema_id.version',
-'acquisitionProvenance': 'header.acquisition_provenance',
-'sourceName': 'header.acquisition_provenance.source_name',
-'sourceDataPointId': 'header.acquisition_provenance.source_data_point_id',
-'sourceCreationDateTime': 'header.acquisition_provenance.source_creation_date_time',
-'modicationDataTime': 'header.acquisition_provenance.modication_data_time',
-'modality': 'header.acquisition_provenance.modality',
-'userId': 'header.user_id'}
+D1 = {'OmhStepCount':'OMH Step Count Schema',
+'omhHeader':'see OmhHeader Mapping tables',
+'stepCount':'properties.step_count',
+'effectiveTimeFrame':'properties.effective_time_frame',
+'descriptiveStatistic':'properties.descriptive_statistic',
+'descriptiveStatisticDenominator':'properties.descriptive_statistic_denominator'}
 
-D2 ={'OmhHeader': 'Observation Resource',
-'dataPointId': 'Observation.identifier',
-'creationDateTime': 'Observation.issued',
-'schemaId': 'Observation.meta.profile',
-'namespace': 'None',
-'name': 'None',
-'version': 'None',
-'acquisitionProvenance': 'None',
-'sourceName': 'Observation.meta.source',
-'sourceDataPointId': 'Observation.identifier',
-'sourceCreationDateTime': 'None',
-'modicationDataTime': 'None',
-'modality': 'Observation.device',
-'userId': 'Observation.subject'}
+D2 ={'OmhStepCount':'Observation resource with Observation.code = LOINC 55423-8 (Number of steps in unspecified time Pedometer)',
+'omhHeader':'see OmhHeader Mapping tables',
+'stepCount':'Rule1: IF no descriptiveStatistic (descriptiveStatistic.empty()) Observation.valueQuantity.value ELSE Observation.component.valueQuantity.value',
+'effectiveTimeFrame':'Observation.effectivePeriod',
+'descriptiveStatistic':'Observation.component.code',
+'descriptiveStatisticDenominator':'Observation.component.valueQuantity.unit|code (ConceptMap based on code and descriptiveStatisticDenominator)',
+}
 
 print('**OMH to FHIR Observation Resource mappings **')
 print('|OMH element|FHIR element|')

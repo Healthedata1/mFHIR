@@ -1,0 +1,51 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://www.fhir.org/guides/mfhir/CodeSystem/omh-device-modality> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "omh-device-modality"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Open mHealth to FHIR Device Modality</h2><div><p>Identifies whether device measurement is sensed directly or entered by the user</p>\n</div><p>This code system http://www.fhir.org/guides/mfhir/CodeSystem/omh-device-modality defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">sensed<a name=\"omh-device-modality-sensed\"> </a></td><td>Sensed</td><td>Device measurement is sensed directly by the device</td></tr><tr><td style=\"white-space:nowrap\">self-reported<a name=\"omh-device-modality-self-reported\"> </a></td><td>Self Reported</td><td>Device measurement is entered by the user</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://www.fhir.org/guides/mfhir/CodeSystem/omh-device-modality"];
+  fhir:CodeSystem.version [ fhir:value "0.0.0"];
+  fhir:CodeSystem.name [ fhir:value "omh-device-modality"];
+  fhir:CodeSystem.title [ fhir:value "Open mHealth to FHIR Device Modality"];
+  fhir:CodeSystem.status [ fhir:value "draft"];
+  fhir:CodeSystem.date [ fhir:value "2018-11-17T00:00:00-08:00"^^xsd:dateTime];
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://www.openmhealth.org/" ]
+     ]
+  ];
+  fhir:CodeSystem.description [ fhir:value "Identifies whether device measurement is sensed directly or entered by the user"];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.valueSet [ fhir:value "http://www.fhir.org/guides/mfhir/ValueSet/omh-device-modality"];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "sensed" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Sensed" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Device measurement is sensed directly by the device" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "self-reported" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Self Reported" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Device measurement is entered by the user" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://www.fhir.org/guides/mfhir/CodeSystem/omh-device-modality.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

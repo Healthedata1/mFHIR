@@ -1,0 +1,12 @@
+mfhir mappings todo:
+
+unit mappings  ( body temp)
+method mappings (os sat)
+bodysite mappings (o2 sat)
+
+generate mapping and code tables for ig
+
+update quick start description
+
+enumerate the python code.
+create unit tests

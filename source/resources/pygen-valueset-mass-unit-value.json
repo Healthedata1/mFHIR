@@ -32,7 +32,7 @@
                         "display": "kg"
                     },
                     {
-                        "code": "Metric Ton",
+                        "code": "t",
                         "display": "Metric Ton"
                     },
                     {
@@ -40,15 +40,15 @@
                         "display": "gr"
                     },
                     {
-                        "code": "oz",
+                        "code": "[oz_av]",
                         "display": "oz"
                     },
                     {
-                        "code": "lb",
+                        "code": "[lb_av]",
                         "display": "lb"
                     },
                     {
-                        "code": "Ton",
+                        "code": "[ston_av]",
                         "display": "Ton"
                     }
                 ],

@@ -85,6 +85,13 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/omh-extension-observation-device-modality"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/volume-unit-value"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -484,13 +491,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="CodeSystem/specimen-source"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="CodeSystem/medication-dose-unit"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -527,6 +527,20 @@
     <resource>
       <reference>
         <reference value="StructureDefinition/contained-p"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/omh-device-modality"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/omh-datapoint-type"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -768,6 +782,11 @@
           <title value="StructureDefinition Contained P"/>
           <generation value="generated"/>
         </page>
+        <page>
+          <nameUrl value="StructureDefinition-omh-extension-observation-device-modality.html"/>
+          <title value="StructureDefinition Omh Extension Observation Device Modality"/>
+          <generation value="generated"/>
+        </page>
       </page>
       <page>
         <nameUrl value="operations.html"/>
@@ -889,11 +908,6 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="CodeSystem-specimen-source.html"/>
-          <title value="CodeSystem Specimen Source"/>
-          <generation value="generated"/>
-        </page>
-        <page>
           <nameUrl value="CodeSystem-medication-dose-unit.html"/>
           <title value="CodeSystem Medication Dose Unit"/>
           <generation value="generated"/>
@@ -911,6 +925,16 @@
         <page>
           <nameUrl value="CodeSystem-body-location.html"/>
           <title value="CodeSystem Body Location"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="CodeSystem-omh-device-modality.html"/>
+          <title value="CodeSystem Omh Device Modality"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="CodeSystem-omh-datapoint-type.html"/>
+          <title value="CodeSystem Omh Datapoint Type"/>
           <generation value="generated"/>
         </page>
       </page>

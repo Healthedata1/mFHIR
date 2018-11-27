@@ -1,85 +1,95 @@
 {
-    "compose": {
-        "include": [
-            {
-                "concept": [
-                    {
-                        "code": "16985007",
-                        "display": "fasting"
-                    },
-                    {
-                        "code": "440565004",
-                        "display": "not fasting"
-                    },
-                    {
-                        "code": "307165006",
-                        "display": "before meal"
-                    },
-                    {
-                        "code": "24863003",
-                        "display": "after meal"
-                    },
-                    {
-                        "code": "ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C1549040",
-                        "display": "before breakfast"
-                    },
-                    {
-                        "code": "ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C1550743",
-                        "display": "after breakfast"
-                    },
-                    {
-                        "code": "ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C1550741",
-                        "display": "before lunch"
-                    },
-                    {
-                        "code": "ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C1879668",
-                        "display": "after lunch"
-                    },
-                    {
-                        "code": "ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C1550742",
-                        "display": "before dinner"
-                    },
-                    {
-                        "code": "ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C1879671",
-                        "display": "after dinner"
-                    },
-                    {
-                        "code": "2 hours postprandial",
-                        "display": "2 hours postprandial"
-                    },
-                    {
-                        "code": "311503006",
-                        "display": "with meal"
-                    },
-                    {
-                        "code": "311504000",
-                        "display": "with food"
-                    }
-                ],
-                "system": "http://snomed.info/sct"
-            }
-        ]
-    },
-    "contact": [
+  "compose": {
+    "include": [
+      {
+        "concept": [
+          {
+            "code": "16985007",
+            "display": "fasting"
+          },
+          {
+            "code": "440565004",
+            "display": "not fasting"
+          },
+          {
+            "code": "307165006",
+            "display": "before meal"
+          },
+          {
+            "code": "24863003",
+            "display": "after meal"
+          },
+          {
+            "code": "311503006",
+            "display": "with meal"
+          },
+          {
+            "code": "311504000",
+            "display": "with food"
+          }
+        ],
+        "system": "http://snomed.info/sct"
+      },
+      {
+        "concept": [
+          {
+            "code": "C1549040",
+            "display": "before breakfast"
+          },
+          {
+            "code": "C1550743",
+            "display": "after breakfast"
+          },
+          {
+            "code": "C1550741",
+            "display": "before lunch"
+          },
+          {
+            "code": "C1879668",
+            "display": "after lunch"
+          },
+          {
+            "code": "C1550742",
+            "display": "before dinner"
+          },
+          {
+            "code": "C1879671",
+            "display": "after dinner"
+          }
+        ],
+        "system": "http://ncimeta.nci.nih.gov"
+      },
+      {
+        "concept": [
+          {
+            "code": "2-hours-postprandial",
+            "display": "2 hours postprandial"
+          }
+        ],
+        "system": "http://www.fhir.org/guides/mfhir/CodeSystem/temporal-relationship-to-meal"
+      }
+    ]
+  },
+  "contact": [
+    {
+      "telecom": [
         {
-            "telecom": [
-                {
-                    "system": "url",
-                    "value": "http://www.openmhealth.org/"
-                }
-            ]
+          "system": "url",
+          "value": "http://www.openmhealth.org/"
         }
-    ],
-    "copyright": "Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved. This value set includes content from SNOMED CT, which is copyright 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.",
-    "date": "2018-04-28T15:55:00.13Z",
-    "description": "The temporal relationship of a clinical measure or assessment to meals. ",
-    "id": "temporal-relationship-to-meal",
-    "immutable": false,
-    "name": "temporal-relationship-to-meal",
-    "publisher": "Open mHealth",
-    "resourceType": "ValueSet",
-    "status": "draft",
-    "title": "Temporal Relationship To Meal",
-    "url": "http://www.fhir.org/guides/mfhir/ValueSet/temporal-relationship-to-meal",
-    "version": "0.0.0"
+      ]
+    }
+  ],
+  "copyright": "Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved. This specification includes content from SNOMED Clinical Terms (R)(SNOMED CT (R)) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO) (trading as SNOMED International). Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomed-ct  or info@snomed.org",
+  "date": "2018-04-28T15:55:00.13Z.  This value set also includes concepts from the NCI Metathesaurus.  There are no copyright notices needed in value sets that refer to NCI metathesaurus concepts, and there are no licensing requirements limiting use of NCI metathesaurus concepts in instances or systems.",
+  "description": "The temporal relationship of a clinical measure or assessment to meals. ",
+  "id": "temporal-relationship-to-meal",
+  "immutable": false,
+  "name": "temporal-relationship-to-meal",
+  "publisher": "Open mHealth",
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "title": "Temporal Relationship To Meal",
+  "url": "http://www.fhir.org/guides/mfhir/ValueSet/temporal-relationship-to-meal",
+  "version": "0.0.0"
 }

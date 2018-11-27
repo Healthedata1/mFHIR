@@ -1,9 +1,7 @@
+
 {% assign id = {{page.id}} %}
-source file: source/pages/\_includes/{{id}}-maps.md
+source file: source/pages/\_includes/{{id}}-search.md
 
-
-<h2>Mappings</h2>
-
-<div markdown='0'>
-{% include StructureDefinition-{{id}}-maps.xhtml %}
-</div>
+~~~
+This is the search markdown file that gets inserted into the sd.html Quick Start section for explanation of the search requirements.
+~~~

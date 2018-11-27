@@ -40,35 +40,35 @@
                         "display": "kL"
                     },
                     {
-                        "code": "fl oz",
+                        "code": "[foz_us]",
                         "display": "fl oz"
                     },
                     {
-                        "code": "Cup",
+                        "code": "[cup_us]",
                         "display": "Cup"
                     },
                     {
-                        "code": "in^3",
+                        "code": "[cin_i]",
                         "display": "in^3"
                     },
                     {
-                        "code": "pt",
+                        "code": "[pt_us]",
                         "display": "pt"
                     },
                     {
-                        "code": "qt",
+                        "code": "[qt_us]",
                         "display": "qt"
                     },
                     {
-                        "code": "gal",
+                        "code": "[gal_us]",
                         "display": "gal"
                     },
                     {
-                        "code": "tsp",
+                        "code": "[tsp_us]",
                         "display": "tsp"
                     },
                     {
-                        "code": "tbsp",
+                        "code": "[tbs_us]",
                         "display": "tbsp"
                     }
                 ],

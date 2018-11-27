@@ -1,0 +1,30 @@
+{
+  "caseSensitive": true,
+  "concept": [
+    {
+      "code": "2-hours-postprandial",
+      "display": "2 hours postprandial",
+      "definition": "The relative time 2 hours following a meal"
+    }
+  ],
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.openmhealth.org/"
+        }
+      ]
+    }
+  ],
+  "content": "complete",
+  "date": "2018-11-17",
+  "description": "OMH datapoint schema type representing the measure of an Open mHealth data schema.   These concepts are used were suitable LOINC or SNOMED-CT concepts are not available.",
+  "id": "omh-temporal-relationship-to-meal",
+  "name": "omh-temporal-relationship-to-meal",
+  "title": "Omh Temporal Relationship To Meal Code System",
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "url": "http://www.fhir.org/guides/mfhir/CodeSystem/omh-temporal-relationship-to-meal",
+  "version": "0.0.0"
+}

@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://www.fhir.org/guides/mfhir/CodeSystem/omh-datapoint-type> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "omh-datapoint-type"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Open mHealth to FHIR Datapoint Type</h2><div><p>OMH datapoint schema type represent the measure an Open mHealth data schema ias representing.   These concepts are used were suitable LOINC or SNOMED-CT concepts are not available.</p>\n</div><p>This code system http://www.fhir.org/guides/mfhir/CodeSystem/omh-datapoint-type defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">geoposition<a name=\"omh-datapoint-type-geoposition\"> </a></td><td>Geoposition</td><td>The latitude and longitude coordinates of a particular location.  (source: https://en.wiktionary.org/wiki/geolocation#English)</td></tr><tr><td style=\"white-space:nowrap\">orientation<a name=\"omh-datapoint-type-orientation\"> </a></td><td>Gyroscope measurement Panel</td><td>The latitude and longitude coordinates of a particular location.  (source: https://en.wiktionary.org/wiki/geolocation#English)</td></tr><tr><td style=\"white-space:nowrap\">magnetic_force<a name=\"omh-datapoint-type-magnetic_force\"> </a></td><td>Magnetic Force Panel</td><td>2 or 3 axis gyroscopic measurements representing the angular velocity in these axis.</td></tr><tr><td style=\"white-space:nowrap\">pace<a name=\"omh-datapoint-type-pace\"> </a></td><td>Pace</td><td>The time it takes to cover a certain distance (km or mile) by some physical activity like walking, running, biking, etc.  This is NOT the traditional unit of length of the same name.</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://www.fhir.org/guides/mfhir/CodeSystem/omh-datapoint-type"];
+  fhir:CodeSystem.version [ fhir:value "0.0.0"];
+  fhir:CodeSystem.name [ fhir:value "omh-datapoint-type"];
+  fhir:CodeSystem.title [ fhir:value "Open mHealth to FHIR Datapoint Type"];
+  fhir:CodeSystem.status [ fhir:value "draft"];
+  fhir:CodeSystem.date [ fhir:value "2018-11-17T00:00:00-08:00"^^xsd:dateTime];
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://www.openmhealth.org/" ]
+     ]
+  ];
+  fhir:CodeSystem.description [ fhir:value "OMH datapoint schema type represent the measure an Open mHealth data schema ias representing.   These concepts are used were suitable LOINC or SNOMED-CT concepts are not available."];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.valueSet [ fhir:value "http://www.fhir.org/guides/mfhir/ValueSet/omh-datapoint-type"];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "geoposition" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Geoposition" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "The latitude and longitude coordinates of a particular location.  (source: https://en.wiktionary.org/wiki/geolocation#English)" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "orientation" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Gyroscope measurement Panel" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "The latitude and longitude coordinates of a particular location.  (source: https://en.wiktionary.org/wiki/geolocation#English)" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "magnetic_force" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Magnetic Force Panel" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "2 or 3 axis gyroscopic measurements representing the angular velocity in these axis." ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "pace" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Pace" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "The time it takes to cover a certain distance (km or mile) by some physical activity like walking, running, biking, etc.  This is NOT the traditional unit of length of the same name." ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://www.fhir.org/guides/mfhir/CodeSystem/omh-datapoint-type.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

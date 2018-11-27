@@ -4,35 +4,35 @@
             {
                 "concept": [
                     {
-                        "code": "mm^2",
+                        "code": "mm2",
                         "display": "mm^2"
                     },
                     {
-                        "code": "cm^2",
+                        "code": "cm2",
                         "display": "cm^2"
                     },
                     {
-                        "code": "m^2",
+                        "code": "m2",
                         "display": "m^2"
                     },
                     {
-                        "code": "km^2",
+                        "code": "km2",
                         "display": "km^2"
                     },
                     {
-                        "code": "in^2",
+                        "code": "[sin_i]",
                         "display": "in^2"
                     },
                     {
-                        "code": "ft^2",
+                        "code": "[sft_i]",
                         "display": "ft^2"
                     },
                     {
-                        "code": "yd^2",
+                        "code": "[syd_i]",
                         "display": "yd^2"
                     },
                     {
-                        "code": "mi^2",
+                        "code": "[smi_i]",
                         "display": "mi^2"
                     }
                 ],
