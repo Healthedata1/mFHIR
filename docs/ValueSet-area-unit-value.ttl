@@ -10,7 +10,7 @@
   fhir:Resource.id [ fhir:value "area-unit-value"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Area Unit Value</h2><div><p>This schema represents an area (measure of a surface)</p>\n</div><p><b>Copyright Statement:</b> Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved. UCUM is copyright 1999-2013 Regenstrief Institute, Inc. and The UCUM Organization, Indianapolis, IN. All rights reserved. See http://unitsofmeasure.org/trac//wiki/TermsOfUse for details.</p><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href=\"http://unitsofmeasure.org\"><code>http://unitsofmeasure.org</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>mm^2</td><td>mm^2</td><td/></tr><tr><td>cm^2</td><td>cm^2</td><td/></tr><tr><td>m^2</td><td>m^2</td><td/></tr><tr><td>km^2</td><td>km^2</td><td/></tr><tr><td>in^2</td><td>in^2</td><td/></tr><tr><td>ft^2</td><td>ft^2</td><td/></tr><tr><td>yd^2</td><td>yd^2</td><td/></tr><tr><td>mi^2</td><td>mi^2</td><td/></tr></table></li></ul></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Area Unit Value</h2><div><p>This schema represents an area (measure of a surface)</p>\n</div><p><b>Copyright Statement:</b> Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved. UCUM is copyright 1999-2013 Regenstrief Institute, Inc. and The UCUM Organization, Indianapolis, IN. All rights reserved. See http://unitsofmeasure.org/trac//wiki/TermsOfUse for details.</p><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href=\"http://unitsofmeasure.org\"><code>http://unitsofmeasure.org</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>mm2</td><td>mm^2</td><td/></tr><tr><td>cm2</td><td>cm^2</td><td/></tr><tr><td>m2</td><td>m^2</td><td/></tr><tr><td>km2</td><td>km^2</td><td/></tr><tr><td>[sin_i]</td><td>in^2</td><td/></tr><tr><td>[sft_i]</td><td>ft^2</td><td/></tr><tr><td>[syd_i]</td><td>yd^2</td><td/></tr><tr><td>[smi_i]</td><td>mi^2</td><td/></tr></table></li></ul></div>"
   ];
   fhir:ValueSet.url [ fhir:value "http://www.fhir.org/guides/mfhir/ValueSet/area-unit-value"];
   fhir:ValueSet.version [ fhir:value "0.0.0"];
@@ -36,35 +36,35 @@
        fhir:ValueSet.compose.include.system [ fhir:value "http://unitsofmeasure.org" ];
        fhir:ValueSet.compose.include.concept [
          fhir:index 0;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "mm^2" ];
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "mm2" ];
          fhir:ValueSet.compose.include.concept.display [ fhir:value "mm^2" ]
        ], [
          fhir:index 1;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "cm^2" ];
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "cm2" ];
          fhir:ValueSet.compose.include.concept.display [ fhir:value "cm^2" ]
        ], [
          fhir:index 2;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "m^2" ];
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "m2" ];
          fhir:ValueSet.compose.include.concept.display [ fhir:value "m^2" ]
        ], [
          fhir:index 3;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "km^2" ];
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "km2" ];
          fhir:ValueSet.compose.include.concept.display [ fhir:value "km^2" ]
        ], [
          fhir:index 4;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "in^2" ];
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "[sin_i]" ];
          fhir:ValueSet.compose.include.concept.display [ fhir:value "in^2" ]
        ], [
          fhir:index 5;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "ft^2" ];
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "[sft_i]" ];
          fhir:ValueSet.compose.include.concept.display [ fhir:value "ft^2" ]
        ], [
          fhir:index 6;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "yd^2" ];
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "[syd_i]" ];
          fhir:ValueSet.compose.include.concept.display [ fhir:value "yd^2" ]
        ], [
          fhir:index 7;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "mi^2" ];
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "[smi_i]" ];
          fhir:ValueSet.compose.include.concept.display [ fhir:value "mi^2" ]
        ]
      ]

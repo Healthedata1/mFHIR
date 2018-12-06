@@ -9,7 +9,7 @@
   "version": "0.0.0",
   "name": "OMH Contained Patient Profile",
   "status": "draft",
-  "date": "2018-05-28T00:00:00-07:00",
+  "date": "2018-11-23T00:00:00-08:00",
   "description": "The Open mHealth Contained Patient Profile defines the minimum expectations for the using a contained Patient resource within the Open mHealth  DocumentReference profile to represent an opaque patient identifier.",
   "fhirVersion": "3.0.1",
   "mapping": [

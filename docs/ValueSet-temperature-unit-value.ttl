@@ -10,7 +10,7 @@
   fhir:Resource.id [ fhir:value "temperature-unit-value"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Temperature Unit Value</h2><div><p>This schema represents a temperature (intensity of heat)</p>\n</div><p><b>Copyright Statement:</b> Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved. UCUM is copyright 1999-2013 Regenstrief Institute, Inc. and The UCUM Organization, Indianapolis, IN. All rights reserved. See http://unitsofmeasure.org/trac//wiki/TermsOfUse for details.</p><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href=\"http://unitsofmeasure.org\"><code>http://unitsofmeasure.org</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>K</td><td>K</td><td/></tr><tr><td>F</td><td>F</td><td/></tr><tr><td>C</td><td>C</td><td/></tr></table></li></ul></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Temperature Unit Value</h2><div><p>This schema represents a temperature (intensity of heat)</p>\n</div><p><b>Copyright Statement:</b> Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved. UCUM is copyright 1999-2013 Regenstrief Institute, Inc. and The UCUM Organization, Indianapolis, IN. All rights reserved. See http://unitsofmeasure.org/trac//wiki/TermsOfUse for details.</p><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href=\"http://unitsofmeasure.org\"><code>http://unitsofmeasure.org</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>K</td><td>K</td><td/></tr><tr><td>[degF]</td><td>F</td><td/></tr><tr><td>Cel</td><td>C</td><td/></tr></table></li></ul></div>"
   ];
   fhir:ValueSet.url [ fhir:value "http://www.fhir.org/guides/mfhir/ValueSet/temperature-unit-value"];
   fhir:ValueSet.version [ fhir:value "0.0.0"];
@@ -40,11 +40,11 @@
          fhir:ValueSet.compose.include.concept.display [ fhir:value "K" ]
        ], [
          fhir:index 1;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "F" ];
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "[degF]" ];
          fhir:ValueSet.compose.include.concept.display [ fhir:value "F" ]
        ], [
          fhir:index 2;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "C" ];
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "Cel" ];
          fhir:ValueSet.compose.include.concept.display [ fhir:value "C" ]
        ]
      ]

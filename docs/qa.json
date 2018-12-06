@@ -3,9 +3,9 @@
   "name": "Open mHealth to FHIR",
   "package-id": "openmhealth.mfhir",
   "ig-ver": "0.0.0",
-  "date": "Mon, 05 Nov, 2018 15:00:27 -0800",
-  "errs": 262,
-  "warnings": 32,
+  "date": "Tue, 27 Nov, 2018 12:54:25 -0800",
+  "errs": 276,
+  "warnings": 34,
   "hints": 4,
   "version": "3.0.1",
   "tool": "3.6.0 (3)"

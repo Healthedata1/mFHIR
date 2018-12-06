@@ -74,11 +74,10 @@ can only resize using html  or css ;-(
 
 
       <div id="project-status" class="project-status"> <!-- ig title text -->
-
-      
-      <strong>Open mHealth to FHIR Implementation Guide CI Build</strong>
-      
-
+        <b>Open mHealth to FHIR Implementation Guide</b>
+        
+        CI Build
+        
     </div><!-- end ig title text -->
 
   </div><!-- end container -->
@@ -192,7 +191,7 @@ can only resize using html  or css ;-(
 
 <nav class="breadcrumb">
   
-    <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a> <li><a href='index.html'><b>Home</b></a></li><li><a href='profiles.html'><b>Profiles and Extensions</b></a></li><li><b>StructureDefinitionOmh Step Count</b></li>
+    <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a> <li><a href='index.html'><b>Home</b></a></li><li><a href='profiles.html'><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Omh Step Count</b></li>
 </nav>
 
 
@@ -200,7 +199,9 @@ can only resize using html  or css ;-(
 
 <!--status-bar-->
 <p id="publish-box">
-This is the   Continuous Integration Build  of the Open mHealth to FHIR Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="history.html">Directory of published versions</a>
+This is the 
+    Continuous Integration Build
+    of the Open mHealth to FHIR Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="history.html">Directory of published versions</a>
 </p>
 
 
@@ -293,42 +294,287 @@ Formats: <a href="StructureDefinition-omh-step-count.html">Narrative</a>, <a hre
 
 <h4 id="scope-and-usage">Scope and Usage</h4>
 
-<p>scope and usage text here….</p>
+<p>The OMH Step Count schema is represented as a formal FHIR Logical Model in the section below in order to facilitate model to model mappings.  However, the following mapping tables and resource subtemplates are provided for mapping an OMH schema instance to a FHIR resource instance using these templates along with the header templates.</p>
 
-<h4 id="example">Example</h4>
+<p><strong>OMH Step Count to FHIR Observation Resource mappings</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{  
-  "ResourceType":"OMHStepCount",
-   "id":"example-1",
-   "omhHeader":{  
-      "ResourceType":"OmhHeader",
-      "id":"example-1",
-      "dataPointId":"12341567",
-      "creationDateTime":"2018-04-T24:13:51Z",
-      "schemaId":{  
-         "namespace":"omh",
-         "name":"step-count",
-         "version":"1.0"
-      },
-      "acquisitionProvenance":{  
-         "sourceName":"Jawbone UP API&gt;",
-         "sourceDataPointId":"123456",
-         "sourceCreationDateTime":"2018-04-24T17:13:50Z",
-         "modificationDateTime":"2018-04-24T17:13:51Z",
-         "modality":"sensed"
-      },
-      "userId":"user123456"
+<table class="grid">
+  <thead>
+    <tr>
+      <th>OMH element</th>
+      <th>FHIR element</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>OMH Step Count Schema</td>
+      <td>OMH to FHIR Observation Profile with Observation.code = LOINC 55423-8 (Number of steps in unspecified time Pedometer)</td>
+    </tr>
+    <tr>
+      <td>body.effective_time_frame</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>body.effective_time_frame.time_interval</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>body.effective_time_frame.time_interval.start_date_time</td>
+      <td>Observation.effectivePeriod.start</td>
+    </tr>
+    <tr>
+      <td>body.effective_time_frame.time_interval.end_date_time</td>
+      <td>Observation.effectivePeriod.end</td>
+    </tr>
+    <tr>
+      <td>body.step_count</td>
+      <td>Observation.valueQuantity.value</td>
+    </tr>
+    <tr>
+      <td>body.descriptive_statistic</td>
+      <td>Observation.coding (see the mapping tables below)</td>
+    </tr>
+    <tr>
+      <td>body.descriptive_statistic_denominator</td>
+      <td>Observation.valueQuantity (see the mapping tables below)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Step Count Descriptive Statistic Mapping Tables</strong></p>
+
+<p>This table maps the step count descriptive statistic to the OMH to FHIR additional Observation codings ( code system <code class="highlighter-rouge">http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes</code>). This is a compositional code system derived by concatenatng of the datapoint schema name with the descriptive statistic code in “spinal case”  ( e.g  <code class="highlighter-rouge">step-count-maximum</code>). If descriptive statistic is absent, the default measure is count and there is no additional coding.</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>body.descriptive_statistic</th>
+      <th>Observation.coding.code</th>
+      <th>Observation.coding.display</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Null</td>
+      <td>Null</td>
+      <td>Null</td>
+    </tr>
+    <tr>
+      <td>average</td>
+      <td>average-step-count</td>
+      <td>Average Step Count</td>
+    </tr>
+    <tr>
+      <td>maximum</td>
+      <td>maximum-step-count</td>
+      <td>Maximum Step Count</td>
+    </tr>
+    <tr>
+      <td>minimum</td>
+      <td>minimum-step-count</td>
+      <td>Minimum Step Count</td>
+    </tr>
+    <tr>
+      <td>count</td>
+      <td>count-step-count</td>
+      <td>Count Step Count</td>
+    </tr>
+    <tr>
+      <td>totalcount</td>
+      <td>totalcount-step-count</td>
+      <td>Totalcount Step Count</td>
+    </tr>
+    <tr>
+      <td>median</td>
+      <td>median-step-count</td>
+      <td>Median Step Count</td>
+    </tr>
+    <tr>
+      <td>std-dev</td>
+      <td>std-dev-step-count</td>
+      <td>Std Dev Step Count</td>
+    </tr>
+    <tr>
+      <td>sum</td>
+      <td>sum-step-count</td>
+      <td>Sum Step Count</td>
+    </tr>
+    <tr>
+      <td>variance</td>
+      <td>variance-step-count</td>
+      <td>Variance Step Count</td>
+    </tr>
+    <tr>
+      <td>20-percent</td>
+      <td>20-percent-step-count</td>
+      <td>20 Percent Step Count</td>
+    </tr>
+    <tr>
+      <td>80-percent</td>
+      <td>80-percent-step-count</td>
+      <td>80 Percent Step Count</td>
+    </tr>
+    <tr>
+      <td>4-lower</td>
+      <td>4-lower-step-count</td>
+      <td>4 Lower Step Count</td>
+    </tr>
+    <tr>
+      <td>4-upper</td>
+      <td>4-upper-step-count</td>
+      <td>4 Upper Step Count</td>
+    </tr>
+    <tr>
+      <td>4-dev</td>
+      <td>4-dev-step-count</td>
+      <td>4 Dev Step Count</td>
+    </tr>
+    <tr>
+      <td>5-1</td>
+      <td>5-1-step-count</td>
+      <td>5 1 Step Count</td>
+    </tr>
+    <tr>
+      <td>5-2</td>
+      <td>5-2-step-count</td>
+      <td>5 2 Step Count</td>
+    </tr>
+    <tr>
+      <td>5-3</td>
+      <td>5-3-step-count</td>
+      <td>5 3 Step Count</td>
+    </tr>
+    <tr>
+      <td>5-4</td>
+      <td>5-4-step-count</td>
+      <td>5 4 Step Count</td>
+    </tr>
+    <tr>
+      <td>skew</td>
+      <td>skew-step-count</td>
+      <td>Skew Step Count</td>
+    </tr>
+    <tr>
+      <td>kurtosis</td>
+      <td>kurtosis-step-count</td>
+      <td>Kurtosis Step Count</td>
+    </tr>
+    <tr>
+      <td>regression</td>
+      <td>regression-step-count</td>
+      <td>Regression Step Count</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>This table maps the step count descriptive statistic denominator to the OMH to FHIR Observation valueQuantity unit and UCUM code. If no descriptive statistic is absent, the default unit is steps ({steps}).</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>body.descriptive_statistic_denominator</th>
+      <th>Observation.valueQuantity.unit</th>
+      <th>Observation.valueQuantity.code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Null</td>
+      <td>steps</td>
+      <td>{steps}</td>
+    </tr>
+    <tr>
+      <td>d</td>
+      <td>steps/day</td>
+      <td>{steps}/d</td>
+    </tr>
+    <tr>
+      <td>w</td>
+      <td>steps/week</td>
+      <td>{steps}/wk</td>
+    </tr>
+    <tr>
+      <td>m</td>
+      <td>steps/month</td>
+      <td>{steps}/mo</td>
+    </tr>
+    <tr>
+      <td>episode</td>
+      <td>steps/episode</td>
+      <td>{steps}/{episode}</td>
+    </tr>
+    <tr>
+      <td>session</td>
+      <td>steps/session</td>
+      <td>{steps}/{session}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="example-omh-to-fhir-step_count-datapoint-observation">Example OMH to FHIR step_count datapoint Observation</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+   "category": [
+      {
+         "coding": [
+            {
+               "system": "http://hl7.org/fhir/observation-category",
+               "code": "physical-activity",
+               "display": "Physical Activity"
+            }
+         ]
+      }
+   ],
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "status": "unknown",
+   "valueQuantity": {
+      "system": "http://unitsofmeasure.org",
+      "code": "{steps}",
+      "value": 6000,
+      "unit": "steps"
    },
-   "stepCount":7939,
-   "effectiveTimeFrame":{  
-      "start":"2018-04-17T00:00:00Z",
-      "end":"2018-04-24T00:00:00Z"
-    },
-   "descriptiveStatistic":"maximum",
-   "descriptiveStatisticDenominator":"d"
+   "subject": {
+      "identifier": {
+         "system": "https://omh.org/shimmer/patient_ids",
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b"
+      }
+   },
+   "code": {
+      "coding": [
+         {
+            "system": "http://loinc.org",
+            "code": "55423_8",
+            "display": "Number of steps in unspecified time Pedometer"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "system": "https://omh.org/shimmer/ids",
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4"
+      }
+   ],
+   "device": {
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/observationDeviceModality"
+         }
+      ],
+      "display": "Jawbone UP API"
+   },
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh-to-fhir-observation"
+      ]
+   },
+   "effectivePeriod": {
+      "end": "2016-02-05T07:25:00Z",
+      "start": "2016-02-05T06:25:00Z"
+   }
 }
 </code></pre></div></div>
-
 
 
 
@@ -542,7 +788,7 @@ $( '#tabs' ).tabs({
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      Open mHealth to FHIR Version: 0.0.0 &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Mon, Nov 5, 2018 15:00-0800.
+      Open mHealth to FHIR Version: 0.0.0 &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Tue, Nov 27, 2018 12:54-0800.
       | <a style="color: #81BEF7" href="history.html">History</a>
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>

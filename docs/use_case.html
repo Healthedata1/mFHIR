@@ -70,11 +70,10 @@ can only resize using html  or css ;-( -->
 
 
       <div id="project-status" class="project-status">   <!-- ig title text -->
-
-      
-      <strong>Open mHealth to FHIR Implementation Guide CI Build</strong>
-      
-
+        <b>Open mHealth to FHIR Implementation Guide</b>
+        
+        CI Build
+        
     </div>  <!-- end ig title text -->
 
   </div>  <!-- end container -->
@@ -204,7 +203,9 @@ can only resize using html  or css ;-( -->
 
   <!-- status-bar -->
 <p id="publish-box">
-This is the   Continuous Integration Build  of the Open mHealth to FHIR Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="history.html">Directory of published versions</a>
+This is the 
+    Continuous Integration Build
+    of the Open mHealth to FHIR Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="history.html">Directory of published versions</a>
 </p>
 
 
@@ -221,12 +222,12 @@ This is the   Continuous Integration Build  of the Open mHealth to FHIR Implemen
 
 <ul id="markdown-toc">
   <li><a href="#base-use-case" id="markdown-toc-base-use-case">Base Use case</a></li>
-  <li><a name="48649b93-b633-4ae4-9966-d704fd215b7a">​</a><a href="#description" id="markdown-toc-description">Description</a>    <ul>
-      <li><a name="2cc54e6e-4a1b-4067-ad88-7b45a736a41b">​</a><a href="#actors" id="markdown-toc-actors">Actors</a></li>
-      <li><a name="3204cc97-a46f-4988-9d90-a7a5f9098488">​</a><a href="#assumptions-pre-conditions-and-constraints" id="markdown-toc-assumptions-pre-conditions-and-constraints">Assumptions, Pre-Conditions and Constraints</a></li>
+  <li><a name="779452cf-09bd-40d9-b3c0-c5d98a65e04d">​</a><a href="#description" id="markdown-toc-description">Description</a>    <ul>
+      <li><a href="#actors" id="markdown-toc-actors">Actors</a></li>
+      <li><a href="#assumptions-pre-conditions-and-constraints" id="markdown-toc-assumptions-pre-conditions-and-constraints">Assumptions, Pre-Conditions and Constraints</a></li>
     </ul>
   </li>
-  <li><a name="98a149d6-6004-4f7e-aa8d-1fef626352d8">​</a><a href="#basic-flow" id="markdown-toc-basic-flow">Basic Flow</a></li>
+  <li><a href="#basic-flow" id="markdown-toc-basic-flow">Basic Flow</a></li>
 </ul>
 
 <h3 id="base-use-case">Base Use case</h3>
@@ -253,6 +254,19 @@ Conversion notes:
 <p>The patient determined by e.g., <a href="http://tools.acc.org/ASCVD-Risk-Estimator-Plus/#!/calculate/estimate/">http://tools.acc.org/ASCVD-Risk-Estimator-Plus/#!/calculate/estimate/</a> to be at moderate CV risk based on blood pressure, BMI, diet and exercise, blood glucose. Patient has a primary care physician (PCP). PCP and the patient jointly decide on improving exercise to meet AHA/WHO/CDC guidelines of150 minutes of moderate exercise (3-6 METS) every week, which they have refined into a mutually agreed upon step goal of 4000 steps daily. PCP prescribes the collection of steps using an mHealth device, to track daily steps and average daily and weekly steps. The patient is given an Open mHealth-compliant/supported consumer device (e.g., FitBit, GoogleFit, Misfit) by the clinic, or the patient already has an Open mHealth-compliant/supported device.</p>
 
 <p>At the next scheduled visit (e.g., in 90 days), the PCP and patient will jointly review during a clinic visit the daily step count and daily and weekly averages in the past 90 days vs the goal of 4000 daily steps. They will do this using a FHIR app that presents the data graphically within the EHR session.</p>
+
+<!-- all this Bootstrap html for getting an narrow image to fit nicely in text - 640 pix wide -->
+
+  <!-- file:///assets/images/use-case.jpg -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>Figure 1: Simple Use Case.</strong></figcaption>
+  <img src="assets/images/use-case.jpg" alt="use-case.jpg" class="figure-img img-responsive img-rounded center-block"/>
+</figure>
+
+<p></p>
+</div>
 
 <h4 id="actors">Actors</h4>
 
@@ -291,7 +305,7 @@ Conversion notes:
 
 <h3 id="basic-flow">Basic Flow</h3>
 
-<h4 class="no_toc" id="order-step-count-and-set-up-stepsensor">Order step count and set up StepSensor</h4>
+<h4 id="order-step-count-and-set-up-stepsensor" class="no_toc">Order step count and set up StepSensor</h4>
 
 <table class="grid">
   <tr>
@@ -392,7 +406,7 @@ Shimmer makes the Shimmer User ID available to mDATA, which now has both the pat
   </tr>
 </table>
 
-<h5 class="no_toc" id="flow-identifier--in-person-review-of-already-collected-steps-data">Flow Identifier:  In-person review of already collected steps data</h5>
+<h5 id="flow-identifier--in-person-review-of-already-collected-steps-data" class="no_toc">Flow Identifier:  In-person review of already collected steps data</h5>
 
 <table class="grid">
 <tr>
@@ -463,11 +477,11 @@ mDATA receives the results of the GET command from the R24 server and displays i
    </td>
   </tr>
 </table>
-<p><br /></p>
+<p><br/></p>
 
 
 
-  <!-- ==============END CONTENT END CONTENT=================== -->
+    <!-- ==============END CONTENT END CONTENT=================== -->
 
 </div>    <!-- col -->
 </div>    <!-- /inner-wrapper -->
@@ -497,7 +511,7 @@ mDATA receives the results of the GET command from the R24 server and displays i
   <div class="container">    <!-- container -->
    <div class="inner-wrapper">
     <p>
-      Open mHealth to FHIR Version: 0.0.0 &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Mon, Nov 5, 2018 15:00-0800.
+      Open mHealth to FHIR Version: 0.0.0 &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Tue, Nov 27, 2018 12:54-0800.
       | <a style="color: #81BEF7" href="history.html">History</a>
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a rel="license" style="color: #81BEF7" href="http://hl7.org/fhir/STU3/license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>

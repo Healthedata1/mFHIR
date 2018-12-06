@@ -1,0 +1,4690 @@
+Current directory =/Users/ehaas/Documents/FHIR/OMHtoFHIR
+Test Schema = blood_glucose_only
+Observation.category =  laboratory
+Observation.code = 2339-0 (Glucose Mass/volume in Blood)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "blood_glucose",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "blood_glucose": {
+      "value": 120,
+      "unit": "mg/dL"
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 120,
+      "code": "mg/dL",
+      "unit": "mg/dL",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "laboratory",
+               "display": "Laboratory",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "2339-0",
+            "display": "Glucose Mass/volume in Blood",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = with_date_time_time_frame
+Observation.category =  laboratory
+Observation.code = 2339-0 (Glucose Mass/volume in Blood)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "blood_glucose",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "effective_time_frame": {
+      "date_time": "2013-02-05T07:25:00Z"
+   },
+   "blood_glucose": {
+      "value": 95,
+      "unit": "mg/dL"
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "effectiveDateTime": "2013-02-05T07:25:00Z",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 95,
+      "code": "mg/dL",
+      "unit": "mg/dL",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "laboratory",
+               "display": "Laboratory",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "2339-0",
+            "display": "Glucose Mass/volume in Blood",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = with_descriptive_statistic
+Observation.category =  laboratory
+Observation.code = 2339-0 (Glucose Mass/volume in Blood)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "blood_glucose",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "descriptive_statistic": "minimum",
+   "effective_time_frame": {
+      "time_interval": {
+         "end_date_time": "2013-06-05T07:25:00Z",
+         "start_date_time": "2013-02-05T07:25:00Z"
+      }
+   },
+   "blood_glucose": {
+      "value": 120,
+      "unit": "mg/dL"
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "effectivePeriod": {
+      "end": "2013-06-05T07:25:00Z",
+      "start": "2013-02-05T07:25:00Z"
+   },
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 120,
+      "code": "mg/dL",
+      "unit": "mg/dL",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "laboratory",
+               "display": "Laboratory",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "2339-0",
+            "display": "Glucose Mass/volume in Blood",
+            "system": "http://loinc.org"
+         },
+         {
+            "code": "blood-glucose-minimum",
+            "display": "Blood Glucose Minimum",
+            "system": "http://hl7.org/fhir/omh_fhir_observation_codes"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = with_everything
+Observation.category =  laboratory
+Observation.code = 2339-0 (Glucose Mass/volume in Blood)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "blood_glucose",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "descriptive_statistic": "minimum",
+   "temporal_relationship_to_sleep": "on waking",
+   "specimen_source": "interstitial fluid",
+   "temporal_relationship_to_meal": "fasting",
+   "effective_time_frame": {
+      "time_interval": {
+         "end_date_time": "2013-06-05T07:25:00Z",
+         "start_date_time": "2013-02-05T07:25:00Z"
+      }
+   },
+   "blood_glucose": {
+      "value": 120,
+      "unit": "mg/dL"
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "effectivePeriod": {
+      "end": "2013-06-05T07:25:00Z",
+      "start": "2013-02-05T07:25:00Z"
+   },
+   "resourceType": "Observation",
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "laboratory",
+               "display": "Laboratory",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   },
+   "extension": [
+      {
+         "valueCodeableConcept": {
+            "coding": [
+               {
+                  "code": "258479004",
+                  "display": "Interstitial fluid specimen",
+                  "system": "http://snomed.info/sct"
+               }
+            ]
+         }
+      }
+   ],
+   "valueQuantity": {
+      "value": 120,
+      "code": "mg/dL",
+      "unit": "mg/dL",
+      "system": "http://unitsofmeasure.org"
+   },
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "code": {
+      "coding": [
+         {
+            "code": "2339-0",
+            "display": "Glucose Mass/volume in Blood",
+            "system": "http://loinc.org"
+         },
+         {
+            "code": "blood-glucose-minimum",
+            "display": "Blood Glucose Minimum",
+            "system": "http://hl7.org/fhir/omh_fhir_observation_codes"
+         }
+      ]
+   },
+   "component": [
+      {
+         "code": {
+            "coding": [
+               {
+                  "code": "relative-to-sleep",
+                  "display": "OMH to FHIR Temporal Relationship To Sleep",
+                  "system": "http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes"
+               }
+            ]
+         },
+         "valueCodeableConcept": {
+            "coding": [
+               {
+                  "code": "307156004",
+                  "display": "On waking",
+                  "system": "http://snomed.info/sct"
+               }
+            ],
+            "text": "on waking"
+         }
+      },
+      {
+         "code": {
+            "coding": [
+               {
+                  "code": "relative-to-meal",
+                  "display": "OMH to FHIR Temporal Relationship To Meal",
+                  "system": "http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes"
+               }
+            ]
+         },
+         "valueCodeableConcept": {
+            "coding": [
+               {
+                  "code": "16985007",
+                  "display": "Fasting",
+                  "system": "http://snomed.info/sct"
+               }
+            ],
+            "text": "fasting"
+         }
+      }
+   ],
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "status": "unknown"
+}
+Test Schema = with_specimen_source
+Observation.category =  laboratory
+Observation.code = 2339-0 (Glucose Mass/volume in Blood)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "blood_glucose",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "blood_glucose": {
+      "value": 95,
+      "unit": "mg/dL"
+   },
+   "specimen_source": "serum"
+}
+}
+******maps to this FHIR Observation**********
+{
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "extension": [
+      {
+         "valueCodeableConcept": {
+            "coding": [
+               {
+                  "code": "119364003",
+                  "display": "Serum sample",
+                  "system": "http://snomed.info/sct"
+               }
+            ]
+         }
+      }
+   ],
+   "valueQuantity": {
+      "value": 95,
+      "code": "mg/dL",
+      "unit": "mg/dL",
+      "system": "http://unitsofmeasure.org"
+   },
+   "resourceType": "Observation",
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "laboratory",
+               "display": "Laboratory",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "2339-0",
+            "display": "Glucose Mass/volume in Blood",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = with_temporal_relationship_to_meal
+Observation.category =  laboratory
+Observation.code = 2339-0 (Glucose Mass/volume in Blood)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "blood_glucose",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "temporal_relationship_to_meal": "fasting",
+   "effective_time_frame": {
+      "date_time": "2013-02-05T07:25:00Z"
+   },
+   "blood_glucose": {
+      "value": 95,
+      "unit": "mg/dL"
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "resourceType": "Observation",
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "laboratory",
+               "display": "Laboratory",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   },
+   "effectiveDateTime": "2013-02-05T07:25:00Z",
+   "valueQuantity": {
+      "value": 95,
+      "code": "mg/dL",
+      "unit": "mg/dL",
+      "system": "http://unitsofmeasure.org"
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "code": {
+      "coding": [
+         {
+            "code": "2339-0",
+            "display": "Glucose Mass/volume in Blood",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "component": [
+      {
+         "code": {
+            "coding": [
+               {
+                  "code": "relative-to-meal",
+                  "display": "OMH to FHIR Temporal Relationship To Meal",
+                  "system": "http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes"
+               }
+            ]
+         },
+         "valueCodeableConcept": {
+            "coding": [
+               {
+                  "code": "16985007",
+                  "display": "Fasting",
+                  "system": "http://snomed.info/sct"
+               }
+            ],
+            "text": "fasting"
+         }
+      }
+   ],
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown"
+}
+Test Schema = with_temporal_relationship_to_sleep
+Observation.category =  laboratory
+Observation.code = 2339-0 (Glucose Mass/volume in Blood)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "blood_glucose",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "temporal_relationship_to_sleep": "before sleeping",
+   "effective_time_frame": {
+      "date_time": "2013-02-05T20:25:00Z"
+   },
+   "blood_glucose": {
+      "value": 95,
+      "unit": "mg/dL"
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "resourceType": "Observation",
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "laboratory",
+               "display": "Laboratory",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   },
+   "effectiveDateTime": "2013-02-05T20:25:00Z",
+   "valueQuantity": {
+      "value": 95,
+      "code": "mg/dL",
+      "unit": "mg/dL",
+      "system": "http://unitsofmeasure.org"
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "code": {
+      "coding": [
+         {
+            "code": "2339-0",
+            "display": "Glucose Mass/volume in Blood",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "component": [
+      {
+         "code": {
+            "coding": [
+               {
+                  "code": "relative-to-sleep",
+                  "display": "OMH to FHIR Temporal Relationship To Sleep",
+                  "system": "http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes"
+               }
+            ]
+         },
+         "valueCodeableConcept": {
+            "coding": [
+               {
+                  "code": "307155000",
+                  "display": "Before sleeping",
+                  "system": "http://snomed.info/sct"
+               }
+            ],
+            "text": "before sleeping"
+         }
+      }
+   ],
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown"
+}
+Test Schema = blood_pressure_only
+Observation.category =  vital-signs
+Observation.code = 85354-9 (Blood pressure panel with all children optional)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "blood_pressure",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "diastolic_blood_pressure": {
+      "value": 60,
+      "unit": "mmHg"
+   },
+   "systolic_blood_pressure": {
+      "value": 160,
+      "unit": "mmHg"
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "vital-signs",
+               "display": "Vital Signs",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "85354-9",
+            "display": "Blood pressure panel with all children optional",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "component": [
+      {
+         "code": {
+            "coding": [
+               {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+               }
+            ]
+         },
+         "valueQuantity": {
+            "value": 60,
+            "code": "mm[Hg]",
+            "unit": "mmHg",
+            "system": "http://unitsofmeasure.org"
+         }
+      },
+      {
+         "code": {
+            "coding": [
+               {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+               }
+            ]
+         },
+         "valueQuantity": {
+            "value": 160,
+            "code": "mm[Hg]",
+            "unit": "mmHg",
+            "system": "http://unitsofmeasure.org"
+         }
+      }
+   ],
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = with_descriptive_statistic
+Observation.category =  vital-signs
+Observation.code = 85354-9 (Blood pressure panel with all children optional)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "blood_pressure",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "body_posture": "sitting",
+   "diastolic_blood_pressure": {
+      "value": 60,
+      "unit": "mmHg"
+   },
+   "descriptive_statistic": "maximum",
+   "systolic_blood_pressure": {
+      "value": 160,
+      "unit": "mmHg"
+   },
+   "effective_time_frame": {
+      "time_interval": {
+         "end_date_time": "2013-06-05T07:25:00Z",
+         "start_date_time": "2013-02-05T07:25:00Z"
+      }
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "effectivePeriod": {
+      "end": "2013-06-05T07:25:00Z",
+      "start": "2013-02-05T07:25:00Z"
+   },
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "vital-signs",
+               "display": "Vital Signs",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "85354-9",
+            "display": "Blood pressure panel with all children optional",
+            "system": "http://loinc.org"
+         },
+         {
+            "code": "blood-pressure-maximum",
+            "display": "Blood Pressure Maximum",
+            "system": "http://hl7.org/fhir/omh_fhir_observation_codes"
+         }
+      ]
+   },
+   "component": [
+      {
+         "code": {
+            "coding": [
+               {
+                  "code": "271605009",
+                  "display": "Position of body and posture (observable entity)",
+                  "system": "http://snomed.info/sct"
+               }
+            ]
+         },
+         "valueCodeableConcept": {
+            "coding": [
+               {
+                  "code": "33586001",
+                  "display": "Sitting position",
+                  "system": "http://snomed.info/sct"
+               }
+            ],
+            "text": "sitting"
+         }
+      },
+      {
+         "code": {
+            "coding": [
+               {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+               }
+            ]
+         },
+         "valueQuantity": {
+            "value": 60,
+            "code": "mm[Hg]",
+            "unit": "mmHg",
+            "system": "http://unitsofmeasure.org"
+         }
+      },
+      {
+         "code": {
+            "coding": [
+               {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+               }
+            ]
+         },
+         "valueQuantity": {
+            "value": 160,
+            "code": "mm[Hg]",
+            "unit": "mmHg",
+            "system": "http://unitsofmeasure.org"
+         }
+      }
+   ],
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = with_posture
+Observation.category =  vital-signs
+Observation.code = 85354-9 (Blood pressure panel with all children optional)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "blood_pressure",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "body_posture": "sitting",
+   "diastolic_blood_pressure": {
+      "value": 60,
+      "unit": "mmHg"
+   },
+   "systolic_blood_pressure": {
+      "value": 160,
+      "unit": "mmHg"
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "vital-signs",
+               "display": "Vital Signs",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "85354-9",
+            "display": "Blood pressure panel with all children optional",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "component": [
+      {
+         "code": {
+            "coding": [
+               {
+                  "code": "271605009",
+                  "display": "Position of body and posture (observable entity)",
+                  "system": "http://snomed.info/sct"
+               }
+            ]
+         },
+         "valueCodeableConcept": {
+            "coding": [
+               {
+                  "code": "33586001",
+                  "display": "Sitting position",
+                  "system": "http://snomed.info/sct"
+               }
+            ],
+            "text": "sitting"
+         }
+      },
+      {
+         "code": {
+            "coding": [
+               {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+               }
+            ]
+         },
+         "valueQuantity": {
+            "value": 60,
+            "code": "mm[Hg]",
+            "unit": "mmHg",
+            "system": "http://unitsofmeasure.org"
+         }
+      },
+      {
+         "code": {
+            "coding": [
+               {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+               }
+            ]
+         },
+         "valueQuantity": {
+            "value": 160,
+            "code": "mm[Hg]",
+            "unit": "mmHg",
+            "system": "http://unitsofmeasure.org"
+         }
+      }
+   ],
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = body_fat_percentage_only
+Observation.category =  exam
+Observation.code = 41982-0 (Percentage of body fat Measured)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "body_fat_percentage",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "effective_time_frame": {
+      "date_time": "2013-02-05T07:25:00Z"
+   },
+   "body_fat_percentage": {
+      "value": 16,
+      "unit": "%"
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "effectiveDateTime": "2013-02-05T07:25:00Z",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 16,
+      "code": "%",
+      "unit": "%",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "exam",
+               "display": "Exam",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "41982-0",
+            "display": "Percentage of body fat Measured",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = with_statistic
+Observation.category =  exam
+Observation.code = 41982-0 (Percentage of body fat Measured)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "body_fat_percentage",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "effective_time_frame": {
+      "time_interval": {
+         "end_date_time": "2013-12-31T23:59:59Z",
+         "start_date_time": "2013-01-01T00:00:00Z"
+      }
+   },
+   "descriptive_statistic": "maximum",
+   "body_fat_percentage": {
+      "value": 16,
+      "unit": "%"
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "effectivePeriod": {
+      "end": "2013-12-31T23:59:59Z",
+      "start": "2013-01-01T00:00:00Z"
+   },
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 16,
+      "code": "%",
+      "unit": "%",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "exam",
+               "display": "Exam",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "41982-0",
+            "display": "Percentage of body fat Measured",
+            "system": "http://loinc.org"
+         },
+         {
+            "code": "body-fat-percentage-maximum",
+            "display": "Body Fat Percentage Maximum",
+            "system": "http://hl7.org/fhir/omh_fhir_observation_codes"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = body_height_only
+Observation.category =  vital-signs
+Observation.code = 8302-2 (Body height)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "body_height",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "body_height": {
+      "value": 180,
+      "unit": "cm"
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 180,
+      "code": "cm",
+      "unit": "cm",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "vital-signs",
+               "display": "Vital Signs",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "8302-2",
+            "display": "Body height",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = with_descriptive_statistic
+Observation.category =  vital-signs
+Observation.code = 8302-2 (Body height)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "body_height",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "effective_time_frame": {
+      "time_interval": {
+         "end_date_time": "2013-12-31T23:59:59Z",
+         "start_date_time": "2013-01-01T00:00:00Z"
+      }
+   },
+   "descriptive_statistic": "maximum",
+   "body_height": {
+      "value": 180,
+      "unit": "cm"
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "effectivePeriod": {
+      "end": "2013-12-31T23:59:59Z",
+      "start": "2013-01-01T00:00:00Z"
+   },
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 180,
+      "code": "cm",
+      "unit": "cm",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "vital-signs",
+               "display": "Vital Signs",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "8302-2",
+            "display": "Body height",
+            "system": "http://loinc.org"
+         },
+         {
+            "code": "body-height-maximum",
+            "display": "Body Height Maximum",
+            "system": "http://hl7.org/fhir/omh_fhir_observation_codes"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = with_time_frame
+Observation.category =  vital-signs
+Observation.code = 8302-2 (Body height)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "body_height",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "effective_time_frame": {
+      "time_interval": {
+         "date": "2013-02-05",
+         "part_of_day": "morning"
+      }
+   },
+   "body_height": {
+      "value": 180,
+      "unit": "cm"
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 180,
+      "code": "cm",
+      "unit": "cm",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "vital-signs",
+               "display": "Vital Signs",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "8302-2",
+            "display": "Body height",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = valid_body_mass_index
+Observation.category =  vital-signs
+Observation.code = 39156-5 (Body mass index (BMI) Ratio)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "body_mass_index",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "effective_time_frame": {
+      "date_time": "2013-01-01T00:00:00Z"
+   },
+   "body_mass_index": {
+      "value": 16,
+      "unit": "kg/m^2"
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "effectiveDateTime": "2013-01-01T00:00:00Z",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 16,
+      "code": "kg/m2",
+      "unit": "kg/m^2",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "vital-signs",
+               "display": "Vital Signs",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "39156-5",
+            "display": "Body mass index (BMI) Ratio",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = with_everything
+Observation.category =  vital-signs
+Observation.code = 39156-5 (Body mass index (BMI) Ratio)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "body_mass_index",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "effective_time_frame": {
+      "time_interval": {
+         "end_date_time": "2013-12-31T23:59:59Z",
+         "start_date_time": "2013-01-01T00:00:00Z"
+      }
+   },
+   "descriptive_statistic": "maximum",
+   "body_mass_index": {
+      "value": 16,
+      "unit": "kg/m^2"
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "effectivePeriod": {
+      "end": "2013-12-31T23:59:59Z",
+      "start": "2013-01-01T00:00:00Z"
+   },
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 16,
+      "code": "kg/m2",
+      "unit": "kg/m^2",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "vital-signs",
+               "display": "Vital Signs",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "39156-5",
+            "display": "Body mass index (BMI) Ratio",
+            "system": "http://loinc.org"
+         },
+         {
+            "code": "body-mass-index-maximum",
+            "display": "Body Mass Index Maximum",
+            "system": "http://hl7.org/fhir/omh_fhir_observation_codes"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = basal_temperature
+Observation.category =  vital-signs
+Observation.code = 8310-5 (Body temperature)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "body_temperature",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "temporal_relationship_to_sleep": "on waking",
+   "effective_time_frame": {
+      "date_time": "2013-02-05T06:25:00Z"
+   },
+   "body_temperature": {
+      "value": 96.5,
+      "unit": "F"
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "resourceType": "Observation",
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "vital-signs",
+               "display": "Vital Signs",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   },
+   "effectiveDateTime": "2013-02-05T06:25:00Z",
+   "valueQuantity": {
+      "value": 96.5,
+      "code": "[degF]",
+      "unit": "F",
+      "system": "http://unitsofmeasure.org"
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "code": {
+      "coding": [
+         {
+            "code": "8310-5",
+            "display": "Body temperature",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "component": [
+      {
+         "code": {
+            "coding": [
+               {
+                  "code": "relative-to-sleep",
+                  "display": "OMH to FHIR Temporal Relationship To Sleep",
+                  "system": "http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes"
+               }
+            ]
+         },
+         "valueCodeableConcept": {
+            "coding": [
+               {
+                  "code": "307156004",
+                  "display": "On waking",
+                  "system": "http://snomed.info/sct"
+               }
+            ],
+            "text": "on waking"
+         }
+      }
+   ],
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown"
+}
+Test Schema = valid_temperature_with_statistic
+Observation.category =  vital-signs
+Observation.code = 8310-5 (Body temperature)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "body_temperature",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "effective_time_frame": {
+      "time_interval": {
+         "end_date_time": "2015-02-06T06:00:00Z",
+         "start_date_time": "2015-02-05T06:00:00Z"
+      }
+   },
+   "descriptive_statistic": "maximum",
+   "body_temperature": {
+      "value": 96.5,
+      "unit": "F"
+   },
+   "measurement_location": "oral"
+}
+}
+******maps to this FHIR Observation**********
+{
+   "effectivePeriod": {
+      "end": "2015-02-06T06:00:00Z",
+      "start": "2015-02-05T06:00:00Z"
+   },
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 96.5,
+      "code": "[degF]",
+      "unit": "F",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "vital-signs",
+               "display": "Vital Signs",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "8310-5",
+            "display": "Body temperature",
+            "system": "http://loinc.org"
+         },
+         {
+            "code": "body-temperature-maximum",
+            "display": "Body Temperature Maximum",
+            "system": "http://hl7.org/fhir/omh_fhir_observation_codes"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = valid_temperature
+Observation.category =  vital-signs
+Observation.code = 8310-5 (Body temperature)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "body_temperature",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "effective_time_frame": {
+      "date_time": "2013-02-05T07:25:00Z"
+   },
+   "body_temperature": {
+      "value": 97,
+      "unit": "F"
+   },
+   "measurement_location": "forehead"
+}
+}
+******maps to this FHIR Observation**********
+{
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "effectiveDateTime": "2013-02-05T07:25:00Z",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 97,
+      "code": "[degF]",
+      "unit": "F",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "vital-signs",
+               "display": "Vital Signs",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "8310-5",
+            "display": "Body temperature",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = body_weight_only
+Observation.category =  vital-signs
+Observation.code = 29463-7 (Body weight)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "body_weight",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "body_weight": {
+      "value": 50,
+      "unit": "kg"
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 50,
+      "code": "kg",
+      "unit": "kg",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "vital-signs",
+               "display": "Vital Signs",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "29463-7",
+            "display": "Body weight",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = date_time_time_frame
+Observation.category =  vital-signs
+Observation.code = 29463-7 (Body weight)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "body_weight",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "body_weight": {
+      "value": 50,
+      "unit": "kg"
+   },
+   "effective_time_frame": {
+      "date_time": "2013-02-05T07:25:00Z"
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "effectiveDateTime": "2013-02-05T07:25:00Z",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 50,
+      "code": "kg",
+      "unit": "kg",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "vital-signs",
+               "display": "Vital Signs",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "29463-7",
+            "display": "Body weight",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = time_interval_time_frame
+Observation.category =  vital-signs
+Observation.code = 29463-7 (Body weight)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "body_weight",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "body_weight": {
+      "value": 50,
+      "unit": "kg"
+   },
+   "effective_time_frame": {
+      "time_interval": {
+         "end_date_time": "2013-06-05T07:25:00Z",
+         "start_date_time": "2013-02-05T07:25:00Z"
+      }
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "effectivePeriod": {
+      "end": "2013-06-05T07:25:00Z",
+      "start": "2013-02-05T07:25:00Z"
+   },
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 50,
+      "code": "kg",
+      "unit": "kg",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "vital-signs",
+               "display": "Vital Signs",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "29463-7",
+            "display": "Body weight",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = with_descriptive_statistic
+Observation.category =  vital-signs
+Observation.code = 29463-7 (Body weight)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "body_weight",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "body_weight": {
+      "value": 50,
+      "unit": "kg"
+   },
+   "effective_time_frame": {
+      "time_interval": {
+         "end_date_time": "2013-06-05T07:25:00Z",
+         "start_date_time": "2013-02-05T07:25:00Z"
+      }
+   },
+   "descriptive_statistic": "minimum"
+}
+}
+******maps to this FHIR Observation**********
+{
+   "effectivePeriod": {
+      "end": "2013-06-05T07:25:00Z",
+      "start": "2013-02-05T07:25:00Z"
+   },
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 50,
+      "code": "kg",
+      "unit": "kg",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "vital-signs",
+               "display": "Vital Signs",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "29463-7",
+            "display": "Body weight",
+            "system": "http://loinc.org"
+         },
+         {
+            "code": "body-weight-minimum",
+            "display": "Body Weight Minimum",
+            "system": "http://hl7.org/fhir/omh_fhir_observation_codes"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = valid_calories_burned
+Observation.category =  physical-activity
+Observation.code = 41981-2 (Calories burned)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "calories_burned",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "kcal_burned": {
+      "value": 1600,
+      "unit": "kcal"
+   },
+   "effective_time_frame": {
+      "time_interval": {
+         "end_date_time": "2016-02-05T23:00:00Z",
+         "start_date_time": "2016-02-05T06:00:00Z"
+      }
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "effectivePeriod": {
+      "end": "2016-02-05T23:00:00Z",
+      "start": "2016-02-05T06:00:00Z"
+   },
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "physical-activity",
+               "display": "Physical Activity",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "41981-2",
+            "display": "Calories burned",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = with_descriptive_statistic
+Observation.category =  physical-activity
+Observation.code = 41981-2 (Calories burned)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "calories_burned",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "kcal_burned": {
+      "value": 1635,
+      "unit": "kcal"
+   },
+   "descriptive_statistic_denominator": "d",
+   "effective_time_frame": {
+      "time_interval": {
+         "end_date_time": "2013-06-06T07:00:00Z",
+         "start_date_time": "2016-02-05T07:00:00Z"
+      }
+   },
+   "descriptive_statistic": "average"
+}
+}
+******maps to this FHIR Observation**********
+{
+   "effectivePeriod": {
+      "end": "2013-06-06T07:00:00Z",
+      "start": "2016-02-05T07:00:00Z"
+   },
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "code": "None/d",
+      "unit": "None/day"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "physical-activity",
+               "display": "Physical Activity",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "41981-2",
+            "display": "Calories burned",
+            "system": "http://loinc.org"
+         },
+         {
+            "code": "calories-burned-average",
+            "display": "Calories Burned Average",
+            "system": "http://hl7.org/fhir/omh_fhir_observation_codes"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = valid_diastolic_blood_pressure
+Observation.category =  vital-signs
+Observation.code = 8462-4 (Diastolic blood pressure)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "diastolic_blood_pressure",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "value": 60,
+   "unit": "mmHg"
+}
+}
+******maps to this FHIR Observation**********
+{
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "vital-signs",
+               "display": "Vital Signs",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "8462-4",
+            "display": "Diastolic blood pressure",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = heart_rate_only
+Observation.category =  vital-signs
+Observation.code = 8867-4 (Heart rate)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "heart_rate",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "heart_rate": {
+      "value": 60,
+      "unit": "beats/min"
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 60,
+      "code": "/min",
+      "unit": "beats/min",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "vital-signs",
+               "display": "Vital Signs",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "8867-4",
+            "display": "Heart rate",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = with_everything
+Observation.category =  vital-signs
+Observation.code = 8867-4 (Heart rate)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "heart_rate",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "effective_time_frame": {
+      "date_time": "2013-02-05T07:25:00Z"
+   },
+   "user_notes": "I felt quite dizzy",
+   "temporal_relationship_to_physical_activity": "at rest",
+   "heart_rate": {
+      "value": 50,
+      "unit": "beats/min"
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "comment": "I felt quite dizzy",
+   "resourceType": "Observation",
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "vital-signs",
+               "display": "Vital Signs",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   },
+   "effectiveDateTime": "2013-02-05T07:25:00Z",
+   "valueQuantity": {
+      "value": 50,
+      "code": "/min",
+      "unit": "beats/min",
+      "system": "http://unitsofmeasure.org"
+   },
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "code": {
+      "coding": [
+         {
+            "code": "8867-4",
+            "display": "Heart rate",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "component": [
+      {
+         "code": {
+            "coding": [
+               {
+                  "code": "relative-to-activity",
+                  "display": "OMH to FHIR Temporal Relationship To Physical Activity",
+                  "system": "http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes"
+               }
+            ]
+         },
+         "valueCodeableConcept": {
+            "coding": [
+               {
+                  "code": "263678003",
+                  "display": "At rest",
+                  "system": "http://snomed.info/sct"
+               }
+            ],
+            "text": "at rest"
+         }
+      }
+   ],
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "status": "unknown"
+}
+Test Schema = with_temporal_relationship_to_physical_activity
+Observation.category =  vital-signs
+Observation.code = 8867-4 (Heart rate)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "heart_rate",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "effective_time_frame": {
+      "date_time": "2013-02-05T07:25:00Z"
+   },
+   "temporal_relationship_to_physical_activity": "at rest",
+   "heart_rate": {
+      "value": 50,
+      "unit": "beats/min"
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "resourceType": "Observation",
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "vital-signs",
+               "display": "Vital Signs",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   },
+   "effectiveDateTime": "2013-02-05T07:25:00Z",
+   "valueQuantity": {
+      "value": 50,
+      "code": "/min",
+      "unit": "beats/min",
+      "system": "http://unitsofmeasure.org"
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "code": {
+      "coding": [
+         {
+            "code": "8867-4",
+            "display": "Heart rate",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "component": [
+      {
+         "code": {
+            "coding": [
+               {
+                  "code": "relative-to-activity",
+                  "display": "OMH to FHIR Temporal Relationship To Physical Activity",
+                  "system": "http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes"
+               }
+            ]
+         },
+         "valueCodeableConcept": {
+            "coding": [
+               {
+                  "code": "263678003",
+                  "display": "At rest",
+                  "system": "http://snomed.info/sct"
+               }
+            ],
+            "text": "at rest"
+         }
+      }
+   ],
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown"
+}
+Test Schema = with_time_frame
+Observation.category =  vital-signs
+Observation.code = 8867-4 (Heart rate)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "heart_rate",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "effective_time_frame": {
+      "date_time": "2013-02-05T07:25:00Z"
+   },
+   "heart_rate": {
+      "value": 60,
+      "unit": "beats/min"
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "effectiveDateTime": "2013-02-05T07:25:00Z",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 60,
+      "code": "/min",
+      "unit": "beats/min",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "vital-signs",
+               "display": "Vital Signs",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "8867-4",
+            "display": "Heart rate",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = with_user_notes
+Observation.category =  vital-signs
+Observation.code = 8867-4 (Heart rate)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "heart_rate",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "effective_time_frame": {
+      "date_time": "2013-02-05T07:25:00Z"
+   },
+   "user_notes": "I felt quite dizzy",
+   "heart_rate": {
+      "value": 50,
+      "unit": "beats/min"
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "comment": "I felt quite dizzy",
+   "resourceType": "Observation",
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "vital-signs",
+               "display": "Vital Signs",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   },
+   "effectiveDateTime": "2013-02-05T07:25:00Z",
+   "valueQuantity": {
+      "value": 50,
+      "code": "/min",
+      "unit": "beats/min",
+      "system": "http://unitsofmeasure.org"
+   },
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "code": {
+      "coding": [
+         {
+            "code": "8867-4",
+            "display": "Heart rate",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown"
+}
+Test Schema = minutes_moderate_activity_only
+Observation.category =  physical-activity
+Observation.code = 408581006 (Physical activity target moderate exercise (finding))
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "minutes_moderate_activity",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "minutes_moderate_activity": {
+      "value": 60,
+      "unit": "min"
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 60,
+      "code": "min",
+      "unit": "min",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "physical-activity",
+               "display": "Physical Activity",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "408581006",
+            "display": "Physical activity target moderate exercise (finding)",
+            "system": "http://snomed.info/id"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = with_time_frame
+Observation.category =  physical-activity
+Observation.code = 408581006 (Physical activity target moderate exercise (finding))
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "minutes_moderate_activity",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "minutes_moderate_activity": {
+      "value": 60,
+      "unit": "min"
+   },
+   "effective_time_frame": {
+      "time_interval": {
+         "end_date_time": "2013-02-05T07:25:00Z",
+         "start_date_time": "2013-02-05T06:25:00Z"
+      }
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "effectivePeriod": {
+      "end": "2013-02-05T07:25:00Z",
+      "start": "2013-02-05T06:25:00Z"
+   },
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 60,
+      "code": "min",
+      "unit": "min",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "physical-activity",
+               "display": "Physical Activity",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "408581006",
+            "display": "Physical activity target moderate exercise (finding)",
+            "system": "http://snomed.info/id"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = saturation_only
+Observation.category =  vital-signs
+Observation.code = 59408-5 (Oxygen saturation in Arterial blood by Pulse oximetry)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "oxygen_saturation",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "effective_time_frame": {
+      "date_time": "2013-02-05T07:25:00Z"
+   },
+   "system": "peripheral capillary",
+   "oxygen_saturation": {
+      "value": 95,
+      "unit": "%"
+   },
+   "measurement_method": "pulse oximetry"
+}
+}
+******maps to this FHIR Observation**********
+{
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "effectiveDateTime": "2013-02-05T07:25:00Z",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 95,
+      "code": "%",
+      "unit": "%",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "vital-signs",
+               "display": "Vital Signs",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "59408-5",
+            "display": "Oxygen saturation in Arterial blood by Pulse oximetry",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = with_oxygen
+Observation.category =  vital-signs
+Observation.code = 59408-5 (Oxygen saturation in Arterial blood by Pulse oximetry)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "oxygen_saturation",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "oxygen_therapy_mode_of_administration": "nasal cannula",
+   "system": "peripheral capillary",
+   "supplemental_oxygen_flow_rate": {
+      "value": 2.5,
+      "unit": "L/min"
+   },
+   "measurement_method": "pulse oximetry",
+   "effective_time_frame": {
+      "date_time": "2013-02-05T07:25:00Z"
+   },
+   "oxygen_saturation": {
+      "value": 95,
+      "unit": "%"
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "effectiveDateTime": "2013-02-05T07:25:00Z",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 95,
+      "code": "%",
+      "unit": "%",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "vital-signs",
+               "display": "Vital Signs",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "59408-5",
+            "display": "Oxygen saturation in Arterial blood by Pulse oximetry",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = respiratory_rate_only
+Observation.category =  vital-signs
+Observation.code = 9279-1 (Respiratory Rate)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "respiratory_rate",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "respiratory_rate": {
+      "value": 12,
+      "unit": "breaths/min"
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 12,
+      "code": "/min",
+      "unit": "breaths/min",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "vital-signs",
+               "display": "Vital Signs",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "9279-1",
+            "display": "Respiratory Rate",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = with_statistic
+Observation.category =  vital-signs
+Observation.code = 9279-1 (Respiratory Rate)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "respiratory_rate",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "respiratory_rate": {
+      "value": 10,
+      "unit": "breaths/min"
+   },
+   "descriptive_statistic": "minimum",
+   "effective_time_frame": {
+      "time_interval": {
+         "end_date_time": "2013-02-06T07:25:00Z",
+         "start_date_time": "2013-02-05T07:25:00Z"
+      }
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "effectivePeriod": {
+      "end": "2013-02-06T07:25:00Z",
+      "start": "2013-02-05T07:25:00Z"
+   },
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 10,
+      "code": "/min",
+      "unit": "breaths/min",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "vital-signs",
+               "display": "Vital Signs",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "9279-1",
+            "display": "Respiratory Rate",
+            "system": "http://loinc.org"
+         },
+         {
+            "code": "respiratory-rate-minimum",
+            "display": "Respiratory Rate Minimum",
+            "system": "http://hl7.org/fhir/omh_fhir_observation_codes"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = with_temporal_relationship_to_physical_activity
+Observation.category =  vital-signs
+Observation.code = 9279-1 (Respiratory Rate)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "respiratory_rate",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "respiratory_rate": {
+      "value": 12,
+      "unit": "breaths/min"
+   },
+   "temporal_relationship_to_physical_activity": "at rest",
+   "effective_time_frame": {
+      "date_time": "2013-02-05T07:25:00Z"
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "resourceType": "Observation",
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "vital-signs",
+               "display": "Vital Signs",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   },
+   "effectiveDateTime": "2013-02-05T07:25:00Z",
+   "valueQuantity": {
+      "value": 12,
+      "code": "/min",
+      "unit": "breaths/min",
+      "system": "http://unitsofmeasure.org"
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "code": {
+      "coding": [
+         {
+            "code": "9279-1",
+            "display": "Respiratory Rate",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "component": [
+      {
+         "code": {
+            "coding": [
+               {
+                  "code": "relative-to-activity",
+                  "display": "OMH to FHIR Temporal Relationship To Physical Activity",
+                  "system": "http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes"
+               }
+            ]
+         },
+         "valueCodeableConcept": {
+            "coding": [
+               {
+                  "code": "263678003",
+                  "display": "At rest",
+                  "system": "http://snomed.info/sct"
+               }
+            ],
+            "text": "at rest"
+         }
+      }
+   ],
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown"
+}
+Test Schema = with_time_frame
+Observation.category =  vital-signs
+Observation.code = 9279-1 (Respiratory Rate)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "respiratory_rate",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "respiratory_rate": {
+      "value": 12,
+      "unit": "breaths/min"
+   },
+   "effective_time_frame": {
+      "date_time": "2013-02-05T07:25:00Z"
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "effectiveDateTime": "2013-02-05T07:25:00Z",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 12,
+      "code": "/min",
+      "unit": "breaths/min",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "vital-signs",
+               "display": "Vital Signs",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "9279-1",
+            "display": "Respiratory Rate",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = valid_sleep_duration
+Observation.category =  physical-activity
+Observation.code = 248263006 (Duration of sleep (observable entity))
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "sleep_duration",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "sleep_duration": {
+      "value": 7.5,
+      "unit": "h"
+   },
+   "effective_time_frame": {
+      "time_interval": {
+         "end_date_time": "2016-02-06T06:35:00Z",
+         "start_date_time": "2016-02-05T20:35:00Z"
+      }
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "effectivePeriod": {
+      "end": "2016-02-06T06:35:00Z",
+      "start": "2016-02-05T20:35:00Z"
+   },
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 7.5,
+      "code": "sec",
+      "unit": "sec",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "physical-activity",
+               "display": "Physical Activity",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "248263006",
+            "display": "Duration of sleep (observable entity)",
+            "system": "http://snomed.info/id"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = with_descriptive_statistic
+Observation.category =  physical-activity
+Observation.code = 248263006 (Duration of sleep (observable entity))
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "sleep_duration",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "sleep_duration": {
+      "value": 7.25,
+      "unit": "h"
+   },
+   "effective_time_frame": {
+      "time_interval": {
+         "end_date_time": "2013-06-06T07:00:00Z",
+         "start_date_time": "2016-02-05T07:00:00Z"
+      }
+   },
+   "descriptive_statistic": "average",
+   "descriptive_statistic_denominator": "d"
+}
+}
+******maps to this FHIR Observation**********
+{
+   "effectivePeriod": {
+      "end": "2013-06-06T07:00:00Z",
+      "start": "2016-02-05T07:00:00Z"
+   },
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 7.25,
+      "code": "sec/d",
+      "unit": "sec/day",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "physical-activity",
+               "display": "Physical Activity",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "248263006",
+            "display": "Duration of sleep (observable entity)",
+            "system": "http://snomed.info/id"
+         },
+         {
+            "code": "sleep-duration-average",
+            "display": "Sleep Duration Average",
+            "system": "http://hl7.org/fhir/omh_fhir_observation_codes"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = valid_step_count
+Observation.category =  physical-activity
+Observation.code = 55423-8 (Number of steps in unspecified time Pedometer)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "step_count",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "step_count": 6000,
+   "effective_time_frame": {
+      "time_interval": {
+         "end_date_time": "2016-02-05T07:25:00Z",
+         "start_date_time": "2016-02-05T06:25:00Z"
+      }
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "effectivePeriod": {
+      "end": "2016-02-05T07:25:00Z",
+      "start": "2016-02-05T06:25:00Z"
+   },
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 6000,
+      "code": "{steps}",
+      "unit": "steps",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "physical-activity",
+               "display": "Physical Activity",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "55423-8",
+            "display": "Number of steps in unspecified time Pedometer",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = with_average
+Observation.category =  physical-activity
+Observation.code = 55423-8 (Number of steps in unspecified time Pedometer)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "step_count",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "descriptive_statistic_denominator": "d",
+   "step_count": 12000,
+   "descriptive_statistic": "average",
+   "effective_time_frame": {
+      "time_interval": {
+         "end_date_time": "2016-06-05T07:00:00Z",
+         "start_date_time": "2016-05-05T07:00:00Z"
+      }
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "effectivePeriod": {
+      "end": "2016-06-05T07:00:00Z",
+      "start": "2016-05-05T07:00:00Z"
+   },
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 12000,
+      "code": "{steps}/d",
+      "unit": "steps/day",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "physical-activity",
+               "display": "Physical Activity",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "55423-8",
+            "display": "Number of steps in unspecified time Pedometer",
+            "system": "http://loinc.org"
+         },
+         {
+            "code": "step-count-average",
+            "display": "Step Count Average",
+            "system": "http://hl7.org/fhir/omh_fhir_observation_codes"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = with_maximum
+Observation.category =  physical-activity
+Observation.code = 55423-8 (Number of steps in unspecified time Pedometer)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "step_count",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "descriptive_statistic_denominator": "d",
+   "step_count": 20000,
+   "descriptive_statistic": "maximum",
+   "effective_time_frame": {
+      "time_interval": {
+         "end_date_time": "2016-06-05T07:00:00Z",
+         "start_date_time": "2016-02-05T07:00:00Z"
+      }
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "effectivePeriod": {
+      "end": "2016-06-05T07:00:00Z",
+      "start": "2016-02-05T07:00:00Z"
+   },
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 20000,
+      "code": "{steps}/d",
+      "unit": "steps/day",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "physical-activity",
+               "display": "Physical Activity",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "55423-8",
+            "display": "Number of steps in unspecified time Pedometer",
+            "system": "http://loinc.org"
+         },
+         {
+            "code": "step-count-maximum",
+            "display": "Step Count Maximum",
+            "system": "http://hl7.org/fhir/omh_fhir_observation_codes"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = with_session
+Observation.category =  physical-activity
+Observation.code = 55423-8 (Number of steps in unspecified time Pedometer)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "step_count",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "descriptive_statistic_denominator": "session",
+   "step_count": 20000,
+   "descriptive_statistic": "maximum",
+   "effective_time_frame": {
+      "time_interval": {
+         "end_date_time": "2016-06-05T07:00:00Z",
+         "start_date_time": "2016-02-05T07:00:00Z"
+      }
+   }
+}
+}
+******maps to this FHIR Observation**********
+{
+   "effectivePeriod": {
+      "end": "2016-06-05T07:00:00Z",
+      "start": "2016-02-05T07:00:00Z"
+   },
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "valueQuantity": {
+      "value": 20000,
+      "code": "{steps}/{session}",
+      "unit": "steps/session",
+      "system": "http://unitsofmeasure.org"
+   },
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "physical-activity",
+               "display": "Physical Activity",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "55423-8",
+            "display": "Number of steps in unspecified time Pedometer",
+            "system": "http://loinc.org"
+         },
+         {
+            "code": "step-count-maximum",
+            "display": "Step Count Maximum",
+            "system": "http://hl7.org/fhir/omh_fhir_observation_codes"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+Test Schema = valid_systolic_blood_pressure
+Observation.category =  vital-signs
+Observation.code = 8480-6 (Systolic blood pressure)
+*********************this OMH datapoint file**************
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "systolic_blood_pressure",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+   "value": 110,
+   "unit": "mmHg"
+}
+}
+******maps to this FHIR Observation**********
+{
+   "issued": "2015-09-10T12:43:39.138-06:00",
+   "resourceType": "Observation",
+   "category": [
+      {
+         "coding": [
+            {
+               "code": "vital-signs",
+               "display": "Vital Signs",
+               "system": "http://hl7.org/fhir/observation-category"
+            }
+         ]
+      }
+   ],
+   "code": {
+      "coding": [
+         {
+            "code": "8480-6",
+            "display": "Systolic blood pressure",
+            "system": "http://loinc.org"
+         }
+      ]
+   },
+   "device": {
+      "display": "Jawbone UP API",
+      "extension": [
+         {
+            "valueCode": "sensed",
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+         }
+      ]
+   },
+   "identifier": [
+      {
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
+         "system": "https://omh.org/shimmer/ids"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
+   },
+   "status": "unknown",
+   "subject": {
+      "identifier": {
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
+         "system": "https://omh.org/shimmer/patient_ids"
+      }
+   }
+}
+end
+[Finished in 0.87s]
