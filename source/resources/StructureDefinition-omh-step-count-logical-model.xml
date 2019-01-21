@@ -7,7 +7,7 @@
   <status value="draft"/>
   <date value="2018-04-11T00:00:00-07:00"/>
   <publisher value="Health eData Inc"/>
-  <description value="Open mHeallth Step Count Schema represents represents number of steps.  See  [Open mHealth Schemas](http://www.openmhealth.org/documentation/#/schema-docs/schema-library).   The LOINC code refers to Number of steps in unspecified time Pedometer, &quot;url&quot;: &quot;http://purl.bioontology.org/ontology/LNC/55423-8&quot;"/>
+  <description value="Open mHeallth Step Count Schema represents number of steps.  See  [Open mHealth Schemas](http://www.openmhealth.org/documentation/#/schema-docs/schema-library).   The LOINC code refers to Number of steps in unspecified time Pedometer, &quot;url&quot;: &quot;http://purl.bioontology.org/ontology/LNC/55423-8&quot;"/>
 
   <fhirVersion value="3.0.1"/>
   <mapping>
