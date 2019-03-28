@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
 import sys, os, json
-import fhir_templates as f
-import omh_fhir_concept_mapping_table as maps
+import fhir_templates as f  # fhir json string templates
+import omh_fhir_concept_mapping_table as maps  
 import test_omh_fhir_mapping as unit_tests
 from partial_formatter import PartialFormatter
 from pdb import set_trace as bp

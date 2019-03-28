@@ -4653,7 +4653,7 @@ Observation.code = 8480-6 (Systolic blood pressure)
       "coding": [
          {
             "code": "8480-6",
-            "display": "Systolic blood",
+            "display": "Systolic blood pressure",
             "system": "http://loinc.org"
          }
       ]

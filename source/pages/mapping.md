@@ -65,7 +65,7 @@ The OMH schema can be transformed into FHIR data models - more specifically "Log
 
 ### Quick Start Mapping Guide 
 
-  Formal FHIR Logical Models are included in this guide for mapping the models directly using a formal mapping syntax. However, the tables and templates below are provided to for quicks mappings an OMH schema instance to a FHIR *quantitative* Observation resource instance.  These can be used to perform simple string substitution and simple concept mappings methods to generate FHIR Observations.
+  Formal FHIR Logical Models are included in this guide for mapping the models directly using a formal mapping syntax. However, the tables and templates below are provided to for quicks mappings an OMH schema instance to a FHIR *quantitative* Observation resource instance.  These can be used to perform simple string substitution and simple concept mappings methods to generate FHIR Observations.  An [example python application] using these tables and string templates is available
 
 
 #### OMH Header Element to FHIR Element Mapping Table
