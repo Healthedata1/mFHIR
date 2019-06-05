@@ -5,10 +5,10 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
    <meta charset="UTF-8"/>
-  <title>Open mHealth to FHIR</title>
+  <title></title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Open mHealth to FHIR Implemenation Guide" />
+<meta name="description" content=" Implemenation Guide" />
 <meta name="author" content="Open mHealth"/>
   <link href="fhir.css" rel="stylesheet"/>
 
@@ -74,7 +74,9 @@ can only resize using html  or css ;-(
 
 
       <div id="project-status" class="project-status"> <!-- ig title text -->
-        <b>Open mHealth to FHIR Implementation Guide</b>
+        
+        <b> Implementation Guide</b>
+        
         
         CI Build
         
@@ -126,41 +128,6 @@ can only resize using html  or css ;-(
 </ul>
 
 
-             <!--        <ul class="nav navbar-nav">
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="guidance.html">General Guidance</a>
-          </li>
-          <li>
-            <a href="profiles.html">Profiles and Logical Models</a>
-          </li>
-          <li>
-            <a href="structuremaps.html">Mappings</a>
-          </li>
-          <li>
-            <a href="extensions.html">Extensions</a>
-          </li>
-          <li>
-            <a href="terminology.html">Terminology</a>
-          </li>
-          <li>
-            <a href="searchparams.html">Search Parameters</a>
-          </li>
-          <li>
-            <a href="capstatements.html">Capability Statements</a>
-          </li>
-          <li>
-            <a href="security.html">Security</a>
-          </li>
-          <li>
-            <a href="examples.html">Examples</a>
-          </li>
-          <li>
-            <a href="downloads.html">Downloads</a>
-          </li>
-        </ul> -->
       </div>
       <!-- /.nav-collapse -->
     </div>
@@ -191,18 +158,23 @@ can only resize using html  or css ;-(
 
 <nav class="breadcrumb">
   
-    <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a> <li><a href='index.html'><b>Home</b></a></li><li><a href='profiles.html'><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Omh Calories Burned</b></li>
+     <li><a href='index.html'><b>Home</b></a></li><li><a href='profiles.html'><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Omh Calories Burned</b></li>
 </nav>
 
 
 <!-- ============Publish box=============== -->
 
-<!--status-bar-->
-<p id="publish-box">
-This is the 
+
+<!--ReleaseHeader--><p id="publish-box">ImplementationGuide[http://www.fhir.org/guides/mfhir/ImplementationGuide/openmhealth.mfhir-0.0.0] - Local Development build (v0.0.0). See the <a href="http://www.fhir.org/guides/mfhir/history.html">Directory of published versions</a></p></p><!--EndReleaseHeader-->
+<!-- 
+This is the {% if {{site.build}} == "ci" %}
     Continuous Integration Build
-    of the Open mHealth to FHIR Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="history.html">Directory of published versions</a>
-</p>
+   {% else %}
+    (release {{site.data.fhir.ig.version}})
+  {% endif %}
+  {% if {{site.build}} == "ballot" %} {{site.ballot}} Ballot {% endif %}
+  of the {{site.data.fhir.igName}} Implementation Guide,  based on <a href="{{ site.data.fhir.path }}index.html">FHIR Version {{ site.data.fhir.version }}</a>.  See the <a href="{{ site.historypath }}">Directory of published versions.</a>
+ -->
 
 
 
@@ -211,7 +183,7 @@ This is the
 
 
   <style type="text/css">
-  h2,h3,h4,h5,h6{--pagenumber: "3.3"}
+  h2,h3,h4,h5,h6{--pagenumber: "3.39"}
   </style>
 
 
@@ -224,39 +196,29 @@ This is the
 
 	<li class="active"><a href="#">Narrative Content</a></li>
 
-<!--
-{ % if StructureDefinition == "StructureDefinition"  % }
-	{ % if content == "definitions"  % }
-		<li class="active"><a href="#">Detailed Descriptions</a></li>
-	{ % else % }
-		<li><a href="StructureDefinition-omh-calories-burned-definitions.html">Detailed Descriptions</a></li>
-	{ % endif % }
-	{ % if content == "mappings" % }
-		<li class="active"><a href="#">Mappings</a></li>
-	{ % else % }
-		<li><a href="StructureDefinition-omh-calories-burned-mappings.html">Mappings</a></li>
-	{ % endif % }
-{ % endif % }
--->
 
-<li><a href="StructureDefinition-omh-calories-burned.xml.html">XML</a></li>
+
+	
+
+	
+
+	
+
+
+
+
 
 
 	<li><a href="StructureDefinition-omh-calories-burned.json.html">JSON</a></li>
 
-<!--
-{ % if content == "turtle" % }
-	<li class="active"><a href="#">Turtle</a></li>
-{ % else % }
-	<li><a href="StructureDefinition-omh-calories-burned.ttl.html">Turtle</a></li>
-{ % endif % }
--->
+
+
+
 </ul>
 
 
 
   <!-- ============CONTENT CONTENT=============== -->
-
 
 
 <!-- ============CONTENT CONTENT=============== -->
@@ -335,18 +297,17 @@ Formats: <a href="StructureDefinition-omh-calories-burned.html">Narrative</a>, <
 </p>
 
 <p>
-The official URL for this profile is: <code>http://www.fhir.org/guides/mfhir/StructureDefinition/omh-calories-burned</code>
+The official URL for this profile is:
+<code>http://www.fhir.org/guides/mfhir/StructureDefinition/omh-calories-burned</code><button id="copy-button" class="btn-default btn-sm" data-clipboard-text="http://www.fhir.org/guides/mfhir/StructureDefinition/omh-calories-burned">Copy</button>
 </p>
 
 <p>
-Published on Mon Apr 30 16:03:10 PDT 2018 as a draft by Open mHealth.
+Published on Mon Apr 30 16:03:10 PDT 2018 as draft by the Open mHealth.
 </p>
 
 <p><strong>
 This profile builds on <a href= "http://hl7.org/fhir/STU3/datatypes.html#Element">Element</a>
 </strong></p>
-
-
 
 <!--
 {% include StructureDefinition-omh-calories-burned-header.xhtml %}
@@ -366,7 +327,8 @@ This profile builds on <a href= "http://hl7.org/fhir/STU3/datatypes.html#Element
   <div id="all-tbl-summ">
     <div id="all-tbl-summ-inner">
      <a name="summary"> </a>
-<a name="summary"> </a>
+   
+     <a name="summary"> </a>
 <p><b>
 Summary
 </b></p>
@@ -378,6 +340,7 @@ Summary
 </ul>
 
 
+   
 <!--
 {% include omh-calories-burned-summary.md id="omh-calories-burned" %}
 -->
@@ -404,25 +367,10 @@ Summary
 
 <!-- =======XML and JSON ======== -->
 
-    <!--
-        <div id="all-xml">
-         <p><b>XML Template</b></p>
-         <div id="all-xml-inner">
-      {% include StructureDefinition-omh-calories-burned-pseudo-xml.xhtml %}
-         </div>
-        </div>
-    -->
 
-        <!--
-    <div id="all-json">
-     <p><b>JSON Template</b></p>
-     <div id="all-json-inner">
-        <pre class="spec">
-         {% include StructureDefinition-omh-calories-burned-pseudo-json.xhtml %}
-        </pre>
-    </div>
-  </div>
-    -->
+    
+
+    
 
 
  </div>
@@ -482,7 +430,7 @@ Summary
 
 
 
-  <script src="assets/js/jquery.js"> </script>
+  <script src="assets/js/jquery.min.js"> </script>
 <script src="assets/js/jquery-ui.min.js"> </script>
 <script>
 try {
@@ -492,7 +440,9 @@ catch(exception){
 }
 
 if (!currentTabIndex)
+  
   currentTabIndex = '1';
+  
 
 $( '#tabs' ).tabs({
          active: currentTabIndex,
@@ -531,11 +481,12 @@ $( '#tabs' ).tabs({
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      Open mHealth to FHIR Version: 0.0.0 &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Tue, Nov 27, 2018 12:54-0800.
-      | <a style="color: #81BEF7" href="history.html">History</a>
-      | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
-        <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
-        </span>
+     <a href="http://www.openmhealth.org/">Open mHealth </a> openmhealth.mfhir#0.0.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR 3.0.1</a> created <span href="#" data-toggle="tooltip" data-placement="top" title="Thu, Jun 6, 2019 17:39-0700">2019-06-06</span>. <br/>
+      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a>
+      | <a style="color: #81BEF7" href="qa.html">QA Report</a>
+      | <a style="color: #81BEF7" href="#">Version History</a>
+      | <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+      | <a style="color: #81BEF7" href="https://github.com/Healthedata1/IG-Template2/issues" target="_blank">Propose a change</a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->
@@ -553,7 +504,7 @@ $( '#tabs' ).tabs({
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./assets/js/jquery.min.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
 <script src="./assets/js/bootstrap.min.js"> </script>
 <script src="./assets/js/respond.min.js"> </script>
 <script src="./assets/js/anchor.min.js"> </script>
@@ -565,14 +516,57 @@ $( '#tabs' ).tabs({
 
 
 
+<script src="assets/js/clipboard.min.js"> </script>
+
+<script>
+  // Tooltip
+
+  $('#copy-button').tooltip({
+    trigger: 'click',
+    placement: 'bottom'
+  });
+
+  function setTooltip(message) {
+    $('#copy-button').tooltip('hide')
+      .attr('data-original-title', message)
+      .tooltip('show');
+  }
+
+  function hideTooltip() {
+    setTimeout(function() {
+      $('#copy-button').tooltip('hide');
+    }, 1000);
+  }
+
+  // Clipboard
+
+  var clipboard = new ClipboardJS('#copy-button');
+
+  clipboard.on('success', function(e) {
+    setTooltip('Copied!');
+    hideTooltip();
+  });
+
+  clipboard.on('error', function(e) {
+    setTooltip('Failed!');
+    hideTooltip();
+  });
+
+</script>
+
+
 
 <!-- Analytics Below
 ================================================== -->
 
-<!-- add anchors before the closing body tag. -->
-<script> anchors.add()</script>
+<!-- add anchors before the closing body tag -->
+<script>
+anchors.add()
 
-
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
 
 </body>
 </html>

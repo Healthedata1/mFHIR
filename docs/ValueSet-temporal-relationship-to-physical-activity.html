@@ -5,10 +5,10 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
    <meta charset="UTF-8"/>
-  <title>Open mHealth to FHIR</title>
+  <title></title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Open mHealth to FHIR Implemenation Guide" />
+<meta name="description" content=" Implemenation Guide" />
 <meta name="author" content="Open mHealth"/>
   <link href="fhir.css" rel="stylesheet"/>
 
@@ -74,7 +74,9 @@ can only resize using html  or css ;-(
 
 
       <div id="project-status" class="project-status"> <!-- ig title text -->
-        <b>Open mHealth to FHIR Implementation Guide</b>
+        
+        <b> Implementation Guide</b>
+        
         
         CI Build
         
@@ -126,41 +128,6 @@ can only resize using html  or css ;-(
 </ul>
 
 
-             <!--        <ul class="nav navbar-nav">
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="guidance.html">General Guidance</a>
-          </li>
-          <li>
-            <a href="profiles.html">Profiles and Logical Models</a>
-          </li>
-          <li>
-            <a href="structuremaps.html">Mappings</a>
-          </li>
-          <li>
-            <a href="extensions.html">Extensions</a>
-          </li>
-          <li>
-            <a href="terminology.html">Terminology</a>
-          </li>
-          <li>
-            <a href="searchparams.html">Search Parameters</a>
-          </li>
-          <li>
-            <a href="capstatements.html">Capability Statements</a>
-          </li>
-          <li>
-            <a href="security.html">Security</a>
-          </li>
-          <li>
-            <a href="examples.html">Examples</a>
-          </li>
-          <li>
-            <a href="downloads.html">Downloads</a>
-          </li>
-        </ul> -->
       </div>
       <!-- /.nav-collapse -->
     </div>
@@ -191,18 +158,23 @@ can only resize using html  or css ;-(
 
 <nav class="breadcrumb">
   
-    <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a> <li><a href='index.html'><b>Home</b></a></li><li><a href='terminology.html'><b>Terminology</b></a></li><li><b>ValueSet Temporal Relationship To Physical Activity</b></li>
+     <li><a href='index.html'><b>Home</b></a></li><li><a href='terminology.html'><b>Terminology</b></a></li><li><b>ValueSet Temporal Relationship To Physical Activity</b></li>
 </nav>
 
 
 <!-- ============Publish box=============== -->
 
-<!--status-bar-->
-<p id="publish-box">
-This is the 
+
+<!--ReleaseHeader--><p id="publish-box">ImplementationGuide[http://www.fhir.org/guides/mfhir/ImplementationGuide/openmhealth.mfhir-0.0.0] - Local Development build (v0.0.0). See the <a href="http://www.fhir.org/guides/mfhir/history.html">Directory of published versions</a></p></p><!--EndReleaseHeader-->
+<!-- 
+This is the {% if {{site.build}} == "ci" %}
     Continuous Integration Build
-    of the Open mHealth to FHIR Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="history.html">Directory of published versions</a>
-</p>
+   {% else %}
+    (release {{site.data.fhir.ig.version}})
+  {% endif %}
+  {% if {{site.build}} == "ballot" %} {{site.ballot}} Ballot {% endif %}
+  of the {{site.data.fhir.igName}} Implementation Guide,  based on <a href="{{ site.data.fhir.path }}index.html">FHIR Version {{ site.data.fhir.version }}</a>.  See the <a href="{{ site.historypath }}">Directory of published versions.</a>
+ -->
 
 
 
@@ -211,7 +183,7 @@ This is the
 
 
   <style type="text/css">
-  h2,h3,h4,h5,h6{--pagenumber: "5.5"}
+  h2,h3,h4,h5,h6{--pagenumber: "5.24"}
   </style>
 
 
@@ -224,39 +196,22 @@ This is the
 
 	<li class="active"><a href="#">Narrative Content</a></li>
 
-<!--
-{ % if ValueSet == "StructureDefinition"  % }
-	{ % if content == "definitions"  % }
-		<li class="active"><a href="#">Detailed Descriptions</a></li>
-	{ % else % }
-		<li><a href="ValueSet-temporal-relationship-to-physical-activity-definitions.html">Detailed Descriptions</a></li>
-	{ % endif % }
-	{ % if content == "mappings" % }
-		<li class="active"><a href="#">Mappings</a></li>
-	{ % else % }
-		<li><a href="ValueSet-temporal-relationship-to-physical-activity-mappings.html">Mappings</a></li>
-	{ % endif % }
-{ % endif % }
--->
 
-<li><a href="ValueSet-temporal-relationship-to-physical-activity.xml.html">XML</a></li>
+
+
+
 
 
 	<li><a href="ValueSet-temporal-relationship-to-physical-activity.json.html">JSON</a></li>
 
-<!--
-{ % if content == "turtle" % }
-	<li class="active"><a href="#">Turtle</a></li>
-{ % else % }
-	<li><a href="ValueSet-temporal-relationship-to-physical-activity.ttl.html">Turtle</a></li>
-{ % endif % }
--->
+
+
+
 </ul>
 
 
 
   <!-- ============CONTENT CONTENT=============== -->
-
 
 
 <!-- ig template for many conformance resource html pages  ('base' in definitions file)  can not be used for conformance resources that have more that a single base template. e.g.,  sd since there are mapping and definitions templates for it as well  they need to be split out into 3 separate templates -->
@@ -274,7 +229,7 @@ This is the
 </td></tr>
  <tr><td>Publisher:</td><td>Open mHealth</td></tr>
  <tr><td>Copyright:</td><td>Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved. This value set includes content from SNOMED CT, which is copyright 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.</td></tr>
- <tr><td>Source Resource:</td><td><a href="ValueSet-temporal-relationship-to-physical-activity.xml.html">XML</a> / <a href="ValueSet-temporal-relationship-to-physical-activity.json.html">JSON</a> / <a href="ValueSet-temporal-relationship-to-physical-activity.ttl.html">Turtle</a></td></tr>
+ <tr><td>Source Resource:</td><td><a href="ValueSet-temporal-relationship-to-physical-activity.json.html">JSON</a></td></tr>
 </tbody></table>
 
   
@@ -293,33 +248,8 @@ This is the
 
   <h3>Expansion</h3>
 
-  <p><span style="color: maroon; font-weight: bold" title="Publication Tooling Error: org.hl7.fhir.dstu3.model.ExpansionProfile cannot be cast to org.hl7.fhir.dstu3.model.Parameters">No Expansion for this valueset (not supported by Publication Tooling)</span></p>
-
+  <div xmlns="http://www.w3.org/1999/xhtml"><p>This value set contains 5 concepts</p><p>All codes from system <a href="http://hl7.org/fhir/STU3/codesystem-snomedct.html"><code>http://snomed.info/sct</code></a></p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-263678003"> </a><a href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=263678003">263678003</a></td><td>at rest</td><td/></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-55561003"> </a><a href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=55561003">55561003</a></td><td>active</td><td/></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-307166007"> </a><a href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=307166007">307166007</a></td><td>before exercise</td><td/></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-255214003"> </a><a href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=255214003">255214003</a></td><td>after exercise</td><td/></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-309604004"> </a><a href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=309604004">309604004</a></td><td>during exercise</td><td/></tr></table></div>
 <!-- ============VAlUESET CONTENT CONTENT=============== -->
-
-<!-- ( % when 'StructureMap' % }
-============StructureMap CONTENT CONTENT===============
-  ( % include nav-tabs.html type="ValueSet" id="temporal-relationship-to-physical-activity" active="content" % }
-
-  <p>
-  Thise is the mapping between FHIR resources and the Logical Model:
-  </p>
-
-  <a name="summary"> </a>
-  <h2>Summary</h2>
-  ( % include ValueSet-temporal-relationship-to-physical-activity-summary.xhtml % }
-  <br/>
-
-  <h2>Content</h2>
-  ( %  include ValueSet-temporal-relationship-to-physical-activity-content.xhtml % }
-  <br/>
-
-  <a name="script"> </a>
-  <h2>Script</h2>
-  <pre>
-  ( % include ValueSet-temporal-relationship-to-physical-activity-script.xhtml % }
-  </pre>
-============StructureMap CONTENT CONTENT=============== -->
 
 
 
@@ -368,11 +298,12 @@ Formats: <a href="ValueSet-temporal-relationship-to-physical-activity.html">Narr
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      Open mHealth to FHIR Version: 0.0.0 &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Tue, Nov 27, 2018 12:54-0800.
-      | <a style="color: #81BEF7" href="history.html">History</a>
-      | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
-        <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
-        </span>
+     <a href="http://www.openmhealth.org/">Open mHealth </a> openmhealth.mfhir#0.0.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR 3.0.1</a> created <span href="#" data-toggle="tooltip" data-placement="top" title="Thu, Jun 6, 2019 17:39-0700">2019-06-06</span>. <br/>
+      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a>
+      | <a style="color: #81BEF7" href="qa.html">QA Report</a>
+      | <a style="color: #81BEF7" href="#">Version History</a>
+      | <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+      | <a style="color: #81BEF7" href="https://github.com/Healthedata1/IG-Template2/issues" target="_blank">Propose a change</a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->
@@ -390,7 +321,7 @@ Formats: <a href="ValueSet-temporal-relationship-to-physical-activity.html">Narr
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./assets/js/jquery.min.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
 <script src="./assets/js/bootstrap.min.js"> </script>
 <script src="./assets/js/respond.min.js"> </script>
 <script src="./assets/js/anchor.min.js"> </script>
@@ -402,14 +333,57 @@ Formats: <a href="ValueSet-temporal-relationship-to-physical-activity.html">Narr
 
 
 
+<script src="assets/js/clipboard.min.js"> </script>
+
+<script>
+  // Tooltip
+
+  $('#copy-button').tooltip({
+    trigger: 'click',
+    placement: 'bottom'
+  });
+
+  function setTooltip(message) {
+    $('#copy-button').tooltip('hide')
+      .attr('data-original-title', message)
+      .tooltip('show');
+  }
+
+  function hideTooltip() {
+    setTimeout(function() {
+      $('#copy-button').tooltip('hide');
+    }, 1000);
+  }
+
+  // Clipboard
+
+  var clipboard = new ClipboardJS('#copy-button');
+
+  clipboard.on('success', function(e) {
+    setTooltip('Copied!');
+    hideTooltip();
+  });
+
+  clipboard.on('error', function(e) {
+    setTooltip('Failed!');
+    hideTooltip();
+  });
+
+</script>
+
+
 
 <!-- Analytics Below
 ================================================== -->
 
-<!-- add anchors before the closing body tag. -->
-<script> anchors.add()</script>
+<!-- add anchors before the closing body tag -->
+<script>
+anchors.add()
 
-
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
 
 </body>
 </html>

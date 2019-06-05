@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="omh-device-modality"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Open mHealth to FHIR Device Modality ValueSet</h2><div><p>The modality whereby the measure is obtained.  Choice of sensed|self-reported .</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-omh-device-modality.html"><code>http://www.fhir.org/guides/mfhir/CodeSystem/omh-device-modality</code></a></li></ul></div>
+  </text>
+  <url value="http://www.fhir.org/guides/mfhir/ValueSet/omh-device-modality"/>
+  <version value="0.0.0"/>
+  <name value="OmhDeviceModalityValueSet"/>
+  <title value="Open mHealth to FHIR Device Modality ValueSet"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2019-06-06T10:50:59-07:00"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.openmhealth.org/"/>
+    </telecom>
+  </contact>
+  <description value="The modality whereby the measure is obtained.  Choice of sensed|self-reported ."/>
+  <immutable value="true"/>
+  <compose>
+    <include>
+      <system value="http://www.fhir.org/guides/mfhir/CodeSystem/omh-device-modality"/>
+    </include>
+  </compose>
+</ValueSet>

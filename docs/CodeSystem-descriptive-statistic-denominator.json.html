@@ -5,10 +5,10 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
    <meta charset="UTF-8"/>
-  <title>Open mHealth to FHIR</title>
+  <title></title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Open mHealth to FHIR Implemenation Guide" />
+<meta name="description" content=" Implemenation Guide" />
 <meta name="author" content="Open mHealth"/>
   <link href="fhir.css" rel="stylesheet"/>
 
@@ -74,7 +74,9 @@ can only resize using html  or css ;-(
 
 
       <div id="project-status" class="project-status"> <!-- ig title text -->
-        <b>Open mHealth to FHIR Implementation Guide</b>
+        
+        <b> Implementation Guide</b>
+        
         
         CI Build
         
@@ -126,41 +128,6 @@ can only resize using html  or css ;-(
 </ul>
 
 
-             <!--        <ul class="nav navbar-nav">
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="guidance.html">General Guidance</a>
-          </li>
-          <li>
-            <a href="profiles.html">Profiles and Logical Models</a>
-          </li>
-          <li>
-            <a href="structuremaps.html">Mappings</a>
-          </li>
-          <li>
-            <a href="extensions.html">Extensions</a>
-          </li>
-          <li>
-            <a href="terminology.html">Terminology</a>
-          </li>
-          <li>
-            <a href="searchparams.html">Search Parameters</a>
-          </li>
-          <li>
-            <a href="capstatements.html">Capability Statements</a>
-          </li>
-          <li>
-            <a href="security.html">Security</a>
-          </li>
-          <li>
-            <a href="examples.html">Examples</a>
-          </li>
-          <li>
-            <a href="downloads.html">Downloads</a>
-          </li>
-        </ul> -->
       </div>
       <!-- /.nav-collapse -->
     </div>
@@ -191,18 +158,23 @@ can only resize using html  or css ;-(
 
 <nav class="breadcrumb">
   
-    <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a> <li><a href='index.html'><b>Home</b></a></li><li><a href='terminology.html'><b>Terminology</b></a></li><li><b>CodeSystem Descriptive Statistic Denominator</b></li>
+     <li><a href='index.html'><b>Home</b></a></li><li><a href='terminology.html'><b>Terminology</b></a></li><li><b>CodeSystem Descriptive Statistic Denominator</b></li>
 </nav>
 
 
 <!-- ============Publish box=============== -->
 
-<!--status-bar-->
-<p id="publish-box">
-This is the 
+
+<!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+<!-- 
+This is the {% if {{site.build}} == "ci" %}
     Continuous Integration Build
-    of the Open mHealth to FHIR Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="history.html">Directory of published versions</a>
-</p>
+   {% else %}
+    (release {{site.data.fhir.ig.version}})
+  {% endif %}
+  {% if {{site.build}} == "ballot" %} {{site.ballot}} Ballot {% endif %}
+  of the {{site.data.fhir.igName}} Implementation Guide,  based on <a href="{{ site.data.fhir.path }}index.html">FHIR Version {{ site.data.fhir.version }}</a>.  See the <a href="{{ site.historypath }}">Directory of published versions.</a>
+ -->
 
 
 
@@ -211,12 +183,13 @@ This is the
 
 
   <style type="text/css">
-  h2,h3,h4,h5,h6{--pagenumber: "5.26"}
+  h2,h3,h4,h5,h6{--pagenumber: "5.31"}
   </style>
 
 
 
 <!-- ============nav-tabs=============== -->
+
 
 
   
@@ -225,47 +198,25 @@ This is the
 
 	<li><a href="CodeSystem-descriptive-statistic-denominator.html">Narrative Content</a></li>
 
-<!--
-{ % if CodeSystem == "StructureDefinition"  % }
-	{ % if json == "definitions"  % }
-		<li class="active"><a href="#">Detailed Descriptions</a></li>
-	{ % else % }
-		<li><a href="CodeSystem-descriptive-statistic-denominator-definitions.html">Detailed Descriptions</a></li>
-	{ % endif % }
-	{ % if json == "mappings" % }
-		<li class="active"><a href="#">Mappings</a></li>
-	{ % else % }
-		<li><a href="CodeSystem-descriptive-statistic-denominator-mappings.html">Mappings</a></li>
-	{ % endif % }
-{ % endif % }
--->
 
-<li><a href="CodeSystem-descriptive-statistic-denominator.xml.html">XML</a></li>
+
+
+
 
 
 	<li class="active"><a href="#">JSON</a></li>
 
-<!--
-{ % if json == "turtle" % }
-	<li class="active"><a href="#">Turtle</a></li>
-{ % else % }
-	<li><a href="CodeSystem-descriptive-statistic-denominator.ttl.html">Turtle</a></li>
-{ % endif % }
--->
+
+
+
 </ul>
 
     <h2> JSON Format: CodeSystem-descriptive-statistic-denominator</h2>
   
-<!--
-   { % elsif page.template == 'definitions'% }
-    { % include nav-tabs.html type=page.type id=page.id active="definitions" % }
-  { % elsif page.template == 'mappings' %}
-    { % include nav-tabs.html type=page.type id=page.id active="mappings" % }
- -->
-  
+
+
 
   <!-- ============CONTENT CONTENT=============== -->
-
 
 
 <!-- ============ CONTENT CONTENT=============== -->
@@ -281,8 +232,7 @@ This is the
   "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.id">id</a>" : "descriptive-statistic-denominator",
   "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.text">text</a>" : {
     "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;descriptive-statistic-denominator&lt;/h2&gt;&lt;div&gt;&lt;p&gt;The denominator of the descriptive statistic when the measures has an implicit duration. For example in the context of step count, if the descriptive statistic is 'average' and the statistic denominator is 'd' the value describes average daily step count during the period delimited by the effective time frame; in the context of step count, if the descriptive statistic is 'maximum' and the statistic denominator is 'session' the value describes maximum step count per session during the period delimited by the effective time frame.&lt;/p&gt;
-&lt;/div&gt;&lt;p&gt;This code system http://www.fhir.org/guides/mfhir/CodeSystem/descriptive-statistic-denominator defines the following codes:&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;d&lt;a name=&quot;descriptive-statistic-denominator-d&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;d&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;episode&lt;a name=&quot;descriptive-statistic-denominator-episode&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;episode&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;meal&lt;a name=&quot;descriptive-statistic-denominator-meal&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;meal&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;session&lt;a name=&quot;descriptive-statistic-denominator-session&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;session&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;descriptive-statistic-denominator&lt;/h2&gt;&lt;div&gt;&lt;p&gt;The denominator of the descriptive statistic when the measures has an implicit duration. For example in the context of step count, if the descriptive statistic is 'average' and the statistic denominator is 'd' the value describes average daily step count during the period delimited by the effective time frame; in the context of step count, if the descriptive statistic is 'maximum' and the statistic denominator is 'session' the value describes maximum step count per session during the period delimited by the effective time frame.&lt;/p&gt;\n&lt;/div&gt;&lt;p&gt;This code system http://www.fhir.org/guides/mfhir/CodeSystem/descriptive-statistic-denominator defines the following codes:&lt;/p&gt;&lt;table class=\&quot;codes\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;d&lt;a name=\&quot;descriptive-statistic-denominator-d\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;d&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;episode&lt;a name=\&quot;descriptive-statistic-denominator-episode\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;episode&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;meal&lt;a name=\&quot;descriptive-statistic-denominator-meal\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;meal&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;session&lt;a name=\&quot;descriptive-statistic-denominator-session\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;session&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
   },
   "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.url">url</a>" : "http://www.fhir.org/guides/mfhir/CodeSystem/descriptive-statistic-denominator",
   "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.version">version</a>" : "0.0.0",
@@ -371,11 +321,12 @@ Formats: <a href="CodeSystem-descriptive-statistic-denominator.html">Narrative</
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      Open mHealth to FHIR Version: 0.0.0 &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Tue, Nov 27, 2018 12:54-0800.
-      | <a style="color: #81BEF7" href="history.html">History</a>
-      | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
-        <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
-        </span>
+     <a href="http://www.openmhealth.org/">Open mHealth </a> openmhealth.mfhir#0.0.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR 3.0.1</a> created <span href="#" data-toggle="tooltip" data-placement="top" title="Thu, Jun 6, 2019 17:39-0700">2019-06-06</span>. <br/>
+      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a>
+      | <a style="color: #81BEF7" href="qa.html">QA Report</a>
+      | <a style="color: #81BEF7" href="#">Version History</a>
+      | <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+      | <a style="color: #81BEF7" href="https://github.com/Healthedata1/IG-Template2/issues" target="_blank">Propose a change</a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->
@@ -393,7 +344,7 @@ Formats: <a href="CodeSystem-descriptive-statistic-denominator.html">Narrative</
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./assets/js/jquery.min.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
 <script src="./assets/js/bootstrap.min.js"> </script>
 <script src="./assets/js/respond.min.js"> </script>
 <script src="./assets/js/anchor.min.js"> </script>
@@ -405,14 +356,57 @@ Formats: <a href="CodeSystem-descriptive-statistic-denominator.html">Narrative</
 
 
 
+<script src="assets/js/clipboard.min.js"> </script>
+
+<script>
+  // Tooltip
+
+  $('#copy-button').tooltip({
+    trigger: 'click',
+    placement: 'bottom'
+  });
+
+  function setTooltip(message) {
+    $('#copy-button').tooltip('hide')
+      .attr('data-original-title', message)
+      .tooltip('show');
+  }
+
+  function hideTooltip() {
+    setTimeout(function() {
+      $('#copy-button').tooltip('hide');
+    }, 1000);
+  }
+
+  // Clipboard
+
+  var clipboard = new ClipboardJS('#copy-button');
+
+  clipboard.on('success', function(e) {
+    setTooltip('Copied!');
+    hideTooltip();
+  });
+
+  clipboard.on('error', function(e) {
+    setTooltip('Failed!');
+    hideTooltip();
+  });
+
+</script>
+
+
 
 <!-- Analytics Below
 ================================================== -->
 
-<!-- add anchors before the closing body tag. -->
-<script> anchors.add()</script>
+<!-- add anchors before the closing body tag -->
+<script>
+anchors.add()
 
-
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
 
 </body>
 </html>

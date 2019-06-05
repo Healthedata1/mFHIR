@@ -5,10 +5,10 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
    <meta charset="UTF-8"/>
-  <title>Open mHealth to FHIR</title>
+  <title></title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Open mHealth to FHIR Implemenation Guide" />
+<meta name="description" content=" Implemenation Guide" />
 <meta name="author" content="Open mHealth"/>
   <link href="fhir.css" rel="stylesheet"/>
 
@@ -74,7 +74,9 @@ can only resize using html  or css ;-(
 
 
       <div id="project-status" class="project-status"> <!-- ig title text -->
-        <b>Open mHealth to FHIR Implementation Guide</b>
+        
+        <b> Implementation Guide</b>
+        
         
         CI Build
         
@@ -126,41 +128,6 @@ can only resize using html  or css ;-(
 </ul>
 
 
-             <!--        <ul class="nav navbar-nav">
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="guidance.html">General Guidance</a>
-          </li>
-          <li>
-            <a href="profiles.html">Profiles and Logical Models</a>
-          </li>
-          <li>
-            <a href="structuremaps.html">Mappings</a>
-          </li>
-          <li>
-            <a href="extensions.html">Extensions</a>
-          </li>
-          <li>
-            <a href="terminology.html">Terminology</a>
-          </li>
-          <li>
-            <a href="searchparams.html">Search Parameters</a>
-          </li>
-          <li>
-            <a href="capstatements.html">Capability Statements</a>
-          </li>
-          <li>
-            <a href="security.html">Security</a>
-          </li>
-          <li>
-            <a href="examples.html">Examples</a>
-          </li>
-          <li>
-            <a href="downloads.html">Downloads</a>
-          </li>
-        </ul> -->
       </div>
       <!-- /.nav-collapse -->
     </div>
@@ -191,18 +158,23 @@ can only resize using html  or css ;-(
 
 <nav class="breadcrumb">
   
-    <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a> <li><a href='index.html'><b>Home</b></a></li><li><a href='terminology.html'><b>Terminology</b></a></li><li><b>CodeSystem Medication Dose Unit</b></li>
+     <li><a href='index.html'><b>Home</b></a></li><li><a href='terminology.html'><b>Terminology</b></a></li><li><b>CodeSystem Medication Dose Unit</b></li>
 </nav>
 
 
 <!-- ============Publish box=============== -->
 
-<!--status-bar-->
-<p id="publish-box">
-This is the 
+
+<!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+<!-- 
+This is the {% if {{site.build}} == "ci" %}
     Continuous Integration Build
-    of the Open mHealth to FHIR Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="history.html">Directory of published versions</a>
-</p>
+   {% else %}
+    (release {{site.data.fhir.ig.version}})
+  {% endif %}
+  {% if {{site.build}} == "ballot" %} {{site.ballot}} Ballot {% endif %}
+  of the {{site.data.fhir.igName}} Implementation Guide,  based on <a href="{{ site.data.fhir.path }}index.html">FHIR Version {{ site.data.fhir.version }}</a>.  See the <a href="{{ site.historypath }}">Directory of published versions.</a>
+ -->
 
 
 
@@ -211,12 +183,13 @@ This is the
 
 
   <style type="text/css">
-  h2,h3,h4,h5,h6{--pagenumber: "5.24"}
+  h2,h3,h4,h5,h6{--pagenumber: "5.25"}
   </style>
 
 
 
 <!-- ============nav-tabs=============== -->
+
 
 
   
@@ -225,47 +198,25 @@ This is the
 
 	<li><a href="CodeSystem-medication-dose-unit.html">Narrative Content</a></li>
 
-<!--
-{ % if CodeSystem == "StructureDefinition"  % }
-	{ % if json == "definitions"  % }
-		<li class="active"><a href="#">Detailed Descriptions</a></li>
-	{ % else % }
-		<li><a href="CodeSystem-medication-dose-unit-definitions.html">Detailed Descriptions</a></li>
-	{ % endif % }
-	{ % if json == "mappings" % }
-		<li class="active"><a href="#">Mappings</a></li>
-	{ % else % }
-		<li><a href="CodeSystem-medication-dose-unit-mappings.html">Mappings</a></li>
-	{ % endif % }
-{ % endif % }
--->
 
-<li><a href="CodeSystem-medication-dose-unit.xml.html">XML</a></li>
+
+
+
 
 
 	<li class="active"><a href="#">JSON</a></li>
 
-<!--
-{ % if json == "turtle" % }
-	<li class="active"><a href="#">Turtle</a></li>
-{ % else % }
-	<li><a href="CodeSystem-medication-dose-unit.ttl.html">Turtle</a></li>
-{ % endif % }
--->
+
+
+
 </ul>
 
     <h2> JSON Format: CodeSystem-medication-dose-unit</h2>
   
-<!--
-   { % elsif page.template == 'definitions'% }
-    { % include nav-tabs.html type=page.type id=page.id active="definitions" % }
-  { % elsif page.template == 'mappings' %}
-    { % include nav-tabs.html type=page.type id=page.id active="mappings" % }
- -->
-  
+
+
 
   <!-- ============CONTENT CONTENT=============== -->
-
 
 
 <!-- ============ CONTENT CONTENT=============== -->
@@ -281,8 +232,7 @@ This is the
   "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.id">id</a>" : "medication-dose-unit",
   "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.text">text</a>" : {
     "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;medication-dose-unit&lt;/h2&gt;&lt;div&gt;&lt;p&gt;The list of most commonly used units of measure for a medication dose. Suggestions for additions are accepted.&lt;/p&gt;
-&lt;/div&gt;&lt;p&gt;This code system http://www.fhir.org/guides/mfhir/CodeSystem/medication-dose-unit defines the following codes:&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;%&lt;a name=&quot;medication-dose-unit-.37&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;AU&lt;a name=&quot;medication-dose-unit-AU&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;AU&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;AU/mL&lt;a name=&quot;medication-dose-unit-AU.47mL&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;AU/mL&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;bar&lt;a name=&quot;medication-dose-unit-bar&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;bar&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;BAU&lt;a name=&quot;medication-dose-unit-BAU&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;BAU&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;BAU/mL&lt;a name=&quot;medication-dose-unit-BAU.47mL&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;BAU/mL&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;bead&lt;a name=&quot;medication-dose-unit-bead&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;bead&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;BU&lt;a name=&quot;medication-dose-unit-BU&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;BU&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;capsule&lt;a name=&quot;medication-dose-unit-capsule&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;capsule&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;CCID_50&lt;a name=&quot;medication-dose-unit-CCID_50&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CCID_50&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;cellular sheet&lt;a name=&quot;medication-dose-unit-cellularsheet&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;cellular sheet&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Ci&lt;a name=&quot;medication-dose-unit-Ci&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ci&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;cloth&lt;a name=&quot;medication-dose-unit-cloth&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;cloth&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;cm^2&lt;a name=&quot;medication-dose-unit-cm.942&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;cm^2&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;D'ag'U&lt;a name=&quot;medication-dose-unit-D.39ag.39U&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;D'ag'U&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;disc&lt;a name=&quot;medication-dose-unit-disc&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;disc&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;dL&lt;a name=&quot;medication-dose-unit-dL&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;dL&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;douche&lt;a name=&quot;medication-dose-unit-douche&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;douche&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;drop&lt;a name=&quot;medication-dose-unit-drop&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;drop&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;FFU&lt;a name=&quot;medication-dose-unit-FFU&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;FFU&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;g&lt;a name=&quot;medication-dose-unit-g&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;g&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;globule&lt;a name=&quot;medication-dose-unit-globule&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;globule&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;granule&lt;a name=&quot;medication-dose-unit-granule&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;granule&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;gum&lt;a name=&quot;medication-dose-unit-gum&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;gum&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;hp_C&lt;a name=&quot;medication-dose-unit-hp_C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;hp_C&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;hp_M&lt;a name=&quot;medication-dose-unit-hp_M&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;hp_M&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;hp_Q&lt;a name=&quot;medication-dose-unit-hp_Q&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;hp_Q&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;hp_X&lt;a name=&quot;medication-dose-unit-hp_X&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;hp_X&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;IU&lt;a name=&quot;medication-dose-unit-IU&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IU&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;IU/L&lt;a name=&quot;medication-dose-unit-IU.47L&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IU/L&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;IU/mL&lt;a name=&quot;medication-dose-unit-IU.47mL&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IU/mL&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;kp_C&lt;a name=&quot;medication-dose-unit-kp_C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;kp_C&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;L&lt;a name=&quot;medication-dose-unit-L&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;L&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Lf&lt;a name=&quot;medication-dose-unit-Lf&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Lf&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;LfU/mL&lt;a name=&quot;medication-dose-unit-LfU.47mL&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LfU/mL&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;lozenge&lt;a name=&quot;medication-dose-unit-lozenge&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;lozenge&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;mCi&lt;a name=&quot;medication-dose-unit-mCi&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;mCi&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;mCi/mL&lt;a name=&quot;medication-dose-unit-mCi.47mL&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;mCi/mL&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;mEq&lt;a name=&quot;medication-dose-unit-mEq&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;mEq&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;mg&lt;a name=&quot;medication-dose-unit-mg&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;mg&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;mg/actuat&lt;a name=&quot;medication-dose-unit-mg.47actuat&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;mg/actuat&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;mg/hr&lt;a name=&quot;medication-dose-unit-mg.47hr&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;mg/hr&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;mg/mg&lt;a name=&quot;medication-dose-unit-mg.47mg&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;mg/mg&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;mg/mL&lt;a name=&quot;medication-dose-unit-mg.47mL&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;mg/mL&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;mL&lt;a name=&quot;medication-dose-unit-mL&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;mL&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;mmol&lt;a name=&quot;medication-dose-unit-mmol&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;mmol&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;mol&lt;a name=&quot;medication-dose-unit-mol&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;mol&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;mU&lt;a name=&quot;medication-dose-unit-mU&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;mU&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ng&lt;a name=&quot;medication-dose-unit-ng&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ng&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;nmol&lt;a name=&quot;medication-dose-unit-nmol&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;nmol&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;organisms&lt;a name=&quot;medication-dose-unit-organisms&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;organisms&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;pastille&lt;a name=&quot;medication-dose-unit-pastille&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;pastille&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;patch&lt;a name=&quot;medication-dose-unit-patch&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;patch&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;pellet&lt;a name=&quot;medication-dose-unit-pellet&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;pellet&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;PFU&lt;a name=&quot;medication-dose-unit-PFU&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;PFU&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;pill&lt;a name=&quot;medication-dose-unit-pill&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;pill&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;PNU&lt;a name=&quot;medication-dose-unit-PNU&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;PNU&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;PNU/mL&lt;a name=&quot;medication-dose-unit-PNU.47mL&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;PNU/mL&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;pouch&lt;a name=&quot;medication-dose-unit-pouch&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;pouch&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;puff&lt;a name=&quot;medication-dose-unit-puff&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;puff&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ring&lt;a name=&quot;medication-dose-unit-ring&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ring&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;salve&lt;a name=&quot;medication-dose-unit-salve&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;salve&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;stick&lt;a name=&quot;medication-dose-unit-stick&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;stick&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;strip&lt;a name=&quot;medication-dose-unit-strip&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;strip&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;suppository&lt;a name=&quot;medication-dose-unit-suppository&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;suppository&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;swab&lt;a name=&quot;medication-dose-unit-swab&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;swab&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;tablet&lt;a name=&quot;medication-dose-unit-tablet&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;tablet&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;tampon&lt;a name=&quot;medication-dose-unit-tampon&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;tampon&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;tape&lt;a name=&quot;medication-dose-unit-tape&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;tape&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;tbsp&lt;a name=&quot;medication-dose-unit-tbsp&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;tbsp&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;TCID_50&lt;a name=&quot;medication-dose-unit-TCID_50&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;TCID_50&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;tsp&lt;a name=&quot;medication-dose-unit-tsp&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;tsp&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;U&lt;a name=&quot;medication-dose-unit-U&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;U&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;uCi&lt;a name=&quot;medication-dose-unit-uCi&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;uCi&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ug&lt;a name=&quot;medication-dose-unit-ug&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ug&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ug/mL&lt;a name=&quot;medication-dose-unit-ug.47mL&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ug/mL&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;uL&lt;a name=&quot;medication-dose-unit-uL&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;uL&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;umol&lt;a name=&quot;medication-dose-unit-umol&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;umol&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;unt&lt;a name=&quot;medication-dose-unit-unt&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;unt&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;unt/mL&lt;a name=&quot;medication-dose-unit-unt.47mL&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;unt/mL&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;USP'U&lt;a name=&quot;medication-dose-unit-USP.39U&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;USP'U&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;vial&lt;a name=&quot;medication-dose-unit-vial&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;vial&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;wafer&lt;a name=&quot;medication-dose-unit-wafer&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;wafer&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;X&lt;a name=&quot;medication-dose-unit-X&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;X&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;medication-dose-unit&lt;/h2&gt;&lt;div&gt;&lt;p&gt;The list of most commonly used units of measure for a medication dose. Suggestions for additions are accepted.&lt;/p&gt;\n&lt;/div&gt;&lt;p&gt;This code system http://www.fhir.org/guides/mfhir/CodeSystem/medication-dose-unit defines the following codes:&lt;/p&gt;&lt;table class=\&quot;codes\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;%&lt;a name=\&quot;medication-dose-unit-.37\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;AU&lt;a name=\&quot;medication-dose-unit-AU\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;AU&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;AU/mL&lt;a name=\&quot;medication-dose-unit-AU.47mL\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;AU/mL&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;bar&lt;a name=\&quot;medication-dose-unit-bar\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;bar&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;BAU&lt;a name=\&quot;medication-dose-unit-BAU\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;BAU&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;BAU/mL&lt;a name=\&quot;medication-dose-unit-BAU.47mL\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;BAU/mL&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;bead&lt;a name=\&quot;medication-dose-unit-bead\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;bead&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;BU&lt;a name=\&quot;medication-dose-unit-BU\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;BU&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;capsule&lt;a name=\&quot;medication-dose-unit-capsule\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;capsule&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;CCID_50&lt;a name=\&quot;medication-dose-unit-CCID_50\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CCID_50&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;cellular sheet&lt;a name=\&quot;medication-dose-unit-cellularsheet\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;cellular sheet&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Ci&lt;a name=\&quot;medication-dose-unit-Ci\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ci&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;cloth&lt;a name=\&quot;medication-dose-unit-cloth\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;cloth&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;cm^2&lt;a name=\&quot;medication-dose-unit-cm.942\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;cm^2&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;D'ag'U&lt;a name=\&quot;medication-dose-unit-D.39ag.39U\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;D'ag'U&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;disc&lt;a name=\&quot;medication-dose-unit-disc\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;disc&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;dL&lt;a name=\&quot;medication-dose-unit-dL\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;dL&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;douche&lt;a name=\&quot;medication-dose-unit-douche\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;douche&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;drop&lt;a name=\&quot;medication-dose-unit-drop\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;drop&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;FFU&lt;a name=\&quot;medication-dose-unit-FFU\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;FFU&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;g&lt;a name=\&quot;medication-dose-unit-g\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;g&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;globule&lt;a name=\&quot;medication-dose-unit-globule\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;globule&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;granule&lt;a name=\&quot;medication-dose-unit-granule\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;granule&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;gum&lt;a name=\&quot;medication-dose-unit-gum\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;gum&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;hp_C&lt;a name=\&quot;medication-dose-unit-hp_C\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;hp_C&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;hp_M&lt;a name=\&quot;medication-dose-unit-hp_M\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;hp_M&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;hp_Q&lt;a name=\&quot;medication-dose-unit-hp_Q\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;hp_Q&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;hp_X&lt;a name=\&quot;medication-dose-unit-hp_X\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;hp_X&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;IU&lt;a name=\&quot;medication-dose-unit-IU\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IU&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;IU/L&lt;a name=\&quot;medication-dose-unit-IU.47L\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IU/L&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;IU/mL&lt;a name=\&quot;medication-dose-unit-IU.47mL\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;IU/mL&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;kp_C&lt;a name=\&quot;medication-dose-unit-kp_C\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;kp_C&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;L&lt;a name=\&quot;medication-dose-unit-L\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;L&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Lf&lt;a name=\&quot;medication-dose-unit-Lf\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Lf&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;LfU/mL&lt;a name=\&quot;medication-dose-unit-LfU.47mL\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;LfU/mL&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;lozenge&lt;a name=\&quot;medication-dose-unit-lozenge\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;lozenge&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;mCi&lt;a name=\&quot;medication-dose-unit-mCi\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;mCi&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;mCi/mL&lt;a name=\&quot;medication-dose-unit-mCi.47mL\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;mCi/mL&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;mEq&lt;a name=\&quot;medication-dose-unit-mEq\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;mEq&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;mg&lt;a name=\&quot;medication-dose-unit-mg\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;mg&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;mg/actuat&lt;a name=\&quot;medication-dose-unit-mg.47actuat\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;mg/actuat&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;mg/hr&lt;a name=\&quot;medication-dose-unit-mg.47hr\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;mg/hr&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;mg/mg&lt;a name=\&quot;medication-dose-unit-mg.47mg\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;mg/mg&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;mg/mL&lt;a name=\&quot;medication-dose-unit-mg.47mL\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;mg/mL&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;mL&lt;a name=\&quot;medication-dose-unit-mL\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;mL&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;mmol&lt;a name=\&quot;medication-dose-unit-mmol\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;mmol&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;mol&lt;a name=\&quot;medication-dose-unit-mol\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;mol&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;mU&lt;a name=\&quot;medication-dose-unit-mU\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;mU&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;ng&lt;a name=\&quot;medication-dose-unit-ng\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ng&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;nmol&lt;a name=\&quot;medication-dose-unit-nmol\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;nmol&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;organisms&lt;a name=\&quot;medication-dose-unit-organisms\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;organisms&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;pastille&lt;a name=\&quot;medication-dose-unit-pastille\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;pastille&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;patch&lt;a name=\&quot;medication-dose-unit-patch\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;patch&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;pellet&lt;a name=\&quot;medication-dose-unit-pellet\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;pellet&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;PFU&lt;a name=\&quot;medication-dose-unit-PFU\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;PFU&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;pill&lt;a name=\&quot;medication-dose-unit-pill\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;pill&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;PNU&lt;a name=\&quot;medication-dose-unit-PNU\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;PNU&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;PNU/mL&lt;a name=\&quot;medication-dose-unit-PNU.47mL\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;PNU/mL&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;pouch&lt;a name=\&quot;medication-dose-unit-pouch\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;pouch&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;puff&lt;a name=\&quot;medication-dose-unit-puff\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;puff&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;ring&lt;a name=\&quot;medication-dose-unit-ring\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ring&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;salve&lt;a name=\&quot;medication-dose-unit-salve\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;salve&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;stick&lt;a name=\&quot;medication-dose-unit-stick\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;stick&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;strip&lt;a name=\&quot;medication-dose-unit-strip\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;strip&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;suppository&lt;a name=\&quot;medication-dose-unit-suppository\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;suppository&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;swab&lt;a name=\&quot;medication-dose-unit-swab\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;swab&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;tablet&lt;a name=\&quot;medication-dose-unit-tablet\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;tablet&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;tampon&lt;a name=\&quot;medication-dose-unit-tampon\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;tampon&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;tape&lt;a name=\&quot;medication-dose-unit-tape\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;tape&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;tbsp&lt;a name=\&quot;medication-dose-unit-tbsp\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;tbsp&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;TCID_50&lt;a name=\&quot;medication-dose-unit-TCID_50\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;TCID_50&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;tsp&lt;a name=\&quot;medication-dose-unit-tsp\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;tsp&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;U&lt;a name=\&quot;medication-dose-unit-U\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;U&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;uCi&lt;a name=\&quot;medication-dose-unit-uCi\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;uCi&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;ug&lt;a name=\&quot;medication-dose-unit-ug\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ug&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;ug/mL&lt;a name=\&quot;medication-dose-unit-ug.47mL\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ug/mL&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;uL&lt;a name=\&quot;medication-dose-unit-uL\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;uL&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;umol&lt;a name=\&quot;medication-dose-unit-umol\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;umol&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;unt&lt;a name=\&quot;medication-dose-unit-unt\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;unt&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;unt/mL&lt;a name=\&quot;medication-dose-unit-unt.47mL\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;unt/mL&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;USP'U&lt;a name=\&quot;medication-dose-unit-USP.39U\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;USP'U&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;vial&lt;a name=\&quot;medication-dose-unit-vial\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;vial&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;wafer&lt;a name=\&quot;medication-dose-unit-wafer\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;wafer&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;X&lt;a name=\&quot;medication-dose-unit-X\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;X&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
   },
   "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.url">url</a>" : "http://www.fhir.org/guides/mfhir/CodeSystem/medication-dose-unit",
   "<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.version">version</a>" : "0.0.0",
@@ -691,11 +641,12 @@ Formats: <a href="CodeSystem-medication-dose-unit.html">Narrative</a>, <a href="
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      Open mHealth to FHIR Version: 0.0.0 &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Tue, Nov 27, 2018 12:54-0800.
-      | <a style="color: #81BEF7" href="history.html">History</a>
-      | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
-        <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
-        </span>
+     <a href="http://www.openmhealth.org/">Open mHealth </a> openmhealth.mfhir#0.0.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR 3.0.1</a> created <span href="#" data-toggle="tooltip" data-placement="top" title="Thu, Jun 6, 2019 17:39-0700">2019-06-06</span>. <br/>
+      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a>
+      | <a style="color: #81BEF7" href="qa.html">QA Report</a>
+      | <a style="color: #81BEF7" href="#">Version History</a>
+      | <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+      | <a style="color: #81BEF7" href="https://github.com/Healthedata1/IG-Template2/issues" target="_blank">Propose a change</a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->
@@ -713,7 +664,7 @@ Formats: <a href="CodeSystem-medication-dose-unit.html">Narrative</a>, <a href="
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./assets/js/jquery.min.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
 <script src="./assets/js/bootstrap.min.js"> </script>
 <script src="./assets/js/respond.min.js"> </script>
 <script src="./assets/js/anchor.min.js"> </script>
@@ -725,14 +676,57 @@ Formats: <a href="CodeSystem-medication-dose-unit.html">Narrative</a>, <a href="
 
 
 
+<script src="assets/js/clipboard.min.js"> </script>
+
+<script>
+  // Tooltip
+
+  $('#copy-button').tooltip({
+    trigger: 'click',
+    placement: 'bottom'
+  });
+
+  function setTooltip(message) {
+    $('#copy-button').tooltip('hide')
+      .attr('data-original-title', message)
+      .tooltip('show');
+  }
+
+  function hideTooltip() {
+    setTimeout(function() {
+      $('#copy-button').tooltip('hide');
+    }, 1000);
+  }
+
+  // Clipboard
+
+  var clipboard = new ClipboardJS('#copy-button');
+
+  clipboard.on('success', function(e) {
+    setTooltip('Copied!');
+    hideTooltip();
+  });
+
+  clipboard.on('error', function(e) {
+    setTooltip('Failed!');
+    hideTooltip();
+  });
+
+</script>
+
+
 
 <!-- Analytics Below
 ================================================== -->
 
-<!-- add anchors before the closing body tag. -->
-<script> anchors.add()</script>
+<!-- add anchors before the closing body tag -->
+<script>
+anchors.add()
 
-
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
 
 </body>
 </html>

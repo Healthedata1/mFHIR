@@ -1,10 +1,13 @@
 Configuration Parameter,Configuration Value ( use '|' for lists)
+onlyJson,TRUE
 igtemplate-dir,/Users/ehaas/Documents/FHIR/IG-Template2/
 working-dir,/Users/ehaas/Documents/FHIR/OMHtoFHIR/
 title,Open mHealth to FHIR
 status,draft
 publisher,Open mHealth
-extensions,
+contact.system,url
+contact.value,http://www.openmhealth.org/
+extensions,extension-specimenCode|extension-modality
 searches,
 codesystems,
 valuesets,

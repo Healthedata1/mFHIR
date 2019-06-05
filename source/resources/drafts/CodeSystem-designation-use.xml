@@ -9,7 +9,7 @@
 	<date value="2018-05-28"/>
 	<description value="Open mHealth CodeSystem Designation Use is defined to extend the [designation use concepts](http://hl7.org/fhir/STU3/valueset-designation-use.html)  to representing the term used in the CodeableConcept `.text` element."/>
 	<caseSensitive value="true"/>
-	<valueSet value="ttp://www.fhir.org/guides/mfhir/ValueSetg/designation-use"/>
+	<valueSet value="http://www.fhir.org/guides/mfhir/ValueSetg/designation-use"/>
 	<content value="complete"/>
 	<concept>
 		<code value="text"/>

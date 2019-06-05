@@ -11,7 +11,19 @@
         <title>Page Redirection</title>
     </head>
     <body>
+<!--ReleaseHeader--><p id="publish-box">ImplementationGuide[http://www.fhir.org/guides/mfhir/ImplementationGuide/openmhealth.mfhir-0.0.0] - Local Development build (v0.0.0). See the <a href="http://www.fhir.org/guides/mfhir/history.html">Directory of published versions</a></p></p><!--EndReleaseHeader-->
+<!-- 
+This is the {% if {{site.build}} == "ci" %}
+    Continuous Integration Build
+   {% else %}
+    (release {{site.data.fhir.ig.version}})
+  {% endif %}
+  {% if {{site.build}} == "ballot" %} {{site.ballot}} Ballot {% endif %}
+  of the {{site.data.fhir.igName}} Implementation Guide,  based on <a href="{{ site.data.fhir.path }}index.html">FHIR Version {{ site.data.fhir.version }}</a>.  See the <a href="{{ site.historypath }}">Directory of published versions.</a>
+ -->
+
         <!-- Note: don't tell people to `click` the link, just tell them that it is a link. -->
         If you are not redirected automatically, follow this <a href='http://hl7.org/fhir/STU3/resourcelist.html'>link to Resource Index</a>.
+        <div igtool="footer" /><!-- needed to pass qa -->
     </body>
 </html>

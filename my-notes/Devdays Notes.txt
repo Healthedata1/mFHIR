@@ -1,0 +1,28 @@
+omhHeader	see OmhHeader Mapping tables
+kcalBurned
+activityName - activity name as coded component
+effectiveTimeFrame
+descriptiveStatistic
+descriptiveStatisticDenominator
+
+todo  slides based on Spreadsheets and mapping artifacts
+
+emphasize that OMH is header + body
+
+show all of us diagram
+
+demonstrate mappings
+show json too.
+
+Gaps:
+Oxygen Sat
+Geoposition
+Meds
+lists are impossible to represent in Spreadsheets
+
+terminology Calories mets valueset mappings mapped as text only?
+
+create profile/extension/concept mappings - try for now but no sweat if breaks.
+
+Home for Spreadsheets
+ - reorg files

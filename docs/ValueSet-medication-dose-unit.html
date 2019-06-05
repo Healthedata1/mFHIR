@@ -5,10 +5,10 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
    <meta charset="UTF-8"/>
-  <title>Open mHealth to FHIR</title>
+  <title></title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Open mHealth to FHIR Implemenation Guide" />
+<meta name="description" content=" Implemenation Guide" />
 <meta name="author" content="Open mHealth"/>
   <link href="fhir.css" rel="stylesheet"/>
 
@@ -74,7 +74,9 @@ can only resize using html  or css ;-(
 
 
       <div id="project-status" class="project-status"> <!-- ig title text -->
-        <b>Open mHealth to FHIR Implementation Guide</b>
+        
+        <b> Implementation Guide</b>
+        
         
         CI Build
         
@@ -126,41 +128,6 @@ can only resize using html  or css ;-(
 </ul>
 
 
-             <!--        <ul class="nav navbar-nav">
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="guidance.html">General Guidance</a>
-          </li>
-          <li>
-            <a href="profiles.html">Profiles and Logical Models</a>
-          </li>
-          <li>
-            <a href="structuremaps.html">Mappings</a>
-          </li>
-          <li>
-            <a href="extensions.html">Extensions</a>
-          </li>
-          <li>
-            <a href="terminology.html">Terminology</a>
-          </li>
-          <li>
-            <a href="searchparams.html">Search Parameters</a>
-          </li>
-          <li>
-            <a href="capstatements.html">Capability Statements</a>
-          </li>
-          <li>
-            <a href="security.html">Security</a>
-          </li>
-          <li>
-            <a href="examples.html">Examples</a>
-          </li>
-          <li>
-            <a href="downloads.html">Downloads</a>
-          </li>
-        </ul> -->
       </div>
       <!-- /.nav-collapse -->
     </div>
@@ -191,18 +158,23 @@ can only resize using html  or css ;-(
 
 <nav class="breadcrumb">
   
-    <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a> <li><a href='index.html'><b>Home</b></a></li><li><a href='terminology.html'><b>Terminology</b></a></li><li><b>ValueSet Medication Dose Unit</b></li>
+     <li><a href='index.html'><b>Home</b></a></li><li><a href='terminology.html'><b>Terminology</b></a></li><li><b>ValueSet Medication Dose Unit</b></li>
 </nav>
 
 
 <!-- ============Publish box=============== -->
 
-<!--status-bar-->
-<p id="publish-box">
-This is the 
+
+<!--ReleaseHeader--><p id="publish-box">ImplementationGuide[http://www.fhir.org/guides/mfhir/ImplementationGuide/openmhealth.mfhir-0.0.0] - Local Development build (v0.0.0). See the <a href="http://www.fhir.org/guides/mfhir/history.html">Directory of published versions</a></p></p><!--EndReleaseHeader-->
+<!-- 
+This is the {% if {{site.build}} == "ci" %}
     Continuous Integration Build
-    of the Open mHealth to FHIR Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="history.html">Directory of published versions</a>
-</p>
+   {% else %}
+    (release {{site.data.fhir.ig.version}})
+  {% endif %}
+  {% if {{site.build}} == "ballot" %} {{site.ballot}} Ballot {% endif %}
+  of the {{site.data.fhir.igName}} Implementation Guide,  based on <a href="{{ site.data.fhir.path }}index.html">FHIR Version {{ site.data.fhir.version }}</a>.  See the <a href="{{ site.historypath }}">Directory of published versions.</a>
+ -->
 
 
 
@@ -211,7 +183,7 @@ This is the
 
 
   <style type="text/css">
-  h2,h3,h4,h5,h6{--pagenumber: "5.13"}
+  h2,h3,h4,h5,h6{--pagenumber: "5.15"}
   </style>
 
 
@@ -224,39 +196,22 @@ This is the
 
 	<li class="active"><a href="#">Narrative Content</a></li>
 
-<!--
-{ % if ValueSet == "StructureDefinition"  % }
-	{ % if content == "definitions"  % }
-		<li class="active"><a href="#">Detailed Descriptions</a></li>
-	{ % else % }
-		<li><a href="ValueSet-medication-dose-unit-definitions.html">Detailed Descriptions</a></li>
-	{ % endif % }
-	{ % if content == "mappings" % }
-		<li class="active"><a href="#">Mappings</a></li>
-	{ % else % }
-		<li><a href="ValueSet-medication-dose-unit-mappings.html">Mappings</a></li>
-	{ % endif % }
-{ % endif % }
--->
 
-<li><a href="ValueSet-medication-dose-unit.xml.html">XML</a></li>
+
+
+
 
 
 	<li><a href="ValueSet-medication-dose-unit.json.html">JSON</a></li>
 
-<!--
-{ % if content == "turtle" % }
-	<li class="active"><a href="#">Turtle</a></li>
-{ % else % }
-	<li><a href="ValueSet-medication-dose-unit.ttl.html">Turtle</a></li>
-{ % endif % }
--->
+
+
+
 </ul>
 
 
 
   <!-- ============CONTENT CONTENT=============== -->
-
 
 
 <!-- ig template for many conformance resource html pages  ('base' in definitions file)  can not be used for conformance resources that have more that a single base template. e.g.,  sd since there are mapping and definitions templates for it as well  they need to be split out into 3 separate templates -->
@@ -274,7 +229,7 @@ This is the
 </td></tr>
  <tr><td>Publisher:</td><td>Open mHealth</td></tr>
  <tr><td>Copyright:</td><td>Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved.</td></tr>
- <tr><td>Source Resource:</td><td><a href="ValueSet-medication-dose-unit.xml.html">XML</a> / <a href="ValueSet-medication-dose-unit.json.html">JSON</a> / <a href="ValueSet-medication-dose-unit.ttl.html">Turtle</a></td></tr>
+ <tr><td>Source Resource:</td><td><a href="ValueSet-medication-dose-unit.json.html">JSON</a></td></tr>
 </tbody></table>
 
   
@@ -287,33 +242,8 @@ This is the
 
   <h3>Expansion</h3>
 
-  <p><span style="color: maroon; font-weight: bold" title="Publication Tooling Error: org.hl7.fhir.dstu3.model.ExpansionProfile cannot be cast to org.hl7.fhir.dstu3.model.Parameters">No Expansion for this valueset (not supported by Publication Tooling)</span></p>
-
+  <div xmlns="http://www.w3.org/1999/xhtml"><p>This value set contains 84 concepts</p><p>All codes from system <code>http://unitsofmeasure.org</code></p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org--"> </a>%</td><td>%</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-AU"> </a>AU</td><td>AU</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-AU-mL"> </a>AU/mL</td><td>AU/mL</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-bar"> </a>bar</td><td>bar</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-BAU"> </a>BAU</td><td>BAU</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-BAU-mL"> </a>BAU/mL</td><td>BAU/mL</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-bead"> </a>bead</td><td>bead</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-BU"> </a>BU</td><td>BU</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-capsule"> </a>capsule</td><td>capsule</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-CCID-50"> </a>CCID_50</td><td>CCID_50</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-cellular-sheet"> </a>cellular sheet</td><td>cellular sheet</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-Ci"> </a>Ci</td><td>Ci</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-cloth"> </a>cloth</td><td>cloth</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-cm-2"> </a>cm^2</td><td>cm^2</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-D-ag-U"> </a>D'ag'U</td><td>D'ag'U</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-disc"> </a>disc</td><td>disc</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-dL"> </a>dL</td><td>dL</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-douche"> </a>douche</td><td>douche</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-drop"> </a>drop</td><td>drop</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-FFU"> </a>FFU</td><td>FFU</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-g"> </a>g</td><td>g</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-globule"> </a>globule</td><td>globule</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-granule"> </a>granule</td><td>granule</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-gum"> </a>gum</td><td>gum</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-hp-C"> </a>hp_C</td><td>hp_C</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-hp-M"> </a>hp_M</td><td>hp_M</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-hp-Q"> </a>hp_Q</td><td>hp_Q</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-hp-X"> </a>hp_X</td><td>hp_X</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-IU"> </a>IU</td><td>IU</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-IU-L"> </a>IU/L</td><td>IU/L</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-IU-mL"> </a>IU/mL</td><td>IU/mL</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-kp-C"> </a>kp_C</td><td>kp_C</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-L"> </a>L</td><td>L</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-Lf"> </a>Lf</td><td>Lf</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-LfU-mL"> </a>LfU/mL</td><td>LfU/mL</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-lozenge"> </a>lozenge</td><td>lozenge</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-mCi"> </a>mCi</td><td>mCi</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-mCi-mL"> </a>mCi/mL</td><td>mCi/mL</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-mEq"> </a>mEq</td><td>mEq</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-mg"> </a>mg</td><td>mg</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-mg-actuat"> </a>mg/actuat</td><td>mg/actuat</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-mg-hr"> </a>mg/hr</td><td>mg/hr</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-mg-mg"> </a>mg/mg</td><td>mg/mg</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-mg-mL"> </a>mg/mL</td><td>mg/mL</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-mL"> </a>mL</td><td>mL</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-mmol"> </a>mmol</td><td>mmol</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-mol"> </a>mol</td><td>mol</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-mU"> </a>mU</td><td>mU</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-ng"> </a>ng</td><td>ng</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-nmol"> </a>nmol</td><td>nmol</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-organisms"> </a>organisms</td><td>organisms</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-pastille"> </a>pastille</td><td>pastille</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-patch"> </a>patch</td><td>patch</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-pellet"> </a>pellet</td><td>pellet</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-PFU"> </a>PFU</td><td>PFU</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-pill"> </a>pill</td><td>pill</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-PNU"> </a>PNU</td><td>PNU</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-PNU-mL"> </a>PNU/mL</td><td>PNU/mL</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-pouch"> </a>pouch</td><td>pouch</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-puff"> </a>puff</td><td>puff</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-ring"> </a>ring</td><td>ring</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-salve"> </a>salve</td><td>salve</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-stick"> </a>stick</td><td>stick</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-strip"> </a>strip</td><td>strip</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-suppository"> </a>suppository</td><td>suppository</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-swab"> </a>swab</td><td>swab</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-tablet"> </a>tablet</td><td>tablet</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-tampon"> </a>tampon</td><td>tampon</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-tape"> </a>tape</td><td>tape</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-tbsp"> </a>tbsp</td><td>tbsp</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-TCID-50"> </a>TCID_50</td><td>TCID_50</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-tsp"> </a>tsp</td><td>tsp</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-U"> </a>U</td><td>U</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-uCi"> </a>uCi</td><td>uCi</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-ug"> </a>ug</td><td>ug</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-ug-mL"> </a>ug/mL</td><td>ug/mL</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-uL"> </a>uL</td><td>uL</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-umol"> </a>umol</td><td>umol</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-unt"> </a>unt</td><td>unt</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-unt-mL"> </a>unt/mL</td><td>unt/mL</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-USP-U"> </a>USP'U</td><td>USP'U</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-vial"> </a>vial</td><td>vial</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-wafer"> </a>wafer</td><td>wafer</td></tr><tr><td style="white-space:nowrap"><a name="http---unitsofmeasure.org-X"> </a>X</td><td>X</td></tr></table></div>
 <!-- ============VAlUESET CONTENT CONTENT=============== -->
-
-<!-- ( % when 'StructureMap' % }
-============StructureMap CONTENT CONTENT===============
-  ( % include nav-tabs.html type="ValueSet" id="medication-dose-unit" active="content" % }
-
-  <p>
-  Thise is the mapping between FHIR resources and the Logical Model:
-  </p>
-
-  <a name="summary"> </a>
-  <h2>Summary</h2>
-  ( % include ValueSet-medication-dose-unit-summary.xhtml % }
-  <br/>
-
-  <h2>Content</h2>
-  ( %  include ValueSet-medication-dose-unit-content.xhtml % }
-  <br/>
-
-  <a name="script"> </a>
-  <h2>Script</h2>
-  <pre>
-  ( % include ValueSet-medication-dose-unit-script.xhtml % }
-  </pre>
-============StructureMap CONTENT CONTENT=============== -->
 
 
 
@@ -362,11 +292,12 @@ Formats: <a href="ValueSet-medication-dose-unit.html">Narrative</a>, <a href="Va
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      Open mHealth to FHIR Version: 0.0.0 &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Tue, Nov 27, 2018 12:54-0800.
-      | <a style="color: #81BEF7" href="history.html">History</a>
-      | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
-        <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
-        </span>
+     <a href="http://www.openmhealth.org/">Open mHealth </a> openmhealth.mfhir#0.0.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR 3.0.1</a> created <span href="#" data-toggle="tooltip" data-placement="top" title="Thu, Jun 6, 2019 17:39-0700">2019-06-06</span>. <br/>
+      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a>
+      | <a style="color: #81BEF7" href="qa.html">QA Report</a>
+      | <a style="color: #81BEF7" href="#">Version History</a>
+      | <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+      | <a style="color: #81BEF7" href="https://github.com/Healthedata1/IG-Template2/issues" target="_blank">Propose a change</a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->
@@ -384,7 +315,7 @@ Formats: <a href="ValueSet-medication-dose-unit.html">Narrative</a>, <a href="Va
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./assets/js/jquery.min.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
 <script src="./assets/js/bootstrap.min.js"> </script>
 <script src="./assets/js/respond.min.js"> </script>
 <script src="./assets/js/anchor.min.js"> </script>
@@ -396,14 +327,57 @@ Formats: <a href="ValueSet-medication-dose-unit.html">Narrative</a>, <a href="Va
 
 
 
+<script src="assets/js/clipboard.min.js"> </script>
+
+<script>
+  // Tooltip
+
+  $('#copy-button').tooltip({
+    trigger: 'click',
+    placement: 'bottom'
+  });
+
+  function setTooltip(message) {
+    $('#copy-button').tooltip('hide')
+      .attr('data-original-title', message)
+      .tooltip('show');
+  }
+
+  function hideTooltip() {
+    setTimeout(function() {
+      $('#copy-button').tooltip('hide');
+    }, 1000);
+  }
+
+  // Clipboard
+
+  var clipboard = new ClipboardJS('#copy-button');
+
+  clipboard.on('success', function(e) {
+    setTooltip('Copied!');
+    hideTooltip();
+  });
+
+  clipboard.on('error', function(e) {
+    setTooltip('Failed!');
+    hideTooltip();
+  });
+
+</script>
+
+
 
 <!-- Analytics Below
 ================================================== -->
 
-<!-- add anchors before the closing body tag. -->
-<script> anchors.add()</script>
+<!-- add anchors before the closing body tag -->
+<script>
+anchors.add()
 
-
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
 
 </body>
 </html>
