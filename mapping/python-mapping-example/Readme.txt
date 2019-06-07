@@ -1,5 +1,8 @@
 RUN in Jupyter Notebook.
 
-Hit the run button 2x to hide the code and show only the output
+Jupyter running in Binder
+Link: https://mybinder.org/v2/gh/Healthedata1/mFHIR/master?filepath=mapping%2Fpython-mapping-example%2F
 
-The binder file is at ....
+Click on: "OMH to FHIR Mapping.ipynb“
+Click the run button 2x
+Scroll up to the copy paste box and follow the instructions.
