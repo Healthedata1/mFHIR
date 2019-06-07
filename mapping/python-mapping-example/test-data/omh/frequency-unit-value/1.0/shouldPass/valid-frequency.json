@@ -1,0 +1,7 @@
+{
+    "number_of_times": 2,
+    "time_window": {
+        "value": 1,
+        "unit": "d"
+    }
+}
