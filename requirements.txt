@@ -19,7 +19,7 @@ ipywidgets==7.4.2
 isodate==0.6.0
 jdcal==1.4
 jedi==0.13.2
-Jinja2==2.10
+Jinja2==2.10.1
 jsonschema==2.6.0
 jupyter==1.0.0
 jupyter-client==5.2.4
@@ -60,7 +60,7 @@ stringcase==1.2.0
 testpath==0.4.2
 tornado==5.1.1
 traitlets==4.3.2
-urllib3==1.24
+urllib3==1.24.2
 wcwidth==0.1.7
 webencodings==0.5.1
 widgetsnbextension==3.4.2
