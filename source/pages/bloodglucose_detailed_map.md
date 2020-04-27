@@ -1,7 +1,7 @@
-## OMH Blood Glucoe DataPoint to FHIR Observation Detailed Mapping
+## OMH Blood Glucose DataPoint to FHIR Observation Detailed Mapping
 
 
-The following Table provides the detailed mapping for the OMH Blood Glucoe DataPoint to the OMH to FHIR Observation Profile TODO: add link to profile:
+The following Table provides the detailed mapping for the OMH Blood Glucose DataPoint to the OMH to FHIR Observation Profile TODO: add link to profile:
 
 Index|OMH Blood Glucose Element|FHIR Attribute|Derived Mapping|Comments
 ---|---|---|---|---
@@ -30,7 +30,7 @@ Index|OMH Blood Glucose Element|FHIR Attribute|Derived Mapping|Comments
 
 Example Mapping:
 
-The following OMH HeartRate schema instance:
+The following OMH Blood Glucose schema instance:
 
 ```
 {
