@@ -1,0 +1,24 @@
+Source Human API - in HumanAPI format
+Store in which format  ( where does the open mHealth come into play )
+
+option HumanAPI - FHIR?
+option HumanAPI - Open mHealth - FHIR?
+
+https://healthedata1.github.io/mFHIR/StructureDefinition-omh-blood-pressure.html 
+
+  https://healthedata1.github.io/mFHIR/StructureDefinition-omh-sleep-duration.html https://developer.humanapi.co/sources-iframe 
+
+go from HumanAPI to FHIR - Observation
+go from Open mHealth to FHIR - Observation
+
+or go from 1 to 2 to 3
+
+document mappings for sleep duration, BP  - Python and spreadsheet.
+
+timeline for this:
+
+
+DevDays workshop -  Hands on workshop
+
+
+ADE  calls on Friday  Keith Boone + HL7

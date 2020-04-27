@@ -1,0 +1,27 @@
+{
+  "resourceType": "Bundle",
+  "type": "searchset",
+  "total": 1,
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "status": "current",
+        "type": {
+          "text": "OMH googlefit data"
+        },
+        "indexed": "2019-06-11T01:39:33.115+00:00",
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/json",
+              "url": "Binary/ee22f7f7-5e33-43d5-a2fa-7372eee49e56",
+              "title": "OMH googlefit data",
+              "creation": "2019-06-11T01:39:33+00:00"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
