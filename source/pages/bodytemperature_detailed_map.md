@@ -71,6 +71,15 @@ Maps to this FHIR Observation fragment
       "unit": "F",
       "system": "http://unitsofmeasure.org"
    },
+   "bodySite": {
+      "coding": [
+         {
+            "code": "oral",
+            "system": "http://www.fhir.org/guides/mfhir/CodeSystem/intervention-administration-route"
+         }
+      ],
+      "text": "oral"
+   },
 ...
 ~~~
 
@@ -78,17 +87,19 @@ to make this this FHIR Observation when combine with the OMH Header
 
 ~~~
 {
-   "effectivePeriod": {
-      "end": "2015-02-06T06:00:00Z",
-      "start": "2015-02-05T06:00:00Z"
+   "meta": {
+      "profile": [
+         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
+      ]
    },
-   "issued": "2015-09-10T12:43:39.138-06:00",
-   "resourceType": "Observation",
-   "valueQuantity": {
-      "value": 96.5,
-      "code": "[degF]",
-      "unit": "F",
-      "system": "http://unitsofmeasure.org"
+   "bodySite": {
+      "coding": [
+         {
+            "code": "oral",
+            "system": "http://www.fhir.org/guides/mfhir/CodeSystem/intervention-administration-route"
+         }
+      ],
+      "text": "oral"
    },
    "category": [
       {
@@ -110,37 +121,44 @@ to make this this FHIR Observation when combine with the OMH Header
          },
          {
             "code": "body-temperature-maximum",
-            "display": "Body Temperature Maximum",
+            "display": "Body Temperature-Maximum",
             "system": "http://hl7.org/fhir/omh_fhir_observation_codes"
          }
       ]
    },
    "device": {
-      "display": "Jawbone UP API",
       "extension": [
          {
-            "valueCode": "sensed",
-            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality"
+            "url": "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality",
+            "valueCode": "sensed"
          }
-      ]
+      ],
+      "display": "Jawbone UP API"
+   },
+   "effectivePeriod": {
+      "end": "2015-02-06T06:00:00Z",
+      "start": "2015-02-05T06:00:00Z"
    },
    "identifier": [
       {
-         "value": "243c773b-8936-407e-9c23-270d0ea49cc4",
-         "system": "https://omh.org/shimmer/ids"
+         "system": "https://omh.org/shimmer/ids",
+         "value": "243c773b-8936-407e-9c23-270d0ea49cc4"
       }
    ],
-   "meta": {
-      "profile": [
-         "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"
-      ]
-   },
+   "issued": "2015-09-10T12:43:39.138-06:00",
    "status": "unknown",
    "subject": {
       "identifier": {
-         "value": "306a1202-410d-11e8-842f-0ed5f89f718b",
-         "system": "https://omh.org/shimmer/patient_ids"
+         "system": "https://omh.org/shimmer/patient_ids",
+         "value": "306a1202-410d-11e8-842f-0ed5f89f718b"
       }
-   }
+   },
+   "valueQuantity": {
+      "code": "[degF]",
+      "system": "http://unitsofmeasure.org",
+      "unit": "F",
+      "value": 96.5
+   },
+   "resourceType": "Observation"
 }
 ~~~
