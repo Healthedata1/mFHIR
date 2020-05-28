@@ -85,7 +85,7 @@ Each OMH schema for a datapoint is composed of the 'header' and 'body,  This tab
 |header.acquisition_provenance.source_name|Observation.device|
 |header.acquisition_provenance.source_data_point_id|Observation.identifier|
 |header.acquisition_provenance.source_creation_date_time|None|
-|header.acquisition_provenance.modication_data_time|None|
+|header.acquisition_provenance.last_modification_data_time|None|
 |header.acquisition_provenance.modality|Observation.device.extension|
 |header.user_id|Observation.subject|
 {: .grid}

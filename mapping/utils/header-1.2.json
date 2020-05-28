@@ -41,7 +41,7 @@
                     "description": "The date time (timestamp) of data creation at the source.",
                     "$ref": "#/definitions/date_time"
                 },
-                "source_last_modification_date_time": {
+                "sourcelast_modification_date_time": {
                     "description": "The date time (timestamp) of last data modification at the source.",
                     "$ref": "#/definitions/date_time"
                 },

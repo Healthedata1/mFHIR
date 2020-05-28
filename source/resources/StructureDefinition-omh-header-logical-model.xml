@@ -250,8 +250,8 @@
 				<comment value="Maps to the Provenance Resource"/>
 			</mapping>
 		</element>
-		<element id="OmhHeader.acquisitionProvenance.modicationDataTime">
-			<path value="OmhHeader.acquisitionProvenance.modicationDataTime"/>
+		<element id="OmhHeader.acquisitionProvenance.last_modificationDataTime">
+			<path value="OmhHeader.acquisitionProvenance.last_modificationDataTime"/>
 			<definition value="The date time (timestamp) of last data modification at the source."/>
 			<min value="0"/>
 			<max value="1"/>
@@ -263,7 +263,7 @@
 			<isModifier value="false"/>
 			<mapping>
 				<identity value="omh-schema"/>
-				<map value="header.acquisition_provenance.modication_data_time"/>
+				<map value="header.acquisition_provenance.last_modification_data_time"/>
 			</mapping>
 			<mapping>
 				<identity value="fhir-observation"/>

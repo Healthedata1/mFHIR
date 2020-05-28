@@ -191,8 +191,8 @@
       <mustSupport value="false"/>
       <isModifier value="false"/>
     </element>
-    <element id="omh-data-point.header.acquisition_provenance.modication_data_time">
-      <path value="omh-data-point.header.acquisition_provenance.modication_data_time"/>
+    <element id="omh-data-point.header.acquisition_provenance.last_modification_data_time">
+      <path value="omh-data-point.header.acquisition_provenance.last_modification_data_time"/>
       <definition value="The date time (timestamp) of last data modification at the source."/>
       <min value="0"/>
       <max value="1"/>

@@ -23,7 +23,7 @@ The following Table provides the detailed mapping for the OMH Header to the OMH 
 |10.1|header.acquisition_provenance.source_data_point_id|identifier[1].value||1:1 mapping of  header.acquisition_provenance.source_data_point_id|
 |10.2||identifier[1].system|https://omh.org/source/ids|fixed to 'https://omh.org/source/ids'|
 |11|header.acquisition_provenance.source_creation_date_time|None|||
-|12|header.acquisition_provenance.modication_date_time|None|||
+|12|header.acquisition_provenance.last_modification_date_time|None|||
 |13.1|header.acquisition_provenance.modality|device.extension[0].valueCode||1:1 mapping of header.acquisition_provenance.modality|
 |13.2||device.extension[0].url|http://www.fhir.org/mfhir/StructureDefinition/extenion-modality|fixed to 'http://www.fhir.org/mfhir/StructureDefinition/extenion-modality'|
 |14.1|header.user_id|subject.identifier.value||1:1 mapping of  string|

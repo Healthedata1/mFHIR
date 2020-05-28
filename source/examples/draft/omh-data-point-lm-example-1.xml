@@ -11,7 +11,7 @@
 		</schemaId>
 		<acquisitionProvenance>
 			<sourceName value="Jawbone UP API"/>
-			<modicationDataTime value="2015-09-10T18:43:39+00:00"/>
+			<last_modificationDataTime value="2015-09-10T18:43:39+00:00"/>
 			<modality value="sensed"/>
 		</acquisitionProvenance>
 		<userId value="3da24130-41d8-11e8-842f-0ed5f89f718b"/>

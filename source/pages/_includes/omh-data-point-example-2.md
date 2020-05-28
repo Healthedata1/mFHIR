@@ -14,7 +14,7 @@
        "sourceName" : "Jawbone UP API",   
        "sourceDataPointId" : "123456",  
        "sourceCreationDateTime" : "2018-04-17T17:13:50Z",  
-       "modicationDataTime" : "2018-04-17T17:13:51Z",  
+       "_last_modificationDataTime" : "2018-04-17T17:13:51Z",  
        "modality" : "sensed"  
      },
      "userId" : "user123456"  

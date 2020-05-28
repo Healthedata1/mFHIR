@@ -27,8 +27,8 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","","The identifier of this data point at the source (immediately preceding step).","","","","","","","","","",,,,,"",,,,"",0,null,"","","header.acquisition_provenance.source_data_point_id","Observation.identifier"
 "OmhHeader.acquisitionProvenance.sourceCreationDateTime","","","",0,1,"","","","instant {[]} {[]}
 ","","The date time (timestamp) of data creation at the source.","","","","","","","","","",,,,,"",,,,"",0,null,"","","header.acquisition_provenance.source_creation_date_time","None"
-"OmhHeader.acquisitionProvenance.modicationDataTime","","","",0,1,"","","","instant {[]} {[]}
-","","The date time (timestamp) of last data modification at the source.","","","","","","","","","",,,,,"",,,,"",0,null,"","","header.acquisition_provenance.modication_data_time","None"
+"OmhHeader.acquisitionProvenance._last_modificationDataTime","","","",0,1,"","","","instant {[]} {[]}
+","","The date time (timestamp) of last data modification at the source.","","","","","","","","","",,,,,"",,,,"",0,null,"","","header.acquisition_provenance._last_modification_data_time","None"
 "OmhHeader.acquisitionProvenance.modality","","","",0,1,"","","","code {[]} {[]}
 ","","The modality whereby the measure is obtained.","","","","","","","","","",,,,,"",,,,"",0,null,"","","header.acquisition_provenance.modality","Observation.device"
 "OmhHeader.userId","","","",0,1,"","","","string {[]} {[]}

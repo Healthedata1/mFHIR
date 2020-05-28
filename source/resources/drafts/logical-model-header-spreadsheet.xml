@@ -1417,9 +1417,9 @@
     <Cell ss:Index="19" ss:StyleID="Default"/>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:StyleID="Default"><Data ss:Type="String">acquisition_provenance.modication_data_time</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">acquisition_provenance.last_modification_data_time</Data></Cell>
     <Cell ss:StyleID="Default" ss:Formula="=R2C2&amp;&quot;.&quot;&amp;RC[-1]"><Data
-      ss:Type="String">omh-header.acquisition_provenance.modication_data_time</Data></Cell>
+      ss:Type="String">omh-header.acquisition_provenance.last_modification_data_time</Data></Cell>
     <Cell ss:StyleID="Default"/>
     <Cell ss:StyleID="Default"><Data ss:Type="String">0..1</Data></Cell>
     <Cell ss:StyleID="Default"/>

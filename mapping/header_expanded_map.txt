@@ -22,7 +22,7 @@ Index	Name	JSON Data Type	Cardinality	Description		FHIR Attribute	Data Type	Card
 10.1	header.acquisition_provenance.source_data_point_id	string	0..1	The identifier of this data point at the source (immediately preceding step)		identifier[1].value	string	1..1			1:1 mapping of  header.acquisition_provenance.source_data_point_id
 10.2						identifier[1].system	string	1..1		https://omh.org/source/ids	fixed to 'https://omh.org/source/ids'
 11	header.acquisition_provenance.source_creation_date_time	date-time	0..1	The date time (timestamp) of data creation at the source.		None					
-12	header.acquisition_provenance.modication_date_time	date-time	0..1	The date time (timestamp) of last data modification at the source		None					
+12	header.acquisition_provenance.last_modification_date_time	date-time	0..1	The date time (timestamp) of last data modification at the source		None					
 13.1	header.acquisition_provenance.modality	string (enum)	0..1	sensed' | 'self-reported'  The modality whereby the measure is obtained.		device.extension[0].valueCode	code	1..1			1:1 mapping of header.acquisition_provenance.modality
 13.2						device.extension[0].url	uri	1..1		http://www.fhir.org/mfhir/StructureDefinition/extenion-modality	fixed to 'http://www.fhir.org/mfhir/StructureDefinition/extenion-modality'
 14.1	header.user_id	string	0..1	The user this data point belongs to.		subject.identifier.value	string				1:1 mapping of  string
