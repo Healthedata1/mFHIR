@@ -1,0 +1,10 @@
+OMH datapoint,Component Code System,Component Code,Component Code Display,Component Value Type
+temporal_relationship_to_physical_activity,http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes,relative-to-activity,OMH to FHIR Temporal Relationship To Physical ...,valueCodeableConcept
+temporal_relationship_to_sleep,http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes,relative-to-sleep,OMH to FHIR Temporal Relationship To Sleep,valueCodeableConcept
+temporal_relationship_to_meal,http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes,relative-to-meal,OMH to FHIR Temporal Relationship To Meal,valueCodeableConcept
+oxygen_therapy_mode_of_administration,http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes,o2-administration-method,Oxygen Therapy Mode of Administration,valueString
+supplemental_oxygen_flow_rate,http://loinc.org,3151-8,Inhaled oxygen flow rate,valueQuantity
+body_posture,http://snomed.info/sct,271605009,Position of body and posture (observable entity),valueCodeableConcept
+diastolic_blood_pressure,http://loinc.org,8462-4,Diastolic blood pressure,valueQuantity
+systolic_blood_pressure,http://loinc.org,8480-6,Systolic blood pressure,valueQuantity
+activity_name,http://snomed.info/sct,257733005,Activity,valueCodeableConcept

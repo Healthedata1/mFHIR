@@ -1,0 +1,60 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+#  Generated from FHIR {{ info.version }} ({{ profile.url }}) on {{ info.date }}.
+#  {{ info.year }}, SMART Health IT.
+{# Note: The 'special' variable below is used to prevent circular imports.  The end result is that the
+         classes 'Extension' and 'Element' use ForwardRef type statements. The 'Reference' class does
+         not type its identifier attribute.
+#}
+
+{%- set imported = {} %}
+import sys
+from dataclasses import dataclass, field
+from typing import ClassVar, Optional, List
+{%- set special = 'Element' == classes[-1].name -%}
+{%- if not special -%}
+    {%- for imp in imports %}
+        {%- if imp.module not in imported and ((classes[-1].name != 'Reference' or imp.name != 'Identifier') and (classes[-1].name != 'BackboneElement' or imp.name != 'Extension')) %}
+from .{{ imp.module }} import {{ imp.name }}{% set _ = imported.update({imp.module: True}) %}
+        {%- endif -%}
+    {%- endfor -%}
+{%- endif %}
+
+{%- for klass in classes[::-1] %}
+{% if klass.superclass in imports and klass.superclass.module not in imported -%}
+from .{{ klass.superclass.module }} import {{ klass.superclass.name }}
+{% set _ = imported.update({klass.superclass.module: True}) %}
+{% endif %}
+
+@dataclass
+class {{klass.name}}({{klass.superclass.name | default('object')}}):
+    """ {{ klass.short|wordwrap(width=75, wrapstring="\n    ") }}.
+{%- if klass.formal %}
+
+    {{ klass.formal|wordwrap(width=75, wrapstring="\n    ") }}
+{%- endif %}
+    """
+{%- if klass.resource_type %}
+    resource_type: ClassVar[str] = "{{ klass.resource_type }}"
+{% endif %}
+
+{%- for prop in klass.properties %}
+{%- if not special and not prop.is_forward %}{% set pname = prop.class_name %}{% else %}{% set pname = '"' + prop.class_name + '"' %}{% endif -%}
+{%- set _oom = ("one_of_many='" + prop.one_of_many + "',") if prop.one_of_many else '' %}
+{%- set _on = ("orig_name='" + prop.orig_name + "'") if prop.name != prop.orig_name else '' %}
+    {% set ns = namespace(init=None) %}
+{%- if _oom or _on %}
+{%- set ns.init = ("field(default_factory=list, " if prop.is_array else "field(default=None, ") + "metadata=dict(" + _oom + _on + "))" %}
+{%- else %}
+{%- set ns.init = "field(default_factory=list)" if prop.is_array and prop.nonoptional else "None" %}
+{%- endif -%}
+    {# Don't emit typing for Reference.identifier or BackboneElement.modifierExtension -- recursive dependency issues.
+       Note: elementProperties() method adds thes things in during validation #}
+{%- if (classes[-1].name == 'Reference' and prop.name == 'identifier') or (classes[-1].name == 'BackboneElement' and prop.name == 'modifierExtension')  -%}
+{{ prop.name }} = {{ ns.init }}
+{%- else -%}
+{{prop.name}}:{%- if prop.is_array %}{%- if prop.nonoptional %} List[{{pname}}]{% else %} Optional[List[{{pname}}]]{%- endif %} = {{ns.init}}{% else %}{%- if prop.nonoptional %} {{pname}}{% else %} Optional[{{pname}}]{%- endif %} = {{ns.init}}{% endif %}
+{%- endif  -%}
+{%- endfor %}
+{%- endfor %}
