@@ -980,7 +980,7 @@
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="150">
     <Cell ss:StyleID="s70"><Data ss:Type="String">logical-mapping-prefix</Data></Cell>
-    <Cell ss:Index="3" ss:StyleID="s73"><Data ss:Type="String">map &quot;http://www.fhir.org/guides/mfhir/StructureMap/Foo&quot; = &quot;LogicalModel &#45;-&gt; Foo Mapping&quot;&#13;&#13;uses &quot;http://www.fhir.org/guides/mfhir/StructureDefinition/LogicalModel&quot; as source&#13;&#13;group LogicalModel&#13;  input source : LogicalModel as source;&#13;</Data></Cell>
+    <Cell ss:Index="3" ss:StyleID="s73"><Data ss:Type="String">map &quot;http://www.fhir.org/guides/omhtofhir/StructureMap/Foo&quot; = &quot;LogicalModel &#45;-&gt; Foo Mapping&quot;&#13;&#13;uses &quot;http://www.fhir.org/guides/omhtofhir/StructureDefinition/LogicalModel&quot; as source&#13;&#13;group LogicalModel&#13;  input source : LogicalModel as source;&#13;</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s70"><Data ss:Type="String">logical-mapping-suffix</Data></Cell>
@@ -1032,8 +1032,8 @@
    </Row>
    <Row ss:AutoFitHeight="0" ss:StyleID="Default">
     <Cell ss:StyleID="s77"><Data ss:Type="String">extension.uri</Data></Cell>
-    <Cell ss:StyleID="s83" ss:HRef="http://www.fhir.org/guides/mfhir/StructureDefinition/extension-"><Data
-      ss:Type="String">http://www.fhir.org/guides/mfhir/StructureDefinition/extension-</Data></Cell>
+    <Cell ss:StyleID="s83" ss:HRef="http://www.fhir.org/guides/omhtofhir/StructureDefinition/extension-"><Data
+      ss:Type="String">http://www.fhir.org/guides/omhtofhir/StructureDefinition/extension-</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s84"><Data ss:Type="String">introduction</Data></Cell>
@@ -5046,7 +5046,7 @@
     <Cell ss:StyleID="s148"><Data ss:Type="String">value set</Data></Cell>
     <Cell ss:StyleID="s148"><Data ss:Type="String">required</Data></Cell>
     <Cell ss:StyleID="s148"/>
-    <Cell ss:StyleID="s148"><Data ss:Type="String">http://www.fhir.org/guides/mfhir/ValueSet/B1</Data></Cell>
+    <Cell ss:StyleID="s148"><Data ss:Type="String">http://www.fhir.org/guides/omhtofhir/ValueSet/B1</Data></Cell>
     <Cell ss:StyleID="s148"/>
     <Cell ss:StyleID="s148"/>
     <Cell ss:StyleID="s148"/>
@@ -5078,8 +5078,8 @@
     <Cell ss:StyleID="s138"><Data ss:Type="String">value set</Data></Cell>
     <Cell ss:StyleID="s138"><Data ss:Type="String">required</Data></Cell>
     <Cell ss:StyleID="s138"/>
-    <Cell ss:StyleID="s174" ss:HRef="http://www.fhir.org/guides/mfhir/ValueSet/temporal-relationship-to-physical-activity"><Data
-      ss:Type="String">http://www.fhir.org/guides/mfhir/ValueSet/temporal-relationship-to-physical-activity</Data></Cell>
+    <Cell ss:StyleID="s174" ss:HRef="http://www.fhir.org/guides/omhtofhir/ValueSet/temporal-relationship-to-physical-activity"><Data
+      ss:Type="String">http://www.fhir.org/guides/omhtofhir/ValueSet/temporal-relationship-to-physical-activity</Data></Cell>
     <Cell ss:StyleID="s138"/>
     <Cell ss:StyleID="s138"/>
     <Cell ss:StyleID="s138"/>
@@ -5095,8 +5095,8 @@
     <Cell ss:StyleID="s138"><Data ss:Type="String">value set</Data></Cell>
     <Cell ss:StyleID="s138"><Data ss:Type="String">required</Data></Cell>
     <Cell ss:StyleID="s138"/>
-    <Cell ss:StyleID="s174" ss:HRef="http://www.fhir.org/guides/mfhir/ValueSet/temporal-relationship-to-sleep"><Data
-      ss:Type="String">http://www.fhir.org/guides/mfhir/ValueSet/temporal-relationship-to-sleep</Data></Cell>
+    <Cell ss:StyleID="s174" ss:HRef="http://www.fhir.org/guides/omhtofhir/ValueSet/temporal-relationship-to-sleep"><Data
+      ss:Type="String">http://www.fhir.org/guides/omhtofhir/ValueSet/temporal-relationship-to-sleep</Data></Cell>
     <Cell ss:StyleID="s138"/>
     <Cell ss:StyleID="s138"/>
     <Cell ss:StyleID="s138"/>

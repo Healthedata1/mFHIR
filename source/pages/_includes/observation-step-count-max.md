@@ -4,7 +4,7 @@
 	"id": "steps-example //  this is a server assigned resource id",
   "meta": {
   "source" : "Jawbone UP API // mappped from OmhDataPoint.header.acqusitionProvenance.sourceName",
-  "profile // Profiles this resource claims to conform to" : ["http://www.fhir.org/guides/mfhir/StructureDefinition/steps"]
+  "profile // Profiles this resource claims to conform to" : ["http://www.fhir.org/guides/omhtofhir/StructureDefinition/steps"]
 }
   "identifier // mapped from OmhDataPoint.header.dataPointId": [{
   "system" : "https://omh.org/shimmer/ids // The namespace for the identifier value",

@@ -5,10 +5,10 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
    <meta charset="UTF-8"/>
-  <title></title>
+  <title>OpenmHealthtoFHIR</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content=" Implemenation Guide" />
+<meta name="description" content="OpenmHealthtoFHIR Implemenation Guide" />
 <meta name="author" content="Open mHealth"/>
   <link href="fhir.css" rel="stylesheet"/>
 
@@ -74,12 +74,14 @@ can only resize using html  or css ;-(
 
 
       <div id="project-status" class="project-status"> <!-- ig title text -->
+
         
-        <b> Implementation Guide</b>
+        <b>Open mHealth to HL7 FHIR® Implementation Guide</b>
         
         
         CI Build
         
+
     </div><!-- end ig title text -->
 
   </div><!-- end container -->
@@ -107,7 +109,7 @@ can only resize using html  or css ;-(
           <span class="icon-bar">
           </span>
         </button>
-        <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3/index.html">FHIR</a>
+        <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
         <div class="nav-collapse collapse navbar-inverse-collapse">
 
        <!-- don't remove the line above - to add or remove a menu item commeent in or out -->
@@ -151,21 +153,20 @@ can only resize using html  or css ;-(
       <div class="row">  <!-- row -->
        <div class="inner-wrapper"> <!-- inner-wrapper -->
          <div class="col-12">  <!--col -->
-            <!-- content of page -->
 
 
 <!-- ============BreadCrumb=============== -->
 
 <nav class="breadcrumb">
   
-     <li><a href='index.html'><b>Home</b></a></li><li><a href='profiles.html'><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Omh Obs</b></li>
+    <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">Table of Contents</a> <li><a href='index.html'><b>Home</b></a></li><li><a href='profiles.html'><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Omh Obs</b></li>
 </nav>
 
 
 <!-- ============Publish box=============== -->
 
 
-<!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">Open mHealth to FHIR - Local Development build (v0.0.0). See the <a href="http://www.fhir.org/guides/omhtofhir/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
 <!-- 
 This is the {% if {{site.build}} == "ci" %}
     Continuous Integration Build
@@ -182,13 +183,62 @@ This is the {% if {{site.build}} == "ci" %}
 
 
 
+
   <style type="text/css">
-  h2,h3,h4,h5,h6{--pagenumber: "3.27"}
-  </style>
+    /* Section numbering*/
+    body{
+      counter-reset: pagenumber1 3  pagenumber2 1 section
+        }
+
+  h2{counter-reset: sub-section}
+  h3{counter-reset: composite}
+  h4{counter-reset: detail}
+  h5{counter-reset: more-detail}
+
+  h2:not([nocount^="true"]):before{
+    counter-increment: section;
+    content:  counter(pagenumber1) "." counter(pagenumber2)"." counter(section) " ";
+    color: silver;
+  }
+  h3:not([nocount^="true"]):before{
+    counter-increment: sub-section;
+    content: counter(pagenumber1) "." counter(pagenumber2)"." counter(section) "." counter(sub-section) " ";
+    color: silver;
+
+  }
+  h4:not([nocount^="true"]):before{
+    content: counter(pagenumber1) "." counter(pagenumber2)"." counter(section) "." counter(sub-section) "." counter(composite) " ";
+    color: silver;
+    counter-increment: composite;
+    counter-reset: detail 1;
+  }
+  h5:not([nocount^="true"]):before{
+
+    content: counter(pagenumber1) "." counter(pagenumber2)"." counter(section) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";
+    color: silver;
+    counter-increment: detail;
+    counter-reset: more-detail 1;
+  }
+  h6:not([nocount^="true"]):before{
+    content: counter(pagenumber1) "." counter(pagenumber2)"." counter(section) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";
+    color: silver;
+    counter-increment: more-detail;
+  }
+</style>
 
 
 
 <!-- ============nav-tabs=============== -->
+<!-- 
+page source: {{ page.path }}
+<br />
+page name: {{ page.name }}
+<br />
+page title: {{ page.title }}
+<br />
+page url: {{ page.url }}
+ -->
+
 
 
     <!--  - choose what you want  comment out or Change what you don't-->
@@ -198,6 +248,10 @@ This is the {% if {{site.build}} == "ci" %}
 
 
 
+	
+		
+			<li><a href="StructureDefinition-omh-obs-definitions.html">Detailed Descriptions</a></li>
+		
 	
 
 	
@@ -217,7 +271,7 @@ This is the {% if {{site.build}} == "ci" %}
 </ul>
 
 
-
+  
 
   <!-- ============CONTENT CONTENT=============== -->
 
@@ -226,27 +280,25 @@ This is the {% if {{site.build}} == "ci" %}
 
 <h3>Mappings for the StructureDefinition-omh-obs Profile.</h3>
 
-<a name="workflow"> </a><h3>Mappings for Workflow Mapping (<a href="http://hl7.org/fhir/workflow.html">http://hl7.org/fhir/workflow</a>)</h3><table class="grid">
- <tr><td colspan="3"><b>OpenmHealthObservationProfile</b></td></tr>
+<a name="workflow"> </a><h3>Mappings for Workflow Pattern (<a href="http://hl7.org/fhir/workflow.html">http://hl7.org/fhir/workflow</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>OmhObservationProfile</b></td></tr>
  <tr><td>Observation</td><td>Event</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>Event.identifier</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;basedOn</td><td>Event.basedOn</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;partOf</td><td>Event.partOf</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>Event.status</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>Event.code</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>Event.subject</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;context</td><td>Event.context</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>Event.context</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;effective[x]</td><td>Event.occurrence[x]</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>Event.performer</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;valueQuantity</td><td>Event.notDone, Event.notDoneReason  (maps to valeu[x] or dataAbsentReason)</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;dataAbsentReason</td><td>Event.notDone, Event.notDoneReason  (maps to valeu[x] or dataAbsentReason)</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;comment</td><td>Event.note</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>Event.performer.actor</td> </tr>
 </table>
 <a name="sct-concept"> </a><h3>Mappings for SNOMED CT Concept Domain Binding (http://snomed.info/conceptdomain)</h3><table class="grid">
- <tr><td colspan="3"><b>OpenmHealthObservationProfile</b></td></tr>
+ <tr><td colspan="3"><b>OmhObservationProfile</b></td></tr>
  <tr><td>Observation</td><td>&lt; 363787002 |Observable entity|</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>&lt; 445584004 |Report by finality status|</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>&lt; 363787002 |Observable entity| OR &lt; 386053000 |Evaluation procedure|</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;valueQuantity</td><td>&lt; 441742003 |Evaluation finding|</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;value[x]</td><td>&lt; 441742003 |Evaluation finding|</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;interpretation</td><td>&lt; 260245000 |Findings values|</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;bodySite</td><td>&lt; 123037004 |Body structure|</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;specimen</td><td>&lt; 123038009 |Specimen|</td> </tr>
@@ -260,21 +312,23 @@ This is the {% if {{site.build}} == "ci" %}
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;interpretation</td><td>&lt; 260245000 |Findings values|</td> </tr>
 </table>
 <a name="v2"> </a><h3>Mappings for HL7 v2 Mapping (<a href="http://hl7.org/comparison-v2.html">http://hl7.org/v2</a>)</h3><table class="grid">
- <tr><td colspan="3"><b>OpenmHealthObservationProfile</b></td></tr>
+ <tr><td colspan="3"><b>OmhObservationProfile</b></td></tr>
  <tr><td>Observation</td><td>OBX</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>OBX.21  For OBX segments from systems without OBX-21 support a combination of ORC/OBR and OBX must be negotiated between trading partners to uniquely identify the OBX segment. Depending on how V2 has been implemented each of these may be an option: 1) OBR-3 + OBX-3 + OBX-4 or 2) OBR-3 + OBR-4 + OBX-3 + OBX-4 or 2) some other way to uniquely ID the OBR/ORC + OBX-3 + OBX-4.</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;basedOn</td><td>ORC</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;partOf</td><td>Varies by domain</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>OBX-11</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>OBX-3</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>PID-3</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;context</td><td>PV1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;focus</td><td>OBX-3</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>PV1</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;effective[x]</td><td>OBX-14, and/or OBX-19 after v2.4  (depends on who observation made)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;issued</td><td>OBR.22 (or MSH.7), or perhaps OBX-19 (depends on who observation made)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>OBX.15 / (Practitioner)  OBX-16,  PRT-5:PRT-4='RO' /  (Device)  OBX-18 , PRT-10:PRT-4='EQUIP' / (Organization)  OBX-23,  PRT-8:PRT-4='PO'</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;valueQuantity</td><td>OBX.2, OBX.5, OBX.6</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;value[x]</td><td>OBX.2, OBX.5, OBX.6</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;dataAbsentReason</td><td>N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;interpretation</td><td>OBX-8</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;comment</td><td>NTE.3 (partner NTE to OBX, or sometimes another (child?) OBX)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;note</td><td>NTE.3 (partner NTE to OBX, or sometimes another (child?) OBX)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;bodySite</td><td>OBX-20</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;method</td><td>OBX-17</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;specimen</td><td>SPM segment</td> </tr>
@@ -285,8 +339,8 @@ This is the {% if {{site.build}} == "ci" %}
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>OBX-10</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;appliesTo</td><td>OBX-10</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>OBX-7</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;related</td><td>Relationships established by OBX-4 usage</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;hasMember</td><td>Relationships established by OBX-4 usage</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;derivedFrom</td><td>Relationships established by OBX-4 usage</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;component</td><td>containment by OBX-4?</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>OBX-3</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>OBX.2, OBX.5, OBX.6</td> </tr>
@@ -295,37 +349,35 @@ This is the {% if {{site.build}} == "ci" %}
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;referenceRange</td><td>OBX.7</td> </tr>
 </table>
 <a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
- <tr><td colspan="3"><b>OpenmHealthObservationProfile</b></td></tr>
- <tr><td>Observation</td><td>Entity. Role, or Act</td> </tr>
+ <tr><td colspan="3"><b>OmhObservationProfile</b></td></tr>
+ <tr><td>Observation</td><td>Entity. Role, or Act, Observation[classCode=OBS, moodCode=EVN]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;text</td><td>Act.text?</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td>N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>id</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;basedOn</td><td>.outboundRelationship[typeCode=FLFS].target</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;basedOn</td><td>.inboundRelationship[typeCode=COMP].source[moodCode=EVN]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;partOf</td><td>.outboundRelationship[typeCode=FLFS].target</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>status  Amended &amp; Final are differentiated by whether it is the subject of a ControlAct event with a type of &quot;revise&quot;</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>.outboundRelationship[typeCode=&quot;COMP].target[classCode=&quot;LIST&quot;, moodCode=&quot;EVN&quot;].code</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>code</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>participation[typeCode=SBJ]</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;context</td><td>inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>participation[typeCode=RTGT]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;focus</td><td>participation[typeCode=SBJ]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;effective[x]</td><td>effectiveTime</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;issued</td><td>participation[typeCode=AUT].time</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>participation[typeCode=PRF]</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;valueQuantity</td><td>value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;value[x]</td><td>value</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;dataAbsentReason</td><td>value.nullFlavor</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;interpretation</td><td>interpretationCode</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;comment</td><td>subjectOf.observationEvent[code=&quot;annotation&quot;].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;note</td><td>subjectOf.observationEvent[code=&quot;annotation&quot;].value</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;bodySite</td><td>targetSiteCode</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;method</td><td>methodCode</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;specimen</td><td>participation[typeCode=SPC].specimen</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;device</td><td>participation[typeCode=DEV]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (modality)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url</td><td>N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;valueCode</td><td>N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reference</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;identifier</td><td>.identifier</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display</td><td>N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;referenceRange</td><td>outboundRelationship[typeCode=REFV]/target[classCode=OBS, moodCode=EVN]</td> </tr>
@@ -338,12 +390,8 @@ This is the {% if {{site.build}} == "ci" %}
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;appliesTo</td><td>interpretationCode</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;age</td><td>outboundRelationship[typeCode=PRCN].targetObservationCriterion[code=&quot;age&quot;].value</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>value:ST</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;related</td><td>outBoundRelationship</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>.typeCode</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;target</td><td>.targetObservation</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;hasMember</td><td>outBoundRelationship</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;derivedFrom</td><td>.targetObservation</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;component</td><td>outBoundRelationship[typeCode=COMP]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
@@ -354,26 +402,27 @@ This is the {% if {{site.build}} == "ci" %}
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;interpretation</td><td>interpretationCode</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;referenceRange</td><td>outboundRelationship[typeCode=REFV]/target[classCode=OBS, moodCode=EVN]</td> </tr>
 </table>
-<a name="w5"> </a><h3>Mappings for W5 Mapping (<a href="http://hl7.org/fhir/w5.html">http://hl7.org/fhir/w5</a>)</h3><table class="grid">
- <tr><td colspan="3"><b>OpenmHealthObservationProfile</b></td></tr>
- <tr><td>Observation</td><td>clinical.diagnostics</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>id</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>status</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>class</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>what</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>who.focus</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;context</td><td>context</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;effective[x]</td><td>when.done</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;issued</td><td>when.recorded</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>who.actor</td> </tr>
+<a name="w5"> </a><h3>Mappings for FiveWs Pattern Mapping (http://hl7.org/fhir/fivews)</h3><table class="grid">
+ <tr><td colspan="3"><b>OmhObservationProfile</b></td></tr>
+ <tr><td>Observation</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>FiveWs.identifier</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>FiveWs.status</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>FiveWs.class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>FiveWs.what[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>FiveWs.subject[x], FiveWs.subject</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;focus</td><td>FiveWs.subject[x], FiveWs.subject</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>FiveWs.context</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;effective[x]</td><td>FiveWs.done[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;issued</td><td>FiveWs.recorded</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>FiveWs.actor</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;component</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>what</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>FiveWs.what[x]</td> </tr>
 </table>
-<a name="sct-attr"> </a><h3>Mappings for SNOMED CT Attribute Binding (<a href="http://snomed.info/sct">http://snomed.info/sct</a>)</h3><table class="grid">
- <tr><td colspan="3"><b>OpenmHealthObservationProfile</b></td></tr>
+<a name="sct-attr"> </a><h3>Mappings for SNOMED CT Attribute Binding (http://snomed.org/attributebinding)</h3><table class="grid">
+ <tr><td colspan="3"><b>OmhObservationProfile</b></td></tr>
  <tr><td>Observation</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>116680003 |Is a|</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;valueQuantity</td><td>363714003 |Interprets|</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;value[x]</td><td>363714003 |Interprets|</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;interpretation</td><td>363713009 |Has interpretation|</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;bodySite</td><td>718497002 |Inherent location|</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;specimen</td><td>704319004 |Inherent in|</td> </tr>
@@ -419,12 +468,12 @@ This is the {% if {{site.build}} == "ci" %}
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-     <a href="http://www.openmhealth.org/">Open mHealth </a> openmhealth.mfhir#0.0.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR 3.0.1</a> created <span href="#" data-toggle="tooltip" data-placement="top" title="Thu, Jun 6, 2019 17:39-0700">2019-06-06</span>. <br/>
+     <a href="http://www.openmhealth.org/">Open mHealth </a> openmhealth.mfhir#0.0.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/index.html">FHIR 4.0.1</a> created <span href="#" data-toggle="tooltip" data-placement="top" title="Tue, Jul 14, 2020 18:46-0700">2020-07-14</span>. <br/>
       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a>
       | <a style="color: #81BEF7" href="qa.html">QA Report</a>
-      | <a style="color: #81BEF7" href="#">Version History</a>
-      | <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
-      | <a style="color: #81BEF7" href="https://github.com/Healthedata1/IG-Template2/issues" target="_blank">Propose a change</a>
+      | <a style="color: #81BEF7" href="http://hl7.org/fhir/us/core/history.html">Version History</a>
+      | <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+      | <a style="color: #81BEF7" href="http://hl7.org/fhir-issues" target="_blank">Propose a change</a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->

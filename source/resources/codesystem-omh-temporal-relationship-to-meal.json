@@ -25,6 +25,6 @@
   "title": "Omh Temporal Relationship To Meal Code System",
   "resourceType": "CodeSystem",
   "status": "draft",
-  "url": "http://www.fhir.org/guides/mfhir/CodeSystem/omh-temporal-relationship-to-meal",
+  "url": "http://www.fhir.org/guides/omhtofhir/CodeSystem/omh-temporal-relationship-to-meal",
   "version": "0.0.0"
 }

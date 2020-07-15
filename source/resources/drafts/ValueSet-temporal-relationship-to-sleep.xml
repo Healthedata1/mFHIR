@@ -5,7 +5,7 @@
 		<profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
 	</meta>
 
-	<url value="http://www.fhir.org/guides/mfhir/ValueSet/temporal-relationship-to-sleep"/>
+	<url value="http://www.fhir.org/guides/omhtofhir/ValueSet/temporal-relationship-to-sleep"/>
 	<version value="0.0.0"/>
 	<name value="temporal-relationship-to-sleep"/>
 	<status value="draft"/>

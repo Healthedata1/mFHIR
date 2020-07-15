@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd%20-STU3/allergyintolerance.xsd">
 	<id value="designation-use"/>
-	<url value="http://www.fhir.org/guides/mfhir/CodeSystem/designation-use"/>
+	<url value="http://www.fhir.org/guides/omhtofhir/CodeSystem/designation-use"/>
 	<version value="0.0.0"/>
 	<name value="OmhDesignationUse"/>
 	<title value="Open mHealth CodeSystem Designation Use"/>
@@ -9,7 +9,7 @@
 	<date value="2018-05-28"/>
 	<description value="Open mHealth CodeSystem Designation Use is defined to extend the [designation use concepts](http://hl7.org/fhir/STU3/valueset-designation-use.html)  to representing the term used in the CodeableConcept `.text` element."/>
 	<caseSensitive value="true"/>
-	<valueSet value="http://www.fhir.org/guides/mfhir/ValueSetg/designation-use"/>
+	<valueSet value="http://www.fhir.org/guides/omhtofhir/ValueSetg/designation-use"/>
 	<content value="complete"/>
 	<concept>
 		<code value="text"/>

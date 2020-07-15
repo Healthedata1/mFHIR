@@ -3,15 +3,14 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="omh-device-modality"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Open mHealth to FHIR Device Modality</h2><div><p>Identifies whether device measurement is sensed directly or entered by the user</p>
-</div><p>This code system http://www.fhir.org/guides/mfhir/CodeSystem/omh-device-modality defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">sensed<a name="omh-device-modality-sensed"> </a></td><td>Sensed</td><td>Device measurement is sensed directly by the device</td></tr><tr><td style="white-space:nowrap">self-reported<a name="omh-device-modality-self-reported"> </a></td><td>Self Reported</td><td>Device measurement is entered by the user</td></tr></table></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system http://www.fhir.org/guides/omhtofhir/CodeSystem/omh-device-modality defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">sensed<a name="omh-device-modality-sensed"> </a></td><td>Sensed</td><td>Device measurement is sensed directly by the device</td></tr><tr><td style="white-space:nowrap">self-reported<a name="omh-device-modality-self-reported"> </a></td><td>Self Reported</td><td>Device measurement is entered by the user</td></tr></table></div>
   </text>
-  <url value="http://www.fhir.org/guides/mfhir/CodeSystem/omh-device-modality"/>
+  <url value="http://www.fhir.org/guides/omhtofhir/CodeSystem/omh-device-modality"/>
   <version value="0.0.0"/>
   <name value="omh-device-modality"/>
   <title value="Open mHealth to FHIR Device Modality"/>
   <status value="draft"/>
-  <date value="2018-11-17T00:00:00-08:00"/>
+  <date value="2018-11-17"/>
   <contact>
     <telecom>
       <system value="url"/>
@@ -20,7 +19,7 @@
   </contact>
   <description value="Identifies whether device measurement is sensed directly or entered by the user"/>
   <caseSensitive value="true"/>
-  <valueSet value="http://www.fhir.org/guides/mfhir/ValueSet/omh-device-modality"/>
+  <valueSet value="http://www.fhir.org/guides/omhtofhir/ValueSet/omh-device-modality"/>
   <content value="complete"/>
   <concept>
     <code value="sensed"/>

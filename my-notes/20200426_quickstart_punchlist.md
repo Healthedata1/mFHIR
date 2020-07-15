@@ -55,7 +55,8 @@
 1. heart rate [resting]: made effective_time_frame required, removed property user_notes
 1. Oxygen saturation: made effective_time_frame required
 1. respiratory rate: made effective_time_frame required
-1. sleep duration: please use schema total sleep time https://www.openmhealth.org/documentation/#/schema-docs/schema-library/schemas/omh_total-sleep-time
+1. sleep duration: please use schema total sleep time https://
+www.openmhealth.org/documentation/#/schema-docs/schema-library/schemas/omh_total-sleep-time
 1. step count: changed datatype of property step_count to unit_value
 
 As usual, please let me know if you have any questions.
@@ -64,7 +65,7 @@ As usual, please let me know if you have any questions.
 
    link to the github page on OMH site?
 
-   Step Count / sleep. big changes
+   Step Count / sleep. big changesOMH_FHIR_Concept_Mapping_Table
 
 
 map schema source in meta source - or Provenance -
@@ -86,4 +87,33 @@ Provenance.agent.who references the Organization or Device performing the transf
 Provenance.entity can optionally contain the whole v2 message as a Binary or DocumentReference in .what and a .role of "derivation" (or maybe "source"?)
 
 
-Also contain the Provenance in the observation.
+Also contain the Provenance in the observation.  - done
+
+
+OMH_FHIR_Concept_Maps ==> OMH_FHIR_Concept_Mapping_Table
+fix all table names and column names
+todo mapping of body sites to SNOMED
+map pulse ox to 59408-5  
+add pulse ox components to component mapping table done
+add descriptive denom table
+add cuff location adn body posture to concept map  done...but need snomed maps
+add body posture to component table  done
+add extra coding for O2 by pulse ox for USCore  
+
+Source tables in excel on shared drive - need to update git when done with edits
+
+versions in headers are wrong. need to map these
+
+
+======= 2020-07-13 Update ==========
+
+Budget for remaining work for Quick Start Guide
+
+- [ ] any updates to new version of headers 1-2 hrs
+- [ ] update concept mappings to standard coding:  4-6 hrs
+- [ ] add iframes for OMH to FHIR profiles (including updates to profile to r4): 2-4 hrs
+- [ ] convert all tables to git csv files for better readability and useability: 1-2 hrs
+- [ ] update mapper tool to current version of mFHIR 4-6 hrs
+- [ ] QA and validation 2 hrs
+
+14 - 22 hrs  ($2800-$4400)

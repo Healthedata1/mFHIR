@@ -1,0 +1,60 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "extension-modality",
+  "url": "http://www.fhir.org/guides/omhtofhir/StructureDefinition/extension-modality",
+  "version": "0.0.0",
+  "name": "OmhModalityExtension",
+  "title": "Open mHealth to FHIR Modality Extension",
+  "status": "active",
+  "experimental": false,
+  "date": "2019-06-06",
+  "description": "The modality whereby the measure is obtained.  Choice of sensed|self-reported .",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Observation.device"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "The modality whereby the measure is obtained.  Choice of sensed|self-reported .",
+        "definition": "The modality whereby the measure is obtained.  Choice of sensed|self-reported .",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "http://www.fhir.org/guides/omhtofhir/StructureDefinition/extension-modality"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "The modality whereby the measure is obtained.  Choice of sensed|self-reported .",
+          "valueSet": "http://www.fhir.org/guides/omhtofhir/ValueSet/modality-codes"
+        }
+      }
+    ]
+  }
+}

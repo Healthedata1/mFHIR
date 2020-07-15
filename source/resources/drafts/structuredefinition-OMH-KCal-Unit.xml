@@ -4,7 +4,7 @@
   <meta>
     <lastUpdated value="2018-02-28T16:42:50.374-08:00" />
   </meta>
-  <url value="http://www.fhir.org/guides/mfhir/StructureDefinition/omh-kcal-unit" />
+  <url value="http://www.fhir.org/guides/omhtofhir/StructureDefinition/omh-kcal-unit" />
   <version value="0.0.0" />
   <name value="OMH-KCal-Unit" />
   <title value="OMH KCal Unit Schema" />

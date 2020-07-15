@@ -1,0 +1,64 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "contained-p",
+  "url": "http://www.fhir.org/guides/omhtofhir/StructureDefinition/contained-p",
+  "version": "0.0.0",
+  "name": "OmhContainedPatientProfile",
+  "title": "Open mHealth to FHIR Contained Patient Profile",
+  "status": "active",
+  "experimental": false,
+  "date": "2018-11-23",
+  "description": "The Open mHealth Contained Patient Profile defines the minimum expectations for the using a contained Patient resource within the Open mHealth  DocumentReference profile to represent an opaque patient identifier.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Patient",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Patient",
+        "path": "Patient",
+        "short": "OMH Contained Patient Profile",
+        "definition": "The Open mHealth Contained Patient Profile defines the minimum expectations for the using a contained Patient resource within the Open mHealth  DocumentReference profile to represent an opaque patient identifier.",
+        "mustSupport": false
+      },
+      {
+        "id": "Patient.id",
+        "path": "Patient.id",
+        "short": "Contained patient resource id",
+        "requirements": "Contained patient resource id is referenced from within the containing resource.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier",
+        "path": "Patient.identifier",
+        "short": "R24 Server/Shimmer Opaque identifier",
+        "definition": "The opaque patient identifier assigned to omh shemas.  It is assigned by the R24 Server/Shimmer application.  *todo - more doco on how this done or link*.",
+        "requirements": "The opaque patient identifier is needed for searching omh schemas by patient.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier.system",
+        "path": "Patient.identifier.system",
+        "comment": "There should be an identifer system associated with the idenfier values.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier.value",
+        "path": "Patient.identifier.value",
+        "comment": "The actual patient identifier value.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      }
+    ]
+  }
+}

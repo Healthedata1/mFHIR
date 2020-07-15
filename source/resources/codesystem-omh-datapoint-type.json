@@ -40,7 +40,7 @@
   "title": "Open mHealth to FHIR Datapoint Type",
   "resourceType": "CodeSystem",
   "status": "draft",
-  "url": "http://www.fhir.org/guides/mfhir/CodeSystem/omh-datapoint-type",
-  "valueSet": "http://www.fhir.org/guides/mfhir/ValueSet/omh-datapoint-type",
+  "url": "http://www.fhir.org/guides/omhtofhir/CodeSystem/omh-datapoint-type",
+  "valueSet": "http://www.fhir.org/guides/omhtofhir/ValueSet/omh-datapoint-type",
   "version": "0.0.0"
 }

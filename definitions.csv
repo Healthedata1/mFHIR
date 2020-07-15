@@ -7,13 +7,13 @@ status,draft
 publisher,Open mHealth
 contact.system,url
 contact.value,http://www.openmhealth.org/
-extensions,extension-specimenCode|extension-modality
+extensions,
 searches,
 codesystems,
 valuesets,
 structuremaps,
 source,ig.xml
-version,3.0.1
+version,4.0.1
 fixed-business-version,0.0.0
 paths.pages,framework|source/pages
 paths.resources,source/resources|source/examples
@@ -21,14 +21,14 @@ paths.temp,generated_output/temp
 paths.output,docs
 paths.txCache,generated_output/txCache
 paths.qa,generated_output/qa
-paths.specification,http://hl7.org/fhir/STU3
+paths.specification,http://hl7.org/fhir/R4
 jurisdiction,
 sct-edition,
 no-inactive-codes,FALSE
 broken-links,warning
 gen-examples,FALSE
 do-transforms,FALSE
-canonicalBase,http://www.fhir.org/guides/mfhir
+canonicalBase,http://www.fhir.org/guides/omhtofhir
 dependencyList.name,
 dependencyList.location,
 dependencyList.source,

@@ -3,7 +3,7 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="descriptive-statistic-denominator"/>
 
-  <url value="http://www.fhir.org/guides/mfhir/CodeSystem/descriptive-statistic-denominator"/>
+  <url value="http://www.fhir.org/guides/omhtofhir/CodeSystem/descriptive-statistic-denominator"/>
   <version value="0.0.0"/>
   <name value="descriptive-statistic-denominator"/>
   <status value="draft"/>
@@ -26,7 +26,7 @@
     </coding>
   </jurisdiction>
   <caseSensitive value="true"/>
-  <valueSet value="http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic-denominator"/>
+  <valueSet value="http://www.fhir.org/guides/omhtofhir/ValueSet/descriptive-statistic-denominator"/>
   <content value="complete"/>
   <concept>
     <code value="d"/>

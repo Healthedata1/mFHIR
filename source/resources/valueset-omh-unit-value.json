@@ -64,6 +64,6 @@
   "publisher": "Open mHealth",
   "resourceType": "ValueSet",
   "status": "draft",
-  "url": "http://www.fhir.org/guides/mfhir/ValueSet/omh-unit-value",
+  "url": "http://www.fhir.org/guides/omhtofhir/ValueSet/omh-unit-value",
   "version": "0.0.0"
 }

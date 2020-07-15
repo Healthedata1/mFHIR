@@ -1,0 +1,49 @@
+{
+    "compose": {
+        "include": [
+            {
+                "concept": [
+                    {
+                        "code": "d",
+                        "display": "d"
+                    },
+                    {
+                        "code": "episode",
+                        "display": "episode"
+                    },
+                    {
+                        "code": "meal",
+                        "display": "meal"
+                    },
+                    {
+                        "code": "session",
+                        "display": "session"
+                    }
+                ],
+                "system": "http://www.fhir.org/guides/omhtofhir/CodeSystem/descriptive-statistic-denominator"
+            }
+        ]
+    },
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.openmhealth.org/"
+                }
+            ]
+        }
+    ],
+    "copyright": "Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved.",
+    "date": "2018-04-28T15:55:00.13Z",
+    "description": "The denominator of the descriptive statistic when the measures has an implicit duration. For example in the context of step count, if the descriptive statistic is 'average' and the statistic denominator is 'd' the value describes average daily step count during the period delimited by the effective time frame; in the context of step count, if the descriptive statistic is 'maximum' and the statistic denominator is 'session' the value describes maximum step count per session during the period delimited by the effective time frame.",
+    "id": "descriptive-statistic-denominator",
+    "immutable": false,
+    "name": "descriptive-statistic-denominator",
+    "publisher": "Open mHealth",
+    "resourceType": "ValueSet",
+    "status": "draft",
+    "title": "Descriptive Statistic Denominator",
+    "url": "http://www.fhir.org/guides/omhtofhir/ValueSet/descriptive-statistic-denominator",
+    "version": "0.0.0"
+}

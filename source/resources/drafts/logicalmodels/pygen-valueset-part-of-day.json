@@ -1,0 +1,49 @@
+{
+    "compose": {
+        "include": [
+            {
+                "concept": [
+                    {
+                        "code": "73775008",
+                        "display": "morning"
+                    },
+                    {
+                        "code": "422133006",
+                        "display": "afternoon"
+                    },
+                    {
+                        "code": "3157002",
+                        "display": "evening"
+                    },
+                    {
+                        "code": "2546009",
+                        "display": "night"
+                    }
+                ],
+                "system": "http://snomed.info/sct"
+            }
+        ]
+    },
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.openmhealth.org/"
+                }
+            ]
+        }
+    ],
+    "copyright": "Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved. This value set includes content from SNOMED CT, which is copyright 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.",
+    "date": "2018-04-28T15:55:00.13Z",
+    "description": "The period of time in which a day is commonly divided.",
+    "id": "part-of-day",
+    "immutable": false,
+    "name": "part-of-day",
+    "publisher": "Open mHealth",
+    "resourceType": "ValueSet",
+    "status": "draft",
+    "title": "Part Of Day",
+    "url": "http://www.fhir.org/guides/omhtofhir/ValueSet/part-of-day",
+    "version": "0.0.0"
+}

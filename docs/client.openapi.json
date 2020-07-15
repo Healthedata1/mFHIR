@@ -4,6 +4,7 @@
     "title": "Client",
     "description": "This resource defines the expected capabilities ",
     "license": {
+      "name": "Creative Commons Zero v1.0 Universal",
       "url": "http://spdx.org/licenses/CC0-1.0.html"
     },
     "version": "0.0.0",
@@ -12,7 +13,7 @@
     }
   },
   "externalDocs": {
-    "url": "http://www.fhir.org/guides/mfhir/CapabilityStatement/client",
+    "url": "http://www.fhir.org/guides/omhtofhir/CapabilityStatement/client",
     "description": "FHIR CapabilityStatement"
   },
   "components": {

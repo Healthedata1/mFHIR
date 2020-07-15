@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd%20-STU3/account.xsd">
   <id value="omh-datapoint-template"/>
-  <url value="http://www.fhir.org/guides/mfhir/StructureDefinition/omh-datapoint-template"/>
+  <url value="http://www.fhir.org/guides/omhtofhir/StructureDefinition/omh-datapoint-template"/>
   <version value="0.0.0"/>
   <name value="OmhDatapointTemplate"/>
   <status value="draft"/>
@@ -53,7 +53,7 @@
       <max value="1"/>
       <type>
         <code value="StructureDefinition"/>
-        <profile                  value="http://www.fhir.org/guides/mfhir/StructureDefinition/omh-header"/>
+        <profile                  value="http://www.fhir.org/guides/omhtofhir/StructureDefinition/omh-header"/>
       </type>
       <mustSupport value="false"/>
       <isModifier value="false"/>

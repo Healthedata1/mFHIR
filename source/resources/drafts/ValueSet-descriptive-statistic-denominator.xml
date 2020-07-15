@@ -6,7 +6,7 @@
     <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
   </meta>
 
-  <url value="http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic-denominator"/>
+  <url value="http://www.fhir.org/guides/omhtofhir/ValueSet/descriptive-statistic-denominator"/>
   <version value="0.0.0"/>
   <name value="descriptive-statistic-denominator"/>
   <status value="draft"/>
@@ -30,7 +30,7 @@
   <immutable value="true"/>
   <compose>
     <include>
-      <system value="http://www.fhir.org/guides/mfhir/CodeSystem/descriptive-statistic-denominator"/>
+      <system value="http://www.fhir.org/guides/omhtofhir/CodeSystem/descriptive-statistic-denominator"/>
     </include>
   </compose>
 </ValueSet>

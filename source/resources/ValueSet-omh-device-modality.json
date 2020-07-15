@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "omh-device-modality",
-  "url": "http://www.fhir.org/guides/mfhir/ValueSet/omh-device-modality",
+  "url": "http://www.fhir.org/guides/omhtofhir/ValueSet/omh-device-modality",
   "version": "0.0.0",
   "name": "OmhDeviceModalityValueSet",
   "title": "Open mHealth to FHIR Device Modality ValueSet",
@@ -23,7 +23,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://www.fhir.org/guides/mfhir/CodeSystem/omh-device-modality"
+        "system": "http://www.fhir.org/guides/omhtofhir/CodeSystem/omh-device-modality"
       }
     ]
   }

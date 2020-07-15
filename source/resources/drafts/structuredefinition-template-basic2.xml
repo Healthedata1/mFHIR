@@ -2,7 +2,7 @@
 
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="template-basic2"/>
-  <url value="http://www.fhir.org/guides/mfhir/StructureDefinition/template-basic2"/>
+  <url value="http://www.fhir.org/guides/omhtofhir/StructureDefinition/template-basic2"/>
   <version value="0.0.0"/>
   <name value="Profile template-basic2"/>
   <status value="draft"/>
@@ -46,7 +46,7 @@
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://www.fhir.org/guides/mfhir/StructureDefinition/template-blah"/>
+        <profile value="http://www.fhir.org/guides/omhtofhir/StructureDefinition/template-blah"/>
       </type>
       <mustSupport value="true"/>
       <isModifier value="false"/>
@@ -60,7 +60,7 @@
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://www.fhir.org/guides/mfhir/StructureDefinition/template-complex"/>
+        <profile value="http://www.fhir.org/guides/omhtofhir/StructureDefinition/template-complex"/>
       </type>
       <mustSupport value="true"/>
       <isModifier value="false"/>
@@ -112,7 +112,7 @@
       <max value="1"/>
       <type>
         <code value="Reference"/>
-        <profile value="http://www.fhir.org/guides/mfhir/StructureDefinition/ifr"/>
+        <profile value="http://www.fhir.org/guides/omhtofhir/StructureDefinition/ifr"/>
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
       </type>
       <mustSupport value="true"/>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="437595c6-ffa3-49c8-8477-5ca39e0202d0"/>
+  <meta>
+    <lastUpdated value="2020-07-14T18:46:30.642-07:00"/>
+  </meta>
+  <type value="collection"/>
+  <entry>
+    <fullUrl value="http://www.fhir.org/guides/omhtofhir/ValueSet/omh-device-modality"/>
+    <resource>
+      <ValueSet>
+        <id value="omh-device-modality"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 2 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-omh-device-modality.html">Open mHealth to FHIR Device Modality v0.0.0 (CodeSystem)</a>
+            </p>
+            <p>All codes from system 
+              <a href="CodeSystem-omh-device-modality.html">
+                <code>http://www.fhir.org/guides/omhtofhir/CodeSystem/omh-device-modality</code>
+              </a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.fhir.org-guides-omhtofhir-CodeSystem-omh-device-modality-sensed"> </a>
+                  <a href="CodeSystem-omh-device-modality.html#omh-device-modality-sensed">sensed</a>
+                </td>
+                <td>Sensed</td>
+                <td>Device measurement is sensed directly by the device</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.fhir.org-guides-omhtofhir-CodeSystem-omh-device-modality-self-reported"> </a>
+                  <a href="CodeSystem-omh-device-modality.html#omh-device-modality-self-reported">self-reported</a>
+                </td>
+                <td>Self Reported</td>
+                <td>Device measurement is entered by the user</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://www.fhir.org/guides/omhtofhir/ValueSet/omh-device-modality"/>
+        <version value="0.0.0"/>
+        <name value="OmhDeviceModalityValueSet"/>
+        <title value="Open mHealth to FHIR Device Modality ValueSet"/>
+        <status value="draft"/>
+        <experimental value="false"/>
+        <date value="2019-06-06T10:50:59-07:00"/>
+        <contact>
+          <telecom>
+            <system value="url"/>
+            <value value="http://www.openmhealth.org/"/>
+          </telecom>
+        </contact>
+        <description value="The modality whereby the measure is obtained.  Choice of sensed|self-reported ."/>
+        <immutable value="true"/>
+        <expansion>
+          <identifier value="urn:uuid:361ae4a0-2d1e-4b63-b273-24ff29ce4cc9"/>
+          <timestamp value="2020-07-14T18:46:56-07:00"/>
+          <total value="2"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://www.fhir.org/guides/omhtofhir/CodeSystem/omh-device-modality|0.0.0"/>
+          </parameter>
+          <contains>
+            <system value="http://www.fhir.org/guides/omhtofhir/CodeSystem/omh-device-modality"/>
+            <code value="sensed"/>
+            <display value="Sensed"/>
+          </contains>
+          <contains>
+            <system value="http://www.fhir.org/guides/omhtofhir/CodeSystem/omh-device-modality"/>
+            <code value="self-reported"/>
+            <display value="Self Reported"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+</Bundle>

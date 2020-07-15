@@ -4,6 +4,7 @@
     "title": "Server",
     "description": "This resource defines the expected capabilities ",
     "license": {
+      "name": "Creative Commons Zero v1.0 Universal",
       "url": "http://spdx.org/licenses/CC0-1.0.html"
     },
     "version": "0.0.0",
@@ -12,7 +13,7 @@
     }
   },
   "externalDocs": {
-    "url": "http://www.fhir.org/guides/mfhir/CapabilityStatement/server",
+    "url": "http://www.fhir.org/guides/omhtofhir/CapabilityStatement/server",
     "description": "FHIR CapabilityStatement"
   },
   "paths": {
@@ -28,12 +29,12 @@
             "content": {
               "application/fhir+json": {
                 "schema": {
-                  "$ref": "https://hl7.org/fhir/STU3/fhir.schema.json#/definitions/OperationOutcome"
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
                 }
               },
               "application/fhir+xml": {
                 "schema": {
-                  "$ref": "https://hl7.org/fhir/STU3/OperationOutcome.xsd"
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
                 }
               }
             }
@@ -43,12 +44,12 @@
             "content": {
               "application/fhir+json": {
                 "schema": {
-                  "$ref": "https://hl7.org/fhir/STU3/fhir.schema.json#/definitions/CapabilityStatement"
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/CapabilityStatement"
                 }
               },
               "application/fhir+xml": {
                 "schema": {
-                  "$ref": "https://hl7.org/fhir/STU3/CapabilityStatement.xsd"
+                  "$ref": "https://hl7.org/fhir/R4/CapabilityStatement.xsd"
                 }
               }
             }
@@ -82,12 +83,12 @@
             "content": {
               "application/fhir+json": {
                 "schema": {
-                  "$ref": "https://hl7.org/fhir/STU3/fhir.schema.json#/definitions/OperationOutcome"
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
                 }
               },
               "application/fhir+xml": {
                 "schema": {
-                  "$ref": "https://hl7.org/fhir/STU3/OperationOutcome.xsd"
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
                 }
               }
             }
@@ -97,12 +98,12 @@
             "content": {
               "application/fhir+json": {
                 "schema": {
-                  "$ref": "https://hl7.org/fhir/STU3/fhir.schema.json#/definitions/Bundle"
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Bundle"
                 }
               },
               "application/fhir+xml": {
                 "schema": {
-                  "$ref": "https://hl7.org/fhir/STU3/Bundle.xsd"
+                  "$ref": "https://hl7.org/fhir/R4/Bundle.xsd"
                 }
               }
             }
@@ -136,12 +137,12 @@
             "content": {
               "application/fhir+json": {
                 "schema": {
-                  "$ref": "https://hl7.org/fhir/STU3/fhir.schema.json#/definitions/OperationOutcome"
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
                 }
               },
               "application/fhir+xml": {
                 "schema": {
-                  "$ref": "https://hl7.org/fhir/STU3/OperationOutcome.xsd"
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
                 }
               }
             }
@@ -159,12 +160,12 @@
             "content": {
               "application/fhir+json": {
                 "schema": {
-                  "$ref": "https://hl7.org/fhir/STU3/fhir.schema.json#/definitions/Basic"
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Basic"
                 }
               },
               "application/fhir+xml": {
                 "schema": {
-                  "$ref": "https://hl7.org/fhir/STU3/Basic.xsd"
+                  "$ref": "https://hl7.org/fhir/R4/Basic.xsd"
                 }
               }
             }
@@ -201,12 +202,12 @@
             "content": {
               "application/fhir+json": {
                 "schema": {
-                  "$ref": "https://hl7.org/fhir/STU3/fhir.schema.json#/definitions/OperationOutcome"
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
                 }
               },
               "application/fhir+xml": {
                 "schema": {
-                  "$ref": "https://hl7.org/fhir/STU3/OperationOutcome.xsd"
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
                 }
               }
             }
@@ -216,12 +217,12 @@
             "content": {
               "application/fhir+json": {
                 "schema": {
-                  "$ref": "https://hl7.org/fhir/STU3/fhir.schema.json#/definitions/Bundle"
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Bundle"
                 }
               },
               "application/fhir+xml": {
                 "schema": {
-                  "$ref": "https://hl7.org/fhir/STU3/Bundle.xsd"
+                  "$ref": "https://hl7.org/fhir/R4/Bundle.xsd"
                 }
               }
             }
@@ -287,12 +288,12 @@
             "content": {
               "application/fhir+json": {
                 "schema": {
-                  "$ref": "https://hl7.org/fhir/STU3/fhir.schema.json#/definitions/OperationOutcome"
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/OperationOutcome"
                 }
               },
               "application/fhir+xml": {
                 "schema": {
-                  "$ref": "https://hl7.org/fhir/STU3/OperationOutcome.xsd"
+                  "$ref": "https://hl7.org/fhir/R4/OperationOutcome.xsd"
                 }
               }
             }
@@ -310,12 +311,12 @@
             "content": {
               "application/fhir+json": {
                 "schema": {
-                  "$ref": "https://hl7.org/fhir/STU3/fhir.schema.json#/definitions/Basic"
+                  "$ref": "https://hl7.org/fhir/R4/fhir.schema.json#/definitions/Basic"
                 }
               },
               "application/fhir+xml": {
                 "schema": {
-                  "$ref": "https://hl7.org/fhir/STU3/Basic.xsd"
+                  "$ref": "https://hl7.org/fhir/R4/Basic.xsd"
                 }
               }
             }
