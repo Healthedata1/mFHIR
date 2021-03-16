@@ -111,7 +111,7 @@ Budget for remaining work for Quick Start Guide
 
 - [ ] any updates to new version of headers 1-2 hrs
 - [ ] update concept mappings to standard coding:  4-6 hrs
-- [ ] add iframes for OMH to FHIR profiles (including updates to profile to r4): 2-4 hrs
+- [X] add iframes for OMH to FHIR profiles (including updates to profile to r4): 2-4 hrs  = 3 hrs
 - [ ] convert all tables to git csv files for better readability and useability: 1-2 hrs
 - [ ] update mapper tool to current version of mFHIR 4-6 hrs
 - [ ] QA and validation 2 hrs
