@@ -1,0 +1,12 @@
+{
+  "url": "http://www.fhir.org/guides/omhtofhir/ImplementationGuide/openmhealth.mfhir-0.0.0",
+  "name": "OpenmHealthtoFHIR",
+  "package-id": "openmhealth.mfhir",
+  "ig-ver": "0.0.0",
+  "date": "Tue, 14 Jul, 2020 18:46:30 -0700",
+  "errs": 14,
+  "warnings": 22,
+  "hints": 2,
+  "version": "4.0.1",
+  "tool": "4.4.0 (3)"
+}

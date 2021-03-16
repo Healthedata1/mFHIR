@@ -955,7 +955,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">extension.uri</Data></Cell>
-    <Cell ss:StyleID="Default"><Data ss:Type="String">http://www.fhir.org/guides/mfhir/StructureDefinition/template-</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">http://www.fhir.org/guides/omhtofhir/StructureDefinition/template-</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s81"><Data ss:Type="String">introduction</Data></Cell>

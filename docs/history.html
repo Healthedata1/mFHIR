@@ -5,10 +5,10 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
    <meta charset="UTF-8"/>
-  <title></title>
+  <title>OpenmHealthtoFHIR</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content=" Implemenation Guide" />
+<meta name="description" content="OpenmHealthtoFHIR Implemenation Guide" />
 <meta name="author" content="Open mHealth"/>
   <link href="fhir.css" rel="stylesheet"/>
 
@@ -74,12 +74,14 @@ can only resize using html  or css ;-(
 
 
       <div id="project-status" class="project-status"> <!-- ig title text -->
+
         
-        <b> Implementation Guide</b>
+        <b>Open mHealth to HL7 FHIR® Implementation Guide</b>
         
         
         CI Build
         
+
     </div><!-- end ig title text -->
 
   </div><!-- end container -->
@@ -107,7 +109,7 @@ can only resize using html  or css ;-(
           <span class="icon-bar">
           </span>
         </button>
-        <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3/index.html">FHIR</a>
+        <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
         <div class="nav-collapse collapse navbar-inverse-collapse">
 
        <!-- don't remove the line above - to add or remove a menu item commeent in or out -->
@@ -151,7 +153,7 @@ can only resize using html  or css ;-(
       <div class="row">  <!-- row -->
        <div class="inner-wrapper"> <!-- inner-wrapper -->
          <div class="col-12">  <!--col -->
-            <!-- content of page -->
+
 
 
 
@@ -166,14 +168,14 @@ can only resize using html  or css ;-(
 
 <nav class="breadcrumb">
   
-     
+    <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">Table of Contents</a> 
 </nav>
 
 
 <!-- ============StatusBox=============== -->
 
 
-<!--ReleaseHeader--><p id="publish-box">ImplementationGuide[http://www.fhir.org/guides/mfhir/ImplementationGuide/openmhealth.mfhir-0.0.0] - Local Development build (v0.0.0). See the <a href="http://www.fhir.org/guides/mfhir/history.html">Directory of published versions</a></p></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">Open mHealth to FHIR - Local Development build (v0.0.0). See the <a href="http://www.fhir.org/guides/omhtofhir/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
 <!-- 
 This is the {% if {{site.build}} == "ci" %}
     Continuous Integration Build
@@ -187,16 +189,21 @@ This is the {% if {{site.build}} == "ci" %}
 
 <!-- ============CONTENT CONTENT=============== -->
 
-
 <h2>Version History</h2>
 
-<!-- page source: history.md  -->
-
-
+<!-- 
+page source: {{ page.path }}
+<br />
+page name: {{ page.name }}
+<br />
+page title: {{ page.title }}
+<br />
+page url: {{ page.url }}
+ -->
 
 <p>[Short descripton of guide here.]</p>
 
-<p>This table provides a list of all the versions of FHIR versions of the  Implementation Guide that are available. See <a href="http://build.fhir.org/versions.html#versions">FHIR Releases and Versioning</a> for a description of how the versioning of this Implementation Guide is managed.  As well, this guide follow the general definitions and guidelines outlined in <a href="http://build.fhir.org/versions.html#change">Rules for Inter-version change</a>:</p>
+<p>This table provides a list of all the versions of FHIR versions of the OpenmHealthtoFHIR Implementation Guide that are available. See <a href="http://build.fhir.org/versions.html#versions">FHIR Releases and Versioning</a> for a description of how the versioning of this Implementation Guide is managed.  As well, this guide follow the general definitions and guidelines outlined in <a href="http://build.fhir.org/versions.html#change">Rules for Inter-version change</a>:</p>
 
 <table>
   <thead>
@@ -264,12 +271,12 @@ This is the {% if {{site.build}} == "ci" %}
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-     <a href="http://www.openmhealth.org/">Open mHealth </a> openmhealth.mfhir#0.0.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR 3.0.1</a> created <span href="#" data-toggle="tooltip" data-placement="top" title="Thu, Jun 6, 2019 17:39-0700">2019-06-06</span>. <br/>
+     <a href="http://www.openmhealth.org/">Open mHealth </a> openmhealth.mfhir#0.0.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/index.html">FHIR 4.0.1</a> created <span href="#" data-toggle="tooltip" data-placement="top" title="Tue, Jul 14, 2020 18:46-0700">2020-07-14</span>. <br/>
       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a>
       | <a style="color: #81BEF7" href="qa.html">QA Report</a>
-      | <a style="color: #81BEF7" href="#">Version History</a>
-      | <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
-      | <a style="color: #81BEF7" href="https://github.com/Healthedata1/IG-Template2/issues" target="_blank">Propose a change</a>
+      | <a style="color: #81BEF7" href="http://hl7.org/fhir/us/core/history.html">Version History</a>
+      | <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+      | <a style="color: #81BEF7" href="http://hl7.org/fhir-issues" target="_blank">Propose a change</a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->

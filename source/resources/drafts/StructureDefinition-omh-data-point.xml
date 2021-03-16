@@ -3,7 +3,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="omh-data-point"/>
 
-  <url value="http://www.fhir.org/guides/mfhir/StructureDefinition/omh-data-point"/>
+  <url value="http://www.fhir.org/guides/omhtofhir/StructureDefinition/omh-data-point"/>
   <version value="0.0.0"/>
   <name value="OMH_Data_Point"/>
   <status value="draft"/>
@@ -231,11 +231,11 @@
       <max value="1"/>
       <type>
         <code value="StructureDefinition"/>
-        <profile value="http://www.fhir.org/guides/mfhir/StructureDefinition/omh-heart-rate"/>
+        <profile value="http://www.fhir.org/guides/omhtofhir/StructureDefinition/omh-heart-rate"/>
       </type>
       <type>
         <code value="StructureDefinition"/>
-        <profile value="http://www.fhir.org/guides/mfhir/StructureDefinition/omh-step-count"/>
+        <profile value="http://www.fhir.org/guides/omhtofhir/StructureDefinition/omh-step-count"/>
       </type>
       <mustSupport value="false"/>
       <isModifier value="false"/>

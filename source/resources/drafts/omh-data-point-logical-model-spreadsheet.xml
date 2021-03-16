@@ -971,7 +971,7 @@
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="150">
     <Cell ss:StyleID="s70"><Data ss:Type="String">logical-mapping-prefix</Data></Cell>
-    <Cell ss:Index="3" ss:StyleID="s73"><Data ss:Type="String">map &quot;http://www.fhir.org/guides/mfhir/StructureMap/Foo&quot; = &quot;LogicalModel &#45;-&gt; Foo Mapping&quot;&#13;&#13;uses &quot;http://www.fhir.org/guides/mfhir/StructureDefinition/LogicalModel&quot; as source&#13;&#13;group LogicalModel&#13;  input source : LogicalModel as source;&#13;</Data></Cell>
+    <Cell ss:Index="3" ss:StyleID="s73"><Data ss:Type="String">map &quot;http://www.fhir.org/guides/omhtofhir/StructureMap/Foo&quot; = &quot;LogicalModel &#45;-&gt; Foo Mapping&quot;&#13;&#13;uses &quot;http://www.fhir.org/guides/omhtofhir/StructureDefinition/LogicalModel&quot; as source&#13;&#13;group LogicalModel&#13;  input source : LogicalModel as source;&#13;</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s70"><Data ss:Type="String">logical-mapping-suffix</Data></Cell>
@@ -1023,8 +1023,8 @@
    </Row>
    <Row ss:AutoFitHeight="0" ss:StyleID="Default">
     <Cell ss:StyleID="s77"><Data ss:Type="String">extension.uri</Data></Cell>
-    <Cell ss:StyleID="s82" ss:HRef="http://www.fhir.org/guides/mfhir/StructureDefinition/extension-"><Data
-      ss:Type="String">http://www.fhir.org/guides/mfhir/StructureDefinition/extension-</Data></Cell>
+    <Cell ss:StyleID="s82" ss:HRef="http://www.fhir.org/guides/omhtofhir/StructureDefinition/extension-"><Data
+      ss:Type="String">http://www.fhir.org/guides/omhtofhir/StructureDefinition/extension-</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s83"><Data ss:Type="String">introduction</Data></Cell>
@@ -1523,7 +1523,7 @@
     <Cell ss:StyleID="Default"/>
     <Cell ss:StyleID="Default"><Data ss:Type="String">1..1</Data></Cell>
     <Cell ss:StyleID="Default"/>
-    <Cell ss:StyleID="s72"><Data ss:Type="String">StructureDefinition{http://www.fhir.org/guides/mfhir/StructureDefinition/omh-step-count}|StructureDefinition{http://www.fhir.org/guides/mfhir/StructureDefinition/omh-heart-rate}</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="String">StructureDefinition{http://www.fhir.org/guides/omhtofhir/StructureDefinition/omh-step-count}|StructureDefinition{http://www.fhir.org/guides/omhtofhir/StructureDefinition/omh-heart-rate}</Data></Cell>
     <Cell ss:StyleID="Default"><Data ss:Type="String">Reference the FHIR Logical Model for any OMH data point type (e.g., steps)</Data></Cell>
     <Cell ss:StyleID="s105"><Data ss:Type="String">for source.foo : backboneelement 1..1 as bbe</Data></Cell>
     <Cell ss:StyleID="Default"><Data ss:Type="String">back bone not mapped how to do repeating elements is still open</Data></Cell>

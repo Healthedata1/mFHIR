@@ -1,0 +1,652 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- broken links = 76, errors = 14, warn = 22, info = 2 -->
+<head>
+  <title>OpenmHealthtoFHIR : Validation Results</title>
+  <link href="fhir.css" rel="stylesheet"/>
+  <style>
+    span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
+  </style>
+  <script>
+    function flip(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Reasoning') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Reasoning';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Reasoning';
+      }
+    }
+  </script>
+</head>
+<body style="margin: 20px; background-color: #ffffff">
+ <h1>Validation Results for OpenmHealthtoFHIR</h1>
+ <p>Generated Tue Jul 14 18:47:25 PDT 2020, FHIR version 4.0.1 for openmhealth.mfhir#0.0.0 (canonical = <a href="http://www.fhir.org/guides/omhtofhir">http://www.fhir.org/guides/omhtofhir</a> (<a href="http://www.fhir.org/guides/omhtofhir/history.html">history</a>))</p>
+<p style="background-color: #ffcccc">IG Publisher Version: v1.1.2, which is out of date. The current version is ?pub-ver-1? <a href="https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar">Download Latest</a></p>
+<p>No Suppressed Errors</p>
+ <p>HL7 Publication check:</p> <ul>
+  <li>History Page 'history' is wrong (ig.json#paths/history) - must be 'http://www.fhir.org/guides/omhtofhir/history.html'</li>
+  <li>package-list.json: file not found in /Users/ehaas/Documents/FHIR/OMHtoFHIR</li>
+</ul>
+
+ <p>Realm check:</p> <ul><li>n/a</li></ul>
+ <table class="grid">
+   <tr>
+     <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Information messages &amp; Warnings</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>76</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_examples_binary-omh-stepcount-example"><b>/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/examples/binary-omh-stepcount-example</b></a></td><td><b>2</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_examples_docref-omh-stepcount-example"><b>/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/examples/docref-omh-stepcount-example</b></a></td><td><b>4</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_examples_observation-omh-stepcount-example"><b>/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/examples/observation-omh-stepcount-example</b></a></td><td><b>2</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_resources_StructureDefinition-contained-p"><b>/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/StructureDefinition-contained-p</b></a></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_resources_StructureDefinition-extension-modality"><b>/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/StructureDefinition-extension-modality</b></a></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_resources_StructureDefinition-omh-dr"><b>/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/StructureDefinition-omh-dr</b></a></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_resources_StructureDefinition-omh-obs"><b>/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/StructureDefinition-omh-obs</b></a></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_resources_ValueSet-omh-datapoint-type"><b>/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/ValueSet-omh-datapoint-type</b></a></td><td><b>1</b></td><td><b>4</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_resources_ValueSet-omh-device-modality"><b>/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/ValueSet-omh-device-modality</b></a></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_resources_capabilitystatement-client"><b>/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/capabilitystatement-client</b></a></td><td><b>2</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_resources_capabilitystatement-server"><b>/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/capabilitystatement-server</b></a></td><td><b>2</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_resources_codesystem-omh-datapoint-type"><b>/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/codesystem-omh-datapoint-type</b></a></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_resources_codesystem-omh-device-modality"><b>/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/codesystem-omh-device-modality</b></a></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_resources_codesystem-omh-temporal-relationship-to-meal"><b>/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/codesystem-omh-temporal-relationship-to-meal</b></a></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_resources_ig"><b>/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/ig</b></a></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_resources_valueset-omh-unit-value"><b>/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/valueset-omh-unit-value</b></a></td><td><b>1</b></td><td><b>10</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="internal"> </a>
+<h2><a href="">n/a</a></h2>
+ <table class="grid">
+   <tr style="background-color: #ffebcc">
+     <td><b>ImplementationGuide.id</b></td><td><b>warning</b></td><td><b>The Implementation Guide Resource id should be openmhealth.mfhir</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="DocumentReference-omh-stepcount-example.html#09ebf117-f84e-43be-825e-1d75b403b43e">DocumentReference-omh-stepcount-example.html#/html/head/body/div/div/div/div/div/div/div/p/a at Line 236, column 340</a></b></td><td><b>error</b></td><td><b>The link '#p' for &quot;unknown resource contained&quot; cannot be resolved (valid targets: [page-content-wrapper, segment-header, publish-box, stripe, segment-footer, segment-post-footer, segment-navbar, project-status])</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="Observation-stepcount-example.html#e9cf3408-a2a8-49de-a884-235bac759d7e">Observation-stepcount-example.html#/html/head/body/div/div/div/div/div/div/div/p/a at Line 236, column 428</a></b></td><td><b>error</b></td><td><b>The link '#p' for &quot;unknown resource contained&quot; cannot be resolved (valid targets: [page-content-wrapper, segment-header, publish-box, stripe, segment-footer, segment-post-footer, segment-navbar, project-status])</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#bc3cfcf3-eec8-4116-99ba-65780cf7d112">mapping.html#/html/head/body/div/div/div/div/div/div/ul/li/a at Line 939, column 8</a></b></td><td><b>error</b></td><td><b>The link 'http://hl7.org/fhir/R4/MedicationDispense.html' for &quot;MedicationDispense&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#1a542d6d-e4a3-4c8e-97ac-ca27a287c889">mapping.html#/html/head/body/div/div/div/div/div/div/ul/li/a at Line 970, column 94</a></b></td><td><b>error</b></td><td><b>The link 'http://hl7.org/fhir/R4/https://www.hl7.org/fhir/structuredefinition.html#logical' for &quot;Pattern&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#047e6244-beb2-49f9-b298-b7796735af00">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1013, column 12</a></b></td><td><b>error</b></td><td><b>The link 'valueset-body-location.html' for &quot;body-location&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#7362cb11-a1ed-48cb-b4e9-85dc2b9829f0">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1019, column 12</a></b></td><td><b>error</b></td><td><b>The link 'valueset-body-posture.html' for &quot;body-posture&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#3db32544-f74f-4c53-840f-befe7456fef9">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1025, column 12</a></b></td><td><b>error</b></td><td><b>The link 'valueset-day-of-week.html' for &quot;day-of-week&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#52a2f12e-c0c9-4482-afb1-c7b795d15cff">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1037, column 12</a></b></td><td><b>error</b></td><td><b>The link 'valueset-descriptive-statistic-denominator.html' for &quot;descriptive-statistic-denominator&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#4e2550b9-86ea-441e-b161-08ca6bfa4684">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1043, column 12</a></b></td><td><b>error</b></td><td><b>The link 'valueset-intervention-administration-route.html' for &quot;intervention-administration-route&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#c86a42bf-19b1-4437-9dcd-041de381c116">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1049, column 12</a></b></td><td><b>error</b></td><td><b>The link 'valueset-medication-dose-unit.html' for &quot;medication-dose-unit&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#8e44c965-d8d8-4eed-8bae-fcceb43a3c63">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1055, column 12</a></b></td><td><b>error</b></td><td><b>The link 'valueset-part-of-day.html' for &quot;part-of-day&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#5d83af8f-7a2a-4a03-b1b4-9770579d4419">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1061, column 12</a></b></td><td><b>error</b></td><td><b>The link 'valueset-position-during-measurement.html' for &quot;position-during-measurement&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#eece3672-feb1-4fa7-ad0b-ee4e77108c81">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1067, column 12</a></b></td><td><b>error</b></td><td><b>The link 'valueset-specimen-source.html' for &quot;specimen-source&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#1021d6de-948d-4aad-8943-76c05117b7f4">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1073, column 12</a></b></td><td><b>error</b></td><td><b>The link 'valueset-temporal-relationship-to-meal.html' for &quot;temporal-relationship-to-meal&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#e7005d39-500a-4fd0-9d8a-24a6dd0dc361">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1079, column 12</a></b></td><td><b>error</b></td><td><b>The link 'valueset-temporal-relationship-to-physical-activity.html' for &quot;temporal-relationship-to-physical-activity&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#39c42da0-b8f3-4d3b-8568-f32f2f9e94ff">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1085, column 12</a></b></td><td><b>error</b></td><td><b>The link 'valueset-temporal-relationship-to-sleep.html' for &quot;temporal-relationship-to-sleep&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#c7e32f0c-ad6c-43ce-9e58-e9c917482a63">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1103, column 12</a></b></td><td><b>error</b></td><td><b>The link 'valueset-area-unit-value.html' for &quot;area-unit-value&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#26874974-601e-403c-953a-606fdc7dfd80">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1109, column 12</a></b></td><td><b>error</b></td><td><b>The link 'valueset-duration-unit-value.html' for &quot;duration-unit-value&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#ff1bc7b6-947e-499f-b427-02aff7993c78">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1115, column 12</a></b></td><td><b>error</b></td><td><b>The link 'valueset-duration-unit-value.html' for &quot;duration-unit-value&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#8fb48cf1-86ce-49a1-b2b2-2aee2c2baf01">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1121, column 12</a></b></td><td><b>error</b></td><td><b>The link 'valueset-duration-unit-value.html' for &quot;duration-unit-value&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#fc0a02f8-db05-47e3-96a9-f71c704ddd02">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1133, column 12</a></b></td><td><b>error</b></td><td><b>The link 'valueset-length-unit-value.html' for &quot;length-unit-value&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#77707b52-f00e-48ba-8f69-d174553ea78c">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1139, column 12</a></b></td><td><b>error</b></td><td><b>The link 'valueset-magnetic-flux-density-unit-value.html' for &quot;magnetic-flux-density-unit-value&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#787f11ee-07cb-415f-b75b-e2ee83f88c09">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1145, column 12</a></b></td><td><b>error</b></td><td><b>The link 'valueset-mass-unit-value.html' for &quot;mass-unit-value&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#525e3737-1ce9-49c4-a413-1a6da483c468">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1151, column 12</a></b></td><td><b>error</b></td><td><b>The link 'valueset-medication-dose-unit.html' for &quot;medication-dose-unit&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#392edf13-851f-48c3-9138-e46080efef3a">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1157, column 12</a></b></td><td><b>error</b></td><td><b>The link 'valueset-medication-dose-unit.html' for &quot;medication-dose-unit-value&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#b7ef387d-6042-44cd-ab24-06b228c8773a">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1163, column 12</a></b></td><td><b>error</b></td><td><b>The link 'valueset-pace-unit-value.html' for &quot;pace-unit-value&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#2c976c7c-fa92-414e-8f90-d01a42ab788e">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1175, column 12</a></b></td><td><b>error</b></td><td><b>The link 'valueset-speed-unit-value.html' for &quot;speed-unit-value&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#7499bf9a-cc65-4821-823d-4c7a234964cb">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1181, column 12</a></b></td><td><b>error</b></td><td><b>The link 'valueset-temperature-unit-value.html' for &quot;temperature-unit-value&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#dbc40be5-bcee-42d9-b02f-5337f4622b11">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1199, column 12</a></b></td><td><b>error</b></td><td><b>The link 'valueset-volume-unit-value.html' for &quot;volume-unit-value&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#72a332bd-e234-4b89-98c7-06277c8c8ca0">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1233, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-acceleration.html' for &quot;OmhAcceleration&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#ec815e51-33e5-4d4d-acc0-17c5c5ff646a">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1239, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-ambient-temperature.html' for &quot;OmhAmbientTemperature&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#7a4ea6fd-35d6-43a7-a724-a5eb525a81df">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1245, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-blood-glucose.html' for &quot;OmhBloodGlucose&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#5b5908f3-7dc8-4770-ad9c-e11fdd5be968">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1251, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-blood-pressure.html' for &quot;OmhBloodPressure&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#4e8f313a-5ad9-4b7e-802b-a820f48a0366">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1257, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-body-fat-percentage.html' for &quot;OmhBodyFatPercentage&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#7cf16baf-9ba4-4741-b420-63daac123bfd">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1263, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-body-height.html' for &quot;OmhBodyHeight&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#5a4ce2e0-6faf-496c-bf40-0bed0b214a8b">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1269, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-body-mass-index.html' for &quot;OmhBodyMassIndex&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#388bdf4e-a0e3-4849-88ad-21f63e984c65">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1275, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-body-temperature.html' for &quot;OmhBodyTemperature&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#dea82f7d-e62c-49cc-848c-fb5abb7e86a7">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1281, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-body-weight.html' for &quot;OmhBodyWeight&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#db1e12f5-bf9d-4e3a-8ef1-a948f6430020">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1287, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-breath-carbon-monoxide.html' for &quot;OmhBreathCarbonMonoxide&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#7069151b-6d68-4b86-ad04-f9f2777cf44c">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1293, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-calories-burned.html' for &quot;OmhCaloriesBurned&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#14afe94e-013a-486a-aed2-3c7dcf40209e">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1299, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-diastolic-blood-pressure.html' for &quot;OmhDiastolicBloodPressure&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#07e6b305-4c49-47d5-84c2-0d8fdfb628e9">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1305, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-expiratory-time.html' for &quot;OmhExpiratoryTime&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#6656cca6-5639-41e6-be52-543831137760">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1311, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-geoposition.html' for &quot;OmhGeoposition&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#2f52e904-7fbe-4933-816e-f22e5d6f2d6b">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1317, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-heart-rate.html' for &quot;OmhHeartRate&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#491bca1b-2d26-49e8-b22b-f29673f764a8">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1323, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-inspiratory-time.html' for &quot;OmhInspiratoryTime&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#88be8644-4832-44a5-a193-9889b3862a36">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1329, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-magnetic-force.html' for &quot;OmhMagneticForce&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#4aaa2263-87cb-48db-9fdb-ef398d2780e5">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1335, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-medication.html' for &quot;OmhMedication&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#f3cd698b-df4d-4a4d-88cd-21a54df3e1a2">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1341, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-medication-adherence-percent.html' for &quot;OmhMedicationAdherencePercent&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#9984b223-8431-49df-8f7f-69d288f41db4">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1347, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-medication-prescription.html' for &quot;OmhMedicationPrescription&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#fd71aa03-8139-4a42-9c2a-1b58d279c229">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1353, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-minute-volume.html' for &quot;OmhMinuteVolume&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#f173789f-2f94-4807-ab9a-95251d49daa9">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1359, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-minutes-moderate-activity.html' for &quot;OmhMinutesModerateActivity&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#3c2a8706-43cf-49e2-ad52-f3312dd5e4ff">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1365, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-orientation.html' for &quot;OmhOrientation&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#4b8c6e5d-80f3-4fd2-8e54-73a3219fd62e">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1371, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-oxygen-saturation.html' for &quot;OmhOxygenSaturation&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#667b7597-205d-4bb5-a4f2-6e98bef49a79">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1377, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-pace.html' for &quot;OmhPace&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#1cc767b8-3d13-48ac-bcc9-78ab1666caca">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1383, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-patient-medication-schedule.html' for &quot;OmhPatientMedicationSchedule&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#e69cc3da-5032-4a23-a922-7fbeeb5affe3">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1389, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-pharmacy-medication-dispensing.html' for &quot;OmhPharmacyMedicationDispensing&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#0cd117c6-0f6e-478d-baab-b7f3ba240c67">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1395, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-physical-activity.html' for &quot;OmhPhysicalActivity&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#4e442325-28de-4c5c-ad8b-e239648bee05">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1401, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-reason-single-medication-dose-not-taken.html' for &quot;OmhReasonSingleMedicationDoseNotTaken&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#78cf71c5-db6d-447b-a89b-dd403dc75f61">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1407, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-respiratory-rate.html' for &quot;OmhRespiratoryRate&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#c34433be-42eb-4d90-8849-6338db53b775">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1413, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-rr-interval.html' for &quot;OmhRrInterval&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#1a3fa6fb-a783-4362-851c-345439b731c9">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1419, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-single-medication-dose-taken.html' for &quot;OmhSingleMedicationDoseTaken&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#435222e0-5930-48e7-8594-ea68415b0c5b">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1425, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-sleep-duration.html' for &quot;OmhSleepDuration&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#2df6482f-353f-4ee5-a1ad-0eaea375ae5a">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1431, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-sleep-episode.html' for &quot;OmhSleepEpisode&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#b29926e1-9d6b-49b9-8bd6-adb12b71eff8">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1437, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-speed.html' for &quot;OmhSpeed&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#67fbd995-a486-4c42-bf86-fcf6b20e4f01">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1443, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-step-count.html' for &quot;OmhStepCount&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#1580713a-057b-43e4-aed3-c5d50ce53c9f">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1449, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-systolic-blood-pressure.html' for &quot;OmhSystolicBloodPressure&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="mapping.html#ebc27959-a821-4e1b-a471-cf5315430ac1">mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1455, column 12</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-omh-ventilation-cycle-time.html' for &quot;OmhVentilationCycleTime&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="sa_workflow.html#d16d6e18-6a5c-4a30-b953-af7d2b0847c1">sa_workflow.html#/html/head/body/div/div/div/div/div/div/ol/li/ol/li/a at Line 356, column 20</a></b></td><td><b>error</b></td><td><b>The link 'http://hl7.org/fhir/R4/references#contained.html' for &quot;contained&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="sa_workflow.html#9ab56035-bc5a-4eb1-827c-24bd2df0467c">sa_workflow.html#/html/head/body/div/div/div/div/div/div/ol/li/ol/li/a at Line 688, column 20</a></b></td><td><b>error</b></td><td><b>The link 'http://hl7.org/fhir/R4/references#contained.html' for &quot;contained&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="sa_workflow.html#1cc58cd2-8975-4d17-985b-511535d96a00">sa_workflow.html#/html/head/body/div/div/div/div/div/div/p/a at Line 820, column 80</a></b></td><td><b>error</b></td><td><b>The link ':https://www.getpostman.com/collections/0a54cd0197a5f2fc98d4' for &quot;Postman Collection&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="toc.html#9cf5682d-4f7e-4389-90d2-cea4974fc47f">toc.html#/html/head/body/div/div/div/div/div/div/p/a at Line 251, column 11</a></b></td><td><b>error</b></td><td><b>The link 'guidance.html' for &quot;General Guidance&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="toc.html#e608319b-a1f8-4af0-ba64-73f01e1f8d0f">toc.html#/html/head/body/div/div/div/div/div/div/p/a at Line 263, column 11</a></b></td><td><b>error</b></td><td><b>The link 'bundles.html' for &quot;Bundle Definitions&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="toc.html#515a7bcd-592b-46ff-bb9c-5481e715daa2">toc.html#/html/head/body/div/div/div/div/div/div/p/a at Line 265, column 11</a></b></td><td><b>error</b></td><td><b>The link 'operations.html' for &quot;Operations&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="toc.html#801c867c-0188-4778-b6e7-f8abe0672efa">toc.html#/html/head/body/div/div/div/div/div/div/p/a at Line 281, column 11</a></b></td><td><b>error</b></td><td><b>The link 'searchparameters.html' for &quot;Search Parameters&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="toc.html#5a2cb2e0-95d7-4abb-9ab3-e1aedd2b49cb">toc.html#/html/head/body/div/div/div/div/div/div/p/a at Line 289, column 11</a></b></td><td><b>error</b></td><td><b>The link 'security.html' for &quot;Security&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="use_case.html#858a9b40-8b7b-4f9d-8124-e7866694e842">use_case.html#/html/head/body/div/div/div/div/div/div/ul/li/a at Line 208, column 8</a></b></td><td><b>error</b></td><td><b>The link '#description' for &quot;Description&quot; cannot be resolved (valid targets: 21 targets)</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_examples_binary-omh-stepcount-example"> </a>
+<h2><a href="Binary-omh-stepcount-example.html">/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/examples/binary-omh-stepcount-example.xml</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>/f:Binary (l5/c957)</b></td><td><b>error</b></td><td><b>Undefined element 'content'</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>Binary/omh-stepcount-example: Binary (l2/c224)</b></td><td><b>Process Info</b></td><td><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/Binary</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Binary/omh-stepcount-example: Binary.contentType (l4/c41)</b></td><td><b>error</b></td><td><b>The value provided (&quot;application/json&quot;) is not in the value set http://hl7.org/fhir/ValueSet/mimetypes|4.0.1 (http://hl7.org/fhir/ValueSet/mimetypes), and a code is required from this value set) (error message = Attempt to use Terminology server when no Terminology server is available)</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_examples_docref-omh-stepcount-example"> </a>
+<h2><a href="DocumentReference-omh-stepcount-example.html">/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/examples/docref-omh-stepcount-example.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>DocumentReference (l34/c4)</b></td><td><b>error</b></td><td><b>Unrecognised property '@class'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>DocumentReference (l38/c42)</b></td><td><b>error</b></td><td><b>Unrecognised property '@created'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>DocumentReference (l39/c42)</b></td><td><b>error</b></td><td><b>Unrecognised property '@indexed'</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>DocumentReference/omh-stepcount-example: DocumentReference (l1/c2)</b></td><td><b>Process Info</b></td><td><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/DocumentReference</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>DocumentReference/omh-stepcount-example: DocumentReference.contained.ofType(Patient) (l5/c4)</b></td><td><b>Process Info</b></td><td><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>DocumentReference/omh-stepcount-example: DocumentReference.type (l22/c16)</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/c80-doc-typecodes (http://hl7.org/fhir/ValueSet/c80-doc-typecodes), and a code is recommended to come from this value set) (codes = http://loinc.org#55423-8)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>DocumentReference/omh-stepcount-example: DocumentReference.content[0].attachment.contentType (l43/c43)</b></td><td><b>error</b></td><td><b>The value provided (&quot;application/json&quot;) is not in the value set http://hl7.org/fhir/ValueSet/mimetypes|4.0.1 (http://hl7.org/fhir/ValueSet/mimetypes), and a code is required from this value set) (error message = Attempt to use Terminology server when no Terminology server is available)</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_examples_observation-omh-stepcount-example"> </a>
+<h2><a href="Observation-stepcount-example.html">/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/examples/observation-omh-stepcount-example.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>Observation/stepcount-example: Observation (l1/c2)</b></td><td><b>Process Info</b></td><td><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>Observation/stepcount-example: Observation.contained.ofType(Patient) (l5/c4)</b></td><td><b>Process Info</b></td><td><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Observation/stepcount-example: Observation.category[0] (l19/c4)</b></td><td><b>information</b></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/observation-category (http://hl7.org/fhir/ValueSet/observation-category), and a code is recommended to come from this value set) (codes = http://snomed.info/sct#68130003)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Observation/stepcount-example: Observation.component[0].code.coding[0] (l52/c6)</b></td><td><b>error</b></td><td><b>Unknown Code System &quot;http://hl7.org/fhir/observation-statistics&quot;</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Observation/stepcount-example: Observation.component[0].code.coding[0].system (l53/c63)</b></td><td><b>error</b></td><td><b>URL value &quot;http://hl7.org/fhir/observation-statistics&quot; does not resolve</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_resources_StructureDefinition-contained-p"> </a>
+<h2><a href="StructureDefinition-contained-p.html">/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/StructureDefinition-contained-p.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>StructureDefinition/contained-p: StructureDefinition</b></td><td><b>Process Info</b></td><td><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://www.fhir.org/guides/omhtofhir/StructureDefinition/contained-p')</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this profile</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_resources_StructureDefinition-extension-modality"> </a>
+<h2><a href="StructureDefinition-extension-modality.html">/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/StructureDefinition-extension-modality.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>StructureDefinition/extension-modality: StructureDefinition</b></td><td><b>Process Info</b></td><td><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://www.fhir.org/guides/omhtofhir/StructureDefinition/extension-modality')</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this extension</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_resources_StructureDefinition-omh-dr"> </a>
+<h2><a href="StructureDefinition-omh-dr.html">/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/StructureDefinition-omh-dr.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>StructureDefinition/omh-dr: StructureDefinition</b></td><td><b>Process Info</b></td><td><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://www.fhir.org/guides/omhtofhir/StructureDefinition/omh-dr')</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this profile</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_resources_StructureDefinition-omh-obs"> </a>
+<h2><a href="StructureDefinition-omh-obs.html">/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/StructureDefinition-omh-obs.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>StructureDefinition/omh-obs: StructureDefinition</b></td><td><b>Process Info</b></td><td><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://www.fhir.org/guides/omhtofhir/StructureDefinition/omh-obs')</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this profile</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_resources_ValueSet-omh-datapoint-type"> </a>
+<h2><a href="ValueSet-dp-type.html">/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/ValueSet-omh-datapoint-type.xml</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>ValueSet/dp-type: ValueSet (l2/c236)</b></td><td><b>Process Info</b></td><td><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet/dp-type: ValueSet (l2/c2)</b></td><td><b>warning</b></td><td><b>vsd-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet/dp-type: ValueSet.compose[0].include[0].concept[0]</b></td><td><b>warning</b></td><td><b>The code 258158006 is not valid in the system http://snomed.info/sct</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet/dp-type: ValueSet.compose[0].include[1].concept[0]</b></td><td><b>warning</b></td><td><b>The code 55423-8 is not valid in the system http://loinc.org</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet/dp-type: ValueSet.compose[0].include[1].concept[1]</b></td><td><b>warning</b></td><td><b>The code 8867-4 is not valid in the system http://loinc.org</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>ValueSet.where(id = 'dp-type')</b></td><td><b>error</b></td><td><b>Error expanding ValueSet: running without terminology services</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_resources_ValueSet-omh-device-modality"> </a>
+<h2><a href="ValueSet-omh-device-modality.html">/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/ValueSet-omh-device-modality.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>ValueSet/omh-device-modality: ValueSet (l1/c2)</b></td><td><b>Process Info</b></td><td><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_resources_capabilitystatement-client"> </a>
+<h2><a href="CapabilityStatement-client.html">/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/capabilitystatement-client.xml</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>/f:CapabilityStatement (l24/c37)</b></td><td><b>error</b></td><td><b>Undefined element 'acceptUnknown'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>/f:CapabilityStatement (l28/c11)</b></td><td><b>error</b></td><td><b>Undefined element 'profile'</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>CapabilityStatement/client: CapabilityStatement</b></td><td><b>Process Info</b></td><td><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_resources_capabilitystatement-server"> </a>
+<h2><a href="CapabilityStatement-server.html">/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/capabilitystatement-server.xml</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>/f:CapabilityStatement (l23/c37)</b></td><td><b>error</b></td><td><b>Undefined element 'acceptUnknown'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>/f:CapabilityStatement (l27/c11)</b></td><td><b>error</b></td><td><b>Undefined element 'profile'</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>CapabilityStatement/server: CapabilityStatement</b></td><td><b>Process Info</b></td><td><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_resources_codesystem-omh-datapoint-type"> </a>
+<h2><a href="CodeSystem-omh-datapoint-type.html">/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/codesystem-omh-datapoint-type.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>CodeSystem/omh-datapoint-type: CodeSystem (l1/c2)</b></td><td><b>Process Info</b></td><td><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>CodeSystem/omh-datapoint-type: CodeSystem (l1/c1)</b></td><td><b>warning</b></td><td><b>csd-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_resources_codesystem-omh-device-modality"> </a>
+<h2><a href="CodeSystem-omh-device-modality.html">/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/codesystem-omh-device-modality.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>CodeSystem/omh-device-modality: CodeSystem (l1/c2)</b></td><td><b>Process Info</b></td><td><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>CodeSystem/omh-device-modality: CodeSystem (l1/c1)</b></td><td><b>warning</b></td><td><b>csd-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_resources_codesystem-omh-temporal-relationship-to-meal"> </a>
+<h2><a href="CodeSystem-omh-temporal-relationship-to-meal.html">/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/codesystem-omh-temporal-relationship-to-meal.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>CodeSystem/omh-temporal-relationship-to-meal: CodeSystem (l1/c2)</b></td><td><b>Process Info</b></td><td><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>CodeSystem/omh-temporal-relationship-to-meal: CodeSystem (l1/c1)</b></td><td><b>warning</b></td><td><b>csd-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_resources_ig"> </a>
+<h2><a href="ImplementationGuide-openmhealth.mfhir-0.0.0.html">/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/ig.xml</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>ImplementationGuide/openmhealth.mfhir-0.0.0: ImplementationGuide</b></td><td><b>Process Info</b></td><td><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_OMHtoFHIR_source_resources_valueset-omh-unit-value"> </a>
+<h2><a href="ValueSet-omh-unit-value.html">/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/valueset-omh-unit-value.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>ValueSet/omh-unit-value: ValueSet (l1/c2)</b></td><td><b>Process Info</b></td><td><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet/omh-unit-value: ValueSet (l1/c1)</b></td><td><b>warning</b></td><td><b>vsd-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet/omh-unit-value: ValueSet.compose[0].include[0].concept[0]</b></td><td><b>warning</b></td><td><b>The code {steps} is not valid in the system http://unitsofmeasure.org</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet/omh-unit-value: ValueSet.compose[0].include[0].concept[1]</b></td><td><b>warning</b></td><td><b>The code mm[Hg] is not valid in the system http://unitsofmeasure.org</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet/omh-unit-value: ValueSet.compose[0].include[0].concept[2]</b></td><td><b>warning</b></td><td><b>The code mg/dL is not valid in the system http://unitsofmeasure.org</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet/omh-unit-value: ValueSet.compose[0].include[0].concept[3]</b></td><td><b>warning</b></td><td><b>The code mmol/L is not valid in the system http://unitsofmeasure.org</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet/omh-unit-value: ValueSet.compose[0].include[0].concept[4]</b></td><td><b>warning</b></td><td><b>The code kg/m2 is not valid in the system http://unitsofmeasure.org</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet/omh-unit-value: ValueSet.compose[0].include[0].concept[5]</b></td><td><b>warning</b></td><td><b>The code kCal is not valid in the system http://unitsofmeasure.org</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet/omh-unit-value: ValueSet.compose[0].include[0].concept[6]</b></td><td><b>warning</b></td><td><b>The code /min is not valid in the system http://unitsofmeasure.org</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet/omh-unit-value: ValueSet.compose[0].include[0].concept[7]</b></td><td><b>warning</b></td><td><b>The code /min is not valid in the system http://unitsofmeasure.org</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet/omh-unit-value: ValueSet.compose[0].include[0].concept[8]</b></td><td><b>warning</b></td><td><b>The code % is not valid in the system http://unitsofmeasure.org</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>ValueSet.where(id = 'omh-unit-value')</b></td><td><b>error</b></td><td><b>Error expanding ValueSet: running without terminology services</b></td>
+   </tr>
+</table>
+<a name="suppressed"> </a>
+<p><b>Suppressed Messages (Warnings, hints, broken links)</b></p>
+<p>No suppressed messsages</p><a name="sorted"> </a>
+<p><b>Errors sorted by type</b></p>
+<hr/>
+<a name="Terminology_TX_NoValid_3"> </a>
+<h2>Terminology_TX_NoValid_3</h2>
+ <table class="grid">
+   <tr style="background-color: #fffff2">
+     <td><a href="DocumentReference-omh-stepcount-example.html">/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/examples/docref-omh-stepcount-example.json</a></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/c80-doc-typecodes (http://hl7.org/fhir/ValueSet/c80-doc-typecodes), and a code is recommended to come from this value set) (codes = http://loinc.org#55423-8)</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="Observation-stepcount-example.html">/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/examples/observation-omh-stepcount-example.json</a></td><td><b>None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/observation-category (http://hl7.org/fhir/ValueSet/observation-category), and a code is recommended to come from this value set) (codes = http://snomed.info/sct#68130003)</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="Terminology_TX_System_Unknown"> </a>
+<h2>Terminology_TX_System_Unknown</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="Observation-stepcount-example.html">/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/examples/observation-omh-stepcount-example.json</a></td><td><b>Unknown Code System &quot;http://hl7.org/fhir/observation-statistics&quot;</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="Type_Specific_Checks_DT_URL_Resolve"> </a>
+<h2>Type_Specific_Checks_DT_URL_Resolve</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="Observation-stepcount-example.html">/Users/ehaas/Documents/FHIR/OMHtoFHIR/source/examples/observation-omh-stepcount-example.json</a></td><td><b>URL value &quot;http://hl7.org/fhir/observation-statistics&quot; does not resolve</b></td>
+   </tr>
+</table>
+</body>
+</html>

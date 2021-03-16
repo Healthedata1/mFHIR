@@ -1,0 +1,174 @@
+﻿OpenmHealthtoFHIR : Validation Results
+=========================================
+
+err = 14, warn = 22, info = 2
+IG Publisher Version: v1.1.2 Out of date - current version is ?pub-ver-1?
+Generated Tue Jul 14 18:47:25 PDT 2020. FHIR version 4.0.1 for openmhealth.mfhir#0.0.0 (canonical = http://www.fhir.org/guides/omhtofhir)
+
+ Build Errors : 76 / 1
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/examples/binary-omh-stepcount-example : 2 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/examples/docref-omh-stepcount-example : 4 / 1
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/examples/observation-omh-stepcount-example : 2 / 1
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/StructureDefinition-contained-p : 0 / 1
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/StructureDefinition-extension-modality : 0 / 1
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/StructureDefinition-omh-dr : 0 / 1
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/StructureDefinition-omh-obs : 0 / 1
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/ValueSet-omh-datapoint-type : 1 / 4
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/ValueSet-omh-device-modality : 0 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/capabilitystatement-client : 2 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/capabilitystatement-server : 2 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/codesystem-omh-datapoint-type : 0 / 1
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/codesystem-omh-device-modality : 0 / 1
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/codesystem-omh-temporal-relationship-to-meal : 0 / 1
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/ig : 0 / 0
+ /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/valueset-omh-unit-value : 1 / 10
+</table>
+== n/a ==
+WARNING: ImplementationGuide.id: The Implementation Guide Resource id should be openmhealth.mfhir
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/DocumentReference-omh-stepcount-example.html#/html/head/body/div/div/div/div/div/div/div/p/a at Line 236, column 340: The link '#p' for "unknown resource contained" cannot be resolved (valid targets: [page-content-wrapper, segment-header, publish-box, stripe, segment-footer, segment-post-footer, segment-navbar, project-status])
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/Observation-stepcount-example.html#/html/head/body/div/div/div/div/div/div/div/p/a at Line 236, column 428: The link '#p' for "unknown resource contained" cannot be resolved (valid targets: [page-content-wrapper, segment-header, publish-box, stripe, segment-footer, segment-post-footer, segment-navbar, project-status])
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/ul/li/a at Line 939, column 8: The link 'http://hl7.org/fhir/R4/MedicationDispense.html' for "MedicationDispense" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/ul/li/a at Line 970, column 94: The link 'http://hl7.org/fhir/R4/https://www.hl7.org/fhir/structuredefinition.html#logical' for "Pattern" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1013, column 12: The link 'valueset-body-location.html' for "body-location" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1019, column 12: The link 'valueset-body-posture.html' for "body-posture" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1025, column 12: The link 'valueset-day-of-week.html' for "day-of-week" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1037, column 12: The link 'valueset-descriptive-statistic-denominator.html' for "descriptive-statistic-denominator" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1043, column 12: The link 'valueset-intervention-administration-route.html' for "intervention-administration-route" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1049, column 12: The link 'valueset-medication-dose-unit.html' for "medication-dose-unit" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1055, column 12: The link 'valueset-part-of-day.html' for "part-of-day" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1061, column 12: The link 'valueset-position-during-measurement.html' for "position-during-measurement" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1067, column 12: The link 'valueset-specimen-source.html' for "specimen-source" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1073, column 12: The link 'valueset-temporal-relationship-to-meal.html' for "temporal-relationship-to-meal" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1079, column 12: The link 'valueset-temporal-relationship-to-physical-activity.html' for "temporal-relationship-to-physical-activity" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1085, column 12: The link 'valueset-temporal-relationship-to-sleep.html' for "temporal-relationship-to-sleep" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1103, column 12: The link 'valueset-area-unit-value.html' for "area-unit-value" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1109, column 12: The link 'valueset-duration-unit-value.html' for "duration-unit-value" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1115, column 12: The link 'valueset-duration-unit-value.html' for "duration-unit-value" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1121, column 12: The link 'valueset-duration-unit-value.html' for "duration-unit-value" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1133, column 12: The link 'valueset-length-unit-value.html' for "length-unit-value" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1139, column 12: The link 'valueset-magnetic-flux-density-unit-value.html' for "magnetic-flux-density-unit-value" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1145, column 12: The link 'valueset-mass-unit-value.html' for "mass-unit-value" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1151, column 12: The link 'valueset-medication-dose-unit.html' for "medication-dose-unit" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1157, column 12: The link 'valueset-medication-dose-unit.html' for "medication-dose-unit-value" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1163, column 12: The link 'valueset-pace-unit-value.html' for "pace-unit-value" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1175, column 12: The link 'valueset-speed-unit-value.html' for "speed-unit-value" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1181, column 12: The link 'valueset-temperature-unit-value.html' for "temperature-unit-value" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1199, column 12: The link 'valueset-volume-unit-value.html' for "volume-unit-value" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1233, column 12: The link 'StructureDefinition-omh-acceleration.html' for "OmhAcceleration" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1239, column 12: The link 'StructureDefinition-omh-ambient-temperature.html' for "OmhAmbientTemperature" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1245, column 12: The link 'StructureDefinition-omh-blood-glucose.html' for "OmhBloodGlucose" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1251, column 12: The link 'StructureDefinition-omh-blood-pressure.html' for "OmhBloodPressure" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1257, column 12: The link 'StructureDefinition-omh-body-fat-percentage.html' for "OmhBodyFatPercentage" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1263, column 12: The link 'StructureDefinition-omh-body-height.html' for "OmhBodyHeight" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1269, column 12: The link 'StructureDefinition-omh-body-mass-index.html' for "OmhBodyMassIndex" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1275, column 12: The link 'StructureDefinition-omh-body-temperature.html' for "OmhBodyTemperature" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1281, column 12: The link 'StructureDefinition-omh-body-weight.html' for "OmhBodyWeight" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1287, column 12: The link 'StructureDefinition-omh-breath-carbon-monoxide.html' for "OmhBreathCarbonMonoxide" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1293, column 12: The link 'StructureDefinition-omh-calories-burned.html' for "OmhCaloriesBurned" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1299, column 12: The link 'StructureDefinition-omh-diastolic-blood-pressure.html' for "OmhDiastolicBloodPressure" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1305, column 12: The link 'StructureDefinition-omh-expiratory-time.html' for "OmhExpiratoryTime" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1311, column 12: The link 'StructureDefinition-omh-geoposition.html' for "OmhGeoposition" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1317, column 12: The link 'StructureDefinition-omh-heart-rate.html' for "OmhHeartRate" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1323, column 12: The link 'StructureDefinition-omh-inspiratory-time.html' for "OmhInspiratoryTime" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1329, column 12: The link 'StructureDefinition-omh-magnetic-force.html' for "OmhMagneticForce" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1335, column 12: The link 'StructureDefinition-omh-medication.html' for "OmhMedication" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1341, column 12: The link 'StructureDefinition-omh-medication-adherence-percent.html' for "OmhMedicationAdherencePercent" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1347, column 12: The link 'StructureDefinition-omh-medication-prescription.html' for "OmhMedicationPrescription" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1353, column 12: The link 'StructureDefinition-omh-minute-volume.html' for "OmhMinuteVolume" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1359, column 12: The link 'StructureDefinition-omh-minutes-moderate-activity.html' for "OmhMinutesModerateActivity" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1365, column 12: The link 'StructureDefinition-omh-orientation.html' for "OmhOrientation" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1371, column 12: The link 'StructureDefinition-omh-oxygen-saturation.html' for "OmhOxygenSaturation" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1377, column 12: The link 'StructureDefinition-omh-pace.html' for "OmhPace" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1383, column 12: The link 'StructureDefinition-omh-patient-medication-schedule.html' for "OmhPatientMedicationSchedule" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1389, column 12: The link 'StructureDefinition-omh-pharmacy-medication-dispensing.html' for "OmhPharmacyMedicationDispensing" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1395, column 12: The link 'StructureDefinition-omh-physical-activity.html' for "OmhPhysicalActivity" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1401, column 12: The link 'StructureDefinition-omh-reason-single-medication-dose-not-taken.html' for "OmhReasonSingleMedicationDoseNotTaken" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1407, column 12: The link 'StructureDefinition-omh-respiratory-rate.html' for "OmhRespiratoryRate" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1413, column 12: The link 'StructureDefinition-omh-rr-interval.html' for "OmhRrInterval" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1419, column 12: The link 'StructureDefinition-omh-single-medication-dose-taken.html' for "OmhSingleMedicationDoseTaken" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1425, column 12: The link 'StructureDefinition-omh-sleep-duration.html' for "OmhSleepDuration" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1431, column 12: The link 'StructureDefinition-omh-sleep-episode.html' for "OmhSleepEpisode" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1437, column 12: The link 'StructureDefinition-omh-speed.html' for "OmhSpeed" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1443, column 12: The link 'StructureDefinition-omh-step-count.html' for "OmhStepCount" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1449, column 12: The link 'StructureDefinition-omh-systolic-blood-pressure.html' for "OmhSystolicBloodPressure" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/mapping.html#/html/head/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1455, column 12: The link 'StructureDefinition-omh-ventilation-cycle-time.html' for "OmhVentilationCycleTime" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/sa_workflow.html#/html/head/body/div/div/div/div/div/div/ol/li/ol/li/a at Line 356, column 20: The link 'http://hl7.org/fhir/R4/references#contained.html' for "contained" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/sa_workflow.html#/html/head/body/div/div/div/div/div/div/ol/li/ol/li/a at Line 688, column 20: The link 'http://hl7.org/fhir/R4/references#contained.html' for "contained" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/sa_workflow.html#/html/head/body/div/div/div/div/div/div/p/a at Line 820, column 80: The link ':https://www.getpostman.com/collections/0a54cd0197a5f2fc98d4' for "Postman Collection" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/toc.html#/html/head/body/div/div/div/div/div/div/p/a at Line 251, column 11: The link 'guidance.html' for "General Guidance" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/toc.html#/html/head/body/div/div/div/div/div/div/p/a at Line 263, column 11: The link 'bundles.html' for "Bundle Definitions" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/toc.html#/html/head/body/div/div/div/div/div/div/p/a at Line 265, column 11: The link 'operations.html' for "Operations" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/toc.html#/html/head/body/div/div/div/div/div/div/p/a at Line 281, column 11: The link 'searchparameters.html' for "Search Parameters" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/toc.html#/html/head/body/div/div/div/div/div/div/p/a at Line 289, column 11: The link 'security.html' for "Security" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/OMHtoFHIR/docs/use_case.html#/html/head/body/div/div/div/div/div/div/ul/li/a at Line 208, column 8: The link '#description' for "Description" cannot be resolved (valid targets: 21 targets)
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/examples/binary-omh-stepcount-example.xml ==
+ERROR: /f:Binary: Undefined element 'content'
+INFORMATION: Binary/omh-stepcount-example: Binary: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Binary
+ERROR: Binary/omh-stepcount-example: Binary.contentType: The value provided ("application/json") is not in the value set http://hl7.org/fhir/ValueSet/mimetypes|4.0.1 (http://hl7.org/fhir/ValueSet/mimetypes), and a code is required from this value set) (error message = Attempt to use Terminology server when no Terminology server is available)
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/examples/docref-omh-stepcount-example.json ==
+ERROR: DocumentReference: Unrecognised property '@class'
+ERROR: DocumentReference: Unrecognised property '@created'
+ERROR: DocumentReference: Unrecognised property '@indexed'
+INFORMATION: DocumentReference/omh-stepcount-example: DocumentReference: Validate resource against profile http://hl7.org/fhir/StructureDefinition/DocumentReference
+INFORMATION: DocumentReference/omh-stepcount-example: DocumentReference.contained.ofType(Patient): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: DocumentReference/omh-stepcount-example: DocumentReference.type: None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/c80-doc-typecodes (http://hl7.org/fhir/ValueSet/c80-doc-typecodes), and a code is recommended to come from this value set) (codes = http://loinc.org#55423-8)
+ERROR: DocumentReference/omh-stepcount-example: DocumentReference.content[0].attachment.contentType: The value provided ("application/json") is not in the value set http://hl7.org/fhir/ValueSet/mimetypes|4.0.1 (http://hl7.org/fhir/ValueSet/mimetypes), and a code is required from this value set) (error message = Attempt to use Terminology server when no Terminology server is available)
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/examples/observation-omh-stepcount-example.json ==
+INFORMATION: Observation/stepcount-example: Observation: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Observation/stepcount-example: Observation.contained.ofType(Patient): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Observation/stepcount-example: Observation.category[0]: None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/observation-category (http://hl7.org/fhir/ValueSet/observation-category), and a code is recommended to come from this value set) (codes = http://snomed.info/sct#68130003)
+ERROR: Observation/stepcount-example: Observation.component[0].code.coding[0]: Unknown Code System "http://hl7.org/fhir/observation-statistics"
+ERROR: Observation/stepcount-example: Observation.component[0].code.coding[0].system: URL value "http://hl7.org/fhir/observation-statistics" does not resolve
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/StructureDefinition-contained-p.json ==
+INFORMATION: StructureDefinition/contained-p: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/omhtofhir/StructureDefinition/contained-p'): The Implementation Guide contains no examples for this profile
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/StructureDefinition-extension-modality.json ==
+INFORMATION: StructureDefinition/extension-modality: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/omhtofhir/StructureDefinition/extension-modality'): The Implementation Guide contains no examples for this extension
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/StructureDefinition-omh-dr.json ==
+INFORMATION: StructureDefinition/omh-dr: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/omhtofhir/StructureDefinition/omh-dr'): The Implementation Guide contains no examples for this profile
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/StructureDefinition-omh-obs.json ==
+INFORMATION: StructureDefinition/omh-obs: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/omhtofhir/StructureDefinition/omh-obs'): The Implementation Guide contains no examples for this profile
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/ValueSet-omh-datapoint-type.xml ==
+INFORMATION: ValueSet/dp-type: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+WARNING: ValueSet/dp-type: ValueSet: vsd-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]
+WARNING: ValueSet/dp-type: ValueSet.compose[0].include[0].concept[0]: The code 258158006 is not valid in the system http://snomed.info/sct
+WARNING: ValueSet/dp-type: ValueSet.compose[0].include[1].concept[0]: The code 55423-8 is not valid in the system http://loinc.org
+WARNING: ValueSet/dp-type: ValueSet.compose[0].include[1].concept[1]: The code 8867-4 is not valid in the system http://loinc.org
+ERROR: ValueSet.where(id = 'dp-type'): Error expanding ValueSet: running without terminology services
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/ValueSet-omh-device-modality.json ==
+INFORMATION: ValueSet/omh-device-modality: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/capabilitystatement-client.xml ==
+ERROR: /f:CapabilityStatement: Undefined element 'acceptUnknown'
+ERROR: /f:CapabilityStatement: Undefined element 'profile'
+INFORMATION: CapabilityStatement/client: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/capabilitystatement-server.xml ==
+ERROR: /f:CapabilityStatement: Undefined element 'acceptUnknown'
+ERROR: /f:CapabilityStatement: Undefined element 'profile'
+INFORMATION: CapabilityStatement/server: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/codesystem-omh-datapoint-type.json ==
+INFORMATION: CodeSystem/omh-datapoint-type: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+WARNING: CodeSystem/omh-datapoint-type: CodeSystem: csd-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/codesystem-omh-device-modality.json ==
+INFORMATION: CodeSystem/omh-device-modality: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+WARNING: CodeSystem/omh-device-modality: CodeSystem: csd-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/codesystem-omh-temporal-relationship-to-meal.json ==
+INFORMATION: CodeSystem/omh-temporal-relationship-to-meal: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+WARNING: CodeSystem/omh-temporal-relationship-to-meal: CodeSystem: csd-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/ig.xml ==
+INFORMATION: ImplementationGuide/openmhealth.mfhir-0.0.0: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
+== /Users/ehaas/Documents/FHIR/OMHtoFHIR/source/resources/valueset-omh-unit-value.json ==
+INFORMATION: ValueSet/omh-unit-value: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+WARNING: ValueSet/omh-unit-value: ValueSet: vsd-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]
+WARNING: ValueSet/omh-unit-value: ValueSet.compose[0].include[0].concept[0]: The code {steps} is not valid in the system http://unitsofmeasure.org
+WARNING: ValueSet/omh-unit-value: ValueSet.compose[0].include[0].concept[1]: The code mm[Hg] is not valid in the system http://unitsofmeasure.org
+WARNING: ValueSet/omh-unit-value: ValueSet.compose[0].include[0].concept[2]: The code mg/dL is not valid in the system http://unitsofmeasure.org
+WARNING: ValueSet/omh-unit-value: ValueSet.compose[0].include[0].concept[3]: The code mmol/L is not valid in the system http://unitsofmeasure.org
+WARNING: ValueSet/omh-unit-value: ValueSet.compose[0].include[0].concept[4]: The code kg/m2 is not valid in the system http://unitsofmeasure.org
+WARNING: ValueSet/omh-unit-value: ValueSet.compose[0].include[0].concept[5]: The code kCal is not valid in the system http://unitsofmeasure.org
+WARNING: ValueSet/omh-unit-value: ValueSet.compose[0].include[0].concept[6]: The code /min is not valid in the system http://unitsofmeasure.org
+WARNING: ValueSet/omh-unit-value: ValueSet.compose[0].include[0].concept[7]: The code /min is not valid in the system http://unitsofmeasure.org
+WARNING: ValueSet/omh-unit-value: ValueSet.compose[0].include[0].concept[8]: The code % is not valid in the system http://unitsofmeasure.org
+ERROR: ValueSet.where(id = 'omh-unit-value'): Error expanding ValueSet: running without terminology services

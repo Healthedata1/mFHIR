@@ -3,7 +3,7 @@
   <meta>
     <lastUpdated value="2018-03-16T09:55:36.591+02:00" />
   </meta>
-  <url value="http://www.fhir.org/guides/mfhir/StructureDefinition/fiphr-stepstaken-stu3" />
+  <url value="http://www.fhir.org/guides/omhtofhir/StructureDefinition/fiphr-stepstaken-stu3" />
   <version value="1.0" />
   <name value="fiphr-sd-stepstaken-stu3" />
   <title value="Finnish PHR Steps Taken profile" />

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="template-profile-on-profile2"/>
-    <url value="http://www.fhir.org/guides/mfhir/StructureDefinition/template-profile-on-profile2"/>
+    <url value="http://www.fhir.org/guides/omhtofhir/StructureDefinition/template-profile-on-profile2"/>
     <version value="0.0.0"/>
     <name value="Template-Profile-on-Profile2"/>
     <status value="draft"/>

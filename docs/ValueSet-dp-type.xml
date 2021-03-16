@@ -3,15 +3,14 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="dp-type"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Open mHealth Datapoint Types</h2><div><p>Omh Datapoint standard codes whch are defined in the schema definitions and used when mapping and searching FHIR resources. <em><strong>todo</strong></em> complete for all datapoints</p>
-</div><p><b>Copyright Statement:</b> 1) The  LOINC® content is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use.  2) This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement</p><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=258158006">258158006</a></td><td>Sleep episode</td><td/></tr></table></li><li>Include these codes as defined in <a href="http://loinc.org"><code>http://loinc.org</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://details.loinc.org/LOINC/55423-8.html">55423-8</a></td><td>Step count</td><td/></tr><tr><td><a href="http://details.loinc.org/LOINC/8867-4.html">8867-4</a></td><td>Heart Rate</td><td/></tr></table></li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=258158006">258158006</a></td><td>Sleep episode</td><td/></tr></table></li><li>Include these codes as defined in <a href="http://loinc.org"><code>http://loinc.org</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://details.loinc.org/LOINC/55423-8.html">55423-8</a></td><td>Step count</td><td/></tr><tr><td><a href="http://details.loinc.org/LOINC/8867-4.html">8867-4</a></td><td>Heart Rate</td><td/></tr></table></li></ul></div>
   </text>
-  <url value="http://www.fhir.org/guides/mfhir/ValueSet/dp-type"/>
+  <url value="http://www.fhir.org/guides/omhtofhir/ValueSet/dp-type"/>
   <version value="0.0.0"/>
   <name value="omh-datapoint-type"/>
   <title value="Open mHealth Datapoint Types"/>
   <status value="active"/>
-  <date value="2018-05-28T00:00:00-07:00"/>
+  <date value="2018-05-28"/>
   <description value="Omh Datapoint standard codes whch are defined in the schema definitions and used when mapping and searching FHIR resources. ***todo*** complete for all datapoints"/>
   <copyright value="1) The  LOINC&#xAE; content is copyright &#xA9; 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use.  2) This value set includes content from SNOMED CT, which is copyright &#xA9; 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
   <compose>

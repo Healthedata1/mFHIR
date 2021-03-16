@@ -1,0 +1,195 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "omh-dr",
+  "url": "http://www.fhir.org/guides/omhtofhir/StructureDefinition/omh-dr",
+  "version": "0.0.0",
+  "name": "OmhDocumentReferenceProfile",
+  "title": "Open mHealth to FHIR DocumentReference Profile",
+  "status": "active",
+  "experimental": false,
+  "date": "2019-06-05",
+  "description": "The Open mHealth (OMH) Document Reference Profile defines the minimum expectations for the using the DocumentReference resource to record, search and fetch omh schema in its native json format.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DocumentReference",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DocumentReference",
+        "path": "DocumentReference",
+        "short": "OMH DocumentReference Profile",
+        "definition": "The Open mHealth (OMH) Document Reference Profile defines the minimum expectations for the using the DocumentReference resource to record, search and fetch omh schema in its native json format.",
+        "mustSupport": false
+      },
+      {
+        "id": "DocumentReference.contained",
+        "path": "DocumentReference.contained",
+        "short": "Contained patient resource.",
+        "definition": "The contained element houses a Patient resource in which the opaque patient identifier is represented.",
+        "requirements": "The opaque patient identifier is needed for searching omh schemas by patient.",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Patient",
+            "profile": [
+              "http://www.fhir.org/guides/omhtofhir/StructureDefinition/contained-p"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.identifier",
+        "path": "DocumentReference.identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.status",
+        "path": "DocumentReference.status",
+        "requirements": "The omh datapoint type is needed for searching omh schemas by referenceed description codes from a standard vocabulary.",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.type",
+        "path": "DocumentReference.type",
+        "short": "OMH datapoint type",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "description": "Omh Datapoint Type codes defined in the schema definitions.",
+          "valueSet": "http://www.fhir.org/guides/omhtofhir/ValueSet/dp-type"
+        }
+      },
+      {
+        "id": "DocumentReference.type.text",
+        "path": "DocumentReference.type.text",
+        "short": "Omh Schema name",
+        "definition": "The schema names taken from http://www.openmhealth.org/documentation/#/schema-docs/schema-library.",
+        "comment": "The `designation` element in http://www.fhir.org/guides/omhtofhir/ValueSet/dp-type valueset defines and associates these values with the code.",
+        "requirements": "Omh Schema name  is needed for searching omh schemas by common schema names.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.category",
+        "path": "DocumentReference.category",
+        "short": "OMH datapoint category",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "fixedCodeableConcept": {
+          "text": "OMH datapoint"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.subject",
+        "path": "DocumentReference.subject",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "omh-1",
+            "severity": "error",
+            "human": "SHALL be a reference to a contained patient.",
+            "expression": "reference.startsWith('#')",
+            "xpath": "f:reference[starts-with(@value, '#')]"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.subject.reference",
+        "path": "DocumentReference.subject.reference",
+        "short": "Reference to contained patient",
+        "requirements": "Reference the contained patient resource id in order to search omh schemas by patient opaque identifiers.",
+        "min": 1,
+        "max": "1",
+        "condition": [
+          "omh-1"
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.date",
+        "path": "DocumentReference.date",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content",
+        "path": "DocumentReference.content",
+        "short": "Omh datapoint url",
+        "definition": "The url for the omh datapoint.",
+        "requirements": "The url for the omh datapoint is need to retrieve the actual omh data.",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content.attachment",
+        "path": "DocumentReference.content.attachment",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content.attachment.contentType",
+        "path": "DocumentReference.content.attachment.contentType",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "application/json",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content.attachment.url",
+        "path": "DocumentReference.content.attachment.url",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.context",
+        "path": "DocumentReference.context",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.context.period",
+        "path": "DocumentReference.context.period",
+        "short": "Omh schema date range",
+        "definition": "The date range for the Omh schema activity.",
+        "requirements": "The content period is needed for searching omh schemas by date.",
+        "mustSupport": true
+      }
+    ]
+  }
+}

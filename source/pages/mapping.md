@@ -109,16 +109,16 @@ Each Datapoint is represented by the body properties and this table is a summare
 |calories_burned|physical-activity|http://loinc.org|41981-2|Calories burned|['kcal']|True|True|[]|
 |diastolic_blood_pressure|vital-signs|http://loinc.org|8462-4|Diastolic blood pressure|['mmHg']|False|False|[]|
 |expiratory_time|exam|http://loinc.org|60739-0|Expiration Time Respiratory system|None|False|False|[]|
-|geoposition|physical-activity|http://www.fhir.org/guides/mfhir/datapoint-type|geoposition|Geoposition|None|False|False|[]|
+|geoposition|physical-activity|http://www.fhir.org/guides/omhtofhir/datapoint-type|geoposition|Geoposition|None|False|False|[]|
 |heart_rate|vital-signs|http://loinc.org|8867-4|Heart rate|['beats/min']|True|False|['temporal_relationship_to_physical_activity', 'temporal_relationship_to_sleep']|
 |inspiratory_time|exam|http://loinc.org|60740-8|Inspiration Time Respiratory system|None|False|False|[]|
-|magnetic_force|physical-activity|http://www.fhir.org/guides/mfhir/datapoint-type|magnetic_force|Magnetic Force Panel|None|False|False|[]|
+|magnetic_force|physical-activity|http://www.fhir.org/guides/omhtofhir/datapoint-type|magnetic_force|Magnetic Force Panel|None|False|False|[]|
 |medication_adherence_percent|Survey|http://snomed.info/id|418633004|Medication compliance (observable entity)|None|False|False|[]|
 |minute_volume|exam|http://loinc.org|20139-2|Volume expired 1 minute|None|False|False|[]|
 |minutes_moderate_activity|physical-activity|http://snomed.info/id|408581006|Physical activity target moderate exercise (finding)|['min']|False|False|[]|
-|orientation|vital-signs|http://www.fhir.org/guides/mfhir/datapoint-type|orientation|Gyroscope measurement Panel|None|False|False|[]|
+|orientation|vital-signs|http://www.fhir.org/guides/omhtofhir/datapoint-type|orientation|Gyroscope measurement Panel|None|False|False|[]|
 |oxygen_saturation|vital-signs|http://loinc.org|59408-5|Oxygen saturation in Arterial blood by Pulse oximetry|['%']|True|False|['supplemental_oxygen_flow_rate', 'oxygen_therapy_mode_of_administration']|
-|pace|physical-activity|http://www.fhir.org/guides/mfhir/datapoint-type|pace|Pace|None|False|False|[]|
+|pace|physical-activity|http://www.fhir.org/guides/omhtofhir/datapoint-type|pace|Pace|None|False|False|[]|
 |physical_activity|physical-activity|http://snomed.info/id|68130003|Physical activity (observable entity)|None|False|False|[]|
 |respiratory_rate|vital-signs|http://loinc.org|9279-1|Respiratory Rate|['breaths/min']|True|False|['temporal_relationship_to_physical_activity']|
 |rr_interval|exam|http://loinc.org|8637-1|R_R interval by EKG|None|False|False|[]|
@@ -139,9 +139,9 @@ Some Datapoints properties are represented by the FHIR `Observation.component` e
 |body_posture|http://snomed.info/sct|271605009|Position of body and posture (observable entity)|valueCodeableConcept|
 |diastolic_blood_pressure|http://loinc.org|8462-4|Diastolic blood pressure|valueQuantity|
 |systolic_blood_pressure|http://loinc.org|8480-6|Systolic blood pressure|valueQuantity|
-|temporal_relationship_to_meal|http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes|relative-to-meal|OMH to FHIR Temporal Relationship To Meal|valueCodeableConcept|
-|temporal_relationship_to_physical_activity|http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes|relative-to-activity|OMH to FHIR Temporal Relationship To Physical Activity|valueCodeableConcept|
-|temporal_relationship_to_sleep|http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes|relative-to-sleep|OMH to FHIR Temporal Relationship To Sleep|valueCodeableConcept|
+|temporal_relationship_to_meal|http://www.fhir.org/guides/omhtofhir/omh_fhir_observation_codes|relative-to-meal|OMH to FHIR Temporal Relationship To Meal|valueCodeableConcept|
+|temporal_relationship_to_physical_activity|http://www.fhir.org/guides/omhtofhir/omh_fhir_observation_codes|relative-to-activity|OMH to FHIR Temporal Relationship To Physical Activity|valueCodeableConcept|
+|temporal_relationship_to_sleep|http://www.fhir.org/guides/omhtofhir/omh_fhir_observation_codes|relative-to-sleep|OMH to FHIR Temporal Relationship To Sleep|valueCodeableConcept|
 {: .grid}
 
 #### Observation Template
@@ -239,7 +239,7 @@ This FHIR Observation sub template is an instance view of the Observation compon
 ,"component" : [{
     "code" : { 
       "coding" : [{ 
-        "system" :"http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes",
+        "system" :"http://www.fhir.org/guides/omhtofhir/omh_fhir_observation_codes",
         "code" : "{{observation_component_code_code}}", 
         "display" : "{{observation_component_code_display}}"
          }]
@@ -393,7 +393,7 @@ Converting this datapoint instance to *dot notation* representation here to show
         	"id": "steps-example //  this is a server assigned resource id",
           "meta": {
           "source" : "%(OmhDataPoint.header.acqusitionProvenance.sourceName)",
-          "profile // Profiles this resource claims to conform to" : ["http://www.fhir.org/guides/mfhir/StructureDefinition/steps"]
+          "profile // Profiles this resource claims to conform to" : ["http://www.fhir.org/guides/omhtofhir/StructureDefinition/steps"]
         }
           "identifier  : [
           "system" : "https://omh.org/shimmer/ids // The namespace for the identifier value",

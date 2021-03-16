@@ -1,0 +1,101 @@
+{
+    "compose": {
+        "include": [
+            {
+                "concept": [
+                    {
+                        "code": "fL",
+                        "display": "fL"
+                    },
+                    {
+                        "code": "pL",
+                        "display": "pL"
+                    },
+                    {
+                        "code": "nL",
+                        "display": "nL"
+                    },
+                    {
+                        "code": "uL",
+                        "display": "uL"
+                    },
+                    {
+                        "code": "mL",
+                        "display": "mL"
+                    },
+                    {
+                        "code": "cL",
+                        "display": "cL"
+                    },
+                    {
+                        "code": "dL",
+                        "display": "dL"
+                    },
+                    {
+                        "code": "L",
+                        "display": "L"
+                    },
+                    {
+                        "code": "kL",
+                        "display": "kL"
+                    },
+                    {
+                        "code": "[foz_us]",
+                        "display": "fl oz"
+                    },
+                    {
+                        "code": "[cup_us]",
+                        "display": "Cup"
+                    },
+                    {
+                        "code": "[cin_i]",
+                        "display": "in^3"
+                    },
+                    {
+                        "code": "[pt_us]",
+                        "display": "pt"
+                    },
+                    {
+                        "code": "[qt_us]",
+                        "display": "qt"
+                    },
+                    {
+                        "code": "[gal_us]",
+                        "display": "gal"
+                    },
+                    {
+                        "code": "[tsp_us]",
+                        "display": "tsp"
+                    },
+                    {
+                        "code": "[tbs_us]",
+                        "display": "tbsp"
+                    }
+                ],
+                "system": "http://unitsofmeasure.org"
+            }
+        ]
+    },
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.openmhealth.org/"
+                }
+            ]
+        }
+    ],
+    "copyright": "Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved. UCUM is copyright 1999-2013 Regenstrief Institute, Inc. and The UCUM Organization, Indianapolis, IN. All rights reserved. See http://unitsofmeasure.org/trac//wiki/TermsOfUse for details.",
+    "date": "2018-04-28T19:14:28Z",
+    "description": "This schema represents a volume.",
+    "id": "volume-unit-value",
+    "immutable": false,
+    "name": "volume-unit-value",
+    "publisher": "Open mHealth",
+    "resourceType": "ValueSet",
+    "status": "draft",
+    "title": "Volume Unit Value",
+    "url": "http://www.fhir.org/guides/omhtofhir/ValueSet/volume-unit-value",
+    "version": "0.0.0"
+}

@@ -30,7 +30,7 @@
   "title": "Open mHealth to FHIR Device Modality",
   "resourceType": "CodeSystem",
   "status": "draft",
-  "url": "http://www.fhir.org/guides/mfhir/CodeSystem/omh-device-modality",
-  "valueSet": "http://www.fhir.org/guides/mfhir/ValueSet/omh-device-modality",
+  "url": "http://www.fhir.org/guides/omhtofhir/CodeSystem/omh-device-modality",
+  "valueSet": "http://www.fhir.org/guides/omhtofhir/ValueSet/omh-device-modality",
   "version": "0.0.0"
 }

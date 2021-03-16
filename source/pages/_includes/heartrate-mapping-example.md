@@ -75,7 +75,7 @@
    "meta":{
       "source":"generator",
       "profile":[
-         "http://www.fhir.org/guides/mfhir/StructureDefinition/heart-rate"
+         "http://www.fhir.org/guides/omhtofhir/StructureDefinition/heart-rate"
       ]
    },
    "identifier":[

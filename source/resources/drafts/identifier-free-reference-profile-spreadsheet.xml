@@ -999,8 +999,8 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">extension.uri</Data></Cell>
-    <Cell ss:StyleID="s80" ss:HRef="http://www.fhir.org/guides/mfhir/StructureDefinition/ifr-"><Data
-      ss:Type="String">http://www.fhir.org/guides/mfhir/StructureDefinition/ifr-</Data></Cell>
+    <Cell ss:StyleID="s80" ss:HRef="http://www.fhir.org/guides/omhtofhir/StructureDefinition/ifr-"><Data
+      ss:Type="String">http://www.fhir.org/guides/omhtofhir/StructureDefinition/ifr-</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s81"><Data ss:Type="String">introduction</Data></Cell>

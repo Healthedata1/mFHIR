@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "lm",
-  "url": "http://www.fhir.org/guides/mfhir/StructureDefinition/lm",
+  "url": "http://www.fhir.org/guides/omhtofhir/StructureDefinition/lm",
   "name": "LogicalModel",
   "title": "Open MHealth Kcal unit value Schema",
   "purpose": "This schema represents an amount (value) of kilocalories (unit of measure).",

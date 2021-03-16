@@ -1,0 +1,61 @@
+{
+    "compose": {
+        "include": [
+            {
+                "concept": [
+                    {
+                        "code": "307145004",
+                        "display": "Monday"
+                    },
+                    {
+                        "code": "307147007",
+                        "display": "Tuesday"
+                    },
+                    {
+                        "code": "307148002",
+                        "display": "Wednesday"
+                    },
+                    {
+                        "code": "307149005",
+                        "display": "Thursday"
+                    },
+                    {
+                        "code": "307150005",
+                        "display": "Friday"
+                    },
+                    {
+                        "code": "307151009",
+                        "display": "Saturday"
+                    },
+                    {
+                        "code": "307146003",
+                        "display": "Sunday"
+                    }
+                ],
+                "system": "http://snomed.info/sct"
+            }
+        ]
+    },
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.openmhealth.org/"
+                }
+            ]
+        }
+    ],
+    "copyright": "Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved. This value set includes content from SNOMED CT, which is copyright 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.",
+    "date": "2018-04-28T15:55:00.13Z",
+    "description": "The names of the days of week.",
+    "id": "day-of-week",
+    "immutable": false,
+    "name": "day-of-week",
+    "publisher": "Open mHealth",
+    "resourceType": "ValueSet",
+    "status": "draft",
+    "title": "Day Of Week",
+    "url": "http://www.fhir.org/guides/omhtofhir/ValueSet/day-of-week",
+    "version": "0.0.0"
+}

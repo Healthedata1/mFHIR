@@ -72,16 +72,16 @@ tr {
 	text-align: left;
 }
 
-table.cols {
+table.colstu {
 	width: 100%;
 }
 
-table.cols td {
+table.colstu td {
   border: 1px grey solid;
 	border-spacing: 0;
 	padding: 5px;
 	border-collapse: collapse;
-	background-color: #ffffe6;
+	background-color: #fff5e6;
 }
 
 table.colsd {
@@ -93,7 +93,7 @@ table.colsd td {
 	border-spacing: 0;
 	padding: 5px;
 	border-collapse: collapse;
-	background-color: #fdd4ce;
+	background-color: #efefef;
 }
 
 table.colsn {
@@ -118,6 +118,18 @@ table.colse td {
 	padding: 5px;
 	border-collapse: collapse;
 	background-color: #e6e6e6;
+}
+
+table.colsi {
+	width: 100%;
+}
+
+table.colsi td {
+  border: 1px grey solid;
+	border-spacing: 0;
+	padding: 5px;
+	border-collapse: collapse;
+	background-color: #ffffe6;
 }
 
 
@@ -356,12 +368,42 @@ pre.json             {
 	width: 650px;
 }
 
+pre.rdf             {
+	border: 1px solid #dcdcdc;
+ 	font-size: 11px;
+        background: #fdedff ; 
+	padding: 5px;
+	width: 650px;
+}
+
+pre.fhirpath             {
+	border: 1px solid #dcdcdc;
+ 	font-size: 11px;
+  background: #ffeafb ; 
+	padding: 5px;
+	width: 650px;
+}
+
+pre.graphql             {
+	border: 1px solid #dcdcdc;
+ 	font-size: 11px;
+        background: #f7e6ff ; 
+	padding: 5px;
+	width: 650px;
+}
+
 pre.xml              {
 	font-family: 'Courier New';
  	font-size: 9pt;
         padding: 2px;
         background: #F0FFFF ; 
 	width: 650px;
+}
+
+p.example {
+        background: #fff2e6 ; 
+        padding: 5px;
+	border: 1px solid #dcdcdc;
 }
 
 a.xmltag   {
@@ -528,7 +570,7 @@ div.itoc
   float: right;
   z-index: 10;
   width: 150px;
-  background-color: #ffeb7e;
+  background-color: #fffbe6;
   border: 1px solid navy;
 }
 
@@ -671,6 +713,12 @@ div.warning {
   padding: 5px;
 }
 
+span.warning {
+  background-color: #FFE6E6;
+  border: 1px silver solid;
+  padding: 1px;
+}
+
 
 
 tr.diff-title td {
@@ -695,6 +743,9 @@ tr.diff-new {
 tr.diff-new-item {
   background-color: #f4fff4;
 }
+tr.diff-changed-item {
+  background-color: #eaf8ff;
+}
 tr.diff-del {
   background-color: #fff4f4;
 }
@@ -702,10 +753,10 @@ tr.diff-del-item {
   background-color: #fff4f4;
 }
 
-.self-link-parent a{
+.self-link-parent a.self-link {
   visibility:hidden;
 }
-.self-link-parent:hover a {
+.self-link-parent:hover a.self-link {
  visibility:visible;
 }
 
@@ -762,4 +813,135 @@ td.frm-set {
          -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)"; /* IE8 */
          margin-left: -10em;
          margin-right: -10em;
+}
+
+.gsc-control-cse .gsc-table-result {
+	font-family : inherit;
+}
+
+.gsc-control-cse .gsc-input-box {
+	height : inherit;
+}
+
+input.gsc-input,
+.gsc-input-box,
+.gsc-input-box-hover,
+.gsc-input-box-focus,
+.gsc-search-button, input.gsc-search-button-v2 {
+	box-sizing  : content-box;
+	line-height : normal;
+	margin-top  : 0px;
+}
+
+div.informative-content {
+  border: 1px grey solid; 
+  background-color: #ffffe6; 
+  padding: 10px; 
+}  
+
+div.draft-content {
+  border: 1px grey solid; 
+  background-color: #efefef; 
+  padding: 10px; 
+}  
+
+div.trial-content {
+  border: 1px grey solid; 
+  background-color: #fff5e6; 
+  padding: 10px; 
+}  
+
+td.draft-content {
+  background-color: #efefef; 
+}  
+
+tr.draft-content {
+  background-color: #efefef; 
+}  
+
+a.normative-flag {
+  border: 1px grey solid; 
+  background-color: #e6ffe6; 
+  padding-left: 3px; 
+  padding-right: 3px; 
+  color: black; 
+  font-weight: bold
+}
+
+a.informative-flag {
+  border: 1px grey solid; 
+  background-color: #ffffe6; 
+  padding-left: 3px; 
+  padding-right: 3px; 
+  color: black; 
+  font-weight: bold
+}
+
+a.draft-flag {
+  border: 1px grey solid; 
+  background-color: #efefef; 
+  padding-left: 3px; 
+  padding-right: 3px; 
+  color: black; 
+  font-weight: bold
+}
+
+a.trial-use-flag {
+  border: 1px grey solid; 
+  background-color: #fff5e6; 
+  padding-left: 3px; 
+  padding-right: 3px; 
+  color: black; 
+  font-weight: bold
+}
+
+a.deprecated-flag {
+  border: 1px grey solid; 
+  background-color: #ffcccc; 
+  padding-left: 3px; 
+  padding-right: 3px; 
+  color: black; 
+  font-weight: bold
+}
+
+table.lmap {
+  margin-bottom: 10px;
+  border: 1px black solid;
+  margin-right: auto;
+}
+
+table.lmap th {
+  border:1px solid silver;
+  padding:3px 7px 2px 7px;
+  font-size: 10px;
+  line-height: 1.4em;
+  font-family: verdana;
+  font-weight: bold;
+  padding: 3px;
+  vertical-align: top;
+}
+
+
+table.lmap td {
+  border:1px solid silver;
+  padding:3px 7px 2px 7px;
+  font-size: 10px;
+  line-height: 1.4em;
+  font-family: verdana;
+  font-weight: normal;
+  padding: 3px;
+  vertical-align: top;
+}
+
+ol.fmmlist {
+  counter-reset: number 0;
+}
+ol.fmmlist li {
+  list-style: none;
+  counter-increment: number;
+}
+ol.fmmlist li::before {
+  content: "FMM " counter(number);
+  position: relative;
+  left:-25px
 }

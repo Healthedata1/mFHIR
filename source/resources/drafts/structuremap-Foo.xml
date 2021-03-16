@@ -3,9 +3,9 @@
 <StructureMap xmlns="http://hl7.org/fhir">
   <id value="Foo"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><pre>map &quot;http://www.fhir.org/guides/mfhir/StructureMap/Foo&quot; = &quot;LogicalModel --&gt; Foo Mapping&quot;
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><pre>map &quot;http://www.fhir.org/guides/omhtofhir/StructureMap/Foo&quot; = &quot;LogicalModel --&gt; Foo Mapping&quot;
 
-uses &quot;http://www.fhir.org/guides/mfhir/StructureDefinition/LogicalModel&quot; as source
+uses &quot;http://www.fhir.org/guides/omhtofhir/StructureDefinition/LogicalModel&quot; as source
 
 group for types LogicalModel
   input source : LogicalModel as source
@@ -24,7 +24,7 @@ group for types LogicalModel
 endgroup
 </pre></div>
   </text>
-  <url value="http://www.fhir.org/guides/mfhir/StructureMap/Foo"/>
+  <url value="http://www.fhir.org/guides/omhtofhir/StructureMap/Foo"/>
   <version value="0.0.0"/>
   <name value="LogicalModel --&gt; Foo Mapping"/>
   <status value="draft"/>
@@ -37,7 +37,7 @@ endgroup
     </coding>
   </jurisdiction>
   <structure>
-    <url value="http://www.fhir.org/guides/mfhir/StructureDefinition/LogicalModel"/>
+    <url value="http://www.fhir.org/guides/omhtofhir/StructureDefinition/LogicalModel"/>
     <mode value="source"/>
   </structure>
   <group>

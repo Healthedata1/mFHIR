@@ -96,6 +96,6 @@
     "resourceType": "ValueSet",
     "status": "draft",
     "title": "Descriptive Statistic",
-    "url": "http://www.fhir.org/guides/mfhir/ValueSet/descriptive-statistic",
+    "url": "http://www.fhir.org/guides/omhtofhir/ValueSet/descriptive-statistic",
     "version": "0.0.0"
 }

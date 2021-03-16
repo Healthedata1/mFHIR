@@ -5,10 +5,10 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
    <meta charset="UTF-8"/>
-  <title></title>
+  <title>OpenmHealthtoFHIR</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content=" Implemenation Guide" />
+<meta name="description" content="OpenmHealthtoFHIR Implemenation Guide" />
 <meta name="author" content="Open mHealth"/>
   <link href="fhir.css" rel="stylesheet"/>
 
@@ -74,12 +74,14 @@ can only resize using html  or css ;-(
 
 
       <div id="project-status" class="project-status"> <!-- ig title text -->
+
         
-        <b> Implementation Guide</b>
+        <b>Open mHealth to HL7 FHIR® Implementation Guide</b>
         
         
         CI Build
         
+
     </div><!-- end ig title text -->
 
   </div><!-- end container -->
@@ -107,7 +109,7 @@ can only resize using html  or css ;-(
           <span class="icon-bar">
           </span>
         </button>
-        <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3/index.html">FHIR</a>
+        <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
         <div class="nav-collapse collapse navbar-inverse-collapse">
 
        <!-- don't remove the line above - to add or remove a menu item commeent in or out -->
@@ -151,7 +153,7 @@ can only resize using html  or css ;-(
       <div class="row">  <!-- row -->
        <div class="inner-wrapper"> <!-- inner-wrapper -->
          <div class="col-12">  <!--col -->
-            <!-- content of page -->
+
 
 
 
@@ -161,8 +163,46 @@ can only resize using html  or css ;-(
 
 
   <style type="text/css">
-  h2,h3,h4,h5,h6{--pagenumber: "10"}
-  </style>
+    /* Section numbering*/
+    body{
+      counter-reset: pagenumber1 10 section
+        }
+
+  h2{counter-reset: sub-section}
+  h3{counter-reset: composite}
+  h4{counter-reset: detail}
+  h5{counter-reset: more-detail}
+
+  h2:not([nocount^="true"]):before{
+    counter-increment: section;
+    content:  counter(pagenumber1) "." counter(section) " ";
+    color: silver;
+  }
+  h3:not([nocount^="true"]):before{
+    counter-increment: sub-section;
+    content: counter(pagenumber1) "." counter(section) "." counter(sub-section) " ";
+    color: silver;
+
+  }
+  h4:not([nocount^="true"]):before{
+    content: counter(pagenumber1) "." counter(section) "." counter(sub-section) "." counter(composite) " ";
+    color: silver;
+    counter-increment: composite;
+    counter-reset: detail 1;
+  }
+  h5:not([nocount^="true"]):before{
+
+    content: counter(pagenumber1) "." counter(section) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";
+    color: silver;
+    counter-increment: detail;
+    counter-reset: more-detail 1;
+  }
+  h6:not([nocount^="true"]):before{
+    content: counter(pagenumber1) "." counter(section) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";
+    color: silver;
+    counter-increment: more-detail;
+  }
+</style>
 
 
 
@@ -170,14 +210,14 @@ can only resize using html  or css ;-(
 
 <nav class="breadcrumb">
   
-     <li><a href='index.html'><b>Home</b></a></li><li><b>All Examples</b></li>
+    <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">Table of Contents</a> <li><a href='index.html'><b>Home</b></a></li><li><b>All Examples</b></li>
 </nav>
 
 
 <!-- ============StatusBox=============== -->
 
 
-<!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">Open mHealth to FHIR - Local Development build (v0.0.0). See the <a href="http://www.fhir.org/guides/omhtofhir/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
 <!-- 
 This is the {% if {{site.build}} == "ci" %}
     Continuous Integration Build
@@ -191,12 +231,17 @@ This is the {% if {{site.build}} == "ci" %}
 
 <!-- ============CONTENT CONTENT=============== -->
 
-
 <h2>Examples</h2>
 
-<!-- page source: all-examples.md  -->
-
-
+<!-- 
+page source: {{ page.path }}
+<br />
+page name: {{ page.name }}
+<br />
+page title: {{ page.title }}
+<br />
+page url: {{ page.url }}
+ -->
 
 <p>Available for download <a href="downloads.html">here</a></p>
 
@@ -246,12 +291,12 @@ This is the {% if {{site.build}} == "ci" %}
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-     <a href="http://www.openmhealth.org/">Open mHealth </a> openmhealth.mfhir#0.0.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR 3.0.1</a> created <span href="#" data-toggle="tooltip" data-placement="top" title="Thu, Jun 6, 2019 17:39-0700">2019-06-06</span>. <br/>
+     <a href="http://www.openmhealth.org/">Open mHealth </a> openmhealth.mfhir#0.0.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/index.html">FHIR 4.0.1</a> created <span href="#" data-toggle="tooltip" data-placement="top" title="Tue, Jul 14, 2020 18:46-0700">2020-07-14</span>. <br/>
       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a>
       | <a style="color: #81BEF7" href="qa.html">QA Report</a>
-      | <a style="color: #81BEF7" href="#">Version History</a>
-      | <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
-      | <a style="color: #81BEF7" href="https://github.com/Healthedata1/IG-Template2/issues" target="_blank">Propose a change</a>
+      | <a style="color: #81BEF7" href="http://hl7.org/fhir/us/core/history.html">Version History</a>
+      | <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+      | <a style="color: #81BEF7" href="http://hl7.org/fhir-issues" target="_blank">Propose a change</a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->
