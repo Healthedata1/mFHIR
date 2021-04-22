@@ -25,41 +25,41 @@ Introduction
 
 Header Mappings and Examples
 ---
-- [OMH Header to FHIR Observation Detailed Mapping](https://github.com/openmhealth/mFHIR/blob/master/mapping/OMH%20Header%20to%20FHIR%20Observation%20Detailed%20Mapping.md)
-- [OMH Header to FHIR Provenance Detailed Mapping](https://github.com/openmhealth/mFHIR/blob/master/mapping/OMH%20Header%20to%20FHIR%20Provenance%20Detailed%20Mapping.md)
+- [OMH Header to FHIR Observation Detailed Mapping](readme_pages/OMH%20Header%20to%20FHIR%20Observation%20Detailed%20Mapping.md)
+- [OMH Header to FHIR Provenance Detailed Mapping](reame_pages/OMH%20Header%20to%20FHIR%20Provenance%20Detailed%20Mapping.md)
 
 
 DataPoint Mappings and Examples
 ---
-- [OMH Heart Rate DataPoint](https://github.com/openmhealth/mFHIR/blob/master/mapping/datapoint-mapping/OMH%20HeartRate%20DataPoint.md)
-- [OMH Respiratory Rate DataPoint](https://github.com/openmhealth/mFHIR/blob/master/mapping/datapoint-mapping/OMH%20Respiratory%20Rate%20DataPoint.md)
-- [OMH Body Temperature DataPoint](https://github.com/openmhealth/mFHIR/blob/master/mapping/datapoint-mapping/OMH%20Body%20Temperature%20DataPoint.md)
-- [OMH Body Weight DataPoint](https://github.com/openmhealth/mFHIR/blob/master/mapping/datapoint-mapping/OMH%20Body%20Weight%20DataPoint.md)
-- [OMH Blood Pressure DataPoint](https://github.com/openmhealth/mFHIR/blob/master/mapping/datapoint-mapping/OMH%20Blood%20Pressure%20DataPoint.md)
-- [OMH Oxygen Saturation DataPoint](https://github.com/openmhealth/mFHIR/blob/master/mapping/datapoint-mapping/OMH%20Oxygen%20Saturation%20DataPoint.md)
-- [OMH Step Count DataPoint](https://github.com/openmhealth/mFHIR/blob/master/mapping/datapoint-mapping/OMH%20Step%20Count%20DataPoint.md)
-- [OMH Total Sleep Time DataPoint](https://github.com/openmhealth/mFHIR/blob/master/mapping/datapoint-mapping/OMH%20Total%20Sleep%20Time%20DataPoint.md)
-- [OMH Blood Glucose DataPoint](https://github.com/openmhealth/mFHIR/blob/master/mapping/datapoint-mapping/OMH%20Blood%20Glucose%20DataPoint.md)
+- [OMH Heart Rate DataPoint](reame_pages/datapoint-mapping/OMH%20HeartRate%20DataPoint.md)
+- [OMH Respiratory Rate DataPoint](reame_pages/datapoint-mapping/OMH%20Respiratory%20Rate%20DataPoint.md)
+- [OMH Body Temperature DataPoint](reame_pages/datapoint-mapping/OMH%20Body%20Temperature%20DataPoint.md)
+- [OMH Body Weight DataPoint](reame_pages/datapoint-mapping/OMH%20Body%20Weight%20DataPoint.md)
+- [OMH Blood Pressure DataPoint](reame_pages/datapoint-mapping/OMH%20Blood%20Pressure%20DataPoint.md)
+- [OMH Oxygen Saturation DataPoint](reame_pages/datapoint-mapping/OMH%20Oxygen%20Saturation%20DataPoint.md)
+- [OMH Step Count DataPoint](reame_pages/datapoint-mapping/OMH%20Step%20Count%20DataPoint.md)
+- [OMH Total Sleep Time DataPoint](reame_pages/datapoint-mapping/OMH%20Total%20Sleep%20Time%20DataPoint.md)
+- [OMH Blood Glucose DataPoint](reame_pages/datapoint-mapping/OMH%20Blood%20Glucose%20DataPoint.md)
 
 
 Mapping Tables
 ---
-- [OMH DataPoint Element to FHIR Element Mapping Table](https://github.com/openmhealth/mFHIR/blob/master/mapping/OMH_FHIR_Observation-Component_Mapping_Table.md)
+- [OMH DataPoint Element to FHIR Element Mapping Table](reame_pages/OMH_FHIR_Observation-Component_Mapping_Table.md)
 - [OMH_FHIR_Observation-Component_Mapping_Table](OMH_FHIR_Observation-Component_Mapping_Table.md)
 - [OMH_FHIR_Concept_Mapping_Table](OMH_FHIR_Concept_Mapping_Table.md)
-- [OMH_FHIR_Descriptive_Statistic_Denominator_Mapping _Table](https://github.com/openmhealth/mFHIR/blob/master/mapping/OMH_FHIR_Descriptive_Statistic_Denominator_Mapping%20_Table.md)
+- [OMH_FHIR_Descriptive_Statistic_Denominator_Mapping _Table](reame_pages/OMH_FHIR_Descriptive_Statistic_Denominator_Mapping%20_Table.md)
 
 FHIR Profiles
 ---
-- [OMH to FHIR Observation Profile](https://github.com/openmhealth/mFHIR/blob/master/mapping/OMH%20to%20FHIR%20Observation%20Profile.md)
-- [OMH to FHIR Extensions](https://github.com/openmhealth/mFHIR/blob/master/mapping/OMH%20to%20FHIR%20Extensions.md)
-- [OMH to FHIR ValueSets And CodeSystems](https://github.com/openmhealth/mFHIR/blob/master/mapping/OMH%20to%20FHIR%20ValueSets%20And%20CodeSystems.md)
+- [OMH to FHIR Observation Profile](reame_pages/OMH%20to%20FHIR%20Observation%20Profile.md)
+- [OMH to FHIR Extensions](reame_pages/OMH%20to%20FHIR%20Extensions.md)
+- [OMH to FHIR ValueSets And CodeSystems](reame_pages/OMH%20to%20FHIR%20ValueSets%20And%20CodeSystems.md)
 
 Example Python Mapping Script
 ---
-- [OMH to FHIR Mapper](https://github.com/openmhealth/mFHIR/blob/master/mapping/OMH%20to%20FHIR%20Mapper.md)
+- [OMH to FHIR Mapper](reame_pages/OMH%20to%20FHIR%20Mapper.md)
 
 Punch List
 ---
-- [PUNCHLIST](https://github.com/openmhealth/mFHIR/blob/master/mapping/PUNCHLIST.md)
+- [PUNCHLIST](reame_pages/PUNCHLIST.md)
 
