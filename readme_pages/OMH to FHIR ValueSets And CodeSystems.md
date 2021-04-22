@@ -1,3 +1,4 @@
+[<<back](../README.md)
 <!---
 tags: omh2fhir
 title: wide-template
@@ -22,7 +23,7 @@ title: wide-template
 
 <!-- wide style: to accomodate tables -->
 
-<style>.markdown-body { max-width: 1500px; }</style>
+
 
 # OMH to FHIR ValueSets And CodeSystems
 
@@ -59,3 +60,5 @@ title: wide-template
 
     ...TODO...
 
+
+[<<back](../README.md)

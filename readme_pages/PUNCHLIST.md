@@ -1,3 +1,4 @@
+[<<back](../README.md)
 <!---
 tags: omh2fhir
 title: wide-template
@@ -22,7 +23,7 @@ title: wide-template
 
 <!-- wide style: to accomodate tables -->
 
-<style>.markdown-body { max-width: 1500px; }</style>
+
 
 # PUNCHLIST
 
@@ -34,3 +35,5 @@ title: wide-template
    - [ ] qa and validation
 
 ---
+
+[<<back](../README.md)

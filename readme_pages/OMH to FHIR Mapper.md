@@ -1,3 +1,4 @@
+[<<back](../README.md)
 <!---
 tags: omh2fhir
 title: wide-template
@@ -22,7 +23,7 @@ title: wide-template
 
 <!-- wide style: to accomodate tables -->
 
-<style>.markdown-body { max-width: 1500px; }</style>
+
 
 # OMH to FHIR Mapper
 
@@ -43,3 +44,5 @@ Click the run button 2x
 Scroll up to the copy paste box and follow the instructions.
 
 
+
+[<<back](../README.md)

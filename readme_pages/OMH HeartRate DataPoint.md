@@ -1,3 +1,4 @@
+[<<back](../README.md)
 <!---
 tags: omh2fhir
 title: wide-template
@@ -22,7 +23,7 @@ title: wide-template
 
 <!-- wide style: to accomodate tables -->
 
-<style>.markdown-body { max-width: 1500px; }</style>
+
 
 # OMH HeartRate DataPoint 
 
@@ -295,3 +296,5 @@ Maps to this FHIR Observation (note that this example does not include the optio
 ~~~
 
 ---
+
+[<<back](../README.md)

@@ -1,3 +1,4 @@
+[<<back](../README.md)
 <!---
 tags: omh2fhir
 title: wide-template
@@ -22,7 +23,7 @@ title: wide-template
 
 <!-- wide style: to accomodate tables -->
 
-<style>.markdown-body { max-width: 1500px; }</style>
+
 
 # OMH Header to FHIR Observation Detailed Mapping
 
@@ -136,3 +137,5 @@ Maps to the FHIR Observation resource:
 
 
 ---
+
+[<<back](../README.md)

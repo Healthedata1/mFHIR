@@ -1,4 +1,5 @@
 [<<back](../README.md)
+[<<back](../README.md)
 
 <!---
 tags: omh2fhir
@@ -24,7 +25,7 @@ title: wide-template
 
 <!-- wide style: to accomodate tables -->
 
-<style>.markdown-body { max-width: 1500px; }</style>
+
 
 # Quick Start Mapping Guide
 
@@ -128,3 +129,5 @@ step_count|physical-activity|http://loinc.org|55423-8|Number of steps in unspeci
 |diastolic_blood_pressure|http://loinc.org|8462-4|Diastolic blood pressure|valueQuantity|
 |systolic_blood_pressure|http://loinc.org|8480-6|Systolic blood pressure|valueQuantity|
 
+
+[<<back](../README.md)

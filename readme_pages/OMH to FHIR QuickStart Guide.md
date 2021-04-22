@@ -1,3 +1,4 @@
+[<<back](../README.md)
 <!---
 tags: omh2fhir
 title: wide-template
@@ -22,7 +23,7 @@ title: wide-template
 
 <!-- wide style: to accomodate tables -->
 
-<style>.markdown-body { max-width: 1500px; }</style>
+
 <a href="https://www.openmhealth.org/">
 <img style="float: left" width="25%" height="25%" src="https://www.openmhealth.org/wp-content/themes/openmhealth2015/dist/images/logo@2x.png" alt="Open mHealth">
 </a>
@@ -87,3 +88,5 @@ Punch List
 - [PUNCHLIST](/bJaucDkuTXCgO_U7yeo_Ag)
 
 
+
+[<<back](../README.md)

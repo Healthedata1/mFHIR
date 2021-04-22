@@ -1,3 +1,4 @@
+[<<back](../README.md)
 <!---
 tags: omh2fhir
 title: wide-template
@@ -22,7 +23,7 @@ title: wide-template
 
 <!-- wide style: to accomodate tables -->
 
-<style>.markdown-body { max-width: 1500px; }</style>
+
 
 # OMH Header to FHIR Provenance Detailed Mapping
 
@@ -290,3 +291,4 @@ The following example shows the Provenance resource contained in the Observation
   }
 }
 ~~~
+[<<back](../README.md)

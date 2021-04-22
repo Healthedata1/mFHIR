@@ -1,3 +1,4 @@
+[<<back](../README.md)
 <!---
 tags: omh2fhir
 title: wide-template
@@ -22,7 +23,7 @@ title: wide-template
 
 <!-- wide style: to accomodate tables -->
 
-<style>.markdown-body { max-width: 1500px; }</style>
+
 
 # OMH to FHIR Extensions
 
@@ -30,3 +31,4 @@ title: wide-template
 
 <iframe src="https://healthedata1.github.io/OMH-QS-Profiles/StructureDefinition-extension-modality.html" width="100%" height="1000">
 </iframe>
+[<<back](../README.md)
