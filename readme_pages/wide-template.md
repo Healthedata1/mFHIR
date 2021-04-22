@@ -20,6 +20,8 @@ title: wide-template
 </header>
 
 
-<!-- wide style: to accomodate tables -->
+<!-- wide style: to accomodate tables 
 
 <style>.markdown-body { max-width: 1500px; }</style>
+
+-->

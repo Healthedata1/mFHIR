@@ -37,7 +37,7 @@ The following Table provides the detailed mapping for the OMH Oxygen Saturation 
 |2.2|oxygen_saturation.value|Observation.valueQuantity.value|=  oxygen_saturation.value|
 |2.3|oxygen_saturation.unit|Observation.valueQuantity.unit|=  '%'|
 |2.4|oxygen_saturation.unit|Observation.valueQuantity.system|fixed to 'http://unitsofmeasure.org'|
-|2.5|oxygen_saturation.unit|Observation.valueQuantity.code|=  '%'|
+|2.5|oxygen_saturation.unit|Ob.valueQuantity.code|=  '%'|
 |3|body.effective_time_frame|Observation.effective[x]|Mappping depends on type- see below|
 |4|body.effective_time_frame.date_time|Observation.effectiveDateTime|=  body.effective_time_frame.date_time|
 |5|body.effective_time_frame.time_interval|Observation.effectivePeriod|see effectivePeriod elements below|
