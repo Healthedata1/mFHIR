@@ -27,7 +27,7 @@ jupyter-console==6.0.0
 jupyter-core==4.4.0
 jupyterlab==0.35.4
 jupyterlab-server==0.2.0
-lxml==4.2.5
+lxml==4.6.3
 MarkupSafe==1.0
 mccabe==0.6.1
 mistune==0.8.4
