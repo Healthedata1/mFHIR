@@ -1,0 +1,37 @@
+cdex 1 hr
+argo 2 hrs
+US core .5
+Fhir resource fast api  - 3
+OMH
+4:30  schema mapping - 7:00  9:00-10:30, 8-10
+3-7. 9-11
+
+possibly use uuid + Schema as meta/source for provenance alternative.
+
+timing  observation.component, vs extension, vs sampleData
+
+Carini, Simona
+Tue, Apr 6, 4:40 PM (13 days ago)
+to me, Ida
+
+Hi Eric,
+as per our conversation yesterday I am resending you the links to the metadata schemas on the IEEE site
+the datapoint schema is the same as in OMH
+the schema-od schema has a minor change (one less property than the one in OMH)
+the header schemas has a number of changes from the OMH version
+the data series schema is new in IEEE (not in OMH)
+Please, let me know if you have any questions on the schemas
+
+m resending the original email and adding a couple of direct links:
+
+metadata schemas https://opensource.ieee.org/omh/1752/-/tree/main/schemas/metadata
+metadata sample data https://opensource.ieee.org/omh/1752/-/tree/main/sample_data/metadata
+frequency unit value schema https://opensource.ieee.org/omh/1752/-/blob/main/schemas/utility/frequency-unit-value-0.1.json
+2 instances of frequency showing the two types of frequency data modeled
+https://opensource.ieee.org/omh/1752/-/blob/main/sample_data/utility/frequency-unit-value-sample-data-two.json
+https://opensource.ieee.org/omh/1752/-/blob/main/sample_data/utility/frequency-unit-value-sample-data.json
+Simona
+
+Hello
+the schemas the IEEE P1752 working group has worked on are now available here
+https://opensource.ieee.org/omh/1752
