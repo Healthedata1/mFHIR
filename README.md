@@ -20,7 +20,7 @@ OMH to FHIR QuickStart Guide
 
 Introduction
 ---
-- [Quick Start Mapping Guide](readme_pages/quickstart.md)
+- [Quick Start Mapping Guide](readme_pages/Quick Start Mapping Guide.md)
 
 
 Header Mappings and Examples
@@ -31,15 +31,15 @@ Header Mappings and Examples
 
 DataPoint Mappings and Examples
 ---
-- [OMH Heart Rate DataPoint](readme_pages/datapoint-mapping/OMH%20HeartRate%20DataPoint.md)
-- [OMH Respiratory Rate DataPoint](readme_pages/datapoint-mapping/OMH%20Respiratory%20Rate%20DataPoint.md)
-- [OMH Body Temperature DataPoint](readme_pages/datapoint-mapping/OMH%20Body%20Temperature%20DataPoint.md)
-- [OMH Body Weight DataPoint](readme_pages/datapoint-mapping/OMH%20Body%20Weight%20DataPoint.md)
-- [OMH Blood Pressure DataPoint](readme_pages/datapoint-mapping/OMH%20Blood%20Pressure%20DataPoint.md)
-- [OMH Oxygen Saturation DataPoint](readme_pages/datapoint-mapping/OMH%20Oxygen%20Saturation%20DataPoint.md)
-- [OMH Step Count DataPoint](readme_pages/datapoint-mapping/OMH%20Step%20Count%20DataPoint.md)
-- [OMH Total Sleep Time DataPoint](readme_pages/datapoint-mapping/OMH%20Total%20Sleep%20Time%20DataPoint.md)
-- [OMH Blood Glucose DataPoint](readme_pages/datapoint-mapping/OMH%20Blood%20Glucose%20DataPoint.md)
+- [OMH Heart Rate DataPoint](readme_pages/dOMH%20HeartRate%20DataPoint.md)
+- [OMH Respiratory Rate DataPoint](readme_pages/dOMH%20Respiratory%20Rate%20DataPoint.md)
+- [OMH Body Temperature DataPoint](readme_pages/dOMH%20Body%20Temperature%20DataPoint.md)
+- [OMH Body Weight DataPoint](readme_pages/dOMH%20Body%20Weight%20DataPoint.md)
+- [OMH Blood Pressure DataPoint](readme_pages/dOMH%20Blood%20Pressure%20DataPoint.md)
+- [OMH Oxygen Saturation DataPoint](readme_pages/dOMH%20Oxygen%20Saturation%20DataPoint.md)
+- [OMH Step Count DataPoint](readme_pages/dOMH%20Step%20Count%20DataPoint.md)
+- [OMH Total Sleep Time DataPoint](readme_pages/dOMH%20Total%20Sleep%20Time%20DataPoint.md)
+- [OMH Blood Glucose DataPoint](readme_pages/dOMH%20Blood%20Glucose%20DataPoint.md)
 
 
 Mapping Tables
