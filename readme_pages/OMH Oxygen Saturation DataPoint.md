@@ -1,8 +1,29 @@
----
+[<<back](../README.md)
+<!---
 tags: omh2fhir
----
+title: wide-template
+--->
 
-{%hackmd 2yYAoTGSSpiWVb7EWu6v0w %}
+<!-- icons -->
+<header>
+<a href="https://www.openmhealth.org/">
+<img style="float: left" width="25%" height="25%" src="https://www.openmhealth.org/wp-content/themes/openmhealth2015/dist/images/logo@2x.png" alt="Open mHealth">
+</a>
+
+
+<a href="http://hl7.org/fhir">
+<img style="float: right" width="25%" height="25%" src="http://build.fhir.org/assets/images/fhir-logo-www.png" alt="HL7 FHIR">
+</a>
+
+<br />
+
+<h3 class="logoHeader" style="text-align: center">OMH to FHIR QuickStart Guide</h3>
+</header>
+
+
+<!-- wide style: to accomodate tables -->
+
+
 
 # OMH Oxygen Saturation DataPoint 
 
@@ -17,7 +38,7 @@ The following Table provides the detailed mapping for the OMH Oxygen Saturation 
 |2.2|oxygen_saturation.value|Observation.valueQuantity.value|=  oxygen_saturation.value|
 |2.3|oxygen_saturation.unit|Observation.valueQuantity.unit|=  '%'|
 |2.4|oxygen_saturation.unit|Observation.valueQuantity.system|fixed to 'http://unitsofmeasure.org'|
-|2.5|oxygen_saturation.unit|Observation.valueQuantity.code|=  '%'|
+|2.5|oxygen_saturation.unit|Ob.valueQuantity.code|=  '%'|
 |3|body.effective_time_frame|Observation.effective[x]|Mappping depends on type- see below|
 |4|body.effective_time_frame.date_time|Observation.effectiveDateTime|=  body.effective_time_frame.date_time|
 |5|body.effective_time_frame.time_interval|Observation.effectivePeriod|see effectivePeriod elements below|
@@ -391,3 +412,4 @@ Maps to this FHIR Observation (note that this example does not include the optio
     ]
 }
 ~~~
+[<<back](../README.md)

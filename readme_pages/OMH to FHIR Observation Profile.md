@@ -1,7 +1,8 @@
----
+[<<back](../README.md)
+<!---
 tags: omh2fhir
 title: wide-template
----
+--->
 
 <!-- icons -->
 <header>
@@ -22,4 +23,14 @@ title: wide-template
 
 <!-- wide style: to accomodate tables -->
 
-<style>.markdown-body { max-width: 1500px; }</style>
+
+
+
+# OMH to FHIR Observation Profile
+
+<iframe src="https://healthedata1.github.io/OMH-QS-Profiles/StructureDefinition-omh-obs.html" width="100%" height="1250">
+</iframe>
+
+---
+
+[<<back](../README.md)
