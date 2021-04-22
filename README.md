@@ -20,7 +20,7 @@ OMH to FHIR QuickStart Guide
 
 Introduction
 ---
-- [Quick Start Mapping Guide](quickstart.md)
+- [Quick Start Mapping Guide](readme_pages/quickstart.md)
 
 
 Header Mappings and Examples
