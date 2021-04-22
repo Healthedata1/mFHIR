@@ -1,0 +1,10 @@
+Update mappings to reflect updates to the metadata schemas  4-6
+Update concept mapping table to standard coding: 6-8 hrs
+Updates FHIR Observation profile StrcuctureDefinition to FHIRr4 and link to rendered definitions : 4-6 hrs
+Convert tables from git to markdown and provide links to csv files for easier collaboration, maintenance and better useability: 2-3 hrs
+Refactor Python based mapper tool to reflect changes version of mFHIR 6-8 hrs
+QA hrs (inclus clean up headers/footer information) 2-3 hrs
+ 
+22-34 hrs ($4400-$6800)
+
+
