@@ -1,0 +1,43 @@
+﻿,,,,,,,,,,,Markdown Transform
+,,,,,,,,,,,## OMH Body Weight DataPoint to FHIR Observation Detailed Mapping
+,,,,,,,,,,,
+OMH Body Weight,,,,,,HL7 FHIR R4 Observation,,,,Comments,The following Table provides the detailed mapping for the OMH Body Weight DataPoint to the OMH to FHIR Observation Profile TODO: add link to map and profile:
+Index,OMH Body Weight Element,JSON Data Type,Cardinality,Description,,FHIR Attribute,Data Type,Cardinality,Mapping Table/Fixed Values,Mapping Instructions,|Index|OMH Body Weight Element|FHIR Attribute|Mapping Instructions|
+---,---,,,,,---,,,,---,|---|---|---|---|
+1,body-weight-2.0.json,"JSON schema object (""http://json-schema.org/draft-04/schema#)",,This schema represents a person's hThis schema represents a person's body weight.,,OMH to FHIR Observation Profile,Profile,,,,|1|body-weight-2.0.json|OMH to FHIR Observation Profile||
+2.1,body_weight,omh:mass-unit-value:1.0,1..1,body weight,,Observation.valueQuantity,Quantity,1..1,,see valueQuantity elements below,|2.1|body_weight|Observation.valueQuantity|see valueQuantity elements below|
+2.2,body_weight.value,number,1..1,body weight value,,Observation.valueQuantity.value,decimal,0..1,,=  body_weight.value,|2.2|body_weight.value|Observation.valueQuantity.value|=  body_weight.value|
+2.3,body_weight.unit,string,1..1,body weight unit,,Observation.valueQuantity.unit,string,0..1,,=  body_weight.unit,|2.3|body_weight.unit|Observation.valueQuantity.unit|=  body_weight.unit|
+2.4,body_weight.unit,,,,,Observation.valueQuantity.system,uri,0..1,http://unitsofmeasure.org,fixed to 'http://unitsofmeasure.org',|2.4|body_weight.unit|Observation.valueQuantity.system|fixed to 'http://unitsofmeasure.org'|
+2.5,body_weight.unit,,,,,Observation.valueQuantity.code,string,0..1,OMH_FHIR_Concept_Mapping_Table,Map body_weight.unit to column 'FHIR Concept' using  the [OMH_FHIR_Concept_Mapping_Table](#),|2.5|body_weight.unit|Observation.valueQuantity.code|Map body_weight.unit to column 'FHIR Concept' using  the [OMH_FHIR_Concept_Mapping_Table](#)|
+3,body.effective_time_frame,time-frame,1..1,when the measurement was taken,,Observation.effective[x],varies,0..1,,Mappping depends on type- see below,|3|body.effective_time_frame|Observation.effective[x]|Mappping depends on type- see below|
+5,body.effective_time_frame.date_time,date-time,0..1,represents a point in time (ISO8601),,Observation.effectiveDateTime,string,0..1,,=  body.effective_time_frame.date_time,|5|body.effective_time_frame.date_time|Observation.effectiveDateTime|=  body.effective_time_frame.date_time|
+4,body.effective_time_frame.time_interval,time-interval,1..1,"This schema describes an interval of time. In the absence of a precise start and/or end time, the time interval can be described as a date + a part of the day (morning, afternoon, evening, night). No commitments are made as to whether the start or end time point itself is included in the interval (i.e., whether the defined interval includes the boundary point(s) or not).
+",,Observation.effectivePeriod,Period,0..1,,see effectivePeriod elements below,|4|body.effective_time_frame.time_interval|Observation.effectivePeriod|see effectivePeriod elements below|
+8.1,body.effective_time_frame.time_interval.start_date_time,date-time,0..1,represents a point in time (ISO8601),,Observation.effectivePeriod.start,dateTime,0..1,,=  body.effective_time_frame.time_interval.start_date_time,|8.1|body.effective_time_frame.time_interval.start_date_time|Observation.effectivePeriod.start|=  body.effective_time_frame.time_interval.start_date_time|
+8.0,body.effective_time_frame.time_interval.end_date_time,date-time,0..1,represents a point in time (ISO8601),,Observation.effectivePeriod.end,dateTime,0..1,,=  body.effective_time_frame.time_interval.end_date_time,|8.0|body.effective_time_frame.time_interval.end_date_time|Observation.effectivePeriod.end|=  body.effective_time_frame.time_interval.end_date_time|
+9,body.descriptive_statistic,descriptive-statistic,0..1,"The descriptive statistic of a set of measurements. A measurement value can be the result of combining various measurements and calculating descriptive statistics like average, maximum, minimum, etc. Additional descriptive statistics will be added as the need arises. A measurement value without a descriptive statistic is interpreted as being the result of an individual measurement.
+",,Observation.code.coding[1],Coding,0..1,,Map  descriptive statistic to the OMH to FHIR additional Observation codings ( code system http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes).,|9|body.descriptive_statistic|Observation.code.coding[1]|Map  descriptive statistic to the OMH to FHIR additional Observation codings ( code system http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes).|
+9.1,body.descriptive_statistic,,,,,Observation.code.coding[1].code,code,1..1,,concatenation of  header.schema_id.name = 'body-weight'  + '-' + body.descriptive_statistic  for example= body-weight-maximum,|9.1|body.descriptive_statistic|Observation.code.coding[1].code|concatenation of  header.schema_id.name = 'body-weight'  + '-' + body.descriptive_statistic  for example= body-weight-maximum|
+9.2,body.descriptive_statistic,,,,,Observation.code.coding[1].system,uri,1..1,"""http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes""","fixed to '""http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes""'","|9.2|body.descriptive_statistic|Observation.code.coding[1].system|fixed to '""http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes""'|"
+9.3,body.descriptive_statistic,,,,,Observation.code.coding[1].display,string,1..1,,concatenation of  header.schema_id.name = 'body-weight'  + '-' + body.descriptive_statistic  for example= body-weight-maximum,|9.3|body.descriptive_statistic|Observation.code.coding[1].display|concatenation of  header.schema_id.name = 'body-weight'  + '-' + body.descriptive_statistic  for example= body-weight-maximum|
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
