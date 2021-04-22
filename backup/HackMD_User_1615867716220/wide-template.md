@@ -1,7 +1,7 @@
----
+<!---
 tags: omh2fhir
 title: wide-template
----
+--->
 
 <!-- icons -->
 <header>
