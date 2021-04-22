@@ -295,5 +295,3 @@ Maps to this FHIR Observation (note that this example does not include the optio
 ~~~
 
 ---
-- [name=erichaas]
-- [time=Sat, May 30, 2020 1:02 PM]

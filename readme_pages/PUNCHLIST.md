@@ -34,5 +34,3 @@ title: wide-template
    - [ ] qa and validation
 
 ---
-- [name=erichaas]
-- [time=Tue, Jul 14, 2020 7:23 PM]

@@ -87,5 +87,3 @@ Punch List
 - [PUNCHLIST](/bJaucDkuTXCgO_U7yeo_Ag)
 
 
-- [name=erichaas]
-- [time=Sat, May 30, 2020 1:02 PM]

@@ -31,5 +31,3 @@ title: wide-template
 </iframe>
 
 ---
-- [name=erichaas]
-- [time=Tue, Jul 14, 2020 7:22 PM]
