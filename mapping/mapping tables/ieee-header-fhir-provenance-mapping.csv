@@ -1,6 +1,4 @@
-﻿IEEE  Header,,,,,,Condition (IF True),HL7 FHIR R4 Provenance,,,,Mapping Instructions,Markdown Transform
-Index,Old Header Element,IEEE Header Element,JSON Data Type,Cardinality,Description,,FHIR Attribute,Data Type,Cardinality,Mapping Table/Fixed Values,Mapping Instructions,|Index|IEEE Header Element|FHIR Attribute|Mapping Instructions|
----,,---,,,,,---,,,,---,|---|---|---|---|
+Index,Old Header Element,Upated Header Element,JSON Data Type,Cardinality,Description,,FHIR Attribute,Data Type,Cardinality,Mapping Table/Fixed Values,Mapping Instructions,|Index|Upated Header Element|FHIR Attribute|Mapping Instructions|
 1,header.$schema,header.$schema,"JSON schema object (""http://json-schema.org/draft-07/schema#)",,This schema represents the header of a data transaction.,,OMH to FHIR  Provenance Profile,Profile,,,see Provenance elements below,|1|header.$schema|OMH to FHIR  Provenance Profile|see Provenance elements below|
 2,,header.$id,,,URI for the schema,,None,,,,schema metadata,|2|header.$id|None|schema metadata|
 3,,header.title,,,schema title,,None,,,,schema metadata,|3|header.title|None|schema metadata|
@@ -39,9 +37,3 @@ Index,Old Header Element,IEEE Header Element,JSON Data Type,Cardinality,Descript
 41,,header.properties.external_datasheets.items.properties.datasheet_reference,string:iri,1..1,International Resource Identifier (IRI) of applicable datasheet(s). The expectation is that the IRI will convey resolvable location and access information for the resource identified resource.,,None,,,,,|41|header.properties.external_datasheets.items.properties.datasheet_reference|None||
 42,,,,,,,,,,,,
 44,,,,,,,,,,,,
-,,,,,,,,,,,,
-,,,,,,,,,,,,
-,,,,,,,,,,,,
-,,,,,,,,,,,,
-,,,,,,,,,,,,
-,,,,,,,,,,,,

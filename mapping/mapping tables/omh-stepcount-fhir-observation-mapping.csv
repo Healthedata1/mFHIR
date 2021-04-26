@@ -1,9 +1,4 @@
-﻿,,,,,,,,,,,Markdown Transform
-,,,,,,,,,,,## OMH Step Count DataPoint to FHIR Observation Detailed Mapping
-,,,,,,,,,,,
-OMH Step Count,,,,,,HL7 FHIR R4 Observation,,,,Comments,The following Table provides the detailed mapping for the OMH Step Count DataPoint to the OMH to FHIR Observation Profile TODO: add link to map and profile:
 Index,OMH Step Count Element,JSON Data Type,Cardinality,Description,,FHIR Attribute,Data Type,Cardinality,Mapping Table/Fixed Values,Mapping Instructions,|Index|OMH Step Count Element|FHIR Attribute|Mapping Instructions|
----,---,,,,,---,,,,---,|---|---|---|---|
 1,step-count-1.0.json,"JSON schema object (""http://json-schema.org/draft-04/schema#)",,This schema represents a person's step count.,,OMH to FHIR Observation Profile,Profile,,,,|1|step-count-1.0.json|OMH to FHIR Observation Profile||
 2.1,body.step_count,omh:unit-value:1.0 ,1..1,step count,,Observation.valueQuantity,Quantity,1..1,,"see valueQuantity elements below, if body.descriptive_statistic_denominator is present is modifies the units as described below","|2.1|body.step_count|Observation.valueQuantity|see valueQuantity elements below, if body.descriptive_statistic_denominator is present is modifies the units as described below|"
 2.2,body.step_count.value,number,1..1,step count value,,Observation.valueQuantity.value,decimal,0..1,,=  body.step_count.value,|2.2|body.step_count.value|Observation.valueQuantity.value|=  body.step_count.value|
@@ -27,16 +22,3 @@ Index,OMH Step Count Element,JSON Data Type,Cardinality,Description,,FHIR Attrib
 5.A3,body.descriptive_statistic_denominator,,,,,Observation.code.coding[1].display,string,1..1,,see body.descriptive_statistic above,|5.A3|body.descriptive_statistic_denominator|Observation.code.coding[1].display|see body.descriptive_statistic above|
 5.B1,body.descriptive_statistic_denominator,,,,,Observation.valueQuantity.unit,string,1..1,OMH_FHIR_Descriptive_Statistic_Denominator_Mapping _Table,see body.step_count.unit above,|5.B1|body.descriptive_statistic_denominator|Observation.valueQuantity.unit|see body.step_count.unit above|
 5.B2,body.descriptive_statistic_denominator,,,,,Observation.valueQuantity.code,string,1..1,OMH_FHIR_Descriptive_Statistic_Denominator_Mapping _Table,see body.step_count.unit above,|5.B2|body.descriptive_statistic_denominator|Observation.valueQuantity.code|see body.step_count.unit above|
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,

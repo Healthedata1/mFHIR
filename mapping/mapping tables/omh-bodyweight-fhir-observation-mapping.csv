@@ -1,9 +1,4 @@
-﻿,,,,,,,,,,,Markdown Transform
-,,,,,,,,,,,## OMH Body Weight DataPoint to FHIR Observation Detailed Mapping
-,,,,,,,,,,,
-OMH Body Weight,,,,,,HL7 FHIR R4 Observation,,,,Comments,The following Table provides the detailed mapping for the OMH Body Weight DataPoint to the OMH to FHIR Observation Profile TODO: add link to map and profile:
 Index,OMH Body Weight Element,JSON Data Type,Cardinality,Description,,FHIR Attribute,Data Type,Cardinality,Mapping Table/Fixed Values,Mapping Instructions,|Index|OMH Body Weight Element|FHIR Attribute|Mapping Instructions|
----,---,,,,,---,,,,---,|---|---|---|---|
 1,body-weight-2.0.json,"JSON schema object (""http://json-schema.org/draft-04/schema#)",,This schema represents a person's hThis schema represents a person's body weight.,,OMH to FHIR Observation Profile,Profile,,,,|1|body-weight-2.0.json|OMH to FHIR Observation Profile||
 2.1,body_weight,omh:mass-unit-value:1.0,1..1,body weight,,Observation.valueQuantity,Quantity,1..1,,see valueQuantity elements below,|2.1|body_weight|Observation.valueQuantity|see valueQuantity elements below|
 2.2,body_weight.value,number,1..1,body weight value,,Observation.valueQuantity.value,decimal,0..1,,=  body_weight.value,|2.2|body_weight.value|Observation.valueQuantity.value|=  body_weight.value|
@@ -21,23 +16,3 @@ Index,OMH Body Weight Element,JSON Data Type,Cardinality,Description,,FHIR Attri
 9.1,body.descriptive_statistic,,,,,Observation.code.coding[1].code,code,1..1,,concatenation of  header.schema_id.name = 'body-weight'  + '-' + body.descriptive_statistic  for example= body-weight-maximum,|9.1|body.descriptive_statistic|Observation.code.coding[1].code|concatenation of  header.schema_id.name = 'body-weight'  + '-' + body.descriptive_statistic  for example= body-weight-maximum|
 9.2,body.descriptive_statistic,,,,,Observation.code.coding[1].system,uri,1..1,"""http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes""","fixed to '""http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes""'","|9.2|body.descriptive_statistic|Observation.code.coding[1].system|fixed to '""http://www.fhir.org/guides/mfhir/omh_fhir_observation_codes""'|"
 9.3,body.descriptive_statistic,,,,,Observation.code.coding[1].display,string,1..1,,concatenation of  header.schema_id.name = 'body-weight'  + '-' + body.descriptive_statistic  for example= body-weight-maximum,|9.3|body.descriptive_statistic|Observation.code.coding[1].display|concatenation of  header.schema_id.name = 'body-weight'  + '-' + body.descriptive_statistic  for example= body-weight-maximum|
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,

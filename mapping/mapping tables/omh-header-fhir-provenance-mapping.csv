@@ -1,6 +1,4 @@
-﻿OMH Header,,,,,Condition (IF True),HL7 FHIR R4 Observation,,,,Mapping Instructions,,Markdown Transform
 Index,OMH Header Element,JSON Data Type,Cardinality,Description,,FHIR Attribute,Data Type,Cardinality,Mapping Table/Fixed Values,Mapping Instructions,notes,|Index|OMH Header Element|FHIR Attribute|Mapping Instructions|
----,---,,,,,---,,,,---,,|---|---|---|---|
 1,header-1.2.json,"JSON schema object (""http://json-schema.org/draft-04/schema#)",,This schema represents the header of a data transaction.,,OMH to FHIR  Provenance Profile,Profile,,,,,|1|header-1.2.json|OMH to FHIR  Provenance Profile||
 1A,None,,,,,Provenance.activity.text,string,1..1,"""transform""","fixed to ""transform""",There is no code for transform in R4 spec so text for now judy text -consider pre-adoption of  value from R5 ,"|1A|None|Provenance.activity.text|fixed to ""transform""|"
 !B,None,,,,,Provenance.target.reference,string,1..1,"""#""","fixed to ""#"" since  Provenance  is contained in Observation",may not make contained in future,"|!B|None|Provenance.target.reference|fixed to ""#"" since  Provenance  is contained in Observation|"
@@ -14,7 +12,7 @@ Index,OMH Header Element,JSON Data Type,Cardinality,Description,,FHIR Attribute,
 1F.2,None,,,,,Provenance.entity[0],backbone element,0..1,,Provenance.entity is optional.  see entity elements below,,|1F.2|None|Provenance.entity[0]|Provenance.entity is optional.  see entity elements below|
 1F.3,None,,,,,Provenance.entity[0].role,code,1..1,"""derivation""","fixed to ""derivation""",,"|1F.3|None|Provenance.entity[0].role|fixed to ""derivation""|"
 2.1,header.id,string,1..1,The identifier of this data point. We strongly recommend this to be a globally unique value.,,Provenance.entity[0].what.identifier[0].value,string,1..1,,"concatenation of  ""urn:uuid:"" + header.id",,"|2.1|header.id|Provenance.entity[0].what.identifier[0].value|concatenation of  ""urn:uuid:"" + header.id|"
-2.2,header.id,NA,NA,NA,,Provenance.entity[0].what.identifier[0].system,string,1..1,"""urn:ietf:rfc:3986""","fixed to ""urn:ietf:rfc:3986""",,"|2.2|header.id|Provenance.entity[0].what.identifier[0].system|fixed to ""urn:ietf:rfc:3986""|"
+2.2,header.id,,,,,Provenance.entity[0].what.identifier[0].system,string,1..1,"""urn:ietf:rfc:3986""","fixed to ""urn:ietf:rfc:3986""",,"|2.2|header.id|Provenance.entity[0].what.identifier[0].system|fixed to ""urn:ietf:rfc:3986""|"
 3,header.creation_date_time,date-time,1..1,The date time this data point was created on the system where data is stored.,,None,,,,,,|3|header.creation_date_time|None||
 4,header.schema_id,schema-id,1..1,The schema identifier of the body of the data point.,,None,,,,,,|4|header.schema_id|None||
 5,header.schema_id.namespace,string,0..1,The namespace of the schema. A namespace serves to disambiguate schemas with conflicting names.,,Provenance.agent[1].type.who.identifier.value,string,0..1,,concatenation of  header.schema_id.namespace + header.schema_id.name + header.schema_id.version,if present,|5|header.schema_id.namespace|Provenance.agent[1].type.who.identifier.value|concatenation of  header.schema_id.namespace + header.schema_id.name + header.schema_id.version|

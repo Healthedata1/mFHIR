@@ -1,9 +1,4 @@
-﻿,,,,,,,,,,,Markdown Transform
-,,,,,,,,,,,## OMH Total Sleep Time DataPoint to FHIR Observation Detailed Mapping
-,,,,,,,,,,,
-OMH Total Sleep Time,,,,,,HL7 FHIR R4 Observation,,,,Comments,The following Table provides the detailed mapping for the OMH Total Sleep Time DataPoint to the OMH to FHIR Observation Profile TODO: add link to map and profile:
 Index,OMH Total Sleep Time Element,JSON Data Type,Cardinality,Description,,FHIR Attribute,Data Type,Cardinality,Mapping Table/Fixed Values,Mapping Instructions,|Index|OMH Total Sleep Time Element|FHIR Attribute|Mapping Instructions|
----,---,,,,,---,,,,---,|---|---|---|---|
 1,total-sleep-time-1.0.json,"JSON schema object (""http://json-schema.org/draft-04/schema#)",,This schema represents a person's total sleep time.,,OMH to FHIR Observation Profile,Profile,,,,|1|total-sleep-time-1.0.json|OMH to FHIR Observation Profile||
 2.1,total_sleep_time,omh:duration-unit-value:1.0 ,1..1,total sleep time,,Observation.valueQuantity,Quantity,1..1,,see valueQuantity elements below,|2.1|total_sleep_time|Observation.valueQuantity|see valueQuantity elements below|
 2.2,total_sleep_time.value,number,1..1,total sleep time value,,Observation.valueQuantity.value,decimal,0..1,,=  total_sleep_time.value,|2.2|total_sleep_time.value|Observation.valueQuantity.value|=  total_sleep_time.value|
@@ -27,17 +22,3 @@ Index,OMH Total Sleep Time Element,JSON Data Type,Cardinality,Description,,FHIR 
 5.A3,body.descriptive_statistic_denominator,,,,,Observation.code.coding[1].display,string,1..1,,see body.descriptive_statistic above,|5.A3|body.descriptive_statistic_denominator|Observation.code.coding[1].display|see body.descriptive_statistic above|
 5.B1,body.descriptive_statistic_denominator,,,,,Observation.valueQuantity.unit,string,1..1,OMH_FHIR_Descriptive_Statistic_Denominator_Mapping _Table,see body.step_count.unit above,|5.B1|body.descriptive_statistic_denominator|Observation.valueQuantity.unit|see body.step_count.unit above|
 5.B2,body.descriptive_statistic_denominator,,,,,Observation.valueQuantity.code,string,1..1,OMH_FHIR_Descriptive_Statistic_Denominator_Mapping _Table,see body.step_count.unit above,|5.B2|body.descriptive_statistic_denominator|Observation.valueQuantity.code|see body.step_count.unit above|
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,

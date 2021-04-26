@@ -1,9 +1,7 @@
-﻿OMH Header,,,,,Condition (IF True),HL7 FHIR R4 Observation,,,,Mapping Instructions,Markdown Transform
 Index,OMH Header Element,JSON Data Type,Cardinality,Description,,FHIR Attribute,Data Type,Cardinality,Mapping Table/Fixed Values,Mapping Instructions,|Index|OMH Header Element|FHIR Attribute|Mapping Instructions|
----,---,,,,,---,,,,---,|---|---|---|---|
 1,header-1.2.json,"JSON schema object (""http://json-schema.org/draft-04/schema#)",,This schema represents the header of a data transaction.,,OMH to FHIR Observation Profile,Profile,,,,|1|header-1.2.json|OMH to FHIR Observation Profile||
 2.1,header.id,string,1..1,The identifier of this data point. We strongly recommend this to be a globally unique value.,,,string,1..1,,concatenation of  header.schema_id.name = 'heart-rate'  + '-' + body.descriptive_statistic  for example= heart-rate-maximum,|2.1|header.id||concatenation of  header.schema_id.name = 'heart-rate'  + '-' + body.descriptive_statistic  for example= heart-rate-maximum|
-2.2,header.id,NA,NA,NA,,identifier[0].system,uri,1..1,"""urn:ietf:rfc:3986""","fixed to ""urn:ietf:rfc:3986""","|2.2|header.id|identifier[0].system|fixed to ""urn:ietf:rfc:3986""|"
+2.2,header.id,,,,,identifier[0].system,uri,1..1,"""urn:ietf:rfc:3986""","fixed to ""urn:ietf:rfc:3986""","|2.2|header.id|identifier[0].system|fixed to ""urn:ietf:rfc:3986""|"
 3,header.creation_date_time,date-time,1..1,The date time this data point was created on the system where data is stored.,,issued,Instant,1..1,,= header.creation_date_time,|3|header.creation_date_time|issued|= header.creation_date_time|
 4,header.schema_id,schema-id,1..1,The schema identifier of the body of the data point.,,None,,,,,|4|header.schema_id|None||
 5,header.schema_id.namespace,string,0..1,The namespace of the schema. A namespace serves to disambiguate schemas with conflicting names.,,None,,,,,|5|header.schema_id.namespace|None||
