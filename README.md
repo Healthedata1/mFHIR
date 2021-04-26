@@ -2,12 +2,12 @@
 
 <header>
 <a href="https://www.openmhealth.org/">
-<img style="float: left" width="25%" height="25%" src="https://www.openmhealth.org/wp-content/themes/openmhealth2015/dist/images/logo@2x.png" alt="Open mHealth">
+<img align="left" width="25%" height="25%" src="https://www.openmhealth.org/wp-content/themes/openmhealth2015/dist/images/logo@2x.png" alt="Open mHealth">
 </a>
 
 
 <a href="http://hl7.org/fhir">
-<img style="float: right" width="25%" height="25%" src="http://build.fhir.org/assets/images/fhir-logo-www.png" alt="HL7 FHIR">
+<img align="left" width="25%" height="25%" src="http://build.fhir.org/assets/images/fhir-logo-www.png" alt="HL7 FHIR">
 </a>
 
 <br/>
@@ -20,7 +20,7 @@ OMH to FHIR QuickStart Guide
 
 Introduction
 ---
-- [Quick Start Mapping Guide Introduction](readme_pages/Quick%20Start%20Mapping%20Guide.md)
+- [Quick Start Mapping Guide Introduction](readme_pages/Quick%20Start%20Mapping%20Guide%20Introduction.md)
 
 
 Header Mappings and Examples
@@ -62,4 +62,3 @@ Example Python Mapping Script
 Punch List
 ---
 - [PUNCHLIST](readme_pages/PUNCHLIST.md)
-

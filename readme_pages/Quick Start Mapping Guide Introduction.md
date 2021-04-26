@@ -1,5 +1,4 @@
 [<<back](../README.md)
-[<<back](../README.md)
 
 <!---
 tags: omh2fhir
@@ -118,7 +117,7 @@ respiratory_rate|vital-signs|http://loinc.org|9279-1|Respiratory Rate|['breaths/
 total_sleep_time|physical-activity|http://snomed.info/id|248263006|Duration of sleep (observable entity)|['sec', 'min', 'h']|
 step_count|physical-activity|http://loinc.org|55423-8|Number of steps in unspecified time Pedometer|['steps']|
 
-\* The Blood Pressure schema does not have units,  references systolic and diastolic blood pressure schemas which do.  These "subschemas" are mapped to the FHIR `Observation.component` element discussed in the next section. 
+\* The Blood Pressure schema does not have units,  references systolic and diastolic blood pressure schemas which do.  These "subschemas" are mapped to the FHIR `Observation.component` element discussed in the next section.
 
 ### Data Point Component Mapping Table
 
