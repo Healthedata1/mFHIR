@@ -8,12 +8,12 @@ title: wide-template
 <!-- icons -->
 <header>
 <a href="https://www.openmhealth.org/">
-<img style="float: left" width="25%" height="25%" src="https://www.openmhealth.org/wp-content/themes/openmhealth2015/dist/images/logo@2x.png" alt="Open mHealth">
+<img align="left" width="25%" height="25%" src="https://www.openmhealth.org/wp-content/themes/openmhealth2015/dist/images/logo@2x.png" alt="Open mHealth">
 </a>
 
 
 <a href="http://hl7.org/fhir">
-<img style="float: right" width="25%" height="25%" src="http://build.fhir.org/assets/images/fhir-logo-www.png" alt="HL7 FHIR">
+<img align="right" width="25%" height="25%" src="http://build.fhir.org/assets/images/fhir-logo-www.png" alt="HL7 FHIR">
 </a>
 
 <br />
