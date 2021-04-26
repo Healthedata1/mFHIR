@@ -7,7 +7,7 @@
 
 
 <a href="http://hl7.org/fhir">
-<img align="left" width="25%" height="25%" src="http://build.fhir.org/assets/images/fhir-logo-www.png" alt="HL7 FHIR">
+<img align="right" width="25%" height="25%" src="http://build.fhir.org/assets/images/fhir-logo-www.png" alt="HL7 FHIR">
 </a>
 
 <br/>

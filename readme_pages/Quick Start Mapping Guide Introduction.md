@@ -26,7 +26,7 @@ title: wide-template
 
 
 
-# Quick Start Mapping Guide
+# Quick Start Mapping Guide Introduction
 
 
 ## Quick Start Mapping Guide For Mapping OMH Schema Mappings to FHIR Elements
