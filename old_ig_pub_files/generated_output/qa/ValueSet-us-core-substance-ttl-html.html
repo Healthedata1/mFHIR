@@ -1,0 +1,80 @@
+﻿<html>
+<head>
+  <title>ValueSet-us-core-substance-ttl-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="rdf">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+ a fhir:ValueSet;
+  <a href="http://build.fhir.org/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
+  <a href="http://build.fhir.org/valueset.html#ValueSet.id">fhir:Resource.id</a> [ <a href="http://build.fhir.org/datatypes.html#id">fhir:value</a> &quot;us-core-substance&quot;];
+  <a href="http://build.fhir.org/valueset.html#ValueSet.meta">fhir:Resource.meta</a> [
+     <a href="http://build.fhir.org/datatypes.html#Meta#Meta.lastUpdated">fhir:Meta.lastUpdated</a> [ <a href="http://build.fhir.org/datatypes.html#instant">fhir:value</a> &quot;2016-05-25T16:59:08.250+10:00&quot;^^xsd:dateTime ];
+     <a href="http://build.fhir.org/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://build.fhir.org/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition&quot;;
+       <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0;
+       <a href="http://build.fhir.org/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition&gt;     ]
+  ];
+  <a href="http://build.fhir.org/valueset.html#ValueSet.text">fhir:DomainResource.text</a> [
+     <a href="http://build.fhir.org/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;US Core Substance-Reactant for Intolerance and Negation Codes&lt;/h2&gt;&lt;div&gt;&lt;p&gt;A substance or other type of agent (e.g., sunshine) that may be associated with an intolerance reaction event or a propensity to such an event. These concepts are expected to be at a more general level of abstraction (ingredients versus more specific formulations). This value set is quite general and includes concepts that may never cause an adverse event, particularly the included SNOMED CT concepts. The code system-specific value sets in this grouping value set are intended to provide broad coverage of all kinds of agents, but the expectation for use is that the chosen concept identifier for a substance should be appropriately specific and drawn from the available code systems in the following priority order:  1. NDF-RT codes for drug class allergies  2. RxNorm codes limited to term types (TTY) , 'BN' Brand Name, 'IN' ingredient, 'MIN' multiple ingredient, and 'PIN' precise ingredient for drug ingredient allergies  3. SNOMED CT including concepts from SCTID 716186003 No Known allergy (situation) and if no other code from above code systems are available&lt;/p&gt;\n&lt;/div&gt;&lt;p&gt;&lt;b&gt;Copyright Statement:&lt;/b&gt; This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement&lt;/p&gt;&lt;p&gt;This value set includes codes from the following code systems:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Import all the codes that are contained in &lt;a href=\&quot;ValueSet-us-core-substance-ndfrt.html\&quot;&gt;http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-ndfrt&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Import all the codes that are contained in &lt;a href=\&quot;ValueSet-us-core-substance-rxnorm.html\&quot;&gt;http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-rxnorm&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Import all the codes that are contained in &lt;a href=\&quot;ValueSet-us-core-substance-sct.html\&quot;&gt;http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-sct&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&quot;
+  ];
+  <a href="http://build.fhir.org/valueset.html#ValueSet.url">fhir:ValueSet.url</a> [ <a href="http://build.fhir.org/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance&quot;];
+  <a href="http://build.fhir.org/valueset.html#ValueSet.version">fhir:ValueSet.version</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;2.0.0&quot;];
+  <a href="http://build.fhir.org/valueset.html#ValueSet.name">fhir:ValueSet.name</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;US_Core_Substance_Reactant_for_Intolerance_and_Negation_Codes&quot;];
+  <a href="http://build.fhir.org/valueset.html#ValueSet.title">fhir:ValueSet.title</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;US Core Substance-Reactant for Intolerance and Negation Codes&quot;];
+  <a href="http://build.fhir.org/valueset.html#ValueSet.status">fhir:ValueSet.status</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;active&quot;];
+  <a href="http://build.fhir.org/valueset.html#ValueSet.date">fhir:ValueSet.date</a> [ <a href="http://build.fhir.org/datatypes.html#dateTime">fhir:value</a> &quot;2016-05-25T16:59:08+10:00&quot;^^xsd:dateTime];
+  <a href="http://build.fhir.org/valueset.html#ValueSet.publisher">fhir:ValueSet.publisher</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;HL7 US Realm Steering Committee&quot;];
+  <a href="http://build.fhir.org/valueset.html#ValueSet.contact">fhir:ValueSet.contact</a> [
+     <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0;
+     <a href="http://build.fhir.org/datatypes.html#ContactDetail#ContactDetail.telecom">fhir:ContactDetail.telecom</a> [
+       <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0;
+       <a href="http://build.fhir.org/datatypes.html#ContactPoint#ContactPoint.system">fhir:ContactPoint.system</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;other&quot; ];
+       <a href="http://build.fhir.org/datatypes.html#ContactPoint#ContactPoint.value">fhir:ContactPoint.value</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;http://hl7.org/fhir&quot; ]     ]
+  ];
+  <a href="http://build.fhir.org/valueset.html#ValueSet.description">fhir:ValueSet.description</a> [ <a href="http://build.fhir.org/datatypes.html#markdown">fhir:value</a> &quot;A substance or other type of agent (e.g., sunshine) that may be associated with an intolerance reaction event or a propensity to such an event. These concepts are expected to be at a more general level of abstraction (ingredients versus more specific formulations). This value set is quite general and includes concepts that may never cause an adverse event, particularly the included SNOMED CT concepts. The code system-specific value sets in this grouping value set are intended to provide broad coverage of all kinds of agents, but the expectation for use is that the chosen concept identifier for a substance should be appropriately specific and drawn from the available code systems in the following priority order:  1. NDF-RT codes for drug class allergies  2. RxNorm codes limited to term types (TTY) , 'BN' Brand Name, 'IN' ingredient, 'MIN' multiple ingredient, and 'PIN' precise ingredient for drug ingredient allergies  3. SNOMED CT including concepts from SCTID 716186003 No Known allergy (situation) and if no other code from above code systems are available &quot;];
+  <a href="http://build.fhir.org/valueset.html#ValueSet.jurisdiction">fhir:ValueSet.jurisdiction</a> [
+     <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0;
+     <a href="http://build.fhir.org/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0;
+       <a href="http://build.fhir.org/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://build.fhir.org/datatypes.html#uri">fhir:value</a> &quot;urn:iso:std:iso:3166&quot; ];
+       <a href="http://build.fhir.org/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;US&quot; ];
+       <a href="http://build.fhir.org/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;United States of America&quot; ]     ]
+  ];
+  <a href="http://build.fhir.org/valueset.html#ValueSet.copyright">fhir:ValueSet.copyright</a> [ <a href="http://build.fhir.org/datatypes.html#markdown">fhir:value</a> &quot;This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement&quot;];
+  <a href="http://build.fhir.org/valueset.html#ValueSet.compose">fhir:ValueSet.compose</a> [
+     <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include">fhir:ValueSet.compose.include</a> [
+       <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0;
+       <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.valueSet">fhir:ValueSet.compose.include.valueSet</a> [
+         <a href="http://build.fhir.org/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-ndfrt&quot;;
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0;
+         <a href="http://build.fhir.org/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-ndfrt&gt;       ]     ], [
+       <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 1;
+       <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.valueSet">fhir:ValueSet.compose.include.valueSet</a> [
+         <a href="http://build.fhir.org/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-rxnorm&quot;;
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0;
+         <a href="http://build.fhir.org/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-rxnorm&gt;       ]     ], [
+       <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 2;
+       <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.valueSet">fhir:ValueSet.compose.include.valueSet</a> [
+         <a href="http://build.fhir.org/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-sct&quot;;
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0;
+         <a href="http://build.fhir.org/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-sct&gt;       ]     ]
+  ].
+
+# - ontology header ------------------------------------------------------------
+
+ a owl:Ontology;
+  owl:imports fhir:fhir.ttl.
+
+</pre>
+
+</body>
+</html>

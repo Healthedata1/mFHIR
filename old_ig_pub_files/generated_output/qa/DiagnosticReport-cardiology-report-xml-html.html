@@ -1,0 +1,60 @@
+﻿<html>
+<head>
+  <title>DiagnosticReport-cardiology-report-xml-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="xml">
+
+&lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport">DiagnosticReport</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;cardiology-report&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.meta">meta</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note&quot;/&gt;
+  &lt;/meta&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p&gt;&lt;strong&gt;Generated Narrative&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;id:&lt;/strong&gt; cardiology-report&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;meta:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;  profile: &lt;a href=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note&quot;&gt;http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;status:&lt;/strong&gt; final&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;category:&lt;/strong&gt; Cardiology&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;code:&lt;/strong&gt; Cardiovascular physiologic and EKG assessment panel&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;subject:&lt;/strong&gt; &lt;a href=&quot;Patient-example.html&quot;&gt;Patient-example.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;effectiveDateTime:&lt;/strong&gt; '2011-01-01T21:39:30.000Z'&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;presentedForm:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;contentType: application/pdf
+url: &lt;a href=&quot;http://example.org/pdfdownloads/cardiopanel-report-123.pdf&quot;&gt;http://example.org/pdfdownloads/cardiopanel-report-123.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+  &lt;/text&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;final&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.category">category</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;LP29708-2&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Cardiology&quot;/&gt;
+    &lt;/coding&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Cardiology&quot;/&gt;
+  &lt;/category&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.code">code</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;45033-8&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Cardiovascular physiologic and EKG assessment panel&quot;/&gt;
+    &lt;/coding&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Cardiovascular physiologic and EKG assessment panel&quot;/&gt;
+  &lt;/code&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.subject">subject</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/example&quot;/&gt;
+  &lt;/subject&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.effective[x]">effectiveDateTime</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2011-01-01T21:39:30.000Z&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.presentedForm">presentedForm</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.contentType">contentType</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;application/pdf&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.url">url</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;http://example.org/pdfdownloads/cardiopanel-report-123.pdf&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.hash">hash</a> <a href="http://hl7.org/fhir/R4/datatypes.html#base64Binary">value</a>=&quot;EQH/..AgME&quot;/&gt;
+  &lt;/presentedForm&gt;
+&lt;/DiagnosticReport&gt;</pre>
+</body>
+</html>

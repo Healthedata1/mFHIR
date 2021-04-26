@@ -1,0 +1,567 @@
+﻿<html>
+<head>
+  <title>CapabilityStatement-us-core-r4-client-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<div xmlns="http://www.w3.org/1999/xhtml">
+      <ul>
+        <li>FHIR Version: 3.0.1</li>
+        <li>Supported formats: xml, json</li>
+        <li>Published: 2017-12-22</li>
+        <li>Published by: Health Level Seven International US Realm Steering Committee</li>
+      </ul>
+      <p>The Section describes the expected capabilities of the US Core Client which is responsible for creating and initiating the queries for information about an individual patient. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Core Servers are defined in the <a href="CapabilityStatement-us-core-r4-server.html">Conformance Requirements for Server</a>. US Core Clients have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.</p>
+      <h4 id="behavior-1">Behavior</h4>
+      <p>Description:</p>
+      <p>The US Core Client <strong>SHOULD</strong>:</p>
+      <ul>
+        <li>Support fetching and querying of one or more US Core profile(s), using the supported RESTful interactions and search parameters declared in the US Core Server CapabilityStatement.</li>
+      </ul>
+      <p>security:</p>
+      <p>The US Core Client <strong>SHALL</strong>:</p>
+      <ul>
+        <li>implement the <a href="security.html">security requirements</a>ocumented in the US Core IG.</li>
+      </ul>
+      <h4 id="resource--details-1">Resource  Details:</h4>
+      <p>
+        <strong>Contents:</strong>
+      </p>
+      <ol>
+        <li>
+          <a href="#patient-1">Patient</a>
+        </li>
+        <li>
+          <a href="#allergyintolerance-1">AllergyIntolerance</a>
+        </li>
+        <li>
+          <a href="#careplan-1">CarePlan</a>
+        </li>
+        <li>
+          <a href="#careteam-1">CareTeam</a>
+        </li>
+        <li>
+          <a href="#condition-1">Condition</a>
+        </li>
+        <li>
+          <a href="#device-1">Device</a>
+        </li>
+        <li>
+          <a href="#diagnosticreport-1">DiagnosticReport</a>
+        </li>
+        <li>
+          <a href="#documentreference-1">DocumentReference</a>
+        </li>
+        <li>
+          <a href="#encounter-1">Encounter</a>
+        </li>
+        <li>
+          <a href="#goal-1">Goal</a>
+        </li>
+        <li>
+          <a href="#immunization-1">Immunization</a>
+        </li>
+        <li>
+          <a href="#location-1">Location</a>
+        </li>
+        <li>
+          <a href="#medication-1">Medication</a>
+        </li>
+        <li>
+          <a href="#medicationstatement-1">MedicationStatement</a>
+        </li>
+        <li>
+          <a href="#medicationrequest-1">MedicationRequest</a>
+        </li>
+        <li>
+          <a href="#observation-1">Observation</a>
+        </li>
+        <li>
+          <a href="#organization-1">Organization</a>
+        </li>
+        <li>
+          <a href="#practitioner-1">Practitioner</a>
+        </li>
+        <li>
+          <a href="#practitionerrole-1">PractitionerRole</a>
+        </li>
+        <li>
+          <a href="#procedure-1">Procedure</a>
+        </li>
+      </ol>
+      <hr/>
+      <h4 id="patient-1" class="no_toc">Patient</h4>
+      <p>Supported Profiles:  <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html">US Core Patient Profile</a>
+    </p>
+    <p>Search Criteria:</p>
+    <ul>
+      <li>
+        <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching a patient using:</p>
+        <p>
+          <code class="highlighter-rouge">GET [base]/Patient/[id]</code>.</p>
+        </li>
+        <li>
+          <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching a patient by identifier using</p>
+          <p>
+            <code class="highlighter-rouge">GET [base]/Patient?identifier=[system]|[code]</code>
+          </p>
+        </li>
+      </ul>
+      <ol>
+        <li>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching a patient by supporting at a minimum the following search parameters when at least 2 are present. To limit overly broad search results, a client search with gender should include family and given name search parameters.:    <ul>
+          <li>name</li>
+          <li>gender</li>
+          <li>
+            <p>birthdate</p>
+            <ul>
+              <li>
+                <p>for example:</p>
+                <p>
+                  <code class="highlighter-rouge">GET [base]/Patient?family=[name]&amp;?given=[name]&amp;gender=[gender]</code>
+                </p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ol>
+    <hr/>
+    <h4 id="allergyintolerance-1" class="no_toc">AllergyIntolerance</h4>
+    <p>Supported Profiles:  <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-allergyintolerance.html">US Core AllergyIntolerance Profile</a>
+  </p>
+  <p>Search Criteria:</p>
+  <ol>
+    <li>
+      <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching all patient’s allergies using:</p>
+      <p>
+        <code class="highlighter-rouge">GET [base]/AllergyIntolerance?patient=[id]</code>
+      </p>
+    </li>
+  </ol>
+  <hr/>
+  <h4 id="careplan-1" class="no_toc">CarePlan</h4>
+  <p>Supported Profiles:  <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-careplan.html">US Core CarePlan Profile</a>
+</p>
+<p>Search Criteria:</p>
+<ol>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching all of a patient’s Assessment and Plan of Treatment information using:</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/CarePlan?patient=[id]&amp;category=assess-plan</code>
+    </p>
+  </li>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching a patient’s Assessment and Plan of Treatment information over a specified time period using:</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/CarePlan?patient=[id]&amp;category=assess-plan&amp;date=[date]</code>
+    </p>
+  </li>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching all of a patient’s active Assessment and Plan of Treatment information using</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/CarePlan?patient=[id]&amp;category=assess-plan&amp;status=active</code>
+    </p>
+  </li>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching a patient’s active Assessment and Plan of Treatment information over a specified time period using</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/CarePlan?patient=[id]&amp;category=assess-plan&amp;status=active&amp;date=[date]</code>
+    </p>
+  </li>
+</ol>
+<hr/>
+<h4 id="careteam-1" class="no_toc">CareTeam</h4>
+<p>Supported Profiles:  <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-careteam.html">US Core CareTeam Profile</a>
+</p>
+<p>Search Criteria:</p>
+<ol>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching  a patient’s current care team members using:</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/CareTeam?patient=[id]&amp;status=active</code>
+    </p>
+  </li>
+</ol>
+<hr/>
+<h4 id="condition-1" class="no_toc">Condition</h4>
+<p>Supported Profiles:  <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-condition.html">US Core Condition Profile</a>
+</p>
+<p>Search Criteria:</p>
+<ol>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of fetching all problems and health concerns for a patient, including current as well as historical problems and health concerns using:</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/Condition?patient=[id]</code>
+    </p>
+  </li>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching all of a patient’s <em>active</em>roblems and health concerns using:</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/Condition?patient=[id]&amp;clinicalstatus=active,recurrance,remission</code>
+    </p>
+  </li>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching all of a patient’s problems <em>or</em>ll of patient’s health concerns using:</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/Condition?patient=[id]&amp;category=[problem|health-concern]</code>
+    </p>
+  </li>
+</ol>
+<hr/>
+<h4 id="device-1" class="no_toc">Device</h4>
+<p>Supported Profiles:  <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-device.html">US Core Device Profile</a>
+</p>
+<p>Search Criteria:</p>
+<ol>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching all Unique device identifier(s)(UDI) for a patient’s implanted device(s):</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/Device?patient=[id]</code>
+    </p>
+  </li>
+</ol>
+<hr/>
+<h4 id="diagnosticreport-1" class="no_toc">DiagnosticReport</h4>
+<p>Supported Profiles:  <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport.html">US Core DiagnosticReport Profile</a>
+</p>
+<p>Search Criteria:</p>
+<ol>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching all of a patient’s laboratory diagnostic reports queried by category using:</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/DiagnosticReport?patient=[id]&amp;category=LAB</code>
+    </p>
+  </li>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching all of a patient’s laboratory diagnostic reports queried by category code and date range using:</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/DiagnosticReport?patient=[id]&amp;category=LAB&amp;date=[date]{&amp;date=[date]}</code>
+    </p>
+  </li>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching all of a patient’s laboratory diagnostic reports queried by category and code using:</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/DiagnosticReport?patient=[id]&amp;category=LAB&amp;code=[LOINC]</code>
+    </p>
+  </li>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching all of a patient’s laboratory diagnostic reports queried by category and one or more codes and date range using:</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/DiagnosticReport?patient=[id]&amp;category=LAB&amp;code=[LOINC1{,LOINC2,LOINC3,…}]&amp;date=[date]{&amp;date=[date]}</code>
+    </p>
+  </li>
+</ol>
+<hr/>
+<h4 id="documentreference-1" class="no_toc">DocumentReference</h4>
+<p>Supported Profiles:  <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-documentreference.html">US Core DocumentReference Profile</a>
+</p>
+<p>Search Criteria:</p>
+<ol>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching all of a patient’s DocumentReferences using:</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/DocumentReference?patient=[id]</code>
+    </p>
+  </li>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server to execute the <a href="OperationDefinition-docref.html">$docref</a>peration:</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/DocumentReference/$docref?patient=[id]</code>
+    </p>
+  </li>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching all of a patient’s DocumentReferences for a given time period and document type:</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/DocumentReference?patient=[id]&amp;type=[type]&amp;period=[date]{&amp;date=[date]}</code>
+    </p>
+  </li>
+</ol>
+<hr/>
+<h4 id="encounter-1" class="no_toc">Encounter</h4>
+<p>Supported Profiles:  <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-encounter.html">US Core Encounter Profile</a>
+</p>
+<p>Search Criteria:</p>
+<ol>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching all of a patient’s encounters using:</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/Encounter?patient=[id]</code>
+    </p>
+  </li>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching all of all of a patient’s encounters over a specified time period using:</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/Encounter?patient=[id]&amp;date=[date]{&amp;date=[date]}</code>
+    </p>
+  </li>
+</ol>
+<hr/>
+<h4 id="goal-1" class="no_toc">Goal</h4>
+<p>Supported Profiles:  <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-goal.html">US Core Goal Profile</a>
+</p>
+<p>Search Criteria:</p>
+<ol>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching all of a patient’s goals using:</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/Goal?patient=[id]</code>
+    </p>
+  </li>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching all of all of a patient’s goals over a specified time period using:</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/Goal?patient=[id]&amp;date=[date]{&amp;date=[date]}</code>
+    </p>
+  </li>
+</ol>
+<hr/>
+<h4 id="immunization-1" class="no_toc">Immunization</h4>
+<p>Supported Profiles:  <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-immunization.html">US Core Immunization Profile</a>
+</p>
+<p>Search Criteria:</p>
+<ol>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching all immunizations for a patient using:</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/Immunization?patient=[id]</code>
+    </p>
+  </li>
+</ol>
+<hr/>
+<h4 id="location-1" class="no_toc">Location</h4>
+<p>Supported Profiles:  <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-location.html">US Core Location Profile</a>
+</p>
+<p>Search Criteria:</p>
+<ol>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching a location by name using:</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/Location?name=[string]</code>
+    </p>
+  </li>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching a location by address using:</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/Location?address=[string]</code>
+    </p>
+  </li>
+</ol>
+<hr/>
+<h4 id="medication-1" class="no_toc">Medication</h4>
+<p>Supported Profiles:  <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-medication.html">US Core Medication Profile</a>
+</p>
+<p>The MedicationStatement and MedicationRequest resources can represent a medication, using an external reference to a Medication resource. If an external Medication Resource is used in a MedicationStatement or a MedicationRequest, then the READ and SEARCH Criteria SHOULD be supported.</p>
+<hr/>
+<h4 id="medicationstatement-1" class="no_toc">MedicationStatement</h4>
+<p>Supported Profiles:  <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationstatement.html">US Core MedicationStatement Profile</a>
+</p>
+<p>Search Criteria:</p>
+<p>The MedicationStatement resources can represent a medication using either a code or refer to the Medication resource.  When referencing a Medication resource, the resource may be <a href="http://hl7.org/fhir/STU3/references.html#contained">contained</a>r an external resource. IF, an external reference to Medication is used, the server <strong>SHALL</strong>upport the <a href="http://hl7.org/fhir/STU3/references.html#include">
+  <code class="highlighter-rouge">_include</code>
+  </a>arameter for searching this element. The client application <strong>SHALL</strong>upport all methods.</p>
+  <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching all medications for a patient using both:</p>
+  <p>
+    <code class="highlighter-rouge">GET /MedicationStatement?patient=[id]</code>
+  </p>
+  <p>and</p>
+  <p>
+    <code class="highlighter-rouge">GET /MedicationStatement?patient=[id]&amp;_include=MedicationStatement:medication</code>
+  </p>
+  <hr/>
+  <h4 id="medicationrequest-1" class="no_toc">MedicationRequest</h4>
+  <p>Supported Profiles:  <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationrequest.html">US Core MedicationRequest Profile</a>
+</p>
+<p>Search Criteria:</p>
+<p>The MedicationRequest resources can represent a medication using either a code or refer to the Medication resource.  When referencing a Medication resource, the resource may be <a href="http://hl7.org/fhir/STU3/references.html#contained">contained</a>r an external resource. If, an external reference to Medication is used, the server <strong>SHALL</strong>upport the <a href="http://hl7.org/fhir/STU3/references.html#include">
+  <code class="highlighter-rouge">_include</code>
+  </a>arameter for searching this element. The client application <strong>SHALL</strong>upport all methods.</p>
+  <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching all medications for a patient using both:</p>
+  <p>
+    <code class="highlighter-rouge">GET /MedicationRequest?patient=[id]</code>
+  </p>
+  <p>and</p>
+  <p>
+    <code class="highlighter-rouge">GET /MedicationRequest?patient=[id]&amp;_include=MedicationRequest:medication</code>
+  </p>
+  <hr/>
+  <h4 id="observation-1" class="no_toc">Observation</h4>
+  <p>Supported Profiles:</p>
+  <ol>
+    <li>
+      <p>
+        <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-observationresults.html">US Core Result Observation Profile</a>
+      </p>
+      <p>Search Criteria:</p>
+      <ol>
+        <li>
+          <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching all of a patient’s laboratory results queried by category using:</p>
+          <p>
+            <code class="highlighter-rouge">GET [base]/Observation?patient=[id]&amp;category=laboratory</code>
+          </p>
+        </li>
+        <li>
+          <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching all of a patient’s laboratory results queried by category code and date range using:</p>
+          <p>
+            <code class="highlighter-rouge">GET [base]/Observation?patient=[id]&amp;category=laboratory&amp;date=[date]{&amp;date=[date]}</code>
+          </p>
+        </li>
+        <li>
+          <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching all of a patient’s laboratory results queried by category and code using:</p>
+          <p>
+            <code class="highlighter-rouge">GET [base]/Observation?patient=[id]&amp;category=laboratory&amp;code=[LOINC]</code>
+          </p>
+        </li>
+        <li>
+          <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching all of a patient’s laboratory results queried by category and one or more codes and date range using:</p>
+          <p>
+            <code class="highlighter-rouge">GET [base]/Observation?patient=[id]&amp;category=laboratory&amp;code=[LOINC1{,LOINC2,LOINC3,...}]&amp;date=[date]{&amp;date=[date]}</code>
+          </p>
+        </li>
+      </ol>
+    </li>
+    <li>
+      <p>
+        <a href="http://hl7.org/fhir/STU3/vitalsigns.html">Vital Signs Profile</a>
+      </p>
+      <p>Search Criteria</p>
+      <ol>
+        <li>
+          <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching all of a patient’s vital signs that it supports using:</p>
+          <p>
+            <code class="highlighter-rouge">GET [base]/Observation?patient=[id]&amp;category=vital-signs</code>
+          </p>
+        </li>
+        <li>
+          <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching all of a patient’s vital signs queried by date range using:</p>
+          <p>
+            <code class="highlighter-rouge">GET [base]/Observation?patient=[id]&amp;category=vital-signs&amp;date=[date]{&amp;date=[date]}</code>
+          </p>
+        </li>
+        <li>
+          <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching any of a patient’s vital signs queried by one or more of the codes listed below using:</p>
+          <p>
+            <code class="highlighter-rouge">GET [base]/Observation?patient=[id]&amp;code[vital sign LOINC{,LOINC2,LOINC3,…}]</code>
+          </p>
+        </li>
+        <li>
+          <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching any of a patient’s vital signs queried by one or more of the codes listed below and date range using:</p>
+          <p>
+            <code class="highlighter-rouge">GET [base]/Observation?patient=[id]&amp;code=[LOINC{,LOINC2…}]vital-signs&amp;date=[date]{&amp;date=[date]}</code>
+          </p>
+        </li>
+      </ol>
+    </li>
+    <li>
+      <p>
+        <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-smokingstatus.html">US Core Smoking Status Observation Profile</a>
+      </p>
+      <p>Search Criteria:</p>
+      <ol>
+        <li>
+          <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching a patient’s smoking status using:</p>
+          <p>
+            <code class="highlighter-rouge">GET [base]/Observation?patient=[id]&amp;code=72166-2</code>
+          </p>
+        </li>
+      </ol>
+    </li>
+  </ol>
+  <hr/>
+  <h4 id="organization-1" class="no_toc">Organization</h4>
+  <p>Supported Profiles:  <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-organization.html">US Core Organization Profile</a>
+</p>
+<p>Search Criteria:</p>
+<ol>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching an organization by identifier using:</p>
+    <table>
+      <tbody>
+        <tr>
+          <td>`GET [base]/Organization?identifier=[system]</td>
+          <td>[code]’</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching an organization by name using:</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/Organization?=[string]</code>
+    </p>
+  </li>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching an organization by address using:</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/Organization?address=[string]</code>
+    </p>
+  </li>
+</ol>
+<hr/>
+<h4 id="practitioner-1" class="no_toc">Practitioner</h4>
+<p>Supported Profiles:  <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-practitioner.html">US Core Practitioner Profile</a>
+</p>
+<p>Search Criteria:</p>
+<ol>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching a practitioner by identifier using:</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/Practitioner?identifier=[system]|[code]</code>
+    </p>
+  </li>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching a practitioner by name using:</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/Practitioner?family=[string]&amp;given=[string]</code>
+    </p>
+  </li>
+</ol>
+<hr/>
+<h4 id="practitionerrole-1" class="no_toc">PractitionerRole</h4>
+<p>Supported Profiles:  <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-practitionerrole.html">US Core PractitionerRole Profile</a>
+</p>
+<p>Search Criteria:</p>
+<ol>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching PractitionerRoles by identifier using:</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/PractitionerRole?practitioner.identifier=[system]|[code]</code>
+    </p>
+  </li>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching a PractitionerRoles by name using:</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/PractitionerRole?practitioner.family=[string]&amp;given=[string]</code>
+    </p>
+  </li>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching a PractitionerRoles by specialty using:</p>
+    <p>
+      <code class="highlighter-rouge">GET [base]/PractitionerRole?specialty=[system]|[code]]</code>
+    </p>
+  </li>
+</ol>
+<hr/>
+<h4 id="procedure-1" class="no_toc">Procedure</h4>
+<p>Supported Profiles:  <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html">US Core Procedure Profile</a>
+</p>
+<p>Search Criteria:</p>
+<ol>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching a patient’s procedures using:</p>
+    <p>
+      <code class="highlighter-rouge">GET/Procedure?patient=[id]</code>
+    </p>
+  </li>
+  <li>
+    <p>A client <strong>SHOULD</strong>e capable of connecting to a server and fetching all of a patient’s procedures over a specified time period using:</p>
+    <p>
+      <code class="highlighter-rouge">GET /Procedure?patient=[id]&amp;date=[date]{&amp;date=[date]}</code>
+    </p>
+  </li>
+</ol>
+<p/>
+<p/>
+
+<p/>
+</div></body>
+</html>

@@ -1,0 +1,1516 @@
+﻿<html>
+<head>
+  <title>CapabilityStatement-us-core-r4-client-xml-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="xml">
+
+&lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement">CapabilityStatement</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.id">id</a> <a href="http://build.fhir.org/datatypes.html#id">value</a>=&quot;us-core-r4-client&quot;/&gt;
+  &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.text">text</a>&gt;
+    &lt;<a href="http://build.fhir.org/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;additional&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;FHIR Version: 3.0.1&lt;/li&gt;
+        &lt;li&gt;Supported formats: xml, json&lt;/li&gt;
+        &lt;li&gt;Published: 2017-12-22&lt;/li&gt;
+        &lt;li&gt;Published by: Health Level Seven International US Realm Steering Committee&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;p&gt;The Section describes the expected capabilities of the US Core Client which is responsible for creating and initiating the queries for information about an individual patient. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Core Servers are defined in the &lt;a href=&quot;CapabilityStatement-us-core-r4-server.html&quot;&gt;Conformance Requirements for Server&lt;/a&gt;. US Core Clients have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.&lt;/p&gt;
+      &lt;h4 id=&quot;behavior-1&quot;&gt;Behavior&lt;/h4&gt;
+      &lt;p&gt;Description:&lt;/p&gt;
+      &lt;p&gt;The US Core Client &lt;strong&gt;SHOULD&lt;/strong&gt;:&lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Support fetching and querying of one or more US Core profile(s), using the supported RESTful interactions and search parameters declared in the US Core Server CapabilityStatement.&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;p&gt;security:&lt;/p&gt;
+      &lt;p&gt;The US Core Client &lt;strong&gt;SHALL&lt;/strong&gt;:&lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;implement the &lt;a href=&quot;security.html&quot;&gt;security requirements&lt;/a&gt;ocumented in the US Core IG.&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;h4 id=&quot;resource--details-1&quot;&gt;Resource  Details:&lt;/h4&gt;
+      &lt;p&gt;
+        &lt;strong&gt;Contents:&lt;/strong&gt;
+      &lt;/p&gt;
+      &lt;ol&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#patient-1&quot;&gt;Patient&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#allergyintolerance-1&quot;&gt;AllergyIntolerance&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#careplan-1&quot;&gt;CarePlan&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#careteam-1&quot;&gt;CareTeam&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#condition-1&quot;&gt;Condition&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#device-1&quot;&gt;Device&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#diagnosticreport-1&quot;&gt;DiagnosticReport&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#documentreference-1&quot;&gt;DocumentReference&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#encounter-1&quot;&gt;Encounter&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#goal-1&quot;&gt;Goal&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#immunization-1&quot;&gt;Immunization&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#location-1&quot;&gt;Location&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#medication-1&quot;&gt;Medication&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#medicationstatement-1&quot;&gt;MedicationStatement&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#medicationrequest-1&quot;&gt;MedicationRequest&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#observation-1&quot;&gt;Observation&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#organization-1&quot;&gt;Organization&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#practitioner-1&quot;&gt;Practitioner&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#practitionerrole-1&quot;&gt;PractitionerRole&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#procedure-1&quot;&gt;Procedure&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ol&gt;
+      &lt;hr/&gt;
+      &lt;h4 id=&quot;patient-1&quot; class=&quot;no_toc&quot;&gt;Patient&lt;/h4&gt;
+      &lt;p&gt;Supported Profiles:  &lt;a href=&quot;http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html&quot;&gt;US Core Patient Profile&lt;/a&gt;
+    &lt;/p&gt;
+    &lt;p&gt;Search Criteria:&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching a patient using:&lt;/p&gt;
+        &lt;p&gt;
+          &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Patient/[id]&lt;/code&gt;.&lt;/p&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching a patient by identifier using&lt;/p&gt;
+          &lt;p&gt;
+            &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Patient?identifier=[system]|[code]&lt;/code&gt;
+          &lt;/p&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;ol&gt;
+        &lt;li&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching a patient by supporting at a minimum the following search parameters when at least 2 are present. To limit overly broad search results, a client search with gender should include family and given name search parameters.:    &lt;ul&gt;
+          &lt;li&gt;name&lt;/li&gt;
+          &lt;li&gt;gender&lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;birthdate&lt;/p&gt;
+            &lt;ul&gt;
+              &lt;li&gt;
+                &lt;p&gt;for example:&lt;/p&gt;
+                &lt;p&gt;
+                  &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Patient?family=[name]&amp;amp;?given=[name]&amp;amp;gender=[gender]&lt;/code&gt;
+                &lt;/p&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;hr/&gt;
+    &lt;h4 id=&quot;allergyintolerance-1&quot; class=&quot;no_toc&quot;&gt;AllergyIntolerance&lt;/h4&gt;
+    &lt;p&gt;Supported Profiles:  &lt;a href=&quot;http://hl7.org/fhir/us/core/StructureDefinition-us-core-allergyintolerance.html&quot;&gt;US Core AllergyIntolerance Profile&lt;/a&gt;
+  &lt;/p&gt;
+  &lt;p&gt;Search Criteria:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;
+      &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching all patient’s allergies using:&lt;/p&gt;
+      &lt;p&gt;
+        &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/AllergyIntolerance?patient=[id]&lt;/code&gt;
+      &lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;hr/&gt;
+  &lt;h4 id=&quot;careplan-1&quot; class=&quot;no_toc&quot;&gt;CarePlan&lt;/h4&gt;
+  &lt;p&gt;Supported Profiles:  &lt;a href=&quot;http://hl7.org/fhir/us/core/StructureDefinition-us-core-careplan.html&quot;&gt;US Core CarePlan Profile&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Search Criteria:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching all of a patient’s Assessment and Plan of Treatment information using:&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/CarePlan?patient=[id]&amp;amp;category=assess-plan&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching a patient’s Assessment and Plan of Treatment information over a specified time period using:&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/CarePlan?patient=[id]&amp;amp;category=assess-plan&amp;amp;date=[date]&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching all of a patient’s active Assessment and Plan of Treatment information using&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/CarePlan?patient=[id]&amp;amp;category=assess-plan&amp;amp;status=active&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching a patient’s active Assessment and Plan of Treatment information over a specified time period using&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/CarePlan?patient=[id]&amp;amp;category=assess-plan&amp;amp;status=active&amp;amp;date=[date]&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr/&gt;
+&lt;h4 id=&quot;careteam-1&quot; class=&quot;no_toc&quot;&gt;CareTeam&lt;/h4&gt;
+&lt;p&gt;Supported Profiles:  &lt;a href=&quot;http://hl7.org/fhir/us/core/StructureDefinition-us-core-careteam.html&quot;&gt;US Core CareTeam Profile&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Search Criteria:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching  a patient’s current care team members using:&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/CareTeam?patient=[id]&amp;amp;status=active&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr/&gt;
+&lt;h4 id=&quot;condition-1&quot; class=&quot;no_toc&quot;&gt;Condition&lt;/h4&gt;
+&lt;p&gt;Supported Profiles:  &lt;a href=&quot;http://hl7.org/fhir/us/core/StructureDefinition-us-core-condition.html&quot;&gt;US Core Condition Profile&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Search Criteria:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of fetching all problems and health concerns for a patient, including current as well as historical problems and health concerns using:&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Condition?patient=[id]&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching all of a patient’s &lt;em&gt;active&lt;/em&gt;roblems and health concerns using:&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Condition?patient=[id]&amp;amp;clinicalstatus=active,recurrance,remission&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching all of a patient’s problems &lt;em&gt;or&lt;/em&gt;ll of patient’s health concerns using:&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Condition?patient=[id]&amp;amp;category=[problem|health-concern]&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr/&gt;
+&lt;h4 id=&quot;device-1&quot; class=&quot;no_toc&quot;&gt;Device&lt;/h4&gt;
+&lt;p&gt;Supported Profiles:  &lt;a href=&quot;http://hl7.org/fhir/us/core/StructureDefinition-us-core-device.html&quot;&gt;US Core Device Profile&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Search Criteria:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching all Unique device identifier(s)(UDI) for a patient’s implanted device(s):&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Device?patient=[id]&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr/&gt;
+&lt;h4 id=&quot;diagnosticreport-1&quot; class=&quot;no_toc&quot;&gt;DiagnosticReport&lt;/h4&gt;
+&lt;p&gt;Supported Profiles:  &lt;a href=&quot;http://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport.html&quot;&gt;US Core DiagnosticReport Profile&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Search Criteria:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching all of a patient’s laboratory diagnostic reports queried by category using:&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/DiagnosticReport?patient=[id]&amp;amp;category=LAB&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching all of a patient’s laboratory diagnostic reports queried by category code and date range using:&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/DiagnosticReport?patient=[id]&amp;amp;category=LAB&amp;amp;date=[date]{&amp;amp;date=[date]}&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching all of a patient’s laboratory diagnostic reports queried by category and code using:&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/DiagnosticReport?patient=[id]&amp;amp;category=LAB&amp;amp;code=[LOINC]&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching all of a patient’s laboratory diagnostic reports queried by category and one or more codes and date range using:&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/DiagnosticReport?patient=[id]&amp;amp;category=LAB&amp;amp;code=[LOINC1{,LOINC2,LOINC3,…}]&amp;amp;date=[date]{&amp;amp;date=[date]}&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr/&gt;
+&lt;h4 id=&quot;documentreference-1&quot; class=&quot;no_toc&quot;&gt;DocumentReference&lt;/h4&gt;
+&lt;p&gt;Supported Profiles:  &lt;a href=&quot;http://hl7.org/fhir/us/core/StructureDefinition-us-core-documentreference.html&quot;&gt;US Core DocumentReference Profile&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Search Criteria:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching all of a patient’s DocumentReferences using:&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/DocumentReference?patient=[id]&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server to execute the &lt;a href=&quot;OperationDefinition-docref.html&quot;&gt;$docref&lt;/a&gt;peration:&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/DocumentReference/$docref?patient=[id]&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching all of a patient’s DocumentReferences for a given time period and document type:&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/DocumentReference?patient=[id]&amp;amp;type=[type]&amp;amp;period=[date]{&amp;amp;date=[date]}&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr/&gt;
+&lt;h4 id=&quot;encounter-1&quot; class=&quot;no_toc&quot;&gt;Encounter&lt;/h4&gt;
+&lt;p&gt;Supported Profiles:  &lt;a href=&quot;http://hl7.org/fhir/us/core/StructureDefinition-us-core-encounter.html&quot;&gt;US Core Encounter Profile&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Search Criteria:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching all of a patient’s encounters using:&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Encounter?patient=[id]&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching all of all of a patient’s encounters over a specified time period using:&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Encounter?patient=[id]&amp;amp;date=[date]{&amp;amp;date=[date]}&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr/&gt;
+&lt;h4 id=&quot;goal-1&quot; class=&quot;no_toc&quot;&gt;Goal&lt;/h4&gt;
+&lt;p&gt;Supported Profiles:  &lt;a href=&quot;http://hl7.org/fhir/us/core/StructureDefinition-us-core-goal.html&quot;&gt;US Core Goal Profile&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Search Criteria:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching all of a patient’s goals using:&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Goal?patient=[id]&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching all of all of a patient’s goals over a specified time period using:&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Goal?patient=[id]&amp;amp;date=[date]{&amp;amp;date=[date]}&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr/&gt;
+&lt;h4 id=&quot;immunization-1&quot; class=&quot;no_toc&quot;&gt;Immunization&lt;/h4&gt;
+&lt;p&gt;Supported Profiles:  &lt;a href=&quot;http://hl7.org/fhir/us/core/StructureDefinition-us-core-immunization.html&quot;&gt;US Core Immunization Profile&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Search Criteria:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching all immunizations for a patient using:&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Immunization?patient=[id]&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr/&gt;
+&lt;h4 id=&quot;location-1&quot; class=&quot;no_toc&quot;&gt;Location&lt;/h4&gt;
+&lt;p&gt;Supported Profiles:  &lt;a href=&quot;http://hl7.org/fhir/us/core/StructureDefinition-us-core-location.html&quot;&gt;US Core Location Profile&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Search Criteria:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching a location by name using:&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Location?name=[string]&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching a location by address using:&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Location?address=[string]&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr/&gt;
+&lt;h4 id=&quot;medication-1&quot; class=&quot;no_toc&quot;&gt;Medication&lt;/h4&gt;
+&lt;p&gt;Supported Profiles:  &lt;a href=&quot;http://hl7.org/fhir/us/core/StructureDefinition-us-core-medication.html&quot;&gt;US Core Medication Profile&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;The MedicationStatement and MedicationRequest resources can represent a medication, using an external reference to a Medication resource. If an external Medication Resource is used in a MedicationStatement or a MedicationRequest, then the READ and SEARCH Criteria SHOULD be supported.&lt;/p&gt;
+&lt;hr/&gt;
+&lt;h4 id=&quot;medicationstatement-1&quot; class=&quot;no_toc&quot;&gt;MedicationStatement&lt;/h4&gt;
+&lt;p&gt;Supported Profiles:  &lt;a href=&quot;http://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationstatement.html&quot;&gt;US Core MedicationStatement Profile&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Search Criteria:&lt;/p&gt;
+&lt;p&gt;The MedicationStatement resources can represent a medication using either a code or refer to the Medication resource.  When referencing a Medication resource, the resource may be &lt;a href=&quot;http://hl7.org/fhir/STU3/references.html#contained&quot;&gt;contained&lt;/a&gt;r an external resource. IF, an external reference to Medication is used, the server &lt;strong&gt;SHALL&lt;/strong&gt;upport the &lt;a href=&quot;http://hl7.org/fhir/STU3/references.html#include&quot;&gt;
+  &lt;code class=&quot;highlighter-rouge&quot;&gt;_include&lt;/code&gt;
+  &lt;/a&gt;arameter for searching this element. The client application &lt;strong&gt;SHALL&lt;/strong&gt;upport all methods.&lt;/p&gt;
+  &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching all medications for a patient using both:&lt;/p&gt;
+  &lt;p&gt;
+    &lt;code class=&quot;highlighter-rouge&quot;&gt;GET /MedicationStatement?patient=[id]&lt;/code&gt;
+  &lt;/p&gt;
+  &lt;p&gt;and&lt;/p&gt;
+  &lt;p&gt;
+    &lt;code class=&quot;highlighter-rouge&quot;&gt;GET /MedicationStatement?patient=[id]&amp;amp;_include=MedicationStatement:medication&lt;/code&gt;
+  &lt;/p&gt;
+  &lt;hr/&gt;
+  &lt;h4 id=&quot;medicationrequest-1&quot; class=&quot;no_toc&quot;&gt;MedicationRequest&lt;/h4&gt;
+  &lt;p&gt;Supported Profiles:  &lt;a href=&quot;http://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationrequest.html&quot;&gt;US Core MedicationRequest Profile&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Search Criteria:&lt;/p&gt;
+&lt;p&gt;The MedicationRequest resources can represent a medication using either a code or refer to the Medication resource.  When referencing a Medication resource, the resource may be &lt;a href=&quot;http://hl7.org/fhir/STU3/references.html#contained&quot;&gt;contained&lt;/a&gt;r an external resource. If, an external reference to Medication is used, the server &lt;strong&gt;SHALL&lt;/strong&gt;upport the &lt;a href=&quot;http://hl7.org/fhir/STU3/references.html#include&quot;&gt;
+  &lt;code class=&quot;highlighter-rouge&quot;&gt;_include&lt;/code&gt;
+  &lt;/a&gt;arameter for searching this element. The client application &lt;strong&gt;SHALL&lt;/strong&gt;upport all methods.&lt;/p&gt;
+  &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching all medications for a patient using both:&lt;/p&gt;
+  &lt;p&gt;
+    &lt;code class=&quot;highlighter-rouge&quot;&gt;GET /MedicationRequest?patient=[id]&lt;/code&gt;
+  &lt;/p&gt;
+  &lt;p&gt;and&lt;/p&gt;
+  &lt;p&gt;
+    &lt;code class=&quot;highlighter-rouge&quot;&gt;GET /MedicationRequest?patient=[id]&amp;amp;_include=MedicationRequest:medication&lt;/code&gt;
+  &lt;/p&gt;
+  &lt;hr/&gt;
+  &lt;h4 id=&quot;observation-1&quot; class=&quot;no_toc&quot;&gt;Observation&lt;/h4&gt;
+  &lt;p&gt;Supported Profiles:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;
+      &lt;p&gt;
+        &lt;a href=&quot;http://hl7.org/fhir/us/core/StructureDefinition-us-core-observationresults.html&quot;&gt;US Core Result Observation Profile&lt;/a&gt;
+      &lt;/p&gt;
+      &lt;p&gt;Search Criteria:&lt;/p&gt;
+      &lt;ol&gt;
+        &lt;li&gt;
+          &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching all of a patient’s laboratory results queried by category using:&lt;/p&gt;
+          &lt;p&gt;
+            &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Observation?patient=[id]&amp;amp;category=laboratory&lt;/code&gt;
+          &lt;/p&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching all of a patient’s laboratory results queried by category code and date range using:&lt;/p&gt;
+          &lt;p&gt;
+            &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Observation?patient=[id]&amp;amp;category=laboratory&amp;amp;date=[date]{&amp;amp;date=[date]}&lt;/code&gt;
+          &lt;/p&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching all of a patient’s laboratory results queried by category and code using:&lt;/p&gt;
+          &lt;p&gt;
+            &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Observation?patient=[id]&amp;amp;category=laboratory&amp;amp;code=[LOINC]&lt;/code&gt;
+          &lt;/p&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching all of a patient’s laboratory results queried by category and one or more codes and date range using:&lt;/p&gt;
+          &lt;p&gt;
+            &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Observation?patient=[id]&amp;amp;category=laboratory&amp;amp;code=[LOINC1{,LOINC2,LOINC3,...}]&amp;amp;date=[date]{&amp;amp;date=[date]}&lt;/code&gt;
+          &lt;/p&gt;
+        &lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;
+        &lt;a href=&quot;http://hl7.org/fhir/STU3/vitalsigns.html&quot;&gt;Vital Signs Profile&lt;/a&gt;
+      &lt;/p&gt;
+      &lt;p&gt;Search Criteria&lt;/p&gt;
+      &lt;ol&gt;
+        &lt;li&gt;
+          &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching all of a patient’s vital signs that it supports using:&lt;/p&gt;
+          &lt;p&gt;
+            &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Observation?patient=[id]&amp;amp;category=vital-signs&lt;/code&gt;
+          &lt;/p&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching all of a patient’s vital signs queried by date range using:&lt;/p&gt;
+          &lt;p&gt;
+            &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Observation?patient=[id]&amp;amp;category=vital-signs&amp;amp;date=[date]{&amp;amp;date=[date]}&lt;/code&gt;
+          &lt;/p&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching any of a patient’s vital signs queried by one or more of the codes listed below using:&lt;/p&gt;
+          &lt;p&gt;
+            &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Observation?patient=[id]&amp;amp;code[vital sign LOINC{,LOINC2,LOINC3,…}]&lt;/code&gt;
+          &lt;/p&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching any of a patient’s vital signs queried by one or more of the codes listed below and date range using:&lt;/p&gt;
+          &lt;p&gt;
+            &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Observation?patient=[id]&amp;amp;code=[LOINC{,LOINC2…}]vital-signs&amp;amp;date=[date]{&amp;amp;date=[date]}&lt;/code&gt;
+          &lt;/p&gt;
+        &lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;
+        &lt;a href=&quot;http://hl7.org/fhir/us/core/StructureDefinition-us-core-smokingstatus.html&quot;&gt;US Core Smoking Status Observation Profile&lt;/a&gt;
+      &lt;/p&gt;
+      &lt;p&gt;Search Criteria:&lt;/p&gt;
+      &lt;ol&gt;
+        &lt;li&gt;
+          &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching a patient’s smoking status using:&lt;/p&gt;
+          &lt;p&gt;
+            &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Observation?patient=[id]&amp;amp;code=72166-2&lt;/code&gt;
+          &lt;/p&gt;
+        &lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;hr/&gt;
+  &lt;h4 id=&quot;organization-1&quot; class=&quot;no_toc&quot;&gt;Organization&lt;/h4&gt;
+  &lt;p&gt;Supported Profiles:  &lt;a href=&quot;http://hl7.org/fhir/us/core/StructureDefinition-us-core-organization.html&quot;&gt;US Core Organization Profile&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Search Criteria:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching an organization by identifier using:&lt;/p&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;`GET [base]/Organization?identifier=[system]&lt;/td&gt;
+          &lt;td&gt;[code]’&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching an organization by name using:&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Organization?=[string]&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching an organization by address using:&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Organization?address=[string]&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr/&gt;
+&lt;h4 id=&quot;practitioner-1&quot; class=&quot;no_toc&quot;&gt;Practitioner&lt;/h4&gt;
+&lt;p&gt;Supported Profiles:  &lt;a href=&quot;http://hl7.org/fhir/us/core/StructureDefinition-us-core-practitioner.html&quot;&gt;US Core Practitioner Profile&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Search Criteria:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching a practitioner by identifier using:&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Practitioner?identifier=[system]|[code]&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching a practitioner by name using:&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/Practitioner?family=[string]&amp;amp;given=[string]&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr/&gt;
+&lt;h4 id=&quot;practitionerrole-1&quot; class=&quot;no_toc&quot;&gt;PractitionerRole&lt;/h4&gt;
+&lt;p&gt;Supported Profiles:  &lt;a href=&quot;http://hl7.org/fhir/us/core/StructureDefinition-us-core-practitionerrole.html&quot;&gt;US Core PractitionerRole Profile&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Search Criteria:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching PractitionerRoles by identifier using:&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/PractitionerRole?practitioner.identifier=[system]|[code]&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching a PractitionerRoles by name using:&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/PractitionerRole?practitioner.family=[string]&amp;amp;given=[string]&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching a PractitionerRoles by specialty using:&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/PractitionerRole?specialty=[system]|[code]]&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr/&gt;
+&lt;h4 id=&quot;procedure-1&quot; class=&quot;no_toc&quot;&gt;Procedure&lt;/h4&gt;
+&lt;p&gt;Supported Profiles:  &lt;a href=&quot;http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html&quot;&gt;US Core Procedure Profile&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Search Criteria:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching a patient’s procedures using:&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET/Procedure?patient=[id]&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A client &lt;strong&gt;SHOULD&lt;/strong&gt;e capable of connecting to a server and fetching all of a patient’s procedures over a specified time period using:&lt;/p&gt;
+    &lt;p&gt;
+      &lt;code class=&quot;highlighter-rouge&quot;&gt;GET /Procedure?patient=[id]&amp;amp;date=[date]{&amp;amp;date=[date]}&lt;/code&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p/&gt;
+&lt;p/&gt;
+
+&lt;p/&gt;
+&lt;/div&gt;
+  &lt;/text&gt;
+  &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.url">url</a> <a href="http://build.fhir.org/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/us/core/CapabilityStatement/us-core-r4-client&quot;/&gt;
+  &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.version">version</a> <a href="http://build.fhir.org/datatypes.html#string">value</a>=&quot;4.0.0&quot;/&gt;
+  &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.name">name</a> <a href="http://build.fhir.org/datatypes.html#string">value</a>=&quot;UsCoreClient&quot;/&gt;
+  &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.title">title</a> <a href="http://build.fhir.org/datatypes.html#string">value</a>=&quot;US Core Client&quot;/&gt;
+  &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.status">status</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
+  &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.date">date</a> <a href="http://build.fhir.org/datatypes.html#dateTime">value</a>=&quot;2017-03-20T00:00:00-07:00&quot;/&gt;
+  &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.publisher">publisher</a> <a href="http://build.fhir.org/datatypes.html#string">value</a>=&quot;HL7 US Realm Steering Committee&quot;/&gt;
+  &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.contact">contact</a>&gt;
+    &lt;<a href="http://build.fhir.org/datatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
+      &lt;<a href="http://build.fhir.org/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;other&quot;/&gt;
+      &lt;<a href="http://build.fhir.org/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://build.fhir.org/datatypes.html#string">value</a>=&quot;http://www.hl7.org/SpecialCommittees/usrealm/index.cfm&quot;/&gt;
+    &lt;/telecom&gt;
+  &lt;/contact&gt;
+  &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.description">description</a>
+               <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;This profile defines the expected capabilities of the US Core Client conforming to the US Core IG.&quot;/&gt;
+  &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.jurisdiction">jurisdiction</a>&gt;
+    &lt;<a href="http://build.fhir.org/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://build.fhir.org/datatypes.html#Coding#Coding.system">system</a> <a href="http://build.fhir.org/datatypes.html#uri">value</a>=&quot;urn:iso:std:iso:3166&quot;/&gt;
+      &lt;<a href="http://build.fhir.org/datatypes.html#Coding#Coding.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;US&quot;/&gt;
+      &lt;<a href="http://build.fhir.org/datatypes.html#Coding#Coding.display">display</a> <a href="http://build.fhir.org/datatypes.html#string">value</a>=&quot;United States of America&quot;/&gt;
+    &lt;/coding&gt;
+  &lt;/jurisdiction&gt;
+  &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.kind">kind</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;requirements&quot;/&gt;
+  &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.fhirVersion">fhirVersion</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;3.0.1&quot;/&gt;
+  &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.format">format</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;xml&quot;/&gt;
+  &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.format">format</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;json&quot;/&gt;
+  &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest">rest</a>&gt;
+    &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.mode">mode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;client&quot;/&gt;
+    &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;Patient&quot;/&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://build.fhir.org/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient&quot;&gt;
+        &lt;<a href="http://build.fhir.org/datatypes.html#canonical#canonical.extension">extension</a> <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/display&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueString</a> <a href="http://build.fhir.org/datatypes.html#string">value</a>=&quot;US Core Patient Profile&quot;/&gt;
+        &lt;/extension&gt;
+      &lt;/supportedProfile&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows discovery of existing US Core patient resources using different search criteria&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a specific US Core patients by id&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;history-instance&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows review of changes to US Core patient instance over time&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;vread&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a historical version of a US Core patient instance&quot;/&gt;
+      &lt;/interaction&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;AllergyIntolerance&quot;/&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://build.fhir.org/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance&quot;&gt;
+        &lt;<a href="http://build.fhir.org/datatypes.html#canonical#canonical.extension">extension</a> <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/display&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueString</a> <a href="http://build.fhir.org/datatypes.html#string">value</a>=&quot;US Core AllergyIntolerance Profile&quot;/&gt;
+        &lt;/extension&gt;
+      &lt;/supportedProfile&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows discovery of existing US Core AllergyIntolerance resources using different search criteria&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a specific US Core AllergyIntolerance by id&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;history-instance&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows review of changes to US Core AllergyIntolerance instance over time&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;vread&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a historical version of a US Core AllergyIntolerance instance&quot;/&gt;
+      &lt;/interaction&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;CarePlan&quot;/&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://build.fhir.org/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan&quot;&gt;
+        &lt;<a href="http://build.fhir.org/datatypes.html#canonical#canonical.extension">extension</a> <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/display&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueString</a> <a href="http://build.fhir.org/datatypes.html#string">value</a>=&quot;US Core CarePlan Profile&quot;/&gt;
+        &lt;/extension&gt;
+      &lt;/supportedProfile&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows discovery of existing US Core careplan resources using different search criteria&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a specific US Core careplan by id&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;history-instance&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows review of changes to US Core careplan instance over time&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;vread&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a historical version of a US Core careplan instance&quot;/&gt;
+      &lt;/interaction&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;CareTeam&quot;/&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://build.fhir.org/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam&quot;&gt;
+        &lt;<a href="http://build.fhir.org/datatypes.html#canonical#canonical.extension">extension</a> <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/display&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueString</a> <a href="http://build.fhir.org/datatypes.html#string">value</a>=&quot;US Core CareTeam Profile&quot;/&gt;
+        &lt;/extension&gt;
+      &lt;/supportedProfile&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows discovery of existing US Core careteam resources using different search criteria&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a specific US Core careteam by id&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;history-instance&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows review of changes to US Core careteam instance over time&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;vread&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a historical version of a US Core careteam instance&quot;/&gt;
+      &lt;/interaction&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;Condition&quot;/&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://build.fhir.org/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition&quot;&gt;
+        &lt;<a href="http://build.fhir.org/datatypes.html#canonical#canonical.extension">extension</a> <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/display&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueString</a> <a href="http://build.fhir.org/datatypes.html#string">value</a>=&quot;US Core Condition Profile&quot;/&gt;
+        &lt;/extension&gt;
+      &lt;/supportedProfile&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows discovery of existing US Core condition resources using different search criteria&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a specific US Core condition by id&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;history-instance&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows review of changes to US Core condition instance over time&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;vread&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a historical version of a US Core condition instance&quot;/&gt;
+      &lt;/interaction&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;Device&quot;/&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://build.fhir.org/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-device&quot;&gt;
+        &lt;<a href="http://build.fhir.org/datatypes.html#canonical#canonical.extension">extension</a> <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/display&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueString</a> <a href="http://build.fhir.org/datatypes.html#string">value</a>=&quot;US Core Device Profile&quot;/&gt;
+        &lt;/extension&gt;
+      &lt;/supportedProfile&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows discovery of existing US Core device resources using different search criteria&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a specific US Core device by id&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;history-instance&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows review of changes to US Core device instance over time&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;vread&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a historical version of a US Core device instance&quot;/&gt;
+      &lt;/interaction&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;DocumentReference&quot;/&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://build.fhir.org/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference&quot;&gt;
+        &lt;<a href="http://build.fhir.org/datatypes.html#canonical#canonical.extension">extension</a> <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/display&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueString</a> <a href="http://build.fhir.org/datatypes.html#string">value</a>=&quot;US Core DocumentReference Profile&quot;/&gt;
+        &lt;/extension&gt;
+      &lt;/supportedProfile&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows discovery of existing US Core DocumentReference resources using different search criteria&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a specific US Core DocumentReference by id&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;history-instance&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows review of changes to US Core DocumentReference instance over time&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;vread&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a historical version of a US Core DocumentReference instance&quot;/&gt;
+      &lt;/interaction&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;Encounter&quot;/&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://build.fhir.org/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter&quot;&gt;
+        &lt;<a href="http://build.fhir.org/datatypes.html#canonical#canonical.extension">extension</a> <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/display&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueString</a> <a href="http://build.fhir.org/datatypes.html#string">value</a>=&quot;US Core Encounter Profile&quot;/&gt;
+        &lt;/extension&gt;
+      &lt;/supportedProfile&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows discovery of existing US Core Encounter resources using different search criteria&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a specific US Core Encounter by id&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;history-instance&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows review of changes to US Core Encounter instance over time&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;vread&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a historical version of a US Core Encounter instance&quot;/&gt;
+      &lt;/interaction&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;Goal&quot;/&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://build.fhir.org/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal&quot;&gt;
+        &lt;<a href="http://build.fhir.org/datatypes.html#canonical#canonical.extension">extension</a> <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/display&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueString</a> <a href="http://build.fhir.org/datatypes.html#string">value</a>=&quot;US Core Goal Profile&quot;/&gt;
+        &lt;/extension&gt;
+      &lt;/supportedProfile&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows discovery of existing US Core goal resources using different search criteria&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a> <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a specific US Core goal by id&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;history-instance&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows review of changes to US Core goal instance over time&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;vread&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a historical version of a US Core goal instance&quot;/&gt;
+      &lt;/interaction&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;Immunization&quot;/&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://build.fhir.org/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization&quot;&gt;
+        &lt;<a href="http://build.fhir.org/datatypes.html#canonical#canonical.extension">extension</a> <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/display&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueString</a> <a href="http://build.fhir.org/datatypes.html#string">value</a>=&quot;US Core Immunization Profile&quot;/&gt;
+        &lt;/extension&gt;
+      &lt;/supportedProfile&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows discovery of existing US Core immunization resources using different search criteria&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a specific US Core immunization by id&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;history-instance&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows review of changes to US Core immunization instance over time&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;vread&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a historical version of a US Core immunization instance&quot;/&gt;
+      &lt;/interaction&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;DiagnosticReport&quot;/&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://build.fhir.org/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab&quot;&gt;
+        &lt;<a href="http://build.fhir.org/datatypes.html#canonical#canonical.extension">extension</a> <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/display&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueString</a> <a href="http://build.fhir.org/datatypes.html#string">value</a>=&quot;US Core DiagnosticReport Profile&quot;/&gt;
+        &lt;/extension&gt;
+      &lt;/supportedProfile&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows discovery of existing US Core diagnosticreport resources using different search criteria&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a specific US Core diagnosticreport by id&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;history-instance&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows review of changes to US Core diagnosticreport instance over time&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;vread&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a historical version of a US Core diagnosticreport instance&quot;/&gt;
+      &lt;/interaction&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;Observation&quot;/&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://build.fhir.org/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-observationresults&quot;&gt;
+        &lt;<a href="http://build.fhir.org/datatypes.html#canonical#canonical.extension">extension</a> <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/display&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueString</a> <a href="http://build.fhir.org/datatypes.html#string">value</a>=&quot;US Core Result Observation Profile&quot;/&gt;
+        &lt;/extension&gt;
+      &lt;/supportedProfile&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://build.fhir.org/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/StructureDefinition/vitalsigns&quot;&gt;
+        &lt;<a href="http://build.fhir.org/datatypes.html#canonical#canonical.extension">extension</a> <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/display&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueString</a> <a href="http://build.fhir.org/datatypes.html#string">value</a>=&quot;Vital Signs Profile&quot;/&gt;
+        &lt;/extension&gt;
+      &lt;/supportedProfile&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://build.fhir.org/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus&quot;&gt;
+        &lt;<a href="http://build.fhir.org/datatypes.html#canonical#canonical.extension">extension</a> <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/display&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueString</a> <a href="http://build.fhir.org/datatypes.html#string">value</a>=&quot;US Core Smoking Status Observation Profile&quot;/&gt;
+        &lt;/extension&gt;
+      &lt;/supportedProfile&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows discovery of existing US Core resultobs resources using different search criteria&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a specific US Core resultobs by id&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;history-instance&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows review of changes to US Core resultobs instance over time&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;vread&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a historical version of a US Core resultobs instance&quot;/&gt;
+      &lt;/interaction&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;Location&quot;/&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://build.fhir.org/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-location&quot;&gt;
+        &lt;<a href="http://build.fhir.org/datatypes.html#canonical#canonical.extension">extension</a> <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/display&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueString</a> <a href="http://build.fhir.org/datatypes.html#string">value</a>=&quot;US Core Location Profile&quot;/&gt;
+        &lt;/extension&gt;
+      &lt;/supportedProfile&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows discovery of existing US Core location resources using different search criteria.&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a historical version of a US Core location instance&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;history-instance&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows review of changes to US Core Medication instance over time&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;vread&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a historical version of a US Core Medication instance&quot;/&gt;
+      &lt;/interaction&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;Medication&quot;/&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://build.fhir.org/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication&quot;&gt;
+        &lt;<a href="http://build.fhir.org/datatypes.html#canonical#canonical.extension">extension</a> <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/display&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueString</a> <a href="http://build.fhir.org/datatypes.html#string">value</a>=&quot;US Core Medication Profile&quot;/&gt;
+        &lt;/extension&gt;
+      &lt;/supportedProfile&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;IF the Medication Resource is used in a MedicationStatement or a MedicationRequest.   Allows discovery of existing US Core Medication resources using different search criteria.&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;IF the Medication Resource is used in a MedicationStatement or a MedicationRequest.  Allows retrieval of a specific US Core Medication by id&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;history-instance&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows review of changes to US Core Medication instance over time&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;vread&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a historical version of a US Core Medication instance&quot;/&gt;
+      &lt;/interaction&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;MedicationStatement&quot;/&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://build.fhir.org/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement&quot;&gt;
+        &lt;<a href="http://build.fhir.org/datatypes.html#canonical#canonical.extension">extension</a> <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/display&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueString</a> <a href="http://build.fhir.org/datatypes.html#string">value</a>=&quot;US Core MedicationStatement Profile&quot;/&gt;
+        &lt;/extension&gt;
+      &lt;/supportedProfile&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows discovery of existing US Core medicationstatement resources using different search criteria&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a specific US Core medicationstatement by id&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;history-instance&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows review of changes to US Core medicationstatement instance over time&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;vread&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a historical version of a US Core medicationstatement instance&quot;/&gt;
+      &lt;/interaction&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;MedicationRequest&quot;/&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://build.fhir.org/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest&quot;&gt;
+        &lt;<a href="http://build.fhir.org/datatypes.html#canonical#canonical.extension">extension</a> <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/display&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueString</a> <a href="http://build.fhir.org/datatypes.html#string">value</a>=&quot;US Core MedicationRequest Profile&quot;/&gt;
+        &lt;/extension&gt;
+      &lt;/supportedProfile&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows discovery of existing US Core medicationorder resources using different search criteria&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a specific US Core medicationorder by id&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;history-instance&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows review of changes to US Core medicationorder instance over time&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;vread&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a historical version of a US Core medicationorder instance&quot;/&gt;
+      &lt;/interaction&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;Organization&quot;/&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://build.fhir.org/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization&quot;&gt;
+        &lt;<a href="http://build.fhir.org/datatypes.html#canonical#canonical.extension">extension</a> <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/display&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueString</a> <a href="http://build.fhir.org/datatypes.html#string">value</a>=&quot;US Core Organization Profile&quot;/&gt;
+        &lt;/extension&gt;
+      &lt;/supportedProfile&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows discovery of existing US Core organization resources using different search criteria&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a specific US Core organization by id&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;history-instance&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows review of changes to US Core organization instance over time&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;vread&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a historical version of a US Core organization instance&quot;/&gt;
+      &lt;/interaction&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;Practitioner&quot;/&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://build.fhir.org/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner&quot;&gt;
+        &lt;<a href="http://build.fhir.org/datatypes.html#canonical#canonical.extension">extension</a> <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/display&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueString</a> <a href="http://build.fhir.org/datatypes.html#string">value</a>=&quot;US Core Practitioner Profile&quot;/&gt;
+        &lt;/extension&gt;
+      &lt;/supportedProfile&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows discovery of existing US Core practitioner resources using different search criteria&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a specific US Core practitioner by id&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;history-instance&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows review of changes to US Core practitioner instance over time&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;vread&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Afllows retrieval of a historical version of a US Core practitioner instance&quot;/&gt;
+      &lt;/interaction&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;PractitionerRole&quot;/&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://build.fhir.org/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole&quot;&gt;
+        &lt;<a href="http://build.fhir.org/datatypes.html#canonical#canonical.extension">extension</a> <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/display&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueString</a> <a href="http://build.fhir.org/datatypes.html#string">value</a>=&quot;US Core PractitionerRole Profile&quot;/&gt;
+        &lt;/extension&gt;
+      &lt;/supportedProfile&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows discovery of existing US Core PractitionerRole resources using different search criteria&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a specific US Core PractitionerRole by id&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;history-instance&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows review of changes to US Core PractitionerRole instance over time&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;vread&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Afllows retrieval of a historical version of a US Core PractitionerRole instance&quot;/&gt;
+      &lt;/interaction&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;Procedure&quot;/&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.supportedProfile">supportedProfile</a>
+                        <a href="http://build.fhir.org/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure&quot;&gt;
+        &lt;<a href="http://build.fhir.org/datatypes.html#canonical#canonical.extension">extension</a> <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/display&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueString</a> <a href="http://build.fhir.org/datatypes.html#string">value</a>=&quot;US Core Procedure Profile&quot;/&gt;
+        &lt;/extension&gt;
+      &lt;/supportedProfile&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows discovery of existing US Core procedure resources using different search criteria&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a specific US Core procedure by id&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;history-instance&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows review of changes to US Core procedure instance over time&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://build.fhir.org/datatypes.html#string">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://build.fhir.org/datatypes.html#code">value</a>=&quot;vread&quot;/&gt;
+        &lt;<a href="http://build.fhir.org/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.documentation">documentation</a>
+                       <a href="http://build.fhir.org/datatypes.html#markdown">value</a>=&quot;Allows retrieval of a historical version of a US Core procedure instance&quot;/&gt;
+      &lt;/interaction&gt;
+    &lt;/resource&gt;
+  &lt;/rest&gt;
+&lt;/CapabilityStatement&gt;</pre>
+</body>
+</html>

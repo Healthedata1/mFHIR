@@ -1,0 +1,17 @@
+﻿<html>
+<head>
+  <title>StructureDefinition-new-us-core-documentreference-tx</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<h4>Terminology Bindings</h4>
+<table class="list">
+<tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet</b></td></tr>
+<tr><td>DocumentReference.status</td><td><a href="http://build.fhir.org/terminologies.html#required">required</a></td><td><a href="http://build.fhir.org/valueset-document-reference-status.html">DocumentReferenceStatus</a></td></tr>
+<tr><td>DocumentReference.type</td><td><a href="http://build.fhir.org/terminologies.html#required">required</a></td><td title="All LOINC  values whose SCALE is DOC in the LOINC database and the SNOMED-CT concept 'unknown'"><a href="ValueSet-us-core-documentreference-type.html">USCoreDocumentReferenceTypeValueSet</a><br><a style="font-weight:bold" title="Min Value Set Extension" href="http://build.fhir.org/extension-elementdefinition-minvalueset.html">Min Binding</a>: <a href="ValueSet-us-core-clinical-note-type.html">US Core Clinical Note Type Value Set</a></td></tr>
+<tr><td>DocumentReference.category</td><td><a href="http://build.fhir.org/terminologies.html#extensible">extensible</a></td><td title="The US Core DocumentReferences Type Value Set is a &amp;#39;starter set&amp;#39; of categories supported for fetching and storing clinical notes."><a href="ValueSet-us-core-documentreference-category.html">USCoreDocumentReferenceCategoryValueSet</a></td></tr>
+<tr><td>DocumentReference.content.attachment.contentType</td><td><a href="http://build.fhir.org/terminologies.html#required">required</a></td><td title="The mime type of an attachment. Any valid mime type is allowed."><a href="http://build.fhir.org/valueset-mimetypes.html">Mime Types</a></td></tr>
+<tr><td>DocumentReference.content.format</td><td><a href="http://build.fhir.org/terminologies.html#extensible">extensible</a></td><td><a href="http://build.fhir.org/valueset-formatcodes.html">DocumentReferenceFormatCodeSet</a></td></tr>
+</table>
+</body>
+</html>

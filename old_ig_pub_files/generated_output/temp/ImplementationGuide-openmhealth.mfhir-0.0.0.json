@@ -1,0 +1,408 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "openmhealth.mfhir-0.0.0",
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>OpenmHealthtoFHIR</h2><p>The official URL for this implementation guide is: </p><pre>http://www.fhir.org/guides/omhtofhir/ImplementationGuide/openmhealth.mfhir-0.0.0</pre></div>"
+  },
+  "url": "http://www.fhir.org/guides/omhtofhir/ImplementationGuide/openmhealth.mfhir-0.0.0",
+  "version": "0.0.0",
+  "name": "OpenmHealthtoFHIR",
+  "title": "Open mHealth to FHIR",
+  "status": "draft",
+  "date": "2020-07-14T18:46:30-07:00",
+  "publisher": "Open mHealth",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.openmhealth.org/"
+        }
+      ]
+    }
+  ],
+  "copyright": "Used by permission of Open mHealth, all rights reserved Creative Commons License",
+  "packageId": "openmhealth.mfhir",
+  "license": "CC0-1.0",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "definition": {
+    "grouping": [
+      {
+        "name": "base"
+      }
+    ],
+    "resource": [
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Binary"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "Binary-omh-stepcount-example.html"
+          }
+        ],
+        "reference": {
+          "reference": "Binary/omh-stepcount-example"
+        },
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "Observation-stepcount-example.html"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/stepcount-example"
+        },
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "DocumentReference"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "DocumentReference-omh-stepcount-example.html"
+          }
+        ],
+        "reference": {
+          "reference": "DocumentReference/omh-stepcount-example"
+        },
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-omh-obs.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/omh-obs"
+        },
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-extension-modality.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/extension-modality"
+        },
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "CodeSystem"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "CodeSystem-omh-device-modality.html"
+          }
+        ],
+        "reference": {
+          "reference": "CodeSystem/omh-device-modality"
+        },
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "ValueSet-omh-unit-value.html"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/omh-unit-value"
+        },
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "CapabilityStatement"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "CapabilityStatement-server.html"
+          }
+        ],
+        "reference": {
+          "reference": "CapabilityStatement/server"
+        },
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-omh-dr.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/omh-dr"
+        },
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "CodeSystem"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "CodeSystem-omh-datapoint-type.html"
+          }
+        ],
+        "reference": {
+          "reference": "CodeSystem/omh-datapoint-type"
+        },
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "CodeSystem"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "CodeSystem-omh-temporal-relationship-to-meal.html"
+          }
+        ],
+        "reference": {
+          "reference": "CodeSystem/omh-temporal-relationship-to-meal"
+        },
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "CapabilityStatement"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "CapabilityStatement-client.html"
+          }
+        ],
+        "reference": {
+          "reference": "CapabilityStatement/client"
+        },
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "ValueSet-omh-device-modality.html"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/omh-device-modality"
+        },
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-contained-p.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/contained-p"
+        },
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "ValueSet-dp-type.html"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/dp-type"
+        },
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "index.html",
+      "title": "Home",
+      "generation": "markdown",
+      "page": [
+        {
+          "nameUrl": "guidance.html",
+          "title": "General Guidance",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "profiles.html",
+          "title": "Profiles and Extensions",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "StructureDefinition-omh-obs.html",
+              "title": "StructureDefinition Omh Obs",
+              "generation": "generated"
+            },
+            {
+              "nameUrl": "StructureDefinition-omh-dr.html",
+              "title": "StructureDefinition Omh Dr",
+              "generation": "generated"
+            },
+            {
+              "nameUrl": "StructureDefinition-contained-p.html",
+              "title": "StructureDefinition Contained P",
+              "generation": "generated"
+            },
+            {
+              "nameUrl": "StructureDefinition-extension-modality.html",
+              "title": "StructureDefinition Extension Modality",
+              "generation": "generated"
+            }
+          ]
+        },
+        {
+          "nameUrl": "bundles.html",
+          "title": "Bundle Definitions",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "operations.html",
+          "title": "Operations",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "terminology.html",
+          "title": "Terminology",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "ValueSet-omh-unit-value.html",
+              "title": "ValueSet Omh Unit Value",
+              "generation": "generated"
+            },
+            {
+              "nameUrl": "ValueSet-omh-device-modality.html",
+              "title": "ValueSet Omh Device Modality",
+              "generation": "generated"
+            },
+            {
+              "nameUrl": "ValueSet-dp-type.html",
+              "title": "ValueSet Dp Type",
+              "generation": "generated"
+            },
+            {
+              "nameUrl": "CodeSystem-omh-device-modality.html",
+              "title": "CodeSystem Omh Device Modality",
+              "generation": "generated"
+            },
+            {
+              "nameUrl": "CodeSystem-omh-datapoint-type.html",
+              "title": "CodeSystem Omh Datapoint Type",
+              "generation": "generated"
+            },
+            {
+              "nameUrl": "CodeSystem-omh-temporal-relationship-to-meal.html",
+              "title": "CodeSystem Omh Temporal Relationship To Meal",
+              "generation": "generated"
+            }
+          ]
+        },
+        {
+          "nameUrl": "searchparameters.html",
+          "title": "Search Parameters",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "capstatements.html",
+          "title": "Capability Statements",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "CapabilityStatement-server.html",
+              "title": "CapabilityStatement Server",
+              "generation": "generated"
+            },
+            {
+              "nameUrl": "CapabilityStatement-client.html",
+              "title": "CapabilityStatement Client",
+              "generation": "generated"
+            }
+          ]
+        },
+        {
+          "nameUrl": "security.html",
+          "title": "Security",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "all-examples.html",
+          "title": "All Examples",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "downloads.html",
+          "title": "Downloads",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "toc.html",
+          "title": "Table of Contents",
+          "generation": "html"
+        }
+      ]
+    }
+  }
+}

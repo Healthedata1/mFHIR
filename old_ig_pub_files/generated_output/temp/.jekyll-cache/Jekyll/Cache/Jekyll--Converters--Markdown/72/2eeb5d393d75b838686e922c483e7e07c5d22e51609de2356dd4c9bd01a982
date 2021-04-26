@@ -1,0 +1,41 @@
+I"�<p>[Short descripton of guide here.]</p>
+
+<p>This table provides a list of all the versions of FHIR versions of the OpenmHealthtoFHIR Implementation Guide that are available. See <a href="http://build.fhir.org/versions.html#versions">FHIR Releases and Versioning</a> for a description of how the versioning of this Implementation Guide is managed.  As well, this guide follow the general definitions and guidelines outlined in <a href="http://build.fhir.org/versions.html#change">Rules for Inter-version change</a>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Version</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Current Versions</strong></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>n/a</td>
+      <td>n/a</td>
+      <td>No published version yet</td>
+    </tr>
+    <tr>
+      <td><a href="#">current</a></td>
+      <td>(last commit)</td>
+      <td>Current Development build (may be incoherent and change rapidly)</td>
+    </tr>
+    <tr>
+      <td><strong>STU1 sequence</strong></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="#">mmm yyyy</a></td>
+      <td>0.1.0</td>
+      <td>Release n.n.n</td>
+    </tr>
+  </tbody>
+</table>
+:ET

@@ -1,0 +1,262 @@
+---
+# jekyll header
+level: 2
+active: profiles
+template: sd
+layout: fhir-artifact
+type: StructureDefinition
+id: contained-p
+topofpage: true
+mappings: false
+---
+<!-- ============CONTENT CONTENT=============== -->
+
+
+<!--{% raw %}
+<ul class="nav nav-tabs">
+	<li class="active"><a href="#">Content</a></li>
+	<li><a href="StructureDefinition-contained-p-definitions.html">Detailed Descriptions</a></li>
+	<li><a href="StructureDefinition-contained-p-mappings.html">Mappings</a></li>
+	<li><a href="StructureDefinition-contained-p.xml.html">XML</a></li>
+	<li><a href="StructureDefinition-contained-p.json.html">JSON</a></li>
+	<li><a href="StructureDefinition-contained-p.ttl.html">Turtle</a></li>
+</ul>
+{% endraw %}-->
+
+<!--{% raw %} simpler links to other pages
+<p>
+Formats: <a href="StructureDefinition-contained-p.html">Narrative</a>, <a href="StructureDefinition-contained-p.xml.html">XML</a>, <a href="StructureDefinition-contained-p.json.html">JSON</a>, <a href="StructureDefinition-contained-p.ttl.html">Turtle</a>
+</p>
+
+{% endraw %}-->
+
+<h2>StructureDefinition-contained-p</h2>
+
+
+<!-- introductiontext here-->
+<a name="introduction"> </a>
+
+
+{% capture my-include %}{% include contained-p-intro.md id="contained-p" %}{% endcapture %}{{ my-include | markdownify }}
+
+
+<!-- example here -->
+
+<!--{% raw %}
+<h5>Example: <a href="daf-{{page.code}}-{{page.example}}.html">{{page.tcode}} Example: {{page.example}}</a></h5>
+
+<h5>Example: <a href="OmhContainedPatientProfile.example.html">OmhContainedPatientProfile Example</a></h5>
+{% endraw %}-->
+
+
+<a name="profile"> </a>
+<h3>Formal Views of Profile Content</h3>
+
+<p>
+<a href="{{site.data.fhir.path}}profiling.html#representation">Description of Profiles, Differentials, and Snapshots</a>.
+</p>
+
+<p>
+The official URL for this profile is:
+<code>{{site.data.structuredefinitions.contained-p.url}}</code><button id="copy-button" class="btn-default btn-sm" data-clipboard-text="{{site.data.structuredefinitions.contained-p.url}}">Copy</button>
+</p>
+
+<p>
+Published on {{site.data.structuredefinitions.contained-p.date}} as {{site.data.structuredefinitions.contained-p.status}} by the {{site.data.structuredefinitions.contained-p.publisher | default: site.data.fhir.ig.publisher }}.
+</p>
+
+<p><strong>
+This profile builds on <a href= "{{site.data.structuredefinitions.contained-p.basepath}}">{{site.data.structuredefinitions.contained-p.basename}}</a>
+</strong></p>
+
+<!--{% raw %}
+{% include StructureDefinition-contained-p-header.xhtml %}
+{% endraw %}-->
+
+
+<hr>
+
+<!--  ********remove the tabs editing purposes if status draft ********* -->
+
+{% if site.data.structuredefinitions.contained-p.status == "active" %}
+
+<div id="tabs">
+
+<!--  this could be a customizable include -->
+ <ul>
+  {% unless "contained-p" contains "extension" %}<li><a href="#tabs-summ">Text Summary</a></li>{% endunless %}
+  <li><a href="#tabs-diff">Differential View</a></li>
+  <li><a href="#tabs-snap">Full View</a></li>
+  {% if site.showPsuedoXML %}<li><a href="#tabs-xml">XML Template</a></li>{% endif %}
+  {% if site.showPsuedoJson %}<li><a href="#tabs-json">JSON Template</a></li>{% endif %}
+  <li><a href="#tabs-all">All Views</a></li>
+
+ </ul>
+{% unless "contained-p" contains "extension" %}
+ <div id="tabs-summ">
+  <div id="tbl-summ">
+   <div id="tbl-diff-inner">
+     <a name="summary"> </a>
+{% if site.summaries %}
+  {% capture my-include %}{% include contained-p-summary.md id="contained-p" %}{% endcapture %}{{ my-include | markdownify }}
+{% else %}
+  {% include StructureDefinition-contained-p-summary.xhtml %}
+{% endif%}
+   </div>
+  </div>
+ </div>
+{% endunless %}
+
+ <div id="tabs-diff">
+  <div id="tbl-diff">
+   <div id="tbl-diff-inner">
+  {% include StructureDefinition-contained-p-diff.xhtml %}
+   </div>
+  </div>
+ </div>
+
+ <div id="tabs-snap">
+  <div id="tbl-snap">
+   <div id="tbl-snap-inner">
+{% include StructureDefinition-contained-p-snapshot.xhtml %}
+   </div>
+  </div>
+ </div>
+
+<!-- =======XML and JSON ======== -->
+{% if site.showPsuedoXML%}
+ <div id="tabs-xml">
+  <div id="xml">
+   <div id="xml-inner">
+{% include StructureDefinition-contained-p-pseudo-xml.xhtml %}
+   </div>
+  </div>
+ </div>
+{% endif %}
+
+
+{% if site.showPsuedoJson%}
+ <div id="tabs-json">
+  <div id="json">
+   <div id="json-inner">
+     <pre class="spec">
+      {% include StructureDefinition-contained-p-pseudo-json.xhtml %}
+     </pre>
+   </div>
+  </div>
+ </div>
+{% endif %}
+
+{% endif %}
+
+
+ <div id="tabs-all"  class = "no-external">
+<!-- =======Summary======== -->
+{% unless "contained-p" contains "extension"%}
+  <div id="all-tbl-summ">
+    <div id="all-tbl-summ-inner">
+     <!--<a name="summary"> </a>-->
+   {% if site.summaries %}
+     {% capture my-include %}{% include contained-p-summary.md id="contained-p" %}{% endcapture %}{{ my-include | markdownify }}
+   {% else %}
+     {% include StructureDefinition-contained-p-summary.xhtml %}
+   {% endif%}
+<!--{% raw %}
+{% include contained-p-summary.md id="contained-p" %}
+{% endraw %}-->
+   </div>
+  </div>
+{% endunless %}
+<!-- =======Differential level 1======== -->
+ <div id="all-tbl-diff">
+   <p><b>Differential View</b></p>
+   <div id="all-tbl-diff-inner">
+     {% include StructureDefinition-contained-p-diff.xhtml %}
+   </div>
+   <!-- =======Differential level 2 ( if want to show an intermediate diff if profiling a profile) ========= -->
+{% if site.diff2 %}
+      <div id="all-tbl-diff2-inner">
+        {% include contained-p-diff2.md type="StructureDefinition" id="contained-p" %}
+      </div>
+{% endif %}
+</div>
+<!-- =======Snapshot======== -->
+{% unless site.data.structuredefinitions.contained-p.kind == "logical" %}
+  <div id="all-tbl-snap">
+   <p><b>Snapshot View</b></p>
+   <div id="all-tbl-snap-inner">
+     {% include StructureDefinition-contained-p-snapshot.xhtml %}
+   </div>
+  </div>
+{% endunless %}
+<!-- =======XML and JSON ======== -->
+
+
+    {% if showPsuedoJson %}
+        <div id="all-xml">
+         <p><b>XML Template</b></p>
+         <div id="all-xml-inner">
+      {% include StructureDefinition-contained-p-pseudo-xml.xhtml %}
+         </div>
+        </div>
+    {% endif %}
+
+    {% if showPsuedoXML %}
+        <div id="all-json">
+         <p><b>JSON Template</b></p>
+         <div id="all-json-inner">
+            <pre class="spec">
+             {% include StructureDefinition-contained-p-pseudo-json.xhtml %}
+            </pre>
+        </div>
+      </div>
+    {% endif %}
+
+
+ </div>
+</div>
+
+<br />
+
+{% if site.data.structuredefinitions.contained-p.kind == "resource" %}
+
+<a name="downloads"> </a>
+<p>Downloads: StructureDefinition: (<a href="StructureDefinition-contained-p.xml" download>XML</a>, <a href="StructureDefinition-contained-p.json" download>JSON</a>), Schema:  <a href="contained-p.sch" download>XML Schematron</a></p>
+
+<br />
+
+
+
+
+  <!-- search text here-->
+  <a name="search"> </a>
+  <h3>Quick Start</h3>
+  <p>Below is an overview of the required set of Server RESTful FHIR interactions - for example, search and read operations - for this profile.  See the <a href="capstatements.html">Conformance requirements</a> for a complete list of supported RESTful interactions for this IG.</p>
+
+
+  {% capture my-include %}{% include contained-p-search.md id="contained-p" %}{% endcapture %}{{ my-include | markdownify }}
+
+
+{% elsif site.data.structuredefinitions.contained-p.kind == "logical" %}
+
+<br />
+
+
+  <a name="mapping-tables"> </a>
+  <h3>Mappings</h3>
+  <p>Below are mappings for this model. These mappings are informative and are provided to help implementers of this specification understand the content and use it correctly.</p>
+
+  <div markdown='0'>
+      <!--reduce the header size -->
+  {% capture mapping %}{% include StructureDefinition-{{id}}-maps.xhtml %}{% endcapture %}
+  {{ mapping| replace: 'h3', 'b' }}
+  </div>
+  <br />
+{% else %}
+
+  <hr/>
+
+   See the <a href="capstatements.html">Conformance requirements</a> for a complete list of supported RESTful interactions for this IG.</p>
+
+{% endif %}
+  <!-- ==============END CONTENT END CONTENT=================== -->

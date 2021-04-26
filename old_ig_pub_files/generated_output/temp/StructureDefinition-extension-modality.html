@@ -1,0 +1,262 @@
+---
+# jekyll header
+level: 2
+active: profiles
+template: sd
+layout: fhir-artifact
+type: StructureDefinition
+id: extension-modality
+topofpage: true
+mappings: false
+---
+<!-- ============CONTENT CONTENT=============== -->
+
+
+<!--{% raw %}
+<ul class="nav nav-tabs">
+	<li class="active"><a href="#">Content</a></li>
+	<li><a href="StructureDefinition-extension-modality-definitions.html">Detailed Descriptions</a></li>
+	<li><a href="StructureDefinition-extension-modality-mappings.html">Mappings</a></li>
+	<li><a href="StructureDefinition-extension-modality.xml.html">XML</a></li>
+	<li><a href="StructureDefinition-extension-modality.json.html">JSON</a></li>
+	<li><a href="StructureDefinition-extension-modality.ttl.html">Turtle</a></li>
+</ul>
+{% endraw %}-->
+
+<!--{% raw %} simpler links to other pages
+<p>
+Formats: <a href="StructureDefinition-extension-modality.html">Narrative</a>, <a href="StructureDefinition-extension-modality.xml.html">XML</a>, <a href="StructureDefinition-extension-modality.json.html">JSON</a>, <a href="StructureDefinition-extension-modality.ttl.html">Turtle</a>
+</p>
+
+{% endraw %}-->
+
+<h2>StructureDefinition-extension-modality</h2>
+
+
+<!-- introductiontext here-->
+<a name="introduction"> </a>
+
+
+{% capture my-include %}{% include extension-modality-intro.md id="extension-modality" %}{% endcapture %}{{ my-include | markdownify }}
+
+
+<!-- example here -->
+
+<!--{% raw %}
+<h5>Example: <a href="daf-{{page.code}}-{{page.example}}.html">{{page.tcode}} Example: {{page.example}}</a></h5>
+
+<h5>Example: <a href="OmhModalityExtension.example.html">OmhModalityExtension Example</a></h5>
+{% endraw %}-->
+
+
+<a name="profile"> </a>
+<h3>Formal Views of Profile Content</h3>
+
+<p>
+<a href="{{site.data.fhir.path}}profiling.html#representation">Description of Profiles, Differentials, and Snapshots</a>.
+</p>
+
+<p>
+The official URL for this profile is:
+<code>{{site.data.structuredefinitions.extension-modality.url}}</code><button id="copy-button" class="btn-default btn-sm" data-clipboard-text="{{site.data.structuredefinitions.extension-modality.url}}">Copy</button>
+</p>
+
+<p>
+Published on {{site.data.structuredefinitions.extension-modality.date}} as {{site.data.structuredefinitions.extension-modality.status}} by the {{site.data.structuredefinitions.extension-modality.publisher | default: site.data.fhir.ig.publisher }}.
+</p>
+
+<p><strong>
+This profile builds on <a href= "{{site.data.structuredefinitions.extension-modality.basepath}}">{{site.data.structuredefinitions.extension-modality.basename}}</a>
+</strong></p>
+
+<!--{% raw %}
+{% include StructureDefinition-extension-modality-header.xhtml %}
+{% endraw %}-->
+
+
+<hr>
+
+<!--  ********remove the tabs editing purposes if status draft ********* -->
+
+{% if site.data.structuredefinitions.extension-modality.status == "active" %}
+
+<div id="tabs">
+
+<!--  this could be a customizable include -->
+ <ul>
+  {% unless "extension-modality" contains "extension" %}<li><a href="#tabs-summ">Text Summary</a></li>{% endunless %}
+  <li><a href="#tabs-diff">Differential View</a></li>
+  <li><a href="#tabs-snap">Full View</a></li>
+  {% if site.showPsuedoXML %}<li><a href="#tabs-xml">XML Template</a></li>{% endif %}
+  {% if site.showPsuedoJson %}<li><a href="#tabs-json">JSON Template</a></li>{% endif %}
+  <li><a href="#tabs-all">All Views</a></li>
+
+ </ul>
+{% unless "extension-modality" contains "extension" %}
+ <div id="tabs-summ">
+  <div id="tbl-summ">
+   <div id="tbl-diff-inner">
+     <a name="summary"> </a>
+{% if site.summaries %}
+  {% capture my-include %}{% include extension-modality-summary.md id="extension-modality" %}{% endcapture %}{{ my-include | markdownify }}
+{% else %}
+  {% include StructureDefinition-extension-modality-summary.xhtml %}
+{% endif%}
+   </div>
+  </div>
+ </div>
+{% endunless %}
+
+ <div id="tabs-diff">
+  <div id="tbl-diff">
+   <div id="tbl-diff-inner">
+  {% include StructureDefinition-extension-modality-diff.xhtml %}
+   </div>
+  </div>
+ </div>
+
+ <div id="tabs-snap">
+  <div id="tbl-snap">
+   <div id="tbl-snap-inner">
+{% include StructureDefinition-extension-modality-snapshot.xhtml %}
+   </div>
+  </div>
+ </div>
+
+<!-- =======XML and JSON ======== -->
+{% if site.showPsuedoXML%}
+ <div id="tabs-xml">
+  <div id="xml">
+   <div id="xml-inner">
+{% include StructureDefinition-extension-modality-pseudo-xml.xhtml %}
+   </div>
+  </div>
+ </div>
+{% endif %}
+
+
+{% if site.showPsuedoJson%}
+ <div id="tabs-json">
+  <div id="json">
+   <div id="json-inner">
+     <pre class="spec">
+      {% include StructureDefinition-extension-modality-pseudo-json.xhtml %}
+     </pre>
+   </div>
+  </div>
+ </div>
+{% endif %}
+
+{% endif %}
+
+
+ <div id="tabs-all"  class = "no-external">
+<!-- =======Summary======== -->
+{% unless "extension-modality" contains "extension"%}
+  <div id="all-tbl-summ">
+    <div id="all-tbl-summ-inner">
+     <!--<a name="summary"> </a>-->
+   {% if site.summaries %}
+     {% capture my-include %}{% include extension-modality-summary.md id="extension-modality" %}{% endcapture %}{{ my-include | markdownify }}
+   {% else %}
+     {% include StructureDefinition-extension-modality-summary.xhtml %}
+   {% endif%}
+<!--{% raw %}
+{% include extension-modality-summary.md id="extension-modality" %}
+{% endraw %}-->
+   </div>
+  </div>
+{% endunless %}
+<!-- =======Differential level 1======== -->
+ <div id="all-tbl-diff">
+   <p><b>Differential View</b></p>
+   <div id="all-tbl-diff-inner">
+     {% include StructureDefinition-extension-modality-diff.xhtml %}
+   </div>
+   <!-- =======Differential level 2 ( if want to show an intermediate diff if profiling a profile) ========= -->
+{% if site.diff2 %}
+      <div id="all-tbl-diff2-inner">
+        {% include extension-modality-diff2.md type="StructureDefinition" id="extension-modality" %}
+      </div>
+{% endif %}
+</div>
+<!-- =======Snapshot======== -->
+{% unless site.data.structuredefinitions.extension-modality.kind == "logical" %}
+  <div id="all-tbl-snap">
+   <p><b>Snapshot View</b></p>
+   <div id="all-tbl-snap-inner">
+     {% include StructureDefinition-extension-modality-snapshot.xhtml %}
+   </div>
+  </div>
+{% endunless %}
+<!-- =======XML and JSON ======== -->
+
+
+    {% if showPsuedoJson %}
+        <div id="all-xml">
+         <p><b>XML Template</b></p>
+         <div id="all-xml-inner">
+      {% include StructureDefinition-extension-modality-pseudo-xml.xhtml %}
+         </div>
+        </div>
+    {% endif %}
+
+    {% if showPsuedoXML %}
+        <div id="all-json">
+         <p><b>JSON Template</b></p>
+         <div id="all-json-inner">
+            <pre class="spec">
+             {% include StructureDefinition-extension-modality-pseudo-json.xhtml %}
+            </pre>
+        </div>
+      </div>
+    {% endif %}
+
+
+ </div>
+</div>
+
+<br />
+
+{% if site.data.structuredefinitions.extension-modality.kind == "resource" %}
+
+<a name="downloads"> </a>
+<p>Downloads: StructureDefinition: (<a href="StructureDefinition-extension-modality.xml" download>XML</a>, <a href="StructureDefinition-extension-modality.json" download>JSON</a>), Schema:  <a href="extension-modality.sch" download>XML Schematron</a></p>
+
+<br />
+
+
+
+
+  <!-- search text here-->
+  <a name="search"> </a>
+  <h3>Quick Start</h3>
+  <p>Below is an overview of the required set of Server RESTful FHIR interactions - for example, search and read operations - for this profile.  See the <a href="capstatements.html">Conformance requirements</a> for a complete list of supported RESTful interactions for this IG.</p>
+
+
+  {% capture my-include %}{% include extension-modality-search.md id="extension-modality" %}{% endcapture %}{{ my-include | markdownify }}
+
+
+{% elsif site.data.structuredefinitions.extension-modality.kind == "logical" %}
+
+<br />
+
+
+  <a name="mapping-tables"> </a>
+  <h3>Mappings</h3>
+  <p>Below are mappings for this model. These mappings are informative and are provided to help implementers of this specification understand the content and use it correctly.</p>
+
+  <div markdown='0'>
+      <!--reduce the header size -->
+  {% capture mapping %}{% include StructureDefinition-{{id}}-maps.xhtml %}{% endcapture %}
+  {{ mapping| replace: 'h3', 'b' }}
+  </div>
+  <br />
+{% else %}
+
+  <hr/>
+
+   See the <a href="capstatements.html">Conformance requirements</a> for a complete list of supported RESTful interactions for this IG.</p>
+
+{% endif %}
+  <!-- ==============END CONTENT END CONTENT=================== -->

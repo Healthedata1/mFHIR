@@ -1,0 +1,55 @@
+{% raw %}<pre class="json">
+{
+  "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference">resourceType</a>" : "DocumentReference",
+  "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.id">id</a>" : "omh-stepcount-example",
+  "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: omh-stepcount-example&lt;/p&gt;&lt;p&gt;&lt;b&gt;contained&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: current&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://loinc.org 55423-8}\&quot;&gt;Step Count&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;#p\&quot;&gt;unknown resource contained&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;Contents&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Attachment&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h3&gt;Contexts&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Period&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;May 22, 2018, 2:00:00 PM --&amp;gt; May 22, 2018, 2:01:00 PM&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/patient.html#Patient">contained</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/patient.html">resourceType</a>" : "Patient",
+      "<a href="http://hl7.org/fhir/R4/patient.html#Patient.id">id</a>" : "p",
+      "<a href="http://hl7.org/fhir/R4/patient.html#Patient.identifier">identifier</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "https://omh.org/shimmer/patient_ids",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "some-user"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.identifier">identifier</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:ietf:rfc:3986",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.status">status</a>" : "current",
+  "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.type">type</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "55423-8",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Step Count"
+      }
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.subject">subject</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "#p"
+  },
+  "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.content">content</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.content.attachment">attachment</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.contentType">contentType</a>" : "application/json",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.url">url</a>" : "https://R24Server/Binary/omh-stepcount-example"
+      }
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.context">context</a>" : {
+    "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.context.period">period</a>" : {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2018-05-23T08:00:00+11:00",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a>" : "2018-05-23T08:01:00+11:00"
+    }
+  }
+}</pre>
+{% endraw %}

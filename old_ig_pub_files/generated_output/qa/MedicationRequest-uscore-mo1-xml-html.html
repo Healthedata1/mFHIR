@@ -1,0 +1,68 @@
+﻿<html>
+<head>
+  <title>MedicationRequest-uscore-mo1-xml-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="xml">
+
+&lt;<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest">MedicationRequest</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+&lt;!-- example using medication codes --&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;uscore-mo1&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.meta">meta</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest&quot;/&gt;
+  &lt;/meta&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: uscore-mo1&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;intent&lt;/b&gt;: order&lt;/p&gt;&lt;p&gt;&lt;b&gt;medication&lt;/b&gt;: &lt;span title=&quot;Codes: {http://www.nlm.nih.gov/research/umls/rxnorm 582620}&quot;&gt;Nizatidine 15 MG/ML Oral Solution [Axid]&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=&quot;Patient-example.html&quot;&gt;Amy Shaw. Generated Summary: id: example; Medical Record Number = 1032702 (USUAL); active; Amy V. Shaw ; ph: 555-555-5555(HOME), amy.shaw@example.com; gender: female; birthDate: 2007-02-20&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;authoredOn&lt;/b&gt;: 2008-04-05&lt;/p&gt;&lt;p&gt;&lt;b&gt;requester&lt;/b&gt;: &lt;a href=&quot;Practitioner-practitioner-1.html&quot;&gt;Ronald Bone, MD. Generated Summary: id: practitioner-1; 9941339108, 25456; Ronald Bone &lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;dosageInstruction&lt;/b&gt;: &lt;/p&gt;&lt;h3&gt;DispenseRequests&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;NumberOfRepeatsAllowed&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Quantity&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;ExpectedSupplyDuration&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;480 mL&lt;/td&gt;&lt;td&gt;30 days&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+  &lt;/text&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.intent">intent</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;order&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.medication[x]">medicationCodeableConcept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;582620&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Nizatidine 15 MG/ML Oral Solution [Axid]&quot;/&gt;
+    &lt;/coding&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Nizatidine 15 MG/ML Oral Solution [Axid]&quot;/&gt;
+  &lt;/medicationCodeableConcept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.subject">subject</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/example&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Amy Shaw&quot;/&gt;
+  &lt;/subject&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.authoredOn">authoredOn</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2008-04-05&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.requester">requester</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Practitioner/practitioner-1&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Ronald Bone, MD&quot;/&gt;
+  &lt;/requester&gt;
+&lt;!--   either a code or a reference to the medication being prescribed. As described earlier, this could be contained, separately        within a bundle or simply a reference to a remote server.  --&gt;
+&lt;!-- 	The following elements are not mandatory for the uscorenaut Profile  --&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.dosageInstruction">dosageInstruction</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Dosage#Dosage.text">text</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;10 mL bid&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Dosage#Dosage.timing">timing</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Timing#Timing.repeat">repeat</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Timing#Timing.repeat.bounds[x]">boundsPeriod</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2008-04-05&quot;/&gt;
+        &lt;/boundsPeriod&gt;
+      &lt;/repeat&gt;
+    &lt;/timing&gt;
+  &lt;/dosageInstruction&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.dispenseRequest">dispenseRequest</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.dispenseRequest.numberOfRepeatsAllowed">numberOfRepeatsAllowed</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;1&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.dispenseRequest.quantity">quantity</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">value</a>=&quot;480&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.unit">unit</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;mL&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://unitsofmeasure.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;mL&quot;/&gt;
+    &lt;/quantity&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.dispenseRequest.expectedSupplyDuration">expectedSupplyDuration</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Duration#Duration.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">value</a>=&quot;30&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Duration#Duration.unit">unit</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;days&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Duration#Duration.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://unitsofmeasure.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Duration#Duration.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;d&quot;/&gt;
+    &lt;/expectedSupplyDuration&gt;
+  &lt;/dispenseRequest&gt;
+&lt;/MedicationRequest&gt;</pre>
+</body>
+</html>

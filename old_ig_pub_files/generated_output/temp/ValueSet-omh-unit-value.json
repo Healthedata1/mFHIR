@@ -1,0 +1,73 @@
+{
+  "resourceType": "ValueSet",
+  "id": "omh-unit-value",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"http://unitsofmeasure.org\"><code>http://unitsofmeasure.org</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>{steps}</td><td>steps</td><td/></tr><tr><td>mm[Hg]</td><td>mmHg</td><td/></tr><tr><td>mg/dL</td><td>mg/dL</td><td/></tr><tr><td>mmol/L</td><td>mmol/L</td><td/></tr><tr><td>kg/m2</td><td>kg/m^2</td><td/></tr><tr><td>kCal</td><td>kcal</td><td/></tr><tr><td>/min</td><td>beats/min</td><td/></tr><tr><td>/min</td><td>breaths/min</td><td/></tr><tr><td>%</td><td>%</td><td/></tr></table></li></ul></div>"
+  },
+  "url": "http://www.fhir.org/guides/omhtofhir/ValueSet/omh-unit-value",
+  "version": "0.0.0",
+  "name": "omh-unit-value",
+  "title": "OMH to FHIR Unit Value Value Set",
+  "status": "draft",
+  "date": "2018-11-28T15:55:00.13Z",
+  "publisher": "Open mHealth",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.openmhealth.org/"
+        }
+      ]
+    }
+  ],
+  "description": "Implicit OMH units (not explicitly enumerated in the schemas) needed for OMH to FHIR mapping",
+  "immutable": false,
+  "copyright": "Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://unitsofmeasure.org",
+        "concept": [
+          {
+            "code": "{steps}",
+            "display": "steps"
+          },
+          {
+            "code": "mm[Hg]",
+            "display": "mmHg"
+          },
+          {
+            "code": "mg/dL",
+            "display": "mg/dL"
+          },
+          {
+            "code": "mmol/L",
+            "display": "mmol/L"
+          },
+          {
+            "code": "kg/m2",
+            "display": "kg/m^2"
+          },
+          {
+            "code": "kCal",
+            "display": "kcal"
+          },
+          {
+            "code": "/min",
+            "display": "beats/min"
+          },
+          {
+            "code": "/min",
+            "display": "breaths/min"
+          },
+          {
+            "code": "%",
+            "display": "%"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,93 @@
+[
+  {
+    "id": "client",
+    "type": "CapabilityStatement",
+    "url": "http://www.fhir.org/guides/omhtofhir/CapabilityStatement/client",
+    "version": "0.0.0",
+    "name": "Client"
+  },
+  {
+    "id": "server",
+    "type": "CapabilityStatement",
+    "url": "http://www.fhir.org/guides/omhtofhir/CapabilityStatement/server",
+    "version": "0.0.0",
+    "name": "Server"
+  },
+  {
+    "id": "omh-datapoint-type",
+    "type": "CodeSystem",
+    "url": "http://www.fhir.org/guides/omhtofhir/CodeSystem/omh-datapoint-type",
+    "version": "0.0.0",
+    "name": "omh-datapoint-type"
+  },
+  {
+    "id": "omh-device-modality",
+    "type": "CodeSystem",
+    "url": "http://www.fhir.org/guides/omhtofhir/CodeSystem/omh-device-modality",
+    "version": "0.0.0",
+    "name": "omh-device-modality"
+  },
+  {
+    "id": "omh-temporal-relationship-to-meal",
+    "type": "CodeSystem",
+    "url": "http://www.fhir.org/guides/omhtofhir/CodeSystem/omh-temporal-relationship-to-meal",
+    "version": "0.0.0",
+    "name": "omh-temporal-relationship-to-meal"
+  },
+  {
+    "id": "openmhealth.mfhir-0.0.0",
+    "type": "ImplementationGuide",
+    "url": "http://www.fhir.org/guides/omhtofhir/ImplementationGuide/openmhealth.mfhir-0.0.0",
+    "version": "0.0.0",
+    "name": "OpenmHealthtoFHIR"
+  },
+  {
+    "id": "contained-p",
+    "type": "StructureDefinition",
+    "url": "http://www.fhir.org/guides/omhtofhir/StructureDefinition/contained-p",
+    "version": "0.0.0",
+    "name": "OmhContainedPatientProfile"
+  },
+  {
+    "id": "extension-modality",
+    "type": "StructureDefinition",
+    "url": "http://www.fhir.org/guides/omhtofhir/StructureDefinition/extension-modality",
+    "version": "0.0.0",
+    "name": "OmhModalityExtension"
+  },
+  {
+    "id": "omh-dr",
+    "type": "StructureDefinition",
+    "url": "http://www.fhir.org/guides/omhtofhir/StructureDefinition/omh-dr",
+    "version": "0.0.0",
+    "name": "OmhDocumentReferenceProfile"
+  },
+  {
+    "id": "omh-obs",
+    "type": "StructureDefinition",
+    "url": "http://www.fhir.org/guides/omhtofhir/StructureDefinition/omh-obs",
+    "version": "0.0.0",
+    "name": "OmhObservationProfile"
+  },
+  {
+    "id": "dp-type",
+    "type": "ValueSet",
+    "url": "http://www.fhir.org/guides/omhtofhir/ValueSet/dp-type",
+    "version": "0.0.0",
+    "name": "omh-datapoint-type"
+  },
+  {
+    "id": "omh-device-modality",
+    "type": "ValueSet",
+    "url": "http://www.fhir.org/guides/omhtofhir/ValueSet/omh-device-modality",
+    "version": "0.0.0",
+    "name": "OmhDeviceModalityValueSet"
+  },
+  {
+    "id": "omh-unit-value",
+    "type": "ValueSet",
+    "url": "http://www.fhir.org/guides/omhtofhir/ValueSet/omh-unit-value",
+    "version": "0.0.0",
+    "name": "omh-unit-value"
+  }
+]

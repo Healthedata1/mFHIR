@@ -1,0 +1,130 @@
+﻿<html>
+<head>
+  <title>SearchParameter-us-core-questionnaire-version-ttl-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="rdf">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+ a fhir:SearchParameter;
+  <a href="http://build.fhir.org/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
+  <a href="http://build.fhir.org/searchparameter.html#SearchParameter.id">fhir:Resource.id</a> [ <a href="http://build.fhir.org/datatypes.html#id">fhir:value</a> &quot;us-core-questionnaire-version&quot;];
+  <a href="http://build.fhir.org/searchparameter.html#SearchParameter.text">fhir:DomainResource.text</a> [
+     <a href="http://build.fhir.org/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt; Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt; id&lt;/b&gt; us-core-questionnaire-version&lt;/p&gt;&lt;p&gt;&lt;b&gt; url&lt;/b&gt; : &lt;b&gt; http://hl7.org/fhir/us/core/SearchParameter/us-core-questionnaire-version&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt; version&lt;/b&gt; : 4.1.0&lt;/p&gt;&lt;p&gt;&lt;b&gt; name&lt;/b&gt; : USCoreQuestionnaireVersion&lt;/p&gt;&lt;p&gt;&lt;b&gt; derivedFrom&lt;/b&gt; : &lt;a&gt; &lt;code&gt;http://hl7.org/fhir/SearchParameter/Questionnaire-version&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt; status&lt;/b&gt; : active&lt;/p&gt;&lt;p&gt;&lt;b&gt; experimental&lt;/b&gt;  False&lt;/p&gt;&lt;p&gt;&lt;b&gt; date&lt;/b&gt; : 2019-04-25&lt;/p&gt;&lt;p&gt;&lt;b&gt; publisher&lt;/b&gt; : HL7 International - Structured Documents Work Group&lt;/p&gt;&lt;p&gt;&lt;b&gt; contact&lt;/b&gt; : http://www.hl7.org/Special/committees/structure/index.cfm&lt;/p&gt;&lt;p&gt;&lt;b&gt; description&lt;/b&gt; : The business version of the questionnaire&lt;/p&gt;&lt;p&gt;&lt;b&gt; useContext&lt;/b&gt; : &lt;/p&gt;&lt;p&gt;&lt;b&gt; jurisdiction&lt;/b&gt; : United States of America (the) &lt;span&gt; (Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United\n           States of America (the)'})&lt;/span&gt;&lt;/p&gt;&lt;!--\n	&lt;p&gt;\n		&lt;b&gt; purpose&lt;/b&gt; : Need to search by identifier for various infrastructural cases - mainly retrieving packages,\n         and matching as part of a chain&lt;/p&gt;\n  --&gt;&lt;p&gt;&lt;b&gt; code&lt;/b&gt; : &lt;code&gt;version&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt; base&lt;/b&gt; :Questionnaire&lt;/p&gt;&lt;p&gt;&lt;b&gt; type&lt;/b&gt; : token&lt;/p&gt;&lt;p&gt;&lt;b&gt; expression&lt;/b&gt; : &lt;code&gt;Questionnaire.version&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt; xpath&lt;/b&gt; : &lt;code&gt;f:Questionnaire/f:version&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt; xpathUsage&lt;/b&gt; : normal&lt;/p&gt;&lt;p&gt;&lt;b&gt; mulitpleOr&lt;/b&gt; : True   (Conformance Expectation = MAY)&lt;/p&gt;&lt;p&gt;&lt;b&gt; mulitpleAnd&lt;/b&gt; : True  ( Conformance Expectation = MAY)&lt;/p&gt;\n    \n    \n    \n    &lt;p&gt;&lt;b&gt; modifier&lt;/b&gt; : &lt;code&gt;missing&lt;/code&gt;  (Conformance Expectation =  MAY)&lt;/p&gt;\n    \n    &lt;p&gt;&lt;b&gt; modifier&lt;/b&gt; : &lt;code&gt;text&lt;/code&gt;  (Conformance Expectation =  MAY)&lt;/p&gt;\n    \n    &lt;p&gt;&lt;b&gt; modifier&lt;/b&gt; : &lt;code&gt;not&lt;/code&gt;  (Conformance Expectation =  MAY)&lt;/p&gt;\n    \n    &lt;p&gt;&lt;b&gt; modifier&lt;/b&gt; : &lt;code&gt;in&lt;/code&gt;  (Conformance Expectation =  MAY)&lt;/p&gt;\n    \n    &lt;p&gt;&lt;b&gt; modifier&lt;/b&gt; : &lt;code&gt;not-in&lt;/code&gt;  (Conformance Expectation =  MAY)&lt;/p&gt;\n    \n    &lt;p&gt;&lt;b&gt; modifier&lt;/b&gt; : &lt;code&gt;below&lt;/code&gt;  (Conformance Expectation =  MAY)&lt;/p&gt;\n    \n    &lt;p&gt;&lt;b&gt; modifier&lt;/b&gt; : &lt;code&gt;above&lt;/code&gt;  (Conformance Expectation =  MAY)&lt;/p&gt;\n    \n    &lt;p&gt;&lt;b&gt; modifier&lt;/b&gt; : &lt;code&gt;ofType&lt;/code&gt;  (Conformance Expectation =  MAY)&lt;/p&gt;\n    \n    \n    \n		&lt;/div&gt;&quot;
+  ];
+  <a href="http://build.fhir.org/searchparameter.html#SearchParameter.url">fhir:SearchParameter.url</a> [ <a href="http://build.fhir.org/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/us/core/SearchParameter/us-core-questionnaire-version&quot;];
+  <a href="http://build.fhir.org/searchparameter.html#SearchParameter.version">fhir:SearchParameter.version</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;4.1.0&quot;];
+  <a href="http://build.fhir.org/searchparameter.html#SearchParameter.name">fhir:SearchParameter.name</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;USCoreQuestionnaireVersion&quot;];
+  <a href="http://build.fhir.org/searchparameter.html#SearchParameter.derivedFrom">fhir:SearchParameter.derivedFrom</a> [
+     <a href="http://build.fhir.org/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/SearchParameter/Questionnaire-version&quot;;
+     <a href="http://build.fhir.org/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/SearchParameter/Questionnaire-version&gt;
+  ];
+  <a href="http://build.fhir.org/searchparameter.html#SearchParameter.status">fhir:SearchParameter.status</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;active&quot;];
+  <a href="http://build.fhir.org/searchparameter.html#SearchParameter.experimental">fhir:SearchParameter.experimental</a> [ <a href="http://build.fhir.org/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean];
+  <a href="http://build.fhir.org/searchparameter.html#SearchParameter.date">fhir:SearchParameter.date</a> [ <a href="http://build.fhir.org/datatypes.html#dateTime">fhir:value</a> &quot;2019-04-25T00:14:45.743222Z&quot;^^xsd:dateTime];
+  <a href="http://build.fhir.org/searchparameter.html#SearchParameter.publisher">fhir:SearchParameter.publisher</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;HL7 International - Structured Documents Work Group&quot;];
+  <a href="http://build.fhir.org/searchparameter.html#SearchParameter.contact">fhir:SearchParameter.contact</a> [
+     <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0;
+     <a href="http://build.fhir.org/datatypes.html#ContactDetail#ContactDetail.telecom">fhir:ContactDetail.telecom</a> [
+       <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0;
+       <a href="http://build.fhir.org/datatypes.html#ContactPoint#ContactPoint.system">fhir:ContactPoint.system</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;url&quot; ];
+       <a href="http://build.fhir.org/datatypes.html#ContactPoint#ContactPoint.value">fhir:ContactPoint.value</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;http://www.hl7.org/Special/committees/structure/index.cfm&quot; ]     ]
+  ];
+  <a href="http://build.fhir.org/searchparameter.html#SearchParameter.description">fhir:SearchParameter.description</a> [ <a href="http://build.fhir.org/datatypes.html#markdown">fhir:value</a> &quot;The business version of the questionnaire&quot;];
+  <a href="http://build.fhir.org/searchparameter.html#SearchParameter.code">fhir:SearchParameter.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;version&quot;];
+  <a href="http://build.fhir.org/searchparameter.html#SearchParameter.base">fhir:SearchParameter.base</a> [
+     <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;Questionnaire&quot;;
+     <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0
+  ];
+  <a href="http://build.fhir.org/searchparameter.html#SearchParameter.type">fhir:SearchParameter.type</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;token&quot;];
+  <a href="http://build.fhir.org/searchparameter.html#SearchParameter.expression">fhir:SearchParameter.expression</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Questionnaire.version&quot;];
+  <a href="http://build.fhir.org/searchparameter.html#SearchParameter.xpath">fhir:SearchParameter.xpath</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;f:Questionnaire/f:version&quot;];
+  <a href="http://build.fhir.org/searchparameter.html#SearchParameter.xpathUsage">fhir:SearchParameter.xpathUsage</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;normal&quot;];
+  <a href="http://build.fhir.org/searchparameter.html#SearchParameter.multipleOr">fhir:SearchParameter.multipleOr</a> [
+     <a href="http://build.fhir.org/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean;
+     <a href="http://build.fhir.org/datatypes.html#boolean#boolean.extension">fhir:Element.extension</a> [
+       <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0;
+       <a href="http://build.fhir.org/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot; ];
+       <a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueCode</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;MAY&quot; ]     ]
+  ];
+  <a href="http://build.fhir.org/searchparameter.html#SearchParameter.multipleAnd">fhir:SearchParameter.multipleAnd</a> [
+     <a href="http://build.fhir.org/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean;
+     <a href="http://build.fhir.org/datatypes.html#boolean#boolean.extension">fhir:Element.extension</a> [
+       <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0;
+       <a href="http://build.fhir.org/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot; ];
+       <a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueCode</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;MAY&quot; ]     ]
+  ];
+  <a href="http://build.fhir.org/searchparameter.html#SearchParameter.modifier">fhir:SearchParameter.modifier</a> [
+     <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;missing&quot;;
+     <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0;
+     <a href="http://build.fhir.org/datatypes.html#code#code.extension">fhir:Element.extension</a> [
+       <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0;
+       <a href="http://build.fhir.org/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot; ];
+       <a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueCode</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;MAY&quot; ]     ]
+  ], [
+     <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;text&quot;;
+     <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 1;
+     <a href="http://build.fhir.org/datatypes.html#code#code.extension">fhir:Element.extension</a> [
+       <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0;
+       <a href="http://build.fhir.org/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot; ];
+       <a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueCode</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;MAY&quot; ]     ]
+  ], [
+     <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;not&quot;;
+     <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 2;
+     <a href="http://build.fhir.org/datatypes.html#code#code.extension">fhir:Element.extension</a> [
+       <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0;
+       <a href="http://build.fhir.org/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot; ];
+       <a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueCode</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;MAY&quot; ]     ]
+  ], [
+     <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;in&quot;;
+     <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 3;
+     <a href="http://build.fhir.org/datatypes.html#code#code.extension">fhir:Element.extension</a> [
+       <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0;
+       <a href="http://build.fhir.org/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot; ];
+       <a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueCode</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;MAY&quot; ]     ]
+  ], [
+     <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;not-in&quot;;
+     <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 4;
+     <a href="http://build.fhir.org/datatypes.html#code#code.extension">fhir:Element.extension</a> [
+       <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0;
+       <a href="http://build.fhir.org/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot; ];
+       <a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueCode</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;MAY&quot; ]     ]
+  ], [
+     <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;below&quot;;
+     <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 5;
+     <a href="http://build.fhir.org/datatypes.html#code#code.extension">fhir:Element.extension</a> [
+       <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0;
+       <a href="http://build.fhir.org/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot; ];
+       <a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueCode</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;MAY&quot; ]     ]
+  ], [
+     <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;above&quot;;
+     <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 6;
+     <a href="http://build.fhir.org/datatypes.html#code#code.extension">fhir:Element.extension</a> [
+       <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0;
+       <a href="http://build.fhir.org/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot; ];
+       <a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueCode</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;MAY&quot; ]     ]
+  ], [
+     <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;ofType&quot;;
+     <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 7;
+     <a href="http://build.fhir.org/datatypes.html#code#code.extension">fhir:Element.extension</a> [
+       <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0;
+       <a href="http://build.fhir.org/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot; ];
+       <a href="http://build.fhir.org/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueCode</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;MAY&quot; ]     ]
+  ].
+
+# - ontology header ------------------------------------------------------------
+
+ a owl:Ontology;
+  owl:imports fhir:fhir.ttl.
+
+</pre>
+
+</body>
+</html>

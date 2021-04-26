@@ -1,0 +1,82 @@
+﻿<html>
+<head>
+  <title>ValueSet-us-core-substance-rxnorm-json-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="json">
+{
+  "<a href="http://build.fhir.org/valueset.html#ValueSet">resourceType</a>" : "ValueSet",
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.id">id</a>" : "us-core-substance-rxnorm",
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.meta">meta</a>" : {
+    "<a href="http://build.fhir.org/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a>" : "2016-05-25T16:59:08.250+10:00"
+  },
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.text">text</a>" : {
+    "<a href="http://build.fhir.org/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://build.fhir.org/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;US Core Substance RxNorm Codes&lt;/h2&gt;&lt;div&gt;&lt;p&gt;All RxNorm codes that have TTY = IN,PIN,MIN,BN, but TTY != OCD.&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;This value set includes codes from the following code systems:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Include codes from &lt;a href=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code&gt;http://www.nlm.nih.gov/research/umls/rxnorm&lt;/code&gt;&lt;/a&gt; where TTY  in  IN,PIN,MIN,BN&lt;/li&gt;&lt;li&gt;Exclude codes from &lt;a href=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code&gt;http://www.nlm.nih.gov/research/umls/rxnorm&lt;/code&gt;&lt;/a&gt; where TTY  =  OCD&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"
+  },
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.url">url</a>" : "http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-rxnorm",
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.identifier">identifier</a>" : [
+    {
+      "<a href="http://build.fhir.org/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:ietf:rfc:3986",
+      "<a href="http://build.fhir.org/datatypes.html#Identifier#Identifier.value">value</a>" : "urn:oid:2.16.840.1.113762.1.4.1010.7"
+    }
+  ],
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.version">version</a>" : "2.0.0",
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.name">name</a>" : "US_Core_Substance_RxNorm_Codes",
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.title">title</a>" : "US Core Substance RxNorm Codes",
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.status">status</a>" : "active",
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.date">date</a>" : "2018-11-06T18:15:32-08:00",
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.publisher">publisher</a>" : "HL7 US Realm Steering Committee",
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.contact">contact</a>" : [
+    {
+      "<a href="http://build.fhir.org/datatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://build.fhir.org/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "other",
+          "<a href="http://build.fhir.org/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "http://hl7.org/fhir"
+        }
+      ]
+    }
+  ],
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.description">description</a>" : "All RxNorm codes that have TTY = IN,PIN,MIN,BN, but TTY != OCD.",
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.jurisdiction">jurisdiction</a>" : [
+    {
+      "<a href="http://build.fhir.org/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://build.fhir.org/datatypes.html#Coding#Coding.system">system</a>" : "urn:iso:std:iso:3166",
+          "<a href="http://build.fhir.org/datatypes.html#Coding#Coding.code">code</a>" : "US",
+          "<a href="http://build.fhir.org/datatypes.html#Coding#Coding.display">display</a>" : "United States of America"
+        }
+      ]
+    }
+  ],
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.compose">compose</a>" : {
+    "<a href="http://build.fhir.org/valueset.html#ValueSet.compose.include">include</a>" : [
+      {
+        "<a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.system">system</a>" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "<a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.filter">filter</a>" : [
+          {
+            "<a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.filter.property">property</a>" : "TTY",
+            "<a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.filter.op">op</a>" : "in",
+            "<a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.filter.value">value</a>" : "IN,PIN,MIN,BN"
+          }
+        ]
+      }
+    ],
+    "<a href="http://build.fhir.org/valueset.html#ValueSet.compose.exclude">exclude</a>" : [
+      {
+        "<a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.system">system</a>" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "<a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.filter">filter</a>" : [
+          {
+            "<a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.filter.property">property</a>" : "TTY",
+            "<a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.filter.op">op</a>" : "=",
+            "<a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.filter.value">value</a>" : "OCD"
+          }
+        ]
+      }
+    ]
+  }
+}</pre>
+</body>
+</html>

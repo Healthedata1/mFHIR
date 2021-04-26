@@ -1,0 +1,34 @@
+{
+  "resourceType": "ValueSet",
+  "id": "omh-device-modality",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-omh-device-modality.html\"><code>http://www.fhir.org/guides/omhtofhir/CodeSystem/omh-device-modality</code></a></li></ul></div>"
+  },
+  "url": "http://www.fhir.org/guides/omhtofhir/ValueSet/omh-device-modality",
+  "version": "0.0.0",
+  "name": "OmhDeviceModalityValueSet",
+  "title": "Open mHealth to FHIR Device Modality ValueSet",
+  "status": "draft",
+  "experimental": false,
+  "date": "2019-06-06T10:50:59-07:00",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.openmhealth.org/"
+        }
+      ]
+    }
+  ],
+  "description": "The modality whereby the measure is obtained.  Choice of sensed|self-reported .",
+  "immutable": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.fhir.org/guides/omhtofhir/CodeSystem/omh-device-modality"
+      }
+    ]
+  }
+}

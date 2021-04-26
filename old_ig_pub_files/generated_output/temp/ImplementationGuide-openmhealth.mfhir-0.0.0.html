@@ -1,0 +1,76 @@
+---
+# jekyll header
+level: 2
+template: base
+active: format
+layout: fhir-artifact
+type: ImplementationGuide
+id: openmhealth.mfhir-0.0.0
+topofpage: True
+---
+
+<!-- ig template for many conformance resource html pages  ('base' in definitions file)  can not be used for conformance resources that have more that a single base template. e.g.,  sd since there are mapping and definitions templates for it as well  they need to be split out into 3 separate templates -->
+
+<!-- ============ CONTENT CONTENT=============== -->
+
+{% case 'ImplementationGuide' %} <!-- content depends on type -->
+{% when 'ValueSet' %}
+<!-- ============VAlUESET CONTENT CONTENT=============== -->
+
+  {% include ImplementationGuide-openmhealth.mfhir-0.0.0-summary.xhtml %}
+  {% include ImplementationGuide-openmhealth.mfhir-0.0.0-xref.xhtml %}
+  {% include ImplementationGuide-openmhealth.mfhir-0.0.0-cld.xhtml %}
+
+  <h3>Expansion</h3>
+
+  {% include ImplementationGuide-openmhealth.mfhir-0.0.0-expansion.xhtml %}
+<!-- ============VAlUESET CONTENT CONTENT=============== -->
+
+{% when 'CodeSystem' %}
+<!-- ============CODESYSTEM CONTENT CONTENT=============== -->
+
+  {% include ImplementationGuide-openmhealth.mfhir-0.0.0-summary.xhtml %}
+
+  {% include ImplementationGuide-openmhealth.mfhir-0.0.0-html.xhtml %}
+
+  <!-- ============CODESYSTEM CONTENT CONTENT=============== -->
+
+{% when 'OperationDefinition' %}
+<!-- ============OperationDefinition CONTENT CONTENT=============== -->
+
+  {% include ImplementationGuide-openmhealth.mfhir-0.0.0-html.xhtml %}
+
+  {% capture my-include %}{% include openmhealth.mfhir-0.0.0-example.md %}{% endcapture %}{{ my-include | markdownify }}  <!--add inline examples here -->
+<!-- ============OperationDefinition CONTENT CONTENT=============== -->
+
+
+{% when 'CapabilityStatement' %}
+<!-- ============CapabilityStatement CONTENT CONTENT=============== -->
+
+<p>
+Downloads:  CapabilityStatement: (<a href="ImplementationGuide-openmhealth.mfhir-0.0.0.xml" download>XML</a>, <a href="ImplementationGuide-openmhealth.mfhir-0.0.0.json" download>JSON</a>),<a href="openmhealth.mfhir-0.0.0.openapi.json">OpenAPI-Swagger Definition file</a>
+</p>
+
+  {% include ImplementationGuide-openmhealth.mfhir-0.0.0-html.xhtml %}
+
+<!-- ============CapabilityStatement CONTENT CONTENT=============== -->
+
+{% else %}
+<!-- ============ConceptMap CapabilityStatement SearchParameter CONTENT CONTENT=============== -->
+
+
+  {% include ImplementationGuide-openmhealth.mfhir-0.0.0-html.xhtml %}
+
+  <!-- ============CodeSystem ConceptMap CapabilityStatement CONTENT CONTENT=============== -->
+
+{% endcase %}
+
+
+<!-- simple format links
+<p>
+Formats: <a href="ImplementationGuide-openmhealth.mfhir-0.0.0.html">Narrative</a>, <a href="ImplementationGuide-openmhealth.mfhir-0.0.0.xml.html">XML</a>, <a href="ImplementationGuide-openmhealth.mfhir-0.0.0.json.html">JSON</a>, <a href="ImplementationGuide-openmhealth.mfhir-0.0.0.ttl.html">Turtle</a>
+</p>
+-->
+
+
+  <!-- ==============END CONTENT END CONTENT=================== -->

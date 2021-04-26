@@ -1,0 +1,79 @@
+{
+  "resourceType": "Observation",
+  "id": "stepcount-example",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: stepcount-example</p><p><b>contained</b>: </p><p><b>identifier</b>: 12341567</p><p><b>status</b>: unknown</p><p><b>category</b>: <span title=\"Codes: {http://snomed.info/sct 68130003}\">Physical activity (observable entity)</span></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 55423-8}\">Step count</span></p><p><b>subject</b>: <a href=\"#p\">unknown resource contained</a></p><p><b>effective</b>: Apr 16, 2018, 5:00:00 PM --&gt; Apr 23, 2018, 5:00:00 PM</p><p><b>issued</b>: Apr 24, 2018, 10:13:50 AM</p><p><b>device</b>: <span>Jawbone UP API, modality =sensed, sourceCreationDateTime = 2018-04-17T17:13:50Z</span></p><h3>Components</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td>*</td><td><span title=\"Codes: {http://hl7.org/fhir/observation-statistics maximum}\">Maximum</span></td><td>7939 steps/day</td></tr></table></div>"
+  },
+  "contained": [
+    {
+      "resourceType": "Patient",
+      "id": "p",
+      "identifier": [
+        {
+          "system": "https://omh.org/shimmer/patient_ids",
+          "value": "some-user"
+        }
+      ]
+    }
+  ],
+  "identifier": [
+    {
+      "system": "https://omh.org/shimmer/ids",
+      "value": "12341567"
+    }
+  ],
+  "status": "unknown",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "68130003",
+          "display": "Physical activity (observable entity)"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "55423-8",
+        "display": "Number of steps in unspecified time Pedometer"
+      }
+    ],
+    "text": "Step count"
+  },
+  "subject": {
+    "reference": "#p"
+  },
+  "effectivePeriod": {
+    "start": "2018-04-17T00:00:00Z",
+    "end": "2018-04-24T00:00:00Z"
+  },
+  "issued": "2018-04-24T17:13:50Z",
+  "device": {
+    "display": "Jawbone UP API, modality =sensed, sourceCreationDateTime = 2018-04-17T17:13:50Z"
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/observation-statistics",
+            "code": "maximum",
+            "display": "Maximum"
+          }
+        ],
+        "text": "Maximum"
+      },
+      "valueQuantity": {
+        "value": 7939,
+        "unit": "steps/day",
+        "system": "http://unitsofmeasure.org",
+        "code": "{steps}/d"
+      }
+    }
+  ]
+}

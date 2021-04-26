@@ -1,0 +1,71 @@
+{
+  "omh-obs": {
+    "index": 0,
+    "url": "http://www.fhir.org/guides/omhtofhir/StructureDefinition/omh-obs",
+    "name": "OmhObservationProfile",
+    "path": "StructureDefinition-omh-obs.html",
+    "kind": "resource",
+    "type": "Observation",
+    "base": "http://hl7.org/fhir/StructureDefinition/Observation",
+    "basename": "Observation",
+    "basepath": "http://hl7.org/fhir/R4/observation.html",
+    "status": "active",
+    "date": "Thu Jun 06 00:00:00 PDT 2019",
+    "abstract": false,
+    "derivation": "constraint",
+    "description": "Open mHealth Observation Profile used as the target structure when mapping from OMH Schema"
+  },
+  "extension-modality": {
+    "index": 1,
+    "url": "http://www.fhir.org/guides/omhtofhir/StructureDefinition/extension-modality",
+    "name": "OmhModalityExtension",
+    "path": "StructureDefinition-extension-modality.html",
+    "kind": "complex-type",
+    "type": "Extension",
+    "base": "http://hl7.org/fhir/StructureDefinition/Extension",
+    "basename": "Extension",
+    "basepath": "http://hl7.org/fhir/R4/extensibility.html#Extension",
+    "status": "active",
+    "date": "Thu Jun 06 00:00:00 PDT 2019",
+    "abstract": false,
+    "derivation": "constraint",
+    "description": "The modality whereby the measure is obtained.  Choice of sensed|self-reported .",
+    "contexts": [
+      {
+        "type": "Observation.device"
+      }
+    ]
+  },
+  "omh-dr": {
+    "index": 2,
+    "url": "http://www.fhir.org/guides/omhtofhir/StructureDefinition/omh-dr",
+    "name": "OmhDocumentReferenceProfile",
+    "path": "StructureDefinition-omh-dr.html",
+    "kind": "resource",
+    "type": "DocumentReference",
+    "base": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+    "basename": "DocumentReference",
+    "basepath": "http://hl7.org/fhir/R4/documentreference.html",
+    "status": "active",
+    "date": "Wed Jun 05 00:00:00 PDT 2019",
+    "abstract": false,
+    "derivation": "constraint",
+    "description": "The Open mHealth (OMH) Document Reference Profile defines the minimum expectations for the using the DocumentReference resource to record, search and fetch omh schema in its native json format."
+  },
+  "contained-p": {
+    "index": 3,
+    "url": "http://www.fhir.org/guides/omhtofhir/StructureDefinition/contained-p",
+    "name": "OmhContainedPatientProfile",
+    "path": "StructureDefinition-contained-p.html",
+    "kind": "resource",
+    "type": "Patient",
+    "base": "http://hl7.org/fhir/StructureDefinition/Patient",
+    "basename": "Patient",
+    "basepath": "http://hl7.org/fhir/R4/patient.html",
+    "status": "active",
+    "date": "Fri Nov 23 00:00:00 PST 2018",
+    "abstract": false,
+    "derivation": "constraint",
+    "description": "The Open mHealth Contained Patient Profile defines the minimum expectations for the using a contained Patient resource within the Open mHealth  DocumentReference profile to represent an opaque patient identifier."
+  }
+}

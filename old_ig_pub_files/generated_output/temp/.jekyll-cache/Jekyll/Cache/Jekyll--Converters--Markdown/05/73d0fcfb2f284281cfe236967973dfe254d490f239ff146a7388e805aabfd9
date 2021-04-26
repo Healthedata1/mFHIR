@@ -1,0 +1,17 @@
+I"<!-- don't remove the line above - to add or remove a menu item commeent in or out -->
+<ul class="nav navbar-nav">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="use_case.html">Use Case</a></li>
+  <li><a href="sa_workflow.html">Smart App Workflow</a></li>
+  <li><a href="mapping.html">OMH to FHIR Mapping</a></li>
+  <li><a href="profiles.html">Profiles and Logical Models</a>
+<!-- [Mappings](structuremaps.html)-->
+<!-- - [Extensions](extensions.html) --></li>
+  <li><a href="terminology.html">Terminology</a>
+<!-- - [Search Parameters](searchparams.html) --></li>
+  <li><a href="capstatements.html">Capability Statements</a>
+<!-- - [Security](security.html) -->
+<!-- - [Examples](examples.html) --></li>
+  <li><a href="downloads.html">Downloads</a></li>
+</ul>
+:ET

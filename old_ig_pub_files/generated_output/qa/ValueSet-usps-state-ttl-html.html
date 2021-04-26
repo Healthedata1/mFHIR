@@ -1,0 +1,246 @@
+﻿<html>
+<head>
+  <title>ValueSet-usps-state-ttl-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="rdf">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+ a fhir:ValueSet;
+  <a href="http://build.fhir.org/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
+  <a href="http://build.fhir.org/valueset.html#ValueSet.id">fhir:Resource.id</a> [ <a href="http://build.fhir.org/datatypes.html#id">fhir:value</a> &quot;usps-state&quot;];
+  <a href="http://build.fhir.org/valueset.html#ValueSet.text">fhir:DomainResource.text</a> [
+     <a href="http://build.fhir.org/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;USPS Two Letter Alphabetic Codes&lt;/h2&gt;&lt;div&gt;&lt;p&gt;This value set defines two letter USPS alphabetic codes.&lt;/p&gt;\n&lt;/div&gt;&lt;p&gt;&lt;b&gt;Copyright Statement:&lt;/b&gt; On July 1, 1963, the Post Office Department implemented the five-digit ZIP Code, which was placed after the state name in the last line of an address. To provide room for the ZIP Code, the Department issued two-letter abbreviations for all states and territories. Publication 59, Abbreviations for Use with ZIP Code, issued by the Department in October 1963. Currently there is no copyright restriction on this value set.&lt;/p&gt;&lt;p&gt;This value set includes codes from the following code systems:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;code&gt;https://www.usps.com/&lt;/code&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;AK&lt;/td&gt;&lt;td&gt;Alaska&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;AL&lt;/td&gt;&lt;td&gt;Alabama&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;AR&lt;/td&gt;&lt;td&gt;Arkansas&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;AS&lt;/td&gt;&lt;td&gt;American Samoa&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;AZ&lt;/td&gt;&lt;td&gt;Arizona&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;CA&lt;/td&gt;&lt;td&gt;California&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;CO&lt;/td&gt;&lt;td&gt;Colorado&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;CT&lt;/td&gt;&lt;td&gt;Connecticut&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;DC&lt;/td&gt;&lt;td&gt;District of Columbia&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;DE&lt;/td&gt;&lt;td&gt;Delaware&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FL&lt;/td&gt;&lt;td&gt;Florida&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FM&lt;/td&gt;&lt;td&gt;Federated States of Micronesia&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;GA&lt;/td&gt;&lt;td&gt;Georgia&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;GU&lt;/td&gt;&lt;td&gt;Guam&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;HI&lt;/td&gt;&lt;td&gt;Hawaii&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;IA&lt;/td&gt;&lt;td&gt;Iowa&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ID&lt;/td&gt;&lt;td&gt;Idaho&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;IL&lt;/td&gt;&lt;td&gt;Illinois&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;IN&lt;/td&gt;&lt;td&gt;Indiana&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;KS&lt;/td&gt;&lt;td&gt;Kansas&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;KY&lt;/td&gt;&lt;td&gt;Kentucky&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;LA&lt;/td&gt;&lt;td&gt;Louisiana&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MA&lt;/td&gt;&lt;td&gt;Massachusetts&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MD&lt;/td&gt;&lt;td&gt;Maryland&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ME&lt;/td&gt;&lt;td&gt;Maine&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MH&lt;/td&gt;&lt;td&gt;Marshall Islands&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MI&lt;/td&gt;&lt;td&gt;Michigan&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MN&lt;/td&gt;&lt;td&gt;Minnesota&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MO&lt;/td&gt;&lt;td&gt;Missouri&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MP&lt;/td&gt;&lt;td&gt;Northern Mariana Islands&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MS&lt;/td&gt;&lt;td&gt;Mississippi&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MT&lt;/td&gt;&lt;td&gt;Montana&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;NC&lt;/td&gt;&lt;td&gt;North Carolina&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ND&lt;/td&gt;&lt;td&gt;North Dakota&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;NE&lt;/td&gt;&lt;td&gt;Nebraska&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;NH&lt;/td&gt;&lt;td&gt;New Hampshire&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;NJ&lt;/td&gt;&lt;td&gt;New Jersey&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;NM&lt;/td&gt;&lt;td&gt;New Mexico&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;NV&lt;/td&gt;&lt;td&gt;Nevada&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;NY&lt;/td&gt;&lt;td&gt;New York&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OH&lt;/td&gt;&lt;td&gt;Ohio&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OK&lt;/td&gt;&lt;td&gt;Oklahoma&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OR&lt;/td&gt;&lt;td&gt;Oregon&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PA&lt;/td&gt;&lt;td&gt;Pennsylvania&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PR&lt;/td&gt;&lt;td&gt;Puerto Rico&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PW&lt;/td&gt;&lt;td&gt;Palau&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;RI&lt;/td&gt;&lt;td&gt;Rhode Island&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;SC&lt;/td&gt;&lt;td&gt;South Carolina&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;SD&lt;/td&gt;&lt;td&gt;South Dakota&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;TN&lt;/td&gt;&lt;td&gt;Tennessee&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;TX&lt;/td&gt;&lt;td&gt;Texas&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;UM&lt;/td&gt;&lt;td&gt;U.S. Minor Outlying Islands&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;UT&lt;/td&gt;&lt;td&gt;Utah&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;VA&lt;/td&gt;&lt;td&gt;Virginia&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;VI&lt;/td&gt;&lt;td&gt;Virgin Islands of the U.S.&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;VT&lt;/td&gt;&lt;td&gt;Vermont&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;WA&lt;/td&gt;&lt;td&gt;Washington&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;WI&lt;/td&gt;&lt;td&gt;Wisconsin&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;WV&lt;/td&gt;&lt;td&gt;West Virginia&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;WY&lt;/td&gt;&lt;td&gt;Wyoming&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&quot;
+  ];
+  <a href="http://build.fhir.org/valueset.html#ValueSet.url">fhir:ValueSet.url</a> [ <a href="http://build.fhir.org/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/us/core-r4/ValueSet/usps-state&quot;];
+  <a href="http://build.fhir.org/valueset.html#ValueSet.identifier">fhir:ValueSet.identifier</a> [
+     <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0;
+     <a href="http://build.fhir.org/datatypes.html#Identifier#Identifier.system">fhir:Identifier.system</a> [ <a href="http://build.fhir.org/datatypes.html#uri">fhir:value</a> &quot;urn:ietf:rfc:3986&quot; ];
+     <a href="http://build.fhir.org/datatypes.html#Identifier#Identifier.value">fhir:Identifier.value</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;urn:oid:2.16.840.1.113883.4.642.3.40&quot; ]
+  ];
+  <a href="http://build.fhir.org/valueset.html#ValueSet.version">fhir:ValueSet.version</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;4.0.0&quot;];
+  <a href="http://build.fhir.org/valueset.html#ValueSet.name">fhir:ValueSet.name</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;UspsTwoLetterAlphabeticCodes&quot;];
+  <a href="http://build.fhir.org/valueset.html#ValueSet.title">fhir:ValueSet.title</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;USPS Two Letter Alphabetic Codes&quot;];
+  <a href="http://build.fhir.org/valueset.html#ValueSet.status">fhir:ValueSet.status</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;active&quot;];
+  <a href="http://build.fhir.org/valueset.html#ValueSet.date">fhir:ValueSet.date</a> [ <a href="http://build.fhir.org/datatypes.html#dateTime">fhir:value</a> &quot;2018-09-28T14:44:43-07:00&quot;^^xsd:dateTime];
+  <a href="http://build.fhir.org/valueset.html#ValueSet.publisher">fhir:ValueSet.publisher</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;HL7 US Realm Steering Committee&quot;];
+  <a href="http://build.fhir.org/valueset.html#ValueSet.contact">fhir:ValueSet.contact</a> [
+     <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0;
+     <a href="http://build.fhir.org/datatypes.html#ContactDetail#ContactDetail.telecom">fhir:ContactDetail.telecom</a> [
+       <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0;
+       <a href="http://build.fhir.org/datatypes.html#ContactPoint#ContactPoint.system">fhir:ContactPoint.system</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;other&quot; ];
+       <a href="http://build.fhir.org/datatypes.html#ContactPoint#ContactPoint.value">fhir:ContactPoint.value</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;http://hl7.org/fhir&quot; ]     ]
+  ];
+  <a href="http://build.fhir.org/valueset.html#ValueSet.description">fhir:ValueSet.description</a> [ <a href="http://build.fhir.org/datatypes.html#markdown">fhir:value</a> &quot;This value set defines two letter USPS alphabetic codes.&quot;];
+  <a href="http://build.fhir.org/valueset.html#ValueSet.jurisdiction">fhir:ValueSet.jurisdiction</a> [
+     <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0;
+     <a href="http://build.fhir.org/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0;
+       <a href="http://build.fhir.org/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://build.fhir.org/datatypes.html#uri">fhir:value</a> &quot;urn:iso:std:iso:3166&quot; ];
+       <a href="http://build.fhir.org/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;US&quot; ];
+       <a href="http://build.fhir.org/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;United States of America&quot; ]     ]
+  ];
+  <a href="http://build.fhir.org/valueset.html#ValueSet.copyright">fhir:ValueSet.copyright</a> [ <a href="http://build.fhir.org/datatypes.html#markdown">fhir:value</a> &quot;On July 1, 1963, the Post Office Department implemented the five-digit ZIP Code, which was placed after the state name in the last line of an address. To provide room for the ZIP Code, the Department issued two-letter abbreviations for all states and territories. Publication 59, Abbreviations for Use with ZIP Code, issued by the Department in October 1963. Currently there is no copyright restriction on this value set.&quot;];
+  <a href="http://build.fhir.org/valueset.html#ValueSet.compose">fhir:ValueSet.compose</a> [
+     <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include">fhir:ValueSet.compose.include</a> [
+       <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0;
+       <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.system">fhir:ValueSet.compose.include.system</a> [ <a href="http://build.fhir.org/datatypes.html#uri">fhir:value</a> &quot;https://www.usps.com/&quot; ];
+       <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept">fhir:ValueSet.compose.include.concept</a> [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 0;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;AK&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Alaska&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 1;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;AL&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Alabama&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 2;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;AR&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Arkansas&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 3;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;AS&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;American Samoa&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 4;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;AZ&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Arizona&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 5;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;CA&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;California&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 6;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;CO&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Colorado&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 7;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;CT&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Connecticut&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 8;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;DC&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;District of Columbia&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 9;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;DE&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Delaware&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 10;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;FL&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Florida&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 11;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;FM&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Federated States of Micronesia&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 12;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;GA&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Georgia&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 13;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;GU&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Guam&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 14;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;HI&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Hawaii&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 15;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;IA&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Iowa&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 16;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;ID&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Idaho&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 17;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;IL&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Illinois&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 18;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;IN&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Indiana&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 19;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;KS&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Kansas&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 20;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;KY&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Kentucky&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 21;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;LA&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Louisiana&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 22;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;MA&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Massachusetts&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 23;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;MD&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Maryland&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 24;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;ME&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Maine&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 25;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;MH&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Marshall Islands&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 26;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;MI&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Michigan&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 27;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;MN&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Minnesota&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 28;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;MO&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Missouri&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 29;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;MP&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Northern Mariana Islands&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 30;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;MS&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Mississippi&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 31;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;MT&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Montana&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 32;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;NC&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;North Carolina&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 33;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;ND&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;North Dakota&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 34;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;NE&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Nebraska&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 35;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;NH&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;New Hampshire&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 36;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;NJ&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;New Jersey&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 37;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;NM&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;New Mexico&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 38;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;NV&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Nevada&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 39;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;NY&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;New York&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 40;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;OH&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Ohio&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 41;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;OK&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Oklahoma&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 42;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;OR&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Oregon&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 43;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;PA&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Pennsylvania&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 44;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;PR&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Puerto Rico&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 45;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;PW&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Palau&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 46;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;RI&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Rhode Island&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 47;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;SC&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;South Carolina&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 48;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;SD&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;South Dakota&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 49;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;TN&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Tennessee&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 50;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;TX&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Texas&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 51;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;UM&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;U.S. Minor Outlying Islands&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 52;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;UT&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Utah&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 53;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;VA&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Virginia&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 54;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;VI&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Virgin Islands of the U.S.&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 55;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;VT&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Vermont&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 56;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;WA&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Washington&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 57;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;WI&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Wisconsin&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 58;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;WV&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;West Virginia&quot; ]       ], [
+         <a href="http://build.fhir.org/rdf.html#index">fhir:index</a> 59;
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.code">fhir:ValueSet.compose.include.concept.code</a> [ <a href="http://build.fhir.org/datatypes.html#code">fhir:value</a> &quot;WY&quot; ];
+         <a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.concept.display">fhir:ValueSet.compose.include.concept.display</a> [ <a href="http://build.fhir.org/datatypes.html#string">fhir:value</a> &quot;Wyoming&quot; ]       ]     ]
+  ].
+
+# - ontology header ------------------------------------------------------------
+
+ a owl:Ontology;
+  owl:imports fhir:fhir.ttl.
+
+</pre>
+
+</body>
+</html>

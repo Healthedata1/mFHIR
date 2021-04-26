@@ -1,0 +1,148 @@
+I",<!-- TOC  the css styling for this is \pages\assets\css\project.css under 'markdown-toc'-->
+
+<ul id="markdown-toc">
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#omh-to-fhir-roadmap" id="markdown-toc-omh-to-fhir-roadmap">OMH to FHIR Roadmap</a>    <ul>
+      <li><a href="#laboratory" id="markdown-toc-laboratory">Laboratory</a></li>
+      <li><a href="#physical-activity" id="markdown-toc-physical-activity">Physical Activity</a></li>
+      <li><a href="#vitals" id="markdown-toc-vitals">Vitals</a></li>
+      <li><a href="#sleep" id="markdown-toc-sleep">Sleep</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>This Implementation Guide describes how to use <a href="http://www.openmhealth.org/">Open mHealth</a> combined with FHIR to pull health data from popular third-party APIs like Google Fit and FitBit and Apple iHealth.  This data is made accessible to a FHIR SMART client either in the native OmH schema format or as FHIR resources (typically FHIR Observations) using the OmH Shimmer application and “Open mHealth to FHIR” server.</p>
+
+<p>Use Cases include:</p>
+
+<p>A patient preventing or managing one or more diseases
+Accessing to mHealth data for enterprise level-needs, e.g., to support population health and research purposes</p>
+
+<h3 id="omh-to-fhir-roadmap">OMH to FHIR Roadmap</h3>
+
+<p>The following OMH schemas are the targets for mapping to FHIR with those in bold type the highest priority for mapping.</p>
+
+<h4 id="laboratory">Laboratory</h4>
+<ol>
+  <li><strong><a href="http://www.openmhealth.org/documentation/#/schema-docs/schema-library/schemas/omh_blood-glucose">OmhBloodGlucose</a></strong>
+    <ul>
+      <li>Observation Profile 2339-0 Glucose [Mass/volume] in Blood</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="physical-activity">Physical Activity</h4>
+<ol>
+  <li><strong><a href="http://www.openmhealth.org/documentation/#/schema-docs/schema-library/schemas/omh_step-count">OmhStepCount</a> (Completed)</strong>
+    <ul>
+      <li>Observation Profile 55423-8 Number of steps in unspecified time Pedometer</li>
+    </ul>
+  </li>
+  <li><a href="http://www.openmhealth.org/documentation/#/schema-docs/schema-library/schemas/omh_calories-burned">OmhCaloriesBurned</a>
+    <ul>
+      <li>Observation Profile 41981-2 Calories burned</li>
+    </ul>
+  </li>
+  <li><a href="http://www.openmhealth.org/documentation/#/schema-docs/schema-library/schemas/omh_geoposition">OmhGeoposition</a>
+    <ul>
+      <li>Location Profile</li>
+    </ul>
+  </li>
+  <li><strong><a href="http://www.openmhealth.org/documentation/#/schema-docs/schema-library/schemas/omh_minutes-moderate-activity">OmhMinutesModerateActivity</a></strong> (new physical activity guidelines again based on this)
+    <ul>
+      <li>Observation Profile 408581006 Physical activity target moderate exercise (finding)</li>
+    </ul>
+  </li>
+  <li><a href="http://www.openmhealth.org/documentation/#/schema-docs/schema-library/schemas/omh_pace">OmhPace</a>
+    <ul>
+      <li>Observation Profile Open mHealth to FHIR code (Pace)</li>
+    </ul>
+  </li>
+  <li><a href="http://www.openmhealth.org/documentation/#/schema-docs/schema-library/schemas/omh_speed">OmhSpeed</a>
+    <ul>
+      <li>Observation Profile C0678536 NCIT code</li>
+    </ul>
+  </li>
+  <li><a href="http://www.openmhealth.org/documentation/#/schema-docs/schema-library/schemas/omh_orientation">OmhOrientation</a>
+    <ul>
+      <li>Observation Profile Open mHealth to FHIR code (Gyroscope measurement Panel)</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="vitals">Vitals</h4>
+<ol>
+  <li><a href="http://www.openmhealth.org/documentation/#/schema-docs/schema-library/schemas/omh_body-temperature">OmhBodyTemperature</a>
+    <ul>
+      <li>Observation Profile 8310-5 Body temperature</li>
+    </ul>
+  </li>
+  <li><strong><a href="http://www.openmhealth.org/documentation/#/schema-docs/schema-library/schemas/omh_body-weight">OmhBodyWeight</a></strong>
+    <ul>
+      <li>Observation Profile 29463-7 Body weight</li>
+    </ul>
+  </li>
+  <li><strong><a href="http://www.openmhealth.org/documentation/#/schema-docs/schema-library/schemas/omh_heart-rate">OmhHeartRate</a> (Completed)</strong>
+    <ul>
+      <li>Observation Profile 8867-4 Heart rate</li>
+    </ul>
+  </li>
+  <li><a href="http://www.openmhealth.org/documentation/#/schema-docs/schema-library/schemas/omh_respiratory-rate">OmhRespiratoryRate</a>
+    <ul>
+      <li>Observation Profile 9279-1 Respiratory Rate</li>
+    </ul>
+  </li>
+  <li><strong><a href="http://www.openmhealth.org/documentation/#/schema-docs/schema-library/schemas/omh_body-height">OmhBodyHeight</a></strong>
+    <ul>
+      <li>Observation Profile 8302-2 Body height</li>
+    </ul>
+  </li>
+  <li><strong><a href="http://www.openmhealth.org/documentation/#/schema-docs/schema-library/schemas/omh_blood-pressure">OmhBloodPressure</a></strong>
+    <ul>
+      <li>Observation Profile 85354-9 Blood pressure panel with all children optional</li>
+    </ul>
+  </li>
+  <li><strong><a href="http://www.openmhealth.org/documentation/#/schema-docs/schema-library/schemas/omh_diastolic-blood-pressure">OmhDiastolicBloodPressure</a></strong>
+    <ul>
+      <li>Observation Profile 8462-4 Diastolic blood pressure</li>
+    </ul>
+  </li>
+  <li><strong><a href="http://www.openmhealth.org/documentation/#/schema-docs/schema-library/schemas/omh_systolic-blood-pressure">OmhSystolicBloodPressure</a></strong>
+    <ul>
+      <li>Observation Profile 8480-6 Systolic blood pressure</li>
+    </ul>
+  </li>
+  <li><a href="http://www.openmhealth.org/documentation/#/schema-docs/schema-library/schemas/omh_body-fat-percentage">OmhBodyFatPercentage</a>
+    <ul>
+      <li>Observation Profile 41982-0 Percentage of body fat Measured</li>
+    </ul>
+  </li>
+  <li><strong><a href="http://www.openmhealth.org/documentation/#/schema-docs/schema-library/schemas/omh_body-mass-index">OmhBodyMassIndex</a></strong>
+    <ul>
+      <li>Observation Profile 39156-5 Body mass index (BMI) <a href="http://hl7.org/fhir/R4/datatypes.html#ratio" title="FHIR Ratio definition">Ratio</a></li>
+    </ul>
+  </li>
+  <li><a href="http://www.openmhealth.org/documentation/#/schema-docs/schema-library/schemas/omh_oxygen-saturation">OmhOxygenSaturation</a>
+    <ul>
+      <li>Observation Profile 59408-5 Oxygen saturation in Arterial blood by Pulse oximetry</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="sleep">Sleep</h4>
+<ol>
+  <li><a href="http://www.openmhealth.org/documentation/#/schema-docs/schema-library/schemas/omh_sleep-duration">OmhSleepDuration</a>
+    <ul>
+      <li>Observation Profile 248263006 Duration of sleep (observable entity)
+<!-- end TOC --></li>
+    </ul>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<hr />
+
+:ET

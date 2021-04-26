@@ -1,0 +1,772 @@
+﻿<html>
+<head>
+  <title>CapabilityStatement-hl7.fhir.us.core.r4-4.0.0-server-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<div xmlns="http://www.w3.org/1999/xhtml"><h2 id="title">US-Core Hl7 Fhir Us Core R4 4 0 0 Server CapabilityStatement</h2><p>This Section describes the expected capabilities of the US Core Server actor which is responsible for providing responses to the queries submitted by the US Core Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Core Servers are defined. Systems implementing this capability statement should meet the ONC 2015 Common Clinical Data Set (CCDS) access requirement for Patient Selection 170.315(g)(7) and Application Access - Data Category Request 170.315(g)(8) and and the latest proposed ONC [U.S. Core Data for Interoperability (USCDI)].  US Core Clients have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.</p><ul><li>FHIR Version: 4.0.0</li><li>Supported formats: xml, json</li><li>Published: 2019-05-01</li><li>Published by: HL7 International - Structured Documents Work Group</li></ul><h3 id="behavior">FHIR RESTful Capabilities</h3><p>The US Core Server <strong>SHALL</strong>:</p><ol><li>Support the US Core Patient resource profile.</li><li>Support at least one additional resource profile from the list of US Core Profiles.</li><li>Implement the RESTful behavior according to the FHIR specification.</li><li>Return the following response classes:
+<ul><li>(Status 400): invalid parameter</li><li>(Status 401/4xx): unauthorized request</li><li>(Status 403): insufficient scope</li><li>(Status 404): unknown resource</li><li>(Status 410): deleted resource.</li></ul>
+</li><li>Support json source formats for all US Core interactions.</li><li>Declare a CapabilityStatement identifying the list of profiles, operations, search parameter supported.</li></ol><p>The US Core Server <strong>SHOULD</strong>:</p><ol><li>Support xml source formats for all US Core interactions.</li><li>Identify the US Core profiles supported as part of the FHIR <code>meta.profile</code> attribute for each instance.</li><li>Support xml resource formats for all Argonaut questionnaire interactions.</li></ol><p id="security"><strong>Security:</strong></p><p>US Core Servers <strong>SHALL</strong>:</p><ol><li>Implement the <a href="security.html">security requirements</a> documented in the this IG.</li><li>A server has ensured that every API request includes a valid Authorization token, supplied via: `Authorization: Bearer {server-specific-token-here}``</li><li>A server has rejected any unauthorized requests by returning an <code>HTTP 401</code> unauthorized response code.</li></ol><h3 id="resource--details" class="no_toc">RESTful Capabilities by Resource/Profile:</h3><p><strong>Summary of Search Criteria</strong></p><table class="grid"><thead><tr><th>Resource Type</th><th>Supported Profiles</th><th>Supported Searches</th><th>Supported Includes</th><th>Supported Operations</th></tr></thead><tbody><tr><td><a href="#allergyintolerance">AllergyIntolerance</a></td><td><a href="StructureDefinition-us-core-allergyintolerance.html">US Core AllergyIntolerance Profile</a></td><td>
+							
+							patient, reference+token
+						</td><td>
+							
+						</td><td>
+							
+						</td></tr><tr><td><a href="#careplan">CarePlan</a></td><td><a href="StructureDefinition-us-core-careplan.html">US Core CarePlan Profile</a></td><td>
+							, reference+token+token+date, reference+token, reference+token+token, reference+token+date
+						</td><td>
+							
+						</td><td>
+							
+						</td></tr><tr><td><a href="#careteam">CareTeam</a></td><td><a href="StructureDefinition-us-core-careteam.html">US Core CareTeam Profile</a></td><td>
+							, reference+token
+						</td><td>
+							
+						</td><td>
+							
+						</td></tr><tr><td><a href="#condition">Condition</a></td><td><a href="StructureDefinition-us-core-condition.html">US Core Condition Profile</a></td><td>
+							
+							patient, reference+token, reference+token, reference+token, reference+date
+						</td><td>
+							
+						</td><td>
+							
+						</td></tr><tr><td><a href="#device">Device</a></td><td><a href="StructureDefinition-us-core-device.html">US Core Device Profile</a></td><td>
+							
+							patient, reference+token
+						</td><td>
+							
+						</td><td>
+							
+						</td></tr><tr><td><a href="#diagnosticreport">DiagnosticReport</a></td><td><a href="StructureDefinition-us-core-diagnosticreport-note.html">US Core DiagnosticReport Profile for Report and Note exchange</a>, 
+
+						<a href="StructureDefinition-us-core-diagnosticreport-lab.html">US Core DiagnosticReport Profile for Laboratory Results Reporting</a></td><td>
+							, reference+token, reference+token, reference+token+date, reference+token+date, reference+token
+						</td><td>
+							
+						</td><td>
+							
+						</td></tr><tr><td><a href="#documentreference">DocumentReference</a></td><td><a href="StructureDefinition-us-core-documentreference.html">US Core DocumentReference Profile</a></td><td>
+							
+							_id, 
+							patient, reference+token, reference+token+date, reference+token, reference+token+date, reference+token
+						</td><td>
+							
+						</td><td>
+							
+							$docref
+						</td></tr><tr><td><a href="#encounter">Encounter</a></td><td><a href="StructureDefinition-us-core-encounter.html">US Core Encounter Profile</a></td><td>
+							
+							_id, 
+							identifier, 
+							patient, reference+token, reference+token, token+reference, date+reference
+						</td><td>
+							
+						</td><td>
+							
+						</td></tr><tr><td><a href="#goal">Goal</a></td><td><a href="StructureDefinition-us-core-goal.html">US Core Goal Profile</a></td><td>
+							
+							patient, reference+token, reference+date
+						</td><td>
+							
+						</td><td>
+							
+						</td></tr><tr><td><a href="#immunization">Immunization</a></td><td><a href="StructureDefinition-us-core-immunization.html">US Core Immunization Profile</a></td><td>
+							
+							patient, reference+token, reference+date
+						</td><td>
+							
+						</td><td>
+							
+						</td></tr><tr><td><a href="#location">Location</a></td><td><a href="StructureDefinition-us-core-location.html">US Core Location Profile</a></td><td>
+							
+							name, 
+							address, 
+							address-city, 
+							address-state, 
+							address-postalcode
+						</td><td>
+							
+						</td><td>
+							
+						</td></tr><tr><td><a href="#medication">Medication</a></td><td><a href="StructureDefinition-us-core-medication.html">US Core Medication Profile</a></td><td>
+							
+						</td><td>
+							
+						</td><td>
+							
+						</td></tr><tr><td><a href="#medicationrequest">MedicationRequest</a></td><td><a href="StructureDefinition-us-core-medicationrequest.html">US Core MedicationRequest Profile</a></td><td>
+							
+							patient, reference+date, reference+token
+						</td><td>
+							MedicationRequest:medication
+						</td><td>
+							
+						</td></tr><tr><td><a href="#medicationstatement">MedicationStatement</a></td><td><a href="StructureDefinition-us-core-medicationstatement.html">US Core MedicationStatement Profile</a></td><td>
+							
+							patient, reference+token, reference+date
+						</td><td>
+							MedicationStatement:medication
+						</td><td>
+							
+						</td></tr><tr><td><a href="#observation">Observation</a></td><td><a href="StructureDefinition-us-core-smokingstatus.html">US Core Smoking Status Observation Profile</a>, 
+
+						<a href="StructureDefinition-us-core-pediatric-weight.html">US Core Pediatric Weight Observation Profile</a>, 
+
+						<a href="StructureDefinition-us-core-observationresults.html">US Core Result Observation Profile</a>, 
+
+						<a href="StructureDefinition-us-core-pediatric-bmi.html">US Core Pediatric BMI Observation Profile</a></td><td>
+							, reference+token, reference+token+date, reference+token+date, reference+token+token, reference+token
+						</td><td>
+							
+						</td><td>
+							
+						</td></tr><tr><td><a href="#organization">Organization</a></td><td><a href="StructureDefinition-us-core-organization.html">US Core Organization Profile</a></td><td>
+							
+							name, 
+							address
+						</td><td>
+							
+						</td><td>
+							
+						</td></tr><tr><td><a href="#patient">Patient</a></td><td><a href="StructureDefinition-us-core-patient.html">US Core Patient Profile</a></td><td>
+							
+							_id, 
+							identifier, 
+							name, date+string, token+string, string+token, date+string
+						</td><td>
+							
+						</td><td>
+							
+						</td></tr><tr><td><a href="#practitioner">Practitioner</a></td><td><a href="StructureDefinition-us-core-practitioner.html">US Core Practitioner Profile</a></td><td>
+							
+							name, 
+							identifier
+						</td><td>
+							
+						</td><td>
+							
+						</td></tr><tr><td><a href="#practitionerrole">PractitionerRole</a></td><td><a href="StructureDefinition-us-core-practitionerrole.html">US Core PractitionerRole Profile</a></td><td>
+							
+							specialty, 
+							practitioner
+						</td><td>
+							PractitionerRole:endpoint, PractitionerRole:practitioner
+						</td><td>
+							
+						</td></tr><tr><td><a href="#procedure">Procedure</a></td><td><a href="StructureDefinition-us-core-procedure.html">US Core Procedure Profile</a></td><td>
+							
+							patient, reference+date, reference+token, reference+token+date
+						</td><td>
+							
+						</td><td>
+							
+						</td></tr></tbody></table><br/><h4 id="allergyintolerance" class="no_toc">AllergyIntolerance</h4><p>Supported Profiles:
+				
+											<a href="StructureDefinition-us-core-allergyintolerance.html">US Core AllergyIntolerance Profile</a>
+				
+				</p><p>Reference Policy: <code>resolves</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support 
+																							<code>search-type</code>, 
+																							<code>read</code>.</li><li><strong>SHOULD</strong> support 
+																							<code>vread</code>, 
+																							<code>history-instance</code>.</li><li><strong>MAY</strong> support 
+																							<code>create</code>, 
+																							<code>update</code>, 
+																							<code>patch</code>, 
+																							<code>delete</code>, 
+																							<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>
+					A Server <strong>SHALL</strong> be capable of returning a AllergyIntolerance resource using:
+					<br/>
+						<code class="highlighter-rouge">GET [base]/AllergyIntolerance/[id]</code>
+				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-allergyintolerance-clinical-status.html">clinical-status</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/AllergyIntolerance?clinical-status=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a href="SearchParameter-us-core-allergyintolerance-patient.html">patient</a></td><td>
+							reference
+						</td><td><code class="highlighter-rouge">GET [base]/AllergyIntolerance?patient=[patient]</code></td></tr></tbody></table><p>Search Parameter Combination Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter Combination</th><th>Types</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHOULD</strong></td><td>patient+clinical-status
+						</td><td>reference+token
+						</td><td><code class="highlighter-rouge">GET [base]/AllergyIntolerance?patient=[patient]&amp;clinical-status=[system]|[code]</code></td></tr></tbody></table><hr/><h4 id="careplan" class="no_toc">CarePlan</h4><p>Supported Profiles:
+				
+											<a href="StructureDefinition-us-core-careplan.html">US Core CarePlan Profile</a>
+				
+				</p><p>Reference Policy: <code>resolves</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support 
+																							<code>search-type</code>, 
+																							<code>read</code>.</li><li><strong>SHOULD</strong> support 
+																							<code>vread</code>, 
+																							<code>history-instance</code>.</li><li><strong>MAY</strong> support 
+																							<code>create</code>, 
+																							<code>update</code>, 
+																							<code>patch</code>, 
+																							<code>delete</code>, 
+																							<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>
+					A Server <strong>SHALL</strong> be capable of returning a CarePlan resource using:
+					<br/>
+						<code class="highlighter-rouge">GET [base]/CarePlan/[id]</code>
+				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-careplan-category.html">category</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/CarePlan?category=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-careplan-date.html">date</a></td><td>
+							date
+						</td><td><code class="highlighter-rouge">GET [base]/CarePlan?date=[date]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-careplan-patient.html">patient</a></td><td>
+							reference
+						</td><td><code class="highlighter-rouge">GET [base]/CarePlan?patient=[patient]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-careplan-status.html">status</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/CarePlan?status=[status]</code></td></tr></tbody></table><p>Search Parameter Combination Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter Combination</th><th>Types</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHOULD</strong></td><td>patient+category+status+date
+						</td><td>reference+token+token+date
+						</td><td><code class="highlighter-rouge">GET [base]/CarePlan?patient=[patient]&amp;category=[system]|[code]&amp;status=[status]&amp;date=[date]</code></td></tr><tr><td><strong>SHALL</strong></td><td>patient+category
+						</td><td>reference+token
+						</td><td><code class="highlighter-rouge">GET [base]/CarePlan?patient=[patient]&amp;category=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>patient+category+status
+						</td><td>reference+token+token
+						</td><td><code class="highlighter-rouge">GET [base]/CarePlan?patient=[patient]&amp;category=[system]|[code]&amp;status=[status]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>patient+category+date
+						</td><td>reference+token+date
+						</td><td><code class="highlighter-rouge">GET [base]/CarePlan?patient=[patient]&amp;category=[system]|[code]&amp;date=[date]</code></td></tr></tbody></table><hr/><h4 id="careteam" class="no_toc">CareTeam</h4><p>Supported Profiles:
+				
+											<a href="StructureDefinition-us-core-careteam.html">US Core CareTeam Profile</a>
+				
+				</p><p>Reference Policy: <code>resolves</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support 
+																							<code>search-type</code>, 
+																							<code>read</code>.</li><li><strong>SHOULD</strong> support 
+																							<code>vread</code>, 
+																							<code>history-instance</code>.</li><li><strong>MAY</strong> support 
+																							<code>create</code>, 
+																							<code>update</code>, 
+																							<code>patch</code>, 
+																							<code>delete</code>, 
+																							<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>
+					A Server <strong>SHALL</strong> be capable of returning a CareTeam resource using:
+					<br/>
+						<code class="highlighter-rouge">GET [base]/CareTeam/[id]</code>
+				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-careteam-patient.html">patient</a></td><td>
+							reference
+						</td><td><code class="highlighter-rouge">GET [base]/CareTeam?patient=[patient]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-careteam-status.html">status</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/CareTeam?status=[status]</code></td></tr></tbody></table><p>Search Parameter Combination Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter Combination</th><th>Types</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHALL</strong></td><td>patient+status
+						</td><td>reference+token
+						</td><td><code class="highlighter-rouge">GET [base]/CareTeam?patient=[patient]&amp;status=[status]</code></td></tr></tbody></table><hr/><h4 id="condition" class="no_toc">Condition</h4><p>Supported Profiles:
+				
+											<a href="StructureDefinition-us-core-condition.html">US Core Condition Profile</a>
+				
+				</p><p>Reference Policy: <code>resolves</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support 
+																							<code>search-type</code>, 
+																							<code>read</code>.</li><li><strong>SHOULD</strong> support 
+																							<code>vread</code>, 
+																							<code>history-instance</code>.</li><li><strong>MAY</strong> support 
+																							<code>create</code>, 
+																							<code>update</code>, 
+																							<code>patch</code>, 
+																							<code>delete</code>, 
+																							<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>
+					A Server <strong>SHALL</strong> be capable of returning a Condition resource using:
+					<br/>
+						<code class="highlighter-rouge">GET [base]/Condition/[id]</code>
+				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-condition-category.html">category</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/Condition?category=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-condition-clinical-status.html">clinical-status</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/Condition?clinical-status=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a href="SearchParameter-us-core-condition-patient.html">patient</a></td><td>
+							reference
+						</td><td><code class="highlighter-rouge">GET [base]/Condition?patient=[patient]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-condition-onset-date.html">onset-date</a></td><td>
+							date
+						</td><td><code class="highlighter-rouge">GET [base]/Condition?onset-date=[onset-date]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-condition-code.html">code</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/Condition?code=[system]|[code]</code></td></tr></tbody></table><p>Search Parameter Combination Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter Combination</th><th>Types</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHOULD</strong></td><td>patient+clinical-status
+						</td><td>reference+token
+						</td><td><code class="highlighter-rouge">GET [base]/Condition?patient=[patient]&amp;clinical-status=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>patient+code
+						</td><td>reference+token
+						</td><td><code class="highlighter-rouge">GET [base]/Condition?patient=[patient]&amp;code=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>patient+category
+						</td><td>reference+token
+						</td><td><code class="highlighter-rouge">GET [base]/Condition?patient=[patient]&amp;category=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>patient+onset-date
+						</td><td>reference+date
+						</td><td><code class="highlighter-rouge">GET [base]/Condition?patient=[patient]&amp;onset-date=[onset-date]</code></td></tr></tbody></table><hr/><h4 id="device" class="no_toc">Device</h4><p>Supported Profiles:
+				
+											<a href="StructureDefinition-us-core-device.html">US Core Device Profile</a>
+				
+				</p><p>Reference Policy: <code>resolves</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support 
+																							<code>search-type</code>, 
+																							<code>read</code>.</li><li><strong>SHOULD</strong> support 
+																							<code>vread</code>, 
+																							<code>history-instance</code>.</li><li><strong>MAY</strong> support 
+																							<code>create</code>, 
+																							<code>update</code>, 
+																							<code>patch</code>, 
+																							<code>delete</code>, 
+																							<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>
+					A Server <strong>SHALL</strong> be capable of returning a Device resource using:
+					<br/>
+						<code class="highlighter-rouge">GET [base]/Device/[id]</code>
+				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHALL</strong></td><td><a href="SearchParameter-us-core-device-patient.html">patient</a></td><td>
+							reference
+						</td><td><code class="highlighter-rouge">GET [base]/Device?patient=[patient]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-device-type.html">type</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/Device?type=[system]|[code]</code></td></tr></tbody></table><p>Search Parameter Combination Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter Combination</th><th>Types</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHOULD</strong></td><td>patient+type
+						</td><td>reference+token
+						</td><td><code class="highlighter-rouge">GET [base]/Device?patient=[patient]&amp;type=[system]|[code]</code></td></tr></tbody></table><hr/><h4 id="diagnosticreport" class="no_toc">DiagnosticReport</h4><p>Supported Profiles:
+				
+											<a href="StructureDefinition-us-core-diagnosticreport-note.html">US Core DiagnosticReport Profile for Report and Note exchange</a>, 
+				
+											<a href="StructureDefinition-us-core-diagnosticreport-lab.html">US Core DiagnosticReport Profile for Laboratory Results Reporting</a>
+				
+				</p><p>Reference Policy: <code>resolves</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support 
+																							<code>search-type</code>, 
+																							<code>read</code>.</li><li><strong>SHOULD</strong> support 
+																							<code>vread</code>, 
+																							<code>history-instance</code>.</li><li><strong>MAY</strong> support 
+																							<code>create</code>, 
+																							<code>update</code>, 
+																							<code>patch</code>, 
+																							<code>delete</code>, 
+																							<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>
+					A Server <strong>SHALL</strong> be capable of returning a DiagnosticReport resource using:
+					<br/>
+						<code class="highlighter-rouge">GET [base]/DiagnosticReport/[id]</code>
+				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-diagnosticreport-status.html">status</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/DiagnosticReport?status=[status]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-diagnosticreport-patient.html">patient</a></td><td>
+							reference
+						</td><td><code class="highlighter-rouge">GET [base]/DiagnosticReport?patient=[patient]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-diagnosticreport-category.html">category</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/DiagnosticReport?category=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-diagnosticreport-code.html">code</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/DiagnosticReport?code=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-diagnosticreport-date.html">date</a></td><td>
+							date
+						</td><td><code class="highlighter-rouge">GET [base]/DiagnosticReport?date=[date]</code></td></tr></tbody></table><p>Search Parameter Combination Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter Combination</th><th>Types</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHALL</strong></td><td>patient+code
+						</td><td>reference+token
+						</td><td><code class="highlighter-rouge">GET [base]/DiagnosticReport?patient=[patient]&amp;code=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td>patient+category
+						</td><td>reference+token
+						</td><td><code class="highlighter-rouge">GET [base]/DiagnosticReport?patient=[patient]&amp;category=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td>patient+category+date
+						</td><td>reference+token+date
+						</td><td><code class="highlighter-rouge">GET [base]/DiagnosticReport?patient=[patient]&amp;category=[system]|[code]&amp;date=[date]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>patient+code+date
+						</td><td>reference+token+date
+						</td><td><code class="highlighter-rouge">GET [base]/DiagnosticReport?patient=[patient]&amp;code=[system]|[code]&amp;date=[date]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>patient+status
+						</td><td>reference+token
+						</td><td><code class="highlighter-rouge">GET [base]/DiagnosticReport?patient=[patient]&amp;status=[status]</code></td></tr></tbody></table><hr/><h4 id="documentreference" class="no_toc">DocumentReference</h4><p>Supported Profiles:
+				
+											<a href="StructureDefinition-us-core-documentreference.html">US Core DocumentReference Profile</a>
+				
+				</p><p>Reference Policy: <code>resolves</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support 
+																							<code>search-type</code>, 
+																							<code>read</code>.</li><li><strong>SHOULD</strong> support 
+																							<code>vread</code>, 
+																							<code>update</code>, 
+																							<code>history-instance</code>.</li><li><strong>MAY</strong> support 
+																							<code>create</code>, 
+																							<code>patch</code>, 
+																							<code>delete</code>, 
+																							<code>history-type</code>.</li></ul><p>Operation  Summary:</p><ul><li><strong>SHALL</strong> support the 
+																								<a href="OperationDefinition-docref.html">$docref</a> operation
+																								<p><p>A server <strong>SHALL</strong> be capable of responding to a $docref operation and  capable of returning at least a reference to a generated CCD document, if available. <strong>MAY</strong> provide references to other generated and existing document types as well. If a context date range is supplied the server ** SHOULD**  provide references to any document that falls within the date range If no date range is supplied, then the server <strong>SHALL</strong> provide references to last or current encounter.  <strong>SHOULD</strong> document what resources, if any, are returned as included resources</p><p><code>GET [base]/DocumentReference/$docref?patient=[id]</code></p></p></li></ul><p>Fetch and Search Criteria:</p><ul><li>
+					A Server <strong>SHALL</strong> be capable of returning a DocumentReference resource using:
+					<br/>
+						<code class="highlighter-rouge">GET [base]/DocumentReference/[id]</code>
+				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHALL</strong></td><td><a href="SearchParameter-us-core-documentreference-id.html">_id</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/DocumentReference?_id=[id]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-documentreference-status.html">status</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/DocumentReference?status=[status]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a href="SearchParameter-us-core-documentreference-patient.html">patient</a></td><td>
+							reference
+						</td><td><code class="highlighter-rouge">GET [base]/DocumentReference?patient=[patient]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-documentreference-category.html">category</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/DocumentReference?category=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-documentreference-type.html">type</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/DocumentReference?type=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-documentreference-date.html">date</a></td><td>
+							date
+						</td><td><code class="highlighter-rouge">GET [base]/DocumentReference?date=[date]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-documentreference-period.html">period</a></td><td>
+							date
+						</td><td><code class="highlighter-rouge">GET [base]/DocumentReference?period=[period]</code></td></tr></tbody></table><p>Search Parameter Combination Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter Combination</th><th>Types</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHALL</strong></td><td>patient+type
+						</td><td>reference+token
+						</td><td><code class="highlighter-rouge">GET [base]/DocumentReference?patient=[patient]&amp;type=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>patient+type+period
+						</td><td>reference+token+date
+						</td><td><code class="highlighter-rouge">GET [base]/DocumentReference?patient=[patient]&amp;type=[system]|[code]&amp;period=[period]</code></td></tr><tr><td><strong>SHALL</strong></td><td>patient+category
+						</td><td>reference+token
+						</td><td><code class="highlighter-rouge">GET [base]/DocumentReference?patient=[patient]&amp;category=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td>patient+category+date
+						</td><td>reference+token+date
+						</td><td><code class="highlighter-rouge">GET [base]/DocumentReference?patient=[patient]&amp;category=[system]|[code]&amp;date=[date]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>patient+status
+						</td><td>reference+token
+						</td><td><code class="highlighter-rouge">GET [base]/DocumentReference?patient=[patient]&amp;status=[status]</code></td></tr></tbody></table><hr/><h4 id="encounter" class="no_toc">Encounter</h4><p>Supported Profiles:
+				
+											<a href="StructureDefinition-us-core-encounter.html">US Core Encounter Profile</a>
+				
+				</p><p>Reference Policy: <code>resolves</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support 
+																							<code>search-type</code>, 
+																							<code>read</code>.</li><li><strong>SHOULD</strong> support 
+																							<code>vread</code>, 
+																							<code>history-instance</code>.</li><li><strong>MAY</strong> support 
+																							<code>create</code>, 
+																							<code>update</code>, 
+																							<code>patch</code>, 
+																							<code>delete</code>, 
+																							<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>
+					A Server <strong>SHALL</strong> be capable of returning a Encounter resource using:
+					<br/>
+						<code class="highlighter-rouge">GET [base]/Encounter/[id]</code>
+				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHALL</strong></td><td><a href="SearchParameter-us-core-encounter-id.html">_id</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/Encounter?_id=[id]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-encounter-class.html">class</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/Encounter?class=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-encounter-date.html">date</a></td><td>
+							date
+						</td><td><code class="highlighter-rouge">GET [base]/Encounter?date=[date]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href="SearchParameter-us-core-encounter-identifier.html">identifier</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/Encounter?identifier=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a href="SearchParameter-us-core-encounter-patient.html">patient</a></td><td>
+							reference
+						</td><td><code class="highlighter-rouge">GET [base]/Encounter?patient=[patient]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-encounter-status.html">status</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/Encounter?status=[status]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-encounter-type.html">type</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/Encounter?type=[system]|[code]</code></td></tr></tbody></table><p>Search Parameter Combination Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter Combination</th><th>Types</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHOULD</strong></td><td>patient+type
+						</td><td>reference+token
+						</td><td><code class="highlighter-rouge">GET [base]/Encounter?patient=[patient]&amp;type=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>patient+status
+						</td><td>reference+token
+						</td><td><code class="highlighter-rouge">GET [base]/Encounter?patient=[patient]&amp;status=[status]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>class+patient
+						</td><td>token+reference
+						</td><td><code class="highlighter-rouge">GET [base]/Encounter?class=[system]|[code]&amp;patient=[patient]</code></td></tr><tr><td><strong>SHALL</strong></td><td>date+patient
+						</td><td>date+reference
+						</td><td><code class="highlighter-rouge">GET [base]/Encounter?date=[date]&amp;patient=[patient]</code></td></tr></tbody></table><hr/><h4 id="goal" class="no_toc">Goal</h4><p>Supported Profiles:
+				
+											<a href="StructureDefinition-us-core-goal.html">US Core Goal Profile</a>
+				
+				</p><p>Reference Policy: <code>resolves</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support 
+																							<code>search-type</code>, 
+																							<code>read</code>.</li><li><strong>SHOULD</strong> support 
+																							<code>vread</code>, 
+																							<code>history-instance</code>.</li><li><strong>MAY</strong> support 
+																							<code>create</code>, 
+																							<code>update</code>, 
+																							<code>patch</code>, 
+																							<code>delete</code>, 
+																							<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>
+					A Server <strong>SHALL</strong> be capable of returning a Goal resource using:
+					<br/>
+						<code class="highlighter-rouge">GET [base]/Goal/[id]</code>
+				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-goal-lifecycle-status.html">lifecycle-status</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/Goal?lifecycle-status=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a href="SearchParameter-us-core-goal-patient.html">patient</a></td><td>
+							reference
+						</td><td><code class="highlighter-rouge">GET [base]/Goal?patient=[patient]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-goal-start-date.html">start-date</a></td><td>
+							date
+						</td><td><code class="highlighter-rouge">GET [base]/Goal?start-date=[start-date]</code></td></tr></tbody></table><p>Search Parameter Combination Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter Combination</th><th>Types</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHOULD</strong></td><td>patient+lifecycle-status
+						</td><td>reference+token
+						</td><td><code class="highlighter-rouge">GET [base]/Goal?patient=[patient]&amp;lifecycle-status=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>patient+start-date
+						</td><td>reference+date
+						</td><td><code class="highlighter-rouge">GET [base]/Goal?patient=[patient]&amp;start-date=[start-date]</code></td></tr></tbody></table><hr/><h4 id="immunization" class="no_toc">Immunization</h4><p>Supported Profiles:
+				
+											<a href="StructureDefinition-us-core-immunization.html">US Core Immunization Profile</a>
+				
+				</p><p>Reference Policy: <code>resolves</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support 
+																							<code>search-type</code>, 
+																							<code>read</code>.</li><li><strong>SHOULD</strong> support 
+																							<code>vread</code>, 
+																							<code>history-instance</code>.</li><li><strong>MAY</strong> support 
+																							<code>create</code>, 
+																							<code>update</code>, 
+																							<code>patch</code>, 
+																							<code>delete</code>, 
+																							<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>
+					A Server <strong>SHALL</strong> be capable of returning a Immunization resource using:
+					<br/>
+						<code class="highlighter-rouge">GET [base]/Immunization/[id]</code>
+				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHALL</strong></td><td><a href="SearchParameter-us-core-immunization-patient.html">patient</a></td><td>
+							reference
+						</td><td><code class="highlighter-rouge">GET [base]/Immunization?patient=[patient]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-immunization-status.html">status</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/Immunization?status=[status]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-immunization-date.html">date</a></td><td>
+							date
+						</td><td><code class="highlighter-rouge">GET [base]/Immunization?date=[date]</code></td></tr></tbody></table><p>Search Parameter Combination Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter Combination</th><th>Types</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHOULD</strong></td><td>patient+status
+						</td><td>reference+token
+						</td><td><code class="highlighter-rouge">GET [base]/Immunization?patient=[patient]&amp;status=[status]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>patient+date
+						</td><td>reference+date
+						</td><td><code class="highlighter-rouge">GET [base]/Immunization?patient=[patient]&amp;date=[date]</code></td></tr></tbody></table><hr/><h4 id="location" class="no_toc">Location</h4><p>Supported Profiles:
+				
+											<a href="StructureDefinition-us-core-location.html">US Core Location Profile</a>
+				
+				</p><p>Reference Policy: <code>resolves</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support 
+																							<code>search-type</code>, 
+																							<code>read</code>.</li><li><strong>SHOULD</strong> support 
+																							<code>vread</code>, 
+																							<code>history-instance</code>.</li><li><strong>MAY</strong> support 
+																							<code>create</code>, 
+																							<code>update</code>, 
+																							<code>patch</code>, 
+																							<code>delete</code>, 
+																							<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>
+					A Server <strong>SHALL</strong> be capable of returning a Location resource using:
+					<br/>
+						<code class="highlighter-rouge">GET [base]/Location/[id]</code>
+				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHALL</strong></td><td><a href="SearchParameter-us-core-location-name.html">name</a></td><td>
+							string
+						</td><td><code class="highlighter-rouge">GET [base]/Location?name=[name]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a href="SearchParameter-us-core-location-address.html">address</a></td><td>
+							string
+						</td><td><code class="highlighter-rouge">GET [base]/Location?address=[address]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href="SearchParameter-us-core-location-address-city.html">address-city</a></td><td>
+							string
+						</td><td><code class="highlighter-rouge">GET [base]/Location?address-city=[address-city]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href="SearchParameter-us-core-location-address-state.html">address-state</a></td><td>
+							string
+						</td><td><code class="highlighter-rouge">GET [base]/Location?address-state=[address-state]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href="SearchParameter-us-core-location-address-postalcode.html">address-postalcode</a></td><td>
+							string
+						</td><td><code class="highlighter-rouge">GET [base]/Location?address-postalcode=[address-postalcode]</code></td></tr></tbody></table><hr/><h4 id="medication" class="no_toc">Medication</h4><p>Supported Profiles:
+				
+											<a href="StructureDefinition-us-core-medication.html">US Core Medication Profile</a>
+				
+				</p><p>Resource Specific Documentation:</p><blockquote><p>The MedicationStatement and MedicationRequest resources can represent a medication, using an external reference to a Medication resource. If an external Medication Resource is used in a MedicationStatement or a MedicationRequest, then the READ and SEARCH Criteria  <strong>SHALL</strong>  be supported.</p></blockquote><p>Reference Policy: <code>resolves</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support 
+																							<code>search-type</code>, 
+																							<code>read</code>.</li><li><strong>SHOULD</strong> support 
+																							<code>vread</code>, 
+																							<code>history-instance</code>.</li><li><strong>MAY</strong> support 
+																							<code>create</code>, 
+																							<code>update</code>, 
+																							<code>patch</code>, 
+																							<code>delete</code>, 
+																							<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>
+					A Server <strong>SHALL</strong> be capable of returning a Medication resource using:
+					<br/>
+						<code class="highlighter-rouge">GET [base]/Medication/[id]</code>
+				</li><br/></ul><hr/><h4 id="medicationrequest" class="no_toc">MedicationRequest</h4><p>Supported Profiles:
+				
+											<a href="StructureDefinition-us-core-medicationrequest.html">US Core MedicationRequest Profile</a>
+				
+				</p><p>Resource Specific Documentation:</p><blockquote><p>The MedicationStatement resources can represent a medication using either a code or refer to the Medication resource. When referencing Medication, the resource may be <a href="http://hl7.org/fhir/R4/references.html#contained">contained</a> or an external resource. The server application <strong>MAY</strong> choose any one way or more than one method, but if an external reference to Medication is used, the server <strong>SHALL</strong> support the _include` parameter for searching this element. The client application must support all methods.</p><p>For example, A server <strong>SHALL</strong> be capable of returning all medications for a patient using one of or both:</p><p><code>GET /MedicationStatement?patient=[id]</code></p><p><code>GET /MedicationStatement?patient=[id]&amp;_include=MedicationStatement:medication</code></p></blockquote><p>Reference Policy: <code>resolves</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support 
+																							<code>search-type</code>, 
+																							<code>read</code>.</li><li><strong>SHOULD</strong> support 
+																							<code>vread</code>, 
+																							<code>history-instance</code>.</li><li><strong>MAY</strong> support 
+																							<code>create</code>, 
+																							<code>update</code>, 
+																							<code>patch</code>, 
+																							<code>delete</code>, 
+																							<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>
+					A Server <strong>SHALL</strong> be capable of returning a MedicationRequest resource using:
+					<br/>
+						<code class="highlighter-rouge">GET [base]/MedicationRequest/[id]</code>
+				</li><br/><li>
+					A Server <strong>SHOULD</strong> be capable of supporting the following _includes:
+					<br/>
+					
+						MedicationRequest:medication - <code class="highlighter-rouge">GET [base]/MedicationRequest?[parameter=value]&amp;_include=MedicationRequest:medication</code>
+					
+				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-medicationrequest-status.html">status</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/MedicationRequest?status=[status]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a href="SearchParameter-us-core-medicationrequest-patient.html">patient</a></td><td>
+							reference
+						</td><td><code class="highlighter-rouge">GET [base]/MedicationRequest?patient=[patient]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-medicationrequest-authoredon.html">authoredon</a></td><td>
+							date
+						</td><td><code class="highlighter-rouge">GET [base]/MedicationRequest?authoredon=[authoredon]</code></td></tr></tbody></table><p>Search Parameter Combination Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter Combination</th><th>Types</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHOULD</strong></td><td>patient+authoredon
+						</td><td>reference+date
+						</td><td><code class="highlighter-rouge">GET [base]/MedicationRequest?patient=[patient]&amp;authoredon=[authoredon]</code></td></tr><tr><td><strong>SHALL</strong></td><td>patient+status
+						</td><td>reference+token
+						</td><td><code class="highlighter-rouge">GET [base]/MedicationRequest?patient=[patient]&amp;status=[status]</code></td></tr></tbody></table><hr/><h4 id="medicationstatement" class="no_toc">MedicationStatement</h4><p>Supported Profiles:
+				
+											<a href="StructureDefinition-us-core-medicationstatement.html">US Core MedicationStatement Profile</a>
+				
+				</p><p>Resource Specific Documentation:</p><blockquote><p>The MedicationStatement resources can represent a medication using either a code or refer to the Medication resource. When referencing Medication, the resource may be <a href="http://hl7.org/fhir/R4/references.html#contained">contained</a> or an external resource. The server application <strong>MAY</strong> choose any one way or more than one method, but if an external reference to Medication is used, the server <strong>SHALL</strong> support the _include` parameter for searching this element. The client application must support all methods.</p><p>For example, A server <strong>SHALL</strong> be capable of returning all medications for a patient using one of or both:</p><p><code>GET /MedicationStatement?patient=[id]</code></p><p><code>GET /MedicationStatement?patient=[id]&amp;_include=MedicationStatement:medication</code></p></blockquote><p>Reference Policy: <code>resolves</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support 
+																							<code>search-type</code>, 
+																							<code>read</code>.</li><li><strong>SHOULD</strong> support 
+																							<code>vread</code>, 
+																							<code>history-instance</code>.</li><li><strong>MAY</strong> support 
+																							<code>create</code>, 
+																							<code>update</code>, 
+																							<code>patch</code>, 
+																							<code>delete</code>, 
+																							<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>
+					A Server <strong>SHALL</strong> be capable of returning a MedicationStatement resource using:
+					<br/>
+						<code class="highlighter-rouge">GET [base]/MedicationStatement/[id]</code>
+				</li><br/><li>
+					A Server <strong>SHOULD</strong> be capable of supporting the following _includes:
+					<br/>
+					
+						MedicationStatement:medication - <code class="highlighter-rouge">GET [base]/MedicationStatement?[parameter=value]&amp;_include=MedicationStatement:medication</code>
+					
+				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-medicationstatement-status.html">status</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/MedicationStatement?status=[status]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a href="SearchParameter-us-core-medicationstatement-patient.html">patient</a></td><td>
+							reference
+						</td><td><code class="highlighter-rouge">GET [base]/MedicationStatement?patient=[patient]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-medicationstatement-effective.html">effective</a></td><td>
+							date
+						</td><td><code class="highlighter-rouge">GET [base]/MedicationStatement?effective=[effective]</code></td></tr></tbody></table><p>Search Parameter Combination Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter Combination</th><th>Types</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHOULD</strong></td><td>patient+status
+						</td><td>reference+token
+						</td><td><code class="highlighter-rouge">GET [base]/MedicationStatement?patient=[patient]&amp;status=[status]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>patient+effective
+						</td><td>reference+date
+						</td><td><code class="highlighter-rouge">GET [base]/MedicationStatement?patient=[patient]&amp;effective=[effective]</code></td></tr></tbody></table><hr/><h4 id="observation" class="no_toc">Observation</h4><p>Supported Profiles:
+				
+											<a href="StructureDefinition-us-core-smokingstatus.html">US Core Smoking Status Observation Profile</a>, 
+				
+											<a href="StructureDefinition-us-core-pediatric-weight.html">US Core Pediatric Weight Observation Profile</a>, 
+				
+											<a href="StructureDefinition-us-core-observationresults.html">US Core Result Observation Profile</a>, 
+				
+											<a href="StructureDefinition-us-core-pediatric-bmi.html">US Core Pediatric BMI Observation Profile</a>
+				
+				</p><p>Reference Policy: <code>resolves</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support 
+																							<code>search-type</code>, 
+																							<code>read</code>.</li><li><strong>SHOULD</strong> support 
+																							<code>vread</code>, 
+																							<code>history-instance</code>.</li><li><strong>MAY</strong> support 
+																							<code>create</code>, 
+																							<code>update</code>, 
+																							<code>patch</code>, 
+																							<code>delete</code>, 
+																							<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>
+					A Server <strong>SHALL</strong> be capable of returning a Observation resource using:
+					<br/>
+						<code class="highlighter-rouge">GET [base]/Observation/[id]</code>
+				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-observation-status.html">status</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/Observation?status=[status]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-observation-category.html">category</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/Observation?category=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-observation-code.html">code</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/Observation?code=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-observation-date.html">date</a></td><td>
+							date
+						</td><td><code class="highlighter-rouge">GET [base]/Observation?date=[date]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-observation-patient.html">patient</a></td><td>
+							reference
+						</td><td><code class="highlighter-rouge">GET [base]/Observation?patient=[patient]</code></td></tr></tbody></table><p>Search Parameter Combination Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter Combination</th><th>Types</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHALL</strong></td><td>patient+code
+						</td><td>reference+token
+						</td><td><code class="highlighter-rouge">GET [base]/Observation?patient=[patient]&amp;code=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td>patient+category+date
+						</td><td>reference+token+date
+						</td><td><code class="highlighter-rouge">GET [base]/Observation?patient=[patient]&amp;category=[system]|[code]&amp;date=[date]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>patient+code+date
+						</td><td>reference+token+date
+						</td><td><code class="highlighter-rouge">GET [base]/Observation?patient=[patient]&amp;code=[system]|[code]&amp;date=[date]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>patient+category+status
+						</td><td>reference+token+token
+						</td><td><code class="highlighter-rouge">GET [base]/Observation?patient=[patient]&amp;category=[system]|[code]&amp;status=[status]</code></td></tr><tr><td><strong>SHALL</strong></td><td>patient+category
+						</td><td>reference+token
+						</td><td><code class="highlighter-rouge">GET [base]/Observation?patient=[patient]&amp;category=[system]|[code]</code></td></tr></tbody></table><hr/><h4 id="organization" class="no_toc">Organization</h4><p>Supported Profiles:
+				
+											<a href="StructureDefinition-us-core-organization.html">US Core Organization Profile</a>
+				
+				</p><p>Reference Policy: <code>resolves</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support 
+																							<code>search-type</code>, 
+																							<code>read</code>.</li><li><strong>SHOULD</strong> support 
+																							<code>vread</code>, 
+																							<code>history-instance</code>.</li><li><strong>MAY</strong> support 
+																							<code>create</code>, 
+																							<code>update</code>, 
+																							<code>patch</code>, 
+																							<code>delete</code>, 
+																							<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>
+					A Server <strong>SHALL</strong> be capable of returning a Organization resource using:
+					<br/>
+						<code class="highlighter-rouge">GET [base]/Organization/[id]</code>
+				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHALL</strong></td><td><a href="SearchParameter-us-core-organization-name.html">name</a></td><td>
+							string
+						</td><td><code class="highlighter-rouge">GET [base]/Organization?name=[name]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a href="SearchParameter-us-core-organization-address.html">address</a></td><td>
+							string
+						</td><td><code class="highlighter-rouge">GET [base]/Organization?address=[address]</code></td></tr></tbody></table><hr/><h4 id="patient" class="no_toc">Patient</h4><p>Supported Profiles:
+				
+											<a href="StructureDefinition-us-core-patient.html">US Core Patient Profile</a>
+				
+				</p><p>Reference Policy: <code>resolves</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support 
+																							<code>search-type</code>, 
+																							<code>read</code>.</li><li><strong>SHOULD</strong> support 
+																							<code>vread</code>, 
+																							<code>history-instance</code>.</li><li><strong>MAY</strong> support 
+																							<code>create</code>, 
+																							<code>update</code>, 
+																							<code>patch</code>, 
+																							<code>delete</code>, 
+																							<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>
+					A Server <strong>SHALL</strong> be capable of returning a Patient resource using:
+					<br/>
+						<code class="highlighter-rouge">GET [base]/Patient/[id]</code>
+				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHALL</strong></td><td><a href="SearchParameter-us-core-patient-id.html">_id</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/Patient?_id=[id]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-patient-birthdate.html">birthdate</a></td><td>
+							date
+						</td><td><code class="highlighter-rouge">GET [base]/Patient?birthdate=[birthdate]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-patient-family.html">family</a></td><td>
+							string
+						</td><td><code class="highlighter-rouge">GET [base]/Patient?family=[family]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-patient-gender.html">gender</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/Patient?gender=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-patient-given.html">given</a></td><td>
+							string
+						</td><td><code class="highlighter-rouge">GET [base]/Patient?given=[given]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a href="SearchParameter-us-core-patient-identifier.html">identifier</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/Patient?identifier=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a href="SearchParameter-us-core-patient-name.html">name</a></td><td>
+							string
+						</td><td><code class="highlighter-rouge">GET [base]/Patient?name=[name]</code></td></tr></tbody></table><p>Search Parameter Combination Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter Combination</th><th>Types</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHALL</strong></td><td>birthdate+name
+						</td><td>date+string
+						</td><td><code class="highlighter-rouge">GET [base]/Patient?birthdate=[birthdate]&amp;name=[name]</code></td></tr><tr><td><strong>SHALL</strong></td><td>gender+name
+						</td><td>token+string
+						</td><td><code class="highlighter-rouge">GET [base]/Patient?gender=[system]|[code]&amp;name=[name]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>family+gender
+						</td><td>string+token
+						</td><td><code class="highlighter-rouge">GET [base]/Patient?family=[family]&amp;gender=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>birthdate+family
+						</td><td>date+string
+						</td><td><code class="highlighter-rouge">GET [base]/Patient?birthdate=[birthdate]&amp;family=[family]</code></td></tr></tbody></table><hr/><h4 id="practitioner" class="no_toc">Practitioner</h4><p>Supported Profiles:
+				
+											<a href="StructureDefinition-us-core-practitioner.html">US Core Practitioner Profile</a>
+				
+				</p><p>Reference Policy: <code>resolves</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support 
+																							<code>search-type</code>, 
+																							<code>read</code>.</li><li><strong>SHOULD</strong> support 
+																							<code>vread</code>, 
+																							<code>history-instance</code>.</li><li><strong>MAY</strong> support 
+																							<code>create</code>, 
+																							<code>update</code>, 
+																							<code>patch</code>, 
+																							<code>delete</code>, 
+																							<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>
+					A Server <strong>SHALL</strong> be capable of returning a Practitioner resource using:
+					<br/>
+						<code class="highlighter-rouge">GET [base]/Practitioner/[id]</code>
+				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHALL</strong></td><td><a href="SearchParameter-us-core-practitioner-name.html">name</a></td><td>
+							string
+						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?name=[name]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a href="SearchParameter-us-core-practitioner-identifier.html">identifier</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?identifier=[system]|[code]</code></td></tr></tbody></table><hr/><h4 id="practitionerrole" class="no_toc">PractitionerRole</h4><p>Supported Profiles:
+				
+											<a href="StructureDefinition-us-core-practitionerrole.html">US Core PractitionerRole Profile</a>
+				
+				</p><p>Reference Policy: <code>resolves</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support 
+																							<code>search-type</code>, 
+																							<code>read</code>.</li><li><strong>SHOULD</strong> support 
+																							<code>vread</code>, 
+																							<code>history-instance</code>.</li><li><strong>MAY</strong> support 
+																							<code>create</code>, 
+																							<code>update</code>, 
+																							<code>patch</code>, 
+																							<code>delete</code>, 
+																							<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>
+					A Server <strong>SHALL</strong> be capable of returning a PractitionerRole resource using:
+					<br/>
+						<code class="highlighter-rouge">GET [base]/PractitionerRole/[id]</code>
+				</li><br/><li>
+					A Server <strong>SHOULD</strong> be capable of supporting the following _includes:
+					<br/>
+					
+						PractitionerRole:endpoint - <code class="highlighter-rouge">GET [base]/PractitionerRole?[parameter=value]&amp;_include=PractitionerRole:endpoint</code>
+					
+						PractitionerRole:practitioner - <code class="highlighter-rouge">GET [base]/PractitionerRole?[parameter=value]&amp;_include=PractitionerRole:practitioner</code>
+					
+				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHALL</strong></td><td><a href="SearchParameter-us-core-practitionerrole-specialty.html">specialty</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?specialty=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a href="SearchParameter-us-core-practitionerrole-practitioner.html">practitioner</a></td><td>
+							reference
+						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?practitioner=[practitioner]</code></td></tr></tbody></table><hr/><h4 id="procedure" class="no_toc">Procedure</h4><p>Supported Profiles:
+				
+											<a href="StructureDefinition-us-core-procedure.html">US Core Procedure Profile</a>
+				
+				</p><p>Reference Policy: <code>resolves</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support 
+																							<code>search-type</code>, 
+																							<code>read</code>.</li><li><strong>SHOULD</strong> support 
+																							<code>vread</code>, 
+																							<code>history-instance</code>.</li><li><strong>MAY</strong> support 
+																							<code>create</code>, 
+																							<code>update</code>, 
+																							<code>patch</code>, 
+																							<code>delete</code>, 
+																							<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>
+					A Server <strong>SHALL</strong> be capable of returning a Procedure resource using:
+					<br/>
+						<code class="highlighter-rouge">GET [base]/Procedure/[id]</code>
+				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-procedure-status.html">status</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/Procedure?status=[status]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a href="SearchParameter-us-core-procedure-patient.html">patient</a></td><td>
+							reference
+						</td><td><code class="highlighter-rouge">GET [base]/Procedure?patient=[patient]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-procedure-date.html">date</a></td><td>
+							date
+						</td><td><code class="highlighter-rouge">GET [base]/Procedure?date=[date]</code></td></tr><tr><td><strong>MAY</strong></td><td><a href="SearchParameter-us-core-procedure-code.html">code</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/Procedure?code=[system]|[code]</code></td></tr></tbody></table><p>Search Parameter Combination Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter Combination</th><th>Types</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHALL</strong></td><td>patient+date
+						</td><td>reference+date
+						</td><td><code class="highlighter-rouge">GET [base]/Procedure?patient=[patient]&amp;date=[date]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>patient+status
+						</td><td>reference+token
+						</td><td><code class="highlighter-rouge">GET [base]/Procedure?patient=[patient]&amp;status=[status]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>patient+code+date
+						</td><td>reference+token+date
+						</td><td><code class="highlighter-rouge">GET [base]/Procedure?patient=[patient]&amp;code=[system]|[code]&amp;date=[date]</code></td></tr></tbody></table><hr/><br/></div></body>
+</html>

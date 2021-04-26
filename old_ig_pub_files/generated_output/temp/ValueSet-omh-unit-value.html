@@ -1,0 +1,76 @@
+---
+# jekyll header
+level: 2
+template: base
+active: format
+layout: fhir-artifact
+type: ValueSet
+id: omh-unit-value
+topofpage: True
+---
+
+<!-- ig template for many conformance resource html pages  ('base' in definitions file)  can not be used for conformance resources that have more that a single base template. e.g.,  sd since there are mapping and definitions templates for it as well  they need to be split out into 3 separate templates -->
+
+<!-- ============ CONTENT CONTENT=============== -->
+
+{% case 'ValueSet' %} <!-- content depends on type -->
+{% when 'ValueSet' %}
+<!-- ============VAlUESET CONTENT CONTENT=============== -->
+
+  {% include ValueSet-omh-unit-value-summary.xhtml %}
+  {% include ValueSet-omh-unit-value-xref.xhtml %}
+  {% include ValueSet-omh-unit-value-cld.xhtml %}
+
+  <h3>Expansion</h3>
+
+  {% include ValueSet-omh-unit-value-expansion.xhtml %}
+<!-- ============VAlUESET CONTENT CONTENT=============== -->
+
+{% when 'CodeSystem' %}
+<!-- ============CODESYSTEM CONTENT CONTENT=============== -->
+
+  {% include ValueSet-omh-unit-value-summary.xhtml %}
+
+  {% include ValueSet-omh-unit-value-html.xhtml %}
+
+  <!-- ============CODESYSTEM CONTENT CONTENT=============== -->
+
+{% when 'OperationDefinition' %}
+<!-- ============OperationDefinition CONTENT CONTENT=============== -->
+
+  {% include ValueSet-omh-unit-value-html.xhtml %}
+
+  {% capture my-include %}{% include omh-unit-value-example.md %}{% endcapture %}{{ my-include | markdownify }}  <!--add inline examples here -->
+<!-- ============OperationDefinition CONTENT CONTENT=============== -->
+
+
+{% when 'CapabilityStatement' %}
+<!-- ============CapabilityStatement CONTENT CONTENT=============== -->
+
+<p>
+Downloads:  CapabilityStatement: (<a href="ValueSet-omh-unit-value.xml" download>XML</a>, <a href="ValueSet-omh-unit-value.json" download>JSON</a>),<a href="omh-unit-value.openapi.json">OpenAPI-Swagger Definition file</a>
+</p>
+
+  {% include ValueSet-omh-unit-value-html.xhtml %}
+
+<!-- ============CapabilityStatement CONTENT CONTENT=============== -->
+
+{% else %}
+<!-- ============ConceptMap CapabilityStatement SearchParameter CONTENT CONTENT=============== -->
+
+
+  {% include ValueSet-omh-unit-value-html.xhtml %}
+
+  <!-- ============CodeSystem ConceptMap CapabilityStatement CONTENT CONTENT=============== -->
+
+{% endcase %}
+
+
+<!-- simple format links
+<p>
+Formats: <a href="ValueSet-omh-unit-value.html">Narrative</a>, <a href="ValueSet-omh-unit-value.xml.html">XML</a>, <a href="ValueSet-omh-unit-value.json.html">JSON</a>, <a href="ValueSet-omh-unit-value.ttl.html">Turtle</a>
+</p>
+-->
+
+
+  <!-- ==============END CONTENT END CONTENT=================== -->

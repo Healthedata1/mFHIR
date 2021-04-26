@@ -1,0 +1,16 @@
+﻿<html>
+<head>
+  <title>StructureDefinition-omh-dr-tx-must-support</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<h4>Terminology Bindings</h4>
+<table class="list">
+<tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet / Code</b></td></tr>
+<tr><td>DocumentReference.status</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The status of the document reference."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-document-reference-status.html">DocumentReferenceStatus</a></td></tr>
+<tr><td>DocumentReference.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td title="Omh Datapoint Type codes defined in the schema definitions."><a style="opacity: 1.0" href="ValueSet-dp-type.html">omh-datapoint-type</a></td></tr>
+<tr><td>DocumentReference.category</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="High-level kind of a clinical document at a macro level.">Fixed Value: "OMH datapoint"</td></tr>
+<tr><td>DocumentReference.content.attachment.contentType</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The mime type of an attachment. Any valid mime type is allowed.">Fixed Value: application/json</td></tr>
+</table>
+</body>
+</html>

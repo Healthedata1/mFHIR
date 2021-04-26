@@ -1,0 +1,25 @@
+﻿<html>
+<head>
+  <title>StructureDefinition-new-us-core-documentreference-tx-must-support</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<h4>Terminology Bindings</h4>
+<table class="list">
+<tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet</b></td></tr>
+<tr><td>DocumentReference.language</td><td><a href="http://build.fhir.org/terminologies.html#preferred">preferred</a></td><td title="A human language."><a href="http://build.fhir.org/valueset-languages.html">CommonLanguages</a><br><a style="font-weight:bold" title="Max Value Set Extension" href="http://build.fhir.org/extension-elementdefinition-maxvalueset.html">Max Binding</a>: <a href="http://build.fhir.org/valueset-all-languages.html">AllLanguages</a></td></tr>
+<tr><td>DocumentReference.status</td><td><a href="http://build.fhir.org/terminologies.html#required">required</a></td><td><a href="http://build.fhir.org/valueset-document-reference-status.html">DocumentReferenceStatus</a></td></tr>
+<tr><td>DocumentReference.docStatus</td><td><a href="http://build.fhir.org/terminologies.html#required">required</a></td><td title="Status of the underlying document."><a href="http://build.fhir.org/valueset-composition-status.html">CompositionStatus</a></td></tr>
+<tr><td>DocumentReference.type</td><td><a href="http://build.fhir.org/terminologies.html#required">required</a></td><td title="All LOINC  values whose SCALE is DOC in the LOINC database and the SNOMED-CT concept 'unknown'"><a href="ValueSet-us-core-documentreference-type.html">USCoreDocumentReferenceTypeValueSet</a><br><a style="font-weight:bold" title="Min Value Set Extension" href="http://build.fhir.org/extension-elementdefinition-minvalueset.html">Min Binding</a>: <a href="ValueSet-us-core-clinical-note-type.html">US Core Clinical Note Type Value Set</a></td></tr>
+<tr><td>DocumentReference.category</td><td><a href="http://build.fhir.org/terminologies.html#extensible">extensible</a></td><td title="The US Core DocumentReferences Type Value Set is a &amp;#39;starter set&amp;#39; of categories supported for fetching and storing clinical notes."><a href="ValueSet-us-core-documentreference-category.html">USCoreDocumentReferenceCategoryValueSet</a></td></tr>
+<tr><td>DocumentReference.relatesTo.code</td><td><a href="http://build.fhir.org/terminologies.html#required">required</a></td><td title="The type of relationship between documents."><a href="http://build.fhir.org/valueset-document-relationship-type.html">DocumentRelationshipType</a></td></tr>
+<tr><td>DocumentReference.securityLabel</td><td><a href="http://build.fhir.org/terminologies.html#extensible">extensible</a></td><td title="Security Labels from the Healthcare Privacy and Security Classification System."><a href="http://build.fhir.org/valueset-security-labels.html">All Security Labels</a></td></tr>
+<tr><td>DocumentReference.content.attachment.contentType</td><td><a href="http://build.fhir.org/terminologies.html#required">required</a></td><td title="The mime type of an attachment. Any valid mime type is allowed."><a href="http://build.fhir.org/valueset-mimetypes.html">Mime Types</a></td></tr>
+<tr><td>DocumentReference.content.attachment.language</td><td><a href="http://build.fhir.org/terminologies.html#preferred">preferred</a></td><td title="A human language."><a href="http://build.fhir.org/valueset-languages.html">CommonLanguages</a><br><a style="font-weight:bold" title="Max Value Set Extension" href="http://build.fhir.org/extension-elementdefinition-maxvalueset.html">Max Binding</a>: <a href="http://build.fhir.org/valueset-all-languages.html">AllLanguages</a></td></tr>
+<tr><td>DocumentReference.content.format</td><td><a href="http://build.fhir.org/terminologies.html#extensible">extensible</a></td><td><a href="http://build.fhir.org/valueset-formatcodes.html">DocumentReferenceFormatCodeSet</a></td></tr>
+<tr><td>DocumentReference.context.event</td><td><a href="http://build.fhir.org/terminologies.html#example">example</a></td><td title="This list of codes represents the main clinical acts being documented."><a href="http://build.fhir.org/v3/ActCode/vs.html">v3.ActCode</a></td></tr>
+<tr><td>DocumentReference.context.facilityType</td><td><a href="http://build.fhir.org/terminologies.html#example">example</a></td><td title="XDS Facility Type."><a href="http://build.fhir.org/valueset-c80-facilitycodes.html">FacilityTypeCodeValueSet</a></td></tr>
+<tr><td>DocumentReference.context.practiceSetting</td><td><a href="http://build.fhir.org/terminologies.html#example">example</a></td><td title="Additional details about where the content was created (e.g. clinical specialty)."><a href="http://build.fhir.org/valueset-c80-practice-codes.html">PracticeSettingCodeValueSet</a></td></tr>
+</table>
+</body>
+</html>

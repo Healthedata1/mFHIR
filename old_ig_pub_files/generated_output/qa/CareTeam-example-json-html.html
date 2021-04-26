@@ -1,0 +1,81 @@
+﻿<html>
+<head>
+  <title>CareTeam-example-json-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="json">
+{
+  "<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam">resourceType</a>" : "CareTeam",
+  "<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.id">id</a>" : "example",
+  "<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: example&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: US-Core example CareTeam&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-example.html\&quot;&gt;Amy V. Shaw. Generated Summary: id: example; Medical Record Number = 1032702 (USUAL); active; Amy V. Shaw ; ph: 555-555-5555(HOME), amy.shaw@example.com; gender: female; birthDate: 2007-02-20&lt;/a&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;participant&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;role&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://nucc.org/provider-taxonomy 207RC0000X}\&quot;&gt;Cardiovascular Disease&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;member&lt;/b&gt;: &lt;a href=\&quot;Practitioner-practitioner-1.html\&quot;&gt;Ronald Bone, MD. Generated Summary: id: practitioner-1; 9941339108, 25456; Ronald Bone &lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;participant&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;role&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://nucc.org/provider-taxonomy 208D00000X}\&quot;&gt;General Practice&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;member&lt;/b&gt;: &lt;a href=\&quot;Practitioner-practitioner-2.html\&quot;&gt;Kathy Fielding, MD. Generated Summary: id: practitioner-2; 1245319599, 456789; Fielding Kathy ; Kathy.Fielding@direct.ExampleMedicalPractice.net(WORK)&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;participant&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;role&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://snomed.info/sct 116154003}\&quot;&gt;Patient (person)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;member&lt;/b&gt;: &lt;a href=\&quot;Patient-example.html\&quot;&gt;Amy V. Shaw. Generated Summary: id: example; Medical Record Number = 1032702 (USUAL); active; Amy V. Shaw ; ph: 555-555-5555(HOME), amy.shaw@example.com; gender: female; birthDate: 2007-02-20&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.name">name</a>" : "US-Core example CareTeam",
+  "<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.subject">subject</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/example",
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Amy V. Shaw"
+  },
+  "<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.participant">participant</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.participant.role">role</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://nucc.org/provider-taxonomy",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "207RC0000X",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Cardiovascular Disease"
+            }
+          ]
+        }
+      ],
+      "<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.participant.member">member</a>" : {
+        "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/practitioner-1",
+        "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Ronald Bone, MD"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.participant.role">role</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://nucc.org/provider-taxonomy",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "208D00000X",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "General Practice"
+            }
+          ]
+        }
+      ],
+      "<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.participant.member">member</a>" : {
+        "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/practitioner-2",
+        "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Kathy Fielding, MD"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.participant.role">role</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "116154003",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Patient (person)"
+            }
+          ]
+        }
+      ],
+      "<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.participant.member">member</a>" : {
+        "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/example",
+        "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Amy V. Shaw"
+      }
+    }
+  ]
+}</pre>
+</body>
+</html>

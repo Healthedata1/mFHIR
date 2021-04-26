@@ -1,0 +1,76 @@
+---
+# jekyll header
+level: 2
+template: base
+active: format
+layout: fhir-artifact
+type: CodeSystem
+id: omh-datapoint-type
+topofpage: True
+---
+
+<!-- ig template for many conformance resource html pages  ('base' in definitions file)  can not be used for conformance resources that have more that a single base template. e.g.,  sd since there are mapping and definitions templates for it as well  they need to be split out into 3 separate templates -->
+
+<!-- ============ CONTENT CONTENT=============== -->
+
+{% case 'CodeSystem' %} <!-- content depends on type -->
+{% when 'ValueSet' %}
+<!-- ============VAlUESET CONTENT CONTENT=============== -->
+
+  {% include CodeSystem-omh-datapoint-type-summary.xhtml %}
+  {% include CodeSystem-omh-datapoint-type-xref.xhtml %}
+  {% include CodeSystem-omh-datapoint-type-cld.xhtml %}
+
+  <h3>Expansion</h3>
+
+  {% include CodeSystem-omh-datapoint-type-expansion.xhtml %}
+<!-- ============VAlUESET CONTENT CONTENT=============== -->
+
+{% when 'CodeSystem' %}
+<!-- ============CODESYSTEM CONTENT CONTENT=============== -->
+
+  {% include CodeSystem-omh-datapoint-type-summary.xhtml %}
+
+  {% include CodeSystem-omh-datapoint-type-html.xhtml %}
+
+  <!-- ============CODESYSTEM CONTENT CONTENT=============== -->
+
+{% when 'OperationDefinition' %}
+<!-- ============OperationDefinition CONTENT CONTENT=============== -->
+
+  {% include CodeSystem-omh-datapoint-type-html.xhtml %}
+
+  {% capture my-include %}{% include omh-datapoint-type-example.md %}{% endcapture %}{{ my-include | markdownify }}  <!--add inline examples here -->
+<!-- ============OperationDefinition CONTENT CONTENT=============== -->
+
+
+{% when 'CapabilityStatement' %}
+<!-- ============CapabilityStatement CONTENT CONTENT=============== -->
+
+<p>
+Downloads:  CapabilityStatement: (<a href="CodeSystem-omh-datapoint-type.xml" download>XML</a>, <a href="CodeSystem-omh-datapoint-type.json" download>JSON</a>),<a href="omh-datapoint-type.openapi.json">OpenAPI-Swagger Definition file</a>
+</p>
+
+  {% include CodeSystem-omh-datapoint-type-html.xhtml %}
+
+<!-- ============CapabilityStatement CONTENT CONTENT=============== -->
+
+{% else %}
+<!-- ============ConceptMap CapabilityStatement SearchParameter CONTENT CONTENT=============== -->
+
+
+  {% include CodeSystem-omh-datapoint-type-html.xhtml %}
+
+  <!-- ============CodeSystem ConceptMap CapabilityStatement CONTENT CONTENT=============== -->
+
+{% endcase %}
+
+
+<!-- simple format links
+<p>
+Formats: <a href="CodeSystem-omh-datapoint-type.html">Narrative</a>, <a href="CodeSystem-omh-datapoint-type.xml.html">XML</a>, <a href="CodeSystem-omh-datapoint-type.json.html">JSON</a>, <a href="CodeSystem-omh-datapoint-type.ttl.html">Turtle</a>
+</p>
+-->
+
+
+  <!-- ==============END CONTENT END CONTENT=================== -->

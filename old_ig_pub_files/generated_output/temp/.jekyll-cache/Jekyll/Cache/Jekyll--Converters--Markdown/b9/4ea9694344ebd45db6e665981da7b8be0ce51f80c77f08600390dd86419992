@@ -1,0 +1,8 @@
+I"´<h4 id="structure-maps">Structure Maps</h4>
+
+<p>This is the mappings between FHIR resources and Logical Models:</p>
+
+<p>{ % include list-simple-structuremaps.xhtml % }</p>
+
+<hr />
+:ET

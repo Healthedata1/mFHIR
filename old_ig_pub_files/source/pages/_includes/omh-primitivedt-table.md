@@ -1,0 +1,19 @@
+|Source = OMH Schema|Target = FHIR Element|FHIR Quantity Pattern or ValueSet(binding strength)|FHIR Example
+|---|---|---|---|
+|[activity-name]({{page.omlschema_url}}activity-name-1.0.json)|[string][string]|
+|[date-time]({{page.omlschema_url}}date-time-1.0.json)|[dateTime][dateTime]|
+|[full-date]({{page.omlschema_url}}full-date-1.0.json)|[dateTime][dateTime]|
+|[local-time]({{page.omlschema_url}}local-time-1.0.json)|[string][string]|
+|[body-location]({{page.omlschema_url}}body-location-1.0.json)|[code][code]|[body-location](valueset-body-location.html)||
+|[body-posture]({{page.omlschema_url}}body-posture-1.0.json)|[code][code]|[body-posture](valueset-body-posture.html)||
+|[day-of-week]({{page.omlschema_url}}day-of-week-1.0.json)|[code][code]|[day-of-week](valueset-day-of-week.html)||
+|[descriptive-statistic]({{page.omlschema_url}}descriptive-statistic-1.0.json)|[code][code]|[descriptive-statistic]{{site.data.fhir.path}}valueset-observation-statistics.html)||
+|[descriptive-statistic-denominator]({{page.omlschema_url}}descriptive-statistic-denominator-1.0.json)|[code][code]|[descriptive-statistic-denominator](valueset-descriptive-statistic-denominator.html)||
+|[intervention-administration-route]({{page.omlschema_url}}intervention-administration-route-1.0.json)|[code][code]|[intervention-administration-route](valueset-intervention-administration-route.html)||
+|[medication-dose-unit]({{page.omlschema_url}}medication-dose-unit-1.0.json)|[code][code]|[medication-dose-unit](valueset-medication-dose-unit.html)||
+|[part-of-day]({{page.omlschema_url}}part-of-day-1.0.json)|[code][code]|[part-of-day](valueset-part-of-day.html)||
+|[position-during-measurement]({{page.omlschema_url}}position-during-measurement-1.0.json)|[code][code]|[position-during-measurement](valueset-position-during-measurement.html)||
+|[specimen-source]({{page.omlschema_url}}specimen-source-1.0.json)|[code][code]|[specimen-source](valueset-specimen-source.html)||
+|[temporal-relationship-to-meal]({{page.omlschema_url}}temporal-relationship-to-meal-1.0.json)|[code][code]|[temporal-relationship-to-meal](valueset-temporal-relationship-to-meal.html)||
+|[temporal-relationship-to-physical-activity]({{page.omlschema_url}}temporal-relationship-to-physical-activity-1.0.json)|[code][code]|[temporal-relationship-to-physical-activity](valueset-temporal-relationship-to-physical-activity.html)||
+|[temporal-relationship-to-sleep]({{page.omlschema_url}}temporal-relationship-to-sleep-1.0.json)|[code][code]|[temporal-relationship-to-sleep](valueset-temporal-relationship-to-sleep.html)||

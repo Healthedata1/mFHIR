@@ -1,0 +1,1609 @@
+I"�:
+<!-- TOC  the css styling for this is \pages\assets\css\project.css under 'markdown-toc'-->
+
+<ul id="markdown-toc">
+  <li><a href="#mapping-omh-schema-mappings-to-fhir-elements" id="markdown-toc-mapping-omh-schema-mappings-to-fhir-elements">Mapping OMH Schema Mappings to FHIR Elements</a></li>
+  <li><a href="#quick-start-mapping-guide" id="markdown-toc-quick-start-mapping-guide">Quick Start Mapping Guide</a>    <ul>
+      <li><a href="#omh-header-element-to-fhir-element-mapping-table" id="markdown-toc-omh-header-element-to-fhir-element-mapping-table">OMH Header Element to FHIR Element Mapping Table</a></li>
+      <li><a href="#observation-template" id="markdown-toc-observation-template">Observation Template</a></li>
+      <li><a href="#observation_componentx-subtemplates" id="markdown-toc-observation_componentx-subtemplates">observation_componentx Subtemplates</a></li>
+    </ul>
+  </li>
+  <li><a href="#mapping-strategy" id="markdown-toc-mapping-strategy">Mapping Strategy</a>    <ul>
+      <li><a href="#omh-header-schema-mapping-to-fhir-elements" id="markdown-toc-omh-header-schema-mapping-to-fhir-elements">OMH Header Schema Mapping to FHIR elements</a></li>
+      <li><a href="#omh-schema-mappings-to-fhir-datatypes" id="markdown-toc-omh-schema-mappings-to-fhir-datatypes">OMH Schema Mappings to FHIR Datatypes</a></li>
+      <li><a href="#omh-datapoint-schema-mappings-to-fhir-resources" id="markdown-toc-omh-datapoint-schema-mappings-to-fhir-resources">OMH datapoint Schema Mappings to FHIR Resources</a></li>
+    </ul>
+  </li>
+  <li><a href="#mapping-example" id="markdown-toc-mapping-example">Mapping Example</a></li>
+</ul>
+
+<h3 id="mapping-omh-schema-mappings-to-fhir-elements">Mapping OMH Schema Mappings to FHIR Elements</h3>
+
+<p>Measurements such as steps or heart rate are modeled using OMH schemas.  These models can be used to represent instance of the measurement “over the wire” in JSON.  For example, using the step-count schema, a step count is represented as:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_updated_date_time": "2015-09-10T18:43:39Z"
+    },
+    "schema_id": {
+      "namespace": "omh",
+      "name": "step_count",
+      "version": "1.0"
+    },
+    "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+  },
+  "body": {
+    "effective_time_frame": {
+      "time_interval": {
+        "start_date_time": "2015-08-06T05:11:09-07:00",
+        "end_date_time": "2015-08-06T23:00:36-06:00"
+      }
+    },
+    "step_count": 7939
+  }
+}
+</code></pre></div></div>
+
+<p>The OMH schema can be transformed into FHIR data models - more specifically “Logical Models” that allow for a more ‘FHR-like’ view of the schema and a way to computationally map between FHIR and omh.  For example, this would allow the following transformation between the step count example and a FHIR representation using the Observation Resource:</p>
+
+<!-- all this Bootstrap html for getting an narrow image to fit nicely in text - 640 pix wide -->
+
+<!-- file:///assets/images/omh_instance_mapping_1.png -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong></strong></figcaption>
+  <img src="assets/images/omh_instance_mapping_1.png" class="figure-img img-responsive img-rounded center-block" alt="omh_instance_mapping_1.png" />
+</figure>
+
+<p></p>
+</div>
+
+<!-- all this Bootstrap html for getting an narrow image to fit nicely in text - 640 pix wide -->
+
+<!-- file:///assets/images/omh_instance_mapping_2.png -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong></strong></figcaption>
+  <img src="assets/images/omh_instance_mapping_2.png" class="figure-img img-responsive img-rounded center-block" alt="omh_instance_mapping_2.png" />
+</figure>
+
+<p></p>
+</div>
+
+<p><br /></p>
+
+<p><strong>Other mappings:</strong></p>
+
+<ul>
+  <li><a href="heartrate-example.html">Example Mapping for OMH Heart Rate Schema</a></li>
+</ul>
+
+<h3 id="quick-start-mapping-guide">Quick Start Mapping Guide</h3>
+
+<p>Formal FHIR Logical Models are included in this guide for mapping the models directly using a formal mapping syntax. However, the tables and templates below are provided to for quicks mappings an OMH schema instance to a FHIR <em>quantitative</em> Observation resource instance.  These can be used to perform simple string substitution and simple concept mappings methods to generate FHIR Observations.  An <a href="https://github.com/Healthedata1/mFHIR/tree/master/my-notes/python-mapping-example">example python application</a> using these tables and string templates is available</p>
+
+<h4 id="omh-header-element-to-fhir-element-mapping-table">OMH Header Element to FHIR Element Mapping Table</h4>
+
+<p>Each OMH schema for a datapoint is composed of the ‘header’ and ‘body,  This table is a map of the relatively static OMH heady element to the corresponding OMH to FHIR Observation Profile element.  Each datapoint schema represents the body’s properties and will be covered individually.</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>OMH element</th>
+      <th>FHIR element</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>template profile</td>
+      <td>OMH to FHIR Observation Profile</td>
+    </tr>
+    <tr>
+      <td>header.id</td>
+      <td>Observation.identifier</td>
+    </tr>
+    <tr>
+      <td>header.creation_date_time</td>
+      <td>Observation.issued</td>
+    </tr>
+    <tr>
+      <td>header.schema_id</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>header.schema_id.namespace</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>header.schema_id.name</td>
+      <td>Observation.category,Observation.code ( see datapoint mapping table below )</td>
+    </tr>
+    <tr>
+      <td>header.schema_id.version</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>header.acquisition_provenance</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>header.acquisition_provenance.source_name</td>
+      <td>Observation.device</td>
+    </tr>
+    <tr>
+      <td>header.acquisition_provenance.source_data_point_id</td>
+      <td>Observation.identifier</td>
+    </tr>
+    <tr>
+      <td>header.acquisition_provenance.source_creation_date_time</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>header.acquisition_provenance.last_modification_data_time</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>header.acquisition_provenance.modality</td>
+      <td>Observation.device.extension</td>
+    </tr>
+    <tr>
+      <td>header.user_id</td>
+      <td>Observation.subject</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Data Point Mapping Table</strong></p>
+
+<p>Each Datapoint is represented by the body properties and this table is a summarey of the OMH datapoint schema type as represented by the <code class="highlighter-rouge">header.schema_id.name</code> element to the corresponding FHIR Observation <code class="highlighter-rouge">category</code> and ‘code’ elements and default units for quantitative measures.</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>header.schema_id.name</th>
+      <th>Observation.category.code</th>
+      <th>Observation.code.system</th>
+      <th>Observation.code.code</th>
+      <th>Observation.code.display</th>
+      <th>observation_value_quantity_unit(s) (list)</th>
+      <th>descriptive_statistic</th>
+      <th>descriptive_statistic_denominator</th>
+      <th>components</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>acceleration</td>
+      <td>physical-activity</td>
+      <td>http://loinc.org</td>
+      <td>80493-0</td>
+      <td>Activity level [Acceleration]</td>
+      <td>None</td>
+      <td>False</td>
+      <td>False</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <td>ambient_temperature</td>
+      <td>None</td>
+      <td>http://loinc.org</td>
+      <td>60832-3</td>
+      <td>Room temperature</td>
+      <td>None</td>
+      <td>False</td>
+      <td>False</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <td>blood_glucose</td>
+      <td>laboratory</td>
+      <td>http://loinc.org</td>
+      <td>2339-0</td>
+      <td>Glucose Mass/volume in Blood</td>
+      <td>[‘mg/dL’, ‘mmol/L’]</td>
+      <td>True</td>
+      <td>False</td>
+      <td>[‘temporal_relationship_to_sleep’, ‘temporal_relationship_to_meal’]</td>
+    </tr>
+    <tr>
+      <td>blood_pressure</td>
+      <td>vital-signs</td>
+      <td>http://loinc.org</td>
+      <td>85354-9</td>
+      <td>Blood pressure panel with all children optional</td>
+      <td>None</td>
+      <td>True</td>
+      <td>False</td>
+      <td>[‘diastolic_blood_pressure’, ‘systolic_blood_pressure’]</td>
+    </tr>
+    <tr>
+      <td>body_fat_percentage</td>
+      <td>exam</td>
+      <td>http://loinc.org</td>
+      <td>41982-0</td>
+      <td>Percentage of body fat Measured</td>
+      <td>[’%’]</td>
+      <td>True</td>
+      <td>False</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <td>body_height</td>
+      <td>vital-signs</td>
+      <td>http://loinc.org</td>
+      <td>8302-2</td>
+      <td>Body height</td>
+      <td>[‘cm’, ‘in’]</td>
+      <td>False</td>
+      <td>False</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <td>body_mass_index</td>
+      <td>vital-signs</td>
+      <td>http://loinc.org</td>
+      <td>39156-5</td>
+      <td>Body mass index (BMI) Ratio</td>
+      <td>[‘kg/m^2’]</td>
+      <td>True</td>
+      <td>False</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <td>body_temperature</td>
+      <td>vital-signs</td>
+      <td>http://loinc.org</td>
+      <td>8310-5</td>
+      <td>Body temperature</td>
+      <td>[‘K’,’F’,’C’]</td>
+      <td>True</td>
+      <td>False</td>
+      <td>[‘temporal_relationship_to_sleep’]</td>
+    </tr>
+    <tr>
+      <td>body_weight</td>
+      <td>vital-signs</td>
+      <td>http://loinc.org</td>
+      <td>29463-7</td>
+      <td>Body weight</td>
+      <td>[‘kg’, ‘g’, ‘lb’]</td>
+      <td>True</td>
+      <td>False</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <td>breath_carbon_monoxide</td>
+      <td>laboratory</td>
+      <td>http://snomed.info/id</td>
+      <td>251900003</td>
+      <td>Expired carbon monoxide concentration (observable entity)</td>
+      <td>None</td>
+      <td>False</td>
+      <td>False</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <td>calories_burned</td>
+      <td>physical-activity</td>
+      <td>http://loinc.org</td>
+      <td>41981-2</td>
+      <td>Calories burned</td>
+      <td>[‘kcal’]</td>
+      <td>True</td>
+      <td>True</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <td>diastolic_blood_pressure</td>
+      <td>vital-signs</td>
+      <td>http://loinc.org</td>
+      <td>8462-4</td>
+      <td>Diastolic blood pressure</td>
+      <td>[‘mmHg’]</td>
+      <td>False</td>
+      <td>False</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <td>expiratory_time</td>
+      <td>exam</td>
+      <td>http://loinc.org</td>
+      <td>60739-0</td>
+      <td>Expiration Time Respiratory system</td>
+      <td>None</td>
+      <td>False</td>
+      <td>False</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <td>geoposition</td>
+      <td>physical-activity</td>
+      <td>http://www.fhir.org/guides/omhtofhir/datapoint-type</td>
+      <td>geoposition</td>
+      <td>Geoposition</td>
+      <td>None</td>
+      <td>False</td>
+      <td>False</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <td>heart_rate</td>
+      <td>vital-signs</td>
+      <td>http://loinc.org</td>
+      <td>8867-4</td>
+      <td>Heart rate</td>
+      <td>[‘beats/min’]</td>
+      <td>True</td>
+      <td>False</td>
+      <td>[‘temporal_relationship_to_physical_activity’, ‘temporal_relationship_to_sleep’]</td>
+    </tr>
+    <tr>
+      <td>inspiratory_time</td>
+      <td>exam</td>
+      <td>http://loinc.org</td>
+      <td>60740-8</td>
+      <td>Inspiration Time Respiratory system</td>
+      <td>None</td>
+      <td>False</td>
+      <td>False</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <td>magnetic_force</td>
+      <td>physical-activity</td>
+      <td>http://www.fhir.org/guides/omhtofhir/datapoint-type</td>
+      <td>magnetic_force</td>
+      <td>Magnetic Force Panel</td>
+      <td>None</td>
+      <td>False</td>
+      <td>False</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <td>medication_adherence_percent</td>
+      <td>Survey</td>
+      <td>http://snomed.info/id</td>
+      <td>418633004</td>
+      <td>Medication compliance (observable entity)</td>
+      <td>None</td>
+      <td>False</td>
+      <td>False</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <td>minute_volume</td>
+      <td>exam</td>
+      <td>http://loinc.org</td>
+      <td>20139-2</td>
+      <td>Volume expired 1 minute</td>
+      <td>None</td>
+      <td>False</td>
+      <td>False</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <td>minutes_moderate_activity</td>
+      <td>physical-activity</td>
+      <td>http://snomed.info/id</td>
+      <td>408581006</td>
+      <td>Physical activity target moderate exercise (finding)</td>
+      <td>[‘min’]</td>
+      <td>False</td>
+      <td>False</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <td>orientation</td>
+      <td>vital-signs</td>
+      <td>http://www.fhir.org/guides/omhtofhir/datapoint-type</td>
+      <td>orientation</td>
+      <td>Gyroscope measurement Panel</td>
+      <td>None</td>
+      <td>False</td>
+      <td>False</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <td>oxygen_saturation</td>
+      <td>vital-signs</td>
+      <td>http://loinc.org</td>
+      <td>59408-5</td>
+      <td>Oxygen saturation in Arterial blood by Pulse oximetry</td>
+      <td>[’%’]</td>
+      <td>True</td>
+      <td>False</td>
+      <td>[‘supplemental_oxygen_flow_rate’, ‘oxygen_therapy_mode_of_administration’]</td>
+    </tr>
+    <tr>
+      <td>pace</td>
+      <td>physical-activity</td>
+      <td>http://www.fhir.org/guides/omhtofhir/datapoint-type</td>
+      <td>pace</td>
+      <td>Pace</td>
+      <td>None</td>
+      <td>False</td>
+      <td>False</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <td>physical_activity</td>
+      <td>physical-activity</td>
+      <td>http://snomed.info/id</td>
+      <td>68130003</td>
+      <td>Physical activity (observable entity)</td>
+      <td>None</td>
+      <td>False</td>
+      <td>False</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <td>respiratory_rate</td>
+      <td>vital-signs</td>
+      <td>http://loinc.org</td>
+      <td>9279-1</td>
+      <td>Respiratory Rate</td>
+      <td>[‘breaths/min’]</td>
+      <td>True</td>
+      <td>False</td>
+      <td>[‘temporal_relationship_to_physical_activity’]</td>
+    </tr>
+    <tr>
+      <td>rr_interval</td>
+      <td>exam</td>
+      <td>http://loinc.org</td>
+      <td>8637-1</td>
+      <td>R_R interval by EKG</td>
+      <td>None</td>
+      <td>False</td>
+      <td>False</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <td>sleep_duration</td>
+      <td>physical-activity</td>
+      <td>http://snomed.info/id</td>
+      <td>248263006</td>
+      <td>Duration of sleep (observable entity)</td>
+      <td>[‘sec’, ‘min’, ‘h’]</td>
+      <td>True</td>
+      <td>True</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <td>sleep_episode</td>
+      <td>physical-activity</td>
+      <td>http://snomed.info/id</td>
+      <td>258158006</td>
+      <td>Sleep, function (observable entity)</td>
+      <td>None</td>
+      <td>False</td>
+      <td>False</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <td>speed</td>
+      <td>physical-activity</td>
+      <td>http://ncimeta.nci.nih.gov</td>
+      <td>C0678536</td>
+      <td>Speed</td>
+      <td>None</td>
+      <td>False</td>
+      <td>False</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <td>step_count</td>
+      <td>physical-activity</td>
+      <td>http://loinc.org</td>
+      <td>55423-8</td>
+      <td>Number of steps in unspecified time Pedometer</td>
+      <td>[‘steps’]</td>
+      <td>True</td>
+      <td>True</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <td>systolic_blood_pressure</td>
+      <td>vital-signs</td>
+      <td>http://loinc.org</td>
+      <td>8480-6</td>
+      <td>Systolic blood pressure</td>
+      <td>[‘mmHg’]</td>
+      <td>False</td>
+      <td>False</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <td>ventilation_cycle_time</td>
+      <td>exam</td>
+      <td>http://snomed.info/id</td>
+      <td>250818005</td>
+      <td>Ventilation cycle time (observable entity)</td>
+      <td>None</td>
+      <td>False</td>
+      <td>False</td>
+      <td>[]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Data Point Component Mapping Table</strong></p>
+
+<p>Some Datapoints properties are represented by the FHIR <code class="highlighter-rouge">Observation.component</code> element in FHIR.  This table summarizes these OMH datapoint schema properties and list the corresponding OMH propertied name in the  <code class="highlighter-rouge">Component Name</code> column and its corresponding FHIR Observation component code and valuetype attributes.  This table is used along with the OMH to FHIR concept mapping table to to populate the the Observation template below.</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>Component Name</th>
+      <th>Component Code System</th>
+      <th>Component Code Code</th>
+      <th>Component Code Display</th>
+      <th>Component Value Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>body_posture</td>
+      <td>http://snomed.info/sct</td>
+      <td>271605009</td>
+      <td>Position of body and posture (observable entity)</td>
+      <td>valueCodeableConcept</td>
+    </tr>
+    <tr>
+      <td>diastolic_blood_pressure</td>
+      <td>http://loinc.org</td>
+      <td>8462-4</td>
+      <td>Diastolic blood pressure</td>
+      <td>valueQuantity</td>
+    </tr>
+    <tr>
+      <td>systolic_blood_pressure</td>
+      <td>http://loinc.org</td>
+      <td>8480-6</td>
+      <td>Systolic blood pressure</td>
+      <td>valueQuantity</td>
+    </tr>
+    <tr>
+      <td>temporal_relationship_to_meal</td>
+      <td>http://www.fhir.org/guides/omhtofhir/omh_fhir_observation_codes</td>
+      <td>relative-to-meal</td>
+      <td>OMH to FHIR Temporal Relationship To Meal</td>
+      <td>valueCodeableConcept</td>
+    </tr>
+    <tr>
+      <td>temporal_relationship_to_physical_activity</td>
+      <td>http://www.fhir.org/guides/omhtofhir/omh_fhir_observation_codes</td>
+      <td>relative-to-activity</td>
+      <td>OMH to FHIR Temporal Relationship To Physical Activity</td>
+      <td>valueCodeableConcept</td>
+    </tr>
+    <tr>
+      <td>temporal_relationship_to_sleep</td>
+      <td>http://www.fhir.org/guides/omhtofhir/omh_fhir_observation_codes</td>
+      <td>relative-to-sleep</td>
+      <td>OMH to FHIR Temporal Relationship To Sleep</td>
+      <td>valueCodeableConcept</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="observation-template">Observation Template</h4>
+
+<p>This FHIR Observation template is an instance view of the above mappings and can be populated with data from OMH schemas to create a FHIR Observation instance.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+       "resourceType": "Observation",
+       "id": {{server_assigned_resource_id}},  //note 1,2,6
+       "meta": {
+       "profile" : ["http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_profile_quantitative_observation"]  // note 7
+     },
+     "extension" : [{
+         "url" : {{observation_specimen_code_extension_url}},
+         "valueCodeableConcept": {
+         "coding": [
+           {
+             "system": {{observation_specimen_code_system}},
+             "code": {{observation_specimen_code_code}},
+             "display": {{observation_specimen_code_display}}
+           }
+         ],
+         "text": {{observation_specimen_code_text}}
+       }
+    }],
+       "identifier"  : [{
+       "system" : "https://omh.org/shimmer/ids", //note 7
+       "value" : {{header.id}} //note 3
+       }],
+       "status": "unknown",  //note 9
+       "category": [  //note 4
+         {
+           "coding": [
+             {
+               "system": "http://hl7.org/fhir/observation-category",
+               "code": {{observation_category_code}},
+               "display": {{observation_category_display}}
+             }
+           ]
+         }
+       ],
+       "code": {   //note 4
+         "coding": [
+           {
+             "system": {{observation_code_system}},
+             "code": {{observation_code_code}},
+             "display": {{observation_code_display}}
+           }
+        ,{
+          "system" : {{addl_observation_coding_system}}, //note 12
+          "code" : {{addl_observation_coding_code}},
+          "display" : {{addl_observation_coding_display}}
+        }
+         ]
+       },
+       "subject": {  //note 8
+         "identifier" : {
+       "system" : "https://omh.org/shimmer/patient_ids",
+       "value" : {{header.user_id}}
+     }
+       },
+       "effectiveDateTime" : {{body.effective_time_frame.date_time}},  //note 11
+       "effectivePeriod" : {  //note 11
+          "start" : {{body.effective_time_frame.time_interval.start_date_time}}, 
+          "end" : {{body.effective_time_frame.time_interval.end_date_time}}
+          }, 
+       "issued": {{header.creation_date_time}},
+       "valueQuantity" : {  //note 10
+         "value" : {observation_value_quantity_value},
+         "unit" : {{observation_value_quantity_unit}},
+         "system" : {{observation_value_quantity_system}}, 
+         "code" : {{observation_value_quantity_code}}
+        },
+        "comment" : {{body.user_notes}},
+        "device" : {
+        "extension" : [{
+          "url" : "http://www.fhir.org/mfhir/StructureDefinition/omh_fhir_observation_device_modality",
+          "valueCode" : {{header.acquisition_provenance.modality}}
+        }],
+        "display" : {{header.acquisition_provenance.source_name}}
+        },
+        "component": [{observation_componentx}]  //note 5
+      }
+</code></pre></div></div>
+
+<h4 id="observation_componentx-subtemplates">observation_componentx Subtemplates</h4>
+
+<p>This FHIR Observation sub template is an instance view of the Observation component element derived from the OMH schema e and can be populated with data to create a FHIR Observation instance.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>,"component" : [{
+    "code" : { 
+      "coding" : [{ 
+        "system" :"http://www.fhir.org/guides/omhtofhir/omh_fhir_observation_codes",
+        "code" : "{{observation_component_code_code}}", 
+        "display" : "{{observation_component_code_display}}"
+         }]
+       },
+    "valueCodeableConcept" : { 
+      "coding" : [{ 
+        "system" : "{{observation_component_value_codeableconcept_system}}", 
+        "code" : "{{observation_component_value_codeableconcept_code}}", 
+        "display" : "{{observation_component_value_codeableconcept_display}}"
+        }],
+        "text" : "{{observation_component_value_codeableconcept_text}}"
+        },
+       "valueQuantity" : {
+         "value" : {{observation_component_value_quantity_value}},
+         "unit" : "{{observation_component_value_quantity_unit}}",
+         "system" : "{{observation_component_value_quantity_system}}", 
+         "code" : "{{observation_component_value_quantity_code}}"
+        }
+     }
+</code></pre></div></div>
+
+<p>Notes on template usage:</p>
+
+<ol>
+  <li>Template variables are represented using the “{{}}” syntax</li>
+  <li>Note that when present, FHIR elements cannot be empty.  Therefore, all ‘null’ values (i.e.,undefined, Null, None, or ‘’ values or empty json objects or lists) are removed from the resource after the OMH data is mapped to it.</li>
+  <li>Variable such as {{header.id}} represent OMH data elements in dot notation mapped directly from the header schema.</li>
+  <li>Variables in “snake case” are such as {{observation_category_code}}  {{observation_code_code}} represent the corresponding dot notation columns in the OMH Data Point Mapping Table provided above(which are based on the OmhDataPoint.header.schema_id.name).</li>
+  <li>the variables {{observation-valuex}} (the actual result values), {{observation-effectivex}} (the actual times the measurements occurred ) and {{observation-componentx}} are subtemplates and are mapped from the body schema for each of the datapoints.</li>
+  <li>{{server_assigned_resource_id}} is a assigned by the server when the resource is created and is typically not mapped from the OMH schema instance.</li>
+  <li>The profile element is the FHIR profiles this resource claims will conform to when fully populated.</li>
+  <li>The namespaces, “https://omh.org/shimmer/ids”  and “https://omh.org/shimmer/patient_ids” are use to assign a system to shimmer generated ids.</li>
+  <li>The <code class="highlighter-rouge">status</code> element is required in FHIR Observation and since omh schema don’t have status its values is hardcoded to ‘unknown’</li>
+  <li>The measurement value ( e.g., step-count) and units derived from the descriptive statistics schema and can be populated with data to create a FHIR Observation instance.</li>
+  <li>There is a  choice of datetime or time period mappings over which the measurement occurred for the step count schema and can be populated with data it to create a FHIR Observation instance. Note that the empty values will be removed from the instance.</li>
+  <li>Additional codings are derived from the descriptive statistics schema using a compositional code consisting of the concatenation of the datapoint schema name with the descriptive statistic code in “spinal case”  ( e.g  <code class="highlighter-rouge">step-count-maximum</code>). If the descriptive statistics is absent the schema, there are no additional codings in the OMH to FHIR instance.</li>
+</ol>
+
+<h3 id="mapping-strategy">Mapping Strategy</h3>
+
+<p>In order to map the OMH schema to FHIR, the OMH Schemas are divided conceptually into several categories.  The infrastructural <code class="highlighter-rouge">schema</code> model serves as a basic blueprint for creation of OMH schema and is not used in the mappings. The infrastructural <code class="highlighter-rouge">data-point</code> schema provide the basic framework upon which the data-points schemas are based and serves as the backbone for creation of the FHIR logical model. It is made up of a <code class="highlighter-rouge">header</code> property representing MedicationDispense information and  a <code class="highlighter-rouge">body</code> property representing one of the omh schemas that represent a measurements i.e., ‘a data point’.</p>
+
+<h4 id="omh-header-schema-mapping-to-fhir-elements">OMH Header Schema Mapping to FHIR elements</h4>
+
+<p>The OMH header schema represent data MedicationDispense and the properties in the header schema map to more than a single FHIR element.  In addition, depending on the depth and level of detail required, there are multiple options to representing MedicationDispense including:</p>
+
+<ul>
+  <li><a href="http://hl7.org/fhir/R4/MedicationDispense.html">MedicationDispense</a>resource</li>
+  <li><a href="http://hl7.org/fhir/R4/resource.html#Meta">meta.source</a> element</li>
+  <li>inline Resource elements</li>
+</ul>
+
+<p>These options are summarized in the table below and described in detail in the data point logical model mappings.</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>Source = OMH Schema</th>
+      <th>Target = FHIR Element</th>
+      <th>OMH FHIR Logical Model</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/header-1.2.json">header-1.2.json</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a>|<a href="http://hl7.org/fhir/R4/medicationdispense.html" title="FHIR MedicationDispense definition">MedicationDispense</a>  Profile</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The rest of the omh schemas represent either data points or more granular reusable elements or concepts that can be referenced within the data-point schemas. Each reusable omh schema are mapped primitive and complex datatypes as shown below. In addition some of these schemas enumerate values which are <a href="http://hl7.org/fhir/R4/terminologies.html">bound</a>) to FHIR ValueSets.  The reusable schemas are mapped directly to fhir artifacts as described below and these mapping replace the omh schema references when transforming an OMH data point schema into a FHIR Logical Model.</p>
+
+<h4 id="omh-schema-mappings-to-fhir-datatypes">OMH Schema Mappings to FHIR Datatypes</h4>
+
+<p>In this table, the schemas representing primitive and complex data-types are mapped directly to the corresponding FHIR datatype.  Listed in the <em>FHIR ValueSet</em> column the corresponding FHIR ValueSets and <a href="http://hl7.org/fhir/R4/datatypes.html#code">binding strength</a> for the schemas that map to the FHIR <code class="highlighter-rouge">code</code>, an units values for the <code class="highlighter-rouge">Quantity</code>, and <code class="highlighter-rouge">Range</code> dataypes.</p>
+
+<ul>
+  <li>Where a value is fixed such as for <em>acceleration-unit-value-1.0.json</em>, a fixed <a href="http://hl7.org/fhir/R4/https://www.hl7.org/fhir/structuredefinition.html#logical" title="FHIR logical model">Pattern</a> is associated with the schema which directly applied to the FHIR logical models when the schema is referenced.</li>
+  <li>Where the unit value is an enumeration of units a FHIR <em>ValueSet</em> is associated with the schema.</li>
+  <li>Both the patterns and ValueSets contain <strong>UCUM</strong> based units.</li>
+  <li>For data point schemas that reference schemas associated with ValueSets (such as <em>unit-value-1.0.json</em>), the actual units and hence the patterns applied to the FHIR logical models van be further constrained by the data point schema themselves.</li>
+</ul>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>Source = OMH Schema</th>
+      <th>Target = FHIR Element</th>
+      <th>FHIR Quantity Pattern or ValueSet(binding strength)</th>
+      <th>FHIR Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/activity-name-1.0.json">activity-name</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#string" title="FHIR string definition">string</a></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/date-time-1.0.json">date-time</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#dateTime" title="FHIR dateTime definition">dateTime</a></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/full-date-1.0.json">full-date</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#dateTime" title="FHIR dateTime definition">dateTime</a></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/local-time-1.0.json">local-time</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#string" title="FHIR string definition">string</a></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/body-location-1.0.json">body-location</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#code" title="FHIR code definition">code</a></td>
+      <td><a href="valueset-body-location.html">body-location</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/body-posture-1.0.json">body-posture</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#code" title="FHIR code definition">code</a></td>
+      <td><a href="valueset-body-posture.html">body-posture</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/day-of-week-1.0.json">day-of-week</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#code" title="FHIR code definition">code</a></td>
+      <td><a href="valueset-day-of-week.html">day-of-week</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/descriptive-statistic-1.0.json">descriptive-statistic</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#code" title="FHIR code definition">code</a></td>
+      <td><a href="http://hl7.org/fhir/STU3/valueset-observation-statistics.html">descriptive-statistic</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/descriptive-statistic-denominator-1.0.json">descriptive-statistic-denominator</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#code" title="FHIR code definition">code</a></td>
+      <td><a href="valueset-descriptive-statistic-denominator.html">descriptive-statistic-denominator</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/intervention-administration-route-1.0.json">intervention-administration-route</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#code" title="FHIR code definition">code</a></td>
+      <td><a href="valueset-intervention-administration-route.html">intervention-administration-route</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/medication-dose-unit-1.0.json">medication-dose-unit</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#code" title="FHIR code definition">code</a></td>
+      <td><a href="valueset-medication-dose-unit.html">medication-dose-unit</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/part-of-day-1.0.json">part-of-day</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#code" title="FHIR code definition">code</a></td>
+      <td><a href="valueset-part-of-day.html">part-of-day</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/position-during-measurement-1.0.json">position-during-measurement</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#code" title="FHIR code definition">code</a></td>
+      <td><a href="valueset-position-during-measurement.html">position-during-measurement</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/specimen-source-1.0.json">specimen-source</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#code" title="FHIR code definition">code</a></td>
+      <td><a href="valueset-specimen-source.html">specimen-source</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/temporal-relationship-to-meal-1.0.json">temporal-relationship-to-meal</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#code" title="FHIR code definition">code</a></td>
+      <td><a href="valueset-temporal-relationship-to-meal.html">temporal-relationship-to-meal</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/temporal-relationship-to-physical-activity-1.0.json">temporal-relationship-to-physical-activity</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#code" title="FHIR code definition">code</a></td>
+      <td><a href="valueset-temporal-relationship-to-physical-activity.html">temporal-relationship-to-physical-activity</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/temporal-relationship-to-sleep-1.0.json">temporal-relationship-to-sleep</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#code" title="FHIR code definition">code</a></td>
+      <td><a href="valueset-temporal-relationship-to-sleep.html">temporal-relationship-to-sleep</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/acceleration-unit-value-1.0.json">acceleration-unit-value-1.0.json</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
+      <td>{“unit”:”m/s^2”,”system”:”http://unitsofmeasure.org”,”code”:”m/s2”}</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/angular-velocity-unit-value-1.0.json">angular-velocity-unit-value-1.0.json</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
+      <td>{“unit”:”ad/s”,”system”:”http://unitsofmeasure.org”,”code”:”ad/s”}</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/area-unit-value-1.0.json">area-unit-value-1.0.json</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
+      <td><a href="valueset-area-unit-value.html">area-unit-value</a> (<a href="http://hl7.org/fhir/R4/terminologies.html#required">required</a>)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/duration-unit-value-1.0.json">duration-unit-value-1.0.json</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
+      <td><a href="valueset-duration-unit-value.html">duration-unit-value</a> (<a href="http://hl7.org/fhir/R4/terminologies.html#required">required</a>)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/duration-unit-value-range-1.0.json">duration-unit-value-range-1.0.json</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#range" title="FHIR Range definition">Range</a></td>
+      <td><a href="valueset-duration-unit-value.html">duration-unit-value</a> (<a href="http://hl7.org/fhir/R4/terminologies.html#required">required</a>)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/frequency-unit-value-1.0.json">frequency-unit-value-1.0.json</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#ratio" title="FHIR Ratio definition">Ratio</a></td>
+      <td><a href="valueset-duration-unit-value.html">duration-unit-value</a> (<a href="http://hl7.org/fhir/R4/terminologies.html#required">required</a>)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/kcal-unit-value-1.0.json">kcal-unit-value-1.0.json</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
+      <td>{“unit”:”kcal”,”system”:”http://unitsofmeasure.org”,”code”:”kcal”}</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/length-unit-value-1.0.json">length-unit-value-1.0.json</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
+      <td><a href="valueset-length-unit-value.html">length-unit-value</a> (<a href="http://hl7.org/fhir/R4/terminologies.html#required">required</a>)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/magnetic-flux-density-unit-value-1.0.json">magnetic-flux-density-unit-value-1.0.json</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
+      <td><a href="valueset-magnetic-flux-density-unit-value.html">magnetic-flux-density-unit-value</a> (<a href="http://hl7.org/fhir/R4/terminologies.html#required">required</a>)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/mass-unit-value-1.0.json">mass-unit-value-1.0.json</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
+      <td><a href="valueset-mass-unit-value.html">mass-unit-value</a> (<a href="http://hl7.org/fhir/R4/terminologies.html#required">required</a>)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/medication-dose-unit-value-1.0.json">medication-dose-unit-value-1.0.json</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
+      <td><a href="valueset-medication-dose-unit.html">medication-dose-unit</a> (<a href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a>)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/medication-dose-unit-value-range-1.0.json">medication-dose-unit-value-range-1.0.json</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#range" title="FHIR Range definition">Range</a></td>
+      <td><a href="valueset-medication-dose-unit.html">medication-dose-unit-value</a> (<a href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a>)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/pace-unit-value-1.0.json">pace-unit-value-1.0.json</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
+      <td><a href="valueset-pace-unit-value.html">pace-unit-value</a> (<a href="http://hl7.org/fhir/R4/terminologies.html#required">required</a>)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/plane-angle-unit-value-1.0.json">plane-angle-unit-value-1.0.json</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
+      <td>{“unit”:”deg”,”system”:”http://unitsofmeasure.org”,”code”:”deg”}</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/speed-unit-value-1.0.json">speed-unit-value-1.0.json</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
+      <td><a href="valueset-speed-unit-value.html">speed-unit-value</a> (<a href="http://hl7.org/fhir/R4/terminologies.html#required">required</a>)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/temperature-unit-value-1.0.json">temperature-unit-value-1.0.json</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
+      <td><a href="valueset-temperature-unit-value.html">temperature-unit-value</a> (<a href="http://hl7.org/fhir/R4/terminologies.html#required">required</a>)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/unit-value-1.0.json">unit-value-1.0.json</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
+      <td><a href="http://hl7.org/fhir/R4/valueset-ucum-common.html">unit-value</a> (<a href="http://hl7.org/fhir/R4/terminologies.html#required">required</a>)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/unit-value-range-1.0.json">unit-value-range-1.0.json</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#range" title="FHIR Range definition">Range</a></td>
+      <td><a href="http://hl7.org/fhir/R4/valueset-ucum-common.html">unit-value</a> (<a href="http://hl7.org/fhir/R4/terminologies.html#required">required</a>)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/volume-unit-value-1.0.json">volume-unit-value-1.0.json</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#quantity" title="FHIR Quantity definition">Quantity</a></td>
+      <td><a href="valueset-volume-unit-value.html">volume-unit-value</a> (<a href="http://hl7.org/fhir/R4/terminologies.html#required">required</a>)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/time-frame-1.0.json">time-frame-1.0.json</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#dateTime" title="FHIR dateTime definition">dateTime</a>|<a href="http://hl7.org/fhir/R4/datatypes.html#Period">Period</a></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/time-interval-1.0.json">time-interval-1.0.json</a></td>
+      <td>|<a href="http://hl7.org/fhir/R4/datatypes.html#Period">Period</a></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="omh-datapoint-schema-mappings-to-fhir-resources">OMH datapoint Schema Mappings to FHIR Resources</h4>
+
+<p>Logical Models for each datapoint schema are mapped to a FHIR Logical Model before being mapped to the target FHIR resource profile as listed in the table below.  The concept code for the measurement is in the description property of the schema are listed in the <em>Observation.code</em> column. For Schema that are mapped to <code class="highlighter-rouge">Observation</code>, this code is mapped to <code class="highlighter-rouge">code</code> in then Observation resource.:</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>Source = OMH Schema</th>
+      <th>OMH FHIR Logical Model</th>
+      <th>Target = FHIR Element</th>
+      <th>Observation.code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/acceleration-1.0.json">acceleration-1.0.json</a></td>
+      <td><a href="StructureDefinition-omh-acceleration.html">OmhAcceleration</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="todo.html" title="still under construction">Open mHealth to FHIR code (Acceleration Panel)</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/ambient-temperature-1.0.json">ambient-temperature-1.0.json</a></td>
+      <td><a href="StructureDefinition-omh-ambient-temperature.html">OmhAmbientTemperature</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="https://loinc.org/60832-3">60832-3  Room temperature</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/blood-glucose-2.0.json">blood-glucose-2.0.json</a></td>
+      <td><a href="StructureDefinition-omh-blood-glucose.html">OmhBloodGlucose</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="https://loinc.org/2339-0">2339-0  Glucose [Mass/​volume] in Blood</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/blood-pressure-2.0.json">blood-pressure-2.0.json</a></td>
+      <td><a href="StructureDefinition-omh-blood-pressure.html">OmhBloodPressure</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="https://loinc.org/85354-9">85354-9  Blood pressure panel with all children optional</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/body-fat-percentage-1.0.json">body-fat-percentage-1.0.json</a></td>
+      <td><a href="StructureDefinition-omh-body-fat-percentage.html">OmhBodyFatPercentage</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="https://loinc.org/41982-0">41982-0  Percentage of body fat Measured </a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/body-height-1.0.json">body-height-1.0.json</a></td>
+      <td><a href="StructureDefinition-omh-body-height.html">OmhBodyHeight</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="https://loinc.org/8302-2">8302-2  Body height</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/body-mass-index-2.0.json">body-mass-index-2.0.json</a></td>
+      <td><a href="StructureDefinition-omh-body-mass-index.html">OmhBodyMassIndex</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="https://loinc.org/39156-5">39156-5  Body mass index (BMI) [Ratio]</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/body-temperature-2.0.json">body-temperature-2.0.json</a></td>
+      <td><a href="StructureDefinition-omh-body-temperature.html">OmhBodyTemperature</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="https://loinc.org/8310-5">8310-5  Body temperature</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/body-weight-1.0.json">body-weight-1.0.json</a></td>
+      <td><a href="StructureDefinition-omh-body-weight.html">OmhBodyWeight</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="https://loinc.org/29463-7">29463-7  Body weight</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/breath-carbon-monoxide-1.0.json">breath-carbon-monoxide-1.0.json</a></td>
+      <td><a href="StructureDefinition-omh-breath-carbon-monoxide.html">OmhBreathCarbonMonoxide</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=251900003">251900003 Expired carbon monoxide concentration (observable entity)</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/calories-burned-2.0.json">calories-burned-2.0.json</a></td>
+      <td><a href="StructureDefinition-omh-calories-burned.html">OmhCaloriesBurned</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="https://loinc.org/41981-2">41981-2  Calories burned</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/diastolic-blood-pressure-1.0.json">diastolic-blood-pressure-1.0.json</a></td>
+      <td><a href="StructureDefinition-omh-diastolic-blood-pressure.html">OmhDiastolicBloodPressure</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="https://loinc.org/8462-4">8462-4  Diastolic blood pressure</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/expiratory-time-1.0.json">expiratory-time-1.0.json</a></td>
+      <td><a href="StructureDefinition-omh-expiratory-time.html">OmhExpiratoryTime</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="https://loinc.org/60739-0">60739-0  Expiration [Time] Respiratory system</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/geoposition-1.0.json">geoposition-1.0.json</a></td>
+      <td><a href="StructureDefinition-omh-geoposition.html">OmhGeoposition</a></td>
+      <td><a href="http://hl7.org/fhir/R4/location.html" title="FHIR Location definition">Location</a> Profile</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/heart-rate-1.1.json">heart-rate-1.1.json</a></td>
+      <td><a href="StructureDefinition-omh-heart-rate.html">OmhHeartRate</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="https://loinc.org/8867-4">8867-4 Heart rate</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/inspiratory-time-1.0.json">inspiratory-time-1.0.json</a></td>
+      <td><a href="StructureDefinition-omh-inspiratory-time.html">OmhInspiratoryTime</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="https://loinc.org/60740-8">60740-8  Inspiration [Time] Respiratory system</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/magnetic-force-1.0.json">magnetic-force-1.0.json</a></td>
+      <td><a href="StructureDefinition-omh-magnetic-force.html">OmhMagneticForce</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="todo.html" title="still under construction">Open mHealth to FHIR code (Magnetic Force Panel)</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/medication-1.0.json">medication-1.0.json</a></td>
+      <td><a href="StructureDefinition-omh-medication.html">OmhMedication</a></td>
+      <td><a href="http://hl7.org/fhir/R4/medication.html" title="FHIR Medication definition">Medication</a> Profile</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/medication-adherence-percent-2.0.json">medication-adherence-percent-2.0.json</a></td>
+      <td><a href="StructureDefinition-omh-medication-adherence-percent.html">OmhMedicationAdherencePercent</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=418633004">418633004 Medication compliance (observable entity)</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/medication-prescription-2.0.json">medication-prescription-2.0.json</a></td>
+      <td><a href="StructureDefinition-omh-medication-prescription.html">OmhMedicationPrescription</a></td>
+      <td><a href="http://hl7.org/fhir/R4/medicationrequest.html" title="FHIR MedicationRequest definition">MedicationRequest</a> Profile</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/minute-volume-1.0.json">minute-volume-1.0.json</a></td>
+      <td><a href="StructureDefinition-omh-minute-volume.html">OmhMinuteVolume</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="https://loinc.org/20139-2">20139-2  Volume expired 1 minute</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/minutes-moderate-activity-1.0.json">minutes-moderate-activity-1.0.json</a></td>
+      <td><a href="StructureDefinition-omh-minutes-moderate-activity.html">OmhMinutesModerateActivity</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=408581006">408581006 Physical activity target moderate exercise (finding)</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/orientation-1.0.json">orientation-1.0.json</a></td>
+      <td><a href="StructureDefinition-omh-orientation.html">OmhOrientation</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="todo.html" title="still under construction">Open mHealth to FHIR code (Gyroscope measurement Panel)</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/oxygen-saturation-1.0.json">oxygen-saturation-1.0.json</a></td>
+      <td><a href="StructureDefinition-omh-oxygen-saturation.html">OmhOxygenSaturation</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="https://loinc.org/59408-5">59408-5 Oxygen saturation in Arterial blood by Pulse oximetry</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/pace-1.0.json">pace-1.0.json</a></td>
+      <td><a href="StructureDefinition-omh-pace.html">OmhPace</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="todo.html" title="still under construction">Open mHealth to FHIR code (Pace)</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/patient-medication-schedule-2.0.json">patient-medication-schedule-2.0.json</a></td>
+      <td><a href="StructureDefinition-omh-patient-medication-schedule.html">OmhPatientMedicationSchedule</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td>???</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/pharmacy-medication-dispensing-2.0.json">pharmacy-medication-dispensing-2.0.json</a></td>
+      <td><a href="StructureDefinition-omh-pharmacy-medication-dispensing.html">OmhPharmacyMedicationDispensing</a></td>
+      <td><a href="http://hl7.org/fhir/R4/medicationdispense.html" title="FHIR MedicationDispense definition">MedicationDispense</a> Profile</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/physical-activity-1.2.json">physical-activity-1.2.json</a></td>
+      <td><a href="StructureDefinition-omh-physical-activity.html">OmhPhysicalActivity</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=68130003">68130003 Physical activity (observable entity)</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/reason-single-medication-dose-not-taken-1.0.json">reason-single-medication-dose-not-taken-1.0.json</a></td>
+      <td><a href="StructureDefinition-omh-reason-single-medication-dose-not-taken.html">OmhReasonSingleMedicationDoseNotTaken</a></td>
+      <td><a href="http://hl7.org/fhir/R4/medicationstatement.html" title="FHIR MedicationStatement definition">MedicationStatement</a>  Profile</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/respiratory-rate-1.0.json">respiratory-rate-1.0.json</a></td>
+      <td><a href="StructureDefinition-omh-respiratory-rate.html">OmhRespiratoryRate</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="https://loinc.org/9279-1">9279-1 Respiratory Rate</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/rr-interval-1.0.json">rr-interval-1.0.json</a></td>
+      <td><a href="StructureDefinition-omh-rr-interval.html">OmhRrInterval</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="https://loinc.org/8637-1">8637-1 R-R interval by EKG</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/single-medication-dose-taken-1.0.json">single-medication-dose-taken-1.0.json</a></td>
+      <td><a href="StructureDefinition-omh-single-medication-dose-taken.html">OmhSingleMedicationDoseTaken</a></td>
+      <td><a href="http://hl7.org/fhir/R4/medicationstatement.html" title="FHIR MedicationStatement definition">MedicationStatement</a> Profile</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/sleep-duration-2.0.json">sleep-duration-2.0.json</a></td>
+      <td><a href="StructureDefinition-omh-sleep-duration.html">OmhSleepDuration</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=248263006">248263006 Duration of sleep (observable entity)</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/sleep-episode-1.0.json">sleep-episode-1.0.json</a></td>
+      <td><a href="StructureDefinition-omh-sleep-episode.html">OmhSleepEpisode</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=258158006">258158006 Sleep, function (observable entity)</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/speed-1.0.json">speed-1.0.json</a></td>
+      <td><a href="StructureDefinition-omh-speed.html">OmhSpeed</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td>C0678536 NCIT code</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/step-count-2.0.json">step-count-2.0.json</a></td>
+      <td><a href="StructureDefinition-omh-step-count.html">OmhStepCount</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="https://loinc.org/55423-8">55423-8 Number of steps in unspecified time Pedometer</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/systolic-blood-pressure-1.0.json">systolic-blood-pressure-1.0.json</a></td>
+      <td><a href="StructureDefinition-omh-systolic-blood-pressure.html">OmhSystolicBloodPressure</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="https://loinc.org/8480-6">8480-6 Systolic blood pressure</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/openmhealth/schemas/blob/master/schema/omh/ventilation-cycle-time-1.0.json">ventilation-cycle-time-1.0.json</a></td>
+      <td><a href="StructureDefinition-omh-ventilation-cycle-time.html">OmhVentilationCycleTime</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html" title="FHIR Observation definition">Observation</a> Profile</td>
+      <td><a href="http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=250818005">250818005 Ventilation cycle time (observable entity)</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="mapping-example">Mapping Example</h3>
+
+<p>The transformation from the OMH data-point schema to the FHIR Logical models and from the FHIR Logical model to the FHIR resource is straightforward and demonstrated below.</p>
+
+<p>Note:</p>
+<ul>
+  <li>elements with a value of Null are <strong>not</strong>  transmitted in FHIR</li>
+  <li>some elements require a mapping to a codes using the translation tables in this Guide.</li>
+</ul>
+
+<p><strong>OMH Stepcount Datapoint instance</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    {
+      "header": {
+        "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+        "creation_date_time": "2015-09-10T12:43:39.138-06:00",
+        "acquisition_MedicationDispense": {
+          "source_name": "Jawbone UP API",
+          "modality": "sensed",
+          "source_updated_date_time": "2015-09-10T18:43:39Z"
+        },
+        "schema_id": {
+          "namespace": "omh",
+          "name": "step-count",
+          "version": "1.0"
+        },
+        "user_id": "306a1202-410d-11e8-842f-0ed5f89f718b"
+      },
+      "body": {
+        "effective_time_frame": {
+          "time_interval": {
+            "start_date_time": "2015-08-06T05:11:09-07:00",
+            "end_date_time": "2015-08-06T23:00:36-06:00"
+          }
+        },
+        "step_count": 7939
+      }
+    }
+</code></pre></div></div>
+
+<p>Converting this datapoint instance to <em>dot notation</em> representation here to show more clearly the mapping to the FHIR Observation Resource data elements</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    O.header
+        O.header.id = "243c773b-8936-407e-9c23-270d0ea49cc4"
+        O.header.creation_date_time = "2015-09-10T12:43:39.138-06:00"
+        O.header.acquisition_MedicationDispense"
+          O.header.acquisition_MedicationDispense.source_name = "Jawbone UP API"
+          O.header.acquisition_MedicationDispense.modality = "sensed"
+          O.header.acquisition_MedicationDispense.source_updated_date_time = "2015-09-10T18:43:39Z"
+        O.header.schema_id 
+          O.header.schema_id.namespace  = "omh"
+          O.header.schema_id.name =  "step-count"
+          O.header.schema_id.version = "1.0"
+        O.header.user_id = 306a1202-410d-11e8-842f-0ed5f89f718b"
+      O.body 
+        O.body.effective_time_frame 
+          O.body.effective_time_frame.time_interval 
+            O.body.effective_time_frame.time_interval.start_date_time = "2015-08-06T05:11:09-07:00"
+            O.body.effective_time_frame.time_interval.end_date_time ="2015-08-06T23:00:36-06:00"
+        O.body.step_count = 7939
+</code></pre></div></div>
+
+<p>**This OMH Schema instance maps to the FHIR Observation Resource directly as follows: ** (using the syntax  %(foo) to represent the replacement variables in the resource)
+‘’</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        
+        {
+          "resourceType": "Observation",
+        	"id": "steps-example //  this is a server assigned resource id",
+          "meta": {
+          "source" : "%(OmhDataPoint.header.acqusitionProvenance.sourceName)",
+          "profile // Profiles this resource claims to conform to" : ["http://www.fhir.org/guides/omhtofhir/StructureDefinition/steps"]
+        }
+          "identifier  : [
+          "system" : "https://omh.org/shimmer/ids // The namespace for the identifier value",
+          "value" : "%(OmhDataPoint.header.Id)",
+          }],
+          "status": "unknown // this is required in fhir - omh schema don't have status",
+        	"category // optional category field to indicate is an activity vs say a lab result": [  
+        		{
+        			"coding": [
+        				{
+        					"system": "http://hl7.org/fhir/observation-category",
+        					"code": "activity",
+        					"display": "Activity"
+        				}
+        			]
+        		}
+        	],
+        	"code // code mapping from OmhDataPoint.header.schema_id.name see mapping table in IG": {
+        		"coding": [
+              {
+        				"system": "http://loinc.org",
+        				"code": "55423-8",
+        				"display": "Number of steps in unspecified time Pedometer"
+        			}
+        		],
+        		"text": "Step count"
+        	},
+        	"subject": {
+        		"identifier" : {
+          "system" : "https://omh.org/shimmer/patient_ids // The namespace for the identifier value",
+          "value" : "%(OmhDataPoint.header.user_id)",
+        },
+        	},
+        	"effectivePeriod // mapped from OmhDataPoint.body.effectiveTimeFrame":
+          "start" : "%(OmhDataPoint.body.effective_time_frame.time_interval.start_date_time)",
+          "end" : "%(OmhDataPoint.body.effective_time_frame.time_interval.end_date_time)"
+            }
+        	"issued": "%(OmhDataPoint.header.creation_date_time)",
+
+        	"valueQuantity  // the actual results mapped from body.step_count  - note that I added optional UCUM units from the lookup tables": {
+        		"value": %(OmhDataPoint.body.stepCount),
+        		"unit": "steps",
+        		"system": "http://unitsofmeasure.org",
+        		"code": "{steps}"
+        	}
+           "device //  could be mapped from OmhDataPoint.header.acqusitionProvenance elements as well" :
+           {"display" : "%(OmhDataPoint.header.acqusitionProvenance.sourceName)"}
+        }
+</code></pre></div></div>
+
+<!--
+
+The transformation from the OMH data-point schema to the FHIR Logical models and from the FHIR Logical model to the FHIR resource is straightforward and conceptual mappings are provided for each.  The following example illustrates transforming from the step-count omh schema to a FHIR observation.  The process can be automated using omh schemas and one of several FHIR libraries that are available.
+
+*Mapping from the source MHealth file to the OMH Logical Model*
+
+In this section the following Open MHealth data-point instance  will be transfored to a FHIR Observation.
+
+~~~
+{
+  "header": {
+    "id": "243c773b-8936-407e-9c23-270d0ea49cc4",
+    "creation_date_time": "2018-04-17T17:13:50Z",
+    "acquisition_provenance": {
+      "source_name": "Jawbone UP API",
+      "modality": "sensed",
+      "source_creation_date_time":"2018-04-17T17:13:50Z"
+    },
+    "user_id":"some-user"
+    "schema_id": {
+      "namespace": "omh",
+      "name": "step-count",
+      "version": "1.0"
+    }
+  },
+  "body": {
+    "effective_time_frame": {
+      "time_interval": {
+        "start_date_time": "2018-04-17",
+        "end_date_time": "2018-04-17"
+      }
+    },
+    "step_count": 7939
+  }
+}
+~~~
+
+
+The first step is to map from the Open MHealth data-point schema to the OmhDataPoint Logical Model.  The source JSON data is transformed following the *first* [mapping table](StructureDefinition-omh-data-point.html#sd-3-2-mappings) provided in the OmhDataPoint Logical Model and referencing the formal [StructureDefinition](StructureDefinition-omh-data-point.html#sd-3-1formal-views-of-profile-content) for the structural details.  So for example from the example source file below, based on the mapping table `OmhDataPoint.header.id` is translated to `OmhDataPoint.header.dataPointId` which a primitive `id` datatype.
+
+ The OmhDataPoint `body` element is a choice of other logical models based on the datapoint schema listed above. These models are their mappings are referenced to complete the mapping. For example, `properties.body.effective_time_frame` is mapped to the OMHStepCount Logical Model and data transformed based on its [mapping table](StructureDefinition-omh-step-count.html#sd-1-2-mappings)
+A complex data element  such as `effective_time_frame` is mapped to the `OMHStepCount.effectiveTimeFrame` element which is a FHIR [Period](http://hl7.org/fhir/R4/datatypes.html#Period) whose detailed structure is available in the FHIR specification and can accessed by following the links in the logical model.  Here is how the Period datatype maps to the effective_time_frame
+
+|FHIR Period data type|
+|---|
+effective_time_frame.time_interval.start_date_time|
+effective_time_frame.time_interval.end_date_time|
+{: .grid}
+
+After mapping all the elements in the source file to the OmhDataPoint Logical Model, we get the following OmhDataPoint json file:
+
+~~~
+{  
+   "ResourceType":"OmhDataPoint",
+   "id" : "243c773b-8936-407e-9c23-270d0ea49cc4",
+   "header" : {   
+     "dataPointId" : "12341567",   
+     "creationDateTime" : "2018-04-17T17:13:50Z",   
+     "schemaId" : {   
+       "namespace" : "omh",   
+       "name" : "step-count",   
+       "version" : "1.0"   
+     },
+     "acquisitionProvenance" : {  
+       "sourceName" : "Jawbone UP API>",   
+       "sourceCreationDateTime" : "2018-04-17T17:13:50Z",  
+       "modality" : "sensed"  
+     },
+     "userId" : "some-user"  
+   },
+   "body" :
+ {
+   "ResourceType":"OMHStepCount",
+   "id":"example-1",
+   "stepCount":7939,
+   "effectiveTimeFrame":{  
+      "start":"2018-04-17T00:00:00Z",
+      "end":"2018-04-17T00:00:00Z"
+   }
+}}
+~~~
+
+
+The next step is to map from the OmhDataPoint Logical Model to the appropriate FHIR resource, which in this case is [Observation][Observation]).  Similar to the first step, The OMH logica model JSON data is transformed to the FHIR Resource following the *second* [mapping table](StructureDefinition-omh-data-point.html#sd-3-2-mappings) provided in the OmhDataPoint Logical Model and referencing the formal definitions of the FHIR resource the structural details.  Since the OMH Logical Model and the FHIR Resource share the same datatypes the process is relatively straight.  In some cases there are no mappings because the element are infrasture related only to the OMH schemas.  In other cases there are choices on how to transform the data and the use case and best practices should determine the outcome.
+
+For example, the OmhDataPoint.dataPointId is mapped to Observation.identifier, OmhDataPoint.header.namespace is unmapped.  Again, the OmhDataPoint `body` element is a choice of other logical models based on the datapoint schema listed above. Note that in many cases the Logical Model maps to the FHIR element `Observation.code` with a fixed value for code and code system. In this example the OmhStepCount Logical Model maps to Observation.code with LOINC =55423-8. The other element are mapped as above - for example, OmhDataPoint.body.stepCount is mapped to Observation.valueQuantity.  As a result of the mapping the following Observation resource is derived:
+
+~~~
+{
+  "resourceType": "Observation",
+	"id": "steps-example //  this is a server assigned resource id",
+  "meta": {
+  "source" : "Jawbone UP API // mappped from OmhDataPoint.header.acqusitionProvenance.sourceName",
+  "profile // Profiles this resource claims to conform to" : ["http://www.fhir.org/guides/omhtofhir/StructureDefinition/steps"]
+}
+  "identifier // mappped from OmhDataPoint.header.dataPointId" : [
+  "system" : "https://omh.org/shimmer/ids // The namespace for the identifier value",
+  "value" : "12341567 // The value that is unique",
+  }],
+  "status": "unknown // this is required in fhir - omh schema don't have status",
+	"category // optional category field to indicate is an activity vs say a lab result": [  
+		{
+			"coding": [
+				{
+					"system": "http://hl7.org/fhir/observation-category",
+					"code": "activity",
+					"display": "Activity"
+				}
+			]
+		}
+	],
+	"code // mapped from OmhDataPoint.body": {
+		"coding": [
+      {
+				"system": "http://loinc.org",
+				"code": "55423-8",
+				"display": "Number of steps in unspecified time Pedometer"
+			}
+		],
+		"text": "Step count"
+	},
+	"subject": {
+		"identifier" : {
+  "system" : "https://omh.org/shimmer/patient_ids // The namespace for the identifier value",
+  "value" : "some-user //mapped from OmhDataPoint.header.userId",
+},
+	},
+	"effectivePeriod // mapped from OmhDataPoint.body.effectiveTimeFrame":
+  "start" : "2018-04-17T00:00:00Z",
+  "end" : "2018-04-17T00:00:00Z"
+    }
+	"issued": "2018-04-17T17:13:50Z // mapped from OmhDataPoint.header.creationDateTime",
+
+	"valueQuantity  // the actual results mapped from body.step_count  - note that I added optional UCUM units": {
+		"value //mapped from OmhDataPoint.body.stepCount": 7939,
+		"unit": "steps",
+		"system": "http://unitsofmeasure.org",
+		"code": "{steps}"
+	}
+   "device //  could be mapped from OmhDataPoint.header.acqusitionProvenance elements represented as for this example but could capture all as Device/DeviceMetric since the type is  Reference(Device|DeviceComponent|DeviceMetric)" :
+   {"display" : "Jawbone UP API, modality =sensed, sourceCreationDateTime = 2018-04-17T17:13:50Z"}
+}
+~~~
+
+
+<br />
+
+**Mapping descriptiveStatistic to Observation**
+
+If there is a descriptiveStatistic element the step count value is mapped to the `Observation.component.value[x]` *instead*  of `Observation.value[x]` as follows:
+
+1. `Observation.valueQuantity` is absent
+1.  descriptiveStatistic code is mapped to `Observation.component.code`
+1. Step count value is mapped to the `Observation.component.valueQuantity.value
+1.  descriptiveStatisticDenominator is mapped to the denominator in `Observation.component.valueQuantity.unit` and `Observation.component.valueQuantity.code`
+
+~~~
+{
+  "resourceType": "Observation",
+	"id": "steps-example //  this is a server assigned resource id",
+  "meta": {
+  "source" : "Jawbone UP API // mappped from OmhDataPoint.header.acqusitionProvenance.sourceName",
+  "profile // Profiles this resource claims to conform to" : ["http://www.fhir.org/guides/omhtofhir/StructureDefinition/steps"]
+}
+  "identifier // mapped from OmhDataPoint.header.dataPointId": [{
+  "system" : "https://omh.org/shimmer/ids // The namespace for the identifier value",
+  "value" : "12341567 // The value that is unique"
+  }],
+  "status": "unknown // this is required in fhir - omh schema don't have status",
+	"category // optional category field to indicate is an activity vs say a lab result": [  
+		{
+			"coding": [
+				{
+					"system": "http://hl7.org/fhir/observation-category",
+					"code": "activity",
+					"display": "Activity"
+				}
+			]
+		}
+	],
+	"code // mapped from OmhDataPoint.body": {
+		"coding": [
+      {
+				"system": "http://loinc.org",
+				"code": "55423-8",
+				"display": "Number of steps in unspecified time Pedometer"
+			}
+		],
+		"text": "Step count"
+	},
+	"subject": {
+		"identifier" : {
+  "system" : "https://omh.org/shimmer/patient_ids // The namespace for the identifier value",
+  "value" : "some-user //mapped from OmhDataPoint.header.userId",
+},
+	},
+	"effectivePeriod // mapped from OmhDataPoint.body.effectiveTimeFrame":
+  "start" : "2018-04-17T00:00:00Z",
+  "end" : "2018-04-24T00:00:00Z"
+    }
+	"issued": "2018-04-24T17:13:50Z // mapped from OmhDataPoint.header.creationDateTime",
+	}
+  //valueQuantity: {} the actual results mapped from body.step_count if there is no descriptiveStatistic  
+   "device //  could be mapped from OmhDataPoint.header.acqusitionProvenance elements represented as for this example but could capture all as Device/DeviceMetric since the type is  Reference(Device|DeviceComponent|DeviceMetric)" :
+   {"display" : "Jawbone UP API, modality =sensed, sourceCreationDateTime = 2018-04-17T17:13:50Z"}
+"component // Component results for descriptiveStatistic on if there is a descriptiveStatistic" : [{
+"code  // Type of descriptiveStatistic" : {
+  "coding" : [
+    {
+      "system" : "http://hl7.org/fhir/observation-statistics",
+      "code" : "maximum",
+      "display" : "Maximum",
+    }
+    ],
+    "text" : "Maximum"
+  },
+  "valueQuantity  // the actual results mapped from body.step_count  - note that I added optional UCUM units mapped from the observation code, description statistics and  descriptive_statistic_denominator": {
+		"value //mapped from OmhDataPoint.body.stepCount": 7939,
+		"unit": "steps/day",
+		"system": "http://unitsofmeasure.org",
+		"code": "{steps}/d"
+	}
+]
+}
+~~~
+
+-->
+<p><br /></p>
+
+:ET

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="omh-unit-value"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include these codes as defined in <a href="http://unitsofmeasure.org"><code>http://unitsofmeasure.org</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>{steps}</td><td>steps</td><td/></tr><tr><td>mm[Hg]</td><td>mmHg</td><td/></tr><tr><td>mg/dL</td><td>mg/dL</td><td/></tr><tr><td>mmol/L</td><td>mmol/L</td><td/></tr><tr><td>kg/m2</td><td>kg/m^2</td><td/></tr><tr><td>kCal</td><td>kcal</td><td/></tr><tr><td>/min</td><td>beats/min</td><td/></tr><tr><td>/min</td><td>breaths/min</td><td/></tr><tr><td>%</td><td>%</td><td/></tr></table></li></ul></div>
+  </text>
+  <url value="http://www.fhir.org/guides/omhtofhir/ValueSet/omh-unit-value"/>
+  <version value="0.0.0"/>
+  <name value="omh-unit-value"/>
+  <title value="OMH to FHIR Unit Value Value Set"/>
+  <status value="draft"/>
+  <date value="2018-11-28T15:55:00.13Z"/>
+  <publisher value="Open mHealth"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.openmhealth.org/"/>
+    </telecom>
+  </contact>
+  <description value="Implicit OMH units (not explicitly enumerated in the schemas) needed for OMH to FHIR mapping"/>
+  <immutable value="false"/>
+  <copyright value="Open mHealth copyright 2015, a project of the Tides Center. All Rights Reserved."/>
+  <compose>
+    <include>
+      <system value="http://unitsofmeasure.org"/>
+      <concept>
+        <code value="{steps}"/>
+        <display value="steps"/>
+      </concept>
+      <concept>
+        <code value="mm[Hg]"/>
+        <display value="mmHg"/>
+      </concept>
+      <concept>
+        <code value="mg/dL"/>
+        <display value="mg/dL"/>
+      </concept>
+      <concept>
+        <code value="mmol/L"/>
+        <display value="mmol/L"/>
+      </concept>
+      <concept>
+        <code value="kg/m2"/>
+        <display value="kg/m^2"/>
+      </concept>
+      <concept>
+        <code value="kCal"/>
+        <display value="kcal"/>
+      </concept>
+      <concept>
+        <code value="/min"/>
+        <display value="beats/min"/>
+      </concept>
+      <concept>
+        <code value="/min"/>
+        <display value="breaths/min"/>
+      </concept>
+      <concept>
+        <code value="%"/>
+        <display value="%"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

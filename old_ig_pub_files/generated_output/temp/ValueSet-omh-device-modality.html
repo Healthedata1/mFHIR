@@ -1,0 +1,76 @@
+---
+# jekyll header
+level: 2
+template: base
+active: format
+layout: fhir-artifact
+type: ValueSet
+id: omh-device-modality
+topofpage: True
+---
+
+<!-- ig template for many conformance resource html pages  ('base' in definitions file)  can not be used for conformance resources that have more that a single base template. e.g.,  sd since there are mapping and definitions templates for it as well  they need to be split out into 3 separate templates -->
+
+<!-- ============ CONTENT CONTENT=============== -->
+
+{% case 'ValueSet' %} <!-- content depends on type -->
+{% when 'ValueSet' %}
+<!-- ============VAlUESET CONTENT CONTENT=============== -->
+
+  {% include ValueSet-omh-device-modality-summary.xhtml %}
+  {% include ValueSet-omh-device-modality-xref.xhtml %}
+  {% include ValueSet-omh-device-modality-cld.xhtml %}
+
+  <h3>Expansion</h3>
+
+  {% include ValueSet-omh-device-modality-expansion.xhtml %}
+<!-- ============VAlUESET CONTENT CONTENT=============== -->
+
+{% when 'CodeSystem' %}
+<!-- ============CODESYSTEM CONTENT CONTENT=============== -->
+
+  {% include ValueSet-omh-device-modality-summary.xhtml %}
+
+  {% include ValueSet-omh-device-modality-html.xhtml %}
+
+  <!-- ============CODESYSTEM CONTENT CONTENT=============== -->
+
+{% when 'OperationDefinition' %}
+<!-- ============OperationDefinition CONTENT CONTENT=============== -->
+
+  {% include ValueSet-omh-device-modality-html.xhtml %}
+
+  {% capture my-include %}{% include omh-device-modality-example.md %}{% endcapture %}{{ my-include | markdownify }}  <!--add inline examples here -->
+<!-- ============OperationDefinition CONTENT CONTENT=============== -->
+
+
+{% when 'CapabilityStatement' %}
+<!-- ============CapabilityStatement CONTENT CONTENT=============== -->
+
+<p>
+Downloads:  CapabilityStatement: (<a href="ValueSet-omh-device-modality.xml" download>XML</a>, <a href="ValueSet-omh-device-modality.json" download>JSON</a>),<a href="omh-device-modality.openapi.json">OpenAPI-Swagger Definition file</a>
+</p>
+
+  {% include ValueSet-omh-device-modality-html.xhtml %}
+
+<!-- ============CapabilityStatement CONTENT CONTENT=============== -->
+
+{% else %}
+<!-- ============ConceptMap CapabilityStatement SearchParameter CONTENT CONTENT=============== -->
+
+
+  {% include ValueSet-omh-device-modality-html.xhtml %}
+
+  <!-- ============CodeSystem ConceptMap CapabilityStatement CONTENT CONTENT=============== -->
+
+{% endcase %}
+
+
+<!-- simple format links
+<p>
+Formats: <a href="ValueSet-omh-device-modality.html">Narrative</a>, <a href="ValueSet-omh-device-modality.xml.html">XML</a>, <a href="ValueSet-omh-device-modality.json.html">JSON</a>, <a href="ValueSet-omh-device-modality.ttl.html">Turtle</a>
+</p>
+-->
+
+
+  <!-- ==============END CONTENT END CONTENT=================== -->

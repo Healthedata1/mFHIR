@@ -1,0 +1,40 @@
+{
+  "path": "http://hl7.org/fhir/R4/",
+  "canonical": "http://www.fhir.org/guides/omhtofhir",
+  "igId": "openmhealth.mfhir-0.0.0",
+  "igName": "OpenmHealthtoFHIR",
+  "packageId": "openmhealth.mfhir",
+  "igVer": "0.0.0",
+  "errorCount": 14,
+  "version": "4.0.1",
+  "revision": "a53ec6ee1b",
+  "versionFull": "4.0.1-a53ec6ee1b",
+  "toolingVersion": "4.4.0",
+  "toolingRevision": "3",
+  "toolingVersionFull": "4.4.0 (3)",
+  "totalFiles": 16,
+  "processedFiles": 170,
+  "genDate": "Tue, Jul 14, 2020 18:46-0700",
+  "genDay": "14/07/2020",
+  "ig": {
+    "id": "openmhealth.mfhir-0.0.0",
+    "name": "OpenmHealthtoFHIR",
+    "title": "Open mHealth to FHIR",
+    "url": "http://www.fhir.org/guides/omhtofhir/ImplementationGuide/openmhealth.mfhir-0.0.0",
+    "version": "0.0.0",
+    "status": "draft",
+    "experimental": false,
+    "publisher": "Open mHealth",
+    "gitstatus": "master",
+    "contact": [
+      {
+        "telecom": [
+          "http://www.openmhealth.org/"
+        ]
+      }
+    ],
+    "date": "2020-07-14T18:46:30-07:00",
+    "copyright": "Used by permission of Open mHealth, all rights reserved Creative Commons License",
+    "fhirVersion": "4.0.1"
+  }
+}

@@ -1,0 +1,16 @@
+﻿<html>
+<head>
+  <title>Observation-satO2-fiO2-validation</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<table class="grid">
+<tr><td><b>Level</b></td><td><b>Type</b></td><td><b>Location</b></td><td><b>Message</b></td></tr>
+<tr><td>error</td><td>code-invalid</td><td>Observation/satO2-fiO2: Observation.component[0].value.ofType(Quantity)</td><td>The Coding provided is not in the value set http://hl7.org/fhir/ValueSet/ucum-vitals-common|4.0.1(which actually refers to http://hl7.org/fhir/ValueSet/ucum-vitals-common), and a code is required from this value set.  (error message = The code provided (http://unitsofmeasure.org#L/min) is not  valid in the value set VitalSignsUnits)</td><td></td></tr>
+<tr><td>information</td><td>informational</td><td>Observation/satO2-fiO2: Observation</td><td>Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation</td><td></td></tr>
+<tr><td>information</td><td>unknown</td><td>Observation/satO2-fiO2: Observation.code.coding[2]</td><td>Code System URI &quot;urn:iso:std:iso:11073:10101&quot; is unknown so the code cannot be validated</td><td></td></tr>
+<tr><td>information</td><td>informational</td><td>Observation/satO2-fiO2: Observation</td><td>Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry - listed in meta</td><td></td></tr>
+<tr><td>information</td><td>informational</td><td>Observation/satO2-fiO2: Observation.code.coding[2]</td><td>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry</td><td></td></tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,77 @@
+﻿<html>
+<head>
+  <title>SearchParameter-us-core-procedure-patient-json-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="json">
+{
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter">resourceType</a>" : "SearchParameter",
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.id">id</a>" : "us-core-procedure-patient",
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;SearchParameter: USCoreProcedurePatient&lt;/h2&gt;&lt;p&gt;&lt;b&gt; description&lt;/b&gt; : Search by subject - a patient&lt;br/&gt;\n&lt;em&gt;NOTE&lt;/em&gt;: This US Core SearchParameter definition extends the usage context of\n&lt;a href=\&quot;http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html\&quot;&gt;capabilitystatement-expectation&lt;/a&gt;\n extension to formally express implementer conformannce expectations for these elements:&lt;br/&gt;\n - multipleAnd&lt;br/&gt;\n - multipleOr&lt;br/&gt;\n - comparator&lt;br/&gt;\n - modifier&lt;br/&gt;\n - chain&lt;br/&gt;\n\n &lt;/p&gt;&lt;br/&gt;&lt;p&gt;&lt;b&gt; id&lt;/b&gt; us-core-procedure-patient&lt;/p&gt;&lt;p&gt;&lt;b&gt; url&lt;/b&gt; : &lt;b&gt; http://hl7.org/fhir/us/core/SearchParameter/us-core-procedure-patient&lt;/b&gt;\n\t\t\t&lt;/p&gt;&lt;p&gt;&lt;b&gt; version&lt;/b&gt; : 4.0.1&lt;/p&gt;&lt;p&gt;&lt;b&gt; name&lt;/b&gt; : USCoreProcedurePatient&lt;/p&gt;&lt;p&gt;&lt;b&gt; derivedFrom&lt;/b&gt; : http://hl7.org/fhir/SearchParameter/clinical-patient\n\t\t\t&lt;/p&gt;&lt;p&gt;&lt;b&gt; status&lt;/b&gt; : active&lt;/p&gt;&lt;p&gt;&lt;b&gt; experimental&lt;/b&gt;  False&lt;/p&gt;&lt;p&gt;&lt;b&gt; date&lt;/b&gt; : 2020-07-01&lt;/p&gt;&lt;p&gt;&lt;b&gt; publisher&lt;/b&gt; : HL7 International - US Realm Steering Committee&lt;/p&gt;&lt;p&gt;&lt;b&gt; contact&lt;/b&gt; : http://www.hl7.org/Special/committees/usrealm/index.cfm&lt;/p&gt;&lt;p&gt;&lt;b&gt; useContext&lt;/b&gt; : &lt;/p&gt;&lt;p&gt;&lt;b&gt; jurisdiction&lt;/b&gt; : United States of America (the) &lt;span&gt; (Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United\n           States of America (the)'})&lt;/span&gt;\n\t\t\t&lt;/p&gt;  &lt;!-- &lt;p&gt;\n\t\t&lt;b&gt; purpose&lt;/b&gt; : Need to search by identifier for various infrastructural cases - mainly retrieving packages,\n         and matching as part of a chain&lt;/p&gt; --&gt;&lt;p&gt;&lt;b&gt; code&lt;/b&gt; : &lt;code&gt;patient&lt;/code&gt;\n\t\t\t&lt;/p&gt;&lt;p&gt;&lt;b&gt; base&lt;/b&gt; :Procedure&lt;/p&gt;&lt;p&gt;&lt;b&gt; type&lt;/b&gt; : reference&lt;/p&gt;&lt;p&gt;&lt;b&gt; expression&lt;/b&gt; : &lt;code&gt;Procedure.subject.where(resolve() is Patient)&lt;/code&gt;\n\t\t\t&lt;/p&gt;&lt;p&gt;&lt;b&gt; xpath&lt;/b&gt; : &lt;code&gt;f:Procedure/f:subject&lt;/code&gt;\n\t\t\t&lt;/p&gt;&lt;p&gt;&lt;b&gt; xpathUsage&lt;/b&gt; : normal&lt;/p&gt;&lt;p&gt;&lt;b&gt; mulitpleOr&lt;/b&gt; : True   (Conformance Expectation = MAY)&lt;/p&gt;&lt;p&gt;&lt;b&gt; mulitpleAnd&lt;/b&gt; : True  ( Conformance Expectation = MAY)&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.url">url</a>" : "http://hl7.org/fhir/us/core/SearchParameter/us-core-procedure-patient",
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.version">version</a>" : "3.1.1",
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.name">name</a>" : "USCoreProcedurePatient",
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.derivedFrom">derivedFrom</a>" : "http://hl7.org/fhir/SearchParameter/clinical-patient",
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.experimental">experimental</a>" : false,
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.date">date</a>" : "2020-07-01T21:51:58.063354Z",
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.publisher">publisher</a>" : "HL7 International - US Realm Steering Committee",
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "http://www.hl7.org/Special/committees/usrealm/index.cfm"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.description">description</a>" : "Search by subject - a patient&lt;br /&gt;\n&lt;em&gt;NOTE&lt;/em&gt;: This US Core SearchParameter definition extends the usage context of\n&lt;a href=\&quot;http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html\&quot;&gt;capabilitystatement-expectation&lt;/a&gt;\n extension to formally express implementer conformannce expectations for these elements:&lt;br /&gt;\n - multipleAnd&lt;br /&gt;\n - multipleOr&lt;br /&gt;\n - comparator&lt;br /&gt;\n - modifier&lt;br /&gt;\n - chain&lt;br /&gt;\n\n ",
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.jurisdiction">jurisdiction</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "urn:iso:std:iso:3166",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "US",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "United States of America"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.code">code</a>" : "patient",
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.base">base</a>" : [
+    "Procedure"
+  ],
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.type">type</a>" : "reference",
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.expression">expression</a>" : "Procedure.subject.where(resolve() is Patient)",
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.xpath">xpath</a>" : "f:Procedure/f:subject",
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.xpathUsage">xpathUsage</a>" : "normal",
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.target">target</a>" : [
+    "Patient",
+    "Group"
+  ],
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.multipleOr">multipleOr</a>" : true,
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.multipleOr">_multipleOr</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#boolean#boolean.extension">extension</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "MAY"
+      }
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.multipleAnd">multipleAnd</a>" : true,
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.multipleAnd">_multipleAnd</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#boolean#boolean.extension">extension</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "MAY"
+      }
+    ]
+  }
+}</pre>
+</body>
+</html>

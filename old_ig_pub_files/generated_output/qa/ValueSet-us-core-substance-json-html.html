@@ -1,0 +1,73 @@
+﻿<html>
+<head>
+  <title>ValueSet-us-core-substance-json-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="json">
+{
+  "<a href="http://build.fhir.org/valueset.html#ValueSet">resourceType</a>" : "ValueSet",
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.id">id</a>" : "us-core-substance",
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.meta">meta</a>" : {
+    "<a href="http://build.fhir.org/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a>" : "2016-05-25T16:59:08.250+10:00",
+    "<a href="http://build.fhir.org/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
+    ]
+  },
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.text">text</a>" : {
+    "<a href="http://build.fhir.org/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://build.fhir.org/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;US Core Substance-Reactant for Intolerance and Negation Codes&lt;/h2&gt;&lt;div&gt;&lt;p&gt;A substance or other type of agent (e.g., sunshine) that may be associated with an intolerance reaction event or a propensity to such an event. These concepts are expected to be at a more general level of abstraction (ingredients versus more specific formulations). This value set is quite general and includes concepts that may never cause an adverse event, particularly the included SNOMED CT concepts. The code system-specific value sets in this grouping value set are intended to provide broad coverage of all kinds of agents, but the expectation for use is that the chosen concept identifier for a substance should be appropriately specific and drawn from the available code systems in the following priority order:  1. NDF-RT codes for drug class allergies  2. RxNorm codes limited to term types (TTY) , 'BN' Brand Name, 'IN' ingredient, 'MIN' multiple ingredient, and 'PIN' precise ingredient for drug ingredient allergies  3. SNOMED CT including concepts from SCTID 716186003 No Known allergy (situation) and if no other code from above code systems are available&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;&lt;b&gt;Copyright Statement:&lt;/b&gt; This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement&lt;/p&gt;&lt;p&gt;This value set includes codes from the following code systems:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Import all the codes that are contained in &lt;a href=&quot;ValueSet-us-core-substance-ndfrt.html&quot;&gt;http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-ndfrt&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Import all the codes that are contained in &lt;a href=&quot;ValueSet-us-core-substance-rxnorm.html&quot;&gt;http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-rxnorm&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Import all the codes that are contained in &lt;a href=&quot;ValueSet-us-core-substance-sct.html&quot;&gt;http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-sct&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"
+  },
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.url">url</a>" : "http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance",
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.version">version</a>" : "2.0.0",
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.name">name</a>" : "US_Core_Substance_Reactant_for_Intolerance_and_Negation_Codes",
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.title">title</a>" : "US Core Substance-Reactant for Intolerance and Negation Codes",
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.status">status</a>" : "active",
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.date">date</a>" : "2016-05-25T16:59:08+10:00",
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.publisher">publisher</a>" : "HL7 US Realm Steering Committee",
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.contact">contact</a>" : [
+    {
+      "<a href="http://build.fhir.org/datatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://build.fhir.org/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "other",
+          "<a href="http://build.fhir.org/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "http://hl7.org/fhir"
+        }
+      ]
+    }
+  ],
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.description">description</a>" : "A substance or other type of agent (e.g., sunshine) that may be associated with an intolerance reaction event or a propensity to such an event. These concepts are expected to be at a more general level of abstraction (ingredients versus more specific formulations). This value set is quite general and includes concepts that may never cause an adverse event, particularly the included SNOMED CT concepts. The code system-specific value sets in this grouping value set are intended to provide broad coverage of all kinds of agents, but the expectation for use is that the chosen concept identifier for a substance should be appropriately specific and drawn from the available code systems in the following priority order:  1. NDF-RT codes for drug class allergies  2. RxNorm codes limited to term types (TTY) , 'BN' Brand Name, 'IN' ingredient, 'MIN' multiple ingredient, and 'PIN' precise ingredient for drug ingredient allergies  3. SNOMED CT including concepts from SCTID 716186003 No Known allergy (situation) and if no other code from above code systems are available ",
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.jurisdiction">jurisdiction</a>" : [
+    {
+      "<a href="http://build.fhir.org/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://build.fhir.org/datatypes.html#Coding#Coding.system">system</a>" : "urn:iso:std:iso:3166",
+          "<a href="http://build.fhir.org/datatypes.html#Coding#Coding.code">code</a>" : "US",
+          "<a href="http://build.fhir.org/datatypes.html#Coding#Coding.display">display</a>" : "United States of America"
+        }
+      ]
+    }
+  ],
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.copyright">copyright</a>" : "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement",
+  "<a href="http://build.fhir.org/valueset.html#ValueSet.compose">compose</a>" : {
+    "<a href="http://build.fhir.org/valueset.html#ValueSet.compose.include">include</a>" : [
+      {
+        "<a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.valueSet">valueSet</a>" : [
+          "http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-ndfrt"
+        ]
+      },
+      {
+        "<a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.valueSet">valueSet</a>" : [
+          "http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-rxnorm"
+        ]
+      },
+      {
+        "<a href="http://build.fhir.org/valueset.html#ValueSet.compose.include.valueSet">valueSet</a>" : [
+          "http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-sct"
+        ]
+      }
+    ]
+  }
+}</pre>
+</body>
+</html>

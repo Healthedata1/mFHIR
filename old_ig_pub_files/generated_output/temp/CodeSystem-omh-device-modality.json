@@ -1,0 +1,40 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "omh-device-modality",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system http://www.fhir.org/guides/omhtofhir/CodeSystem/omh-device-modality defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">sensed<a name=\"omh-device-modality-sensed\"> </a></td><td>Sensed</td><td>Device measurement is sensed directly by the device</td></tr><tr><td style=\"white-space:nowrap\">self-reported<a name=\"omh-device-modality-self-reported\"> </a></td><td>Self Reported</td><td>Device measurement is entered by the user</td></tr></table></div>"
+  },
+  "url": "http://www.fhir.org/guides/omhtofhir/CodeSystem/omh-device-modality",
+  "version": "0.0.0",
+  "name": "omh-device-modality",
+  "title": "Open mHealth to FHIR Device Modality",
+  "status": "draft",
+  "date": "2018-11-17",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.openmhealth.org/"
+        }
+      ]
+    }
+  ],
+  "description": "Identifies whether device measurement is sensed directly or entered by the user",
+  "caseSensitive": true,
+  "valueSet": "http://www.fhir.org/guides/omhtofhir/ValueSet/omh-device-modality",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "sensed",
+      "display": "Sensed",
+      "definition": "Device measurement is sensed directly by the device"
+    },
+    {
+      "code": "self-reported",
+      "display": "Self Reported",
+      "definition": "Device measurement is entered by the user"
+    }
+  ]
+}

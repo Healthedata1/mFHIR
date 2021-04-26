@@ -1,0 +1,52 @@
+{% raw %}<pre class="json">
+{
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem">resourceType</a>" : "CodeSystem",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.id">id</a>" : "omh-datapoint-type",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;This code system http://www.fhir.org/guides/omhtofhir/CodeSystem/omh-datapoint-type defines the following codes:&lt;/p&gt;&lt;table class=\&quot;codes\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;geoposition&lt;a name=\&quot;omh-datapoint-type-geoposition\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Geoposition&lt;/td&gt;&lt;td&gt;The latitude and longitude coordinates of a particular location.  (source: https://en.wiktionary.org/wiki/geolocation#English)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;orientation&lt;a name=\&quot;omh-datapoint-type-orientation\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Gyroscope measurement Panel&lt;/td&gt;&lt;td&gt;The latitude and longitude coordinates of a particular location.  (source: https://en.wiktionary.org/wiki/geolocation#English)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;magnetic_force&lt;a name=\&quot;omh-datapoint-type-magnetic_force\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Magnetic Force Panel&lt;/td&gt;&lt;td&gt;2 or 3 axis gyroscopic measurements representing the angular velocity in these axis.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;pace&lt;a name=\&quot;omh-datapoint-type-pace\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Pace&lt;/td&gt;&lt;td&gt;The time it takes to cover a certain distance (km or mile) by some physical activity like walking, running, biking, etc.  This is NOT the traditional unit of length of the same name.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.url">url</a>" : "http://www.fhir.org/guides/omhtofhir/CodeSystem/omh-datapoint-type",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.version">version</a>" : "0.0.0",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.name">name</a>" : "omh-datapoint-type",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.title">title</a>" : "Open mHealth to FHIR Datapoint Type",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.status">status</a>" : "draft",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.date">date</a>" : "2018-11-17",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "http://www.openmhealth.org/"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.description">description</a>" : "OMH datapoint schema type the measure an Open mHealth data schema is representing.   These concepts are used were suitable LOINC or SNOMED-CT concepts are not available.",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a>" : true,
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.valueSet">valueSet</a>" : "http://www.fhir.org/guides/omhtofhir/ValueSet/omh-datapoint-type",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.content">content</a>" : "complete",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "geoposition",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Geoposition",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "The latitude and longitude coordinates of a particular location.  (source: https://en.wiktionary.org/wiki/geolocation#English)"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "orientation",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Gyroscope measurement Panel",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "The latitude and longitude coordinates of a particular location.  (source: https://en.wiktionary.org/wiki/geolocation#English)"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "magnetic_force",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Magnetic Force Panel",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "2 or 3 axis gyroscopic measurements representing the angular velocity in these axis."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "pace",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Pace",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "The time it takes to cover a certain distance (km or mile) by some physical activity like walking, running, biking, etc.  This is NOT the traditional unit of length of the same name."
+    }
+  ]
+}</pre>
+{% endraw %}

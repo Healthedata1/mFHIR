@@ -1,0 +1,76 @@
+---
+# jekyll header
+level: 2
+template: base
+active: format
+layout: fhir-artifact
+type: CapabilityStatement
+id: client
+topofpage: True
+---
+
+<!-- ig template for many conformance resource html pages  ('base' in definitions file)  can not be used for conformance resources that have more that a single base template. e.g.,  sd since there are mapping and definitions templates for it as well  they need to be split out into 3 separate templates -->
+
+<!-- ============ CONTENT CONTENT=============== -->
+
+{% case 'CapabilityStatement' %} <!-- content depends on type -->
+{% when 'ValueSet' %}
+<!-- ============VAlUESET CONTENT CONTENT=============== -->
+
+  {% include CapabilityStatement-client-summary.xhtml %}
+  {% include CapabilityStatement-client-xref.xhtml %}
+  {% include CapabilityStatement-client-cld.xhtml %}
+
+  <h3>Expansion</h3>
+
+  {% include CapabilityStatement-client-expansion.xhtml %}
+<!-- ============VAlUESET CONTENT CONTENT=============== -->
+
+{% when 'CodeSystem' %}
+<!-- ============CODESYSTEM CONTENT CONTENT=============== -->
+
+  {% include CapabilityStatement-client-summary.xhtml %}
+
+  {% include CapabilityStatement-client-html.xhtml %}
+
+  <!-- ============CODESYSTEM CONTENT CONTENT=============== -->
+
+{% when 'OperationDefinition' %}
+<!-- ============OperationDefinition CONTENT CONTENT=============== -->
+
+  {% include CapabilityStatement-client-html.xhtml %}
+
+  {% capture my-include %}{% include client-example.md %}{% endcapture %}{{ my-include | markdownify }}  <!--add inline examples here -->
+<!-- ============OperationDefinition CONTENT CONTENT=============== -->
+
+
+{% when 'CapabilityStatement' %}
+<!-- ============CapabilityStatement CONTENT CONTENT=============== -->
+
+<p>
+Downloads:  CapabilityStatement: (<a href="CapabilityStatement-client.xml" download>XML</a>, <a href="CapabilityStatement-client.json" download>JSON</a>),<a href="client.openapi.json">OpenAPI-Swagger Definition file</a>
+</p>
+
+  {% include CapabilityStatement-client-html.xhtml %}
+
+<!-- ============CapabilityStatement CONTENT CONTENT=============== -->
+
+{% else %}
+<!-- ============ConceptMap CapabilityStatement SearchParameter CONTENT CONTENT=============== -->
+
+
+  {% include CapabilityStatement-client-html.xhtml %}
+
+  <!-- ============CodeSystem ConceptMap CapabilityStatement CONTENT CONTENT=============== -->
+
+{% endcase %}
+
+
+<!-- simple format links
+<p>
+Formats: <a href="CapabilityStatement-client.html">Narrative</a>, <a href="CapabilityStatement-client.xml.html">XML</a>, <a href="CapabilityStatement-client.json.html">JSON</a>, <a href="CapabilityStatement-client.ttl.html">Turtle</a>
+</p>
+-->
+
+
+  <!-- ==============END CONTENT END CONTENT=================== -->

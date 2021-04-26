@@ -1,0 +1,56 @@
+﻿<html>
+<head>
+  <title>DiagnosticReport-cardiology-report-json-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="json">
+{
+  "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport">resourceType</a>" : "DiagnosticReport",
+  "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.id">id</a>" : "cardiology-report",
+  "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;strong&gt;Generated Narrative&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;id:&lt;/strong&gt; cardiology-report&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;meta:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;  profile: &lt;a href=\&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note\&quot;&gt;http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;status:&lt;/strong&gt; final&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;category:&lt;/strong&gt; Cardiology&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;code:&lt;/strong&gt; Cardiovascular physiologic and EKG assessment panel&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;subject:&lt;/strong&gt; &lt;a href=\&quot;Patient-example.html\&quot;&gt;Patient-example.html&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;effectiveDateTime:&lt;/strong&gt; '2011-01-01T21:39:30.000Z'&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;presentedForm:&lt;/strong&gt;&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;contentType: application/pdf\nurl: &lt;a href=\&quot;http://example.org/pdfdownloads/cardiopanel-report-123.pdf\&quot;&gt;http://example.org/pdfdownloads/cardiopanel-report-123.pdf&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.status">status</a>" : "final",
+  "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.category">category</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "LP29708-2",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Cardiology"
+        }
+      ],
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Cardiology"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.code">code</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "45033-8",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Cardiovascular physiologic and EKG assessment panel"
+      }
+    ],
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Cardiovascular physiologic and EKG assessment panel"
+  },
+  "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.subject">subject</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/example"
+  },
+  "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.effective[x]">effectiveDateTime</a>" : "2011-01-01T21:39:30.000Z",
+  "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.presentedForm">presentedForm</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.contentType">contentType</a>" : "application/pdf",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.url">url</a>" : "http://example.org/pdfdownloads/cardiopanel-report-123.pdf",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.hash">hash</a>" : "EQH/..AgME"
+    }
+  ]
+}</pre>
+</body>
+</html>

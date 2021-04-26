@@ -1,0 +1,51 @@
+﻿<html>
+<head>
+  <title>MedicationStatement-uscore-ms2-json-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="json">
+{
+  "<a href="http://hl7.org/fhir/R4/medicationstatement.html#MedicationStatement">resourceType</a>" : "MedicationStatement",
+  "<a href="http://hl7.org/fhir/R4/medicationstatement.html#MedicationStatement.id">id</a>" : "uscore-ms2",
+  "<a href="http://hl7.org/fhir/R4/medicationstatement.html#MedicationStatement.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/medicationstatement.html#MedicationStatement.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: uscore-ms2&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;contained&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;medication&lt;/b&gt;: lisinopril oral 10 mg. Generated Summary: unknown resource contained&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-example.html\&quot;&gt;Amy Shaw. Generated Summary: id: example; Medical Record Number = 1032702 (USUAL); active; Amy V. Shaw ; ph: 555-555-5555(HOME), amy.shaw@example.com; gender: female; birthDate: Feb 20, 2007&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: May 1, 2010, 12:00:00 AM --&amp;gt; (ongoing)&lt;/p&gt;&lt;p&gt;&lt;b&gt;dateAsserted&lt;/b&gt;: May 1, 2016, 9:13:03 AM&lt;/p&gt;&lt;/div&gt;"
+  },
+  "<a href="http://hl7.org/fhir/R4/medication.html#Medication">contained</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/medication.html">resourceType</a>" : "Medication",
+      "<a href="http://hl7.org/fhir/R4/medication.html#Medication.id">id</a>" : "med1",
+      "<a href="http://hl7.org/fhir/R4/medication.html#Medication.code">code</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "206765",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Lisinopril 10 MG Oral Tablet [Prinivil]"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "lisinopril oral 10 mg"
+      }
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/medicationstatement.html#MedicationStatement.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/R4/medicationstatement.html#MedicationStatement.medication[x]">medicationReference</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "#med1",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "lisinopril oral 10 mg"
+  },
+  "<a href="http://hl7.org/fhir/R4/medicationstatement.html#MedicationStatement.subject">subject</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "Patient/example",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "Amy Shaw"
+  },
+  "<a href="http://hl7.org/fhir/R4/medicationstatement.html#MedicationStatement.effective[x]">effectivePeriod</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2010-05-01"
+  },
+  "<a href="http://hl7.org/fhir/R4/medicationstatement.html#MedicationStatement.dateAsserted">dateAsserted</a>" : "2016-05-01T16:13:03Z"
+}</pre>
+</body>
+</html>

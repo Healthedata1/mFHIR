@@ -1,0 +1,56 @@
+﻿<html>
+<head>
+  <title>CarePlan-colonoscopy-xml-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="xml">
+
+&lt;<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan">CarePlan</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;colonoscopy&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.meta">meta</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan&quot;/&gt;
+  &lt;/meta&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;additional&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+			&lt;strong&gt;Assessment&lt;/strong&gt;
+			&lt;ol&gt;
+				&lt;li&gt;Recurrent GI bleed of unknown etiology; hypotension perhaps secondary to this but as likely secondary to polypharmacy.&lt;/li&gt;
+				&lt;li&gt;Acute on chronic anemia secondary to #1.&lt;/li&gt;
+				&lt;li&gt;Azotemia, acute renal failure with volume loss secondary to #1.&lt;/li&gt;
+				&lt;li&gt;Hyperkalemia secondary to #3 and on ACE and K+ supplement.&lt;/li&gt;
+				&lt;li&gt;Other chronic diagnoses as noted above, currently stable.&lt;/li&gt;
+			&lt;/ol&gt;
+			&lt;table&gt;
+				&lt;thead&gt;
+					&lt;tr&gt;
+						&lt;th&gt;Planned Activity&lt;/th&gt;
+						&lt;th&gt;Planned Date&lt;/th&gt;
+					&lt;/tr&gt;
+				&lt;/thead&gt;
+				&lt;tbody&gt;
+					&lt;tr&gt;
+						&lt;td&gt;Colonoscopy&lt;/td&gt;
+						&lt;td&gt;April 21, 2000&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/tbody&gt;
+			&lt;/table&gt;
+		&lt;/div&gt;<a name="end-xhtml"></a>
+  &lt;/text&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.intent">intent</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;order&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.category">category</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/us/core/CodeSystem/careplan-category&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;assess-plan&quot;/&gt;
+    &lt;/coding&gt;
+  &lt;/category&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.subject">subject</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/example&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Amy Shaw&quot;/&gt;
+  &lt;/subject&gt;
+&lt;/CarePlan&gt;</pre>
+</body>
+</html>
