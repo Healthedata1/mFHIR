@@ -18,7 +18,7 @@ title: wide-template
 
 <br />
 
-<h3 class="logoHeader" style="text-align: center">OMH to FHIR QuickStart Guide</h3>
+<h3 class="logoHeader" align="center">OMH to FHIR QuickStart Guide</h3>
 </header>
 
 
