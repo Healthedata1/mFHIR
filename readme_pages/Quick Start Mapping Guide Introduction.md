@@ -1,4 +1,21 @@
+
+<p>
+
 [<<back](../README.md)
+<span align="right">
+    // Your content
+</span>
+</p>
+
+<p style="text-align:left;" markdown="1">
+
+    [<<back](../README.md)
+
+    <span style="float:right;">
+        This text is right aligned
+    </span>
+</p>
+
 
 <!---
 tags: omh2fhir
