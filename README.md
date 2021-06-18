@@ -28,7 +28,7 @@ Header Mappings and Examples
 - [OMH Header to FHIR Observation Detailed Mapping](readme_pages/OMH%20Header%20to%20FHIR%20Observation%20Detailed%20Mapping.md)
 - [OMH Header to FHIR Provenance Detailed Mapping](readme_pages/OMH%20Header%20to%20FHIR%20Provenance%20Detailed%20Mapping.md)
 
-- [OMH IEEE Header to FHIR Observation Detailed Mapping](readme_pages/OMH%20IEEE%20Header%20to%20FHIR%20Provenance%20Detailed%20Mapping.md)
+- [OMH IEEE Header to FHIR Observation Detailed Mapping](readme_pages/OMH%20IEEE%20Header%20to%20FHIR%20Observation%20Detailed%20Mapping.md)
 
 DataPoint Mappings and Examples
 ---
